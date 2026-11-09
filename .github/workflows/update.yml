@@ -1,0 +1,58 @@
+name: Update site
+
+on:
+  schedule:
+    - cron: '0 12 * * 2'   # Tuesday ~7 AM ET: Monday night results are in
+    - cron: '0 21 * * 4'   # Thursday ~4 PM ET: Thursday injury reports
+    - cron: '0 16 * * 6'   # Saturday ~11 AM ET: final injury reports for Sunday
+  workflow_dispatch:        # "Run workflow" button on the Actions tab
+  push:
+    branches: [main]
+    paths:
+      - 'data/overrides.json'
+      - 'data/news.json'
+      - 'src/**'
+      - 'pipeline/**'
+      - 'build_site.py'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-site
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+
+      - name: Restore past seasons' data
+        uses: actions/cache@v4
+        with:
+          path: |
+            data/*_201[6-9].csv*
+            data/*_202[0-5].csv*
+          key: nflverse-past-seasons-v1
+
+      - run: pip install -r requirements.txt
+
+      - name: Download data and rebuild
+        run: bash scripts/update.sh
+
+      - name: Publish changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs data/*.json
+          if git diff --cached --quiet; then echo "Nothing changed"; exit 0; fi
+          git commit -m "Update site $(TZ=America/New_York date '+%Y-%m-%d %H:%M ET')"
+          git pull --rebase
+          git push

@@ -1,0 +1,12 @@
+{
+  "_help": "Edit this file when news changes who starts. qb_starters: the QB a team will start (short name as in play-by-play, e.g. C.Wentz) and the last week it applies to; after that week the site goes back to whoever actually started the team's most recent game. players_out: non-QB regulars ruled out in the news but not yet on an official injury report (side = off or def). Save on GitHub and the site rebuilds in a few minutes.",
+  "qb_starters": [
+    {"team": "MIN", "qb": "C.Wentz", "name": "Carson Wentz", "through_week": 18, "source": "Bleacher Report, Nov 5"},
+    {"team": "SEA", "qb": "D.Lock", "name": "Drew Lock", "through_week": 18, "source": "Bleacher Report, Nov 5"},
+    {"team": "BAL", "qb": "J.Brissett", "name": "Jacoby Brissett", "through_week": 18, "source": "nflverse injury report, Week 9"},
+    {"team": "CLE", "qb": "D.Watson", "name": "Deshaun Watson", "through_week": 18, "source": "NFL.com, Nov 9: cleared concussion protocol"}
+  ],
+  "players_out": [
+    {"team": "GB", "name": "Josh Jacobs", "side": "off", "source": "Yahoo Sports, Nov 9: up to 3 weeks"}
+  ]
+}

@@ -1,0 +1,807 @@
+<style>
+.factors { border-top: 1px solid var(--line); padding-top: 8px; }
+.factors summary { cursor: pointer; font-size: 0.9rem; color: var(--ink-2); list-style: none; display: flex; justify-content: space-between; gap: 8px; }
+.factors summary::-webkit-details-marker { display: none; }
+.factors summary::after { content: "\25BE"; color: var(--muted); }
+.factors[open] summary::after { content: "\25B4"; }
+.frow { display: grid; grid-template-columns: minmax(0, 1fr) 120px 4.2em; gap: 8px; align-items: center; font-size: 0.86rem; padding: 3px 0; }
+.frow .fl { color: var(--ink-2); min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.frow .fv { text-align: right; font-variant-numeric: tabular-nums; color: var(--ink-2); }
+.fbar { display: grid; grid-template-columns: 1fr 1fr; height: 8px; }
+.fbar span { display: block; height: 100%; }
+.fbar .l { justify-self: end; background: var(--away); border-radius: 4px 0 0 4px; }
+.fbar .r { justify-self: start; background: var(--home); border-radius: 0 4px 4px 0; }
+.fbar::before { content: ""; }
+.keyline { font-size: 0.86rem; color: var(--ink-2); }
+.mkrow { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 0.9rem; color: var(--ink-2); }
+.mkrow b { color: var(--ink); font-weight: 600; }
+.qbline { font-size: 0.85rem; color: var(--muted); }
+.ptable td, .ptable th { padding: 7px 6px; }
+.ptable .pname { font-weight: 600; }
+.ptable .ppos { font-family: var(--font-body); font-weight: 800; color: var(--ink-2); background: var(--surface-2); font-size: 0.66rem; letter-spacing: 0.06em; margin-left: 8px; padding: 2px 7px; border-radius: 999px; vertical-align: 1px; }
+.ppos.pos-QB { color: var(--pen-pink); background: color-mix(in oklab, var(--pen-pink) 16%, var(--surface)); }
+.ppos.pos-RB { color: var(--pen-mint); background: color-mix(in oklab, var(--pen-mint) 16%, var(--surface)); }
+.ppos.pos-WR { color: var(--pen-sky); background: color-mix(in oklab, var(--pen-sky) 16%, var(--surface)); }
+.ppos.pos-TE { color: var(--pen-orange); background: color-mix(in oklab, var(--pen-orange) 16%, var(--surface)); }
+.controls { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; }
+.controls .field { min-width: min(100%, 220px); }
+.mbar { display: inline-block; height: 8px; border-radius: 4px; background: var(--pos); vertical-align: middle; }
+.mbar.bad { background: var(--neg); }
+.rank-good { color: var(--good); font-weight: 600; }
+.rank-bad { color: var(--bad); font-weight: 600; }
+.profile { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 6px 18px; }
+.prow { display: flex; justify-content: space-between; gap: 10px; padding: 6px 0; border-bottom: 1px solid var(--line); font-size: 0.92rem; }
+.imp { display: grid; grid-template-columns: minmax(0, 12em) 1fr 3em; gap: 10px; align-items: center; padding: 4px 0; font-size: 0.92rem; }
+.imp .bar { height: 10px; background: var(--pos); border-radius: 0 4px 4px 0; }
+.swatch.s1 { background: var(--pos); } .swatch.s2 { background: var(--home); }
+.divchips { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 10px 18px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.chip { font-family: var(--font-display); font-weight: 600; font-size: 0.95rem; width: 3.5em; padding: 8px 0; text-align: center; border: 1px solid var(--line-strong); border-radius: 12px; background: var(--surface-2); color: var(--ink); cursor: pointer; }
+.chip:hover { border-color: var(--accent); }
+.chip[aria-pressed="true"] { background: var(--mid); color: var(--muted); text-decoration: line-through; border-color: var(--line); }
+tr.hl td { background: color-mix(in oklab, var(--accent) 10%, var(--surface)); }
+.pk-pts { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; text-align: center; width: 2.6em; }
+.pk th:first-child { text-align: center; }
+.ptable .tag { margin-left: 4px; vertical-align: 1px; white-space: nowrap; display: inline-block; }
+#view-pools .tiles { grid-template-columns: repeat(auto-fit, minmax(min(100%, 100px), 1fr)); }
+@media (max-width: 560px) { #view-pools .tile b { font-size: 1.7rem; } #view-pools .pbar { display: none; } #view-pools .ptable td, #view-pools .ptable th { padding: 7px 4px; } #view-pools .ptable { font-size: 0.9rem; } #view-pools .pk-pts { width: 2em; } #view-pools .teamcell { gap: 4px; } }
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <a class="logo" href="#week" aria-label="Pocket Protector home"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="8" y="3.5" width="3.4" height="12" rx="1.7" fill="var(--pen-pink)"/><path d="M17 15.5V9.5M13.4 9.5h7.2M13.4 9.5V3M20.6 9.5V3" stroke="var(--pen-mint)" stroke-width="2.2" stroke-linecap="round" fill="none"/><rect x="22.4" y="5.5" width="3.4" height="10" rx="1.7" fill="var(--pen-sky)"/><path d="M5.5 13.5h21v11.5a4 4 0 0 1-4 4h-13a4 4 0 0 1-4-4z" fill="var(--accent)"/><path d="M5.5 13.5h21v3.6h-21z" fill="var(--on-accent)" opacity="0.16"/></svg><h1>Pocket <span>Protector</span></h1></a>
+      <p class="asof" id="asof"></p>
+    </div>
+    <nav class="tabs" aria-label="Sections">
+      <a href="#week" data-view="week">Games</a>
+      <a href="#pools" data-view="pools">Pools</a>
+      <a href="#fantasy" data-view="fantasy">Fantasy</a>
+      <a href="#betting" data-view="betting">Betting</a>
+      <a href="#news" data-view="news">News</a>
+      <a href="#rankings" data-view="rankings">Rankings</a>
+      <a href="#playoffs" data-view="playoffs">Playoffs</a>
+      <a href="#matchup" data-view="matchup">Matchup</a>
+      <a href="#teams" data-view="teams">Teams</a>
+      <a href="#stats" data-view="stats">Stats Lab</a>
+      <a href="#model" data-view="model">Model</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="view" id="view-week" hidden></section>
+  <section class="view" id="view-rankings" hidden></section>
+  <section class="view" id="view-playoffs" hidden></section>
+  <section class="view" id="view-matchup" hidden></section>
+  <section class="view" id="view-teams" hidden></section>
+  <section class="view" id="view-pools" hidden></section>
+  <section class="view" id="view-betting" hidden></section>
+  <section class="view" id="view-fantasy" hidden></section>
+  <section class="view" id="view-news" hidden></section>
+  <section class="view" id="view-stats" hidden></section>
+  <section class="view" id="view-model" hidden></section>
+  <section class="view" id="view-about" hidden></section>
+  <footer class="foot"><span>Pocket Protector · NFL picks, pools and fantasy by the numbers</span><span>Data: <a href="https://github.com/nflverse" target="_blank" rel="noopener">nflverse</a> · Not affiliated with the NFL · <a href="#about">About &amp; disclaimer</a></span></footer>
+</main>
+<div class="sheet-backdrop" id="sheet-backdrop" hidden></div>
+<nav class="sheet" id="more-sheet" aria-label="More sections" hidden>
+  <a href="#news" data-view="news">News</a>
+  <a href="#rankings" data-view="rankings">Rankings</a>
+  <a href="#playoffs" data-view="playoffs">Playoffs</a>
+  <a href="#matchup" data-view="matchup">Matchup</a>
+  <a href="#teams" data-view="teams">Teams</a>
+  <a href="#stats" data-view="stats">Stats Lab</a>
+  <a href="#model" data-view="model">Model</a>
+  <a href="#about" data-view="about">About</a>
+</nav>
+<nav class="bottombar" aria-label="Main sections">
+  <a href="#week" data-view="week"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="15" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Games</a>
+  <a href="#pools" data-view="pools"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v5a4 4 0 0 1-8 0z"/><path d="M8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M8.5 20h7"/></svg>Pools</a>
+  <a href="#fantasy" data-view="fantasy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3.5 4 6l1.5 5H8v9.5h8V11h2.5L20 6l-4-2.5a4 4 0 0 1-8 0z"/></svg>Fantasy</a>
+  <a href="#betting" data-view="betting"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16v3a2 2 0 0 0 0 4v3H4v-3a2 2 0 0 0 0-4z"/><path d="M14 7.5v1.5M14 11.2v1.6M14 15v1.5"/></svg>Betting</a>
+  <button type="button" id="more-btn" aria-expanded="false" aria-controls="more-sheet"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="5.5" cy="12" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="18.5" cy="12" r="1.8"/></svg>More</button>
+</nav>
+<div class="tip" id="tip" hidden></div>
+
+<script>
+const DATA = /*__DATA__*/;
+const PL = /*__PLAYERS__*/;
+const PROPS = /*__PROPS__*/;
+const FAN = /*__FAN__*/;
+const BETS = /*__BETS__*/;
+const TRACK = /*__TRACK__*/;
+const NEWS = /*__NEWS__*/;
+const NAMES = {
+  ARI: ['Arizona', 'Cardinals'], ATL: ['Atlanta', 'Falcons'], BAL: ['Baltimore', 'Ravens'], BUF: ['Buffalo', 'Bills'],
+  CAR: ['Carolina', 'Panthers'], CHI: ['Chicago', 'Bears'], CIN: ['Cincinnati', 'Bengals'], CLE: ['Cleveland', 'Browns'],
+  DAL: ['Dallas', 'Cowboys'], DEN: ['Denver', 'Broncos'], DET: ['Detroit', 'Lions'], GB: ['Green Bay', 'Packers'],
+  HOU: ['Houston', 'Texans'], IND: ['Indianapolis', 'Colts'], JAX: ['Jacksonville', 'Jaguars'], KC: ['Kansas City', 'Chiefs'],
+  LV: ['Las Vegas', 'Raiders'], LAC: ['Los Angeles', 'Chargers'], LA: ['Los Angeles', 'Rams'], MIA: ['Miami', 'Dolphins'],
+  MIN: ['Minnesota', 'Vikings'], NE: ['New England', 'Patriots'], NO: ['New Orleans', 'Saints'], NYG: ['New York', 'Giants'],
+  NYJ: ['New York', 'Jets'], PHI: ['Philadelphia', 'Eagles'], PIT: ['Pittsburgh', 'Steelers'], SF: ['San Francisco', '49ers'],
+  SEA: ['Seattle', 'Seahawks'], TB: ['Tampa Bay', 'Buccaneers'], TEN: ['Tennessee', 'Titans'], WAS: ['Washington', 'Commanders'],
+};
+const DIVS = {
+  'AFC East': ['BUF', 'MIA', 'NE', 'NYJ'], 'AFC North': ['BAL', 'CIN', 'CLE', 'PIT'], 'AFC South': ['HOU', 'IND', 'JAX', 'TEN'], 'AFC West': ['DEN', 'KC', 'LV', 'LAC'],
+  'NFC East': ['DAL', 'NYG', 'PHI', 'WAS'], 'NFC North': ['CHI', 'DET', 'GB', 'MIN'], 'NFC South': ['ATL', 'CAR', 'NO', 'TB'], 'NFC West': ['ARI', 'LA', 'SF', 'SEA'],
+};
+const TEAMS = Object.keys(DATA.teams).sort();
+const DIV_OF = {}, CONF_OF = {};
+for (const [d, ts] of Object.entries(DIVS)) for (const t of ts) { DIV_OF[t] = d; CONF_OF[t] = d.slice(0, 3); }
+const full = (t) => NAMES[t][0] + ' ' + NAMES[t][1];
+const nick = (t) => NAMES[t][1];
+const prefs = {
+  get(k, d) { try { const v = localStorage.getItem('gm:' + k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem('gm:' + k, JSON.stringify(v)); } catch (e) { /* storage unavailable */ } },
+};
+
+// ---------- math ----------
+function erf(x) { const s = Math.sign(x); x = Math.abs(x); const t = 1 / (1 + 0.3275911 * x); return s * (1 - (((((1.061405429 * t - 1.453152027) * t) + 1.421413741) * t - 0.284496736) * t + 0.254829592) * t * Math.exp(-x * x)); }
+const Phi = (z) => 0.5 * (1 + erf(z / Math.SQRT2));
+const SIG = DATA.sigma, C = DATA.coef, TC = DATA.tcoef, T = DATA.teams, METRICS = DATA.metrics;
+const mean = (f) => TEAMS.reduce((s, t) => s + f(T[t]), 0) / TEAMS.length;
+function vec(t) { const x = T[t]; return { r: x.r, st: x.st, q: x.q, qd: x.q - x.qbase, inj: x.inj, site: x.site, dome: x.dome }; }
+const AVGV = (() => {
+  const r = {}; for (const m of METRICS) r[m] = [mean((x) => x.r[m][0]), mean((x) => x.r[m][1])];
+  return { r, st: mean((x) => x.st), q: mean((x) => x.q), qd: mean((x) => x.q - x.qbase), inj: [mean((x) => x.inj[0]), mean((x) => x.inj[1])], site: null, dome: 0 };
+})();
+function kmBetween(a, b) {
+  const R = Math.PI / 180, la1 = a[0] * R, la2 = b[0] * R, dla = la2 - la1, dlo = (b[1] - a[1]) * R;
+  const h = Math.sin(dla / 2) ** 2 + Math.cos(la1) * Math.cos(la2) * Math.sin(dlo / 2) ** 2;
+  return 6371 * 2 * Math.asin(Math.sqrt(h));
+}
+function feats(A, H, ctx = {}) {
+  const f = {};
+  for (const m of METRICS) { const eh = H.r[m][0] - A.r[m][1], ea = A.r[m][0] - H.r[m][1]; f['d_' + m] = eh - ea; f['s_' + m] = eh + ea; }
+  f.d_st = H.st - A.st; f.d_qb = H.q - A.q; f.d_qb_x = 35 * (H.qd - A.qd);
+  f.hfa = ctx.neutral ? 0 : 1; f.rest_diff = 0; f.d_bye = 0; f.west_early = 0; f.div = ctx.div ? 1 : 0;
+  if (!ctx.neutral && A.site && H.site) {
+    f.travel_diff = (kmBetween(A.site, H.site) - 0) / 1000;
+    f.tz_diff = Math.abs(H.site[2] - A.site[2]);
+  } else { f.travel_diff = 0; f.tz_diff = 0; }
+  f.d_inj_off = H.inj[0] - A.inj[0]; f.d_inj_def = H.inj[1] - A.inj[1];
+  return f;
+}
+const marginOf = (f) => Object.keys(C).reduce((s, c) => s + C[c] * (f[c] || 0), 0);
+function contribOf(f) { const o = {}; for (const [g, cols] of Object.entries(DATA.groups)) o[g] = cols.reduce((s, c) => s + (C[c] || 0) * (f[c] || 0), 0); return o; }
+function totalOf(f, dome) {
+  let t = TC.one + TC.lg_total * DATA.lg_total_now;
+  for (const m of ['pts', 'epa', 'pass_epa', 'rush_epa', 'early_epa', 'neutral_epa', 'explosive', 'ypp', 'turnovers']) t += (TC['s_' + m] || 0) * f['s_' + m];
+  return t + (TC.dome || 0) * (dome ? 1 : 0);
+}
+const ratingOf = (t) => marginOf(feats(AVGV, vec(t), { neutral: true }));
+const RATING = Object.fromEntries(TEAMS.map((t) => [t, ratingOf(t)]));
+const rankOrder = TEAMS.slice().sort((x, y) => RATING[y] - RATING[x]);
+const rankOf = Object.fromEntries(rankOrder.map((t, i) => [t, i + 1]));
+
+// ---------- games & records ----------
+const games = DATA.games.map((g) => ({ ...g, done: g.hs != null }));
+function records(throughWeek = 99) {
+  const r = Object.fromEntries(TEAMS.map((t) => [t, { w: 0, l: 0, t: 0, pf: 0, pa: 0 }]));
+  for (const g of games) {
+    if (!g.done || g.wk > throughWeek) continue;
+    const H = r[g.h], A = r[g.a];
+    H.pf += g.hs; H.pa += g.as; A.pf += g.as; A.pa += g.hs;
+    if (g.hs > g.as) { H.w++; A.l++; } else if (g.as > g.hs) { A.w++; H.l++; } else { H.t++; A.t++; }
+  }
+  return r;
+}
+const recNow = records();
+const unplayed = games.filter((g) => !g.done);
+const currentWeek = unplayed.length ? Math.min(...unplayed.map((g) => g.wk)) : 18;
+const lastPlayed = games.filter((g) => g.done).sort((a, b) => (b.day + b.time).localeCompare(a.day + a.time))[0];
+const mkProb = (g) => g.mk_p != null ? g.mk_p : g.mk_spread != null ? Phi(g.mk_spread / 13.5) : null;
+let sim = null;
+
+// ---------- formatting ----------
+const pct = (p) => p >= 0.995 ? '>99%' : p > 0 && p < 0.005 ? '<1%' : Math.round(p * 100) + '%';
+const signed = (x, d = 1) => (x >= 0 ? '+' : '−') + Math.abs(x).toFixed(d);
+const half = (x) => Math.round(x * 2) / 2;
+const fmtLine = (away, home, margin) => {
+  const r = half(Math.abs(margin));
+  if (r < 0.5) return 'Pick’em';
+  return (margin > 0 ? home : away) + ' −' + (r % 1 ? r.toFixed(1) : r.toFixed(0));
+};
+const fmtRec = (r) => r.w + '-' + r.l + (r.t ? '-' + r.t : '');
+const kickDate = (g) => new Date(g.day + 'T' + (g.time || '13:00') + ':00' + (g.day < '2026-11-01' ? '-04:00' : '-05:00'));
+const kick = (g) => kickDate(g).toLocaleString(undefined, { weekday: 'short', hour: 'numeric', minute: '2-digit' });
+const dayFmt = (g) => kickDate(g).toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+const esc = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const lastName = (n) => n ? String(n).split(' ').slice(1).join(' ') || n : '?';
+
+document.getElementById('asof').textContent = 'Results through ' + kickDate(lastPlayed).toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric' }) + ' · ' + games.filter((g) => g.done).length + ' games';
+
+// ---------- tooltip ----------
+const tip = document.getElementById('tip');
+function showTip(text, x, y) {
+  tip.textContent = text; tip.hidden = false;
+  const w = tip.offsetWidth, h = tip.offsetHeight;
+  tip.style.left = Math.max(8, Math.min(window.innerWidth - w - 8, x - w / 2)) + 'px';
+  tip.style.top = Math.max(8, y - h - 12) + 'px';
+}
+document.addEventListener('pointermove', (e) => { const el = e.target.closest && e.target.closest('[data-tip]'); if (el) showTip(el.getAttribute('data-tip'), e.clientX, e.clientY); else if (e.pointerType === 'mouse') tip.hidden = true; });
+document.addEventListener('pointerdown', (e) => { const el = e.target.closest && e.target.closest('[data-tip]'); if (el) showTip(el.getAttribute('data-tip'), e.clientX, e.clientY); else tip.hidden = true; });
+window.addEventListener('scroll', () => { tip.hidden = true; }, { passive: true });
+
+// ---------- shared pieces ----------
+function factorList(c, away, home) {
+  const rows = Object.entries(c).filter(([, v]) => Math.abs(v) >= 0.05).sort((x, y) => Math.abs(y[1]) - Math.abs(x[1]));
+  const max = Math.max(3, ...rows.map(([, v]) => Math.abs(v)));
+  return rows.map(([k, v]) => {
+    const w = Math.min(60, Math.abs(v) / max * 60);
+    const bar = v < 0 ? '<span class="l" style="width:' + w + 'px"></span><span></span>' : '<span></span><span class="r" style="width:' + w + 'px"></span>';
+    return '<div class="frow"><span class="fl">' + esc(k) + '</span><span class="fbar" aria-hidden="true">' + bar + '</span><span class="fv">' + (v < 0 ? away : home) + ' ' + Math.abs(v).toFixed(1) + '</span></div>';
+  }).join('');
+}
+function keyFactors(c, away, home) {
+  return Object.entries(c).filter(([k, v]) => Math.abs(v) >= 1 && k !== 'Home field').sort((x, y) => Math.abs(y[1]) - Math.abs(x[1])).slice(0, 2)
+    .map(([k, v]) => k + ' favor ' + (v < 0 ? away : home)).join(' · ');
+}
+const probBar = (away, home, pH) => '<div class="probbar" role="img" aria-label="Model win chance: ' + away + ' ' + pct(1 - pH) + ', ' + home + ' ' + pct(pH) + '">' +
+  '<span class="a" style="width:' + ((1 - pH) * 100).toFixed(1) + '%" data-tip="' + full(away) + ': ' + pct(1 - pH) + ' to win"></span>' +
+  '<span class="h" style="width:' + (pH * 100).toFixed(1) + '%" data-tip="' + full(home) + ': ' + pct(pH) + ' to win"></span></div>' +
+  '<div class="prob-labels num"><span><span class="swatch a"></span><b>' + away + '</b> ' + pct(1 - pH) + '</span><span>' + pct(pH) + ' <b>' + home + '</b><span class="swatch h" style="margin:0 0 0 5px"></span></span></div>';
+
+// ---------- Games ----------
+let viewWeek = currentWeek;
+function gameCard(g) {
+  const recs = g.done ? records(g.wk - 1) : recNow;
+  const pH = g.p, strong = Math.max(pH, 1 - pH) >= 0.7;
+  const mp = mkProb(g);
+  const rowFor = (t, isHome) => {
+    const sc = g.done ? (isHome ? g.hs : g.as) : null, opp = g.done ? (isHome ? g.as : g.hs) : null;
+    return '<div class="team-row"><span class="abbr">' + t + '</span><span class="tname">' + (isHome ? '@ ' : '') + esc(nick(t)) + '</span>' +
+      '<span class="trec num">' + fmtRec(recs[t]) + '</span><span class="tscore num' + (g.done && sc < opp ? ' lost' : '') + '">' + (g.done ? sc : '') + '</span></div>';
+  };
+  let h = '<article class="game"><div class="game-meta"><span>' + kick(g) + '</span><span class="tags">' +
+    (strong ? '<span class="tag strong">Strong pick</span>' : '') + (g.done ? '<span class="tag">Final</span>' : '<span class="tag live">Upcoming</span>') + '</span></div>' +
+    '<div>' + rowFor(g.a, false) + rowFor(g.h, true) + '</div>' +
+    '<p class="qbline">QBs: ' + esc(g.qa || '?') + ' vs ' + esc(g.qh || '?') + (g.wind >= 12 ? ' · wind ' + Math.round(g.wind) + ' mph' : '') + (g.temp != null && g.temp <= 32 && !g.dome ? ' · ' + Math.round(g.temp) + '°F' : '') + '</p>' +
+    probBar(g.a, g.h, pH) +
+    '<div class="mkrow num"><span>Model <b>' + fmtLine(g.a, g.h, g.m) + '</b>, total <b>' + half(g.tot).toFixed(1) + '</b></span>' +
+    (g.mk_spread != null ? '<span>Market <b>' + fmtLine(g.a, g.h, g.mk_spread) + '</b>, total <b>' + g.mk_total + '</b>' + (mp != null ? ' (' + (mp >= 0.5 ? g.h + ' ' + pct(mp) : g.a + ' ' + pct(1 - mp)) + ')' : '') + '</span>' : '') + '</div>';
+  const kf = keyFactors(g.c, g.a, g.h);
+  h += '<details class="factors"><summary><span>' + (kf ? esc(kf) : 'Why the model leans this way') + '</span></summary>' + factorList(g.c, g.a, g.h) + '</details>';
+  if (g.done) {
+    const pickHome = pH >= 0.5, tie = g.hs === g.as, homeWon = g.hs > g.as;
+    const pick = pickHome ? g.h : g.a, conf = pct(Math.max(pH, 1 - pH));
+    const mkNote = g.mk_spread != null && Math.abs(g.mk_spread) >= 0.5 ? (((g.mk_spread > 0) === homeWon) ? ' · market right' : ' · market wrong') : '';
+    if (tie) h += '<div class="verdict none">Tie · model had ' + pick + ' at ' + conf + '</div>';
+    else if (pickHome === homeWon) h += '<div class="verdict good"><span aria-hidden="true">✓</span> Model picked ' + pick + ' (' + conf + ')<span class="muted" style="font-weight:500">' + mkNote + '</span></div>';
+    else h += '<div class="verdict bad"><span aria-hidden="true">✗</span> Model picked ' + pick + ' (' + conf + ')<span class="muted" style="font-weight:500">' + mkNote + '</span></div>';
+  }
+  return h + '</article>';
+}
+function renderWeek() {
+  const el = document.getElementById('view-week');
+  const wkGames = games.filter((g) => g.wk === viewWeek);
+  const first = wkGames[0], last = wkGames[wkGames.length - 1];
+  const dec = wkGames.filter((g) => g.done && g.hs !== g.as);
+  const right = dec.filter((g) => (g.p >= 0.5) === (g.hs > g.as)).length;
+  const mkDec = dec.filter((g) => g.mk_spread != null && Math.abs(g.mk_spread) >= 0.5);
+  const mkRight = mkDec.filter((g) => (g.mk_spread > 0) === (g.hs > g.as)).length;
+  const strongs = dec.filter((g) => Math.max(g.p, 1 - g.p) >= 0.7), sRight = strongs.filter((g) => (g.p >= 0.5) === (g.hs > g.as)).length;
+  const left = wkGames.filter((g) => !g.done).length;
+  let summary = dec.length ? 'Model ' + right + '–' + (dec.length - right) + (mkDec.length ? ' · market ' + mkRight + '–' + (mkDec.length - mkRight) : '') + (strongs.length ? ' · strong picks ' + sRight + '–' + (strongs.length - sRight) : '') + (left ? ' · ' + left + ' left' : '') : 'Predictions use every result through ' + dayFmt(lastPlayed) + '.';
+  const byes = TEAMS.filter((t) => !wkGames.some((g) => g.a === t || g.h === t));
+  el.innerHTML = '<div class="weekbar"><button class="iconbtn" id="wk-prev" aria-label="Previous week"' + (viewWeek <= 1 ? ' disabled' : '') + '>‹</button>' +
+    '<div><h2>Week ' + viewWeek + '</h2><p class="muted small">' + dayFmt(first) + ' – ' + dayFmt(last) + (viewWeek === currentWeek ? ' · this week' : '') + '</p></div>' +
+    '<button class="iconbtn" id="wk-next" aria-label="Next week"' + (viewWeek >= 18 ? ' disabled' : '') + '>›</button></div>' +
+    '<p class="week-summary">' + summary + '</p>' +
+    '<div class="games">' + wkGames.map(gameCard).join('') + '</div>' +
+    (byes.length ? '<p class="muted small">Bye: ' + byes.join(', ') + '</p>' : '') +
+    '<p class="notice">Past games show the pick the model would have made before kickoff, using only earlier data. Market lines are closing spreads and totals. Upcoming games use today’s starting quarterbacks, injuries and Monday’s news (see the <a href="#news">News</a> tab).' + (viewWeek > DATA.cw ? ' Win chances this far out are pulled toward 50%, because ratings, quarterbacks and injuries will change before kickoff.' : '') + '</p>';
+  el.querySelector('#wk-prev').onclick = () => { viewWeek--; renderWeek(); };
+  el.querySelector('#wk-next').onclick = () => { viewWeek++; renderWeek(); };
+}
+
+// ---------- Rankings ----------
+let rankSort = 'rating';
+function netBar(v, max) {
+  const w = Math.min(1, Math.abs(v) / max) * 44;
+  if (Math.abs(v) < 0.05) return '<span class="netbar" aria-hidden="true"><span class="zero"></span></span>';
+  return '<span class="netbar" aria-hidden="true">' + (v < 0 ? '<span class="neg" style="width:' + w + 'px"></span><span></span>' : '<span></span><span class="pos" style="width:' + w + 'px"></span>') + '</span>';
+}
+function renderRankings() {
+  const el = document.getElementById('view-rankings');
+  const keys = { rating: (t) => RATING[t], off: (t) => T[t].r.epa[0], def: (t) => T[t].r.epa[1], qb: (t) => T[t].q, wins: (t) => sim ? sim[t].wins : RATING[t] };
+  const order = TEAMS.slice().sort((x, y) => keys[rankSort](y) - keys[rankSort](x));
+  const hb = (k, label, tt) => '<th><button data-sort="' + k + '" aria-pressed="' + (rankSort === k) + '" title="' + tt + '">' + label + '</button></th>';
+  el.innerHTML = '<div><h2>Power Rankings</h2><p class="intro">Rating is how many points better or worse than an average team each team would be on a neutral field today, with its current quarterback and injuries. Offense and defense columns are expected points added (EPA) per play, adjusted for opponents.</p></div>' +
+    '<div class="panel"><div class="tablewrap"><table><thead><tr><th>#</th><th class="l">Team</th><th>Record</th>' +
+    hb('rating', 'Rating', 'Points vs. average team') + hb('off', 'Off EPA', 'Offensive EPA per play, adjusted') + hb('def', 'Def EPA', 'EPA per play prevented, adjusted') +
+    hb('qb', 'QB', 'Starting QB EPA per dropback') + hb('wins', 'Proj W', 'Projected final wins') + '<th>Playoffs</th></tr></thead><tbody>' +
+    order.map((t, i) => {
+      const s = sim && sim[t], x = T[t];
+      return '<tr class="click" data-team="' + t + '"><td class="muted">' + (i + 1) + '</td><td class="l"><span class="teamcell"><span class="abbr">' + t + '</span><span class="hide-sm">' + esc(nick(t)) + '</span></span></td>' +
+        '<td>' + fmtRec(recNow[t]) + '</td><td><span class="pv">' + signed(RATING[t]) + '</span>' + netBar(RATING[t], 10) + '</td>' +
+        '<td>' + signed(x.r.epa[0], 2) + '</td><td>' + signed(x.r.epa[1], 2) + '</td>' +
+        '<td class="l"><span title="' + esc(x.qb) + '">' + esc(lastName(x.qb)) + '</span> <span class="muted">' + signed(x.q, 2) + '</span></td>' +
+        '<td>' + (s ? s.wins.toFixed(1) : '…') + '</td><td>' + (s ? pct(s.playoff) : '…') + '</td></tr>';
+    }).join('') + '</tbody></table></div>' +
+    '<p class="legend" style="margin-top:10px"><span><span class="swatch" style="background:var(--pos)"></span>Better than average</span><span><span class="swatch" style="background:var(--neg)"></span>Worse than average</span><span class="muted">Tap a team for its page</span></p></div>';
+  el.querySelectorAll('[data-sort]').forEach((b) => b.onclick = (e) => { e.stopPropagation(); rankSort = b.dataset.sort; renderRankings(); });
+  el.querySelectorAll('tr[data-team]').forEach((r) => r.onclick = () => openTeam(r.dataset.team));
+}
+
+// ---------- Playoffs ----------
+// spread of a game's result as seen from today: grows for later weeks (drift.py); part of it comes from the per-run team shocks
+const weeksAhead = (g) => Math.max(0, g.wk - (DATA.cw || g.wk));
+const sigmaAt = (g) => SIG * (1 + (DATA.drift_c || 0) * weeksAhead(g));
+const gameSd = (g, ratingSd) => Math.sqrt(Math.max(100, sigmaAt(g) ** 2 - 2 * ratingSd * ratingSd));
+function simulate(n = 5000, ratingSd = 2.0, seed = 11) {
+  let s = seed >>> 0;
+  const rnd = () => { s = (s + 0x6D2B79F5) >>> 0; let t = s; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+  const gauss = () => { let u = 0; while (!u) u = rnd(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * rnd()); };
+  const out = Object.fromEntries(TEAMS.map((t) => [t, { wins: 0, hist: new Array(18).fill(0), playoff: 0, division: 0, seed1: 0 }]));
+  for (let k = 0; k < n; k++) {
+    const sh = Object.fromEntries(TEAMS.map((t) => [t, gauss() * ratingSd]));
+    const w = {}, tb = {};
+    for (const t of TEAMS) { w[t] = recNow[t].w + recNow[t].t * 0.5; tb[t] = rnd() * 0.01 + RATING[t] * 0.0001; }
+    for (const g of unplayed) { if (rnd() < Phi((g.m + sh[g.h] - sh[g.a]) / gameSd(g, ratingSd))) w[g.h]++; else w[g.a]++; }
+    const sc = (t) => w[t] + tb[t];
+    for (const c of ['AFC', 'NFC']) {
+      const dw = [];
+      for (const [d, ts] of Object.entries(DIVS)) { if (!d.startsWith(c)) continue; const win = ts.slice().sort((x, y) => sc(y) - sc(x))[0]; dw.push(win); out[win].division++; }
+      dw.sort((x, y) => sc(y) - sc(x)); out[dw[0]].seed1++;
+      const wc = TEAMS.filter((t) => CONF_OF[t] === c && !dw.includes(t)).sort((x, y) => sc(y) - sc(x)).slice(0, 3);
+      for (const t of [...dw, ...wc]) out[t].playoff++;
+    }
+    for (const t of TEAMS) { out[t].wins += w[t]; out[t].hist[Math.min(17, Math.floor(w[t]))]++; }
+  }
+  for (const t of TEAMS) { const o = out[t]; o.wins /= n; o.playoff /= n; o.division /= n; o.seed1 /= n; o.hist = o.hist.map((x) => x / n); }
+  return out;
+}
+let conf = prefs.get('conf', 'AFC');
+const heat = (p) => '<span class="heatcell" style="background:color-mix(in oklab, var(--pos) ' + Math.round(Math.min(1, p) * 70) + '%, transparent)">' + pct(p) + '</span>';
+function renderPlayoffs() {
+  const el = document.getElementById('view-playoffs');
+  let html = '<div><h2>Playoff Odds</h2><p class="intro">The rest of the season played out 5,000 times using the model’s game predictions. Each run nudges every team’s strength a little, since ratings are uncertain. Seven teams per conference make it: four division winners and three wild cards.</p></div>' +
+    '<div class="seg" role="group" aria-label="Conference"><button data-conf="AFC" aria-pressed="' + (conf === 'AFC') + '">AFC</button><button data-conf="NFC" aria-pressed="' + (conf === 'NFC') + '">NFC</button></div>';
+  if (!sim) html += '<p class="loading">Running season simulations…</p>';
+  else {
+    for (const [d, ts] of Object.entries(DIVS)) {
+      if (!d.startsWith(conf)) continue;
+      const order = ts.slice().sort((x, y) => sim[y].playoff - sim[x].playoff || sim[y].wins - sim[x].wins);
+      html += '<div class="panel"><div class="panel-head"><h3>' + d + '</h3></div><div class="tablewrap"><table><thead><tr><th class="l">Team</th><th>Now</th><th>Proj</th><th>Win div</th><th>Playoffs</th><th>#1 seed</th></tr></thead><tbody>' +
+        order.map((t) => { const s = sim[t]; return '<tr class="click" data-team="' + t + '"><td class="l"><span class="teamcell"><span class="abbr">' + t + '</span><span class="hide-sm">' + esc(nick(t)) + '</span></span></td><td>' + fmtRec(recNow[t]) + '</td><td>' + s.wins.toFixed(1) + '–' + (17 - s.wins).toFixed(1) + '</td><td>' + heat(s.division) + '</td><td>' + heat(s.playoff) + '</td><td>' + heat(s.seed1) + '</td></tr>'; }).join('') +
+        '</tbody></table></div></div>';
+    }
+    html += '<p class="muted small">Ties in the standings are broken by rating instead of the NFL’s full tiebreaker list, so close races can be off by a few points.</p>';
+  }
+  el.innerHTML = html;
+  el.querySelectorAll('[data-conf]').forEach((b) => b.onclick = () => { conf = b.dataset.conf; prefs.set('conf', conf); renderPlayoffs(); });
+  el.querySelectorAll('tr[data-team]').forEach((r) => r.onclick = () => openTeam(r.dataset.team));
+}
+
+// ---------- Matchup ----------
+const mu = { away: 'BUF', home: 'MIN', neutral: false, adjA: 0, adjH: 0 };
+const teamOptions = (sel) => TEAMS.slice().sort((a, b) => full(a).localeCompare(full(b))).map((t) => '<option value="' + t + '"' + (t === sel ? ' selected' : '') + '>' + esc(full(t)) + '</option>').join('');
+function marginChart(away, home, margin) {
+  const W = 600, H = 210, padL = 8, padR = 8, padT = 28, padB = 34, lo = -35, hi = 35;
+  const x = (v) => padL + (v - lo) / (hi - lo) * (W - padL - padR);
+  const y = (d) => padT + (1 - d) * (H - padT - padB);
+  const pts = []; for (let v = lo; v <= hi + 0.01; v += 0.5) pts.push([v, Math.exp(-0.5 * ((v - margin) / SIG) ** 2)]);
+  const area = (from, to) => { const seg = pts.filter(([v]) => v >= from && v <= to); return 'M' + x(seg[0][0]) + ',' + y(0) + ' ' + seg.map(([v, d]) => 'L' + x(v).toFixed(1) + ',' + y(d).toFixed(1)).join(' ') + ' L' + x(seg[seg.length - 1][0]) + ',' + y(0) + 'Z'; };
+  let s = '<svg class="chart" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Spread of likely final margins">' +
+    '<path d="' + area(lo, -0.5) + '" fill="var(--away)" /><path d="' + area(0.5, hi) + '" fill="var(--home)" />' +
+    '<line class="base" x1="' + padL + '" x2="' + (W - padR) + '" y1="' + y(0) + '" y2="' + y(0) + '" />';
+  for (const t of [-28, -14, 0, 14, 28]) {
+    s += '<line class="grid" x1="' + x(t) + '" x2="' + x(t) + '" y1="' + y(0) + '" y2="' + (y(0) + 5) + '" />' +
+      '<text x="' + x(t) + '" y="' + (H - 12) + '" text-anchor="' + (t === -28 ? 'start' : t === 28 ? 'end' : 'middle') + '">' + (t === 0 ? 'Tie' : (t < 0 ? away : home) + ' by ' + Math.abs(t)) + '</text>';
+  }
+  const mx = x(Math.max(lo + 2, Math.min(hi - 2, margin)));
+  s += '<line x1="' + mx + '" x2="' + mx + '" y1="' + (padT - 6) + '" y2="' + y(0) + '" stroke="var(--ink)" stroke-width="2" stroke-dasharray="4 3" />' +
+    '<text x="' + mx + '" y="' + (padT - 12) + '" text-anchor="' + (mx < 120 ? 'start' : mx > W - 120 ? 'end' : 'middle') + '" style="fill:var(--ink);font-weight:600">' + (Math.abs(margin) < 0.25 ? 'Model: even' : 'Model: ' + (margin > 0 ? home : away) + ' by ' + Math.abs(margin).toFixed(1)) + '</text>';
+  for (let v = lo; v < hi; v += 3.5) {
+    const c = v + 1.75, pGe = 1 - Phi((c - margin) / SIG);
+    const label = c >= 0 ? home + ' wins by ' + Math.round(c) + '+: ' + pct(pGe) : away + ' wins by ' + Math.round(-c) + '+: ' + pct(1 - pGe);
+    s += '<rect class="hit" x="' + x(v) + '" y="' + padT + '" width="' + (x(v + 3.5) - x(v)) + '" height="' + (y(0) - padT) + '" data-tip="' + label + '" />';
+  }
+  return s + '</svg>';
+}
+function renderMatchup() {
+  const el = document.getElementById('view-matchup');
+  el.innerHTML = '<div><h2>Matchup</h2><p class="intro">Pick any two teams. The model uses current ratings, starting quarterbacks and injuries. Use the sliders for anything it can’t see, like a late scratch.</p></div>' +
+    '<div class="panel" style="display:grid;gap:16px">' +
+    '<div class="pickers"><label class="field"><span class="label">Away</span><select id="mu-away">' + teamOptions(mu.away) + '</select></label><span class="at" aria-hidden="true">@</span>' +
+    '<label class="field"><span class="label">Home</span><select id="mu-home">' + teamOptions(mu.home) + '</select></label></div>' +
+    '<label class="check"><input type="checkbox" id="mu-neutral"' + (mu.neutral ? ' checked' : '') + '> Neutral site</label>' +
+    '<div class="sliders"><div class="slider"><div class="slider-top"><label for="mu-adja">' + mu.away + ' adjustment</label><output id="mu-adja-out" class="num"></output></div><input type="range" id="mu-adja" min="-10" max="10" step="0.5" value="' + mu.adjA + '"></div>' +
+    '<div class="slider"><div class="slider-top"><label for="mu-adjh">' + mu.home + ' adjustment</label><output id="mu-adjh-out" class="num"></output></div><input type="range" id="mu-adjh" min="-10" max="10" step="0.5" value="' + mu.adjH + '"></div></div></div>' +
+    '<div class="panel" id="mu-out" style="display:grid;gap:14px"></div>';
+  const q = (id) => el.querySelector('#' + id);
+  q('mu-away').onchange = (e) => { mu.away = e.target.value; mu.adjA = 0; if (mu.away === mu.home) mu.home = TEAMS.find((t) => t !== mu.away); renderMatchup(); };
+  q('mu-home').onchange = (e) => { mu.home = e.target.value; mu.adjH = 0; if (mu.away === mu.home) mu.away = TEAMS.find((t) => t !== mu.home); renderMatchup(); };
+  q('mu-neutral').onchange = (e) => { mu.neutral = e.target.checked; updateMatchup(); };
+  q('mu-adja').oninput = (e) => { mu.adjA = +e.target.value; updateMatchup(); };
+  q('mu-adjh').oninput = (e) => { mu.adjH = +e.target.value; updateMatchup(); };
+  updateMatchup();
+}
+function updateMatchup() {
+  const el = document.getElementById('view-matchup');
+  const { away, home } = mu;
+  el.querySelector('#mu-adja-out').textContent = mu.adjA ? signed(mu.adjA) + ' pts' : 'none';
+  el.querySelector('#mu-adjh-out').textContent = mu.adjH ? signed(mu.adjH) + ' pts' : 'none';
+  const f = feats(vec(away), vec(home), { neutral: mu.neutral, div: DIV_OF[away] === DIV_OF[home] });
+  const c = contribOf(f);
+  if (mu.adjA || mu.adjH) c['Your adjustments'] = mu.adjH - mu.adjA;
+  const margin = marginOf(f) + mu.adjH - mu.adjA;
+  const pH = Phi(margin / SIG), pA = 1 - pH;
+  const total = totalOf(f, !mu.neutral && T[home].dome > 0.5);
+  const hs = (total + margin) / 2, as = (total - margin) / 2;
+  const sched = unplayed.find((g) => g.a === away && g.h === home);
+  el.querySelector('#mu-out').innerHTML =
+    '<div class="result"><div class="side"><span class="label"><span class="swatch a"></span>' + esc(full(away)) + '</span><span class="bigpct num">' + pct(pA) + '</span><span class="muted small">' + fmtRec(recNow[away]) + ' · QB ' + esc(T[away].qb) + '</span></div>' +
+    '<div class="side r"><span class="label">' + esc(full(home)) + '<span class="swatch h" style="margin:0 0 0 5px"></span></span><span class="bigpct num">' + pct(pH) + '</span><span class="muted small">' + fmtRec(recNow[home]) + ' · QB ' + esc(T[home].qb) + '</span></div></div>' +
+    probBar(away, home, pH) +
+    '<div class="facts num"><div class="fact"><span class="label">Model line</span><b>' + fmtLine(away, home, margin) + '</b></div><div class="fact"><span class="label">Total</span><b>' + half(total).toFixed(1) + '</b></div>' +
+    '<div class="fact"><span class="label">Projected score</span><b>' + away + ' ' + Math.round(as) + ', ' + home + ' ' + Math.round(hs) + '</b></div></div>' +
+    '<div><div class="panel-head" style="margin-bottom:4px"><h3>What drives it</h3><span class="muted small">Points toward each team</span></div>' + factorList(c, away, home) + '</div>' +
+    '<div><div class="panel-head" style="margin-bottom:4px"><h3>How the final margin could land</h3><span class="legend"><span><span class="swatch a"></span>' + away + ' wins</span><span><span class="swatch h"></span>' + home + ' wins</span></span></div>' + marginChart(away, home, margin) +
+    '<p class="muted small">Hover or tap the curve for the chance of winning by a given amount. About two-thirds of games land within ' + Math.round(SIG) + ' points of the model’s margin.</p></div>' +
+    (sched ? '<p class="muted small">On the schedule for Week ' + sched.wk + ', ' + kick(sched) + '. The Games tab version also counts rest days' + (sched.mk_spread != null ? ' and shows the market line (' + fmtLine(away, home, sched.mk_spread) + ')' : '') + '.</p>' : '');
+}
+
+// ---------- Teams ----------
+let teamSel = prefs.get('team', 'BUF');
+function openTeam(t) { teamSel = t; prefs.set('team', t); if (location.hash !== '#teams') location.hash = 'teams'; else renderTeams(); window.scrollTo(0, 0); }
+function winsChart(t) {
+  const hist = sim[t].hist, W = 600, H = 190, padL = 34, padR = 6, padT = 12, padB = 28;
+  const top = Math.ceil(Math.max(...hist) * 10) / 10 || 0.1, bw = (W - padL - padR) / 18;
+  const y = (v) => padT + (1 - v / top) * (H - padT - padB);
+  let s = '<svg class="chart" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Chance of each final win total for ' + full(t) + '">';
+  for (let g = 0; g <= top + 1e-9; g += top / 2) s += '<line class="grid" x1="' + padL + '" x2="' + (W - padR) + '" y1="' + y(g) + '" y2="' + y(g) + '" /><text x="' + (padL - 6) + '" y="' + (y(g) + 4) + '" text-anchor="end">' + Math.round(g * 100) + '%</text>';
+  hist.forEach((p, w) => {
+    const x0 = padL + w * bw + 1, x1 = x0 + bw - 2, yt = y(p), yb = y(0), r = Math.min(4, (yb - yt) / 2, (bw - 2) / 2);
+    if (p > 0) s += '<path d="M' + x0 + ',' + yb + ' L' + x0 + ',' + (yt + r) + ' Q' + x0 + ',' + yt + ' ' + (x0 + r) + ',' + yt + ' L' + (x1 - r) + ',' + yt + ' Q' + x1 + ',' + yt + ' ' + x1 + ',' + (yt + r) + ' L' + x1 + ',' + yb + 'Z" fill="var(--pos)" />';
+    s += '<rect class="hit" x="' + (x0 - 1) + '" y="' + padT + '" width="' + bw + '" height="' + (yb - padT) + '" data-tip="' + w + ' wins: ' + (p > 0 ? pct(p) : 'not possible') + '" />';
+    if (w % 2 === 1 || w === 17) s += '<text x="' + (x0 + bw / 2 - 1) + '" y="' + (H - 8) + '" text-anchor="middle">' + w + '</text>';
+  });
+  return s + '<line class="base" x1="' + padL + '" x2="' + (W - padR) + '" y1="' + y(0) + '" y2="' + y(0) + '" /></svg><p class="muted small">Final wins out of 17. ' + nick(t) + ' already have ' + recNow[t].w + '.</p>';
+}
+const STATS = [
+  { k: 'epa', side: 'off', label: 'Offense EPA per play', f: 2, hi: true }, { k: 'epa', side: 'def', label: 'Defense EPA per play allowed', f: 2, hi: false },
+  { k: 'pass_epa', side: 'off', label: 'EPA per dropback', f: 2, hi: true }, { k: 'rush_epa', side: 'off', label: 'EPA per designed run', f: 2, hi: true },
+  { k: 'sr', side: 'off', label: 'Success rate', f: 'pct', hi: true }, { k: 'sr', side: 'def', label: 'Success rate allowed', f: 'pct', hi: false },
+  { k: 'explosive', side: 'off', label: 'Explosive play rate', f: 'pct', hi: true }, { k: 'explosive', side: 'def', label: 'Explosive plays allowed', f: 'pct', hi: false },
+  { k: 'neutral_epa', side: 'off', label: 'EPA/play in close games', f: 2, hi: true }, { k: 'early_epa', side: 'off', label: 'Early-down EPA per play', f: 2, hi: true },
+  { k: 'rz', side: 'off', label: 'Red zone TD rate', f: 'pct', hi: true }, { k: 'rz', side: 'def', label: 'Red zone TD rate allowed', f: 'pct', hi: false },
+  { k: 'sack', side: 'off', label: 'Sack rate', f: 'pct', hi: false }, { k: 'sack', side: 'def', label: 'Pressure: sack rate forced', f: 'pct', hi: true },
+  { k: 'to', side: 'off', label: 'Giveaways per game', f: 1, hi: false }, { k: 'to', side: 'def', label: 'Takeaways per game', f: 1, hi: true },
+  { k: 'st_epa', side: 'team', label: 'Special teams EPA per game', f: 's1', hi: true },
+];
+const statVal = (t, s) => s.side === 'team' ? T[t][s.k] : T[t][s.side][s.k];
+const fmtStat = (v, f) => v == null ? '\u2013' : f === 'pct' ? (v * 100).toFixed(1) + '%' : f === 2 ? signed(v, 2) : f === 's1' ? signed(v, 1) : v.toFixed(f);
+function statRank(t, s) { const vals = TEAMS.map((x) => statVal(x, s)).filter((v) => v != null).sort((a, b) => s.hi ? b - a : a - b); return vals.indexOf(statVal(t, s)) + 1; }
+function renderTeams() {
+  const el = document.getElementById('view-teams'), t = teamSel, r = recNow[t], s = sim && sim[t], x = T[t];
+  const tg = games.filter((g) => g.a === t || g.h === t);
+  const sched = tg.map((g) => {
+    const home = g.h === t, opp = home ? g.a : g.h;
+    let res;
+    if (g.done) { const us = home ? g.hs : g.as, them = home ? g.as : g.hs, k = us > them ? 'w' : us < them ? 'l' : 't'; res = '<span class="res ' + k + ' num">' + k.toUpperCase() + ' ' + us + '–' + them + '</span>'; }
+    else { const pw = home ? g.p : 1 - g.p; res = '<span class="res num" style="font-weight:500"><span class="pbar" aria-hidden="true"><i style="width:' + (pw * 100).toFixed(0) + '%"></i></span>' + pct(pw) + '</span>'; }
+    return '<div class="sched-row"><span class="wk num">W' + g.wk + '</span><span class="opp"><b>' + (home ? 'vs ' : '@ ') + opp + '</b> <span class="muted small">' + dayFmt(g) + (g.mk_spread != null && !g.done ? ' · market ' + fmtLine(g.a, g.h, g.mk_spread) : '') + '</span></span>' + res + '</div>';
+  }).join('');
+  const prof = STATS.map((st) => { const rk = statRank(t, st); return '<div class="prow"><span>' + st.label + '</span><span class="num"><b>' + fmtStat(statVal(t, st), st.f) + '</b> <span class="' + (rk <= 8 ? 'rank-good' : rk >= 25 ? 'rank-bad' : 'muted') + '">#' + rk + '</span></span></div>'; }).join('');
+  el.innerHTML = '<label class="field" style="max-width:360px"><span class="label">Team</span><select id="team-sel">' + teamOptions(t) + '</select></label>' +
+    '<div class="teamhead"><div><p class="label">' + DIV_OF[t] + '</p><h2>' + esc(full(t)) + '</h2></div><p class="muted">Power rank #' + rankOf[t] + ' of 32</p></div>' +
+    '<div class="stats num"><div class="stat"><span class="label">Record</span><b>' + fmtRec(r) + '</b><span class="muted small">' + r.pf + ' scored, ' + r.pa + ' allowed</span></div>' +
+    '<div class="stat"><span class="label">Rating</span><b>' + signed(RATING[t]) + '</b><span class="muted small">pts vs. average team</span></div>' +
+    '<div class="stat"><span class="label">Starting QB</span><b style="font-size:1.25rem">' + esc(x.qb) + '</b><span class="muted small">' + signed(x.q, 2) + ' EPA per dropback</span></div>' +
+    '<div class="stat"><span class="label">Proj record</span><b>' + (s ? s.wins.toFixed(1) + '–' + (17 - s.wins).toFixed(1) : '…') + '</b><span class="muted small">' + (s ? 'Playoffs ' + pct(s.playoff) : '') + '</span></div></div>' +
+    '<div class="panel"><div class="panel-head"><h3>Team profile</h3><span class="muted small">2026 season, rank of 32</span></div><div class="profile">' + prof + '</div></div>' +
+    '<div class="panel"><div class="panel-head"><h3>Projected final wins</h3></div>' + (s ? winsChart(t) : '<p class="loading">Running season simulations…</p>') + '</div>' +
+    '<div class="panel"><div class="panel-head"><h3>Schedule</h3><span class="muted small">Upcoming games show the model’s win chance</span></div><div class="sched">' + sched + '</div></div>';
+  el.querySelector('#team-sel').onchange = (e) => { teamSel = e.target.value; prefs.set('team', teamSel); renderTeams(); };
+}
+
+// ---------- Betting ----------
+const STAT_LABEL = { pass_yds: 'pass yds', rush_yds: 'rush yds', rec_yds: 'rec yds' };
+const amerProb = (o) => o > 0 ? 100 / (o + 100) : -o / (-o + 100);
+const amerPay = (o) => o > 0 ? o / 100 : 100 / -o;
+function trackRate(kind, gap) {
+  const b = TRACK[kind].find((x) => Math.abs(gap) >= x.lo && Math.abs(gap) < x.hi) || TRACK[kind][TRACK[kind].length - 1];
+  return { rate: b.w / b.n, n: b.n };
+}
+const betGames = unplayed.filter((g) => g.wk <= currentWeek + 1);
+const shop = { game: (betGames[0] || {}).id, bet: 'home_spread', line: null, fmt: 'american', prices: [{ book: 'Book 1', v: -110 }, { book: 'Book 2', v: '' }, { book: 'Kalshi', v: '' }] };
+function betModelProb(g, bet, line) {
+  if (bet === 'away_ml') return { p: 1 - g.p, track: null };
+  if (bet === 'home_ml') return { p: g.p, track: null };
+  if (bet === 'home_spread' || bet === 'away_spread') {
+    const homeLine = bet === 'home_spread' ? line : -line;           // home perspective, negative = home favored
+    const pHome = 1 - Phi((-homeLine - g.m) / SIG);                    // home covers if margin > -homeLine
+    const p = bet === 'home_spread' ? pHome : 1 - pHome;
+    const gap = g.m - (-homeLine);                                    // model margin minus market margin
+    const modelSideIsThis = (gap > 0) === (bet === 'home_spread');
+    const tr = trackRate('spread', gap);
+    return { p, track: Math.abs(gap) < 0.01 ? 0.5 : modelSideIsThis ? tr.rate : 1 - tr.rate, trackN: tr.n };
+  }
+  const pOver = 1 - Phi((line - g.tot) / 13.5);
+  const gap = g.tot - line, tr = trackRate('total', gap);
+  const isOver = bet === 'over';
+  return { p: isOver ? pOver : 1 - pOver, track: Math.abs(gap) < 0.01 ? 0.5 : ((gap > 0) === isOver ? tr.rate : 1 - tr.rate), trackN: tr.n };
+}
+function defaultLine(g, bet) {
+  if (bet === 'home_spread') return g.mk_spread != null ? -g.mk_spread : half(-g.m);
+  if (bet === 'away_spread') return g.mk_spread != null ? g.mk_spread : half(g.m);
+  if (bet === 'over' || bet === 'under') return g.mk_total != null ? g.mk_total : half(g.tot);
+  return null;
+}
+function renderBetting() {
+  const el = document.getElementById('view-betting');
+  // this week's logged picks
+  const open = BETS.filter((b) => b.result == null);
+  const done = BETS.filter((b) => b.result != null && b.result !== 'push');
+  const clvDone = BETS.filter((b) => b.clv != null);
+  const avgClv = clvDone.length ? clvDone.reduce((s, b) => s + b.clv, 0) / clvDone.length : null;
+  const rows = BETS.slice().sort((x, y) => Math.abs(y.model - y.line * (y.kind === 'spread' ? 1 : 1)) - Math.abs(x.model - x.line)).map((b) => {
+    const gap = b.kind === 'spread' ? b.model - b.line : b.model - b.line;
+    const tr = trackRate(b.kind, gap), trp = tr.rate;
+    const ev = trp * 100 / 110 - (1 - trp);
+    const sideLine = (t, v) => t + ' ' + (v === 0 ? 'PK' : v < 0 ? '−' + Math.abs(v) : '+' + v);
+    const lineTxt = b.kind === 'spread' ? (b.side === b.h ? sideLine(b.h, -b.line) : sideLine(b.a, b.line)) : b.side + ' ' + b.line;
+    const res = b.result == null ? '<span class="muted">Pending</span>' : '<span class="res ' + (b.result === 'win' ? 'w' : b.result === 'loss' ? 'l' : 't') + '">' + b.result + (b.clv != null ? ' · CLV ' + signed(b.clv) : '') + '</span>';
+    return '<tr><td class="l">Wk ' + b.wk + ' ' + b.a + ' @ ' + b.h + '</td><td class="l"><b>' + lineTxt + '</b></td><td>' + (b.kind === 'spread' ? fmtLine(b.a, b.h, b.model) : b.model.toFixed(1)) + '</td><td>' + pct(b.p) + '</td><td>' + pct(trp) + '</td><td>' + (ev >= 0 ? '+' : '−') + '$' + Math.abs(ev * 100).toFixed(1) + '</td><td>' + res + '</td></tr>';
+  }).join('');
+  // props
+  const graded = PROPS.filter((p) => p.won != null), wins = graded.filter((p) => p.won).length;
+  const profit = graded.reduce((s, p) => s + p.profit, 0), staked = graded.reduce((s, p) => s + (p.pick === 'YES' ? p.price : 1 - p.price), 0);
+  const propPanel = PROPS.length ? '<div class="panel"><div class="panel-head"><h3>Player prop test vs. Kalshi</h3><span class="muted small">' +
+    (graded.length ? wins + '–' + (graded.length - wins) + ' · ' + (profit >= 0 ? '+' : '−') + '$' + Math.abs(profit).toFixed(2) + ' on $' + staked.toFixed(2) + ' risked' : 'Logged before kickoff, not graded yet') + '</span></div>' +
+    '<p class="muted small" style="max-width:62ch;margin-bottom:8px">Each row is a Kalshi “X or more” market. The model buys YES when its chance is above the price and NO when it’s below, one contract each.</p>' +
+    '<div class="tablewrap"><table class="ptable"><thead><tr><th class="l">Market</th><th>Price</th><th>Model</th><th>Pick</th><th>Result</th></tr></thead><tbody>' +
+    PROPS.map((p) => '<tr><td class="l"><span class="pname">' + esc(p.player) + '</span> <span class="muted small">' + p.thr + '+ ' + STAT_LABEL[p.stat] + '</span></td><td>' + pct(p.price) + '</td><td>' + pct(p.p_over) + '</td><td><b>' + p.pick + '</b></td><td>' +
+      (p.won == null ? '<span class="muted">Pending</span>' : '<span class="res ' + (p.won ? 'w' : 'l') + '">' + (p.won ? '✓ ' : '✗ ') + p.actual + '</span>') + '</td></tr>').join('') +
+    '</tbody></table></div><p class="muted small" style="margin-top:8px">Prices: ' + esc(PROPS[0].source) + '. Kalshi fees not included.</p></div>' : '';
+  el.innerHTML = '<div><h2>Betting</h2><p class="intro">A test bench, not a tip sheet. Over nine past seasons the model’s sides and totals won about 49% against closing lines, below the 52.4% needed at −110. These tools are here to find out whether that changes when it bets earlier numbers, shops prices and plays props.</p></div>' +
+    '<div class="tiles num"><div class="tile"><span class="label">Picks logged</span><b>' + BETS.length + '</b><span class="muted small">' + open.length + ' waiting on games</span></div>' +
+    '<div class="tile"><span class="label">Record</span><b>' + (done.length ? done.filter((b) => b.result === 'win').length + '–' + done.filter((b) => b.result === 'loss').length : '–') + '</b><span class="muted small">At the line when logged</span></div>' +
+    '<div class="tile"><span class="label">Closing line value</span><b>' + (avgClv == null ? '–' : signed(avgClv)) + '</b><span class="muted small">Avg points the line moved toward our side</span></div>' +
+    '<div class="tile"><span class="label">Prop test</span><b>' + (graded.length ? wins + '–' + (graded.length - wins) : '–') + '</b><span class="muted small">' + PROPS.length + ' markets logged</span></div></div>' +
+    '<div class="panel"><div class="panel-head"><h3>Model picks vs. the line</h3><span class="muted small">Logged ' + esc((BETS[0] || {}).logged || '') + '</span></div>' +
+    '<p class="muted small" style="max-width:62ch;margin-bottom:8px">“Model” is the chance if the model is right. “Past rate” is how often its picks actually won at this size of disagreement in 2017–2025, and the value column uses that rate on a $100 bet at −110. Positive closing line value after kickoff is the early sign of a real edge.</p>' +
+    '<div class="tablewrap"><table class="ptable"><thead><tr><th class="l">Game</th><th class="l">Pick</th><th>Model line</th><th>Model</th><th>Past rate</th><th>Value</th><th>Result</th></tr></thead><tbody>' + rows + '</tbody></table></div></div>' +
+    '<div class="panel" id="shop"></div>' + propPanel +
+    '<p class="notice">Set a budget you’re fine losing and keep bets small and even. If betting stops being fun, the National Problem Gambling Helpline is 1-800-GAMBLER.</p>';
+  renderShop();
+}
+function renderShop() {
+  const box = document.getElementById('shop'); if (!box) return;
+  const g = games.find((x) => x.id === shop.game) || betGames[0];
+  if (shop.line == null) shop.line = defaultLine(g, shop.bet);
+  const opts = betGames.map((x) => '<option value="' + x.id + '"' + (x.id === g.id ? ' selected' : '') + '>Wk ' + x.wk + ': ' + x.a + ' @ ' + x.h + '</option>').join('');
+  const bets = [['away_ml', g.a + ' to win'], ['home_ml', g.h + ' to win'], ['away_spread', g.a + ' spread'], ['home_spread', g.h + ' spread'], ['over', 'Over'], ['under', 'Under']];
+  const needsLine = !/_ml$/.test(shop.bet);
+  const mp = betModelProb(g, shop.bet, +shop.line);
+  const evals = shop.prices.map((pr) => {
+    const v = parseFloat(pr.v); if (!isFinite(v) || (shop.fmt === 'american' && Math.abs(v) < 100) || (shop.fmt === 'kalshi' && (v <= 0 || v >= 100))) return null;
+    const imp = shop.fmt === 'american' ? amerProb(v) : v / 100, pay = shop.fmt === 'american' ? amerPay(v) : (100 - v) / v;
+    const ev = (p) => 100 * (p * pay - (1 - p));
+    return { imp, evModel: ev(mp.p), evTrack: mp.track != null ? ev(mp.track) : null };
+  });
+  const best = evals.reduce((bi, e, i) => e && (bi < 0 || e.imp < evals[bi].imp) ? i : bi, -1);
+  box.innerHTML = '<div class="panel-head"><h3>Price checker</h3><span class="muted small">Line shopping</span></div>' +
+    '<p class="muted small" style="max-width:62ch;margin-bottom:10px">Enter the same bet’s price from up to three places. The cheapest price is marked, and each row shows the expected result on $100.</p>' +
+    '<div class="controls"><label class="field"><span class="label">Game</span><select id="sh-game">' + opts + '</select></label>' +
+    '<label class="field"><span class="label">Bet</span><select id="sh-bet">' + bets.map(([k, l]) => '<option value="' + k + '"' + (k === shop.bet ? ' selected' : '') + '>' + l + '</option>').join('') + '</select></label>' +
+    (needsLine ? '<label class="field" style="min-width:120px"><span class="label">' + (/spread/.test(shop.bet) ? 'Line (e.g. −3.5)' : 'Total') + '</span><input id="sh-line" type="number" step="0.5" value="' + shop.line + '" style="padding:10px 12px;border-radius:8px;border:1px solid var(--line-strong);background:var(--surface)"></label>' : '') +
+    '<div class="seg" role="group" aria-label="Price format"><button data-fmt="american" aria-pressed="' + (shop.fmt === 'american') + '">Odds</button><button data-fmt="kalshi" aria-pressed="' + (shop.fmt === 'kalshi') + '">Kalshi ¢</button></div></div>' +
+    '<div class="tablewrap" style="margin-top:12px"><table class="ptable"><thead><tr><th class="l">Where</th><th class="l">Price</th><th>Implied</th><th>Value (model)</th><th>Value (past rate)</th></tr></thead><tbody>' +
+    shop.prices.map((pr, i) => { const e = evals[i]; const f = (x) => x == null ? '–' : (x >= 0 ? '+' : '−') + '$' + Math.abs(x).toFixed(1);
+      return '<tr><td class="l"><input id="sh-book-' + i + '" value="' + esc(pr.book) + '" aria-label="Book name" style="width:7em;padding:6px 8px;border-radius:6px;border:1px solid var(--line-strong);background:var(--surface)"></td>' +
+        '<td class="l"><input id="sh-price-' + i + '" type="number" value="' + esc(pr.v) + '" placeholder="' + (shop.fmt === 'american' ? '-110' : '52') + '" aria-label="Price" style="width:6em;padding:6px 8px;border-radius:6px;border:1px solid var(--line-strong);background:var(--surface);text-align:right"></td>' +
+        '<td>' + (e ? pct(e.imp) + (i === best ? ' <span class="tag strong">Best</span>' : '') : '–') + '</td><td>' + (e ? f(e.evModel) : '–') + '</td><td>' + (e ? f(e.evTrack) : '–') + '</td></tr>'; }).join('') +
+    '</tbody></table></div><p class="muted small" style="margin-top:8px">Model chance for this bet: <b>' + pct(mp.p) + '</b>' + (mp.track != null ? ' · past rate at this disagreement: <b>' + pct(mp.track) + '</b> (' + mp.trackN.toLocaleString() + ' games)' : ' · no past-rate data for moneylines; the model’s win chances have been well calibrated') + '.</p>';
+  box.querySelector('#sh-game').onchange = (e) => { shop.game = e.target.value; shop.line = null; renderShop(); };
+  box.querySelector('#sh-bet').onchange = (e) => { shop.bet = e.target.value; shop.line = null; renderShop(); };
+  const li = box.querySelector('#sh-line'); if (li) li.onchange = (e) => { shop.line = parseFloat(e.target.value) || 0; renderShop(); };
+  box.querySelectorAll('[data-fmt]').forEach((b) => b.onclick = () => { shop.fmt = b.dataset.fmt; shop.prices.forEach((p) => p.v = ''); renderShop(); });
+  shop.prices.forEach((p, i) => {
+    box.querySelector('#sh-price-' + i).onchange = (e) => { p.v = e.target.value; renderShop(); };
+    box.querySelector('#sh-book-' + i).onchange = (e) => { p.book = e.target.value; };
+  });
+}
+
+// ---------- Fantasy ----------
+let fmt = prefs.get('fmt', 'ppr'), fanWeek = FAN.cw + 1, fanPos = 'ALL', fanView = 'rank', fanGame = null;
+const REC_PTS = { ppr: 1, half: 0.5, std: 0 };
+const fp = (r) => (r.pass_yds || 0) / 25 + 4 * (r.pass_td || 0) - 2 * (r.int || 0) + (r.rush_yds || 0) / 10 + 6 * (r.rush_td || 0) + (r.rec_yds || 0) / 10 + 6 * (r.rec_td || 0) + REC_PTS[fmt] * (r.rec || 0);
+const STARTERS = { QB: 12, RB: 24, WR: 30, TE: 12 };
+const statLine = (r) => r.pos === 'QB' ? Math.round(r.pass_yds) + ' pass yds, ' + (r.pass_td || 0).toFixed(1) + ' TD, ' + Math.round(r.rush_yds) + ' rush'
+  : (r.rush_yds >= 5 ? Math.round(r.rush_yds) + ' rush, ' : '') + (r.rec || 0).toFixed(1) + ' rec, ' + Math.round(r.rec_yds || 0) + ' yds';
+function renderFantasy() {
+  const el = document.getElementById('view-fantasy');
+  const seg = (name, cur, items) => '<div class="seg" role="group" aria-label="' + name + '">' + items.map(([k, l]) => '<button data-' + name + '="' + k + '" aria-pressed="' + (k === cur) + '">' + l + '</button>').join('') + '</div>';
+  let body = '';
+  if (fanView === 'rank') {
+    const rows = FAN.games.filter((r) => r.wk === fanWeek && (fanPos === 'ALL' || r.pos === fanPos)).map((r) => ({ ...r, pts: fp(r) })).sort((a, b) => b.pts - a.pts);
+    const posRank = {}; const ranked = rows.map((r) => { posRank[r.pos] = (posRank[r.pos] || 0) + 1; return { ...r, pr: posRank[r.pos] }; });
+    body = '<div class="controls">' + seg('fwk', String(fanWeek), [[String(FAN.cw + 1), 'Week ' + (FAN.cw + 1)], [String(FAN.cw), 'Wk ' + FAN.cw + ' (MNF)']]) + seg('fpos', fanPos, [['ALL', 'All'], ['QB', 'QB'], ['RB', 'RB'], ['WR', 'WR'], ['TE', 'TE']]) + '</div>' +
+      '<div class="panel"><div class="tablewrap"><table class="ptable"><thead><tr><th>#</th><th class="l">Player</th><th class="l">Matchup</th><th>Pts</th><th class="l hide-sm">Projection</th></tr></thead><tbody>' +
+      ranked.map((r, i) => '<tr' + (r.pr === STARTERS[r.pos] && fanPos !== 'ALL' ? ' style="border-bottom:2px solid var(--accent)"' : '') + '><td class="muted">' + (fanPos === 'ALL' ? r.pos + r.pr : i + 1) + '</td><td class="l"><span class="pname">' + esc(r.name) + '</span>' +
+        (r.flag ? ' <span class="qbchip" title="' + esc(r.flag) + '" data-tip="' + esc(r.flag) + '">News</span>' : r.q ? ' <span class="qbchip">Q</span>' : '') + '</td><td class="l">' + r.team + (games.find((g) => g.id === r.game).h === r.team ? ' vs ' : ' @ ') + r.opp + '</td>' +
+        '<td><b>' + r.pts.toFixed(1) + '</b></td><td class="l hide-sm muted small">' + statLine(r) + '</td></tr>').join('') +
+      '</tbody></table></div><p class="muted small" style="margin-top:8px">' + (fanPos !== 'ALL' ? 'The green line marks the usual starter cutoff in a 12-team league. ' : '') + '“News” marks players with injury or trade news since the last report (tap it). “Q” means questionable on the last report.</p></div>';
+  } else if (fanView === 'ros') {
+    const base = {}; for (const r of FAN.games) if (!base[r.id] || r.wk === FAN.cw + 1) base[r.id] = r;
+    const rows = Object.entries(FAN.ros).filter(([id]) => base[id] && (fanPos === 'ALL' || base[id].pos === fanPos)).map(([id, t]) => ({ ...base[id], tot: fp(t), n: t.n })).sort((a, b) => b.tot - a.tot).slice(0, 60);
+    body = '<div class="controls">' + seg('fpos', fanPos, [['ALL', 'All'], ['QB', 'QB'], ['RB', 'RB'], ['WR', 'WR'], ['TE', 'TE']]) + '</div>' +
+      '<div class="panel"><div class="tablewrap"><table class="ptable"><thead><tr><th>#</th><th class="l">Player</th><th>Games left</th><th>Total pts</th><th>Per game</th></tr></thead><tbody>' +
+      rows.map((r, i) => '<tr><td class="muted">' + (i + 1) + '</td><td class="l"><span class="pname">' + esc(r.name) + '</span><span class="ppos pos-' + r.pos + '">' + r.pos + ' · ' + r.team + '</span>' + (r.flag ? ' <span class="qbchip" data-tip="' + esc(r.flag) + '">News</span>' : '') + '</td><td>' + r.n + '</td><td><b>' + r.tot.toFixed(0) + '</b></td><td>' + (r.n ? (r.tot / r.n).toFixed(1) : '–') + '</td></tr>').join('') +
+      '</tbody></table></div><p class="muted small" style="margin-top:8px">Each remaining game is projected against that opponent’s defense, so a soft schedule shows up here. Byes are already left out.</p></div>';
+  } else if (fanView === 'waiver') {
+    body = '<div class="panel"><div class="panel-head"><h3>Usage risers</h3><span class="muted small">Targets + carries per game, last 2 vs. earlier</span></div><div class="tablewrap"><table class="ptable"><thead><tr><th class="l">Player</th><th>Before</th><th>Last 2</th><th>Change</th></tr></thead><tbody>' +
+      FAN.risers.map((r) => '<tr><td class="l"><span class="pname">' + esc(r.name) + '</span><span class="ppos pos-' + r.pos + '">' + r.pos + ' · ' + r.team + '</span></td><td>' + r.before.toFixed(1) + '</td><td><b>' + r.recent.toFixed(1) + '</b></td><td class="rank-good">+' + r.jump.toFixed(1) + '</td></tr>').join('') +
+      '</tbody></table></div><p class="muted small" style="margin-top:8px">Opportunity moves first and fantasy points follow. Check why the role grew (injury ahead of him, benching, trade) before you spend a claim.</p></div>' +
+      '<div class="panel"><div class="panel-head"><h3>RB handcuffs</h3><span class="muted small">Carry share, last 3 games</span></div><div class="tablewrap"><table class="ptable"><thead><tr><th class="l">Team</th><th class="l">Starter</th><th>Share</th><th class="l">Backup</th><th>Share</th></tr></thead><tbody>' +
+      FAN.cuffs.slice().sort((a, b) => (b.rb2_share || 0) - (a.rb2_share || 0)).map((c) => '<tr><td class="l"><b>' + c.team + '</b></td><td class="l">' + esc(c.rb1) + (c.rb1_out ? ' <span class="qbchip">Out</span>' : '') + '</td><td>' + pct(c.rb1_share || 0) + '</td><td class="l">' + esc(c.rb2) + '</td><td>' + pct(c.rb2_share || 0) + '</td></tr>').join('') +
+      '</tbody></table></div><p class="muted small" style="margin-top:8px">Sorted by how much work the backup already gets. Backups with a big share are useful even before an injury; a lone starter’s backup is the pure insurance kind.</p></div>';
+  } else {
+    const gl = unplayed.filter((g) => g.wk <= FAN.cw + 1);
+    const g = gl.find((x) => x.id === fanGame) || gl[0];
+    const team = (t) => {
+      const ps = FAN.games.filter((r) => r.game === g.id && r.team === t).sort((a, b) => fp(b) - fp(a));
+      return '<div class="panel"><div class="panel-head"><h3>' + esc(full(t)) + '</h3><span class="muted small">vs ' + (t === g.h ? g.a : g.h) + '</span></div><div class="tablewrap"><table class="ptable"><thead><tr><th class="l">Player</th><th>Pts</th><th class="l">Projection</th><th>Any TD</th></tr></thead><tbody>' +
+        ps.map((r) => '<tr><td class="l"><span class="pname">' + esc(r.name) + '</span><span class="ppos pos-' + r.pos + '">' + r.pos + '</span>' + (r.flag ? ' <span class="qbchip" data-tip="' + esc(r.flag) + '">News</span>' : '') + '</td><td><b>' + fp(r).toFixed(1) + '</b></td><td class="l muted small">' + statLine(r) + '</td><td>' + pct(r.td_p) + '</td></tr>').join('') + '</tbody></table></div></div>';
+    };
+    body = '<label class="field" style="max-width:360px"><span class="label">Game</span><select id="fan-game">' + gl.map((x) => '<option value="' + x.id + '"' + (x.id === g.id ? ' selected' : '') + '>Wk ' + x.wk + ': ' + x.a + ' @ ' + x.h + '</option>').join('') + '</select></label>' + team(g.a) + team(g.h);
+  }
+  el.innerHTML = '<div><h2>Fantasy</h2><p class="intro">Projections from each player’s recent workload and efficiency, adjusted for the opponent and pulled toward realistic ranges. Players ruled out on the injury report or in Monday’s news are left off.</p></div>' +
+    '<div class="controls">' + seg('fview', fanView, [['rank', 'This week'], ['ros', 'Rest of season'], ['waiver', 'Waivers & handcuffs'], ['game', 'By game']]) + seg('fmt', fmt, [['ppr', 'PPR'], ['half', 'Half'], ['std', 'Std']]) + '</div>' + body +
+    '<p class="notice">Tested on Weeks 4–9, the projections missed by about ' + PL.bt.rec_yds.model_mae + ' receiving yards per player (a plain season average missed by ' + PL.bt.rec_yds.naive_mae + ') and ' + PL.bt.rush_yds.model_mae + ' rushing yards (vs ' + PL.bt.rush_yds.naive_mae + '). Single-game fantasy scores swing a lot, so use these for close calls, not as locks.</p>';
+  el.querySelectorAll('[data-fview]').forEach((b) => b.onclick = () => { fanView = b.dataset.fview; renderFantasy(); });
+  el.querySelectorAll('[data-fmt]').forEach((b) => b.onclick = () => { fmt = b.dataset.fmt; prefs.set('fmt', fmt); renderFantasy(); });
+  el.querySelectorAll('[data-fwk]').forEach((b) => b.onclick = () => { fanWeek = +b.dataset.fwk; renderFantasy(); });
+  el.querySelectorAll('[data-fpos]').forEach((b) => b.onclick = () => { fanPos = b.dataset.fpos; renderFantasy(); });
+  const gs = el.querySelector('#fan-game'); if (gs) gs.onchange = (e) => { fanGame = e.target.value; renderFantasy(); };
+}
+
+// ---------- News ----------
+let newsTeam = 'ALL';
+function renderNews() {
+  const el = document.getElementById('view-news');
+  const inj = NEWS.injuries.filter((r) => newsTeam === 'ALL' || r.team === newsTeam);
+  const items = NEWS.items.filter((r) => newsTeam === 'ALL' || r.team === newsTeam);
+  const qbRows = TEAMS.filter((t) => newsTeam === 'ALL' || t === newsTeam).map((t) => {
+    const flag = NEWS.flags[T[t].qb];
+    return '<tr><td class="l"><b>' + t + '</b></td><td class="l">' + esc(T[t].qb) + (DATA.overrides[t] ? ' <span class="qbchip">Change</span>' : '') + '</td><td>' + signed(T[t].q, 2) + '</td><td class="l muted small">' + esc(flag || '') + '</td></tr>';
+  }).join('');
+  el.innerHTML = '<div><h2>News</h2><p class="intro">What changed since the last games, and how the model is handling it. As of ' + esc(NEWS.asof) + '.</p></div>' +
+    '<label class="field" style="max-width:300px"><span class="label">Team</span><select id="news-team"><option value="ALL">All teams</option>' + TEAMS.map((t) => '<option value="' + t + '"' + (t === newsTeam ? ' selected' : '') + '>' + esc(full(t)) + '</option>').join('') + '</select></label>' +
+    '<div class="panel"><div class="panel-head"><h3>Headlines that move the numbers</h3></div>' +
+    (items.length ? items.map((n) => '<div class="prow" style="display:block"><p><span class="tag" style="margin-right:6px">' + esc(n.tag) + '</span><b>' + n.team + '</b> ' + esc(n.text) + '</p><p class="muted small" style="margin-top:4px"><a href="' + esc(n.url) + '" target="_blank" rel="noopener">' + esc(n.src) + '</a></p></div>').join('') : '<p class="muted">No headlines for this team.</p>') + '</div>' +
+    '<div class="panel"><div class="panel-head"><h3>Starting quarterbacks</h3><span class="muted small">What the model assumes</span></div><div class="tablewrap"><table class="ptable"><thead><tr><th class="l">Team</th><th class="l">Starter</th><th>EPA/db</th><th class="l">Note</th></tr></thead><tbody>' + qbRows + '</tbody></table></div></div>' +
+    '<div class="panel"><div class="panel-head"><h3>Injured regulars</h3><span class="muted small">Week ' + NEWS.injury_week + ' report, players with 50%+ of snaps</span></div>' +
+    (inj.length ? '<div class="tablewrap"><table class="ptable"><thead><tr><th class="l">Team</th><th class="l">Player</th><th class="l">Status</th><th class="l">Injury</th><th>Snaps</th></tr></thead><tbody>' +
+      inj.map((r) => '<tr><td class="l"><b>' + r.team + '</b></td><td class="l">' + esc(r.name) + '<span class="ppos pos-' + esc(r.pos) + '">' + esc(r.pos) + '</span></td><td class="l"><span class="' + (r.status === 'Out' ? 'rank-bad' : r.status === 'Doubtful' ? 'rank-bad' : 'muted') + '">' + r.status + '</span></td><td class="l muted">' + esc(r.injury) + '</td><td>' + pct(r.snap) + '</td></tr>').join('') + '</tbody></table></div>' : '<p class="muted">No injured regulars on the last report.</p>') +
+    '<p class="muted small" style="margin-top:8px">Players out or doubtful count against their team in the model, weighted by snap share. Questionable players are assumed to play. Next week’s report usually lands Wednesday through Friday.</p></div>';
+  el.querySelector('#news-team').onchange = (e) => { newsTeam = e.target.value; renderNews(); };
+}
+
+// ---------- Stats Lab ----------
+let statIdx = prefs.get('stat', 0);
+const STAT_NOTES = {
+  epa: 'Expected points added measures how much each play changes a team’s expected points, given down, distance and field position. It credits a 3rd-and-8 conversion more than a 6-yard gain on 3rd-and-10.',
+  pass_epa: 'Passing efficiency, including sacks and scrambles. It is the most stable team stat from week to week.',
+  rush_epa: 'Designed runs only. Most offenses lose expected points running, so near zero is good.',
+  sr: 'Share of plays that gain positive EPA. Steadier than EPA because one long play can’t swing it.',
+  explosive: 'Passes of 20+ yards and runs of 10+ yards per play.',
+  neutral_epa: 'EPA when the game is in doubt (win chance between 20% and 80%), which removes garbage time.',
+  early_epa: 'First and second down only. Predicts future offense better than third-down results, which are streaky.',
+  rz: 'Touchdowns per drive that reaches the 20. Tends to drift toward average over a season.',
+  sack: 'Sacks per dropback.', to: 'Turnovers are mostly luck from week to week, which is why the model gives them little weight.',
+  st_epa: 'Expected points gained on kicks, punts and returns, per game.',
+};
+function renderStats() {
+  const el = document.getElementById('view-stats'), st = STATS[statIdx] || STATS[0];
+  const rows = TEAMS.map((t) => ({ t, v: statVal(t, st) })).filter((r) => r.v != null).sort((a, b) => st.hi ? b.v - a.v : a.v - b.v);
+  const vals = rows.map((r) => r.v), avgv = vals.reduce((a, b) => a + b, 0) / vals.length, span = Math.max(...vals.map((v) => Math.abs(v - avgv))) || 1;
+  el.innerHTML = '<div><h2>Stats Lab</h2><p class="intro">The efficiency numbers analysts and sportsbooks lean on, straight from play-by-play data. These are raw 2026 averages; the model uses opponent-adjusted versions.</p></div>' +
+    '<label class="field" style="max-width:420px"><span class="label">Stat</span><select id="stat-sel">' + STATS.map((s, i) => '<option value="' + i + '"' + (i === statIdx ? ' selected' : '') + '>' + s.label + '</option>').join('') + '</select></label>' +
+    '<p class="muted" style="max-width:62ch">' + (STAT_NOTES[st.k] || '') + ' ' + (st.hi ? 'Higher is better.' : 'Lower is better.') + '</p>' +
+    '<div class="panel"><div class="tablewrap"><table><thead><tr><th>#</th><th class="l">Team</th><th>Value</th><th class="l">vs. league average</th></tr></thead><tbody>' +
+    rows.map((r, i) => { const d = r.v - avgv, good = st.hi ? d >= 0 : d <= 0, w = Math.abs(d) / span * 90; return '<tr class="click" data-team="' + r.t + '"><td class="muted">' + (i + 1) + '</td><td class="l"><span class="teamcell"><span class="abbr">' + r.t + '</span><span class="hide-sm">' + esc(nick(r.t)) + '</span></span></td><td>' + fmtStat(r.v, st.f) + '</td><td class="l"><span class="mbar' + (good ? '' : ' bad') + '" style="width:' + w.toFixed(0) + 'px" aria-hidden="true"></span></td></tr>'; }).join('') +
+    '</tbody></table></div><p class="legend" style="margin-top:10px"><span><span class="swatch" style="background:var(--pos)"></span>Better than average</span><span><span class="swatch" style="background:var(--neg)"></span>Worse than average</span></p></div>';
+  el.querySelector('#stat-sel').onchange = (e) => { statIdx = +e.target.value; prefs.set('stat', statIdx); renderStats(); };
+  el.querySelectorAll('tr[data-team]').forEach((r) => r.onclick = () => openTeam(r.dataset.team));
+}
+
+// ---------- Model ----------
+function weeklyChart() {
+  const data = DATA.bt.weekly, W = 600, H = 210, padL = 38, padR = 6, padT = 14, padB = 28;
+  const gw = (W - padL - padR) / data.length, bw = gw * 0.32;
+  const y = (v) => padT + (1 - v) * (H - padT - padB);
+  let s = '<svg class="chart" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Share of games picked right each week, model and market">';
+  for (const g of [0, 0.25, 0.5, 0.75, 1]) s += '<line class="grid" x1="' + padL + '" x2="' + (W - padR) + '" y1="' + y(g) + '" y2="' + y(g) + '" /><text x="' + (padL - 6) + '" y="' + (y(g) + 4) + '" text-anchor="end">' + g * 100 + '%</text>';
+  const bar = (x0, v, fill) => { const x1 = x0 + bw, yt = y(v), yb = y(0), r = Math.min(4, (yb - yt) / 2); return '<path d="M' + x0 + ',' + yb + ' L' + x0 + ',' + (yt + r) + ' Q' + x0 + ',' + yt + ' ' + (x0 + r) + ',' + yt + ' L' + (x1 - r) + ',' + yt + ' Q' + x1 + ',' + yt + ' ' + x1 + ',' + (yt + r) + ' L' + x1 + ',' + yb + 'Z" fill="' + fill + '" />'; };
+  data.forEach((d, i) => {
+    const cx = padL + i * gw + gw / 2;
+    s += bar(cx - bw - 1, d.model / d.n, 'var(--pos)') + bar(cx + 1, d.market / d.n, 'var(--home)');
+    s += '<rect class="hit" x="' + (padL + i * gw) + '" y="' + padT + '" width="' + gw + '" height="' + (y(0) - padT) + '" data-tip="Week ' + d.wk + ': model ' + d.model + ' of ' + d.n + ', market ' + d.market + ' of ' + d.n + '" />';
+    s += '<text x="' + cx + '" y="' + (H - 8) + '" text-anchor="middle">Wk ' + d.wk + '</text>';
+  });
+  s += '<line x1="' + padL + '" x2="' + (W - padR) + '" y1="' + y(0.5) + '" y2="' + y(0.5) + '" stroke="var(--ink-2)" stroke-width="1.5" stroke-dasharray="5 4" /><text x="' + (W - padR) + '" y="' + (y(0.5) - 6) + '" text-anchor="end" style="fill:var(--ink-2)">Coin flip</text>';
+  return s + '<line class="base" x1="' + padL + '" x2="' + (W - padR) + '" y1="' + y(0) + '" y2="' + y(0) + '" /></svg>';
+}
+function renderModel() {
+  const el = document.getElementById('view-model'), b = DATA.bt;
+  const imp = Object.entries(b.importance), maxImp = Math.max(...imp.map(([, v]) => v));
+  const tierRows = (ts) => ts.map((t) => '<tr><td class="l">' + Math.round(t.lo * 100) + '–' + Math.round(t.hi * 100) + '%</td><td>' + t.n + '</td><td>' + (t.pred ? pct(t.pred) : '–') + '</td><td>' + (t.n ? pct(t.won / t.n) : '–') + '</td></tr>').join('');
+  const strongH = b.tiers_hist.slice(2).reduce((a, t) => ({ n: a.n + t.n, w: a.w + t.won }), { n: 0, w: 0 });
+  el.innerHTML = '<div><h2>Model</h2><p class="intro">Every number here comes from honest out-of-sample tests: each past season was predicted by a model trained on the other seasons, and 2026 games were predicted with only the data available before kickoff.</p></div>' +
+    '<div class="tiles num">' +
+    '<div class="tile"><span class="label">This model, ' + b.hist.seasons + '</span><b>' + pct(b.hist.new.acc) + '</b><span class="muted small">' + b.hist.new.n.toLocaleString() + ' games picked straight up</span></div>' +
+    '<div class="tile"><span class="label">Old scores-only model</span><b>' + pct(b.hist.old.acc) + '</b><span class="muted small">Same games</span></div>' +
+    '<div class="tile"><span class="label">Betting market</span><b>' + pct(b.hist.market.acc) + '</b><span class="muted small">Closing line favorite</span></div>' +
+    '<div class="tile"><span class="label">Strong picks (70%+)</span><b>' + pct(strongH.w / strongH.n) + '</b><span class="muted small">' + strongH.w.toLocaleString() + ' of ' + strongH.n.toLocaleString() + ' games</span></div></div>' +
+    '<div class="panel"><div class="panel-head"><h3>This season (Weeks 1–9)</h3></div><div class="tablewrap"><table><thead><tr><th class="l">Predictor</th><th>Picked right</th><th>Brier score</th><th>Avg margin miss</th></tr></thead><tbody>' +
+    [['This model', b.y2026.new], ['Old scores-only model', b.y2026.old], ['Betting market', b.y2026.market]].map(([n, d]) => '<tr><td class="l">' + n + '</td><td>' + pct(d.acc) + ' (' + Math.round(d.acc * d.n) + '/' + d.n + ')</td><td>' + d.brier.toFixed(3) + '</td><td>' + d.mae.toFixed(1) + ' pts</td></tr>').join('') +
+    '</tbody></table></div><p class="muted small" style="margin-top:8px">Brier score grades the percentages themselves (lower is better). This season the model’s percentages have graded slightly better than the market’s, but over nine seasons the market is clearly ahead.</p></div>' +
+    '<div class="panel"><div class="panel-head"><h3>Correct picks by week</h3><span class="legend"><span><span class="swatch s1"></span>Model</span><span><span class="swatch s2"></span>Market</span></span></div>' + weeklyChart() + '</div>' +
+    '<div class="panel"><div class="panel-head"><h3>What moves the prediction</h3><span class="muted small">Typical swing in points</span></div>' +
+    imp.map(([k, v]) => '<div class="imp"><span>' + esc(k) + '</span><span><span class="bar" style="display:block;width:' + (v / maxImp * 100).toFixed(0) + '%"></span></span><span class="num">' + v.toFixed(1) + '</span></div>').join('') +
+    '<p class="muted small" style="margin-top:8px">Offensive and defensive efficiency and the quarterback carry the model, and points scored add a little on top. Turnovers add little because they mostly don’t repeat.</p></div>' +
+    '<div class="panel"><div class="panel-head"><h3>Accuracy by confidence</h3></div><div class="tablewrap"><table><thead><tr><th class="l">Model gave favorite</th><th>Games</th><th>Avg chance</th><th>Favorite won</th></tr></thead><tbody>' + tierRows(b.tiers_hist) +
+    '</tbody></table></div><p class="muted small" style="margin-top:8px">Nine held-out seasons. When the model says 80%, the favorite wins about 84% of the time. That’s the route to 75–90%: only the confident games, which are about a quarter of the schedule.</p></div>' +
+    '<div class="panel"><div class="panel-head"><h3>Can it beat the betting line?</h3></div><div class="tablewrap"><table><thead><tr><th class="l">Model disagrees with line by</th><th>Model side covered</th></tr></thead><tbody>' +
+    b.ats.map((a) => '<tr><td class="l">' + a.thr + '+ points</td><td>' + a.w + '–' + a.l + ' (' + pct(a.w / (a.w + a.l)) + ')</td></tr>').join('') +
+    '</tbody></table></div><p class="muted small" style="margin-top:8px">About 50%, the same as a coin flip. Sportsbooks need you to win about 52.4% at standard odds just to break even, so this model has no betting edge against the spread.</p></div>' +
+    '<div class="panel prose"><h3>What’s in it</h3><ul>' +
+    '<li><strong>Efficiency ratings.</strong> EPA per play, success rate, passing and rushing EPA, early-down and close-game EPA, explosive plays and yards per play, each opponent-adjusted with ridge regression and started from last season’s ratings.</li>' +
+    '<li><strong>Quarterbacks.</strong> Each starter’s EPA per dropback over his career (recent seasons weighted more), and how he compares with the QBs behind the team’s ratings. Current assumptions: ' + Object.entries(DATA.overrides).map(([t, n]) => esc(n) + ' (' + t + ')').join(', ') + '.</li>' +
+    '<li><strong>Special teams</strong> EPA on kicks, punts and returns.</li>' +
+    '<li><strong>Injuries.</strong> Players listed out or doubtful, weighted by their share of snaps. Week ' + DATA.injury_week + ' report; next week’s isn’t out yet, so it carries forward one week.</li>' +
+    '<li><strong>Rest and travel.</strong> Rest days, byes, distance flown, time zones crossed and West Coast teams in 1 p.m. Eastern games. Division games are treated as closer.</li>' +
+    '<li><strong>Weather</strong> (wind, cold, domes) feeds the totals, where it matters most.</li>' +
+    '<li><strong>Games further out.</strong> A prediction made weeks ahead is less certain, since ratings move and quarterbacks change. Measured on past seasons, the spread of outcomes grows about ' + Math.round((DATA.drift_c || 0) * 100) + '% per week ahead, so a Week 18 game is predicted with a spread of ' + sigmaAt({ wk: 18 }).toFixed(0) + ' points instead of ' + SIG.toFixed(0) + '. Playoff odds and survivor plans use this.</li>' +
+    '<li><strong>Training data.</strong> ' + b.hist.games.toLocaleString() + ' games from ' + b.hist.seasons + ' (nflverse play-by-play). Win chance uses a bell curve with a spread of ' + SIG.toFixed(1) + ' points.</li>' +
+    '</ul><h3 style="margin-top:6px">Tuned</h3><ul><li><strong>Rating settings.</strong> Tested 40 combinations on held-out seasons. The winner pulls ratings harder toward their starting point, carries more of last season forward, and assumes an unfamiliar quarterback is clearly below average until he proves otherwise.</li></ul>' +
+    '<h3 style="margin-top:6px">Tried and dropped</h3><ul><li><strong>Injuries by position</strong> (line, receivers, secondary and so on). Picked one or two more winners but made the percentages slightly worse, so it didn’t earn a place.</li><li><strong>Weighting recent games more.</strong> No gain on held-out seasons.</li><li><strong>Gradient boosting</strong> (a more flexible machine learning model) did worse than the linear model.</li></ul></div>';
+}
+
+/*__POOLS__*/
+
+// ---------- About ----------
+function renderAbout() {
+  const el = document.getElementById('view-about'), b = DATA.bt;
+  el.innerHTML = '<div><h2>About Pocket Protector</h2><p class="intro">NFL predictions, pool tools and fantasy projections from a statistical model, updated through the week. Free to use.</p></div>' +
+    '<div class="panel prose"><h3>How it works</h3><p>Every game gets a predicted margin from team efficiency (EPA per play and its splits), the starting quarterback, special teams, rest, travel and injuries, trained on ' + b.hist.games.toLocaleString() + ' games since 2017. Win chances come from that margin. Every past pick on the site was made before kickoff using only earlier data, and the full record is on the <a href="#model">Model</a> page, losses included.</p></div>' +
+    '<div class="panel prose"><h3>Disclaimer</h3><p>Predictions are estimates, not guarantees, and nothing here is betting or financial advice. Over past seasons the model has not beaten point spreads. If you bet, do it only where it’s legal and you’re of age, and only with money you can afford to lose. Problem gambling help: 1-800-GAMBLER.</p><p>Pocket Protector is not affiliated with or endorsed by the NFL or any team. Team names are used only to identify them.</p></div>' +
+    '<div class="panel prose"><h3>Privacy</h3><p>There are no accounts, ads or tracking cookies. Your settings (scoring format, survivor teams you’ve used) are saved only in your own browser. The site host may log visitors’ IP addresses for security.</p></div>' +
+    '<div class="panel prose"><h3>Data</h3><p>Play-by-play, schedules, injury reports and snap counts come from <a href="https://github.com/nflverse" target="_blank" rel="noopener">nflverse</a>. Betting lines shown are closing or current market numbers from the same source.</p></div>';
+}
+
+// ---------- router ----------
+const moreBtn = document.getElementById('more-btn');
+function setSheet(open) {
+  document.getElementById('more-sheet').hidden = !open; document.getElementById('sheet-backdrop').hidden = !open;
+  moreBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+}
+const VIEWS = { week: renderWeek, about: renderAbout, pools: renderPools, betting: renderBetting, fantasy: renderFantasy, news: renderNews, rankings: renderRankings, playoffs: renderPlayoffs, matchup: renderMatchup, teams: renderTeams, stats: renderStats, model: renderModel };
+function route() {
+  const v = (location.hash || '#week').slice(1), name = VIEWS[v] ? v : 'week';
+  for (const k of Object.keys(VIEWS)) document.getElementById('view-' + k).hidden = k !== name;
+  document.querySelectorAll('.tabs a, .bottombar a, .sheet a').forEach((a) => { if (a.dataset.view === name) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
+  const inSheet = !!document.querySelector('.sheet a[data-view="' + name + '"]');
+  if (inSheet) moreBtn.setAttribute('aria-current', 'page'); else moreBtn.removeAttribute('aria-current');
+  setSheet(false);
+  const active = document.querySelector('.tabs a[aria-current]');
+  if (active && active.scrollIntoView) active.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+  tip.hidden = true;
+  VIEWS[name]();
+}
+window.addEventListener('hashchange', route);
+moreBtn.onclick = () => setSheet(moreBtn.getAttribute('aria-expanded') !== 'true');
+document.getElementById('sheet-backdrop').onclick = () => setSheet(false);
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setSheet(false); });
+route();
+setTimeout(() => {
+  sim = simulate(5000);
+  const v = (location.hash || '#week').slice(1);
+  if (v === 'rankings') renderRankings(); else if (v === 'playoffs') renderPlayoffs(); else if (v === 'teams') renderTeams();
+}, 60);
+</script>

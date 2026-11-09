@@ -1,0 +1,11 @@
+# downloaded and intermediate data (rebuilt by scripts/update.sh)
+data/*.csv
+data/*.csv.gz
+data/*.tmp
+data/*.pkl
+# local build leftovers
+build_check.js
+pocket-protector.html
+__pycache__/
+old/
+.DS_Store
