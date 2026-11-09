@@ -1,18 +1,64 @@
 {
- "asof": "Mon, Nov 9, 4:45 PM ET",
+ "asof": "Mon, Nov 9, 5:55 PM ET",
  "outs": [
-  "Josh Jacobs"
+  "Josh Jacobs",
+  "Puka Nacua",
+  "Jake Ferguson",
+  "Tyler Goodson"
  ],
  "flags": {
-  "Puka Nacua": "Knee MRI Monday; Rams don't believe it's a torn ACL",
   "Patrick Mahomes": "Elbow soreness, day-to-day; MRI showed no major damage",
-  "Rhamondre Stevenson": "Knee imaging Monday",
+  "Rhamondre Stevenson": "Knee imaging Monday, results not announced",
   "Drew Lock": "Oblique injury plus elbow tendonitis; Week 10 starter unclear",
-  "Jonathan Taylor": "Trade candidate before Tuesday's 4 p.m. ET deadline",
+  "Jonathan Taylor": "Trade candidate; Colts expected to take the best offer before Tuesday 4 p.m. ET",
   "J.J. McCarthy": "Hip pointer, expected to play Thursday",
-  "Cam Skattebo": "Hamstring, expected back Thursday"
+  "Cam Skattebo": "Hamstring, expected back Thursday",
+  "Justin Herbert": "Possible fracture in his left middle finger; testing Monday. He expects to play next Monday at Baltimore",
+  "A.J. Brown": "Missed two games; Patriots plan for him to travel to Germany, no decision yet"
  },
  "items": [
+  {
+   "team": "LA",
+   "tag": "Injury",
+   "text": "Puka Nacua has MCL and PCL sprains in his right knee plus turf toe, and Sean McVay says he'll likely go on injured reserve. That means at least four games; with the Week 11 bye, Dec. 20 at Dallas is the earliest return. He's out of the fantasy rankings and his snaps now count in the Rams' injury load.",
+   "src": "Larry Brown Sports (via NFL Network), Nov 9",
+   "url": "https://larrybrownsports.com/football/rams-news-puka-nacua-injury/777778"
+  },
+  {
+   "team": "JAX",
+   "tag": "Trade",
+   "text": "Jacksonville made three defensive trades in one day: DT Jordan Davis from Philadelphia (2027 first-round and 2029 second-round picks), S Jessie Bates from Atlanta (2027 second, 2028 fifth) and DT Davon Godchaux from New Orleans. Team ratings catch up as the new players take snaps.",
+   "src": "ESPN, Nov 9",
+   "url": "https://www.espn.com/nfl/story/_/id/50435639/jaguars-get-eagles-jordan-davis-blockbuster-trade"
+  },
+  {
+   "team": "LAC",
+   "tag": "QB",
+   "text": "Justin Herbert hurt his left middle finger in the loss to Houston. Jim Harbaugh said it 'could be a fracture' pending Monday's tests; Herbert said he doesn't expect it to be a problem. The model assumes he starts next Monday at Baltimore.",
+   "src": "The Big Lead, Nov 9",
+   "url": "https://www.thebiglead.com/jim-harbaugh-justin-herbert-injury-update-finger-week-9-loss/"
+  },
+  {
+   "team": "DAL",
+   "tag": "Injury",
+   "text": "TE Jake Ferguson and RB Tyler Goodson will miss multiple weeks, and S P.J. Locke is out for Sunday against San Francisco, per Brian Schottenheimer. George Pickens and Kavontae Turpin are among those to be decided later in the week.",
+   "src": "A to Z Sports, Nov 9",
+   "url": "https://atozsports.com/nfl/dallas-cowboys-news/injury-updates-jake-ferguson-tyler-goodson-pj-locke/"
+  },
+  {
+   "team": "DET",
+   "tag": "Trade",
+   "text": "Detroit acquired S Andre Cisco from the Jets for a 2028 sixth-round pick.",
+   "src": "Detroit News, Nov 9",
+   "url": "https://detroitnews.com/story/sports/nfl/lions/2026/11/09/detroit-lions-trade-andre-cisco-stats-new-york-jets-safety/92693765007"
+  },
+  {
+   "team": "MIN",
+   "tag": "QB",
+   "text": "Kyler Murray (hamstring) is out tonight and week-to-week. Carson Wentz starts against Buffalo.",
+   "src": "Vikings.com",
+   "url": "https://www.vikings.com/news/quarterback-carson-wentz-monday-night-bills"
+  },
   {
    "team": "CLE",
    "tag": "QB",
@@ -42,13 +88,6 @@
    "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-nov-9"
   },
   {
-   "team": "LA",
-   "tag": "Injury",
-   "text": "Puka Nacua hurt his knee on the final offensive play against Washington and has an MRI Monday. The Rams believe his ACL is intact. His projections assume he plays.",
-   "src": "ESPN, Nov 9",
-   "url": "https://www.espn.com/nfl/story/_/id/50425853/sources-rams-puka-nacua-undergo-tests-knee"
-  },
-  {
    "team": "GB",
    "tag": "Injury",
    "text": "Josh Jacobs is expected to miss up to three weeks. He's removed from projections, and his snaps now count in Green Bay's injury load.",
@@ -58,30 +97,16 @@
   {
    "team": "NE",
    "tag": "Injury",
-   "text": "Rhamondre Stevenson is getting imaging on his knee. A.J. Brown has missed two games and may not travel for the game in Germany.",
+   "text": "Rhamondre Stevenson had knee imaging Monday; no results yet. A.J. Brown has missed two games, and Mike Vrabel said the plan is for him to travel to Germany for Sunday's game against Detroit, with no final decision. Lineman Ben Brown won't make the trip.",
    "src": "NFL.com news roundup, Nov 9",
    "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-nov-9"
   },
   {
-   "team": "JAX",
-   "tag": "Trade",
-   "text": "Jacksonville acquired safety Jessie Bates from Atlanta for 2027 second-round and 2028 fifth-round picks.",
-   "src": "Yahoo Sports NFL live updates, Nov 9",
-   "url": "https://sports.yahoo.com/nfl/live/nfl-news-injury-updates-trade-deadline-rumors-131950109.html"
-  },
-  {
    "team": "IND",
    "tag": "Trade",
-   "text": "Jonathan Taylor posted what read like a farewell to Colts fans. The trade deadline is Tuesday at 4 p.m. ET.",
-   "src": "Yahoo Sports NFL live updates, Nov 9",
-   "url": "https://sports.yahoo.com/nfl/live/nfl-news-injury-updates-trade-deadline-rumors-131950109.html"
-  },
-  {
-   "team": "MIN",
-   "tag": "QB",
-   "text": "Kyler Murray (hamstring) is out tonight and week-to-week. Carson Wentz starts against Buffalo.",
-   "src": "Vikings.com",
-   "url": "https://www.vikings.com/news/quarterback-carson-wentz-monday-night-bills"
+   "text": "Jonathan Taylor is still a Colt. The belief around the league is that Indianapolis will take the best offer before Tuesday's 4 p.m. ET deadline.",
+   "src": "Bleacher Report trade deadline live blog, Nov 9",
+   "url": "https://bleacherreport.com/liveblogs/25531093-2026-nfl-trade-deadline-live-rumors-updates-and-analysis-november-9"
   }
  ],
  "injuries": [

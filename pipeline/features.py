@@ -241,7 +241,7 @@ def build(params=None, out_path=None, write_extras=True):
         if not len(x):
             print(f'WARNING overrides.json: no snap counts found for {name} ({team})')
         key = (2026, last_report + 1, team)
-        base = list(inj_load.get(key, ZERO))
+        base = list(inj_load.get(key, inj_load.get((2026, last_report, team), ZERO)))  # start from the carried-forward report
         base[0] += share if side == 'off' else 0; base[1] += share if side == 'def' else 0
         inj_load[key] = tuple(base)
     for t in TEAMS:
