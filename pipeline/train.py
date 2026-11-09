@@ -19,6 +19,7 @@ SETS = {
     '+ efficiency splits': ['hfa', 'd_pts', 'd_epa', 'd_sr', 'd_pass_epa', 'd_rush_epa', 'd_early_epa', 'd_neutral_epa', 'd_explosive', 'd_ypp', 'd_turnovers', 'd_st'],
     '+ QB': ['hfa', 'd_pts', 'd_epa', 'd_sr', 'd_pass_epa', 'd_rush_epa', 'd_early_epa', 'd_neutral_epa', 'd_explosive', 'd_ypp', 'd_turnovers', 'd_st', 'd_qb_x', 'd_qb'],
     '+ rest/travel/division': ['hfa', 'd_pts', 'd_epa', 'd_sr', 'd_pass_epa', 'd_rush_epa', 'd_early_epa', 'd_neutral_epa', 'd_explosive', 'd_ypp', 'd_turnovers', 'd_st', 'd_qb_x', 'd_qb', 'rest_diff', 'd_bye', 'travel_diff', 'tz_diff', 'west_early', 'div'],
+    '+ market ratings': ['hfa', 'd_pts', 'd_epa', 'd_sr', 'd_pass_epa', 'd_rush_epa', 'd_early_epa', 'd_neutral_epa', 'd_explosive', 'd_ypp', 'd_turnovers', 'd_st', 'd_qb_x', 'd_qb', 'rest_diff', 'd_bye', 'travel_diff', 'tz_diff', 'west_early', 'div', 'd_inj_off', 'd_inj_def', 'd_mkt'],
     '+ injuries': ['hfa', 'd_pts', 'd_epa', 'd_sr', 'd_pass_epa', 'd_rush_epa', 'd_early_epa', 'd_neutral_epa', 'd_explosive', 'd_ypp', 'd_turnovers', 'd_st', 'd_qb_x', 'd_qb', 'rest_diff', 'd_bye', 'travel_diff', 'tz_diff', 'west_early', 'div', 'd_inj_off', 'd_inj_def'],
 }
 

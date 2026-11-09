@@ -7,7 +7,7 @@ from features import SITE, TEAMS, METRICS, km
 
 D = os.path.join(os.path.dirname(__file__), '..', 'data')
 F = T.F.copy()
-FULL = T.SETS['+ injuries']
+FULL = T.SETS['+ market ratings']
 OLD = T.SETS['points only (old site)']
 ALPHA = 1.0
 GROUPS = {
@@ -15,7 +15,7 @@ GROUPS = {
     'Offense & defense efficiency': ['d_epa', 'd_sr', 'd_pass_epa', 'd_rush_epa', 'd_early_epa', 'd_neutral_epa', 'd_explosive', 'd_ypp'],
     'Points scored & allowed': ['d_pts'], 'Turnovers': ['d_turnovers'], 'Special teams': ['d_st'],
     'Rest & travel': ['rest_diff', 'd_bye', 'travel_diff', 'tz_diff', 'west_early'], 'Division game': ['div'],
-    'Injuries': ['d_inj_off', 'd_inj_def'],
+    'Injuries': ['d_inj_off', 'd_inj_def'], 'Betting market’s earlier view': ['d_mkt'],
 }
 
 P = F[F.played]
@@ -33,7 +33,7 @@ for s in sorted(F.season.unique()):
         n_last = 32 if len(last) else 0
         F.loc[(F.season == s) & (F.week == w), 'lg_total'] = (prev.sum() + (last.mean() * n_last if n_last else 0)) / max(1, len(prev) + n_last) if (len(prev) + n_last) else 44.0
 F['one'] = 1.0
-TC = ['one', 'lg_total', 's_pts', 's_epa', 's_pass_epa', 's_rush_epa', 's_early_epa', 's_neutral_epa', 's_explosive', 's_ypp', 's_turnovers', 'wind', 'cold', 'dome']
+TC = ['one', 'lg_total', 's_pts', 's_epa', 's_pass_epa', 's_rush_epa', 's_early_epa', 's_neutral_epa', 's_explosive', 's_ypp', 's_turnovers', 's_mkt', 'wind', 'cold', 'dome']
 H2 = F[F.played & (F.season >= 2017) & (F.season <= 2025)]
 m_tot = Ridge(alpha=1.0, fit_intercept=False).fit(H2[TC].values, H2.total_pts.values)
 tcoef = dict(zip(TC, m_tot.coef_.tolist()))
@@ -134,7 +134,7 @@ teams = {}
 for i, t in enumerate(TEAMS):
     o, d = off.loc[t], dfn.loc[t]
     teams[t] = {
-        'r': {m: [round(rn[m]['off'][i], 4), round(rn[m]['def'][i], 4)] for m in METRICS}, 'st': round(rn['st'][i], 3),
+        'r': {m: [round(rn[m]['off'][i], 4), round(rn[m]['def'][i], 4)] for m in METRICS}, 'st': round(rn['st'][i], 3), 'mk': round(rn['mkt'][i], 3), 'mkt': round(rn['mkt_tot'][i], 3),
         'qb': cur['qb'][t]['qb'], 'q': round(cur['qb'][t]['q'], 4), 'qbase': round(cur['qb'][t]['base'], 4), 'qdb': int(cur['qb'][t]['db']),
         'inj': [round(x, 2) for x in cur['inj'][t]], 'site': SITE[t], 'dome': round(dome_share[t], 2),
         'off': {'epa': o.epa, 'sr': o.sr, 'pass_epa': o.pass_epa, 'rush_epa': o.rush_epa, 'early_epa': o.early_epa, 'neutral_epa': o.neutral_epa,
@@ -148,7 +148,7 @@ for i, t in enumerate(TEAMS):
         teams[t][k] = {kk: (None if v is None or (isinstance(v, float) and math.isnan(v)) else round(float(v), 4)) for kk, v in teams[t][k].items()}
     teams[t]['st_epa'] = round(float(o.st), 3)
 
-out = {'games': games, 'teams': teams, 'coef': coef, 'tcoef': tcoef, 'sigma': round(sigma, 3), 'cw': CW, 'drift_c': DRIFT_C, 'groups': GROUPS, 'bt': bt,
+out = {'games': games, 'teams': teams, 'coef': coef, 'tcoef': tcoef, 'sigma': round(sigma, 3), 'cw': CW, 'drift_c': DRIFT_C, 'groups': GROUPS, 'bt': bt, 'mkt_mu': round(rn['mkt_mu'], 3),
        'lg_total_now': float(F[(F.season == 2026) & ~F.played].lg_total.iloc[0]), 'overrides': cur['overrides'], 'injury_week': cur['injury_week'],
        'metrics': list(METRICS.keys())}
 json.dump(out, open(f'{D}/site_data.json', 'w'), default=lambda x: None if (isinstance(x, float) and math.isnan(x)) else x)

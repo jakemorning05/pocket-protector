@@ -145,6 +145,31 @@ def build(params=None, out_path=None, write_extras=True):
             final[m] = (rating_at[(s, maxw + 1)][m][0], rating_at[(s, maxw + 1)][m][1])
         st_final = rating_at[(s, maxw + 1)]['st']
 
+    # ---------- what the betting market thought of each team in earlier weeks ----------
+    # Team ratings implied by closing spreads and totals of games already played (recent weeks weighted more, an
+    # offseason ages them ~12 weeks). Uses no line from the game being predicted.
+    mg = pd.read_csv(f'{D}/games.csv'); mg = mg[(mg.game_type == 'REG') & (mg.season >= 2015)].copy()
+    for c in ['home_team', 'away_team']:
+        mg[c] = mg[c].replace(FIX)
+    mg = mg[mg.result.notna() & mg.spread_line.notna() & mg.total_line.notna()]
+    mg_t = (mg.season * 30 + mg.week).values
+    mg_h = mg.home_team.map(TI).values; mg_a = mg.away_team.map(TI).values
+    mg_home = (mg.location == 'Home').astype(float).values
+    MKT_TAU, MKT_LAM, MKT_WINDOW = 8.0, 0.5, 45
+    for (s_, w_), r in rating_at.items():
+        t0 = s_ * 30 + w_
+        k = (mg_t < t0) & (mg_t >= t0 - MKT_WINDOW)
+        r['mkt'], r['mkt_tot'], r['mkt_mu'] = np.zeros(N), np.zeros(N), 44.0
+        if k.sum() < 16:
+            continue
+        wt = np.exp(-(t0 - mg_t[k]) / MKT_TAU); i = np.arange(k.sum())
+        X = np.zeros((k.sum(), N + 1)); X[i, mg_h[k]] = 1; X[i, mg_a[k]] = -1; X[:, N] = mg_home[k]
+        reg = MKT_LAM * np.eye(N + 1); reg[N, N] = 0
+        r['mkt'] = np.linalg.solve(X.T @ (X * wt[:, None]) + reg, X.T @ (wt * mg.spread_line.values[k]))[:N]
+        X = np.zeros((k.sum(), N + 1)); X[i, mg_h[k]] = 1; X[i, mg_a[k]] = 1; X[:, N] = 1
+        sol = np.linalg.solve(X.T @ (X * wt[:, None]) + reg, X.T @ (wt * mg.total_line.values[k]))
+        r['mkt_tot'], r['mkt_mu'] = sol[:N], float(sol[N])
+
     # league means per season (for pts) to anchor totals
     # ---------- QB quality ----------
     qb = qb.merge(sch[['game_id', 'gameday']], on='game_id', how='left').sort_values('gameday')
@@ -266,6 +291,8 @@ def build(params=None, out_path=None, write_extras=True):
             f['s_' + m] = eh + ea
             f['eh_' + m], f['ea_' + m] = eh, ea
         f['d_st'] = r['st'][hi] - r['st'][ai]
+        f['d_mkt'] = r['mkt'][hi] - r['mkt'][ai]
+        f['s_mkt'] = r['mkt_tot'][hi] + r['mkt_tot'][ai] + r['mkt_mu']
         # QB
         qh, dbh = qb_quality(g.home_qb_id, s, w); qa, dba = qb_quality(g.away_qb_id, s, w)
         bh, ba = team_baseline(g.home_team, s, w), team_baseline(g.away_team, s, w)
@@ -303,6 +330,7 @@ def build(params=None, out_path=None, write_extras=True):
     s = 2026; w = int(sch[(sch.season == s) & sch.played].week.max()) + 1
     cur = {m: {'off': rating_at[(s, w)][m][0].tolist(), 'def': rating_at[(s, w)][m][1].tolist(), 'mu': float(rating_at[(s, w)][m][2]), 'hfa': float(rating_at[(s, w)][m][3])} for m in METRICS}
     cur['st'] = rating_at[(s, w)]['st'].tolist(); cur['teams'] = TEAMS
+    cur['mkt'] = rating_at[(s, w)]['mkt'].tolist(); cur['mkt_tot'] = rating_at[(s, w)]['mkt_tot'].tolist(); cur['mkt_mu'] = rating_at[(s, w)]['mkt_mu']
     json.dump(cur, open(f'{D}/ratings_now.json', 'w'))
     # current QB table for the site and the matchup tool
     qcur = {}

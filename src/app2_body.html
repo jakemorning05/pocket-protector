@@ -141,10 +141,10 @@ function erf(x) { const s = Math.sign(x); x = Math.abs(x); const t = 1 / (1 + 0.
 const Phi = (z) => 0.5 * (1 + erf(z / Math.SQRT2));
 const SIG = DATA.sigma, C = DATA.coef, TC = DATA.tcoef, T = DATA.teams, METRICS = DATA.metrics;
 const mean = (f) => TEAMS.reduce((s, t) => s + f(T[t]), 0) / TEAMS.length;
-function vec(t) { const x = T[t]; return { r: x.r, st: x.st, q: x.q, qd: x.q - x.qbase, inj: x.inj, site: x.site, dome: x.dome }; }
+function vec(t) { const x = T[t]; return { r: x.r, st: x.st, mk: x.mk, mkt: x.mkt, q: x.q, qd: x.q - x.qbase, inj: x.inj, site: x.site, dome: x.dome }; }
 const AVGV = (() => {
   const r = {}; for (const m of METRICS) r[m] = [mean((x) => x.r[m][0]), mean((x) => x.r[m][1])];
-  return { r, st: mean((x) => x.st), q: mean((x) => x.q), qd: mean((x) => x.q - x.qbase), inj: [mean((x) => x.inj[0]), mean((x) => x.inj[1])], site: null, dome: 0 };
+  return { r, st: mean((x) => x.st), mk: mean((x) => x.mk), mkt: mean((x) => x.mkt), q: mean((x) => x.q), qd: mean((x) => x.q - x.qbase), inj: [mean((x) => x.inj[0]), mean((x) => x.inj[1])], site: null, dome: 0 };
 })();
 function kmBetween(a, b) {
   const R = Math.PI / 180, la1 = a[0] * R, la2 = b[0] * R, dla = la2 - la1, dlo = (b[1] - a[1]) * R;
@@ -154,7 +154,7 @@ function kmBetween(a, b) {
 function feats(A, H, ctx = {}) {
   const f = {};
   for (const m of METRICS) { const eh = H.r[m][0] - A.r[m][1], ea = A.r[m][0] - H.r[m][1]; f['d_' + m] = eh - ea; f['s_' + m] = eh + ea; }
-  f.d_st = H.st - A.st; f.d_qb = H.q - A.q; f.d_qb_x = 35 * (H.qd - A.qd);
+  f.d_st = H.st - A.st; f.d_mkt = H.mk - A.mk; f.s_mkt = H.mkt + A.mkt + DATA.mkt_mu; f.d_qb = H.q - A.q; f.d_qb_x = 35 * (H.qd - A.qd);
   f.hfa = ctx.neutral ? 0 : 1; f.rest_diff = 0; f.d_bye = 0; f.west_early = 0; f.div = ctx.div ? 1 : 0;
   if (!ctx.neutral && A.site && H.site) {
     f.travel_diff = (kmBetween(A.site, H.site) - 0) / 1000;
@@ -168,7 +168,7 @@ function contribOf(f) { const o = {}; for (const [g, cols] of Object.entries(DAT
 function totalOf(f, dome) {
   let t = TC.one + TC.lg_total * DATA.lg_total_now;
   for (const m of ['pts', 'epa', 'pass_epa', 'rush_epa', 'early_epa', 'neutral_epa', 'explosive', 'ypp', 'turnovers']) t += (TC['s_' + m] || 0) * f['s_' + m];
-  return t + (TC.dome || 0) * (dome ? 1 : 0);
+  return t + (TC.s_mkt || 0) * f.s_mkt + (TC.dome || 0) * (dome ? 1 : 0);
 }
 const ratingOf = (t) => marginOf(feats(AVGV, vec(t), { neutral: true }));
 const RATING = Object.fromEntries(TEAMS.map((t) => [t, ratingOf(t)]));
@@ -754,6 +754,7 @@ function renderModel() {
     '<li><strong>Efficiency ratings.</strong> EPA per play, success rate, passing and rushing EPA, early-down and close-game EPA, explosive plays and yards per play, each opponent-adjusted with ridge regression and started from last season’s ratings.</li>' +
     '<li><strong>Quarterbacks.</strong> Each starter’s EPA per dropback over his career (recent seasons weighted more), and how he compares with the QBs behind the team’s ratings. Current assumptions: ' + Object.entries(DATA.overrides).map(([t, n]) => esc(n) + ' (' + t + ')').join(', ') + '.</li>' +
     '<li><strong>Special teams</strong> EPA on kicks, punts and returns.</li>' +
+    '<li><strong>The betting market’s earlier view.</strong> How highly the closing lines of each team’s past games rated it, recent weeks counting most. It never uses the line for the game being predicted, so comparisons with the market stay fair.</li>' +
     '<li><strong>Injuries.</strong> Players listed out or doubtful, weighted by their share of snaps. Week ' + DATA.injury_week + ' report; next week’s isn’t out yet, so it carries forward one week.</li>' +
     '<li><strong>Rest and travel.</strong> Rest days, byes, distance flown, time zones crossed and West Coast teams in 1 p.m. Eastern games. Division games are treated as closer.</li>' +
     '<li><strong>Weather</strong> (wind, cold, domes) feeds the totals, where it matters most.</li>' +

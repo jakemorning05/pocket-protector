@@ -31,7 +31,7 @@ TG = pd.DataFrame(rows).sort_values(['season', 'team', 'week'])
 def rating_part(s, w, t):
     r = rating_at[(s, w)]; i = TI[t]
     v = sum(C['d_' + m] * (r[m][0][i] + r[m][1][i]) for m in METRICS)
-    return v + C['d_st'] * r['st'][i]
+    return v + C['d_st'] * r['st'][i] + C.get('d_mkt', 0) * r['mkt'][i]
 
 
 def qb_part(q, qd):
