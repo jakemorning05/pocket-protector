@@ -33,6 +33,7 @@ cd pipeline
 "$PY" export.py
 "$PY" drift.py            # how much less certain later weeks are
 "$PY" export.py           # again, so future-week odds use the fresh number
+"$PY" picks.py            # lock picks: refresh games not yet kicked off, grade finished ones
 "$PY" players.py
 "$PY" fantasy.py
 "$PY" injury_list.py

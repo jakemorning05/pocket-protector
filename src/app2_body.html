@@ -112,6 +112,8 @@ const FAN = /*__FAN__*/;
 const BETS = /*__BETS__*/;
 const TRACK = /*__TRACK__*/;
 const NEWS = /*__NEWS__*/;
+const PICKS = /*__PICKS__*/;
+const BASE = '__BASE__'; // '' on the public site; the full site address inside the Claude preview
 const NAMES = {
   ARI: ['Arizona', 'Cardinals'], ATL: ['Atlanta', 'Falcons'], BAL: ['Baltimore', 'Ravens'], BUF: ['Buffalo', 'Bills'],
   CAR: ['Carolina', 'Panthers'], CHI: ['Chicago', 'Bears'], CIN: ['Cincinnati', 'Bengals'], CLE: ['Cleveland', 'Browns'],
@@ -176,7 +178,12 @@ const rankOrder = TEAMS.slice().sort((x, y) => RATING[y] - RATING[x]);
 const rankOf = Object.fromEntries(rankOrder.map((t, i) => [t, i + 1]));
 
 // ---------- games & records ----------
-const games = DATA.games.map((g) => ({ ...g, done: g.hs != null }));
+// A pick locks at kickoff: once a game has started, show the numbers that were public before it, not today's retrained ones.
+const games = DATA.games.map((g) => {
+  const L = PICKS[g.id], started = L && (g.hs != null || new Date(L.kick).getTime() <= Date.now());
+  return started ? { ...g, p: L.p, m: L.m, tot: L.tot, c: L.c || g.c, locked: true, done: g.hs != null } : { ...g, done: g.hs != null };
+});
+const gameSlug = (g) => 'week-' + g.wk + '-' + nick(g.a).toLowerCase() + '-at-' + nick(g.h).toLowerCase() + '-prediction';
 function records(throughWeek = 99) {
   const r = Object.fromEntries(TEAMS.map((t) => [t, { w: 0, l: 0, t: 0, pf: 0, pa: 0 }]));
   for (const g of games) {
@@ -245,6 +252,7 @@ const probBar = (away, home, pH) => '<div class="probbar" role="img" aria-label=
 
 // ---------- Games ----------
 let viewWeek = currentWeek;
+const LOCK_START = Math.min(...Object.values(PICKS).map((x) => x.wk), 99);
 function gameCard(g) {
   const recs = g.done ? records(g.wk - 1) : recNow;
   const pH = g.p, strong = Math.max(pH, 1 - pH) >= 0.7;
@@ -262,6 +270,7 @@ function gameCard(g) {
     '<div class="mkrow num"><span>Model <b>' + fmtLine(g.a, g.h, g.m) + '</b>, total <b>' + half(g.tot).toFixed(1) + '</b></span>' +
     (g.mk_spread != null ? '<span>Market <b>' + fmtLine(g.a, g.h, g.mk_spread) + '</b>, total <b>' + g.mk_total + '</b>' + (mp != null ? ' (' + (mp >= 0.5 ? g.h + ' ' + pct(mp) : g.a + ' ' + pct(1 - mp)) + ')' : '') + '</span>' : '') + '</div>';
   const kf = keyFactors(g.c, g.a, g.h);
+  h += '<p class="small"><a href="' + BASE + 'games/' + gameSlug(g) + '.html"' + (BASE ? ' target="_blank" rel="noopener"' : '') + '>Full preview</a></p>';
   h += '<details class="factors"><summary><span>' + (kf ? esc(kf) : 'Why the model leans this way') + '</span></summary>' + factorList(g.c, g.a, g.h) + '</details>';
   if (g.done) {
     const pickHome = pH >= 0.5, tie = g.hs === g.as, homeWon = g.hs > g.as;
@@ -285,13 +294,20 @@ function renderWeek() {
   const left = wkGames.filter((g) => !g.done).length;
   let summary = dec.length ? 'Model ' + right + '–' + (dec.length - right) + (mkDec.length ? ' · market ' + mkRight + '–' + (mkDec.length - mkRight) : '') + (strongs.length ? ' · strong picks ' + sRight + '–' + (strongs.length - sRight) : '') + (left ? ' · ' + left + ' left' : '') : 'Predictions use every result through ' + dayFmt(lastPlayed) + '.';
   const byes = TEAMS.filter((t) => !wkGames.some((g) => g.a === t || g.h === t));
-  el.innerHTML = '<div class="weekbar"><button class="iconbtn" id="wk-prev" aria-label="Previous week"' + (viewWeek <= 1 ? ' disabled' : '') + '>‹</button>' +
+  const allDec = games.filter((g) => g.done && g.hs !== g.as), allRight = allDec.filter((g) => (g.p >= 0.5) === (g.hs > g.as)).length;
+  const allMk = allDec.filter((g) => g.mk_spread != null && Math.abs(g.mk_spread) >= 0.5), allMkRight = allMk.filter((g) => (g.mk_spread > 0) === (g.hs > g.as)).length;
+  const lockDec = allDec.filter((g) => g.locked), lockRight = lockDec.filter((g) => (g.p >= 0.5) === (g.hs > g.as)).length;
+  const lockedOpen = games.filter((g) => g.locked && !g.done).length;
+  const recordStrip = '<div class="tiles num"><div class="tile"><span class="label">Model this season</span><b>' + allRight + '–' + (allDec.length - allRight) + '</b><span class="muted small">' + pct(allRight / Math.max(1, allDec.length)) + ' of winners picked</span></div>' +
+    '<div class="tile"><span class="label">Betting favorites</span><b>' + allMkRight + '–' + (allMk.length - allMkRight) + '</b><span class="muted small">Same games</span></div>' +
+    '<div class="tile"><span class="label">Locked picks</span><b>' + (lockDec.length ? lockRight + '–' + (lockDec.length - lockRight) : '0–0') + '</b><span class="muted small">Since Week ' + LOCK_START + (lockedOpen ? ' · ' + lockedOpen + ' in progress' : '') + '</span></div></div>';
+  el.innerHTML = recordStrip + '<div class="weekbar"><button class="iconbtn" id="wk-prev" aria-label="Previous week"' + (viewWeek <= 1 ? ' disabled' : '') + '>‹</button>' +
     '<div><h2>Week ' + viewWeek + '</h2><p class="muted small">' + dayFmt(first) + ' – ' + dayFmt(last) + (viewWeek === currentWeek ? ' · this week' : '') + '</p></div>' +
     '<button class="iconbtn" id="wk-next" aria-label="Next week"' + (viewWeek >= 18 ? ' disabled' : '') + '>›</button></div>' +
     '<p class="week-summary">' + summary + '</p>' +
     '<div class="games">' + wkGames.map(gameCard).join('') + '</div>' +
     (byes.length ? '<p class="muted small">Bye: ' + byes.join(', ') + '</p>' : '') +
-    '<p class="notice">Past games show the pick the model would have made before kickoff, using only earlier data. Market lines are closing spreads and totals. Upcoming games use today’s starting quarterbacks, injuries and Monday’s news (see the <a href="#news">News</a> tab).' + (viewWeek > DATA.cw ? ' Win chances this far out are pulled toward 50%, because ratings, quarterbacks and injuries will change before kickoff.' : '') + '</p>';
+    '<p class="notice">From Week ' + LOCK_START + ' on, every pick is locked at kickoff and never changed afterward. Earlier games show the pick the model would have made before kickoff, using only earlier data. Market lines are closing spreads and totals. Upcoming games use today’s starting quarterbacks, injuries and Monday’s news (see the <a href="#news">News</a> tab).' + (viewWeek > DATA.cw ? ' Win chances this far out are pulled toward 50%, because ratings, quarterbacks and injuries will change before kickoff.' : '') + '</p>';
   el.querySelector('#wk-prev').onclick = () => { viewWeek--; renderWeek(); };
   el.querySelector('#wk-next').onclick = () => { viewWeek++; renderWeek(); };
 }

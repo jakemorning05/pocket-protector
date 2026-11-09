@@ -15,7 +15,7 @@ GROUPS = {
     'Offense & defense efficiency': ['d_epa', 'd_sr', 'd_pass_epa', 'd_rush_epa', 'd_early_epa', 'd_neutral_epa', 'd_explosive', 'd_ypp'],
     'Points scored & allowed': ['d_pts'], 'Turnovers': ['d_turnovers'], 'Special teams': ['d_st'],
     'Rest & travel': ['rest_diff', 'd_bye', 'travel_diff', 'tz_diff', 'west_early'], 'Division game': ['div'],
-    'Injuries': ['d_inj_off', 'd_inj_def'], 'Betting market’s earlier view': ['d_mkt'],
+    'Injuries': ['d_inj_off', 'd_inj_def'], 'Past betting lines': ['d_mkt'],
 }
 
 P = F[F.played]

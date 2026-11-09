@@ -10,6 +10,9 @@ B = os.path.dirname(os.path.abspath(__file__))
 P = lambda *a: os.path.join(B, *a)
 read = lambda *a: open(P(*a), encoding='utf-8').read()
 
+import gamepages
+
+SITE_URL = 'https://jakemorning05.github.io/pocket-protector/'  # change this if you move to a custom domain
 TITLE = 'Pocket Protector'
 DESC = 'NFL game predictions, pick’em and survivor pool tools, and fantasy projections from a statistical model.'
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
@@ -26,10 +29,14 @@ def body():
         props = read('data', 'prop_log.json')
     except FileNotFoundError:
         props = '[]'
+    try:
+        picks = read('data', 'pick_log.json')
+    except FileNotFoundError:
+        picks = '{}'
     out = read('src', 'app2_body.html')
     for key, text in [('/*__DATA__*/', read('data', 'site_data.json')), ('/*__PLAYERS__*/', read('data', 'players.json')),
                       ('/*__PROPS__*/', props), ('/*__FAN__*/', read('data', 'fantasy.json')), ('/*__BETS__*/', read('data', 'bet_log.json')),
-                      ('/*__TRACK__*/', read('data', 'bet_track.json')), ('/*__NEWS__*/', read('data', 'news.json')),
+                      ('/*__TRACK__*/', read('data', 'bet_track.json')), ('/*__NEWS__*/', read('data', 'news.json')), ('/*__PICKS__*/', picks),
                       ('/*__POOLS__*/', read('src', 'pools.js'))]:
         out = out.replace(key, text)
     assert '/*__' not in out, 'unfilled placeholder'
@@ -39,8 +46,9 @@ def body():
 def main():
     style, page = read('src', 'style.css.html'), body()
     # artifact fragment
+    assert page.count("'__BASE__'") == 1
     frag = (f'<meta charset="utf-8">\n<title>{TITLE}</title>\n<meta name="claude:viewport-fit-sides" content="cover">\n'
-            + FONTS + style + '\n' + page)
+            + FONTS + style + '\n' + page.replace("'__BASE__'", repr(SITE_URL)))
     open(P('pocket-protector.html'), 'w', encoding='utf-8').write(frag)
     # standalone document
     doc = ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
@@ -51,13 +59,14 @@ def main():
            '<meta name="twitter:card" content="summary">\n'
            f'<link rel="icon" href="{FAVICON}">\n' + FONTS +
            '<style>[hidden]{display:none!important} img{max-width:100%} :root{padding-top:env(safe-area-inset-top,0px)}</style>\n'
-           + style + '\n</head>\n<body>\n' + page + '\n</body>\n</html>\n')
+           + f'<link rel="canonical" href="{SITE_URL}">\n' + style + '\n</head>\n<body>\n' + page.replace("'__BASE__'", "''") + '\n</body>\n</html>\n')
     os.makedirs(P('docs'), exist_ok=True)
     open(P('docs', 'index.html'), 'w', encoding='utf-8').write(doc)
     open(P('docs', '.nojekyll'), 'w').write('')
     # all inline scripts, for a syntax check with `node --check`
     open(P('build_check.js'), 'w', encoding='utf-8').write('\n;\n'.join(re.findall(r'<script>(.*?)</script>', page, re.S)))
-    print(f'docs/index.html {len(doc):,} bytes · pocket-protector.html {len(frag):,} bytes')
+    n = gamepages.build(SITE_URL)
+    print(f'{n} game pages · docs/index.html {len(doc):,} bytes · pocket-protector.html {len(frag):,} bytes')
 
 
 if __name__ == '__main__':

@@ -20,7 +20,7 @@ NFL game predictions, pick'em and survivor pool tools, fantasy projections and a
 
 It also runs whenever you change `data/overrides.json`, `data/news.json` or the page source, and any time you press **Run workflow**.
 
-Each run downloads play-by-play, schedules, lines, injury reports and snap counts from [nflverse](https://github.com/nflverse/nflverse-data), retrains the ratings, re-projects players, grades past picks, rebuilds `docs/index.html` and commits the result.
+Each run downloads play-by-play, schedules, lines, injury reports and snap counts from [nflverse](https://github.com/nflverse/nflverse-data), retrains the ratings, re-projects players, locks each pick at kickoff (`data/pick_log.json`), grades past picks, rebuilds `docs/index.html` and commits the result.
 
 ## What you edit by hand
 
@@ -38,13 +38,14 @@ pipeline/      Python: features, model, exports, player projections, betting and
 data/*.json    model outputs, logs and the hand-edited files (raw downloads are not committed)
 scripts/       update.sh, the whole refresh in one command
 build_site.py  assembles docs/index.html from src/ and data/
+gamepages.py   writes a preview page per game to docs/games/ and docs/sitemap.xml
 ```
 
 Run it yourself with Python 3.13: `pip install -r requirements.txt`, then `bash scripts/update.sh`.
 
 ## Custom domain
 
-Buy the domain from any registrar, then **Settings → Pages → Custom domain**, enter it, and add the DNS records GitHub shows ([GitHub's guide](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site)). Tick **Enforce HTTPS** once it's available.
+Buy the domain from any registrar, then **Settings → Pages → Custom domain**, enter it, and add the DNS records GitHub shows ([GitHub's guide](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site)). Tick **Enforce HTTPS** once it's available. Then change `SITE_URL` at the top of `build_site.py` to the new address.
 
 ## Next season
 
