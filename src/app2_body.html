@@ -33,6 +33,8 @@
 .prow { display: flex; justify-content: space-between; gap: 10px; padding: 6px 0; border-bottom: 1px solid var(--line); font-size: 0.92rem; }
 .imp { display: grid; grid-template-columns: minmax(0, 12em) 1fr 3em; gap: 10px; align-items: center; padding: 4px 0; font-size: 0.92rem; }
 .imp .bar { height: 10px; background: var(--pos); border-radius: 0 4px 4px 0; }
+.tradegrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 12px; align-items: start; }
+.seg { flex-wrap: wrap; border-radius: 22px; }
 .swatch.s1 { background: var(--pos); } .swatch.s2 { background: var(--home); }
 .divchips { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 10px 18px; }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
@@ -629,6 +631,7 @@ const fp = (r) => (r.pass_yds || 0) / 25 + 4 * (r.pass_td || 0) - 2 * (r.int || 
 const STARTERS = { QB: 12, RB: 24, WR: 30, TE: 12 };
 const statLine = (r) => r.pos === 'QB' ? Math.round(r.pass_yds) + ' pass yds, ' + (r.pass_td || 0).toFixed(1) + ' TD, ' + Math.round(r.rush_yds) + ' rush'
   : (r.rush_yds >= 5 ? Math.round(r.rush_yds) + ' rush, ' : '') + (r.rec || 0).toFixed(1) + ' rec, ' + Math.round(r.rec_yds || 0) + ' yds';
+/*__FANX__*/
 function renderFantasy() {
   const el = document.getElementById('view-fantasy');
   const seg = (name, cur, items) => '<div class="seg" role="group" aria-label="' + name + '">' + items.map(([k, l]) => '<button data-' + name + '="' + k + '" aria-pressed="' + (k === cur) + '">' + l + '</button>').join('') + '</div>';
@@ -649,6 +652,10 @@ function renderFantasy() {
       '<div class="panel"><div class="tablewrap"><table class="ptable"><thead><tr><th>#</th><th class="l">Player</th><th>Games left</th><th>Total pts</th><th>Per game</th></tr></thead><tbody>' +
       rows.map((r, i) => '<tr><td class="muted">' + (i + 1) + '</td><td class="l"><span class="pname">' + esc(r.name) + '</span><span class="ppos pos-' + r.pos + '">' + r.pos + ' · ' + r.team + '</span>' + (r.flag ? ' <span class="qbchip" data-tip="' + esc(r.flag) + '">News</span>' : '') + '</td><td>' + r.n + '</td><td><b>' + r.tot.toFixed(0) + '</b></td><td>' + (r.n ? (r.tot / r.n).toFixed(1) : '–') + '</td></tr>').join('') +
       '</tbody></table></div><p class="muted small" style="margin-top:8px">Each remaining game is projected against that opponent’s defense, so a soft schedule shows up here. Byes are already left out.</p></div>';
+  } else if (fanView === 'value') {
+    body = marketHtml();
+  } else if (fanView === 'trade') {
+    body = tradeHtml();
   } else if (fanView === 'waiver') {
     body = '<div class="panel"><div class="panel-head"><h3>Usage risers</h3><span class="muted small">Targets + carries per game, last 2 vs. earlier</span></div><div class="tablewrap"><table class="ptable"><thead><tr><th class="l">Player</th><th>Before</th><th>Last 2</th><th>Change</th></tr></thead><tbody>' +
       FAN.risers.map((r) => '<tr><td class="l"><span class="pname">' + esc(r.name) + '</span><span class="ppos pos-' + r.pos + '">' + r.pos + ' · ' + r.team + '</span></td><td>' + r.before.toFixed(1) + '</td><td><b>' + r.recent.toFixed(1) + '</b></td><td class="rank-good">+' + r.jump.toFixed(1) + '</td></tr>').join('') +
@@ -667,12 +674,13 @@ function renderFantasy() {
     body = '<label class="field" style="max-width:360px"><span class="label">Game</span><select id="fan-game">' + gl.map((x) => '<option value="' + x.id + '"' + (x.id === g.id ? ' selected' : '') + '>Wk ' + x.wk + ': ' + x.a + ' @ ' + x.h + '</option>').join('') + '</select></label>' + team(g.a) + team(g.h);
   }
   el.innerHTML = '<div><h2>Fantasy</h2><p class="intro">Projections from each player’s recent workload and efficiency, adjusted for the opponent and pulled toward realistic ranges. Players ruled out on the injury report or in Monday’s news are left off.</p></div>' +
-    '<div class="controls">' + seg('fview', fanView, [['rank', 'This week'], ['ros', 'Rest of season'], ['waiver', 'Waivers & handcuffs'], ['game', 'By game']]) + seg('fmt', fmt, [['ppr', 'PPR'], ['half', 'Half'], ['std', 'Std']]) + '</div>' + body +
+    '<div class="controls">' + seg('fview', fanView, [['rank', 'This week'], ['ros', 'Rest of season'], ['value', 'Buy low / sell high'], ['trade', 'Trade calculator'], ['waiver', 'Waivers'], ['game', 'By game']]) + seg('fmt', fmt, [['ppr', 'PPR'], ['half', 'Half'], ['std', 'Std']]) + '</div>' + body +
     '<p class="notice">Tested on Weeks 4–9, the projections missed by about ' + PL.bt.rec_yds.model_mae + ' receiving yards per player (a plain season average missed by ' + PL.bt.rec_yds.naive_mae + ') and ' + PL.bt.rush_yds.model_mae + ' rushing yards (vs ' + PL.bt.rush_yds.naive_mae + '). Single-game fantasy scores swing a lot, so use these for close calls, not as locks.</p>';
   el.querySelectorAll('[data-fview]').forEach((b) => b.onclick = () => { fanView = b.dataset.fview; renderFantasy(); });
   el.querySelectorAll('[data-fmt]').forEach((b) => b.onclick = () => { fmt = b.dataset.fmt; prefs.set('fmt', fmt); renderFantasy(); });
   el.querySelectorAll('[data-fwk]').forEach((b) => b.onclick = () => { fanWeek = +b.dataset.fwk; renderFantasy(); });
   el.querySelectorAll('[data-fpos]').forEach((b) => b.onclick = () => { fanPos = b.dataset.fpos; renderFantasy(); });
+  wireFantasyExtra(el);
   const gs = el.querySelector('#fan-game'); if (gs) gs.onchange = (e) => { fanGame = e.target.value; renderFantasy(); };
 }
 

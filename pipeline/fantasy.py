@@ -104,7 +104,18 @@ for team in sorted(W.team.unique()):
                   'rb1_share': round(float(rb1.car / tot), 3) if tot else None, 'rb2_share': round(float(rb2.car / tot), 3) if tot else None,
                   'rb1_out': rb1.player_id in out_ids})
 
-json.dump({'games': games, 'ros': ros, 'risers': risers, 'cuffs': cuffs, 'cw': cw, 'through_week': last_played, 'injury_week': last_inj},
+# season to date for every rest-of-season player: actual stat totals, plus workload in the last 2 games vs. earlier
+season = {}
+for pid in ros:
+    x = W[W.player_id == pid].sort_values('week')
+    if not len(x): continue
+    f = lambda c: float(x[c].fillna(0).sum())
+    touches = (x.targets.fillna(0) + x.carries.fillna(0))
+    season[pid] = {'g': int(len(x)), 'pass_yds': f('passing_yards'), 'pass_td': f('passing_tds'), 'int': f('passing_interceptions'),
+                   'rush_yds': f('rushing_yards'), 'rush_td': f('rushing_tds'), 'rec': f('receptions'), 'rec_yds': f('receiving_yards'), 'rec_td': f('receiving_tds'),
+                   'recent': round(float(touches.iloc[-2:].mean()), 1), 'before': round(float(touches.iloc[:-2].mean()), 1) if len(x) > 2 else None}
+
+json.dump({'games': games, 'ros': ros, 'season': season, 'risers': risers, 'cuffs': cuffs, 'cw': cw, 'through_week': last_played, 'injury_week': last_inj},
           open(f'{D}/fantasy.json', 'w'))
 print(len(games), 'player-games;', len(ros), 'ROS;', len(risers), 'risers;', len(cuffs), 'cuffs')
 ppr = lambda r: r.get('pass_yds', 0) / 25 + 4 * r.get('pass_td', 0) - 2 * r.get('int', 0) + r.get('rush_yds', 0) / 10 + 6 * r.get('rush_td', 0) + r.get('rec_yds', 0) / 10 + 6 * r.get('rec_td', 0) + r.get('rec', 0)
