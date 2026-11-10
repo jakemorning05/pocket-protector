@@ -30,9 +30,9 @@
   "p_over": 0.544,
   "pick": "YES",
   "edge": 0.084,
-  "actual": null,
-  "won": null,
-  "profit": null,
+  "actual": 28.0,
+  "won": false,
+  "profit": -0.46,
   "pid": "00-0038933"
  },
  {
@@ -48,9 +48,9 @@
   "p_over": 0.64,
   "pick": "YES",
   "edge": 0.11,
-  "actual": null,
-  "won": null,
-  "profit": null,
+  "actual": 15.0,
+  "won": false,
+  "profit": -0.53,
   "pid": "00-0034857"
  },
  {
@@ -66,9 +66,9 @@
   "p_over": 0.653,
   "pick": "YES",
   "edge": 0.183,
-  "actual": null,
-  "won": null,
-  "profit": null,
+  "actual": 0.0,
+  "won": false,
+  "profit": -0.47,
   "pid": "00-0037248"
  },
  {
@@ -138,9 +138,9 @@
   "p_over": 0.8,
   "pick": "YES",
   "edge": 0.26,
-  "actual": null,
-  "won": null,
-  "profit": null,
+  "actual": 16.0,
+  "won": false,
+  "profit": -0.54,
   "pid": "00-0033293"
  }
 ]
