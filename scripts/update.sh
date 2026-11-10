@@ -37,6 +37,7 @@ cd pipeline
 "$PY" players.py
 "$PY" fantasy.py
 "$PY" injury_list.py
+"$PY" early_props.py      # early player leans for the coming week (until real prop prices are logged)
 "$PY" betting.py grade
 "$PY" props.py grade
 "$PY" betting.py log "$(TZ=America/New_York date '+%b %-d, %-I:%M %p ET')"

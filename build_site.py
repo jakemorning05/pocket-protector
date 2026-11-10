@@ -35,11 +35,15 @@ def body():
         picks = read('data', 'pick_log.json')
     except FileNotFoundError:
         picks = '{}'
+    try:
+        early = read('data', 'early_props.json')
+    except FileNotFoundError:
+        early = '{}'
     out = read('src', 'app2_body.html')
     for key, text in [('/*__DATA__*/', read('data', 'site_data.json')), ('/*__PLAYERS__*/', read('data', 'players.json')),
                       ('/*__PROPS__*/', props), ('/*__FAN__*/', read('data', 'fantasy.json')), ('/*__BETS__*/', read('data', 'bet_log.json')),
                       ('/*__TRACK__*/', read('data', 'bet_track.json')), ('/*__NEWS__*/', read('data', 'news.json')), ('/*__PICKS__*/', picks),
-                      ('/*__POOLS__*/', read('src', 'pools.js')), ('/*__FANX__*/', read('src', 'fantasy_extra.js'))]:
+                      ('/*__POOLS__*/', read('src', 'pools.js')), ('/*__FANX__*/', read('src', 'fantasy_extra.js')), ('/*__EARLY__*/', early)]:
         out = out.replace(key, text)
     assert '/*__' not in out, 'unfilled placeholder'
     return out

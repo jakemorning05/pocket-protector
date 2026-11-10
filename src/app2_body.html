@@ -44,6 +44,7 @@
 tr.hl td { background: color-mix(in oklab, var(--accent) 10%, var(--surface)); }
 .pk-pts { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; text-align: center; width: 2.6em; }
 .pk th:first-child { text-align: center; }
+.early td { white-space: normal; } .early td:nth-child(n+3) { white-space: nowrap; } .early .pname { display: block; } .early .ppos { margin-left: 0; }
 .ptable .tag { margin-left: 4px; vertical-align: 1px; white-space: nowrap; display: inline-block; }
 #view-pools .tiles { grid-template-columns: repeat(auto-fit, minmax(min(100%, 100px), 1fr)); }
 @media (max-width: 560px) { #view-pools .tile b { font-size: 1.7rem; } #view-pools .pbar { display: none; } #view-pools .ptable td, #view-pools .ptable th { padding: 7px 4px; } #view-pools .ptable { font-size: 0.9rem; } #view-pools .pk-pts { width: 2em; } #view-pools .teamcell { gap: 4px; } }
@@ -110,6 +111,7 @@ tr.hl td { background: color-mix(in oklab, var(--accent) 10%, var(--surface)); }
 const DATA = /*__DATA__*/;
 const PL = /*__PLAYERS__*/;
 const PROPS = /*__PROPS__*/;
+const EARLY = /*__EARLY__*/;
 const FAN = /*__FAN__*/;
 const BETS = /*__BETS__*/;
 const TRACK = /*__TRACK__*/;
@@ -575,6 +577,13 @@ function renderBetting() {
     PROPS.map((p) => '<tr><td class="l"><span class="pname">' + esc(p.player) + '</span> <span class="muted small">' + p.thr + '+ ' + STAT_LABEL[p.stat] + '</span></td><td>' + pct(p.price) + '</td><td>' + pct(p.p_over) + '</td><td><b>' + p.pick + '</b></td><td>' +
       (p.won == null ? '<span class="muted">Pending</span>' : '<span class="res ' + (p.won ? 'w' : 'l') + '">' + (p.won ? '✓ ' : '✗ ') + p.actual + '</span>') + '</td></tr>').join('') +
     '</tbody></table></div><p class="muted small" style="margin-top:8px">Prices: ' + esc(PROPS[0].source) + '. Kalshi fees not included.</p></div>' : '';
+  const earlyPanel = EARLY.games && EARLY.games.length ? '<div class="panel"><div class="panel-head"><h3>Week ' + EARLY.week + ' early player leans</h3><span class="muted small">Updated ' + esc(EARLY.asof) + '</span></div>' +
+    '<p class="muted small" style="max-width:64ch;margin-bottom:8px">Prop lines aren’t posted yet. Until they are, each player’s line here is his season median for that stat, which is roughly where books open. The picks update with every refresh as injuries and starters change, and real Kalshi prices replace them in the table below once they’re out.</p>' +
+    '<div class="tablewrap"><table class="ptable early"><thead><tr><th class="l">Player</th><th class="l">Lean</th><th>Model</th><th>Proj.</th></tr></thead><tbody>' +
+    EARLY.games.map((g) => { const gm = games.find((x) => x.id === g.id);
+      return '<tr><td class="l" colspan="4" style="padding-top:14px;white-space:normal"><b>' + g.a + ' @ ' + g.h + '</b> <span class="muted small">' + (gm ? kick(gm) : '') + (g.td.length ? ' · most likely TD: ' + g.td.map((t) => esc(t.player) + ' ' + pct(t.p)).join(', ') : '') + '</span></td></tr>' +
+        g.leans.map((c) => '<tr><td class="l"><span class="pname">' + esc(c.player) + '</span><span class="ppos pos-' + c.pos + '">' + c.pos + ' · ' + c.team + '</span></td><td class="l"><b>' + c.side + ' ' + c.line + '</b> <span class="muted small">' + STAT_LABEL[c.stat] + '</span></td><td>' + pct(Math.max(c.p_over, 1 - c.p_over)) + '</td><td class="muted">' + c.proj.toFixed(0) + '</td></tr>').join(''); }).join('') +
+    '</tbody></table></div><p class="muted small" style="margin-top:8px">The prop test is only a few markets old (see below), so treat these as a starting point, not locks.</p></div>' : '';
   el.innerHTML = '<div><h2>Betting</h2><p class="intro">A test bench, not a tip sheet. Over nine past seasons the model’s sides and totals won about 49% against closing lines, below the 52.4% needed at −110. These tools are here to find out whether that changes when it bets earlier numbers, shops prices and plays props.</p></div>' +
     '<div class="tiles num"><div class="tile"><span class="label">Picks logged</span><b>' + BETS.length + '</b><span class="muted small">' + open.length + ' waiting on games</span></div>' +
     '<div class="tile"><span class="label">Record</span><b>' + (done.length ? done.filter((b) => b.result === 'win').length + '–' + done.filter((b) => b.result === 'loss').length : '–') + '</b><span class="muted small">At the line when logged</span></div>' +
@@ -582,7 +591,7 @@ function renderBetting() {
     '<div class="tile"><span class="label">Prop test</span><b>' + (graded.length ? wins + '–' + (graded.length - wins) : '–') + '</b><span class="muted small">' + PROPS.length + ' markets logged</span></div></div>' +
     '<div class="panel"><div class="panel-head"><h3>Model picks vs. the line</h3><span class="muted small">Logged ' + esc((BETS[0] || {}).logged || '') + '</span></div>' +
     '<p class="muted small" style="max-width:62ch;margin-bottom:8px">“Model” is the chance if the model is right. “Past rate” is how often its picks actually won at this size of disagreement in 2017–2025, and the value column uses that rate on a $100 bet at −110. Positive closing line value after kickoff is the early sign of a real edge.</p>' +
-    '<div class="tablewrap"><table class="ptable"><thead><tr><th class="l">Game</th><th class="l">Pick</th><th>Model line</th><th>Model</th><th>Past rate</th><th>Value</th><th>Result</th></tr></thead><tbody>' + rows + '</tbody></table></div></div>' +
+    '<div class="tablewrap"><table class="ptable"><thead><tr><th class="l">Game</th><th class="l">Pick</th><th>Model line</th><th>Model</th><th>Past rate</th><th>Value</th><th>Result</th></tr></thead><tbody>' + rows + '</tbody></table></div></div>' + earlyPanel +
     '<div class="panel" id="shop"></div>' + propPanel +
     '<p class="notice">Set a budget you’re fine losing and keep bets small and even. If betting stops being fun, the National Problem Gambling Helpline is 1-800-GAMBLER.</p>';
   renderShop();

@@ -5,6 +5,7 @@ from zoneinfo import ZoneInfo
 B = os.path.dirname(os.path.abspath(__file__))
 P = lambda *a: os.path.join(B, *a)
 ET = ZoneInfo('America/New_York')
+EARLY = {}
 NAMES = {
     'ARI': ('Arizona', 'Cardinals'), 'ATL': ('Atlanta', 'Falcons'), 'BAL': ('Baltimore', 'Ravens'), 'BUF': ('Buffalo', 'Bills'),
     'CAR': ('Carolina', 'Panthers'), 'CHI': ('Chicago', 'Bears'), 'CIN': ('Cincinnati', 'Bengals'), 'CLE': ('Cleveland', 'Browns'),
@@ -118,6 +119,14 @@ def page(g, lock, fan, news, site_url, analytics=''):
         fantasy = ('<div class="panel"><h2>Fantasy projections</h2><div class="tablewrap"><table><thead><tr><th class="l">Player</th><th>PPR pts</th><th class="l">Projection</th><th>TD chance</th></tr></thead><tbody>' +
                    ''.join(f'<tr><td class="l"><b>{esc(r["name"])}</b> <span class="muted small">{r["pos"]} · {r["team"]}</span></td><td><b>{fp(r):.1f}</b></td><td class="l muted small">{stat(r)}</td><td>{pct(r.get("td_p") or 0)}</td></tr>' for r in fr) +
                    '</tbody></table></div></div>')
+    early = ''
+    eg = next((x for x in EARLY.get('games', []) if x['id'] == g['id']), None)
+    if eg and eg['leans'] and not done:
+        SN = {'pass_yds': 'pass yds', 'rush_yds': 'rush yds', 'rec_yds': 'rec yds'}
+        early = ('<div class="panel"><h2>Early player leans</h2><div class="tablewrap"><table><thead><tr><th class="l">Player</th><th class="l">Lean</th><th>Model</th><th>Proj.</th></tr></thead><tbody>' +
+                 ''.join(f'<tr><td class="l"><b>{esc(c["player"])}</b> <span class="muted small">{c["pos"]} · {c["team"]}</span></td><td class="l"><b>{c["side"]} {c["line"]:g}</b> <span class="muted small">{SN[c["stat"]]}</span></td><td>{pct(max(c["p_over"], 1 - c["p_over"]))}</td><td>{c["proj"]:.0f}</td></tr>' for c in eg['leans']) +
+                 '</tbody></table></div>' + (f'<p class="small" style="margin-top:8px">Most likely to score a touchdown: ' + ', '.join(f'{esc(t["player"])} ({pct(t["p"])})' for t in eg['td']) + '.</p>' if eg['td'] else '') +
+                 f'<p class="muted small">Prop lines aren’t posted yet, so each line here is the player’s season median for that stat. Updated {esc(EARLY.get("asof", ""))}; the leans move with injury and starter news until kickoff.</p></div>')
     ld = json.dumps({'@context': 'https://schema.org', '@type': 'SportsEvent', 'name': f'{full(a)} at {full(h)}', 'startDate': kick.isoformat(),
                      'awayTeam': {'@type': 'SportsTeam', 'name': full(a)}, 'homeTeam': {'@type': 'SportsTeam', 'name': full(h)}, 'sport': 'American football'})
     url = f'{site_url}games/{slug(g)}.html'
@@ -151,7 +160,7 @@ def page(g, lock, fan, news, site_url, analytics=''):
 <div class="panel">{bar}</div>
 {res}
 <div class="panel prose"><h2>{'How the model saw it' if done else 'The preview'}</h2>{paras}</div>
-{factors}{injuries}{fantasy}
+{factors}{injuries}{early}{fantasy}
 <p class="notice">{note} Predictions are estimates, not betting advice. <a href="../#about">About the model</a> · <a href="../#week">See every game this week</a></p>
 <footer class="foot"><span>Pocket Protector · NFL picks, pools and fantasy by the numbers</span><span>Data: nflverse · Not affiliated with the NFL</span></footer>
 </main>
@@ -180,6 +189,11 @@ body { padding-bottom: 40px; }
 
 
 def build(site_url, analytics=''):
+    global EARLY
+    try:
+        EARLY = json.load(open(P('data', 'early_props.json')))
+    except FileNotFoundError:
+        EARLY = {}
     site = json.load(open(P('data', 'site_data.json'))); news = json.load(open(P('data', 'news.json')))
     fan = json.load(open(P('data', 'fantasy.json')))['games']
     try:
