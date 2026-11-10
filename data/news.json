@@ -1,5 +1,5 @@
 {
- "asof": "Tue, Nov 10, 3:30 PM ET",
+ "asof": "Tue, Nov 10, 4:15 PM ET",
  "outs": [
   "Josh Jacobs",
   "Puka Nacua",
@@ -11,17 +11,16 @@
  "flags": {
   "Patrick Mahomes": "Right elbow strain, day-to-day",
   "Drew Lock": "Oblique injury plus elbow tendonitis; Week 10 starter unclear",
-  "Jonathan Taylor": "Trade candidate; Colts expected to take the best offer before Tuesday 4 p.m. ET",
   "J.J. McCarthy": "Hip pointer, expected to play Thursday",
   "Cam Skattebo": "Hamstring, expected back Thursday",
   "Justin Herbert": "Finger imaging was negative, no fracture",
   "A.J. Brown": "Missed two games; Patriots plan for him to travel to Germany, no decision yet",
-  "Carson Wentz": "Now Minnesota\u2019s backup after the Kirk Cousins trade",
+  "Carson Wentz": "Now Minnesota’s backup after the Kirk Cousins trade",
   "Kirk Cousins": "Traded to Minnesota Tuesday; expected to start Sunday at Green Bay",
   "Keenan Allen": "Traded to San Francisco Tuesday; projections use his Colts role in the 49ers offense, so treat them as rough this week",
   "Fernando Mendoza": "Rookie takes over in Las Vegas after the Cousins trade",
   "Garrett Wilson": "In concussion protocol; must clear it to play Sunday",
-  "Carson Beck": "Rookie expected to start Sunday vs. the Rams after Gardner Minshew\u2019s elbow injury (likely season-ending)"
+  "Carson Beck": "Rookie expected to start Sunday vs. the Rams after Gardner Minshew’s elbow injury (likely season-ending)"
  },
  "items": [
   {
@@ -125,7 +124,7 @@
   {
    "team": "JAX",
    "tag": "Trade",
-   "text": "Jacksonville made three defensive trades in one day: DT Jordan Davis from Philadelphia (2027 first-round and 2029 second-round picks), S Jessie Bates from Atlanta (2027 second, 2028 fifth) and DT Davon Godchaux from New Orleans. Their old teams now count them as missing; Jacksonville\u2019s ratings catch up as they play.",
+   "text": "Jacksonville made three defensive trades in one day: DT Jordan Davis from Philadelphia (2027 first-round and 2029 second-round picks), S Jessie Bates from Atlanta (2027 second, 2028 fifth) and DT Davon Godchaux from New Orleans. Their old teams now count them as missing; Jacksonville’s ratings catch up as they play.",
    "src": "ESPN, Nov 9",
    "url": "https://www.espn.com/nfl/story/_/id/50435639/jaguars-get-eagles-jordan-davis-blockbuster-trade"
   },
@@ -181,9 +180,9 @@
   {
    "team": "IND",
    "tag": "Trade",
-   "text": "Jonathan Taylor is still a Colt as of Tuesday morning. Indianapolis has been in active talks with several teams, and the deadline is 4 p.m. ET today.",
-   "src": "ESPN, Nov 10",
-   "url": "https://www.espn.com/nfl/story/_/id/50323095/sources-colts-willing-trade-star-rb-jonathan-taylor"
+   "text": "The deadline passed with Jonathan Taylor still a Colt; Indianapolis reportedly turned down second-round picks. He stays the Colts' workhorse, now with Keenan Allen gone to San Francisco.",
+   "src": "USA TODAY Sports via Yahoo, Nov 10",
+   "url": "https://sports.yahoo.com/articles/jonathan-taylor-staying-colts-203756681.html"
   }
  ],
  "injuries": [
