@@ -1,5 +1,5 @@
 {
- "asof": "Mon, Nov 9, 5:55 PM ET",
+ "asof": "Mon, Nov 9, 11:45 PM ET",
  "outs": [
   "Josh Jacobs",
   "Puka Nacua",
@@ -17,6 +17,13 @@
   "A.J. Brown": "Missed two games; Patriots plan for him to travel to Germany, no decision yet"
  },
  "items": [
+  {
+   "team": "BUF",
+   "tag": "Result",
+   "text": "Bills 23, Vikings 6. Buffalo controlled the ball for 42 minutes and forced three Minnesota turnovers; Carson Wentz and the Vikings managed 178 yards and two field goals. The model's locked pick, Buffalo at 56%, won. Its spread side (Vikings +3.5) and total (Over 45.5) both lost.",
+   "src": "Final score and team stats, Nov 9",
+   "url": "https://www.espn.com/nfl/game/_/gameId/401873051/bills-vikings"
+  },
   {
    "team": "LA",
    "tag": "Injury",

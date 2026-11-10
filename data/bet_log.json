@@ -11,9 +11,9 @@
   "p": 0.53,
   "ev": 0.012,
   "logged": "Nov 9, 4:45 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null
+  "close": -3.5,
+  "clv": 0.0,
+  "result": "loss"
  },
  {
   "game": "2026_09_BUF_MIN",
@@ -27,9 +27,9 @@
   "p": 0.547,
   "ev": 0.045,
   "logged": "Nov 9, 4:45 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null
+  "close": 45.5,
+  "clv": 0.0,
+  "result": "loss"
  },
  {
   "game": "2026_10_WAS_NYG",
