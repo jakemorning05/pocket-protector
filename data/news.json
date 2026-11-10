@@ -1,5 +1,5 @@
 {
- "asof": "Tue, Nov 10, 11:10 AM ET",
+ "asof": "Tue, Nov 10, 3:30 PM ET",
  "outs": [
   "Josh Jacobs",
   "Puka Nacua",
@@ -9,15 +9,19 @@
   "Rhamondre Stevenson"
  ],
  "flags": {
-  "Patrick Mahomes": "Elbow soreness, day-to-day; MRI showed no major damage",
+  "Patrick Mahomes": "Right elbow strain, day-to-day",
   "Drew Lock": "Oblique injury plus elbow tendonitis; Week 10 starter unclear",
   "Jonathan Taylor": "Trade candidate; Colts expected to take the best offer before Tuesday 4 p.m. ET",
   "J.J. McCarthy": "Hip pointer, expected to play Thursday",
   "Cam Skattebo": "Hamstring, expected back Thursday",
-  "Justin Herbert": "Possible fracture in his left middle finger; testing Monday. He expects to play next Monday at Baltimore",
+  "Justin Herbert": "Finger imaging was negative, no fracture",
   "A.J. Brown": "Missed two games; Patriots plan for him to travel to Germany, no decision yet",
-  "Carson Wentz": "Went 8 of 25 for 81 yards and 2 interceptions Monday and was benched late for Max Brosmer; Kyler Murray (hamstring) has no return date",
-  "Carson Beck": "Rookie expected to start Sunday vs. the Rams after Gardner Minshew\u2019s throwing-arm UCL injury"
+  "Carson Wentz": "Now Minnesota\u2019s backup after the Kirk Cousins trade",
+  "Kirk Cousins": "Traded to Minnesota Tuesday; expected to start Sunday at Green Bay",
+  "Keenan Allen": "Traded to San Francisco Tuesday; projections use his Colts role in the 49ers offense, so treat them as rough this week",
+  "Fernando Mendoza": "Rookie takes over in Las Vegas after the Cousins trade",
+  "Garrett Wilson": "In concussion protocol; must clear it to play Sunday",
+  "Carson Beck": "Rookie expected to start Sunday vs. the Rams after Gardner Minshew\u2019s elbow injury (likely season-ending)"
  },
  "items": [
   {
@@ -26,6 +30,69 @@
    "text": "Bills 23, Vikings 6. Buffalo controlled the ball for 42 minutes and forced three Minnesota turnovers; Carson Wentz and the Vikings managed 178 yards and two field goals. The model's locked pick, Buffalo at 56%, won. Its spread side (Vikings +3.5) and total (Over 45.5) both lost.",
    "src": "Final score and team stats, Nov 9",
    "url": "https://www.espn.com/nfl/game/_/gameId/401873051/bills-vikings"
+  },
+  {
+   "team": "MIN",
+   "tag": "Trade",
+   "text": "Minnesota traded a 2027 third-round pick to Las Vegas for Kirk Cousins, two days after Carson Wentz went 8 of 25 against Buffalo. Cousins is expected to start Sunday at Green Bay, and the model now uses him as the Vikings' starter, which moves that game toward Minnesota. Rookie Fernando Mendoza takes over in Las Vegas.",
+   "src": "NBC Bay Area / ESPN, Nov 10",
+   "url": "https://www.nbcbayarea.com/news/sports/nfl/vikings-kirk-cousins-trade-raiders/4173444/"
+  },
+  {
+   "team": "SF",
+   "tag": "Trade",
+   "text": "San Francisco got WR Keenan Allen from Indianapolis for a 2027 sixth-round pick. Allen leads the Colts with 40 catches. He's moved to the 49ers in the projections; his numbers there use his Colts role, so they're rough until he plays a game in San Francisco.",
+   "src": "ESPN, Nov 10",
+   "url": "https://www.espn.com/nfl/story/_/id/50444457/sources-49ers-acquire-keenan-allen-trade-colts"
+  },
+  {
+   "team": "BUF",
+   "tag": "Trade",
+   "text": "Buffalo filled its safety need with Amani Hooker from Tennessee.",
+   "src": "ESPN, Nov 10",
+   "url": "https://www.espn.com/nfl/story/_/id/50444810/bills-trade-titans-safety-amani-hooker"
+  },
+  {
+   "team": "CIN",
+   "tag": "Trade",
+   "text": "Cincinnati called off its agreed trade for Eagles edge rusher Arnold Ebiketie over the compensatory-pick formula. He stays in Philadelphia.",
+   "src": "ESPN, Nov 10",
+   "url": "https://www.espn.com/nfl/story/_/id/50443891/bengals-nix-agreed-trade-eagles-sources-say"
+  },
+  {
+   "team": "MIA",
+   "tag": "Injury",
+   "text": "DT Zach Sieler needs season-ending biceps surgery.",
+   "src": "ProFootballTalk, Nov 10",
+   "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/2026-nfl-trade-deadline-live-updates-tracker-deals-news-rumors-analysis"
+  },
+  {
+   "team": "LAC",
+   "tag": "QB",
+   "text": "Good news for the Chargers: imaging on Justin Herbert's left middle finger came back negative, with no fracture.",
+   "src": "DK Network, Nov 10",
+   "url": "https://dknetwork.draftkings.com/2026/11/10/nfl-injury-report-week-10/"
+  },
+  {
+   "team": "KC",
+   "tag": "Injury",
+   "text": "Patrick Mahomes (right elbow strain) and Xavier Worthy (hamstring) are day-to-day. The model still has Mahomes starting at Atlanta.",
+   "src": "DK Network, Nov 10",
+   "url": "https://dknetwork.draftkings.com/2026/11/10/nfl-injury-report-week-10/"
+  },
+  {
+   "team": "NYJ",
+   "tag": "Injury",
+   "text": "Garrett Wilson is in the concussion protocol and must clear it to play Buffalo.",
+   "src": "DK Network, Nov 10",
+   "url": "https://dknetwork.draftkings.com/2026/11/10/nfl-injury-report-week-10/"
+  },
+  {
+   "team": "GB",
+   "tag": "Injury",
+   "text": "Guard Sean Rhyan is out at least a month with a high ankle sprain, and Josh Jacobs needs surgery on a fractured finger. Both count against Green Bay.",
+   "src": "DK Network, Nov 10",
+   "url": "https://dknetwork.draftkings.com/2026/11/10/nfl-injury-report-week-10/"
   },
   {
    "team": "ARI",
@@ -40,13 +107,6 @@
    "text": "Gardner Minshew likely tore the UCL in his throwing arm and may need season-ending surgery. Rookie Carson Beck is expected to start Sunday against the Rams. With no NFL passing history, the model rates him as a typical new starter, which lowers Arizona's chances.",
    "src": "ESPN, Nov 9",
    "url": "https://www.espn.com/nfl/story/_/id/50435608/cardinals-wr-michael-wilson-neck-miss-rest-season"
-  },
-  {
-   "team": "MIN",
-   "tag": "QB",
-   "text": "Carson Wentz went 8 of 25 for 81 yards with two interceptions in Monday's 23-6 loss and was benched late for Max Brosmer. Kyler Murray (hamstring) has no timeline, and the Vikings are exploring the QB trade market before today's 4 p.m. ET deadline. The model keeps Wentz as the starter until Minnesota says otherwise.",
-   "src": "ESPN and Yahoo Sports, Nov 9\u201310",
-   "url": "https://www.espn.com/nfl/story/_/id/50435734/bills-vikings-josh-allen-carson-wentz-mnf"
   },
   {
    "team": "NE",
@@ -65,16 +125,9 @@
   {
    "team": "JAX",
    "tag": "Trade",
-   "text": "Jacksonville made three defensive trades in one day: DT Jordan Davis from Philadelphia (2027 first-round and 2029 second-round picks), S Jessie Bates from Atlanta (2027 second, 2028 fifth) and DT Davon Godchaux from New Orleans. Team ratings catch up as the new players take snaps.",
+   "text": "Jacksonville made three defensive trades in one day: DT Jordan Davis from Philadelphia (2027 first-round and 2029 second-round picks), S Jessie Bates from Atlanta (2027 second, 2028 fifth) and DT Davon Godchaux from New Orleans. Their old teams now count them as missing; Jacksonville\u2019s ratings catch up as they play.",
    "src": "ESPN, Nov 9",
    "url": "https://www.espn.com/nfl/story/_/id/50435639/jaguars-get-eagles-jordan-davis-blockbuster-trade"
-  },
-  {
-   "team": "LAC",
-   "tag": "QB",
-   "text": "Justin Herbert hurt his left middle finger in the loss to Houston. Jim Harbaugh said it 'could be a fracture' pending Monday's tests; Herbert said he doesn't expect it to be a problem. The model assumes he starts next Monday at Baltimore.",
-   "src": "The Big Lead, Nov 9",
-   "url": "https://www.thebiglead.com/jim-harbaugh-justin-herbert-injury-update-finger-week-9-loss/"
   },
   {
    "team": "DAL",
@@ -103,13 +156,6 @@
    "text": "Mike Macdonald ruled Sam Darnold out for Sunday at Las Vegas; he's still recovering from quad and rib injuries and could return after the Week 11 bye. Drew Lock starts again, playing through an oblique injury. If Lock can't go, rookie Jalen Milroe is next.",
    "src": "The Sunday Guardian, Nov 10",
    "url": "https://sundayguardianlive.com/sports/nfl-injury-update-sam-darnold-ruled-out-of-seahawks-vs-las-vegas-raiders-week-10-clash-drew-lock-to-start-320272/"
-  },
-  {
-   "team": "KC",
-   "tag": "QB",
-   "text": "Patrick Mahomes has elbow soreness after a hit against the Jets. An MRI showed no major injury, and Andy Reid called him day-to-day. The model assumes he plays at Atlanta.",
-   "src": "KCTV5, Nov 9",
-   "url": "https://www.kctv5.com/2026/11/09/andy-reid-says-patrick-mahomes-is-day-to-day-after-injury-against-jets/"
   },
   {
    "team": "NYG",

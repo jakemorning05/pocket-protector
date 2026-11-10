@@ -1,13 +1,6 @@
 {
-  "_help": "Edit this file when news changes who starts. qb_starters: the QB a team will start (short name as in play-by-play, e.g. C.Wentz) and the last week it applies to; after that week the site goes back to whoever actually started the team's most recent game. players_out: non-QB regulars ruled out in the news but not yet on an official injury report (side = off or def). Save on GitHub and the site rebuilds in a few minutes.",
+  "_help": "Edit this file when news changes who starts. qb_starters: the QB a team will start (short name as in play-by-play, e.g. C.Wentz) and the last week it applies to; after that week the site goes back to whoever actually started the team's most recent game. players_out: non-QB regulars ruled out in the news but not yet on an official injury report (side = off or def). Save on GitHub and the site rebuilds in a few minutes. traded: players moved to a new team since their last game (projections use the new team; QBs are set in qb_starters).",
   "qb_starters": [
-    {
-      "team": "MIN",
-      "qb": "C.Wentz",
-      "name": "Carson Wentz",
-      "through_week": 18,
-      "source": "Bleacher Report, Nov 5"
-    },
     {
       "team": "SEA",
       "qb": "D.Lock",
@@ -35,6 +28,20 @@
       "name": "Carson Beck",
       "through_week": 18,
       "source": "ESPN, Nov 9: Minshew likely torn UCL in his throwing arm; rookie Carson Beck expected to start"
+    },
+    {
+      "team": "MIN",
+      "qb": "K.Cousins",
+      "name": "Kirk Cousins",
+      "through_week": 18,
+      "source": "ESPN / NBC Bay Area, Nov 10: acquired from Las Vegas for a 2027 third-round pick"
+    },
+    {
+      "team": "LV",
+      "qb": "F.Mendoza",
+      "name": "Fernando Mendoza",
+      "through_week": 18,
+      "source": "NBC Bay Area, Nov 10: rookie starts after the Cousins trade"
     }
   ],
   "players_out": [
@@ -85,6 +92,124 @@
       "name": "Rhamondre Stevenson",
       "side": "off",
       "source": "ESPN, Nov 9: knee tendon issue, expected to miss time"
+    },
+    {
+      "team": "IND",
+      "name": "Keenan Allen",
+      "side": "off",
+      "source": "Traded to SF (Nov 10)"
+    },
+    {
+      "team": "TEN",
+      "name": "Amani Hooker",
+      "side": "def",
+      "source": "Traded to BUF (Nov 10)"
+    },
+    {
+      "team": "PHI",
+      "name": "Jordan Davis",
+      "side": "def",
+      "source": "Traded to JAX (Nov 9)"
+    },
+    {
+      "team": "ATL",
+      "name": "Jessie Bates III",
+      "side": "def",
+      "source": "Traded to JAX (Nov 9)"
+    },
+    {
+      "team": "NO",
+      "name": "Davon Godchaux",
+      "side": "def",
+      "source": "Traded to JAX (Nov 9)"
+    },
+    {
+      "team": "NYJ",
+      "name": "Andre Cisco",
+      "side": "def",
+      "source": "Traded to DET (Nov 9)"
+    },
+    {
+      "team": "MIA",
+      "name": "Zach Sieler",
+      "side": "def",
+      "source": "PFT, Nov 10: season-ending biceps surgery"
+    },
+    {
+      "team": "IND",
+      "name": "Jalen Travis",
+      "side": "off",
+      "source": "DK Network, Nov 10: out 2-4 weeks (knee)"
+    },
+    {
+      "team": "GB",
+      "name": "Sean Rhyan",
+      "side": "off",
+      "source": "DK Network, Nov 10: high ankle sprain, out at least a month"
+    },
+    {
+      "team": "NO",
+      "name": "Erik McCoy",
+      "side": "off",
+      "source": "DK Network, Nov 10: biceps, out for a little bit"
+    }
+  ],
+  "traded": [
+    {
+      "name": "Keenan Allen",
+      "pos": "WR",
+      "from": "IND",
+      "to": "SF",
+      "date": "Nov 10",
+      "source": "ESPN: 49ers get Allen for a 2027 sixth-round pick"
+    },
+    {
+      "name": "Kirk Cousins",
+      "pos": "QB",
+      "from": "LV",
+      "to": "MIN",
+      "date": "Nov 10",
+      "source": "Vikings send a 2027 third-round pick"
+    },
+    {
+      "name": "Amani Hooker",
+      "pos": "S",
+      "from": "TEN",
+      "to": "BUF",
+      "date": "Nov 10",
+      "source": "ESPN"
+    },
+    {
+      "name": "Jordan Davis",
+      "pos": "DT",
+      "from": "PHI",
+      "to": "JAX",
+      "date": "Nov 9",
+      "source": "ESPN"
+    },
+    {
+      "name": "Jessie Bates III",
+      "pos": "S",
+      "from": "ATL",
+      "to": "JAX",
+      "date": "Nov 9",
+      "source": "ESPN"
+    },
+    {
+      "name": "Davon Godchaux",
+      "pos": "DT",
+      "from": "NO",
+      "to": "JAX",
+      "date": "Nov 9",
+      "source": "NFL.com"
+    },
+    {
+      "name": "Andre Cisco",
+      "pos": "S",
+      "from": "NYJ",
+      "to": "DET",
+      "date": "Nov 9",
+      "source": "NFL.com"
     }
   ]
 }

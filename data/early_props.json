@@ -1,6 +1,6 @@
 {
  "week": 10,
- "asof": "Tue, Nov 10, 11:02 AM ET",
+ "asof": "Tue, Nov 10, 3:16 PM ET",
  "games": [
   {
    "id": "2026_10_WAS_NYG",
@@ -592,13 +592,13 @@
      "games": 7
     },
     {
-     "player": "Kirk Cousins",
-     "team": "LV",
-     "pos": "QB",
-     "stat": "pass_yds",
-     "line": 248.5,
-     "proj": 228.0,
-     "p_over": 0.384,
+     "player": "Jaxon Smith-Njigba",
+     "team": "SEA",
+     "pos": "WR",
+     "stat": "rec_yds",
+     "line": 122.5,
+     "proj": 107.4,
+     "p_over": 0.405,
      "side": "Under",
      "games": 9
     }

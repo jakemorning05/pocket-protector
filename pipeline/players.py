@@ -13,6 +13,10 @@ W[num] = W[num].fillna(0)
 W['grp'] = W.position.map(lambda p: p if p in ('QB', 'RB', 'WR', 'TE') else 'OTHER')
 W = W[W.grp != 'OTHER']
 DECAY = 0.9
+# players traded since their last game count for their new team (QBs are handled by the starting-QB overrides)
+for _t in json.load(open(f'{D}/overrides.json')).get('traded', []):
+    if _t.get('pos') in ('WR', 'TE', 'RB'):
+        W.loc[(W.player_display_name == _t['name']) & (W.team == _t['from']), 'team'] = _t['to']
 
 
 def wavg(vals):
