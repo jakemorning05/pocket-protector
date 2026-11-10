@@ -1,5 +1,5 @@
 {
- "asof": "Mon, Nov 9, 11:55 PM ET",
+ "asof": "Tue, Nov 10, 11:10 AM ET",
  "outs": [
   "Josh Jacobs",
   "Puka Nacua",
@@ -44,8 +44,8 @@
   {
    "team": "MIN",
    "tag": "QB",
-   "text": "Carson Wentz went 8 of 25 for 81 yards with two interceptions in the 23-6 loss and was benched late for Max Brosmer. Kyler Murray (hamstring) has no timeline. The model keeps Wentz as the starter until Minnesota says otherwise.",
-   "src": "ESPN, Nov 9",
+   "text": "Carson Wentz went 8 of 25 for 81 yards with two interceptions in Monday's 23-6 loss and was benched late for Max Brosmer. Kyler Murray (hamstring) has no timeline, and the Vikings are exploring the QB trade market before today's 4 p.m. ET deadline. The model keeps Wentz as the starter until Minnesota says otherwise.",
+   "src": "ESPN and Yahoo Sports, Nov 9\u201310",
    "url": "https://www.espn.com/nfl/story/_/id/50435734/bills-vikings-josh-allen-carson-wentz-mnf"
   },
   {
@@ -100,9 +100,9 @@
   {
    "team": "SEA",
    "tag": "QB",
-   "text": "Drew Lock hurt his oblique in the Week 9 win and already has elbow tendonitis. Sam Darnold (hamstring) is being monitored, and Jalen Milroe is next if neither can go. The model still assumes Lock.",
-   "src": "Yahoo Sports NFL live updates, Nov 9",
-   "url": "https://sports.yahoo.com/nfl/live/nfl-news-injury-updates-trade-deadline-rumors-131950109.html"
+   "text": "Mike Macdonald ruled Sam Darnold out for Sunday at Las Vegas; he's still recovering from quad and rib injuries and could return after the Week 11 bye. Drew Lock starts again, playing through an oblique injury. If Lock can't go, rookie Jalen Milroe is next.",
+   "src": "The Sunday Guardian, Nov 10",
+   "url": "https://sundayguardianlive.com/sports/nfl-injury-update-sam-darnold-ruled-out-of-seahawks-vs-las-vegas-raiders-week-10-clash-drew-lock-to-start-320272/"
   },
   {
    "team": "KC",
@@ -135,9 +135,9 @@
   {
    "team": "IND",
    "tag": "Trade",
-   "text": "Jonathan Taylor is still a Colt. The belief around the league is that Indianapolis will take the best offer before Tuesday's 4 p.m. ET deadline.",
-   "src": "Bleacher Report trade deadline live blog, Nov 9",
-   "url": "https://bleacherreport.com/liveblogs/25531093-2026-nfl-trade-deadline-live-rumors-updates-and-analysis-november-9"
+   "text": "Jonathan Taylor is still a Colt as of Tuesday morning. Indianapolis has been in active talks with several teams, and the deadline is 4 p.m. ET today.",
+   "src": "ESPN, Nov 10",
+   "url": "https://www.espn.com/nfl/story/_/id/50323095/sources-colts-willing-trade-star-rb-jonathan-taylor"
   }
  ],
  "injuries": [
