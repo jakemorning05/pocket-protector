@@ -1,20 +1,23 @@
 {
- "asof": "Mon, Nov 9, 11:45 PM ET",
+ "asof": "Mon, Nov 9, 11:55 PM ET",
  "outs": [
   "Josh Jacobs",
   "Puka Nacua",
   "Jake Ferguson",
-  "Tyler Goodson"
+  "Tyler Goodson",
+  "Michael Wilson",
+  "Rhamondre Stevenson"
  ],
  "flags": {
   "Patrick Mahomes": "Elbow soreness, day-to-day; MRI showed no major damage",
-  "Rhamondre Stevenson": "Knee imaging Monday, results not announced",
   "Drew Lock": "Oblique injury plus elbow tendonitis; Week 10 starter unclear",
   "Jonathan Taylor": "Trade candidate; Colts expected to take the best offer before Tuesday 4 p.m. ET",
   "J.J. McCarthy": "Hip pointer, expected to play Thursday",
   "Cam Skattebo": "Hamstring, expected back Thursday",
   "Justin Herbert": "Possible fracture in his left middle finger; testing Monday. He expects to play next Monday at Baltimore",
-  "A.J. Brown": "Missed two games; Patriots plan for him to travel to Germany, no decision yet"
+  "A.J. Brown": "Missed two games; Patriots plan for him to travel to Germany, no decision yet",
+  "Carson Wentz": "Went 8 of 25 for 81 yards and 2 interceptions Monday and was benched late for Max Brosmer; Kyler Murray (hamstring) has no return date",
+  "Carson Beck": "Rookie expected to start Sunday vs. the Rams after Gardner Minshew\u2019s throwing-arm UCL injury"
  },
  "items": [
   {
@@ -23,6 +26,34 @@
    "text": "Bills 23, Vikings 6. Buffalo controlled the ball for 42 minutes and forced three Minnesota turnovers; Carson Wentz and the Vikings managed 178 yards and two field goals. The model's locked pick, Buffalo at 56%, won. Its spread side (Vikings +3.5) and total (Over 45.5) both lost.",
    "src": "Final score and team stats, Nov 9",
    "url": "https://www.espn.com/nfl/game/_/gameId/401873051/bills-vikings"
+  },
+  {
+   "team": "ARI",
+   "tag": "Injury",
+   "text": "WR Michael Wilson is out for the season with a fractured vertebra, suffered on Arizona's fourth offensive play against Seattle. He had 51 catches for 546 yards and was on pace for a second straight 1,000-yard season. He's off the fantasy rankings, and his snaps count against Arizona.",
+   "src": "ESPN, Nov 9",
+   "url": "https://www.espn.com/nfl/story/_/id/50435608/cardinals-wr-michael-wilson-neck-miss-rest-season"
+  },
+  {
+   "team": "ARI",
+   "tag": "QB",
+   "text": "Gardner Minshew likely tore the UCL in his throwing arm and may need season-ending surgery. Rookie Carson Beck is expected to start Sunday against the Rams. With no NFL passing history, the model rates him as a typical new starter, which lowers Arizona's chances.",
+   "src": "ESPN, Nov 9",
+   "url": "https://www.espn.com/nfl/story/_/id/50435608/cardinals-wr-michael-wilson-neck-miss-rest-season"
+  },
+  {
+   "team": "MIN",
+   "tag": "QB",
+   "text": "Carson Wentz went 8 of 25 for 81 yards with two interceptions in the 23-6 loss and was benched late for Max Brosmer. Kyler Murray (hamstring) has no timeline. The model keeps Wentz as the starter until Minnesota says otherwise.",
+   "src": "ESPN, Nov 9",
+   "url": "https://www.espn.com/nfl/story/_/id/50435734/bills-vikings-josh-allen-carson-wentz-mnf"
+  },
+  {
+   "team": "NE",
+   "tag": "Injury",
+   "text": "Rhamondre Stevenson is expected to miss time with a knee tendon issue. He's off the fantasy rankings for Week 10.",
+   "src": "ESPN, Nov 9",
+   "url": "https://www.espn.com/nfl/story/_/id/50435734/bills-vikings-josh-allen-carson-wentz-mnf"
   },
   {
    "team": "LA",
@@ -58,13 +89,6 @@
    "text": "Detroit acquired S Andre Cisco from the Jets for a 2028 sixth-round pick.",
    "src": "Detroit News, Nov 9",
    "url": "https://detroitnews.com/story/sports/nfl/lions/2026/11/09/detroit-lions-trade-andre-cisco-stats-new-york-jets-safety/92693765007"
-  },
-  {
-   "team": "MIN",
-   "tag": "QB",
-   "text": "Kyler Murray (hamstring) is out tonight and week-to-week. Carson Wentz starts against Buffalo.",
-   "src": "Vikings.com",
-   "url": "https://www.vikings.com/news/quarterback-carson-wentz-monday-night-bills"
   },
   {
    "team": "CLE",
@@ -104,7 +128,7 @@
   {
    "team": "NE",
    "tag": "Injury",
-   "text": "Rhamondre Stevenson had knee imaging Monday; no results yet. A.J. Brown has missed two games, and Mike Vrabel said the plan is for him to travel to Germany for Sunday's game against Detroit, with no final decision. Lineman Ben Brown won't make the trip.",
+   "text": "A.J. Brown has missed two games; the Patriots plan for him to travel to Germany for Sunday's game against Detroit, with no final decision. Lineman Ben Brown won't make the trip.",
    "src": "NFL.com news roundup, Nov 9",
    "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-nov-9"
   },

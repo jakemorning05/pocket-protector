@@ -28,6 +28,13 @@
       "name": "Deshaun Watson",
       "through_week": 18,
       "source": "NFL.com, Nov 9: cleared concussion protocol"
+    },
+    {
+      "team": "ARI",
+      "qb": "C.Beck",
+      "name": "Carson Beck",
+      "through_week": 18,
+      "source": "ESPN, Nov 9: Minshew likely torn UCL in his throwing arm; rookie Carson Beck expected to start"
     }
   ],
   "players_out": [
@@ -66,6 +73,18 @@
       "name": "Ben Brown",
       "side": "off",
       "source": "NFL.com roundup, Nov 9: not traveling to Germany"
+    },
+    {
+      "team": "ARI",
+      "name": "Michael Wilson",
+      "side": "off",
+      "source": "ESPN, Nov 9: fractured vertebra, out for the season"
+    },
+    {
+      "team": "NE",
+      "name": "Rhamondre Stevenson",
+      "side": "off",
+      "source": "ESPN, Nov 9: knee tendon issue, expected to miss time"
     }
   ]
 }
