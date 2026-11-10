@@ -1,5 +1,5 @@
 // ---------- Fantasy: buy low / sell high and the trade calculator ----------
-const fanBase = () => { const b = {}; for (const r of FAN.games) if (!b[r.id] || r.wk === FAN.cw + 1) b[r.id] = r; return b; };
+const fanBase = () => { const b = {}; for (const r of FAN.games) if (!b[r.id] || r.wk === FAN_WK) b[r.id] = r; return b; };
 const tdPts = (r) => 4 * (r.pass_td || 0) + 6 * ((r.rush_td || 0) + (r.rec_td || 0));
 // compare what a player has scored per game with what the model projects per game the rest of the way
 function marketRows() {

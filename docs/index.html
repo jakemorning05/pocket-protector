@@ -7101,14 +7101,17 @@ function renderShop() {
 }
 
 // ---------- Fantasy ----------
-let fmt = prefs.get('fmt', 'ppr'), fanWeek = FAN.cw + 1, fanPos = 'ALL', fanView = 'rank', fanGame = null;
+// the fantasy week: FAN.cw is the first week with a game left; once most of it is played (only Monday night left), the next week leads
+const cwGames = games.filter((g) => g.wk === FAN.cw), FAN_LATE = cwGames.filter((g) => g.done).length * 2 > cwGames.length;
+const FAN_WK = FAN_LATE ? FAN.cw + 1 : FAN.cw;
+let fmt = prefs.get('fmt', 'ppr'), fanWeek = FAN_WK, fanPos = 'ALL', fanView = 'rank', fanGame = null;
 const REC_PTS = { ppr: 1, half: 0.5, std: 0 };
 const fp = (r) => (r.pass_yds || 0) / 25 + 4 * (r.pass_td || 0) - 2 * (r.int || 0) + (r.rush_yds || 0) / 10 + 6 * (r.rush_td || 0) + (r.rec_yds || 0) / 10 + 6 * (r.rec_td || 0) + REC_PTS[fmt] * (r.rec || 0);
 const STARTERS = { QB: 12, RB: 24, WR: 30, TE: 12 };
 const statLine = (r) => r.pos === 'QB' ? Math.round(r.pass_yds) + ' pass yds, ' + (r.pass_td || 0).toFixed(1) + ' TD, ' + Math.round(r.rush_yds) + ' rush'
   : (r.rush_yds >= 5 ? Math.round(r.rush_yds) + ' rush, ' : '') + (r.rec || 0).toFixed(1) + ' rec, ' + Math.round(r.rec_yds || 0) + ' yds';
 // ---------- Fantasy: buy low / sell high and the trade calculator ----------
-const fanBase = () => { const b = {}; for (const r of FAN.games) if (!b[r.id] || r.wk === FAN.cw + 1) b[r.id] = r; return b; };
+const fanBase = () => { const b = {}; for (const r of FAN.games) if (!b[r.id] || r.wk === FAN_WK) b[r.id] = r; return b; };
 const tdPts = (r) => 4 * (r.pass_td || 0) + 6 * ((r.rush_td || 0) + (r.rec_td || 0));
 // compare what a player has scored per game with what the model projects per game the rest of the way
 function marketRows() {
@@ -7204,14 +7207,14 @@ function renderFantasy() {
   if (fanView === 'rank') {
     const rows = FAN.games.filter((r) => r.wk === fanWeek && (fanPos === 'ALL' || r.pos === fanPos)).map((r) => ({ ...r, pts: fp(r) })).sort((a, b) => b.pts - a.pts);
     const posRank = {}; const ranked = rows.map((r) => { posRank[r.pos] = (posRank[r.pos] || 0) + 1; return { ...r, pr: posRank[r.pos] }; });
-    body = '<div class="controls">' + seg('fwk', String(fanWeek), [[String(FAN.cw + 1), 'Week ' + (FAN.cw + 1)], [String(FAN.cw), 'Wk ' + FAN.cw + ' (MNF)']]) + seg('fpos', fanPos, [['ALL', 'All'], ['QB', 'QB'], ['RB', 'RB'], ['WR', 'WR'], ['TE', 'TE']]) + '</div>' +
+    body = '<div class="controls">' + seg('fwk', String(fanWeek), FAN_LATE ? [[String(FAN.cw + 1), 'Week ' + (FAN.cw + 1)], [String(FAN.cw), 'Wk ' + FAN.cw + ' (MNF)']] : [[String(FAN.cw), 'Week ' + FAN.cw], [String(FAN.cw + 1), 'Week ' + (FAN.cw + 1)]]) + seg('fpos', fanPos, [['ALL', 'All'], ['QB', 'QB'], ['RB', 'RB'], ['WR', 'WR'], ['TE', 'TE']]) + '</div>' +
       '<div class="panel"><div class="tablewrap"><table class="ptable"><thead><tr><th>#</th><th class="l">Player</th><th class="l">Matchup</th><th>Pts</th><th class="l hide-sm">Projection</th></tr></thead><tbody>' +
       ranked.map((r, i) => '<tr' + (r.pr === STARTERS[r.pos] && fanPos !== 'ALL' ? ' style="border-bottom:2px solid var(--accent)"' : '') + '><td class="muted">' + (fanPos === 'ALL' ? r.pos + r.pr : i + 1) + '</td><td class="l"><span class="pname">' + esc(r.name) + '</span>' +
         (r.flag ? ' <span class="qbchip" title="' + esc(r.flag) + '" data-tip="' + esc(r.flag) + '">News</span>' : r.q ? ' <span class="qbchip">Q</span>' : '') + '</td><td class="l">' + r.team + (games.find((g) => g.id === r.game).h === r.team ? ' vs ' : ' @ ') + r.opp + '</td>' +
         '<td><b>' + r.pts.toFixed(1) + '</b></td><td class="l hide-sm muted small">' + statLine(r) + '</td></tr>').join('') +
       '</tbody></table></div><p class="muted small" style="margin-top:8px">' + (fanPos !== 'ALL' ? 'The green line marks the usual starter cutoff in a 12-team league. ' : '') + '“News” marks players with injury or trade news since the last report (tap it). “Q” means questionable on the last report.</p></div>';
   } else if (fanView === 'ros') {
-    const base = {}; for (const r of FAN.games) if (!base[r.id] || r.wk === FAN.cw + 1) base[r.id] = r;
+    const base = {}; for (const r of FAN.games) if (!base[r.id] || r.wk === FAN_WK) base[r.id] = r;
     const rows = Object.entries(FAN.ros).filter(([id]) => base[id] && (fanPos === 'ALL' || base[id].pos === fanPos)).map(([id, t]) => ({ ...base[id], tot: fp(t), n: t.n })).sort((a, b) => b.tot - a.tot).slice(0, 60);
     body = '<div class="controls">' + seg('fpos', fanPos, [['ALL', 'All'], ['QB', 'QB'], ['RB', 'RB'], ['WR', 'WR'], ['TE', 'TE']]) + '</div>' +
       '<div class="panel"><div class="tablewrap"><table class="ptable"><thead><tr><th>#</th><th class="l">Player</th><th>Games left</th><th>Total pts</th><th>Per game</th></tr></thead><tbody>' +
