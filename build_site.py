@@ -14,6 +14,8 @@ import gamepages
 
 SITE_URL = 'https://jakemorning05.github.io/pocket-protector/'  # change this if you move to a custom domain
 TITLE = 'Pocket Protector'
+# visit counter for the public site only (the Claude preview blocks outside scripts anyway); cookie-free
+ANALYTICS = '''<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e3ee1336a0f94ec090c00d5f60d35287"}'></script><!-- End Cloudflare Web Analytics -->'''
 DESC = 'NFL game predictions, pick’em and survivor pool tools, and fantasy projections from a statistical model.'
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
          '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Rubik:wght@400;500;600;700;800&display=swap">\n')
@@ -59,13 +61,13 @@ def main():
            '<meta name="twitter:card" content="summary">\n'
            f'<link rel="icon" href="{FAVICON}">\n' + FONTS +
            '<style>[hidden]{display:none!important} img{max-width:100%} :root{padding-top:env(safe-area-inset-top,0px)}</style>\n'
-           + f'<link rel="canonical" href="{SITE_URL}">\n' + style + '\n</head>\n<body>\n' + page.replace("'__BASE__'", "''") + '\n</body>\n</html>\n')
+           + f'<link rel="canonical" href="{SITE_URL}">\n' + style + '\n</head>\n<body>\n' + page.replace("'__BASE__'", "''") + '\n' + ANALYTICS + '\n</body>\n</html>\n')
     os.makedirs(P('docs'), exist_ok=True)
     open(P('docs', 'index.html'), 'w', encoding='utf-8').write(doc)
     open(P('docs', '.nojekyll'), 'w').write('')
     # all inline scripts, for a syntax check with `node --check`
     open(P('build_check.js'), 'w', encoding='utf-8').write('\n;\n'.join(re.findall(r'<script>(.*?)</script>', page, re.S)))
-    n = gamepages.build(SITE_URL)
+    n = gamepages.build(SITE_URL, ANALYTICS)
     print(f'{n} game pages · docs/index.html {len(doc):,} bytes · pocket-protector.html {len(frag):,} bytes')
 
 

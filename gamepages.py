@@ -76,7 +76,7 @@ def preview(g, done):
     return out
 
 
-def page(g, lock, fan, news, site_url):
+def page(g, lock, fan, news, site_url, analytics=''):
     done = g['hs'] is not None
     if lock and (done or datetime.datetime.fromisoformat(lock['kick']) <= datetime.datetime.now(ET)):
         g = {**g, 'p': lock['p'], 'm': lock['m'], 'tot': lock['tot'], 'c': lock.get('c') or g['c']}
@@ -155,6 +155,7 @@ def page(g, lock, fan, news, site_url):
 <p class="notice">{note} Predictions are estimates, not betting advice. <a href="../#about">About the model</a> · <a href="../#week">See every game this week</a></p>
 <footer class="foot"><span>Pocket Protector · NFL picks, pools and fantasy by the numbers</span><span>Data: nflverse · Not affiliated with the NFL</span></footer>
 </main>
+{analytics}
 </body>
 </html>
 '''
@@ -178,7 +179,7 @@ body { padding-bottom: 40px; }
 '''
 
 
-def build(site_url):
+def build(site_url, analytics=''):
     site = json.load(open(P('data', 'site_data.json'))); news = json.load(open(P('data', 'news.json')))
     fan = json.load(open(P('data', 'fantasy.json')))['games']
     try:
@@ -190,7 +191,7 @@ def build(site_url):
     open(os.path.join(out, 'site.css'), 'w', encoding='utf-8').write(css + EXTRA_CSS)
     urls = [site_url]
     for g in site['games']:
-        open(os.path.join(out, slug(g) + '.html'), 'w', encoding='utf-8').write(page(g, locks.get(g['id']), fan, news, site_url))
+        open(os.path.join(out, slug(g) + '.html'), 'w', encoding='utf-8').write(page(g, locks.get(g['id']), fan, news, site_url, analytics))
         urls.append(f'{site_url}games/{slug(g)}.html')
     today = datetime.date.today().isoformat()
     open(P('docs', 'sitemap.xml'), 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +

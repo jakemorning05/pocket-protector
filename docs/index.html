@@ -6280,7 +6280,7 @@ function renderAbout() {
   el.innerHTML = '<div><h2>About Pocket Protector</h2><p class="intro">NFL predictions, pool tools and fantasy projections from a statistical model, updated through the week. Free to use.</p></div>' +
     '<div class="panel prose"><h3>How it works</h3><p>Every game gets a predicted margin from team efficiency (EPA per play and its splits), the starting quarterback, special teams, rest, travel and injuries, trained on ' + b.hist.games.toLocaleString() + ' games since 2017. Win chances come from that margin. Every past pick on the site was made before kickoff using only earlier data, and the full record is on the <a href="#model">Model</a> page, losses included.</p></div>' +
     '<div class="panel prose"><h3>Disclaimer</h3><p>Predictions are estimates, not guarantees, and nothing here is betting or financial advice. Over past seasons the model has not beaten point spreads. If you bet, do it only where it’s legal and you’re of age, and only with money you can afford to lose. Problem gambling help: 1-800-GAMBLER.</p><p>Pocket Protector is not affiliated with or endorsed by the NFL or any team. Team names are used only to identify them.</p></div>' +
-    '<div class="panel prose"><h3>Privacy</h3><p>There are no accounts, ads or tracking cookies. Your settings (scoring format, survivor teams you’ve used) are saved only in your own browser. The site host may log visitors’ IP addresses for security.</p></div>' +
+    '<div class="panel prose"><h3>Privacy</h3><p>There are no accounts, ads or tracking cookies. The site counts visits with Cloudflare Web Analytics, which doesn’t use cookies or follow you to other sites. Your settings (scoring format, survivor teams you’ve used, trades you’re testing) are saved only in your own browser. The site host may log visitors’ IP addresses for security.</p></div>' +
     '<div class="panel prose"><h3>Data</h3><p>Play-by-play, schedules, injury reports and snap counts come from <a href="https://github.com/nflverse" target="_blank" rel="noopener">nflverse</a>. Betting lines shown are closing or current market numbers from the same source.</p></div>';
 }
 
@@ -6315,5 +6315,6 @@ setTimeout(() => {
 }, 60);
 </script>
 
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e3ee1336a0f94ec090c00d5f60d35287"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
