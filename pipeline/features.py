@@ -90,7 +90,7 @@ METRICS = {  # name: (lambda in games, regression to mean for next season, hfa p
 
 # Tuned on held-out seasons 2017-2025 (exp2.py): stronger shrinkage, more carryover from last season,
 # no extra recency weighting, and unknown QBs assumed clearly below average.
-PARAMS = {'lam_mult': 1.6, 'rho_mult': 1.3, 'hl': None, 'qb_k': 300.0, 'qb_prior': -0.14}
+PARAMS = {'lam_mult': 1.6, 'rho_mult': 1.3, 'hl': None, 'qb_k': 300.0, 'qb_prior': -0.14, 'qb_draft_prior': True}
 INJ_GROUPS = ['OL', 'SK', 'RB', 'DL', 'LB', 'DB']
 POS_GROUP = {**{p: 'OL' for p in ['T', 'G', 'C', 'OT', 'OG', 'OL', 'LT', 'RT', 'LG', 'RG']}, 'WR': 'SK', 'TE': 'SK', 'RB': 'RB', 'FB': 'RB', 'HB': 'RB',
              **{p: 'DL' for p in ['DE', 'DT', 'NT', 'DL', 'EDGE']}, **{p: 'LB' for p in ['LB', 'ILB', 'OLB', 'MLB']}, **{p: 'DB' for p in ['CB', 'S', 'FS', 'SS', 'DB']}}
@@ -183,14 +183,46 @@ def build(params=None, out_path=None, write_extras=True):
         qb_hist.setdefault(r_.qb_id, []).append((r_.season, r_.week, r_.db, r_.epa))
     QB_PRIOR, QB_K = P_['qb_prior'], P_['qb_k']
 
+    # ---------- what to expect from a QB before he has much history: depends on where he was drafted ----------
+    # Early-career EPA/dropback by draft bucket, measured walk-forward (only seasons before the one predicted) and
+    # shrunk toward QB_PRIOR. First-round picks have played far better early than late-round or undrafted QBs.
+    DRAFT_BUCKET, NAME2DRAFT = {}, {}
+    if P_.get('qb_draft_prior', False) and os.path.exists(f'{D}/draft_picks.csv'):
+        dp = pd.read_csv(f'{D}/draft_picks.csv')
+        dp = dp[(dp.position == 'QB') & dp.gsis_id.notna()]
+        for r_ in dp.itertuples():
+            DRAFT_BUCKET[r_.gsis_id] = 'r1' if r_.round == 1 else 'r23' if r_.round <= 3 else 'r47'
+            NAME2DRAFT[r_.pfr_player_name] = r_.gsis_id
+    first_season = {k: min(x[0] for x in v) for k, v in qb_hist.items()}
+    early_rows = []  # (season, bucket, db, epa) for each QB's first ~300 career dropbacks, careers starting 2017+
+    for k, v in qb_hist.items():
+        if first_season[k] < 2017:
+            continue
+        cum = 0.0
+        for (ss, ww, db, epa) in sorted(v):
+            if cum >= 300: break
+            early_rows.append((ss, DRAFT_BUCKET.get(k, 'udfa'), db, epa)); cum += db
+    PRIOR_K = P_.get('qb_prior_k', 1500.0)
+    prior_tab = {}
+
+    def draft_prior(qid, s):
+        if not DRAFT_BUCKET:
+            return QB_PRIOR
+        b = DRAFT_BUCKET.get(qid, 'udfa')
+        if (b, s) not in prior_tab:
+            db_ = sum(x[2] for x in early_rows if x[1] == b and x[0] < s); ep_ = sum(x[3] for x in early_rows if x[1] == b and x[0] < s)
+            prior_tab[(b, s)] = (ep_ + PRIOR_K * QB_PRIOR) / (db_ + PRIOR_K)
+        return prior_tab[(b, s)]
+
     def qb_quality(qid, s, w):
-        if not isinstance(qid, str) or qid not in qb_hist: return QB_PRIOR, 0
+        prior = draft_prior(qid, s) if isinstance(qid, str) else QB_PRIOR
+        if not isinstance(qid, str) or qid not in qb_hist: return prior, 0
         num = den = 0.0
         for (ss, ww, db, epa) in qb_hist[qid]:
             if ss > s or (ss == s and ww >= w): continue
             wt = 1.0 if ss == s else 0.65 if ss == s - 1 else 0.35 if ss == s - 2 else 0.15
             num += wt * epa; den += wt * db
-        return (num + QB_K * QB_PRIOR) / (den + QB_K), den
+        return (num + QB_K * prior) / (den + QB_K), den
 
     team_qb = qb.groupby(['season', 'week', 'team']).apply(lambda x: list(zip(x.qb_id, x.db)), include_groups=False).to_dict()
 
@@ -243,7 +275,7 @@ def build(params=None, out_path=None, write_extras=True):
     name2id = qb.sort_values('season').groupby('name').qb_id.last().to_dict()
     for t, (short, full, _) in OVERRIDES.items():
         if short not in name2id:
-            print(f'note overrides.json: no play-by-play history for {short} ({t}); rated as a new starter (league prior)')
+            print(f'note overrides.json: no play-by-play history for {short} ({t}); rated from his draft slot')
     actual = {}
     for g in sch[(sch.season == 2026) & sch.played].sort_values('gameday').itertuples():
         actual[g.home_team] = (g.home_qb_id, g.home_qb_name); actual[g.away_team] = (g.away_qb_id, g.away_qb_name)
@@ -252,7 +284,8 @@ def build(params=None, out_path=None, write_extras=True):
     def starter(team, week):
         o = OVERRIDES.get(team)
         if o and week <= o[2]:
-            return (name2id.get(o[0], 'new:' + o[0]), o[1])  # a QB with no NFL dropbacks gets the new-starter prior
+            # a QB with no NFL dropbacks is found in the draft list so he gets his draft-slot rating
+            return (name2id.get(o[0]) or NAME2DRAFT.get(o[1]) or 'new:' + o[0], o[1])
         return actual[team]
     latest = {t: starter(t, cw_now) for t in TEAMS}
     active_overrides = {t: o[1] for t, o in OVERRIDES.items() if cw_now <= o[2]}
