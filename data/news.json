@@ -24,6 +24,13 @@
  },
  "items": [
   {
+   "team": "MIA",
+   "tag": "Injury",
+   "text": "Dolphins put QB Malik Willis on injured reserve with a groin injury, so he misses at least Weeks 10 to 13. Kyle McCord, a 2025 sixth-round pick, is in line for his first NFL start Sunday at Indianapolis. The model now rates Miami with McCord through Week 13.",
+   "src": "NFL.com, Nov 10",
+   "url": "https://www.nfl.com/news/dolphins-place-qb-malik-willis-groin-on-injured-reserve-kyle-mccord-in-line-for-first-start"
+  },
+  {
    "team": "BUF",
    "tag": "Result",
    "text": "Bills 23, Vikings 6. Buffalo controlled the ball for 42 minutes and forced three Minnesota turnovers; Carson Wentz and the Vikings managed 178 yards and two field goals. The model's locked pick, Buffalo at 56%, won. Its spread side (Vikings +3.5) and total (Over 45.5) both lost.",
