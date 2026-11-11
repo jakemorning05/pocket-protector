@@ -12,7 +12,8 @@ function marketRows() {
     const tdGap = tdPts(s) / s.g - tdPts(ros) / ros.n, use = b.pos !== 'QB' && s.before != null ? s.recent - s.before : 0;
     const diff = proj - act;
     let why;
-    if (diff > 0) why = use >= 3 ? 'Workload is growing: ' + s.before.toFixed(0) + ' touches a game before, ' + s.recent.toFixed(0) + ' in the last two'
+    if (b.qbn && Math.abs(b.qb_adj) >= 0.04 && Math.sign(b.qb_adj) === Math.sign(diff)) why = (diff > 0 ? 'Upgrade' : 'Downgrade') + ' at quarterback: ' + b.qbn + ' starting';
+    else if (diff > 0) why = use >= 3 ? 'Workload is growing: ' + s.before.toFixed(0) + ' touches a game before, ' + s.recent.toFixed(0) + ' in the last two'
       : tdGap <= -1.2 ? 'Touchdowns haven’t matched his workload yet' : 'Yardage has run below his usual efficiency';
     else why = use <= -3 ? 'Workload is shrinking: ' + s.before.toFixed(0) + ' touches a game before, ' + s.recent.toFixed(0) + ' in the last two'
       : tdGap >= 1.2 ? 'Scoring touchdowns at a rate that rarely lasts' : 'Yardage has run above his usual efficiency';

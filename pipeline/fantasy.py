@@ -18,18 +18,26 @@ last_played = int(W.week.max())
 H, lg, opp = P.build_context(last_played + 1)
 unplayed = [g for g in site['games'] if g['hs'] is None]
 cw = min(g['wk'] for g in unplayed)
+# the week the rest-of-season totals start from: the coming week, unless most of it is already played (only Monday night left)
+cw_games = [g for g in site['games'] if g['wk'] == cw]
+ros_from = cw + 1 if 2 * sum(g['hs'] is not None for g in cw_games) > len(cw_games) else cw
+OUT_NAMES = set(NEWS['outs']) | {o if isinstance(o, str) else o.get('name') for o in json.load(open(f'{D}/overrides.json')).get('players_out', [])}
 
 
 def calib(stat, v):
     k = cal[stat]; return max(0.0, k['c'] + k['d'] * v) if v else 0.0
 
 
-def proj_line(pid, team, opp_team):
-    r = P.project(pid, team, opp_team, H, lg, opp)
+def proj_line(pid, team, opp_team, week):
+    qn = P.starter_q(team, week)
+    if isinstance(pid, str) and pid.startswith('new:'):
+        r = P.project_new_qb(pid[4:], team, opp_team, H, lg, opp, qn) if qn is not None else None
+    else:
+        r = P.project(pid, team, opp_team, H, lg, opp, q_new=qn)
     if r is None: return None
     out = {'id': pid, 'name': r['name'], 'pos': r['pos'], 'team': team, 'opp': opp_team,
            'rush_yds': calib('rush_yds', r.get('rush_yds', 0)), 'rush_td': r.get('rush_td', 0), 'carries': r.get('carries', 0),
-           'td_p': r['td_p']}
+           'td_p': r['td_p'], 'qb_adj': r.get('qb_adj', 0)}
     if r['pos'] == 'QB':
         out.update({'pass_yds': calib('pass_yds', r['pass_yds']), 'pass_td': r['pass_td'], 'int': r['int'], 'att': r['att']})
     else:
@@ -43,11 +51,11 @@ def pool(team):
     pl = recent.groupby('player_id').agg(grp=('grp', 'first'), car=('carries', 'mean'), tg=('targets', 'mean')).reset_index()
     pl = pl[~pl.player_id.isin(out_ids)]
     names = H.groupby('player_id').player_display_name.last()
-    pl = pl[~pl.player_id.map(names).isin(NEWS['outs'])]
+    pl = pl[~pl.player_id.map(names).isin(OUT_NAMES)]
     ids = []
     qname = cur['qb'][team]['qb']
     qrow = H[(H.grp == 'QB') & (H.player_display_name == qname)]
-    if len(qrow): ids.append(qrow.player_id.iloc[0])
+    ids.append(qrow.player_id.iloc[0] if len(qrow) else 'new:' + qname)  # a starter with no passes yet is projected from his rating
     ids += pl[pl.grp == 'RB'].sort_values('car', ascending=False).player_id.head(3).tolist()
     ids += pl[pl.grp.isin(['WR', 'TE'])].sort_values('tg', ascending=False).player_id.head(5).tolist()
     return ids
@@ -58,20 +66,24 @@ for g in unplayed:
     if g['wk'] > cw + 1: continue
     for team, o in ((g['a'], g['h']), (g['h'], g['a'])):
         for pid in pool(team):
-            r = proj_line(pid, team, o)
+            r = proj_line(pid, team, o, g['wk'])
             if r and (r['pos'] == 'QB' or r['carries'] >= 2 or r.get('targets', 0) >= 2):
                 r['game'] = g['id']; r['wk'] = g['wk']; r['q'] = pid in q_ids; r['flag'] = NEWS['flags'].get(r['name'])
+                if abs(r['qb_adj']) >= 0.04 and r['pos'] != 'QB':
+                    r['qbn'] = cur['qb'][team]['qb'] if g['wk'] <= P.QB_UNTIL.get(team, 99) else None
                 games.append(r)
 
-# rest of season: every remaining game from next week on, for players in the next-week pool
+# rest of season: every remaining game from ros_from on, for players in the coming-week pool; each game uses that week's expected starter
 ros = {}
-for r in [x for x in games if x['wk'] == cw + 1] + [x for x in games if x['wk'] == cw]:
+for r in [x for x in games if x['wk'] == ros_from] + [x for x in games if x['wk'] != ros_from]:
     if r['id'] in ros: continue
-    rem = [g for g in unplayed if g['wk'] >= cw + 1 and r['team'] in (g['a'], g['h'])]
+    rem = [g for g in unplayed if g['wk'] >= ros_from and r['team'] in (g['a'], g['h'])]
+    if r['pos'] == 'QB' and r['team'] in P.QB_UNTIL:  # a fill-in starter only counts through his listed week
+        rem = [g for g in rem if g['wk'] <= P.QB_UNTIL[r['team']]]
     tot = {}
     for g in rem:
         o = g['h'] if g['a'] == r['team'] else g['a']
-        p = proj_line(r['id'], r['team'], o)
+        p = proj_line(r['id'], r['team'], o, g['wk'])
         if not p: continue
         for k in ('pass_yds', 'pass_td', 'int', 'rush_yds', 'rush_td', 'rec', 'rec_yds', 'rec_td'):
             tot[k] = tot.get(k, 0) + p.get(k, 0)
@@ -120,6 +132,6 @@ json.dump({'games': games, 'ros': ros, 'season': season, 'risers': risers, 'cuff
 print(len(games), 'player-games;', len(ros), 'ROS;', len(risers), 'risers;', len(cuffs), 'cuffs')
 ppr = lambda r: r.get('pass_yds', 0) / 25 + 4 * r.get('pass_td', 0) - 2 * r.get('int', 0) + r.get('rush_yds', 0) / 10 + 6 * r.get('rush_td', 0) + r.get('rec_yds', 0) / 10 + 6 * r.get('rec_td', 0) + r.get('rec', 0)
 for pos in ['QB', 'RB', 'WR', 'TE']:
-    top = sorted([r for r in games if r['wk'] == cw + 1 and r['pos'] == pos], key=lambda r: -ppr(r))[:5]
+    top = sorted([r for r in games if r['wk'] == ros_from and r['pos'] == pos], key=lambda r: -ppr(r))[:5]
     print(pos, ', '.join(f"{r['name']} {ppr(r):.1f}" for r in top))
 print('risers:', ', '.join(f"{r['name']} {r['before']}->{r['recent']}" for r in risers[:6]))

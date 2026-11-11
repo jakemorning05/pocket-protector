@@ -49,6 +49,13 @@
       "name": "Kyle McCord",
       "through_week": 13,
       "source": "NFL.com, Nov 10: Willis (groin) to IR, out at least Weeks 10-13; McCord in line for first start"
+    },
+    {
+      "team": "PHI",
+      "qb": "J.Milton",
+      "name": "Joe Milton III",
+      "through_week": 18,
+      "source": "ESPN / NFL Network: Milton replaced Tanner McKee as the starter in Week 9; Jalen Hurts (blood clots) expected to miss the rest of the season"
     }
   ],
   "players_out": [
@@ -159,6 +166,24 @@
       "name": "Erik McCoy",
       "side": "off",
       "source": "DK Network, Nov 10: biceps, out for a little bit"
+    },
+    {
+      "team": "WAS",
+      "name": "Lucas Patrick",
+      "side": "off",
+      "source": "NFL.com roundup, Nov 10: concussion protocol; Nick Allegretti starts at center Thursday"
+    },
+    {
+      "team": "SF",
+      "name": "Gracen Halton",
+      "side": "def",
+      "source": "DK Network, Nov 10: out for the season"
+    },
+    {
+      "team": "LAC",
+      "name": "Daiyan Henley",
+      "side": "def",
+      "source": "Traded to DEN (Nov 10)"
     }
   ],
   "traded": [
@@ -217,6 +242,14 @@
       "to": "DET",
       "date": "Nov 9",
       "source": "NFL.com"
+    },
+    {
+      "name": "Daiyan Henley",
+      "pos": "LB",
+      "from": "LAC",
+      "to": "DEN",
+      "date": "Nov 10",
+      "source": "ESPN: Broncos land LB Daiyan Henley from the Chargers"
     }
   ]
 }
