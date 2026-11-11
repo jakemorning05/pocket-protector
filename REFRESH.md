@@ -18,3 +18,11 @@ A session adds the judgment calls:
 6. Optional preview in the Claude app: publish /home/claude/nfl/pocket-protector.html with the Artifact tool, passing
    url https://claude.ai/artifact/Nf1FiY95xTU88SXWKDuMeG (without url it creates a new artifact).
 7. Send Jacob a short summary: what changed, graded results (record, profit/loss, average CLV), reminder that small samples prove little.
+
+Other work Jacob asks for in these sessions:
+- TikTok slideshows (buy low / sell high, waiver pickups): social/tiktok/README.md, including the TikTok rules that got
+  a post removed (no web address on slides, fantasy-only wording).
+- X posts: betting cards use the model's numbers against real posted lines (never the placeholder early-week lines);
+  any link counts as 23 characters.
+- Starting-QB changes: add the fill-in to qb_starters with a through_week; player projections and the game model both
+  follow it, and the listed starter is assumed back after that week.

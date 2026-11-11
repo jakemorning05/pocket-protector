@@ -9,3 +9,9 @@ pocket-protector.html
 __pycache__/
 old/
 .DS_Store
+social/tiktok/*.json
+social/tiktok/png/
+social/tiktok/part2/
+social/tiktok/waiver/
+social/tiktok/*.html
+social/tiktok/__pycache__/
