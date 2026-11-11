@@ -202,7 +202,7 @@ if __name__ == '__main__':
         pool = recent.groupby('player_id').agg(grp=('grp', 'first'), car=('carries', 'mean'), tg=('targets', 'mean'), att=('attempts', 'mean')).reset_index()
         pool = pool[~pool.player_id.isin(out_ids)]
         names = H.groupby('player_id').player_display_name.last()
-        manual_out = set(json.load(open(f'{D}/news.json'))['outs']) | {x if isinstance(x, str) else x.get('name') for x in OVR.get('players_out', [])}
+        manual_out = set(json.load(open(f'{D}/news.json'))['outs']) | {x.get('name') for x in OVR.get('players_out', []) if isinstance(x, dict) and x.get('team') == t}
         pool = pool[~pool.player_id.map(names).isin(manual_out)]
         # starting QB from the model's current starters (handles injuries and trades)
         qname = cur['qb'][t]['qb']

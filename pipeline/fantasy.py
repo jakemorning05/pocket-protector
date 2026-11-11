@@ -21,7 +21,10 @@ cw = min(g['wk'] for g in unplayed)
 # the week the rest-of-season totals start from: the coming week, unless most of it is already played (only Monday night left)
 cw_games = [g for g in site['games'] if g['wk'] == cw]
 ros_from = cw + 1 if 2 * sum(g['hs'] is not None for g in cw_games) > len(cw_games) else cw
-OUT_NAMES = set(NEWS['outs']) | {o if isinstance(o, str) else o.get('name') for o in json.load(open(f'{D}/overrides.json')).get('players_out', [])}
+# manual outs from overrides.json count only for the team they're listed under (a traded player is listed as out for his old team)
+OUT_BY_TEAM = {}
+for _o in json.load(open(f'{D}/overrides.json')).get('players_out', []):
+    if isinstance(_o, dict): OUT_BY_TEAM.setdefault(_o.get('team'), set()).add(_o.get('name'))
 
 
 def calib(stat, v):
@@ -51,7 +54,7 @@ def pool(team):
     pl = recent.groupby('player_id').agg(grp=('grp', 'first'), car=('carries', 'mean'), tg=('targets', 'mean')).reset_index()
     pl = pl[~pl.player_id.isin(out_ids)]
     names = H.groupby('player_id').player_display_name.last()
-    pl = pl[~pl.player_id.map(names).isin(OUT_NAMES)]
+    pl = pl[~pl.player_id.map(names).isin(set(NEWS['outs']) | OUT_BY_TEAM.get(team, set()))]
     ids = []
     qname = cur['qb'][team]['qb']
     qrow = H[(H.grp == 'QB') & (H.player_display_name == qname)]

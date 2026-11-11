@@ -184,6 +184,12 @@
       "name": "Daiyan Henley",
       "side": "def",
       "source": "Traded to DEN (Nov 10)"
+    },
+    {
+      "team": "IND",
+      "name": "Josh Downs",
+      "side": "off",
+      "source": "Traded to KC (Nov 10)"
     }
   ],
   "traded": [
@@ -250,6 +256,14 @@
       "to": "DEN",
       "date": "Nov 10",
       "source": "ESPN: Broncos land LB Daiyan Henley from the Chargers"
+    },
+    {
+      "name": "Josh Downs",
+      "pos": "WR",
+      "from": "IND",
+      "to": "KC",
+      "date": "Nov 10",
+      "source": "Colts.com: Downs and a 2027 7th to KC for 2027 4th and 5th-round picks"
     }
   ]
 }
