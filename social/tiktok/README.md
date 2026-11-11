@@ -6,7 +6,7 @@
 2. Edit the player lists and the 2–3 sentences in `make_slides.py` (buy low / sell high), `make_slides2.py` (a second set
    that reuses the same layout) or `make_waiver.py` (waivers; roster % comes from Yahoo's waiver articles). Every sentence
    should come from real stats; the scripts only render.
-3. `python3 make_slides.py` (or the others). PNGs land in png/, part2/ or waiver/ here (git-ignored).
+3. `python3 make_slides.py` (or the others; `make_startsit.py` does a weekly start/sit set from data/fantasy.json). PNGs land in png/, part2/ or waiver/ here (git-ignored).
 
 TikTok rules learned the hard way (a slideshow was removed for "community guidelines"):
 - No web address on the slides. Name and logo only, "link in bio". The bio link should go to the site's #fantasy tab.
