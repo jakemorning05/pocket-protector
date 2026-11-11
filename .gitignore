@@ -16,3 +16,5 @@ social/tiktok/waiver/
 social/tiktok/*.html
 social/tiktok/__pycache__/
 social/tiktok/startsit/
+social/tiktok/qbchange/
+social/x/out/
