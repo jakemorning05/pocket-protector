@@ -6,6 +6,7 @@ B = os.path.dirname(os.path.abspath(__file__))
 P = lambda *a: os.path.join(B, *a)
 ET = ZoneInfo('America/New_York')
 EARLY = {}
+PROPS = []
 NAMES = {
     'ARI': ('Arizona', 'Cardinals'), 'ATL': ('Atlanta', 'Falcons'), 'BAL': ('Baltimore', 'Ravens'), 'BUF': ('Buffalo', 'Bills'),
     'CAR': ('Carolina', 'Panthers'), 'CHI': ('Chicago', 'Bears'), 'CIN': ('Cincinnati', 'Bengals'), 'CLE': ('Cleveland', 'Browns'),
@@ -120,9 +121,16 @@ def page(g, lock, fan, news, site_url, analytics=''):
                    ''.join(f'<tr><td class="l"><b>{esc(r["name"])}</b> <span class="muted small">{r["pos"]} · {r["team"]}</span></td><td><b>{fp(r):.1f}</b></td><td class="l muted small">{stat(r)}</td><td>{pct(r.get("td_p") or 0)}</td></tr>' for r in fr) +
                    '</tbody></table></div></div>')
     early = ''
+    SN = {'pass_yds': 'pass yds', 'rush_yds': 'rush yds', 'rec_yds': 'rec yds'}
+    gp = [x for x in PROPS if x.get('game') == g['id']]
     eg = next((x for x in EARLY.get('games', []) if x['id'] == g['id']), None)
-    if eg and eg['leans'] and not done:
-        SN = {'pass_yds': 'pass yds', 'rush_yds': 'rush yds', 'rec_yds': 'rec yds'}
+    if gp:   # real Kalshi prices logged for this game: show the model against them instead of the early leans
+        res = lambda x: ('Pending' if x.get('won') is None else ('✓ ' if x['won'] else '✗ ') + f"{x['actual']:g}")
+        early = ('<div class="panel"><h2>Player props vs. Kalshi</h2><div class="tablewrap"><table><thead><tr><th class="l">Market</th><th>Price</th><th>Model</th><th>Pick</th><th>Result</th></tr></thead><tbody>' +
+                 ''.join(f'<tr><td class="l"><b>{esc(x["player"])}</b> <span class="muted small">{x["thr"]}+ {SN[x["stat"]]}</span></td><td>{pct(x["price"])}</td><td>{pct(x["p_over"])}</td><td><b>{x["pick"]}</b></td><td>{res(x)}</td></tr>' for x in gp) +
+                 '</tbody></table></div>' + (f'<p class="small" style="margin-top:8px">Most likely to score a touchdown: ' + ', '.join(f'{esc(t["player"])} ({pct(t["p"])})' for t in eg['td']) + '.</p>' if eg and eg.get('td') else '') +
+                 f'<p class="muted small">Each row is a Kalshi “X or more” market; price is Kalshi’s price when logged (the middle of the bid and ask from Week 10 on), and “Model” is the model’s chance of the YES side. Prices: {esc(gp[0].get("source", ""))}. Part of the site’s public prop test, graded after the game.</p></div>')
+    elif eg and eg['leans'] and not done:
         early = ('<div class="panel"><h2>Early player leans</h2><div class="tablewrap"><table><thead><tr><th class="l">Player</th><th class="l">Lean</th><th>Model</th><th>Proj.</th></tr></thead><tbody>' +
                  ''.join(f'<tr><td class="l"><b>{esc(c["player"])}</b> <span class="muted small">{c["pos"]} · {c["team"]}</span></td><td class="l"><b>{c["side"]} {c["line"]:g}</b> <span class="muted small">{SN[c["stat"]]}</span></td><td>{pct(max(c["p_over"], 1 - c["p_over"]))}</td><td>{c["proj"]:.0f}</td></tr>' for c in eg['leans']) +
                  '</tbody></table></div>' + (f'<p class="small" style="margin-top:8px">Most likely to score a touchdown: ' + ', '.join(f'{esc(t["player"])} ({pct(t["p"])})' for t in eg['td']) + '.</p>' if eg['td'] else '') +
@@ -189,7 +197,11 @@ body { padding-bottom: 40px; }
 
 
 def build(site_url, analytics=''):
-    global EARLY
+    global EARLY, PROPS
+    try:
+        PROPS = json.load(open(P('data', 'prop_log.json')))
+    except Exception:
+        PROPS = []
     try:
         EARLY = json.load(open(P('data', 'early_props.json')))
     except FileNotFoundError:

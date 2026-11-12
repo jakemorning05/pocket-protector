@@ -257,6 +257,9 @@ const probBar = (away, home, pH) => '<div class="probbar" role="img" aria-label=
 // ---------- Games ----------
 let viewWeek = currentWeek;
 const LOCK_START = Math.min(...Object.values(PICKS).map((x) => x.wk), 99);
+// betting favorite: the closing moneyline (what the Pools tab uses), or the spread when there's no moneyline
+const hasFav = (g) => g.mk_p != null ? g.mk_p !== 0.5 : g.mk_spread != null && Math.abs(g.mk_spread) >= 0.5;
+const favHome = (g) => g.mk_p != null ? g.mk_p > 0.5 : g.mk_spread > 0;
 function gameCard(g) {
   const recs = g.done ? records(g.wk - 1) : recNow;
   const pH = g.p, strong = Math.max(pH, 1 - pH) >= 0.7;
@@ -279,7 +282,7 @@ function gameCard(g) {
   if (g.done) {
     const pickHome = pH >= 0.5, tie = g.hs === g.as, homeWon = g.hs > g.as;
     const pick = pickHome ? g.h : g.a, conf = pct(Math.max(pH, 1 - pH));
-    const mkNote = g.mk_spread != null && Math.abs(g.mk_spread) >= 0.5 ? (((g.mk_spread > 0) === homeWon) ? ' · market right' : ' · market wrong') : '';
+    const mkNote = hasFav(g) ? ((favHome(g) === homeWon) ? ' · market right' : ' · market wrong') : '';
     if (tie) h += '<div class="verdict none">Tie · model had ' + pick + ' at ' + conf + '</div>';
     else if (pickHome === homeWon) h += '<div class="verdict good"><span aria-hidden="true">✓</span> Model picked ' + pick + ' (' + conf + ')<span class="muted" style="font-weight:500">' + mkNote + '</span></div>';
     else h += '<div class="verdict bad"><span aria-hidden="true">✗</span> Model picked ' + pick + ' (' + conf + ')<span class="muted" style="font-weight:500">' + mkNote + '</span></div>';
@@ -292,14 +295,14 @@ function renderWeek() {
   const first = wkGames[0], last = wkGames[wkGames.length - 1];
   const dec = wkGames.filter((g) => g.done && g.hs !== g.as);
   const right = dec.filter((g) => (g.p >= 0.5) === (g.hs > g.as)).length;
-  const mkDec = dec.filter((g) => g.mk_spread != null && Math.abs(g.mk_spread) >= 0.5);
-  const mkRight = mkDec.filter((g) => (g.mk_spread > 0) === (g.hs > g.as)).length;
+  const mkDec = dec.filter(hasFav);
+  const mkRight = mkDec.filter((g) => favHome(g) === (g.hs > g.as)).length;
   const strongs = dec.filter((g) => Math.max(g.p, 1 - g.p) >= 0.7), sRight = strongs.filter((g) => (g.p >= 0.5) === (g.hs > g.as)).length;
   const left = wkGames.filter((g) => !g.done).length;
   let summary = dec.length ? 'Model ' + right + '–' + (dec.length - right) + (mkDec.length ? ' · market ' + mkRight + '–' + (mkDec.length - mkRight) : '') + (strongs.length ? ' · strong picks ' + sRight + '–' + (strongs.length - sRight) : '') + (left ? ' · ' + left + ' left' : '') : 'Predictions use every result through ' + dayFmt(lastPlayed) + '.';
   const byes = TEAMS.filter((t) => !wkGames.some((g) => g.a === t || g.h === t));
   const allDec = games.filter((g) => g.done && g.hs !== g.as), allRight = allDec.filter((g) => (g.p >= 0.5) === (g.hs > g.as)).length;
-  const allMk = allDec.filter((g) => g.mk_spread != null && Math.abs(g.mk_spread) >= 0.5), allMkRight = allMk.filter((g) => (g.mk_spread > 0) === (g.hs > g.as)).length;
+  const allMk = allDec.filter(hasFav), allMkRight = allMk.filter((g) => favHome(g) === (g.hs > g.as)).length;
   const lockDec = allDec.filter((g) => g.locked), lockRight = lockDec.filter((g) => (g.p >= 0.5) === (g.hs > g.as)).length;
   const lockedOpen = games.filter((g) => g.locked && !g.done).length;
   const recordStrip = '<div class="tiles num"><div class="tile"><span class="label">Model this season</span><b>' + allRight + '–' + (allDec.length - allRight) + '</b><span class="muted small">' + pct(allRight / Math.max(1, allDec.length)) + ' of winners picked</span></div>' +
@@ -311,7 +314,7 @@ function renderWeek() {
     '<p class="week-summary">' + summary + '</p>' +
     '<div class="games">' + wkGames.map(gameCard).join('') + '</div>' +
     (byes.length ? '<p class="muted small">Bye: ' + byes.join(', ') + '</p>' : '') +
-    '<p class="notice">From Week ' + LOCK_START + ' on, every pick is locked at kickoff and never changed afterward. Earlier games show the pick the model would have made before kickoff, using only earlier data. Market lines are closing spreads and totals. Upcoming games use today’s starting quarterbacks, injuries and Monday’s news (see the <a href="#news">News</a> tab).' + (viewWeek > DATA.cw ? ' Win chances this far out are pulled toward 50%, because ratings, quarterbacks and injuries will change before kickoff.' : '') + '</p>';
+    '<p class="notice">From Week ' + LOCK_START + ' on, every pick is locked at kickoff and never changed afterward. Earlier games show the pick the model would have made before kickoff, using only earlier data. Market lines are closing spreads and totals. Upcoming games use today’s starting quarterbacks, injuries and the latest news (see the <a href="#news">News</a> tab).' + (viewWeek > DATA.cw ? ' Win chances this far out are pulled toward 50%, because ratings, quarterbacks and injuries will change before kickoff.' : '') + '</p>';
   el.querySelector('#wk-prev').onclick = () => { viewWeek--; renderWeek(); };
   el.querySelector('#wk-next').onclick = () => { viewWeek++; renderWeek(); };
 }
@@ -569,18 +572,19 @@ function renderBetting() {
   }).join('');
   // props
   const graded = PROPS.filter((p) => p.won != null), wins = graded.filter((p) => p.won).length;
-  const profit = graded.reduce((s, p) => s + p.profit, 0), staked = graded.reduce((s, p) => s + (p.pick === 'YES' ? p.price : 1 - p.price), 0);
+  const profit = graded.reduce((s, p) => s + p.profit, 0), staked = graded.reduce((s, p) => s + (p.pick === 'YES' ? (p.ask ?? p.price) : 1 - (p.bid ?? p.price)), 0);
   const propPanel = PROPS.length ? '<div class="panel"><div class="panel-head"><h3>Player prop test vs. Kalshi</h3><span class="muted small">' +
     (graded.length ? wins + '–' + (graded.length - wins) + ' · ' + (profit >= 0 ? '+' : '−') + '$' + Math.abs(profit).toFixed(2) + ' on $' + staked.toFixed(2) + ' risked' : 'Logged before kickoff, not graded yet') + '</span></div>' +
-    '<p class="muted small" style="max-width:62ch;margin-bottom:8px">Each row is a Kalshi “X or more” market. The model buys YES when its chance is above the price and NO when it’s below, one contract each.</p>' +
+    '<p class="muted small" style="max-width:62ch;margin-bottom:8px">Each row is a Kalshi “X or more” market. The model buys YES when its chance is above the price and NO when it’s below, one contract each. From Week 10 on, the price shown is the middle of the bid and ask, and results are graded at the price actually paid.</p>' +
     '<div class="tablewrap"><table class="ptable"><thead><tr><th class="l">Market</th><th>Price</th><th>Model</th><th>Pick</th><th>Result</th></tr></thead><tbody>' +
     PROPS.map((p) => '<tr><td class="l"><span class="pname">' + esc(p.player) + '</span> <span class="muted small">' + p.thr + '+ ' + STAT_LABEL[p.stat] + '</span></td><td>' + pct(p.price) + '</td><td>' + pct(p.p_over) + '</td><td><b>' + p.pick + '</b></td><td>' +
       (p.won == null ? '<span class="muted">Pending</span>' : '<span class="res ' + (p.won ? 'w' : 'l') + '">' + (p.won ? '✓ ' : '✗ ') + p.actual + '</span>') + '</td></tr>').join('') +
-    '</tbody></table></div><p class="muted small" style="margin-top:8px">Prices: ' + esc(PROPS[0].source) + '. Kalshi fees not included.</p></div>' : '';
-  const earlyPanel = EARLY.games && EARLY.games.length ? '<div class="panel"><div class="panel-head"><h3>Week ' + EARLY.week + ' early player leans</h3><span class="muted small">Updated ' + esc(EARLY.asof) + '</span></div>' +
-    '<p class="muted small" style="max-width:64ch;margin-bottom:8px">Prop lines aren’t posted yet. Until they are, each player’s line here is his season median for that stat, which is roughly where books open. The picks update with every refresh as injuries and starters change, and real Kalshi prices replace them in the table below once they’re out.</p>' +
+    '</tbody></table></div><p class="muted small" style="margin-top:8px">Prices: ' + esc([...new Set(PROPS.map((p) => p.source))].join('; ')) + '. Kalshi fees not included.</p></div>' : '';
+  const earlyGames = (EARLY.games || []).filter((g) => !PROPS.some((p) => p.game === g.id));
+  const earlyPanel = earlyGames.length ? '<div class="panel"><div class="panel-head"><h3>Week ' + EARLY.week + ' early player leans</h3><span class="muted small">Updated ' + esc(EARLY.asof) + '</span></div>' +
+    '<p class="muted small" style="max-width:64ch;margin-bottom:8px">Until real prices are logged for a game (usually the day before kickoff), each player’s line here is his season median for that stat, which is roughly where books open. The picks update with every refresh as injuries and starters change. Games with logged Kalshi prices move to the prop test below.</p>' +
     '<div class="tablewrap"><table class="ptable early"><thead><tr><th class="l">Player</th><th class="l">Lean</th><th>Model</th><th>Proj.</th></tr></thead><tbody>' +
-    EARLY.games.map((g) => { const gm = games.find((x) => x.id === g.id);
+    earlyGames.map((g) => { const gm = games.find((x) => x.id === g.id);
       return '<tr><td class="l" colspan="4" style="padding-top:14px;white-space:normal"><b>' + g.a + ' @ ' + g.h + '</b> <span class="muted small">' + (gm ? kick(gm) : '') + (g.td.length ? ' · most likely TD: ' + g.td.map((t) => esc(t.player) + ' ' + pct(t.p)).join(', ') : '') + '</span></td></tr>' +
         g.leans.map((c) => '<tr><td class="l"><span class="pname">' + esc(c.player) + '</span><span class="ppos pos-' + c.pos + '">' + c.pos + ' · ' + c.team + '</span></td><td class="l"><b>' + c.side + ' ' + c.line + '</b> <span class="muted small">' + STAT_LABEL[c.stat] + '</span></td><td>' + pct(Math.max(c.p_over, 1 - c.p_over)) + '</td><td class="muted">' + c.proj.toFixed(0) + '</td></tr>').join(''); }).join('') +
     '</tbody></table></div><p class="muted small" style="margin-top:8px">The prop test is only a few markets old (see below), so treat these as a starting point, not locks.</p></div>' : '';
@@ -589,7 +593,7 @@ function renderBetting() {
     '<div class="tile"><span class="label">Record</span><b>' + (done.length ? done.filter((b) => b.result === 'win').length + '–' + done.filter((b) => b.result === 'loss').length : '–') + '</b><span class="muted small">At the line when logged</span></div>' +
     '<div class="tile"><span class="label">Closing line value</span><b>' + (avgClv == null ? '–' : signed(avgClv)) + '</b><span class="muted small">Avg points the line moved toward our side</span></div>' +
     '<div class="tile"><span class="label">Prop test</span><b>' + (graded.length ? wins + '–' + (graded.length - wins) : '–') + '</b><span class="muted small">' + PROPS.length + ' markets logged</span></div></div>' +
-    '<div class="panel"><div class="panel-head"><h3>Model picks vs. the line</h3><span class="muted small">Logged ' + esc((BETS[0] || {}).logged || '') + '</span></div>' +
+    '<div class="panel"><div class="panel-head"><h3>Model picks vs. the line</h3><span class="muted small">Last logged ' + esc((BETS[BETS.length - 1] || {}).logged || '') + '</span></div>' +
     '<p class="muted small" style="max-width:62ch;margin-bottom:8px">“Model” is the chance if the model is right. “Past rate” is how often its picks actually won at this size of disagreement in 2017–2025, and the value column uses that rate on a $100 bet at −110. Positive closing line value after kickoff is the early sign of a real edge.</p>' +
     '<div class="tablewrap"><table class="ptable"><thead><tr><th class="l">Game</th><th class="l">Pick</th><th>Model line</th><th>Model</th><th>Past rate</th><th>Value</th><th>Result</th></tr></thead><tbody>' + rows + '</tbody></table></div></div>' + earlyPanel +
     '<div class="panel" id="shop"></div>' + propPanel +
@@ -685,7 +689,7 @@ function renderFantasy() {
     };
     body = '<label class="field" style="max-width:360px"><span class="label">Game</span><select id="fan-game">' + gl.map((x) => '<option value="' + x.id + '"' + (x.id === g.id ? ' selected' : '') + '>Wk ' + x.wk + ': ' + x.a + ' @ ' + x.h + '</option>').join('') + '</select></label>' + team(g.a) + team(g.h);
   }
-  el.innerHTML = '<div><h2>Fantasy</h2><p class="intro">Projections from each player’s recent workload and efficiency, adjusted for the opponent and pulled toward realistic ranges. Players ruled out on the injury report or in Monday’s news are left off.</p></div>' +
+  el.innerHTML = '<div><h2>Fantasy</h2><p class="intro">Projections from each player’s recent workload and efficiency, adjusted for the opponent and pulled toward realistic ranges. Players ruled out on the injury report or in the latest news are left off.</p></div>' +
     '<div class="controls">' + seg('fview', fanView, [['rank', 'This week'], ['ros', 'Rest of season'], ['value', 'Buy low / sell high'], ['trade', 'Trade calculator'], ['waiver', 'Waivers'], ['game', 'By game']]) + seg('fmt', fmt, [['ppr', 'PPR'], ['half', 'Half'], ['std', 'Std']]) + '</div>' + body +
     '<p class="notice">Tested on Weeks 4–9, the projections missed by about ' + PL.bt.rec_yds.model_mae + ' receiving yards per player (a plain season average missed by ' + PL.bt.rec_yds.naive_mae + ') and ' + PL.bt.rush_yds.model_mae + ' rushing yards (vs ' + PL.bt.rush_yds.naive_mae + '). Single-game fantasy scores swing a lot, so use these for close calls, not as locks.</p>';
   el.querySelectorAll('[data-fview]').forEach((b) => b.onclick = () => { fanView = b.dataset.fview; renderFantasy(); });

@@ -20,7 +20,7 @@ function pickemWeek(w, src) {
   const gs = games.filter((g) => g.wk === w).map((g) => {
     const pH = srcProb(g, src), home = pH >= 0.5, p = home ? pH : 1 - pH;
     const pick = home ? g.h : g.a, opp = home ? g.a : g.h;
-    const mFav = g.mk_spread != null && Math.abs(g.mk_spread) >= 0.5 ? (g.mk_spread > 0 ? g.h : g.a) : null;
+    const mFav = hasFav(g) ? (favHome(g) ? g.h : g.a) : null;
     const res = g.done ? (g.hs === g.as ? 'tie' : ((g.hs > g.as) === home ? 'w' : 'l')) : null;
     return { g, pick, opp, home, p, mFav, res };
   }).sort((x, y) => y.p - x.p || (x.g.day + x.g.time).localeCompare(y.g.day + y.g.time));
