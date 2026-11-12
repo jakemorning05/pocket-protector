@@ -1,5 +1,5 @@
 {
- "asof": "Thu, Nov 12, 12:07 PM ET",
+ "asof": "Thu, Nov 12, 5:46 PM ET",
  "outs": [
   "Josh Jacobs",
   "Puka Nacua",
@@ -31,9 +31,33 @@
   "Bhayshul Tuten": "Ankle, foot: did not practice Wednesday",
   "T.J. Hockenson": "Wrist, chest: listed as not practicing (estimate)",
   "Alvin Kamara": "Back: did not practice Wednesday",
-  "George Pickens": "Hamstring: limited Wednesday after missing Week 9"
+  "George Pickens": "Hamstring: limited Wednesday after missing Week 9",
+  "Jonathan Taylor": "Limited in practice this week",
+  "Jared Goff": "Limited in practice this week",
+  "Amon-Ra St. Brown": "Limited in practice this week"
  },
  "items": [
+  {
+   "team": "IND",
+   "tag": "Injury",
+   "text": "Jonathan Taylor was limited in practice this week. He hasn't been ruled out, but watch Friday's report before Sunday's game against Miami.",
+   "src": "NFL.com injury report, Nov 12",
+   "url": "https://www.nfl.com/injuries/league/2026/reg10"
+  },
+  {
+   "team": "DET",
+   "tag": "Injury",
+   "text": "Jared Goff and Amon-Ra St. Brown were both limited in practice ahead of Sunday morning\u2019s game against New England in Munich (9:30 AM ET kickoff, so lineups lock early).",
+   "src": "NFL.com injury report, Nov 12",
+   "url": "https://www.nfl.com/injuries/league/2026/reg10"
+  },
+  {
+   "team": "GB",
+   "tag": "Injury",
+   "text": "Josh Jacobs still isn\u2019t practicing. Chris Brooks was limited, so Green Bay\u2019s backfield is a committee again this week.",
+   "src": "NFL.com injury report, Nov 12",
+   "url": "https://www.nfl.com/injuries/league/2026/reg10"
+  },
   {
    "team": "NYG",
    "tag": "Injury",
