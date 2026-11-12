@@ -8,10 +8,15 @@ A session adds the judgment calls:
 
 1. `git pull` so you're working on the latest data the Action committed.
 2. Check news (web search: QB changes, injuries, trades). Update:
-   - data/overrides.json: qb_starters (team, play-by-play short name, full name, through_week, source) and players_out.
+   - data/overrides.json: qb_starters (team, play-by-play short name, full name, through_week, source), players_out, and
+     returning (team, name, through_week, source) for regulars confirmed back after missing the team's last two games;
+     they're added to the projections and teammates' carries/targets are trimmed to the team's usual totals.
    - data/news.json: asof, outs, flags, items (each with source + url). The `injuries` list is rebuilt by pipeline/injury_list.py.
-3. Props: add Kalshi markets to NEW_PROPS in pipeline/props.py (game id, player, stat, threshold, price), set SOURCE, run
-   `cd pipeline && python3 props.py log`. Prices: Covers "player props computer projections" pages list Kalshi X+ markets.
+3. Props: add Kalshi markets to NEW_PROPS in pipeline/props.py (game id, player, stat, threshold, price = mid, bid, ask), set
+   SOURCE, run `cd pipeline && python3 props.py log`. Prices come straight from the Kalshi API with WebFetch:
+   api.elections.kalshi.com/trade-api/v2/markets?event_ticker=KXNFLPASSYDS-26NOV12WASNYG (also KXNFLRSHYDS, KXNFLRECYDS;
+   date + away + home). Long pages need a second fetch with offset. Log each player's threshold priced closest to 50%.
+   Log Sunday games on Saturday, after Friday's injury designations.
 4. Rebuild: `bash scripts/update.sh` (downloads, retrains, grades, logs new spread/total picks, builds docs/index.html).
 5. Commit and push (`git add -A && git commit && git push`); the site redeploys from docs/. The commit message ends with the
    attribution lines from the session's instructions.
