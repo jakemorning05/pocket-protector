@@ -32,8 +32,8 @@
 "wk": 10,
 "a": "WAS",
 "h": "NYG",
-"p": 0.4771,
-"m": -0.74,
+"p": 0.4619,
+"m": -1.23,
 "tot": 46.9,
 "c": {
 "Home field": 2.63,
@@ -44,22 +44,22 @@
 "Special teams": 0.53,
 "Rest & travel": -0.01,
 "Division game": -0.87,
-"Injuries": 1.05,
+"Injuries": 0.56,
 "Past betting lines": -0.43
 },
 "pick": "WAS",
 "mk_spread": 2.5,
-"mk_total": 41.5,
+"mk_total": 40.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-12T20:15:00-05:00"
 },
 "2026_10_NE_DET": {
 "wk": 10,
 "a": "NE",
 "h": "DET",
-"p": 0.5607,
-"m": 1.97,
+"p": 0.612,
+"m": 3.67,
 "tot": 53.4,
 "c": {
 "Home field": 0.0,
@@ -70,22 +70,22 @@
 "Special teams": 0.6,
 "Rest & travel": 0.03,
 "Division game": 0.0,
-"Injuries": -0.55,
+"Injuries": 1.15,
 "Past betting lines": 0.63
 },
 "pick": "DET",
 "mk_spread": 2.5,
 "mk_total": 51.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-15T09:30:00-05:00"
 },
 "2026_10_BUF_NYJ": {
 "wk": 10,
 "a": "BUF",
 "h": "NYJ",
-"p": 0.2497,
-"m": -8.7,
+"p": 0.2642,
+"m": -8.12,
 "tot": 50.9,
 "c": {
 "Home field": 2.63,
@@ -96,22 +96,22 @@
 "Special teams": 0.01,
 "Rest & travel": 0.18,
 "Division game": -0.87,
-"Injuries": -0.58,
+"Injuries": 0.0,
 "Past betting lines": -4.56
 },
 "pick": "BUF",
 "mk_spread": -8.5,
 "mk_total": 50.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-15T13:00:00-05:00"
 },
 "2026_10_CAR_NO": {
 "wk": 10,
 "a": "CAR",
 "h": "NO",
-"p": 0.5081,
-"m": 0.26,
+"p": 0.4642,
+"m": -1.16,
 "tot": 48.5,
 "c": {
 "Home field": 2.63,
@@ -122,22 +122,22 @@
 "Special teams": 0.43,
 "Rest & travel": -0.61,
 "Division game": -0.87,
-"Injuries": 1.42,
+"Injuries": 0.0,
 "Past betting lines": -0.75
 },
-"pick": "NO",
+"pick": "CAR",
 "mk_spread": 2.5,
 "mk_total": 48.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-15T13:00:00-05:00"
 },
 "2026_10_HOU_CLE": {
 "wk": 10,
 "a": "HOU",
 "h": "CLE",
-"p": 0.3769,
-"m": -4.04,
+"p": 0.3802,
+"m": -3.93,
 "tot": 41.2,
 "c": {
 "Home field": 2.63,
@@ -148,22 +148,22 @@
 "Special teams": 0.94,
 "Rest & travel": -0.63,
 "Division game": 0.0,
-"Injuries": -0.11,
+"Injuries": 0.0,
 "Past betting lines": -4.2
 },
 "pick": "HOU",
 "mk_spread": -4.5,
 "mk_total": 40.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-15T13:00:00-05:00"
 },
 "2026_10_JAX_TEN": {
 "wk": 10,
 "a": "JAX",
 "h": "TEN",
-"p": 0.125,
-"m": -14.82,
+"p": 0.1381,
+"m": -14.03,
 "tot": 45.3,
 "c": {
 "Home field": 2.63,
@@ -174,22 +174,22 @@
 "Special teams": -0.58,
 "Rest & travel": -0.99,
 "Division game": -0.87,
-"Injuries": -0.79,
+"Injuries": 0.0,
 "Past betting lines": -6.56
 },
 "pick": "JAX",
 "mk_spread": -10.5,
 "mk_total": 46.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-15T13:00:00-05:00"
 },
 "2026_10_KC_ATL": {
 "wk": 10,
 "a": "KC",
 "h": "ATL",
-"p": 0.3556,
-"m": -4.77,
+"p": 0.3573,
+"m": -4.71,
 "tot": 47.2,
 "c": {
 "Home field": 2.63,
@@ -200,22 +200,22 @@
 "Special teams": -0.73,
 "Rest & travel": -0.61,
 "Division game": 0.0,
-"Injuries": -0.06,
+"Injuries": 0.0,
 "Past betting lines": -2.79
 },
 "pick": "KC",
-"mk_spread": -3.5,
-"mk_total": 45.5,
+"mk_spread": -3.0,
+"mk_total": 46.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-15T13:00:00-05:00"
 },
 "2026_10_MIA_IND": {
 "wk": 10,
 "a": "MIA",
 "h": "IND",
-"p": 0.7149,
-"m": 7.32,
+"p": 0.7873,
+"m": 10.27,
 "tot": 46.5,
 "c": {
 "Home field": 2.63,
@@ -226,22 +226,22 @@
 "Special teams": 1.06,
 "Rest & travel": -0.06,
 "Division game": 0.0,
-"Injuries": -2.95,
+"Injuries": 0.0,
 "Past betting lines": 2.24
 },
 "pick": "IND",
 "mk_spread": 3.5,
 "mk_total": 38.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-15T13:00:00-05:00"
 },
 "2026_10_MIN_GB": {
 "wk": 10,
 "a": "MIN",
 "h": "GB",
-"p": 0.4407,
-"m": -1.92,
+"p": 0.5148,
+"m": 0.48,
 "tot": 41.8,
 "c": {
 "Home field": 2.63,
@@ -252,22 +252,22 @@
 "Special teams": -1.47,
 "Rest & travel": 0.18,
 "Division game": -0.87,
-"Injuries": -2.4,
+"Injuries": 0.0,
 "Past betting lines": -0.13
 },
-"pick": "MIN",
+"pick": "GB",
 "mk_spread": 3.0,
 "mk_total": 42.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-15T13:00:00-05:00"
 },
 "2026_10_LA_ARI": {
 "wk": 10,
 "a": "LA",
 "h": "ARI",
-"p": 0.2342,
-"m": -9.34,
+"p": 0.2484,
+"m": -8.76,
 "tot": 48.6,
 "c": {
 "Home field": 2.63,
@@ -278,22 +278,22 @@
 "Special teams": 0.41,
 "Rest & travel": -0.02,
 "Division game": -0.87,
-"Injuries": -0.59,
+"Injuries": 0.0,
 "Past betting lines": -4.27
 },
 "pick": "LA",
 "mk_spread": -9.5,
 "mk_total": 39.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-15T16:05:00-05:00"
 },
 "2026_10_SEA_LV": {
 "wk": 10,
 "a": "SEA",
 "h": "LV",
-"p": 0.335,
-"m": -5.49,
+"p": 0.2715,
+"m": -7.84,
 "tot": 44.6,
 "c": {
 "Home field": 2.63,
@@ -304,22 +304,22 @@
 "Special teams": -0.98,
 "Rest & travel": -0.05,
 "Division game": 0.0,
-"Injuries": 2.35,
+"Injuries": 0.0,
 "Past betting lines": -4.28
 },
 "pick": "SEA",
 "mk_spread": -6.5,
 "mk_total": 40.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-15T16:05:00-05:00"
 },
 "2026_10_SF_DAL": {
 "wk": 10,
 "a": "SF",
 "h": "DAL",
-"p": 0.4218,
-"m": -2.54,
+"p": 0.4332,
+"m": -2.17,
 "tot": 54.6,
 "c": {
 "Home field": 2.63,
@@ -330,14 +330,14 @@
 "Special teams": 1.3,
 "Rest & travel": -1.22,
 "Division game": 0.0,
-"Injuries": -0.37,
+"Injuries": 0.0,
 "Past betting lines": -0.34
 },
 "pick": "SF",
-"mk_spread": -4.5,
+"mk_spread": -3.5,
 "mk_total": 55.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-15T16:25:00-05:00"
 },
 "2026_10_PIT_CIN": {
@@ -363,15 +363,15 @@
 "mk_spread": 3.5,
 "mk_total": 49.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-15T20:20:00-05:00"
 },
 "2026_10_LAC_BAL": {
 "wk": 10,
 "a": "LAC",
 "h": "BAL",
-"p": 0.6079,
-"m": 3.53,
+"p": 0.6027,
+"m": 3.35,
 "tot": 45.2,
 "c": {
 "Home field": 2.63,
@@ -382,22 +382,22 @@
 "Special teams": -0.03,
 "Rest & travel": -1.26,
 "Division game": 0.0,
-"Injuries": 0.17,
+"Injuries": 0.0,
 "Past betting lines": 1.0
 },
 "pick": "BAL",
 "mk_spread": 4.5,
 "mk_total": 38.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-16T20:15:00-05:00"
 },
 "2026_11_IND_HOU": {
 "wk": 11,
 "a": "IND",
 "h": "HOU",
-"p": 0.688,
-"m": 6.59,
+"p": 0.7267,
+"m": 8.1,
 "tot": 45.5,
 "c": {
 "Home field": 2.63,
@@ -408,22 +408,22 @@
 "Special teams": -1.01,
 "Rest & travel": -0.62,
 "Division game": -0.87,
-"Injuries": 0.0,
+"Injuries": 1.51,
 "Past betting lines": 2.94
 },
 "pick": "HOU",
 "mk_spread": 10.0,
 "mk_total": 44.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-19T20:15:00-05:00"
 },
 "2026_11_ARI_KC": {
 "wk": 11,
 "a": "ARI",
 "h": "KC",
-"p": 0.8314,
-"m": 12.89,
+"p": 0.8424,
+"m": 13.49,
 "tot": 47.5,
 "c": {
 "Home field": 2.63,
@@ -434,14 +434,14 @@
 "Special teams": 0.09,
 "Rest & travel": -1.2,
 "Division game": 0.0,
-"Injuries": 0.0,
+"Injuries": 0.6,
 "Past betting lines": 3.76
 },
 "pick": "KC",
 "mk_spread": 14.0,
 "mk_total": 42.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-22T13:00:00-05:00"
 },
 "2026_11_BAL_CAR": {
@@ -467,7 +467,7 @@
 "mk_spread": 1.5,
 "mk_total": 44.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-22T13:00:00-05:00"
 },
 "2026_11_JAX_NYG": {
@@ -493,15 +493,15 @@
 "mk_spread": -6.0,
 "mk_total": 44.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-22T13:00:00-05:00"
 },
 "2026_11_MIA_BUF": {
 "wk": 11,
 "a": "MIA",
 "h": "BUF",
-"p": 0.9181,
-"m": 18.7,
+"p": 0.9247,
+"m": 19.31,
 "tot": 50.8,
 "c": {
 "Home field": 2.63,
@@ -512,22 +512,22 @@
 "Special teams": 1.02,
 "Rest & travel": -0.07,
 "Division game": -0.87,
-"Injuries": 0.0,
+"Injuries": 0.61,
 "Past betting lines": 5.67
 },
 "pick": "BUF",
 "mk_spread": 16.5,
 "mk_total": 46.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-22T13:00:00-05:00"
 },
 "2026_11_NO_CHI": {
 "wk": 11,
 "a": "NO",
 "h": "CHI",
-"p": 0.7864,
-"m": 10.67,
+"p": 0.8032,
+"m": 11.46,
 "tot": 50.2,
 "c": {
 "Home field": 2.63,
@@ -538,14 +538,14 @@
 "Special teams": 1.26,
 "Rest & travel": 0.14,
 "Division game": 0.0,
-"Injuries": 0.0,
+"Injuries": 0.79,
 "Past betting lines": 2.06
 },
 "pick": "CHI",
 "mk_spread": 9.5,
 "mk_total": 48.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-22T13:00:00-05:00"
 },
 "2026_11_TB_DET": {
@@ -571,15 +571,15 @@
 "mk_spread": 3.5,
 "mk_total": 47.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-22T13:00:00-05:00"
 },
 "2026_11_TEN_DAL": {
 "wk": 11,
 "a": "TEN",
 "h": "DAL",
-"p": 0.8259,
-"m": 12.6,
+"p": 0.8255,
+"m": 12.58,
 "tot": 50.3,
 "c": {
 "Home field": 2.63,
@@ -590,22 +590,22 @@
 "Special teams": 1.09,
 "Rest & travel": -0.04,
 "Division game": 0.0,
-"Injuries": 0.0,
+"Injuries": -0.02,
 "Past betting lines": 5.07
 },
 "pick": "DAL",
 "mk_spread": 7.5,
 "mk_total": 51.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-22T13:00:00-05:00"
 },
 "2026_11_NYJ_LAC": {
 "wk": 11,
 "a": "NYJ",
 "h": "LAC",
-"p": 0.5186,
-"m": 0.63,
+"p": 0.5011,
+"m": 0.04,
 "tot": 44.8,
 "c": {
 "Home field": 2.63,
@@ -616,14 +616,14 @@
 "Special teams": -0.52,
 "Rest & travel": -2.04,
 "Division game": 0.0,
-"Injuries": 0.0,
+"Injuries": -0.59,
 "Past betting lines": 1.44
 },
 "pick": "LAC",
-"mk_spread": 2.5,
+"mk_spread": 1.5,
 "mk_total": 42.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-22T16:05:00-05:00"
 },
 "2026_11_LV_DEN": {
@@ -649,15 +649,15 @@
 "mk_spread": 8.5,
 "mk_total": 41.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-22T16:25:00-05:00"
 },
 "2026_11_PIT_PHI": {
 "wk": 11,
 "a": "PIT",
 "h": "PHI",
-"p": 0.3355,
-"m": -5.71,
+"p": 0.3224,
+"m": -6.19,
 "tot": 40.8,
 "c": {
 "Home field": 2.63,
@@ -668,22 +668,22 @@
 "Special teams": 0.61,
 "Rest & travel": 0.17,
 "Division game": 0.0,
-"Injuries": 0.0,
+"Injuries": -0.49,
 "Past betting lines": -1.23
 },
 "pick": "PIT",
 "mk_spread": -4.5,
 "mk_total": 38.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-22T16:25:00-05:00"
 },
 "2026_11_MIN_SF": {
 "wk": 11,
 "a": "MIN",
 "h": "SF",
-"p": 0.6134,
-"m": 3.87,
+"p": 0.6041,
+"m": 3.55,
 "tot": 44.6,
 "c": {
 "Home field": 0.0,
@@ -694,22 +694,22 @@
 "Special teams": -1.67,
 "Rest & travel": 1.14,
 "Division game": 0.0,
-"Injuries": 0.0,
+"Injuries": -0.32,
 "Past betting lines": 1.2
 },
 "pick": "SF",
 "mk_spread": 3.5,
 "mk_total": 46.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-22T20:20:00-05:00"
 },
 "2026_11_CIN_WAS": {
 "wk": 11,
 "a": "CIN",
 "h": "WAS",
-"p": 0.4685,
-"m": -1.06,
+"p": 0.4348,
+"m": -2.21,
 "tot": 51.7,
 "c": {
 "Home field": 2.63,
@@ -720,14 +720,14 @@
 "Special teams": -0.2,
 "Rest & travel": 0.56,
 "Division game": 0.0,
-"Injuries": 0.0,
+"Injuries": -1.14,
 "Past betting lines": -2.94
 },
 "pick": "CIN",
 "mk_spread": -3.5,
 "mk_total": 51.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-23T20:15:00-05:00"
 },
 "2026_12_GB_LA": {
@@ -753,7 +753,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-25T20:00:00-05:00"
 },
 "2026_12_CHI_DET": {
@@ -779,7 +779,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-26T13:00:00-05:00"
 },
 "2026_12_PHI_DAL": {
@@ -805,7 +805,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-26T16:30:00-05:00"
 },
 "2026_12_KC_BUF": {
@@ -831,7 +831,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-26T20:20:00-05:00"
 },
 "2026_12_DEN_PIT": {
@@ -857,7 +857,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-27T15:00:00-05:00"
 },
 "2026_12_ATL_MIN": {
@@ -883,7 +883,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-29T13:00:00-05:00"
 },
 "2026_12_BAL_HOU": {
@@ -909,7 +909,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-29T13:00:00-05:00"
 },
 "2026_12_LV_CLE": {
@@ -935,7 +935,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-29T13:00:00-05:00"
 },
 "2026_12_NO_CIN": {
@@ -961,7 +961,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-29T13:00:00-05:00"
 },
 "2026_12_NYG_IND": {
@@ -987,7 +987,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-29T13:00:00-05:00"
 },
 "2026_12_NYJ_MIA": {
@@ -1013,7 +1013,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-29T13:00:00-05:00"
 },
 "2026_12_TEN_JAX": {
@@ -1039,7 +1039,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-29T16:05:00-05:00"
 },
 "2026_12_SEA_SF": {
@@ -1065,7 +1065,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-29T16:25:00-05:00"
 },
 "2026_12_WAS_ARI": {
@@ -1091,7 +1091,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-29T16:25:00-05:00"
 },
 "2026_12_NE_LAC": {
@@ -1117,7 +1117,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-29T20:20:00-05:00"
 },
 "2026_12_CAR_TB": {
@@ -1143,7 +1143,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-11-30T20:15:00-05:00"
 },
 "2026_13_KC_LA": {
@@ -1169,7 +1169,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-03T20:15:00-05:00"
 },
 "2026_13_CIN_CLE": {
@@ -1195,7 +1195,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-06T13:00:00-05:00"
 },
 "2026_13_DET_ATL": {
@@ -1221,7 +1221,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-06T13:00:00-05:00"
 },
 "2026_13_GB_NO": {
@@ -1247,7 +1247,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-06T13:00:00-05:00"
 },
 "2026_13_JAX_CHI": {
@@ -1273,7 +1273,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-06T13:00:00-05:00"
 },
 "2026_13_LAC_TB": {
@@ -1299,7 +1299,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-06T13:00:00-05:00"
 },
 "2026_13_SF_NYG": {
@@ -1325,7 +1325,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-06T13:00:00-05:00"
 },
 "2026_13_WAS_TEN": {
@@ -1351,7 +1351,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-06T13:00:00-05:00"
 },
 "2026_13_MIA_DEN": {
@@ -1377,7 +1377,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-06T16:05:00-05:00"
 },
 "2026_13_PHI_ARI": {
@@ -1403,7 +1403,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-06T16:05:00-05:00"
 },
 "2026_13_BUF_NE": {
@@ -1429,7 +1429,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-06T16:25:00-05:00"
 },
 "2026_13_CAR_MIN": {
@@ -1455,7 +1455,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-06T16:25:00-05:00"
 },
 "2026_13_HOU_PIT": {
@@ -1481,7 +1481,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-06T20:20:00-05:00"
 },
 "2026_13_DAL_SEA": {
@@ -1507,7 +1507,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-07T20:15:00-05:00"
 },
 "2026_14_MIN_NE": {
@@ -1533,7 +1533,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-10T20:15:00-05:00"
 },
 "2026_14_ATL_CLE": {
@@ -1559,7 +1559,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-13T13:00:00-05:00"
 },
 "2026_14_CHI_MIA": {
@@ -1585,7 +1585,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-13T13:00:00-05:00"
 },
 "2026_14_DEN_NYJ": {
@@ -1611,7 +1611,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-13T13:00:00-05:00"
 },
 "2026_14_HOU_WAS": {
@@ -1637,7 +1637,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-13T13:00:00-05:00"
 },
 "2026_14_IND_PHI": {
@@ -1663,7 +1663,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-13T13:00:00-05:00"
 },
 "2026_14_NO_CAR": {
@@ -1689,7 +1689,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-13T13:00:00-05:00"
 },
 "2026_14_TB_BAL": {
@@ -1715,7 +1715,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-13T13:00:00-05:00"
 },
 "2026_14_TEN_DET": {
@@ -1741,7 +1741,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-13T13:00:00-05:00"
 },
 "2026_14_LAC_LV": {
@@ -1767,7 +1767,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-13T16:05:00-05:00"
 },
 "2026_14_KC_CIN": {
@@ -1793,7 +1793,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-13T16:25:00-05:00"
 },
 "2026_14_LA_SF": {
@@ -1819,7 +1819,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-13T16:25:00-05:00"
 },
 "2026_14_NYG_SEA": {
@@ -1845,7 +1845,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-13T16:25:00-05:00"
 },
 "2026_14_BUF_GB": {
@@ -1871,7 +1871,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-13T20:20:00-05:00"
 },
 "2026_14_PIT_JAX": {
@@ -1897,7 +1897,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-14T20:15:00-05:00"
 },
 "2026_15_SF_LAC": {
@@ -1923,7 +1923,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-17T20:15:00-05:00"
 },
 "2026_15_SEA_PHI": {
@@ -1949,7 +1949,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-19T17:00:00-05:00"
 },
 "2026_15_CHI_BUF": {
@@ -1975,7 +1975,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-19T20:20:00-05:00"
 },
 "2026_15_ATL_WAS": {
@@ -2001,7 +2001,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-20T13:00:00-05:00"
 },
 "2026_15_BAL_PIT": {
@@ -2027,7 +2027,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-20T13:00:00-05:00"
 },
 "2026_15_CIN_CAR": {
@@ -2053,7 +2053,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-20T13:00:00-05:00"
 },
 "2026_15_CLE_NYG": {
@@ -2079,7 +2079,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-20T13:00:00-05:00"
 },
 "2026_15_IND_TEN": {
@@ -2105,7 +2105,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-20T13:00:00-05:00"
 },
 "2026_15_JAX_HOU": {
@@ -2131,7 +2131,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-20T13:00:00-05:00"
 },
 "2026_15_MIA_GB": {
@@ -2157,7 +2157,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-20T13:00:00-05:00"
 },
 "2026_15_NO_TB": {
@@ -2183,7 +2183,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-20T13:00:00-05:00"
 },
 "2026_15_NYJ_ARI": {
@@ -2209,7 +2209,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-20T16:05:00-05:00"
 },
 "2026_15_DAL_LA": {
@@ -2235,7 +2235,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-20T16:25:00-05:00"
 },
 "2026_15_DEN_LV": {
@@ -2261,7 +2261,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-20T16:25:00-05:00"
 },
 "2026_15_DET_MIN": {
@@ -2287,7 +2287,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-20T20:20:00-05:00"
 },
 "2026_15_NE_KC": {
@@ -2313,7 +2313,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-21T20:15:00-05:00"
 },
 "2026_16_HOU_PHI": {
@@ -2339,7 +2339,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-24T20:15:00-05:00"
 },
 "2026_16_GB_CHI": {
@@ -2365,7 +2365,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-25T13:00:00-05:00"
 },
 "2026_16_BUF_DEN": {
@@ -2391,7 +2391,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-25T16:30:00-05:00"
 },
 "2026_16_LA_SEA": {
@@ -2417,7 +2417,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-25T20:15:00-05:00"
 },
 "2026_16_ARI_NO": {
@@ -2443,7 +2443,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-27T13:00:00-05:00"
 },
 "2026_16_CAR_PIT": {
@@ -2469,7 +2469,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-27T13:00:00-05:00"
 },
 "2026_16_CIN_IND": {
@@ -2495,7 +2495,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-27T13:00:00-05:00"
 },
 "2026_16_CLE_BAL": {
@@ -2521,7 +2521,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-27T13:00:00-05:00"
 },
 "2026_16_LAC_MIA": {
@@ -2547,7 +2547,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-27T13:00:00-05:00"
 },
 "2026_16_NE_NYJ": {
@@ -2573,7 +2573,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-27T13:00:00-05:00"
 },
 "2026_16_TB_ATL": {
@@ -2599,7 +2599,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-27T13:00:00-05:00"
 },
 "2026_16_WAS_MIN": {
@@ -2625,7 +2625,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-27T13:00:00-05:00"
 },
 "2026_16_TEN_LV": {
@@ -2651,7 +2651,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-27T16:05:00-05:00"
 },
 "2026_16_SF_KC": {
@@ -2677,7 +2677,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-27T16:25:00-05:00"
 },
 "2026_16_JAX_DAL": {
@@ -2703,7 +2703,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-27T20:20:00-05:00"
 },
 "2026_16_NYG_DET": {
@@ -2729,7 +2729,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-28T20:15:00-05:00"
 },
 "2026_17_BAL_CIN": {
@@ -2755,7 +2755,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2026-12-31T20:15:00-05:00"
 },
 "2026_17_BUF_MIA": {
@@ -2781,7 +2781,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_DEN_NE": {
@@ -2807,7 +2807,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_IND_CLE": {
@@ -2833,7 +2833,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_KC_LAC": {
@@ -2859,7 +2859,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_LA_TB": {
@@ -2885,7 +2885,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_MIN_NYJ": {
@@ -2911,7 +2911,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_NO_ATL": {
@@ -2937,7 +2937,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_NYG_DAL": {
@@ -2963,7 +2963,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_PIT_TEN": {
@@ -2989,7 +2989,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_SEA_CAR": {
@@ -3015,7 +3015,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_WAS_JAX": {
@@ -3041,7 +3041,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_LV_ARI": {
@@ -3067,7 +3067,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2027-01-03T16:05:00-05:00"
 },
 "2026_17_DET_CHI": {
@@ -3093,7 +3093,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2027-01-03T16:25:00-05:00"
 },
 "2026_17_PHI_SF": {
@@ -3119,7 +3119,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2027-01-03T20:20:00-05:00"
 },
 "2026_17_HOU_GB": {
@@ -3145,7 +3145,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2027-01-04T20:15:00-05:00"
 },
 "2026_18_ATL_CAR": {
@@ -3171,7 +3171,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_CHI_MIN": {
@@ -3197,7 +3197,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_CLE_CIN": {
@@ -3223,7 +3223,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_DAL_WAS": {
@@ -3249,7 +3249,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_DET_GB": {
@@ -3275,7 +3275,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_JAX_IND": {
@@ -3301,7 +3301,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_LAC_DEN": {
@@ -3327,7 +3327,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_LV_KC": {
@@ -3353,7 +3353,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_MIA_NE": {
@@ -3379,7 +3379,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_NYJ_BUF": {
@@ -3405,7 +3405,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_PHI_NYG": {
@@ -3431,7 +3431,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_PIT_BAL": {
@@ -3457,7 +3457,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_SEA_LA": {
@@ -3483,7 +3483,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_SF_ARI": {
@@ -3509,7 +3509,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_TB_NO": {
@@ -3535,7 +3535,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_TEN_HOU": {
@@ -3561,7 +3561,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 11, 3:10 PM ET",
+"stamp": "Nov 12, 12:09 PM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 }
 }

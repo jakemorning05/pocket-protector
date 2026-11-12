@@ -48,33 +48,38 @@ def proj_line(pid, team, opp_team, week):
     return {k: (round(float(v), 3) if isinstance(v, (float, np.floating)) else v) for k, v in out.items()}
 
 
-def pool(team):
+def pool(team, wk):
     tp = H[H.team == team]
     recent = tp[tp.week >= tp.week.max() - 1]
     pl = recent.groupby('player_id').agg(grp=('grp', 'first'), car=('carries', 'mean'), tg=('targets', 'mean')).reset_index()
     pl = pl[~pl.player_id.isin(out_ids)]
     names = H.groupby('player_id').player_display_name.last()
     pl = pl[~pl.player_id.map(names).isin(set(NEWS['outs']) | OUT_BY_TEAM.get(team, set()))]
+    pl, back = P.add_returning(pl, H, team, wk)   # back from injury after missing recent games (overrides.json 'returning')
     ids = []
     qname = cur['qb'][team]['qb']
     qrow = H[(H.grp == 'QB') & (H.player_display_name == qname)]
     ids.append(qrow.player_id.iloc[0] if len(qrow) else 'new:' + qname)  # a starter with no passes yet is projected from his rating
     ids += pl[pl.grp == 'RB'].sort_values('car', ascending=False).player_id.head(3).tolist()
     ids += pl[pl.grp.isin(['WR', 'TE'])].sort_values('tg', ascending=False).player_id.head(5).tolist()
-    return ids
+    return ids, back
 
 
 games = []
 for g in unplayed:
     if g['wk'] > cw + 1: continue
     for team, o in ((g['a'], g['h']), (g['h'], g['a'])):
-        for pid in pool(team):
+        ids, back = pool(team, g['wk'])
+        recs = []
+        for pid in ids:
             r = proj_line(pid, team, o, g['wk'])
             if r and (r['pos'] == 'QB' or r['carries'] >= 2 or r.get('targets', 0) >= 2):
                 r['game'] = g['id']; r['wk'] = g['wk']; r['q'] = pid in q_ids; r['flag'] = NEWS['flags'].get(r['name'])
                 if abs(r['qb_adj']) >= 0.04 and r['pos'] != 'QB':
                     r['qbn'] = cur['qb'][team]['qb'] if g['wk'] <= P.QB_UNTIL.get(team, 99) else None
-                games.append(r)
+                recs.append(r)
+        P.share_adjust(recs, H, team, back)
+        games += [{k: (round(float(v), 3) if isinstance(v, (float, np.floating)) else v) for k, v in r.items()} for r in recs]
 
 # rest of season: every remaining game from ros_from on, for players in the coming-week pool; each game uses that week's expected starter
 ros = {}

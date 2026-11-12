@@ -1,5 +1,5 @@
 {
- "asof": "Wed, Nov 11, 3:09 PM ET",
+ "asof": "Thu, Nov 12, 12:07 PM ET",
  "outs": [
   "Josh Jacobs",
   "Puka Nacua",
@@ -9,10 +9,10 @@
   "Rhamondre Stevenson"
  ],
  "flags": {
-  "Patrick Mahomes": "Right elbow strain, day-to-day",
-  "Drew Lock": "Oblique injury plus elbow tendonitis; Week 10 starter unclear",
+  "Patrick Mahomes": "Elbow: full practice Wednesday, on track to start",
+  "Drew Lock": "Limited Wednesday (elbow, oblique) but starting Sunday at Las Vegas",
   "J.J. McCarthy": "Hip pointer, expected to play Thursday",
-  "Cam Skattebo": "Hamstring, expected back Thursday",
+  "Cam Skattebo": "Back from his hamstring injury; 'full go' Thursday",
   "Justin Herbert": "Finger imaging was negative, no fracture",
   "A.J. Brown": "Missed two games; Patriots plan for him to travel to Germany, no decision yet",
   "Carson Wentz": "Now Minnesota\u2019s backup after the Kirk Cousins trade",
@@ -24,9 +24,65 @@
   "Woody Marks": "David Montgomery (groin) hopes to practice soon; Marks' carries shrink when he returns.",
   "Caleb Douglas": "Kyle McCord starts at QB through Week 13 while Malik Willis is on IR.",
   "Joe Milton III": "Starting the rest of the way with Jalen Hurts out for the season.",
-  "Josh Downs": "Traded from Indianapolis to Kansas City on Nov 10."
+  "Josh Downs": "Traded from Indianapolis to Kansas City on Nov 10.",
+  "Devin Singletary": "Fewer carries with Cam Skattebo back",
+  "Carnell Tate": "Shoulder: did not practice Wednesday",
+  "Jakobi Meyers": "Ankle: did not practice Wednesday",
+  "Bhayshul Tuten": "Ankle, foot: did not practice Wednesday",
+  "T.J. Hockenson": "Wrist, chest: listed as not practicing (estimate)",
+  "Alvin Kamara": "Back: did not practice Wednesday",
+  "George Pickens": "Hamstring: limited Wednesday after missing Week 9"
  },
  "items": [
+  {
+   "team": "NYG",
+   "tag": "Injury",
+   "text": "Thursday night: Cam Skattebo is back from his hamstring injury and expected to be a full go, so the model projects him again and trims Devin Singletary's carries. Treylon Burks (foot) is also expected to return for Washington; center Lucas Patrick and TE Colson Yankoff are out.",
+   "src": "CBS Sports / SI, Nov 11",
+   "url": "https://www.cbssports.com/nfl/news/2026-nfl-week-10-injury-report-mike-evans-puka-nacua/"
+  },
+  {
+   "team": "KC",
+   "tag": "QB",
+   "text": "Patrick Mahomes (elbow) was a full participant in Wednesday practice, so he is on track to start Sunday at Atlanta.",
+   "src": "CBS Sports, Nov 11",
+   "url": "https://www.cbssports.com/nfl/news/2026-nfl-week-10-injury-report-mike-evans-puka-nacua/"
+  },
+  {
+   "team": "NE",
+   "tag": "Injury",
+   "text": "TreVeyon Henderson (illness) has been ruled out again, and Rhamondre Stevenson (knee) did not practice. A.J. Brown and Hunter Henry were limited. The Patriots play Detroit in Munich.",
+   "src": "CBS Sports, Nov 11",
+   "url": "https://www.cbssports.com/nfl/news/2026-nfl-week-10-injury-report-mike-evans-puka-nacua/"
+  },
+  {
+   "team": "LA",
+   "tag": "Injury",
+   "text": "Puka Nacua (knee, toe) did not practice and faces a multi-week absence, though he isn't officially on IR yet.",
+   "src": "CBS Sports, Nov 11",
+   "url": "https://www.cbssports.com/nfl/news/2026-nfl-week-10-injury-report-mike-evans-puka-nacua/"
+  },
+  {
+   "team": "TEN",
+   "tag": "Injury",
+   "text": "Rookie WR Carnell Tate (shoulder) and RB Tyjae Spears (knee) did not practice Wednesday. Both missed Week 8 before the bye.",
+   "src": "CBS Sports, Nov 11",
+   "url": "https://www.cbssports.com/nfl/news/2026-nfl-week-10-injury-report-mike-evans-puka-nacua/"
+  },
+  {
+   "team": "JAX",
+   "tag": "Injury",
+   "text": "Jakobi Meyers (ankle) and Bhayshul Tuten (ankle, foot) did not practice Wednesday after playing through their injuries last week.",
+   "src": "CBS Sports, Nov 11",
+   "url": "https://www.cbssports.com/nfl/news/2026-nfl-week-10-injury-report-mike-evans-puka-nacua/"
+  },
+  {
+   "team": "MIN",
+   "tag": "Injury",
+   "text": "T.J. Hockenson (wrist, chest) and Jauan Jennings (calf) were listed as non-participants on Minnesota's estimated report after Monday night's game.",
+   "src": "CBS Sports, Nov 11",
+   "url": "https://www.cbssports.com/nfl/news/2026-nfl-week-10-injury-report-mike-evans-puka-nacua/"
+  },
   {
    "team": "KC",
    "tag": "Trade",
@@ -273,6 +329,31 @@
    "url": "https://sports.yahoo.com/articles/jonathan-taylor-staying-colts-203756681.html"
   }
  ],
- "injuries": [],
+ "injuries": [
+  {
+   "team": "NE",
+   "name": "Carlton Davis III",
+   "pos": "CB",
+   "status": "Out",
+   "injury": "Knee",
+   "snap": 0.83
+  },
+  {
+   "team": "NE",
+   "name": "Ben Brown",
+   "pos": "C",
+   "status": "Out",
+   "injury": "Knee",
+   "snap": 0.62
+  },
+  {
+   "team": "WAS",
+   "name": "Lucas Patrick",
+   "pos": "C",
+   "status": "Out",
+   "injury": "Concussion",
+   "snap": 0.81
+  }
+ ],
  "injury_week": 10
 }

@@ -161,6 +161,43 @@ def project_new_qb(name, team, opp_team, H, lg, opp, q_new):
     return r
 
 
+def add_returning(pool, H, team, week):
+    """Add players listed in overrides.json 'returning' (back from injury after missing the team's recent games) to a team's
+    candidate pool, with usage from their last 4 games played. Returns the pool and the ids added."""
+    names = [r.get('name') for r in OVR.get('returning', []) if isinstance(r, dict) and r.get('team') == team and week <= r.get('through_week', 99)]
+    x = H[(H.team == team) & H.player_display_name.isin(names)]
+    if x.empty: return pool, set()
+    agg = dict(grp=('grp', 'first'), car=('carries', 'mean'), tg=('targets', 'mean'))
+    if 'att' in pool.columns: agg['att'] = ('attempts', 'mean')
+    rows = x.sort_values('week').groupby('player_id').tail(4).groupby('player_id').agg(**agg).reset_index()
+    ids = set(rows.player_id)
+    return pd.concat([pool[~pool.player_id.isin(ids)], rows], ignore_index=True), ids
+
+
+def share_adjust(recs, H, team, back_ids):
+    """When a regular returns, trim his teammates' volume so the position group's carries (RB) or targets (WR/TE) stay near the
+    team's totals over its last 4 games. Only used for teams with a returning player."""
+    if not back_ids: return
+    tw = H[H.team == team]
+    tw = tw[tw.week.isin(sorted(tw.week.unique())[-4:])]
+    for grp, vol, keys in (({'RB'}, 'carries', ('carries', 'rush_yds', 'rush_td')), ({'WR', 'TE'}, 'targets', ('targets', 'rec', 'rec_yds', 'rec_td'))):
+        mine = [r for r in recs if r.get('pos') in grp]
+        if not any(r['id'] in back_ids for r in mine): continue
+        cap = tw[tw.grp.isin(grp)].groupby('week')[vol].sum().mean()
+        back = sum(r.get(vol) or 0 for r in mine if r['id'] in back_ids)
+        rest = sum(r.get(vol) or 0 for r in mine if r['id'] not in back_ids)
+        if rest <= 0 or back + rest <= cap: continue
+        f = max(0.4, (cap - back) / rest)
+        for r in mine:
+            if r['id'] in back_ids: continue
+            td_cut = sum(r.get(k) or 0 for k in keys if k.endswith('_td')) * (1 - f)
+            for k in keys:
+                if r.get(k) is not None: r[k] = r[k] * f
+            if r.get('td_p') is not None:
+                r['td_p'] = 1 - math.exp(-max(0.0, -math.log(max(1e-6, 1 - r['td_p'])) - td_cut))
+            r['share_adj'] = round(f, 3)
+
+
 def backtest(weeks=range(4, 10), use_qb=True):
     err = {'pass_yds': [[], []], 'rush_yds': [[], []], 'rec_yds': [[], []]}
     for wk in weeks:
@@ -204,6 +241,7 @@ if __name__ == '__main__':
         names = H.groupby('player_id').player_display_name.last()
         manual_out = set(json.load(open(f'{D}/news.json'))['outs']) | {x.get('name') for x in OVR.get('players_out', []) if isinstance(x, dict) and x.get('team') == t}
         pool = pool[~pool.player_id.map(names).isin(manual_out)]
+        pool, back = add_returning(pool, H, t, gwk)
         # starting QB from the model's current starters (handles injuries and trades)
         qname = cur['qb'][t]['qb']
         qrow = H[(H.grp == 'QB') & (H.player_display_name == qname)]
@@ -211,11 +249,14 @@ if __name__ == '__main__':
         if len(qrow): picks.append(qrow.player_id.iloc[0])
         picks += pool[pool.grp == 'RB'].sort_values('car', ascending=False).player_id.head(2).tolist()
         picks += pool[pool.grp.isin(['WR', 'TE'])].sort_values('tg', ascending=False).player_id.head(4).tolist()
+        recs = []
         for pid in picks:
             r = project(pid, t, o, H, lg, opp, q_new=qn)
             if r and (r['pos'] == 'QB' or r.get('carries', 0) >= 3 or r.get('targets', 0) >= 2.5):
                 r['game'] = gid
-                proj.append({k: (round(v, 2) if isinstance(v, float) else v) for k, v in r.items()})
+                recs.append(r)
+        share_adjust(recs, H, t, back)
+        proj += [{k: (round(v, 2) if isinstance(v, float) else v) for k, v in r.items()} for r in recs]
         if not len(qrow):
             if qn is not None:
                 r = project_new_qb(qname, t, o, H, lg, opp, qn)

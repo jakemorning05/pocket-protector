@@ -12,18 +12,27 @@ D = os.path.join(os.path.dirname(__file__), '..', 'data')
 LOG = f'{D}/prop_log.json'
 STAT_COL = {'pass_yds': 'passing_yards', 'rush_yds': 'rushing_yards', 'rec_yds': 'receiving_yards'}
 
-# Kalshi "X+" markets for Bills at Vikings, read from Covers at 12:35 PM ET on Nov 9, 2026 (price = YES probability)
+# Kalshi "X+" markets for Commanders at Giants (Thursday night), from the Kalshi API at 12:15 PM ET on Nov 12, 2026: for each player,
+# the threshold whose price is closest to 50%. price = midpoint of the YES bid and ask; a YES pick costs the ask, a NO pick costs 1 - bid.
 NEW_PROPS = [
-    dict(game='2026_09_BUF_MIN', player='Josh Allen', stat='pass_yds', thr=225, price=0.57),
-    dict(game='2026_09_BUF_MIN', player='Dalton Kincaid', stat='rec_yds', thr=40, price=0.46),
-    dict(game='2026_09_BUF_MIN', player='Josh Allen', stat='rush_yds', thr=30, price=0.53),
-    dict(game='2026_09_BUF_MIN', player='James Cook', stat='rec_yds', thr=10, price=0.47),
-    dict(game='2026_09_BUF_MIN', player='Carson Wentz', stat='pass_yds', thr=200, price=0.58),
-    dict(game='2026_09_BUF_MIN', player='Justin Jefferson', stat='rec_yds', thr=70, price=0.63),
-    dict(game='2026_09_BUF_MIN', player='T.J. Hockenson', stat='rec_yds', thr=40, price=0.50),
-    dict(game='2026_09_BUF_MIN', player='Aaron Jones', stat='rush_yds', thr=30, price=0.54),
+    dict(game='2026_10_WAS_NYG', player='Jayden Daniels', stat='pass_yds', thr=200, price=0.495, bid=0.49, ask=0.5),
+    dict(game='2026_10_WAS_NYG', player='J.J. McCarthy', stat='pass_yds', thr=200, price=0.565, bid=0.56, ask=0.57),
+    dict(game='2026_10_WAS_NYG', player='Jayden Daniels', stat='rush_yds', thr=40, price=0.41, bid=0.4, ask=0.42),
+    dict(game='2026_10_WAS_NYG', player='Rachaad White', stat='rush_yds', thr=40, price=0.475, bid=0.45, ask=0.5),
+    dict(game='2026_10_WAS_NYG', player='Austin Ekeler', stat='rush_yds', thr=25, price=0.515, bid=0.49, ask=0.54),
+    dict(game='2026_10_WAS_NYG', player='Devin Singletary', stat='rush_yds', thr=25, price=0.515, bid=0.5, ask=0.53),
+    dict(game='2026_10_WAS_NYG', player='Malik Nabers', stat='rec_yds', thr=70, price=0.49, bid=0.48, ask=0.5),
+    dict(game='2026_10_WAS_NYG', player='Isaiah Likely', stat='rec_yds', thr=50, price=0.49, bid=0.48, ask=0.5),
+    dict(game='2026_10_WAS_NYG', player='Antonio Williams', stat='rec_yds', thr=40, price=0.545, bid=0.53, ask=0.56),
+    dict(game='2026_10_WAS_NYG', player='Stefon Diggs', stat='rec_yds', thr=50, price=0.39, bid=0.37, ask=0.41),
+    dict(game='2026_10_WAS_NYG', player='Chig Okonkwo', stat='rec_yds', thr=40, price=0.465, bid=0.44, ask=0.49),
+    dict(game='2026_10_WAS_NYG', player='Malachi Fields', stat='rec_yds', thr=20, price=0.59, bid=0.57, ask=0.61),
+    dict(game='2026_10_WAS_NYG', player='Darnell Mooney', stat='rec_yds', thr=15, price=0.53, bid=0.51, ask=0.55),
+    dict(game='2026_10_WAS_NYG', player='Van Jefferson', stat='rec_yds', thr=15, price=0.515, bid=0.49, ask=0.54),
+    dict(game='2026_10_WAS_NYG', player='Rachaad White', stat='rec_yds', thr=15, price=0.45, bid=0.43, ask=0.47),
+    dict(game='2026_10_WAS_NYG', player='Austin Ekeler', stat='rec_yds', thr=10, price=0.425, bid=0.4, ask=0.45),
 ]
-SOURCE = 'Kalshi via Covers, Nov 9 12:35 PM ET'
+SOURCE = 'Kalshi API, Nov 12 12:15 PM ET'
 
 
 def calibration():
@@ -69,8 +78,9 @@ def log():
         raw = p.get(pr['stat']) if p else None
         if raw is None: print('no projection for', pr); continue
         mu, sd, pov = prob_over(raw, pr['thr'], pr['stat'], cal)
-        side = 'YES' if pov > pr['price'] else 'NO'
-        edge = (pov - pr['price']) if side == 'YES' else ((1 - pov) - (1 - pr['price']))
+        bid, ask = pr.get('bid', pr['price']), pr.get('ask', pr['price'])   # buy YES at the ask; buy NO at 1 - bid
+        side = 'YES' if pov - ask > bid - pov else 'NO'
+        edge = (pov - ask) if side == 'YES' else (bid - pov)
         entries.append({**pr, 'source': SOURCE, 'raw_proj': round(raw, 1), 'proj': round(mu, 1), 'sd': round(sd, 1), 'p_over': round(pov, 3),
                         'pick': side, 'edge': round(edge, 3), 'actual': None, 'won': None, 'profit': None, 'pid': p['id']})
     json.dump(entries, open(LOG, 'w'), indent=1)
@@ -90,7 +100,7 @@ def grade(stats_csv=f'{D}/stats_player_week_2026.csv'):
         over = a >= e['thr']
         e['actual'] = a
         e['won'] = (over and e['pick'] == 'YES') or (not over and e['pick'] == 'NO')
-        cost = e['price'] if e['pick'] == 'YES' else 1 - e['price']
+        cost = e.get('ask', e['price']) if e['pick'] == 'YES' else 1 - e.get('bid', e['price'])
         e['profit'] = round((1 - cost) if e['won'] else -cost, 3)
     json.dump(entries, open(LOG, 'w'), indent=1)
     return entries
