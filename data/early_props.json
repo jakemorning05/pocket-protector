@@ -1,6 +1,6 @@
 {
  "week": 10,
- "asof": "Thu, Nov 12, 12:09 PM ET",
+ "asof": "Thu, Nov 12, 4:43 PM ET",
  "games": [
   {
    "id": "2026_10_WAS_NYG",
@@ -16,7 +16,7 @@
      "stat": "rec_yds",
      "line": 90.5,
      "proj": 68.6,
-     "p_over": 0.311,
+     "p_over": 0.31,
      "side": "Under",
      "games": 8
     },
@@ -26,8 +26,8 @@
      "pos": "QB",
      "stat": "pass_yds",
      "line": 185.5,
-     "proj": 216.4,
-     "p_over": 0.687,
+     "proj": 214.6,
+     "p_over": 0.675,
      "side": "Over",
      "games": 4
     },
@@ -37,8 +37,8 @@
      "pos": "TE",
      "stat": "rec_yds",
      "line": 44.5,
-     "proj": 34.6,
-     "p_over": 0.36,
+     "proj": 34.5,
+     "p_over": 0.359,
      "side": "Under",
      "games": 6
     }
@@ -71,8 +71,8 @@
      "pos": "RB",
      "stat": "rush_yds",
      "line": 107.5,
-     "proj": 91.5,
-     "p_over": 0.367,
+     "proj": 91.2,
+     "p_over": 0.364,
      "side": "Under",
      "games": 8
     },
@@ -94,7 +94,7 @@
      "stat": "rec_yds",
      "line": 51.5,
      "proj": 44.1,
-     "p_over": 0.41,
+     "p_over": 0.409,
      "side": "Under",
      "games": 5
     }
@@ -127,8 +127,8 @@
      "pos": "WR",
      "stat": "rec_yds",
      "line": 80.5,
-     "proj": 57.4,
-     "p_over": 0.276,
+     "proj": 57.3,
+     "p_over": 0.275,
      "side": "Under",
      "games": 4
     },
@@ -139,7 +139,7 @@
      "stat": "rec_yds",
      "line": 54.5,
      "proj": 43.3,
-     "p_over": 0.364,
+     "p_over": 0.363,
      "side": "Under",
      "games": 8
     },
@@ -150,7 +150,7 @@
      "stat": "rec_yds",
      "line": 60.5,
      "proj": 48.6,
-     "p_over": 0.366,
+     "p_over": 0.364,
      "side": "Under",
      "games": 5
     }
@@ -184,9 +184,20 @@
      "stat": "rec_yds",
      "line": 36.5,
      "proj": 53.4,
-     "p_over": 0.676,
+     "p_over": 0.677,
      "side": "Over",
      "games": 7
+    },
+    {
+     "player": "Tyler Shough",
+     "team": "NO",
+     "pos": "QB",
+     "stat": "pass_yds",
+     "line": 260.5,
+     "proj": 231.3,
+     "p_over": 0.342,
+     "side": "Under",
+     "games": 8
     },
     {
      "player": "Chris Olave",
@@ -195,18 +206,7 @@
      "stat": "rec_yds",
      "line": 92.5,
      "proj": 73.6,
-     "p_over": 0.343,
-     "side": "Under",
-     "games": 8
-    },
-    {
-     "player": "Tyler Shough",
-     "team": "NO",
-     "pos": "QB",
-     "stat": "pass_yds",
-     "line": 260.5,
-     "proj": 232.2,
-     "p_over": 0.346,
+     "p_over": 0.342,
      "side": "Under",
      "games": 8
     }
@@ -219,7 +219,7 @@
      "p": 0.565
     },
     {
-     "player": "Audric Estim\u00e9",
+     "player": "Audric Estime",
      "team": "NO",
      "pos": "RB",
      "p": 0.483
@@ -239,8 +239,8 @@
      "pos": "QB",
      "stat": "pass_yds",
      "line": 293.5,
-     "proj": 243.6,
-     "p_over": 0.26,
+     "proj": 243.3,
+     "p_over": 0.259,
      "side": "Under",
      "games": 8
     },
@@ -250,7 +250,7 @@
      "pos": "WR",
      "stat": "rec_yds",
      "line": 37.5,
-     "proj": 48.6,
+     "proj": 48.5,
      "p_over": 0.626,
      "side": "Over",
      "games": 9
@@ -295,8 +295,8 @@
      "pos": "QB",
      "stat": "pass_yds",
      "line": 181.5,
-     "proj": 220.5,
-     "p_over": 0.725,
+     "proj": 219.0,
+     "p_over": 0.715,
      "side": "Over",
      "games": 8
     },
@@ -317,7 +317,7 @@
      "pos": "WR",
      "stat": "rec_yds",
      "line": 38.5,
-     "proj": 49.3,
+     "proj": 49.2,
      "p_over": 0.621,
      "side": "Over",
      "games": 8
@@ -352,7 +352,7 @@
      "stat": "rec_yds",
      "line": 63.5,
      "proj": 50.4,
-     "p_over": 0.356,
+     "p_over": 0.355,
      "side": "Under",
      "games": 8
     },
@@ -373,8 +373,8 @@
      "pos": "WR",
      "stat": "rec_yds",
      "line": 66.5,
-     "proj": 56.3,
-     "p_over": 0.395,
+     "proj": 56.2,
+     "p_over": 0.394,
      "side": "Under",
      "games": 9
     }
@@ -407,20 +407,9 @@
      "pos": "RB",
      "stat": "rush_yds",
      "line": 92.5,
-     "proj": 62.4,
-     "p_over": 0.196,
+     "proj": 62.2,
+     "p_over": 0.193,
      "side": "Under",
-     "games": 9
-    },
-    {
-     "player": "Daniel Jones",
-     "team": "IND",
-     "pos": "QB",
-     "stat": "pass_yds",
-     "line": 180.5,
-     "proj": 229.0,
-     "p_over": 0.756,
-     "side": "Over",
      "games": 9
     },
     {
@@ -430,9 +419,20 @@
      "stat": "rec_yds",
      "line": 70.5,
      "proj": 47.3,
-     "p_over": 0.248,
+     "p_over": 0.246,
      "side": "Under",
      "games": 5
+    },
+    {
+     "player": "Daniel Jones",
+     "team": "IND",
+     "pos": "QB",
+     "stat": "pass_yds",
+     "line": 180.5,
+     "proj": 227.9,
+     "p_over": 0.75,
+     "side": "Over",
+     "games": 9
     }
    ],
    "td": [
@@ -463,8 +463,8 @@
      "pos": "QB",
      "stat": "pass_yds",
      "line": 288.5,
-     "proj": 248.3,
-     "p_over": 0.308,
+     "proj": 248.2,
+     "p_over": 0.307,
      "side": "Under",
      "games": 9
     },
@@ -474,8 +474,8 @@
      "pos": "WR",
      "stat": "rec_yds",
      "line": 95.5,
-     "proj": 73.8,
-     "p_over": 0.321,
+     "proj": 73.7,
+     "p_over": 0.32,
      "side": "Under",
      "games": 9
     },
@@ -486,7 +486,7 @@
      "stat": "rec_yds",
      "line": 96.5,
      "proj": 75.1,
-     "p_over": 0.326,
+     "p_over": 0.325,
      "side": "Under",
      "games": 9
     }
@@ -520,8 +520,19 @@
      "stat": "rec_yds",
      "line": 66.5,
      "proj": 50.0,
-     "p_over": 0.321,
+     "p_over": 0.319,
      "side": "Under",
+     "games": 9
+    },
+    {
+     "player": "Matthew Stafford",
+     "team": "LA",
+     "pos": "QB",
+     "stat": "pass_yds",
+     "line": 228.5,
+     "proj": 257.6,
+     "p_over": 0.635,
+     "side": "Over",
      "games": 9
     },
     {
@@ -530,21 +541,10 @@
      "pos": "RB",
      "stat": "rush_yds",
      "line": 35.5,
-     "proj": 45.3,
-     "p_over": 0.636,
+     "proj": 45.1,
+     "p_over": 0.635,
      "side": "Over",
      "games": 6
-    },
-    {
-     "player": "Matthew Stafford",
-     "team": "LA",
-     "pos": "QB",
-     "stat": "pass_yds",
-     "line": 228.5,
-     "proj": 257.2,
-     "p_over": 0.633,
-     "side": "Over",
-     "games": 9
     }
    ],
    "td": [
@@ -575,8 +575,8 @@
      "pos": "TE",
      "stat": "rec_yds",
      "line": 92.5,
-     "proj": 63.0,
-     "p_over": 0.239,
+     "proj": 62.9,
+     "p_over": 0.237,
      "side": "Under",
      "games": 7
     },
@@ -586,8 +586,8 @@
      "pos": "QB",
      "stat": "pass_yds",
      "line": 187.5,
-     "proj": 231.2,
-     "p_over": 0.731,
+     "proj": 230.2,
+     "p_over": 0.725,
      "side": "Over",
      "games": 3
     },
@@ -631,8 +631,8 @@
      "pos": "QB",
      "stat": "pass_yds",
      "line": 276.5,
-     "proj": 238.9,
-     "p_over": 0.308,
+     "proj": 238.3,
+     "p_over": 0.306,
      "side": "Under",
      "games": 9
     },
@@ -642,8 +642,8 @@
      "pos": "TE",
      "stat": "rec_yds",
      "line": 69.5,
-     "proj": 54.1,
-     "p_over": 0.339,
+     "proj": 54.0,
+     "p_over": 0.338,
      "side": "Under",
      "games": 8
     },
@@ -688,7 +688,7 @@
      "stat": "rec_yds",
      "line": 92.5,
      "proj": 70.5,
-     "p_over": 0.313,
+     "p_over": 0.312,
      "side": "Under",
      "games": 8
     },
@@ -698,8 +698,8 @@
      "pos": "RB",
      "stat": "rush_yds",
      "line": 55.5,
-     "proj": 44.1,
-     "p_over": 0.339,
+     "proj": 43.9,
+     "p_over": 0.336,
      "side": "Under",
      "games": 8
     },
@@ -743,9 +743,20 @@
      "pos": "QB",
      "stat": "pass_yds",
      "line": 198.5,
-     "proj": 226.3,
-     "p_over": 0.658,
+     "proj": 225.1,
+     "p_over": 0.65,
      "side": "Over",
+     "games": 8
+    },
+    {
+     "player": "Jacoby Brissett",
+     "team": "BAL",
+     "pos": "QB",
+     "stat": "pass_yds",
+     "line": 245.5,
+     "proj": 222.6,
+     "p_over": 0.368,
+     "side": "Under",
      "games": 8
     },
     {
@@ -754,21 +765,10 @@
      "pos": "WR",
      "stat": "rec_yds",
      "line": 50.5,
-     "proj": 40.6,
-     "p_over": 0.374,
+     "proj": 40.5,
+     "p_over": 0.372,
      "side": "Under",
      "games": 6
-    },
-    {
-     "player": "Jacoby Brissett",
-     "team": "BAL",
-     "pos": "QB",
-     "stat": "pass_yds",
-     "line": 245.5,
-     "proj": 224.0,
-     "p_over": 0.374,
-     "side": "Under",
-     "games": 8
     }
    ],
    "td": [
