@@ -1,5 +1,5 @@
 {
-  "_help": "Edit this file when news changes who starts. qb_starters: the QB a team will start (short name as in play-by-play, e.g. C.Wentz) and the last week it applies to; after that week the site goes back to whoever actually started the team's most recent game. players_out: non-QB regulars ruled out in the news but not yet on an official injury report (side = off or def). Save on GitHub and the site rebuilds in a few minutes. traded: players moved to a new team since their last game (projections use the new team; QBs are set in qb_starters). returning: regulars back from injury after missing the team's recent games (they're added to the projections through through_week, and teammates' carries or targets are trimmed to fit).",
+  "_help": "Edit this file when news changes who starts. qb_starters: the QB a team will start (short name as in play-by-play, e.g. C.Wentz) and the last week it applies to; after that week the site goes back to whoever actually started the team's most recent game. players_out: non-QB regulars ruled out in the news but not yet on an official injury report (side = off or def). Save on GitHub and the site rebuilds in a few minutes. traded: players moved to a new team since their last game (projections use the new team; QBs are set in qb_starters). returning: regulars back from injury after missing the team's recent games (they're added to the projections through through_week, and teammates' carries or targets are trimmed to fit). results: final scores (game id, away, home, source) for games nflverse hasn't posted yet; ignored once its scores are in.",
   "qb_starters": [
     {
       "team": "SEA",
@@ -272,6 +272,14 @@
       "name": "Cam Skattebo",
       "through_week": 10,
       "source": "CBS Sports, Nov 11: back from his hamstring injury, 'full go' Thursday"
+    }
+  ],
+  "results": [
+    {
+      "game": "2026_10_WAS_NYG",
+      "away": 24,
+      "home": 21,
+      "source": "ESPN final, Nov 12"
     }
   ]
 }

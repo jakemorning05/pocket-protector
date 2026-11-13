@@ -43,9 +43,9 @@
   "p": 0.579,
   "ev": 0.106,
   "logged": "Nov 9, 4:45 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null
+  "close": 1.5,
+  "clv": 0.0,
+  "result": "win"
  },
  {
   "game": "2026_10_WAS_NYG",
@@ -59,9 +59,9 @@
   "p": 0.653,
   "ev": 0.246,
   "logged": "Nov 9, 4:45 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null
+  "close": 40.5,
+  "clv": -2.0,
+  "result": "win"
  },
  {
   "game": "2026_10_NE_DET",

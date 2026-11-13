@@ -24,6 +24,7 @@ for y in $(seq $FIRST $SEASON); do
 done
 get "stats_player/stats_player_week_$SEASON.csv" "stats_player_week_$SEASON.csv"
 get draft_picks/draft_picks.csv draft_picks.csv   # rates quarterbacks with little NFL history by draft slot
+"${PYTHON:-python3}" pipeline/manual_results.py   # final scores nflverse hasn't posted yet (overrides.json)
 
 echo "Rebuilding model outputs"
 rm -f data/inj_cache.pkl   # injury reports may have changed

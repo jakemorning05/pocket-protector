@@ -1,5 +1,5 @@
 {
- "asof": "Thu, Nov 12, 5:46 PM ET",
+ "asof": "Thu, Nov 12, 11:31 PM ET",
  "outs": [
   "Josh Jacobs",
   "Puka Nacua",
@@ -12,7 +12,7 @@
   "Patrick Mahomes": "Elbow: full practice Wednesday, on track to start",
   "Drew Lock": "Limited Wednesday (elbow, oblique) but starting Sunday at Las Vegas",
   "J.J. McCarthy": "Hip pointer, expected to play Thursday",
-  "Cam Skattebo": "Back from his hamstring injury; 'full go' Thursday",
+  "Cam Skattebo": "18 carries, 78 yards, 2 TDs in his return Thursday",
   "Justin Herbert": "Finger imaging was negative, no fracture",
   "A.J. Brown": "Missed two games; Patriots plan for him to travel to Germany, no decision yet",
   "Carson Wentz": "Now Minnesota’s backup after the Kirk Cousins trade",
@@ -35,9 +35,31 @@
   "Jonathan Taylor": "Limited in practice this week",
   "Jared Goff": "Limited in practice this week",
   "Amon-Ra St. Brown": "Limited in practice this week",
-  "Chuba Hubbard": "Did not practice Wednesday (rest) or Thursday"
+  "Chuba Hubbard": "Did not practice Wednesday (rest) or Thursday",
+  "Chig Okonkwo": "Back injury Thursday; returned in the second half"
  },
  "items": [
+  {
+   "team": "WAS",
+   "tag": "Result",
+   "text": "Final: Commanders 24, Giants 21. Jayden Daniels threw for 249 yards and 3 touchdowns (2 interceptions), and the winning score was a 32-yard Stefon Diggs catch with 1:05 left. The model had Washington at 54% and a 24-23 final.",
+   "src": "ESPN, Nov 12",
+   "url": "https://www.espn.com/nfl/game/_/gameId/401873052"
+  },
+  {
+   "team": "NYG",
+   "tag": "Fantasy",
+   "text": "Cam Skattebo was straight back to a lead role in his return from the hamstring injury: 18 carries, 78 yards and 2 touchdowns. Isaiah Likely had a career-high 127 yards on 9 catches, including a 66-yard touchdown.",
+   "src": "ESPN / PFF, Nov 12",
+   "url": "https://www.pff.com/news/nfl-week-10-recap-immediate-fantasy-football-takeaways-from-commanders-giants"
+  },
+  {
+   "team": "WAS",
+   "tag": "Injury",
+   "text": "Chig Okonkwo hurt his back early in the second quarter but returned after halftime, and Ben Sinnott handled the receiving tight end role while he was out. Colson Yankoff left with a knee injury, and Tremaine Edmunds suffered a season-ending chest injury.",
+   "src": "PFF, Nov 12",
+   "url": "https://www.pff.com/news/nfl-week-10-recap-immediate-fantasy-football-takeaways-from-commanders-giants"
+  },
   {
    "team": "IND",
    "tag": "Injury",
