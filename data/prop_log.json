@@ -158,9 +158,9 @@
   "p_over": 0.618,
   "pick": "YES",
   "edge": 0.118,
-  "actual": null,
-  "won": null,
-  "profit": null,
+  "actual": 249.0,
+  "won": true,
+  "profit": 0.5,
   "pid": "00-0039910"
  },
  {
@@ -178,9 +178,9 @@
   "p_over": 0.593,
   "pick": "YES",
   "edge": 0.023,
-  "actual": null,
-  "won": null,
-  "profit": null,
+  "actual": 293.0,
+  "won": true,
+  "profit": 0.43,
   "pid": "00-0039923"
  },
  {
@@ -198,9 +198,9 @@
   "p_over": 0.399,
   "pick": "NO",
   "edge": 0.001,
-  "actual": null,
-  "won": null,
-  "profit": null,
+  "actual": 28.0,
+  "won": true,
+  "profit": 0.4,
   "pid": "00-0039910"
  },
  {
@@ -218,9 +218,9 @@
   "p_over": 0.461,
   "pick": "NO",
   "edge": -0.011,
-  "actual": null,
-  "won": null,
-  "profit": null,
+  "actual": 47.0,
+  "won": false,
+  "profit": -0.55,
   "pid": "00-0037256"
  },
  {
@@ -238,9 +238,9 @@
   "p_over": 0.502,
   "pick": "NO",
   "edge": -0.012,
-  "actual": null,
-  "won": null,
-  "profit": null,
+  "actual": 26.0,
+  "won": false,
+  "profit": -0.51,
   "pid": "00-0033699"
  },
  {
@@ -258,9 +258,9 @@
   "p_over": 0.436,
   "pick": "NO",
   "edge": 0.064,
-  "actual": null,
-  "won": null,
-  "profit": null,
+  "actual": 3.0,
+  "won": true,
+  "profit": 0.5,
   "pid": "00-0035250"
  },
  {
@@ -278,9 +278,9 @@
   "p_over": 0.492,
   "pick": "YES",
   "edge": -0.008,
-  "actual": null,
-  "won": null,
-  "profit": null,
+  "actual": 44.0,
+  "won": false,
+  "profit": -0.5,
   "pid": "00-0039337"
  },
  {
@@ -298,9 +298,9 @@
   "p_over": 0.558,
   "pick": "YES",
   "edge": 0.058,
-  "actual": null,
-  "won": null,
-  "profit": null,
+  "actual": 127.0,
+  "won": true,
+  "profit": 0.5,
   "pid": "00-0037838"
  },
  {
@@ -318,9 +318,9 @@
   "p_over": 0.41,
   "pick": "NO",
   "edge": 0.12,
-  "actual": null,
-  "won": null,
-  "profit": null,
+  "actual": 42.0,
+  "won": false,
+  "profit": -0.47,
   "pid": "00-0041040"
  },
  {
@@ -338,9 +338,9 @@
   "p_over": 0.361,
   "pick": "NO",
   "edge": 0.009,
-  "actual": null,
-  "won": null,
-  "profit": null,
+  "actual": 83.0,
+  "won": false,
+  "profit": -0.63,
   "pid": "00-0031588"
  },
  {
@@ -358,9 +358,9 @@
   "p_over": 0.428,
   "pick": "NO",
   "edge": 0.012,
-  "actual": null,
-  "won": null,
-  "profit": null,
+  "actual": 24.0,
+  "won": true,
+  "profit": 0.44,
   "pid": "00-0037809"
  },
  {
@@ -378,9 +378,9 @@
   "p_over": 0.704,
   "pick": "YES",
   "edge": 0.094,
-  "actual": null,
-  "won": null,
-  "profit": null,
+  "actual": 62.0,
+  "won": true,
+  "profit": 0.39,
   "pid": "00-0041042"
  },
  {
@@ -398,9 +398,9 @@
   "p_over": 0.674,
   "pick": "YES",
   "edge": 0.124,
-  "actual": null,
-  "won": null,
-  "profit": null,
+  "actual": 8.0,
+  "won": false,
+  "profit": -0.55,
   "pid": "00-0036309"
  },
  {
@@ -418,9 +418,9 @@
   "p_over": 0.619,
   "pick": "YES",
   "edge": 0.149,
-  "actual": null,
-  "won": null,
-  "profit": null,
+  "actual": 5.0,
+  "won": false,
+  "profit": -0.47,
   "pid": "00-0037256"
  },
  {
@@ -438,9 +438,9 @@
   "p_over": 0.606,
   "pick": "YES",
   "edge": 0.156,
-  "actual": null,
-  "won": null,
-  "profit": null,
+  "actual": 26.0,
+  "won": true,
+  "profit": 0.55,
   "pid": "00-0033699"
  }
 ]

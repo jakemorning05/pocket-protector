@@ -80,7 +80,7 @@
 "mk_spread": 2.5,
 "mk_total": 50.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-15T09:30:00-05:00"
 },
 "2026_10_BUF_NYJ": {
@@ -106,7 +106,7 @@
 "mk_spread": -8.5,
 "mk_total": 50.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-15T13:00:00-05:00"
 },
 "2026_10_CAR_NO": {
@@ -132,7 +132,7 @@
 "mk_spread": 2.5,
 "mk_total": 48.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-15T13:00:00-05:00"
 },
 "2026_10_HOU_CLE": {
@@ -158,7 +158,7 @@
 "mk_spread": -4.5,
 "mk_total": 40.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-15T13:00:00-05:00"
 },
 "2026_10_JAX_TEN": {
@@ -184,7 +184,7 @@
 "mk_spread": -10.5,
 "mk_total": 46.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-15T13:00:00-05:00"
 },
 "2026_10_KC_ATL": {
@@ -210,7 +210,7 @@
 "mk_spread": -3.0,
 "mk_total": 46.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-15T13:00:00-05:00"
 },
 "2026_10_MIA_IND": {
@@ -236,7 +236,7 @@
 "mk_spread": 3.5,
 "mk_total": 38.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-15T13:00:00-05:00"
 },
 "2026_10_MIN_GB": {
@@ -262,7 +262,7 @@
 "mk_spread": 3.0,
 "mk_total": 41.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-15T13:00:00-05:00"
 },
 "2026_10_LA_ARI": {
@@ -288,7 +288,7 @@
 "mk_spread": -9.5,
 "mk_total": 39.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-15T16:05:00-05:00"
 },
 "2026_10_SEA_LV": {
@@ -314,7 +314,7 @@
 "mk_spread": -6.5,
 "mk_total": 40.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-15T16:05:00-05:00"
 },
 "2026_10_SF_DAL": {
@@ -340,7 +340,7 @@
 "mk_spread": -3.5,
 "mk_total": 55.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-15T16:25:00-05:00"
 },
 "2026_10_PIT_CIN": {
@@ -366,7 +366,7 @@
 "mk_spread": 3.5,
 "mk_total": 49.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-15T20:20:00-05:00"
 },
 "2026_10_LAC_BAL": {
@@ -392,7 +392,7 @@
 "mk_spread": 4.5,
 "mk_total": 38.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-16T20:15:00-05:00"
 },
 "2026_11_IND_HOU": {
@@ -401,12 +401,12 @@
 "h": "HOU",
 "p": 0.7355,
 "m": 8.11,
-"tot": 45.6,
+"tot": 45.5,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 1.17,
-"Offense & defense efficiency": 0.74,
-"Points scored & allowed": 0.8,
+"Offense & defense efficiency": 0.75,
+"Points scored & allowed": 0.79,
 "Turnovers": 0.81,
 "Special teams": -1.01,
 "Rest & travel": -0.62,
@@ -418,7 +418,7 @@
 "mk_spread": 10.0,
 "mk_total": 44.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-19T20:15:00-05:00"
 },
 "2026_11_ARI_KC": {
@@ -432,7 +432,7 @@
 "Home field": 2.63,
 "Quarterbacks": 3.84,
 "Offense & defense efficiency": 2.36,
-"Points scored & allowed": 1.15,
+"Points scored & allowed": 1.16,
 "Turnovers": 0.26,
 "Special teams": 0.09,
 "Rest & travel": -1.2,
@@ -444,7 +444,7 @@
 "mk_spread": 14.0,
 "mk_total": 42.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-22T13:00:00-05:00"
 },
 "2026_11_BAL_CAR": {
@@ -453,7 +453,7 @@
 "h": "CAR",
 "p": 0.5896,
 "m": 2.92,
-"tot": 47.5,
+"tot": 47.4,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 1.22,
@@ -470,33 +470,33 @@
 "mk_spread": 1.5,
 "mk_total": 44.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-22T13:00:00-05:00"
 },
 "2026_11_JAX_NYG": {
 "wk": 11,
 "a": "JAX",
 "h": "NYG",
-"p": 0.2742,
-"m": -7.73,
-"tot": 45.9,
+"p": 0.2812,
+"m": -7.46,
+"tot": 46.1,
 "c": {
 "Home field": 2.63,
-"Quarterbacks": -2.22,
-"Offense & defense efficiency": -2.67,
-"Points scored & allowed": -1.37,
-"Turnovers": -0.55,
-"Special teams": 0.33,
+"Quarterbacks": -1.83,
+"Offense & defense efficiency": -2.6,
+"Points scored & allowed": -1.42,
+"Turnovers": -0.54,
+"Special teams": 0.16,
 "Rest & travel": 0.53,
 "Division game": 0.0,
 "Injuries": 0.0,
 "Past betting lines": -4.4
 },
 "pick": "JAX",
-"mk_spread": null,
-"mk_total": null,
+"mk_spread": -6.0,
+"mk_total": 44.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-22T13:00:00-05:00"
 },
 "2026_11_MIA_BUF": {
@@ -509,7 +509,7 @@
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 5.71,
-"Offense & defense efficiency": 2.85,
+"Offense & defense efficiency": 2.86,
 "Points scored & allowed": 1.56,
 "Turnovers": 0.19,
 "Special teams": 1.02,
@@ -522,20 +522,20 @@
 "mk_spread": 16.5,
 "mk_total": 46.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-22T13:00:00-05:00"
 },
 "2026_11_NO_CHI": {
 "wk": 11,
 "a": "NO",
 "h": "CHI",
-"p": 0.813,
+"p": 0.8129,
 "m": 11.45,
-"tot": 50.2,
+"tot": 50.1,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 1.94,
-"Offense & defense efficiency": 1.52,
+"Offense & defense efficiency": 1.51,
 "Points scored & allowed": 1.04,
 "Turnovers": 0.08,
 "Special teams": 1.26,
@@ -548,7 +548,7 @@
 "mk_spread": 9.5,
 "mk_total": 48.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-22T13:00:00-05:00"
 },
 "2026_11_TB_DET": {
@@ -557,12 +557,12 @@
 "h": "DET",
 "p": 0.685,
 "m": 6.21,
-"tot": 50.8,
+"tot": 50.7,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -0.16,
 "Offense & defense efficiency": 0.62,
-"Points scored & allowed": 0.1,
+"Points scored & allowed": 0.09,
 "Turnovers": -0.12,
 "Special teams": 0.79,
 "Rest & travel": -0.25,
@@ -574,7 +574,7 @@
 "mk_spread": 3.5,
 "mk_total": 47.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-22T13:00:00-05:00"
 },
 "2026_11_TEN_DAL": {
@@ -583,12 +583,12 @@
 "h": "DAL",
 "p": 0.8355,
 "m": 12.58,
-"tot": 50.3,
+"tot": 50.2,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 1.91,
 "Offense & defense efficiency": 1.17,
-"Points scored & allowed": 0.81,
+"Points scored & allowed": 0.82,
 "Turnovers": -0.04,
 "Special teams": 1.09,
 "Rest & travel": -0.04,
@@ -600,7 +600,7 @@
 "mk_spread": 7.5,
 "mk_total": 51.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-22T13:00:00-05:00"
 },
 "2026_11_NYJ_LAC": {
@@ -613,7 +613,7 @@
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 0.35,
-"Offense & defense efficiency": -0.79,
+"Offense & defense efficiency": -0.8,
 "Points scored & allowed": -0.11,
 "Turnovers": -0.33,
 "Special teams": -0.52,
@@ -626,7 +626,7 @@
 "mk_spread": 1.5,
 "mk_total": 42.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-22T16:05:00-05:00"
 },
 "2026_11_LV_DEN": {
@@ -635,7 +635,7 @@
 "h": "DEN",
 "p": 0.7861,
 "m": 10.22,
-"tot": 45.1,
+"tot": 45.0,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 2.3,
@@ -652,21 +652,21 @@
 "mk_spread": 8.5,
 "mk_total": 41.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-22T16:25:00-05:00"
 },
 "2026_11_PIT_PHI": {
 "wk": 11,
 "a": "PIT",
 "h": "PHI",
-"p": 0.3153,
+"p": 0.3152,
 "m": -6.2,
-"tot": 40.9,
+"tot": 40.8,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -4.11,
-"Offense & defense efficiency": -2.45,
-"Points scored & allowed": -0.89,
+"Offense & defense efficiency": -2.46,
+"Points scored & allowed": -0.88,
 "Turnovers": -0.44,
 "Special teams": 0.61,
 "Rest & travel": 0.17,
@@ -678,21 +678,21 @@
 "mk_spread": -4.5,
 "mk_total": 38.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-22T16:25:00-05:00"
 },
 "2026_11_MIN_SF": {
 "wk": 11,
 "a": "MIN",
 "h": "SF",
-"p": 0.6082,
+"p": 0.6081,
 "m": 3.54,
 "tot": 44.6,
 "c": {
 "Home field": 0.0,
 "Quarterbacks": 0.59,
-"Offense & defense efficiency": 2.33,
-"Points scored & allowed": 0.39,
+"Offense & defense efficiency": 2.32,
+"Points scored & allowed": 0.4,
 "Turnovers": -0.11,
 "Special teams": -1.67,
 "Rest & travel": 1.14,
@@ -704,33 +704,33 @@
 "mk_spread": 3.5,
 "mk_total": 45.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-22T20:20:00-05:00"
 },
 "2026_11_CIN_WAS": {
 "wk": 11,
 "a": "CIN",
 "h": "WAS",
-"p": 0.4303,
-"m": -2.26,
-"tot": 51.4,
+"p": 0.4314,
+"m": -2.23,
+"tot": 51.6,
 "c": {
 "Home field": 2.63,
-"Quarterbacks": -0.01,
-"Offense & defense efficiency": -0.21,
-"Points scored & allowed": -0.96,
-"Turnovers": 0.06,
-"Special teams": -0.2,
+"Quarterbacks": -0.07,
+"Offense & defense efficiency": -0.29,
+"Points scored & allowed": -0.91,
+"Turnovers": 0.05,
+"Special teams": -0.04,
 "Rest & travel": 0.56,
 "Division game": 0.0,
 "Injuries": -1.14,
 "Past betting lines": -2.99
 },
 "pick": "CIN",
-"mk_spread": null,
-"mk_total": null,
+"mk_spread": -3.5,
+"mk_total": 51.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-23T20:15:00-05:00"
 },
 "2026_12_GB_LA": {
@@ -738,12 +738,12 @@
 "a": "GB",
 "h": "LA",
 "p": 0.6352,
-"m": 4.71,
+"m": 4.7,
 "tot": 48.8,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -0.4,
-"Offense & defense efficiency": 2.6,
+"Offense & defense efficiency": 2.59,
 "Points scored & allowed": 0.12,
 "Turnovers": -0.6,
 "Special teams": -0.36,
@@ -756,7 +756,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-25T20:00:00-05:00"
 },
 "2026_12_CHI_DET": {
@@ -782,21 +782,21 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-26T13:00:00-05:00"
 },
 "2026_12_PHI_DAL": {
 "wk": 12,
 "a": "PHI",
 "h": "DAL",
-"p": 0.759,
+"p": 0.7591,
 "m": 9.57,
-"tot": 47.8,
+"tot": 47.7,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 4.57,
-"Offense & defense efficiency": 0.6,
-"Points scored & allowed": 0.5,
+"Offense & defense efficiency": 0.61,
+"Points scored & allowed": 0.49,
 "Turnovers": 0.15,
 "Special teams": 0.0,
 "Rest & travel": -0.64,
@@ -808,7 +808,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-26T16:30:00-05:00"
 },
 "2026_12_KC_BUF": {
@@ -834,7 +834,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-26T20:20:00-05:00"
 },
 "2026_12_DEN_PIT": {
@@ -860,7 +860,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-27T15:00:00-05:00"
 },
 "2026_12_ATL_MIN": {
@@ -886,16 +886,16 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-29T13:00:00-05:00"
 },
 "2026_12_BAL_HOU": {
 "wk": 12,
 "a": "BAL",
 "h": "HOU",
-"p": 0.6867,
+"p": 0.6868,
 "m": 6.62,
-"tot": 44.5,
+"tot": 44.4,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 2.09,
@@ -912,7 +912,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-29T13:00:00-05:00"
 },
 "2026_12_LV_CLE": {
@@ -921,7 +921,7 @@
 "h": "CLE",
 "p": 0.5957,
 "m": 3.3,
-"tot": 43.8,
+"tot": 43.7,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 2.45,
@@ -938,7 +938,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-29T13:00:00-05:00"
 },
 "2026_12_NO_CIN": {
@@ -964,23 +964,23 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-29T13:00:00-05:00"
 },
 "2026_12_NYG_IND": {
 "wk": 12,
 "a": "NYG",
 "h": "IND",
-"p": 0.6243,
-"m": 4.31,
-"tot": 46.8,
+"p": 0.6167,
+"m": 4.04,
+"tot": 47.0,
 "c": {
 "Home field": 2.63,
-"Quarterbacks": 1.07,
-"Offense & defense efficiency": 0.5,
-"Points scored & allowed": -0.28,
-"Turnovers": -0.42,
-"Special teams": -0.25,
+"Quarterbacks": 0.67,
+"Offense & defense efficiency": 0.42,
+"Points scored & allowed": -0.23,
+"Turnovers": -0.44,
+"Special teams": -0.08,
 "Rest & travel": 0.54,
 "Division game": 0.0,
 "Injuries": 0.0,
@@ -990,7 +990,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-29T13:00:00-05:00"
 },
 "2026_12_NYJ_MIA": {
@@ -1016,21 +1016,21 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-29T13:00:00-05:00"
 },
 "2026_12_TEN_JAX": {
 "wk": 12,
 "a": "TEN",
 "h": "JAX",
-"p": 0.8768,
+"p": 0.8767,
 "m": 15.77,
 "tot": 45.3,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 1.78,
-"Offense & defense efficiency": 3.3,
-"Points scored & allowed": 2.11,
+"Offense & defense efficiency": 3.29,
+"Points scored & allowed": 2.12,
 "Turnovers": 0.48,
 "Special teams": 0.58,
 "Rest & travel": -0.6,
@@ -1042,7 +1042,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-29T16:05:00-05:00"
 },
 "2026_12_SEA_SF": {
@@ -1051,7 +1051,7 @@
 "h": "SF",
 "p": 0.5777,
 "m": 2.67,
-"tot": 46.4,
+"tot": 46.3,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 2.17,
@@ -1068,23 +1068,23 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-29T16:25:00-05:00"
 },
 "2026_12_WAS_ARI": {
 "wk": 12,
 "a": "WAS",
 "h": "ARI",
-"p": 0.3848,
-"m": -3.99,
-"tot": 47.8,
+"p": 0.3838,
+"m": -4.02,
+"tot": 48.0,
 "c": {
 "Home field": 2.63,
-"Quarterbacks": -3.46,
-"Offense & defense efficiency": -0.08,
-"Points scored & allowed": -0.23,
-"Turnovers": -0.33,
-"Special teams": -0.33,
+"Quarterbacks": -3.39,
+"Offense & defense efficiency": -0.0,
+"Points scored & allowed": -0.28,
+"Turnovers": -0.31,
+"Special teams": -0.48,
 "Rest & travel": -1.63,
 "Division game": 0.0,
 "Injuries": 0.0,
@@ -1094,7 +1094,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-29T16:25:00-05:00"
 },
 "2026_12_NE_LAC": {
@@ -1103,7 +1103,7 @@
 "h": "LAC",
 "p": 0.3317,
 "m": -5.92,
-"tot": 47.4,
+"tot": 47.3,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -1.46,
@@ -1120,7 +1120,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-29T20:20:00-05:00"
 },
 "2026_12_CAR_TB": {
@@ -1146,7 +1146,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-11-30T20:15:00-05:00"
 },
 "2026_13_KC_LA": {
@@ -1172,7 +1172,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-03T20:15:00-05:00"
 },
 "2026_13_CIN_CLE": {
@@ -1198,7 +1198,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-06T13:00:00-05:00"
 },
 "2026_13_DET_ATL": {
@@ -1224,20 +1224,20 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-06T13:00:00-05:00"
 },
 "2026_13_GB_NO": {
 "wk": 13,
 "a": "GB",
 "h": "NO",
-"p": 0.4083,
+"p": 0.4084,
 "m": -3.32,
 "tot": 47.6,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -1.67,
-"Offense & defense efficiency": -0.99,
+"Offense & defense efficiency": -0.98,
 "Points scored & allowed": -0.83,
 "Turnovers": -0.79,
 "Special teams": 0.67,
@@ -1250,7 +1250,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-06T13:00:00-05:00"
 },
 "2026_13_JAX_CHI": {
@@ -1276,7 +1276,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-06T13:00:00-05:00"
 },
 "2026_13_LAC_TB": {
@@ -1302,23 +1302,23 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-06T13:00:00-05:00"
 },
 "2026_13_SF_NYG": {
 "wk": 13,
 "a": "SF",
 "h": "NYG",
-"p": 0.2631,
-"m": -9.09,
-"tot": 48.5,
+"p": 0.2693,
+"m": -8.82,
+"tot": 48.7,
 "c": {
 "Home field": 2.63,
-"Quarterbacks": -2.74,
-"Offense & defense efficiency": -3.69,
-"Points scored & allowed": -0.96,
-"Turnovers": -0.15,
-"Special teams": 1.12,
+"Quarterbacks": -2.35,
+"Offense & defense efficiency": -3.61,
+"Points scored & allowed": -1.01,
+"Turnovers": -0.13,
+"Special teams": 0.95,
 "Rest & travel": -2.08,
 "Division game": 0.0,
 "Injuries": 0.0,
@@ -1328,23 +1328,23 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-06T13:00:00-05:00"
 },
 "2026_13_WAS_TEN": {
 "wk": 13,
 "a": "WAS",
 "h": "TEN",
-"p": 0.3605,
-"m": -5.12,
-"tot": 45.8,
+"p": 0.3595,
+"m": -5.16,
+"tot": 46.0,
 "c": {
 "Home field": 2.63,
-"Quarterbacks": -2.21,
-"Offense & defense efficiency": -1.53,
-"Points scored & allowed": -0.5,
-"Turnovers": -0.26,
-"Special teams": -0.37,
+"Quarterbacks": -2.14,
+"Offense & defense efficiency": -1.45,
+"Points scored & allowed": -0.55,
+"Turnovers": -0.24,
+"Special teams": -0.53,
 "Rest & travel": -0.6,
 "Division game": 0.0,
 "Injuries": 0.0,
@@ -1354,7 +1354,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-06T13:00:00-05:00"
 },
 "2026_13_MIA_DEN": {
@@ -1380,21 +1380,21 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-06T16:05:00-05:00"
 },
 "2026_13_PHI_ARI": {
 "wk": 13,
 "a": "PHI",
 "h": "ARI",
-"p": 0.5259,
-"m": 0.93,
-"tot": 43.3,
+"p": 0.526,
+"m": 0.94,
+"tot": 43.2,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 1.42,
 "Offense & defense efficiency": 0.88,
-"Points scored & allowed": -0.05,
+"Points scored & allowed": -0.06,
 "Turnovers": 0.12,
 "Special teams": -1.04,
 "Rest & travel": -2.41,
@@ -1406,7 +1406,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-06T16:05:00-05:00"
 },
 "2026_13_BUF_NE": {
@@ -1432,7 +1432,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-06T16:25:00-05:00"
 },
 "2026_13_CAR_MIN": {
@@ -1458,7 +1458,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-06T16:25:00-05:00"
 },
 "2026_13_HOU_PIT": {
@@ -1484,20 +1484,20 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-06T20:20:00-05:00"
 },
 "2026_13_DAL_SEA": {
 "wk": 13,
 "a": "DAL",
 "h": "SEA",
-"p": 0.5881,
+"p": 0.588,
 "m": 3.19,
 "tot": 48.7,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -1.78,
-"Offense & defense efficiency": 2.06,
+"Offense & defense efficiency": 2.05,
 "Points scored & allowed": 0.7,
 "Turnovers": -0.12,
 "Special teams": 0.53,
@@ -1510,7 +1510,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-07T20:15:00-05:00"
 },
 "2026_14_MIN_NE": {
@@ -1536,7 +1536,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-10T20:15:00-05:00"
 },
 "2026_14_ATL_CLE": {
@@ -1550,7 +1550,7 @@
 "Home field": 2.63,
 "Quarterbacks": -0.3,
 "Offense & defense efficiency": -1.93,
-"Points scored & allowed": -0.23,
+"Points scored & allowed": -0.24,
 "Turnovers": 0.24,
 "Special teams": 1.18,
 "Rest & travel": -0.03,
@@ -1562,7 +1562,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-13T13:00:00-05:00"
 },
 "2026_14_CHI_MIA": {
@@ -1588,7 +1588,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-13T13:00:00-05:00"
 },
 "2026_14_DEN_NYJ": {
@@ -1602,7 +1602,7 @@
 "Home field": 2.63,
 "Quarterbacks": -0.71,
 "Offense & defense efficiency": -1.01,
-"Points scored & allowed": -1.04,
+"Points scored & allowed": -1.05,
 "Turnovers": -0.31,
 "Special teams": 0.29,
 "Rest & travel": -1.04,
@@ -1614,23 +1614,23 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-13T13:00:00-05:00"
 },
 "2026_14_HOU_WAS": {
 "wk": 14,
 "a": "HOU",
 "h": "WAS",
-"p": 0.4719,
-"m": -1.06,
-"tot": 45.2,
+"p": 0.4728,
+"m": -1.03,
+"tot": 45.4,
 "c": {
 "Home field": 2.63,
-"Quarterbacks": 0.42,
-"Offense & defense efficiency": -0.33,
-"Points scored & allowed": -0.76,
-"Turnovers": -0.06,
-"Special teams": 0.73,
+"Quarterbacks": 0.35,
+"Offense & defense efficiency": -0.41,
+"Points scored & allowed": -0.71,
+"Turnovers": -0.08,
+"Special teams": 0.88,
 "Rest & travel": -0.64,
 "Division game": 0.0,
 "Injuries": 0.0,
@@ -1640,7 +1640,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-13T13:00:00-05:00"
 },
 "2026_14_IND_PHI": {
@@ -1649,7 +1649,7 @@
 "h": "PHI",
 "p": 0.4731,
 "m": -1.01,
-"tot": 43.8,
+"tot": 43.7,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -3.29,
@@ -1666,7 +1666,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-13T13:00:00-05:00"
 },
 "2026_14_NO_CAR": {
@@ -1692,7 +1692,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-13T13:00:00-05:00"
 },
 "2026_14_TB_BAL": {
@@ -1718,16 +1718,16 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-13T13:00:00-05:00"
 },
 "2026_14_TEN_DET": {
 "wk": 14,
 "a": "TEN",
 "h": "DET",
-"p": 0.8428,
+"p": 0.8427,
 "m": 15.14,
-"tot": 50.4,
+"tot": 50.3,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 2.22,
@@ -1744,14 +1744,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-13T13:00:00-05:00"
 },
 "2026_14_LAC_LV": {
 "wk": 14,
 "a": "LAC",
 "h": "LV",
-"p": 0.4933,
+"p": 0.4934,
 "m": -0.25,
 "tot": 46.3,
 "c": {
@@ -1770,7 +1770,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-13T16:05:00-05:00"
 },
 "2026_14_KC_CIN": {
@@ -1796,7 +1796,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-13T16:25:00-05:00"
 },
 "2026_14_LA_SF": {
@@ -1809,7 +1809,7 @@
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 0.31,
-"Offense & defense efficiency": 0.51,
+"Offense & defense efficiency": 0.5,
 "Points scored & allowed": 0.33,
 "Turnovers": 0.2,
 "Special teams": 0.16,
@@ -1822,23 +1822,23 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-13T16:25:00-05:00"
 },
 "2026_14_NYG_SEA": {
 "wk": 14,
 "a": "NYG",
 "h": "SEA",
-"p": 0.7249,
-"m": 9.0,
-"tot": 42.8,
+"p": 0.7189,
+"m": 8.73,
+"tot": 43.0,
 "c": {
 "Home field": 2.63,
-"Quarterbacks": 0.57,
-"Offense & defense efficiency": 2.61,
-"Points scored & allowed": 0.77,
-"Turnovers": -0.09,
-"Special teams": 0.71,
+"Quarterbacks": 0.17,
+"Offense & defense efficiency": 2.52,
+"Points scored & allowed": 0.82,
+"Turnovers": -0.1,
+"Special teams": 0.88,
 "Rest & travel": -2.04,
 "Division game": 0.0,
 "Injuries": 0.0,
@@ -1848,7 +1848,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-13T16:25:00-05:00"
 },
 "2026_14_BUF_GB": {
@@ -1857,7 +1857,7 @@
 "h": "GB",
 "p": 0.4263,
 "m": -2.8,
-"tot": 52.0,
+"tot": 51.9,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -0.16,
@@ -1874,7 +1874,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-13T20:20:00-05:00"
 },
 "2026_14_PIT_JAX": {
@@ -1900,22 +1900,22 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-14T20:15:00-05:00"
 },
 "2026_15_SF_LAC": {
 "wk": 15,
 "a": "SF",
 "h": "LAC",
-"p": 0.3394,
+"p": 0.3395,
 "m": -6.53,
-"tot": 48.7,
+"tot": 48.6,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -1.16,
 "Offense & defense efficiency": -4.02,
-"Points scored & allowed": -1.56,
-"Turnovers": -0.41,
+"Points scored & allowed": -1.57,
+"Turnovers": -0.4,
 "Special teams": 0.32,
 "Rest & travel": -0.02,
 "Division game": 0.0,
@@ -1926,7 +1926,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-17T20:15:00-05:00"
 },
 "2026_15_SEA_PHI": {
@@ -1940,7 +1940,7 @@
 "Home field": 2.63,
 "Quarterbacks": -2.79,
 "Offense & defense efficiency": -2.66,
-"Points scored & allowed": -1.19,
+"Points scored & allowed": -1.2,
 "Turnovers": -0.02,
 "Special teams": -0.53,
 "Rest & travel": -1.84,
@@ -1952,7 +1952,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-19T17:00:00-05:00"
 },
 "2026_15_CHI_BUF": {
@@ -1965,7 +1965,7 @@
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -0.12,
-"Offense & defense efficiency": 1.58,
+"Offense & defense efficiency": 1.59,
 "Points scored & allowed": 0.29,
 "Turnovers": 0.25,
 "Special teams": -1.31,
@@ -1978,23 +1978,23 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-19T20:20:00-05:00"
 },
 "2026_15_ATL_WAS": {
 "wk": 15,
 "a": "ATL",
 "h": "WAS",
-"p": 0.5713,
-"m": 2.84,
-"tot": 47.4,
+"p": 0.5723,
+"m": 2.87,
+"tot": 47.6,
 "c": {
 "Home field": 2.63,
-"Quarterbacks": 0.25,
-"Offense & defense efficiency": -0.87,
-"Points scored & allowed": -0.14,
-"Turnovers": 0.47,
-"Special teams": 0.97,
+"Quarterbacks": 0.18,
+"Offense & defense efficiency": -0.95,
+"Points scored & allowed": -0.1,
+"Turnovers": 0.45,
+"Special teams": 1.12,
 "Rest & travel": -0.03,
 "Division game": 0.0,
 "Injuries": 0.0,
@@ -2004,7 +2004,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-20T13:00:00-05:00"
 },
 "2026_15_BAL_PIT": {
@@ -2030,7 +2030,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-20T13:00:00-05:00"
 },
 "2026_15_CIN_CAR": {
@@ -2056,23 +2056,23 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-20T13:00:00-05:00"
 },
 "2026_15_CLE_NYG": {
 "wk": 15,
 "a": "CLE",
 "h": "NYG",
-"p": 0.5449,
-"m": 1.78,
-"tot": 42.6,
+"p": 0.5516,
+"m": 2.05,
+"tot": 42.8,
 "c": {
 "Home field": 2.63,
-"Quarterbacks": -2.1,
-"Offense & defense efficiency": 0.16,
-"Points scored & allowed": 0.33,
-"Turnovers": -0.1,
-"Special teams": 0.32,
+"Quarterbacks": -1.71,
+"Offense & defense efficiency": 0.23,
+"Points scored & allowed": 0.29,
+"Turnovers": -0.09,
+"Special teams": 0.15,
 "Rest & travel": -0.02,
 "Division game": 0.0,
 "Injuries": 0.0,
@@ -2082,21 +2082,21 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-20T13:00:00-05:00"
 },
 "2026_15_IND_TEN": {
 "wk": 15,
 "a": "IND",
 "h": "TEN",
-"p": 0.4105,
+"p": 0.4106,
 "m": -3.57,
 "tot": 46.2,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -0.62,
-"Offense & defense efficiency": -1.12,
-"Points scored & allowed": -0.46,
+"Offense & defense efficiency": -1.11,
+"Points scored & allowed": -0.47,
 "Turnovers": 0.49,
 "Special teams": -0.66,
 "Rest & travel": -0.58,
@@ -2108,21 +2108,21 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-20T13:00:00-05:00"
 },
 "2026_15_JAX_HOU": {
 "wk": 15,
 "a": "JAX",
 "h": "HOU",
-"p": 0.4275,
+"p": 0.4276,
 "m": -2.88,
 "tot": 44.8,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 0.01,
-"Offense & defense efficiency": -1.44,
-"Points scored & allowed": -0.85,
+"Offense & defense efficiency": -1.43,
+"Points scored & allowed": -0.86,
 "Turnovers": -0.16,
 "Special teams": -0.93,
 "Rest & travel": -0.42,
@@ -2134,7 +2134,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-20T13:00:00-05:00"
 },
 "2026_15_MIA_GB": {
@@ -2143,7 +2143,7 @@
 "h": "GB",
 "p": 0.7356,
 "m": 9.94,
-"tot": 45.7,
+"tot": 45.6,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 1.65,
@@ -2160,14 +2160,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-20T13:00:00-05:00"
 },
 "2026_15_NO_TB": {
 "wk": 15,
 "a": "NO",
 "h": "TB",
-"p": 0.6584,
+"p": 0.6583,
 "m": 6.44,
 "tot": 45.7,
 "c": {
@@ -2186,7 +2186,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-20T13:00:00-05:00"
 },
 "2026_15_NYJ_ARI": {
@@ -2199,9 +2199,9 @@
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -2.04,
-"Offense & defense efficiency": 0.36,
+"Offense & defense efficiency": 0.37,
 "Points scored & allowed": 0.02,
-"Turnovers": -0.07,
+"Turnovers": -0.06,
 "Special teams": -0.59,
 "Rest & travel": -1.64,
 "Division game": 0.0,
@@ -2212,7 +2212,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-20T16:05:00-05:00"
 },
 "2026_15_DAL_LA": {
@@ -2220,12 +2220,12 @@
 "a": "DAL",
 "h": "LA",
 "p": 0.6014,
-"m": 4.06,
-"tot": 53.7,
+"m": 4.05,
+"tot": 53.6,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 0.09,
-"Offense & defense efficiency": 2.64,
+"Offense & defense efficiency": 2.63,
 "Points scored & allowed": 0.56,
 "Turnovers": -0.09,
 "Special teams": -1.46,
@@ -2238,7 +2238,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-20T16:25:00-05:00"
 },
 "2026_15_DEN_LV": {
@@ -2264,14 +2264,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-20T16:25:00-05:00"
 },
 "2026_15_DET_MIN": {
 "wk": 15,
 "a": "DET",
 "h": "MIN",
-"p": 0.4813,
+"p": 0.4812,
 "m": -0.74,
 "tot": 47.0,
 "c": {
@@ -2290,7 +2290,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-20T20:20:00-05:00"
 },
 "2026_15_NE_KC": {
@@ -2316,21 +2316,21 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-21T20:15:00-05:00"
 },
 "2026_16_HOU_PHI": {
 "wk": 16,
 "a": "HOU",
 "h": "PHI",
-"p": 0.3478,
+"p": 0.3477,
 "m": -6.46,
 "tot": 40.8,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -4.46,
-"Offense & defense efficiency": -1.29,
-"Points scored & allowed": -0.94,
+"Offense & defense efficiency": -1.3,
+"Points scored & allowed": -0.93,
 "Turnovers": -0.51,
 "Special teams": 1.44,
 "Rest & travel": -0.45,
@@ -2342,7 +2342,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-24T20:15:00-05:00"
 },
 "2026_16_GB_CHI": {
@@ -2351,7 +2351,7 @@
 "h": "CHI",
 "p": 0.6102,
 "m": 4.62,
-"tot": 49.9,
+"tot": 49.8,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 0.28,
@@ -2368,7 +2368,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-25T13:00:00-05:00"
 },
 "2026_16_BUF_DEN": {
@@ -2394,21 +2394,21 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-25T16:30:00-05:00"
 },
 "2026_16_LA_SEA": {
 "wk": 16,
 "a": "LA",
 "h": "SEA",
-"p": 0.5378,
+"p": 0.5377,
 "m": 1.56,
-"tot": 45.1,
+"tot": 45.0,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -1.87,
 "Offense & defense efficiency": -0.58,
-"Points scored & allowed": 0.14,
+"Points scored & allowed": 0.15,
 "Turnovers": -0.03,
 "Special teams": 1.98,
 "Rest & travel": 0.14,
@@ -2420,7 +2420,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-25T20:15:00-05:00"
 },
 "2026_16_ARI_NO": {
@@ -2446,7 +2446,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-27T13:00:00-05:00"
 },
 "2026_16_CAR_PIT": {
@@ -2472,14 +2472,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-27T13:00:00-05:00"
 },
 "2026_16_CIN_IND": {
 "wk": 16,
 "a": "CIN",
 "h": "IND",
-"p": 0.4087,
+"p": 0.4086,
 "m": -3.81,
 "tot": 51.6,
 "c": {
@@ -2498,7 +2498,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-27T13:00:00-05:00"
 },
 "2026_16_CLE_BAL": {
@@ -2511,7 +2511,7 @@
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -1.95,
-"Offense & defense efficiency": 1.61,
+"Offense & defense efficiency": 1.6,
 "Points scored & allowed": 0.13,
 "Turnovers": -0.1,
 "Special teams": -0.51,
@@ -2524,7 +2524,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-27T13:00:00-05:00"
 },
 "2026_16_LAC_MIA": {
@@ -2550,7 +2550,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-27T13:00:00-05:00"
 },
 "2026_16_NE_NYJ": {
@@ -2576,7 +2576,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-27T13:00:00-05:00"
 },
 "2026_16_TB_ATL": {
@@ -2602,23 +2602,23 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-27T13:00:00-05:00"
 },
 "2026_16_WAS_MIN": {
 "wk": 16,
 "a": "WAS",
 "h": "MIN",
-"p": 0.6297,
-"m": 5.46,
-"tot": 43.3,
+"p": 0.6288,
+"m": 5.43,
+"tot": 43.5,
 "c": {
 "Home field": 2.63,
-"Quarterbacks": -0.5,
-"Offense & defense efficiency": 0.46,
-"Points scored & allowed": 0.81,
-"Turnovers": -0.08,
-"Special teams": 1.08,
+"Quarterbacks": -0.44,
+"Offense & defense efficiency": 0.53,
+"Points scored & allowed": 0.77,
+"Turnovers": -0.06,
+"Special teams": 0.93,
 "Rest & travel": -0.62,
 "Division game": 0.0,
 "Injuries": 0.0,
@@ -2628,7 +2628,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-27T13:00:00-05:00"
 },
 "2026_16_TEN_LV": {
@@ -2641,8 +2641,8 @@
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -0.8,
-"Offense & defense efficiency": -0.14,
-"Points scored & allowed": 0.43,
+"Offense & defense efficiency": -0.15,
+"Points scored & allowed": 0.44,
 "Turnovers": 0.06,
 "Special teams": 0.63,
 "Rest & travel": -1.23,
@@ -2654,7 +2654,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-27T16:05:00-05:00"
 },
 "2026_16_SF_KC": {
@@ -2662,13 +2662,13 @@
 "a": "SF",
 "h": "KC",
 "p": 0.5185,
-"m": 0.76,
-"tot": 49.6,
+"m": 0.77,
+"tot": 49.5,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 0.29,
-"Offense & defense efficiency": -0.51,
-"Points scored & allowed": -0.28,
+"Offense & defense efficiency": -0.5,
+"Points scored & allowed": -0.29,
 "Turnovers": 0.12,
 "Special teams": 0.35,
 "Rest & travel": -2.0,
@@ -2680,7 +2680,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-27T16:25:00-05:00"
 },
 "2026_16_JAX_DAL": {
@@ -2706,23 +2706,23 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-27T20:20:00-05:00"
 },
 "2026_16_NYG_DET": {
 "wk": 16,
 "a": "NYG",
 "h": "DET",
-"p": 0.7644,
-"m": 11.89,
-"tot": 50.9,
+"p": 0.7593,
+"m": 11.62,
+"tot": 51.1,
 "c": {
 "Home field": 2.63,
-"Quarterbacks": 2.67,
-"Offense & defense efficiency": 2.3,
-"Points scored & allowed": 0.55,
-"Turnovers": 0.28,
-"Special teams": 0.59,
+"Quarterbacks": 2.27,
+"Offense & defense efficiency": 2.22,
+"Points scored & allowed": 0.59,
+"Turnovers": 0.27,
+"Special teams": 0.77,
 "Rest & travel": -0.03,
 "Division game": 0.0,
 "Injuries": 0.0,
@@ -2732,7 +2732,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-28T20:15:00-05:00"
 },
 "2026_17_BAL_CIN": {
@@ -2758,7 +2758,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2026-12-31T20:15:00-05:00"
 },
 "2026_17_BUF_MIA": {
@@ -2771,7 +2771,7 @@
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -1.81,
-"Offense & defense efficiency": -2.85,
+"Offense & defense efficiency": -2.86,
 "Points scored & allowed": -1.56,
 "Turnovers": -0.19,
 "Special teams": -1.02,
@@ -2784,7 +2784,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_DEN_NE": {
@@ -2810,7 +2810,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_IND_CLE": {
@@ -2818,14 +2818,14 @@
 "a": "IND",
 "h": "CLE",
 "p": 0.5567,
-"m": 2.45,
+"m": 2.46,
 "tot": 44.5,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 1.04,
 "Offense & defense efficiency": -0.65,
 "Points scored & allowed": -0.05,
-"Turnovers": 0.52,
+"Turnovers": 0.53,
 "Special teams": -0.07,
 "Rest & travel": -0.02,
 "Division game": 0.0,
@@ -2836,7 +2836,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_KC_LAC": {
@@ -2862,7 +2862,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_LA_TB": {
@@ -2888,7 +2888,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_MIN_NYJ": {
@@ -2914,7 +2914,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_NO_ATL": {
@@ -2927,7 +2927,7 @@
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 1.24,
-"Offense & defense efficiency": 2.18,
+"Offense & defense efficiency": 2.17,
 "Points scored & allowed": 0.22,
 "Turnovers": 0.11,
 "Special teams": -1.26,
@@ -2940,23 +2940,23 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_NYG_DAL": {
 "wk": 17,
 "a": "NYG",
 "h": "DAL",
-"p": 0.6622,
-"m": 7.21,
-"tot": 50.7,
+"p": 0.6564,
+"m": 6.94,
+"tot": 50.9,
 "c": {
 "Home field": 2.63,
-"Quarterbacks": 2.35,
-"Offense & defense efficiency": 0.54,
-"Points scored & allowed": 0.07,
-"Turnovers": 0.03,
-"Special teams": 0.18,
+"Quarterbacks": 1.96,
+"Offense & defense efficiency": 0.47,
+"Points scored & allowed": 0.12,
+"Turnovers": 0.02,
+"Special teams": 0.35,
 "Rest & travel": -0.46,
 "Division game": -0.87,
 "Injuries": 0.0,
@@ -2966,15 +2966,15 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_PIT_TEN": {
 "wk": 17,
 "a": "PIT",
 "h": "TEN",
-"p": 0.3279,
-"m": -7.68,
+"p": 0.328,
+"m": -7.67,
 "tot": 43.6,
 "c": {
 "Home field": 2.63,
@@ -2992,15 +2992,15 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_SEA_CAR": {
 "wk": 17,
 "a": "SEA",
 "h": "CAR",
-"p": 0.3757,
-"m": -5.46,
+"p": 0.3758,
+"m": -5.45,
 "tot": 44.6,
 "c": {
 "Home field": 2.63,
@@ -3018,23 +3018,23 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_WAS_JAX": {
 "wk": 17,
 "a": "WAS",
 "h": "JAX",
-"p": 0.7122,
-"m": 9.64,
-"tot": 47.4,
+"p": 0.7114,
+"m": 9.6,
+"tot": 47.6,
 "c": {
 "Home field": 2.63,
-"Quarterbacks": -0.43,
-"Offense & defense efficiency": 1.77,
-"Points scored & allowed": 1.61,
-"Turnovers": 0.22,
-"Special teams": 0.2,
+"Quarterbacks": -0.36,
+"Offense & defense efficiency": 1.85,
+"Points scored & allowed": 1.57,
+"Turnovers": 0.23,
+"Special teams": 0.05,
 "Rest & travel": -0.04,
 "Division game": 0.0,
 "Injuries": 0.0,
@@ -3044,21 +3044,21 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_LV_ARI": {
 "wk": 17,
 "a": "LV",
 "h": "ARI",
-"p": 0.5626,
-"m": 2.71,
+"p": 0.5627,
+"m": 2.72,
 "tot": 47.5,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -0.45,
 "Offense & defense efficiency": 1.59,
-"Points scored & allowed": -0.16,
+"Points scored & allowed": -0.17,
 "Turnovers": -0.13,
 "Special teams": -0.59,
 "Rest & travel": -0.01,
@@ -3070,7 +3070,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2027-01-03T16:05:00-05:00"
 },
 "2026_17_DET_CHI": {
@@ -3079,7 +3079,7 @@
 "h": "CHI",
 "p": 0.512,
 "m": 0.52,
-"tot": 54.1,
+"tot": 54.0,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 0.44,
@@ -3096,7 +3096,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2027-01-03T16:25:00-05:00"
 },
 "2026_17_PHI_SF": {
@@ -3105,7 +3105,7 @@
 "h": "SF",
 "p": 0.7555,
 "m": 11.92,
-"tot": 45.5,
+"tot": 45.4,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 4.97,
@@ -3122,7 +3122,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2027-01-03T20:20:00-05:00"
 },
 "2026_17_HOU_GB": {
@@ -3148,7 +3148,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2027-01-04T20:15:00-05:00"
 },
 "2026_18_ATL_CAR": {
@@ -3174,7 +3174,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_CHI_MIN": {
@@ -3200,7 +3200,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_CLE_CIN": {
@@ -3226,23 +3226,23 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_DAL_WAS": {
 "wk": 18,
 "a": "DAL",
 "h": "WAS",
-"p": 0.469,
-"m": -1.39,
-"tot": 52.1,
+"p": 0.4699,
+"m": -1.36,
+"tot": 52.2,
 "c": {
 "Home field": 2.63,
-"Quarterbacks": 0.3,
-"Offense & defense efficiency": 0.36,
-"Points scored & allowed": -0.31,
-"Turnovers": 0.3,
-"Special teams": -0.71,
+"Quarterbacks": 0.23,
+"Offense & defense efficiency": 0.28,
+"Points scored & allowed": -0.27,
+"Turnovers": 0.28,
+"Special teams": -0.56,
 "Rest & travel": -0.64,
 "Division game": -0.87,
 "Injuries": 0.0,
@@ -3252,14 +3252,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_DET_GB": {
 "wk": 18,
 "a": "DET",
 "h": "GB",
-"p": 0.4356,
+"p": 0.4357,
 "m": -2.91,
 "tot": 51.0,
 "c": {
@@ -3278,14 +3278,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_JAX_IND": {
 "wk": 18,
 "a": "JAX",
 "h": "IND",
-"p": 0.3368,
+"p": 0.3367,
 "m": -7.56,
 "tot": 47.8,
 "c": {
@@ -3304,7 +3304,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_LAC_DEN": {
@@ -3330,7 +3330,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_LV_KC": {
@@ -3356,7 +3356,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_MIA_NE": {
@@ -3382,14 +3382,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_NYJ_BUF": {
 "wk": 18,
 "a": "NYJ",
 "h": "BUF",
-"p": 0.7318,
+"p": 0.7317,
 "m": 11.09,
 "tot": 50.6,
 "c": {
@@ -3408,23 +3408,23 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_PHI_NYG": {
 "wk": 18,
 "a": "PHI",
 "h": "NYG",
-"p": 0.5912,
-"m": 4.14,
-"tot": 42.1,
+"p": 0.5971,
+"m": 4.41,
+"tot": 42.3,
 "c": {
 "Home field": 2.63,
-"Quarterbacks": 2.22,
-"Offense & defense efficiency": 0.05,
-"Points scored & allowed": 0.42,
-"Turnovers": 0.11,
-"Special teams": -0.18,
+"Quarterbacks": 2.62,
+"Offense & defense efficiency": 0.13,
+"Points scored & allowed": 0.37,
+"Turnovers": 0.13,
+"Special teams": -0.35,
 "Rest & travel": -0.0,
 "Division game": -0.87,
 "Injuries": 0.0,
@@ -3434,7 +3434,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_PIT_BAL": {
@@ -3460,7 +3460,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_SEA_LA": {
@@ -3474,7 +3474,7 @@
 "Home field": 2.63,
 "Quarterbacks": 1.87,
 "Offense & defense efficiency": 0.58,
-"Points scored & allowed": -0.14,
+"Points scored & allowed": -0.15,
 "Turnovers": 0.03,
 "Special teams": -1.98,
 "Rest & travel": -0.06,
@@ -3486,21 +3486,21 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_SF_ARI": {
 "wk": 18,
 "a": "SF",
 "h": "ARI",
-"p": 0.3022,
-"m": -9.3,
+"p": 0.3023,
+"m": -9.29,
 "tot": 49.7,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -3.55,
-"Offense & defense efficiency": -2.87,
-"Points scored & allowed": -1.43,
+"Offense & defense efficiency": -2.86,
+"Points scored & allowed": -1.44,
 "Turnovers": -0.14,
 "Special teams": 0.25,
 "Rest & travel": -0.04,
@@ -3512,16 +3512,16 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_TB_NO": {
 "wk": 18,
 "a": "TB",
 "h": "NO",
-"p": 0.4109,
+"p": 0.411,
 "m": -4.04,
-"tot": 46.4,
+"tot": 46.3,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -1.66,
@@ -3538,7 +3538,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_TEN_HOU": {
@@ -3547,7 +3547,7 @@
 "h": "HOU",
 "p": 0.7334,
 "m": 11.18,
-"tot": 43.4,
+"tot": 43.3,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 1.79,
@@ -3564,7 +3564,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 12, 11:30 PM ET",
+"stamp": "Nov 13, 1:22 AM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 }
 }

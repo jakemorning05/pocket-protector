@@ -1,6 +1,6 @@
 {
  "week": 11,
- "asof": "Thu, Nov 12, 11:30 PM ET",
+ "asof": "Fri, Nov 13, 1:22 AM ET",
  "games": [
   {
    "id": "2026_11_IND_HOU",
@@ -14,7 +14,7 @@
      "player": "Jonathan Taylor",
      "team": "IND",
      "pos": "RB",
-     "p": 0.567
+     "p": 0.566
     },
     {
      "player": "Nico Collins",
@@ -36,13 +36,13 @@
      "player": "Kenneth Walker III",
      "team": "KC",
      "pos": "RB",
-     "p": 0.686
+     "p": 0.685
     },
     {
      "player": "Trey McBride",
      "team": "ARI",
      "pos": "TE",
-     "p": 0.383
+     "p": 0.384
     }
    ]
   },
@@ -80,33 +80,33 @@
      "team": "NYG",
      "pos": "TE",
      "stat": "rec_yds",
-     "line": 59.5,
-     "proj": 42.6,
-     "p_over": 0.296,
+     "line": 66.5,
+     "proj": 47.9,
+     "p_over": 0.293,
      "side": "Under",
-     "games": 8
-    },
-    {
-     "player": "J.J. McCarthy",
-     "team": "NYG",
-     "pos": "QB",
-     "stat": "pass_yds",
-     "line": 185.5,
-     "proj": 217.7,
-     "p_over": 0.688,
-     "side": "Over",
-     "games": 4
+     "games": 9
     },
     {
      "player": "Malachi Fields",
      "team": "NYG",
      "pos": "WR",
      "stat": "rec_yds",
-     "line": 27.5,
-     "proj": 38.8,
-     "p_over": 0.648,
+     "line": 30.5,
+     "proj": 40.5,
+     "p_over": 0.628,
      "side": "Over",
-     "games": 8
+     "games": 9
+    },
+    {
+     "player": "J.J. McCarthy",
+     "team": "NYG",
+     "pos": "QB",
+     "stat": "pass_yds",
+     "line": 243.5,
+     "proj": 227.0,
+     "p_over": 0.407,
+     "side": "Under",
+     "games": 5
     }
    ],
    "td": [
@@ -120,7 +120,7 @@
      "player": "Isaiah Likely",
      "team": "NYG",
      "pos": "TE",
-     "p": 0.463
+     "p": 0.498
     }
    ]
   },
@@ -136,7 +136,7 @@
      "player": "James Cook",
      "team": "BUF",
      "pos": "RB",
-     "p": 0.642
+     "p": 0.641
     },
     {
      "player": "Josh Allen",
@@ -276,7 +276,7 @@
      "player": "Tony Pollard",
      "team": "TEN",
      "pos": "RB",
-     "p": 0.55
+     "p": 0.549
     }
    ]
   },
@@ -292,12 +292,12 @@
      "player": "Breece Hall",
      "team": "NYJ",
      "pos": "RB",
-     "p": 0.352
+     "p": 0.351
     },
     {
-     "player": "Braelon Allen",
+     "player": "Omar Cooper Jr.",
      "team": "NYJ",
-     "pos": "RB",
+     "pos": "WR",
      "p": 0.348
     }
    ]
@@ -338,7 +338,7 @@
      "stat": "rush_yds",
      "line": 36.5,
      "proj": 42.9,
-     "p_over": 0.593,
+     "p_over": 0.594,
      "side": "Over",
      "games": 9
     }
@@ -426,7 +426,7 @@
      "player": "Christian McCaffrey",
      "team": "SF",
      "pos": "RB",
-     "p": 0.665
+     "p": 0.664
     },
     {
      "player": "George Kittle",
@@ -444,36 +444,36 @@
    "time": "20:15",
    "leans": [
     {
-     "player": "Jayden Daniels",
+     "player": "Rachaad White",
      "team": "WAS",
-     "pos": "QB",
-     "stat": "pass_yds",
-     "line": 208.5,
-     "proj": 231.2,
-     "p_over": 0.624,
-     "side": "Over",
-     "games": 6
-    },
-    {
-     "player": "Antonio Williams",
-     "team": "WAS",
-     "pos": "WR",
-     "stat": "rec_yds",
-     "line": 28.5,
-     "proj": 36.6,
-     "p_over": 0.611,
+     "pos": "RB",
+     "stat": "rush_yds",
+     "line": 31.5,
+     "proj": 41.4,
+     "p_over": 0.646,
      "side": "Over",
      "games": 8
     },
     {
-     "player": "Stefon Diggs",
+     "player": "Chig Okonkwo",
      "team": "WAS",
-     "pos": "WR",
+     "pos": "TE",
      "stat": "rec_yds",
-     "line": 44.5,
-     "proj": 42.8,
-     "p_over": 0.479,
-     "side": "Under",
+     "line": 32.5,
+     "proj": 44.1,
+     "p_over": 0.64,
+     "side": "Over",
+     "games": 7
+    },
+    {
+     "player": "Jayden Daniels",
+     "team": "WAS",
+     "pos": "QB",
+     "stat": "pass_yds",
+     "line": 217.5,
+     "proj": 232.5,
+     "p_over": 0.582,
+     "side": "Over",
      "games": 7
     }
    ],
@@ -482,7 +482,7 @@
      "player": "Ja'Marr Chase",
      "team": "CIN",
      "pos": "WR",
-     "p": 0.579
+     "p": 0.58
     },
     {
      "player": "Tee Higgins",
