@@ -17,6 +17,9 @@ A session adds the judgment calls:
    api.elections.kalshi.com/trade-api/v2/markets?event_ticker=KXNFLPASSYDS-26NOV12WASNYG (also KXNFLRSHYDS, KXNFLRECYDS;
    date + away + home). Long pages need a second fetch with offset. Log each player's threshold priced closest to 50%.
    Log Sunday games on Saturday, after Friday's injury designations.
+   Kalshi team codes match ours except the Rams (LAR) and Jaguars (JAC). The API often answers WebFetch with a client error
+   (rate limit); retry with a different URL (add &limit=100) rather than the same one. Receiving-yards pages run 250-300k
+   characters, so only the first page is read; markets marked inactive belong to players ruled out and are skipped.
 4. Rebuild: `bash scripts/update.sh` (downloads, retrains, grades, logs new spread/total picks, builds docs/index.html).
 5. Commit and push (`git add -A && git commit && git push`); the site redeploys from docs/. The commit message ends with the
    attribution lines from the session's instructions.
