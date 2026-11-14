@@ -1,5 +1,5 @@
 {
- "asof": "Thu, Nov 12, 11:31 PM ET",
+ "asof": "Sat, Nov 14, 12:08 PM ET",
  "outs": [
   "Josh Jacobs",
   "Puka Nacua",
@@ -14,31 +14,80 @@
   "J.J. McCarthy": "Hip pointer, expected to play Thursday",
   "Cam Skattebo": "18 carries, 78 yards, 2 TDs in his return Thursday",
   "Justin Herbert": "Finger imaging was negative, no fracture",
-  "A.J. Brown": "Missed two games; Patriots plan for him to travel to Germany, no decision yet",
+  "A.J. Brown": "Expected off IR; game-time decision in Munich",
   "Carson Wentz": "Now Minnesota\u2019s backup after the Kirk Cousins trade",
-  "Kirk Cousins": "Traded to Minnesota Tuesday; expected to start Sunday at Green Bay",
+  "Kirk Cousins": "Starts Sunday at Green Bay with Kyler Murray out",
   "Keenan Allen": "Traded to San Francisco Tuesday; projections use his Colts role in the 49ers offense, so treat them as rough this week",
   "Fernando Mendoza": "Rookie takes over in Las Vegas after the Cousins trade",
-  "Garrett Wilson": "Concussion: expected back for Sunday against Buffalo (NBC Sports, Nov 10), but he must clear the protocol first.",
+  "Garrett Wilson": "Questionable (concussion), expected to play",
   "Carson Beck": "Rookie expected to start Sunday vs. the Rams after Gardner Minshew\u2019s elbow injury (likely season-ending)",
-  "Woody Marks": "David Montgomery (groin) hopes to practice soon; Marks' carries shrink when he returns.",
+  "Woody Marks": "Fewer carries with David Montgomery expected back",
   "Caleb Douglas": "Kyle McCord starts at QB through Week 13 while Malik Willis is on IR.",
   "Joe Milton III": "Starting the rest of the way with Jalen Hurts out for the season.",
   "Josh Downs": "Traded from Indianapolis to Kansas City on Nov 10.",
   "Devin Singletary": "Fewer carries with Cam Skattebo back",
-  "Carnell Tate": "Shoulder: did not practice Wednesday",
-  "Jakobi Meyers": "Ankle: did not practice Wednesday",
-  "Bhayshul Tuten": "Ankle, foot: did not practice Wednesday",
-  "T.J. Hockenson": "Wrist, chest: listed as not practicing (estimate)",
+  "Bhayshul Tuten": "Limited Friday but cleared to play",
   "Alvin Kamara": "Back: did not practice Wednesday",
   "George Pickens": "Hamstring: limited Wednesday after missing Week 9",
-  "Jonathan Taylor": "Limited in practice this week",
-  "Jared Goff": "Limited in practice this week",
-  "Amon-Ra St. Brown": "Limited in practice this week",
-  "Chuba Hubbard": "Did not practice Wednesday (rest) or Thursday",
-  "Chig Okonkwo": "Back injury Thursday; returned in the second half"
+  "Amon-Ra St. Brown": "Questionable (ribs) but practiced fully all week",
+  "Chig Okonkwo": "Back injury Thursday; returned in the second half",
+  "Kenneth Walker III": "Questionable (groin), a true 50/50; Reid won't risk him",
+  "Emmett Johnson": "Starts if Kenneth Walker III sits",
+  "Jordan Addison": "Questionable (thumb)",
+  "Ladd McConkey": "Back: missed Thursday and Friday practice; uncertain for Monday",
+  "David Montgomery": "Questionable (groin) after a full Friday practice; expected back",
+  "Corey Kiner": "Lead back if Rhamondre Stevenson sits; projection understates that"
  },
  "items": [
+  {
+   "team": "KC",
+   "tag": "Injury",
+   "text": "Kenneth Walker III (groin) was added to the injury report Friday and is questionable at Atlanta. Andy Reid said they won't put him at risk, so treat it as a true 50/50; Emmett Johnson would start if he sits. Kickoff is 1 PM ET.",
+   "src": "Yahoo Sports / Bleacher Report, Nov 13",
+   "url": "https://sports.yahoo.com/articles/kenneth-walker-travis-etienne-more-130000022.html"
+  },
+  {
+   "team": "NE",
+   "tag": "Injury",
+   "text": "TreVeyon Henderson (illness) is out in Munich and Rhamondre Stevenson (knee) is questionable after two limited practices; if he sits, Corey Kiner gets most of the carries, more than the model projects. A.J. Brown is expected to be activated from IR and is a game-time decision. Inactives come out at 8 AM ET Sunday.",
+   "src": "RotoWire, Nov 13",
+   "url": "https://www.rotowire.com/football/article/nfl-injury-report-friday-updates-rhamondre-146440"
+  },
+  {
+   "team": "HOU",
+   "tag": "Injury",
+   "text": "David Montgomery practiced fully Friday and is questionable but expected back from his groin injury after missing three games. The model now projects him again and trims Woody Marks.",
+   "src": "Yahoo Sports, Nov 13",
+   "url": "https://sports.yahoo.com/articles/kenneth-walker-travis-etienne-more-130000022.html"
+  },
+  {
+   "team": "MIN",
+   "tag": "Injury",
+   "text": "T.J. Hockenson and Jauan Jennings are out at Green Bay, and Kyler Murray (hamstring) is out, so Kirk Cousins starts his first game for Minnesota. Jordan Addison (thumb) is questionable.",
+   "src": "RotoWire, Nov 13",
+   "url": "https://www.rotowire.com/football/article/nfl-injury-report-friday-updates-rhamondre-146440"
+  },
+  {
+   "team": "NO",
+   "tag": "Injury",
+   "text": "Travis Etienne returned to a full practice Friday and is questionable to come off IR; he hasn\u2019t played since Week 3, so New Orleans may ease him in. The model leaves him out until he plays.",
+   "src": "Yahoo Sports, Nov 13",
+   "url": "https://sports.yahoo.com/articles/kenneth-walker-travis-etienne-more-130000022.html"
+  },
+  {
+   "team": "LAC",
+   "tag": "Injury",
+   "text": "Ladd McConkey (back) missed Thursday and Friday practices and is uncertain for Monday night against Baltimore. Keaton Mitchell (hip) is expected to play.",
+   "src": "RotoWire, Nov 13",
+   "url": "https://www.rotowire.com/football/article/nfl-injury-report-friday-updates-rhamondre-146440"
+  },
+  {
+   "team": "DET",
+   "tag": "Injury",
+   "text": "Jared Goff is cleared, and Amon-Ra St. Brown is questionable (ribs) but practiced fully all week, so expect both in Munich. Mike Evans (SF), Carnell Tate (TEN), Marvin Harrison Jr. (HOU) and Zachariah Branch (ATL) are out.",
+   "src": "RotoWire / Bleacher Report, Nov 13",
+   "url": "https://bleacherreport.com/articles/25532965-kenneth-walker-george-pickens-nfl-injury-statuses-and-fantasy-impact-week-10"
+  },
   {
    "team": "WAS",
    "tag": "Result",

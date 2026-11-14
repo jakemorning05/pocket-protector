@@ -272,6 +272,18 @@
       "name": "Cam Skattebo",
       "through_week": 10,
       "source": "CBS Sports, Nov 11: back from his hamstring injury, 'full go' Thursday"
+    },
+    {
+      "team": "HOU",
+      "name": "David Montgomery",
+      "through_week": 10,
+      "source": "RotoWire / Yahoo, Nov 13: questionable (groin) after a full Friday practice; expected to play and split carries with Woody Marks"
+    },
+    {
+      "team": "NE",
+      "name": "A.J. Brown",
+      "through_week": 10,
+      "source": "RotoWire, Nov 13: limited all week, expected to be activated from IR Saturday; game-time decision in Munich"
     }
   ],
   "results": [
