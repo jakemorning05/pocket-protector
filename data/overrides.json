@@ -302,6 +302,54 @@
       "away": 24,
       "home": 21,
       "source": "ESPN final, Nov 12"
+    },
+    {
+      "game": "2026_10_NE_DET",
+      "away": 10,
+      "home": 35,
+      "source": "Sportradar final, Nov 15"
+    },
+    {
+      "game": "2026_10_KC_ATL",
+      "away": 35,
+      "home": 13,
+      "source": "Sportradar final, Nov 15"
+    },
+    {
+      "game": "2026_10_BUF_NYJ",
+      "away": 31,
+      "home": 12,
+      "source": "Sportradar final, Nov 15"
+    },
+    {
+      "game": "2026_10_MIA_IND",
+      "away": 22,
+      "home": 24,
+      "source": "Sportradar final, Nov 15"
+    },
+    {
+      "game": "2026_10_MIN_GB",
+      "away": 30,
+      "home": 10,
+      "source": "Sportradar final, Nov 15"
+    },
+    {
+      "game": "2026_10_CAR_NO",
+      "away": 20,
+      "home": 17,
+      "source": "Sportradar final, Nov 15"
+    },
+    {
+      "game": "2026_10_JAX_TEN",
+      "away": 40,
+      "home": 23,
+      "source": "Sportradar final, Nov 15"
+    },
+    {
+      "game": "2026_10_HOU_CLE",
+      "away": 24,
+      "home": 27,
+      "source": "Sportradar final, Nov 15"
     }
   ]
 }
