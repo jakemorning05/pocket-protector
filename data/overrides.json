@@ -190,6 +190,16 @@
       "name": "Josh Downs",
       "side": "off",
       "source": "Traded to KC (Nov 10)"
+    },
+    {
+      "name": "Kenneth Walker III",
+      "team": "KC",
+      "source": "NFL.com, Nov 14: downgraded to out (groin)"
+    },
+    {
+      "name": "David Montgomery",
+      "team": "HOU",
+      "source": "NFL.com, Nov 14: downgraded to out (groin)"
     }
   ],
   "traded": [
@@ -274,16 +284,16 @@
       "source": "CBS Sports, Nov 11: back from his hamstring injury, 'full go' Thursday"
     },
     {
-      "team": "HOU",
-      "name": "David Montgomery",
-      "through_week": 10,
-      "source": "RotoWire / Yahoo, Nov 13: questionable (groin) after a full Friday practice; expected to play and split carries with Woody Marks"
-    },
-    {
       "team": "NE",
       "name": "A.J. Brown",
       "through_week": 10,
       "source": "RotoWire, Nov 13: limited all week, expected to be activated from IR Saturday; game-time decision in Munich"
+    },
+    {
+      "team": "NO",
+      "name": "Travis Etienne",
+      "through_week": 10,
+      "source": "NFL.com, Nov 14: activated from IR, will play Sunday vs. Carolina"
     }
   ],
   "results": [

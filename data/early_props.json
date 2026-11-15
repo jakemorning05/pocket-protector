@@ -1,6 +1,6 @@
 {
  "week": 11,
- "asof": "Sat, Nov 14, 12:15 PM ET",
+ "asof": "Sun, Nov 15, 1:53 AM ET",
  "games": [
   {
    "id": "2026_11_IND_HOU",
@@ -33,16 +33,16 @@
    "leans": [],
    "td": [
     {
-     "player": "Kenneth Walker III",
-     "team": "KC",
-     "pos": "RB",
-     "p": 0.685
-    },
-    {
      "player": "Trey McBride",
      "team": "ARI",
      "pos": "TE",
      "p": 0.384
+    },
+    {
+     "player": "Rashee Rice",
+     "team": "KC",
+     "pos": "WR",
+     "p": 0.312
     }
    ]
   },

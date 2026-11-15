@@ -1,5 +1,5 @@
 {
- "asof": "Sat, Nov 14, 12:08 PM ET",
+ "asof": "Sun, Nov 15, 1:52 AM ET",
  "outs": [
   "Josh Jacobs",
   "Puka Nacua",
@@ -21,24 +21,58 @@
   "Fernando Mendoza": "Rookie takes over in Las Vegas after the Cousins trade",
   "Garrett Wilson": "Questionable (concussion), expected to play",
   "Carson Beck": "Rookie expected to start Sunday vs. the Rams after Gardner Minshew\u2019s elbow injury (likely season-ending)",
-  "Woody Marks": "Fewer carries with David Montgomery expected back",
+  "Woody Marks": "Lead back again with David Montgomery ruled out",
   "Caleb Douglas": "Kyle McCord starts at QB through Week 13 while Malik Willis is on IR.",
   "Joe Milton III": "Starting the rest of the way with Jalen Hurts out for the season.",
   "Josh Downs": "Traded from Indianapolis to Kansas City on Nov 10.",
   "Devin Singletary": "Fewer carries with Cam Skattebo back",
   "Bhayshul Tuten": "Limited Friday but cleared to play",
-  "Alvin Kamara": "Back: did not practice Wednesday",
+  "Alvin Kamara": "Fewer carries with Travis Etienne back",
   "George Pickens": "Hamstring: limited Wednesday after missing Week 9",
   "Amon-Ra St. Brown": "Questionable (ribs) but practiced fully all week",
   "Chig Okonkwo": "Back injury Thursday; returned in the second half",
-  "Kenneth Walker III": "Questionable (groin), a true 50/50; Reid won't risk him",
-  "Emmett Johnson": "Starts if Kenneth Walker III sits",
   "Jordan Addison": "Questionable (thumb)",
   "Ladd McConkey": "Back: missed Thursday and Friday practice; uncertain for Monday",
-  "David Montgomery": "Questionable (groin) after a full Friday practice; expected back",
-  "Corey Kiner": "Lead back if Rhamondre Stevenson sits; projection understates that"
+  "Corey Kiner": "Lead back if Rhamondre Stevenson sits; projection understates that",
+  "Travis Etienne": "Activated from IR; first game since Week 3",
+  "Emmett Johnson": "Starts with Kenneth Walker III out"
  },
  "items": [
+  {
+   "team": "KC",
+   "tag": "Injury",
+   "text": "Kenneth Walker III (groin) was downgraded to out Saturday, so Emmett Johnson starts at Atlanta. Kansas City called it caution after a minor strain in Thursday\u2019s practice.",
+   "src": "NFL.com, Nov 14",
+   "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-saturday-nov-14"
+  },
+  {
+   "team": "HOU",
+   "tag": "Injury",
+   "text": "David Montgomery was downgraded to out Saturday after all, so Woody Marks stays Houston\u2019s lead back at Cleveland.",
+   "src": "NFL.com, Nov 14",
+   "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-saturday-nov-14"
+  },
+  {
+   "team": "NO",
+   "tag": "Injury",
+   "text": "The Saints activated Travis Etienne from injured reserve, and he\u2019ll play Sunday against Carolina for the first time since Week 3. The model adds him back and trims the other backs\u2019 carries.",
+   "src": "NFL.com, Nov 14",
+   "url": "https://www.nfl.com/news/saints-activate-rb-travis-etienne-from-injured-reserve-ahead-of-sunday-s-game-vs-panthers"
+  },
+  {
+   "team": "NE",
+   "tag": "Injury",
+   "text": "TreVeyon Henderson went on injured reserve. Rhamondre Stevenson and A.J. Brown are still questionable in Munich (9:30 AM ET); Brown traveled with the team.",
+   "src": "NBC Sports / NFL.com, Nov 14",
+   "url": "https://www.nbcsports.com/fantasy/football/news/nfl-week-10-injury-report-pats-backfield-in-flux-plus-gardner-minshew-michael-wilson-puka-nacua-injuries"
+  },
+  {
+   "team": "CAR",
+   "tag": "Injury",
+   "text": "Xavier Legette was activated from IR and is questionable. In Indianapolis, TE Will Mallory was downgraded to out and Mo Alie-Cox went on IR.",
+   "src": "NFL.com, Nov 14",
+   "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-saturday-nov-14"
+  },
   {
    "team": "KC",
    "tag": "Injury",
