@@ -1,6 +1,6 @@
 {
  "week": 11,
- "asof": "Sun, Nov 15, 11:15 PM ET",
+ "asof": "Sun, Nov 15, 11:58 PM ET",
  "games": [
   {
    "id": "2026_11_IND_HOU",
@@ -570,37 +570,37 @@
    "time": "16:25",
    "leans": [
     {
-     "player": "Saquon Barkley",
-     "team": "PHI",
+     "player": "Jaylen Warren",
+     "team": "PIT",
      "pos": "RB",
      "stat": "rush_yds",
-     "line": 30.5,
-     "proj": 39.0,
-     "p_over": 0.631,
-     "side": "Over",
-     "games": 7
-    },
-    {
-     "player": "Dallas Goedert",
-     "team": "PHI",
-     "pos": "TE",
-     "stat": "rec_yds",
-     "line": 48.5,
-     "proj": 42.1,
-     "p_over": 0.419,
+     "line": 97.5,
+     "proj": 78.2,
+     "p_over": 0.321,
      "side": "Under",
-     "games": 7
+     "games": 8
     },
     {
-     "player": "Makai Lemon",
-     "team": "PHI",
+     "player": "Germie Bernard",
+     "team": "PIT",
      "pos": "WR",
      "stat": "rec_yds",
-     "line": 29.5,
-     "proj": 34.2,
-     "p_over": 0.568,
+     "line": 30.5,
+     "proj": 43.4,
+     "p_over": 0.657,
      "side": "Over",
-     "games": 9
+     "games": 7
+    },
+    {
+     "player": "DK Metcalf",
+     "team": "PIT",
+     "pos": "WR",
+     "stat": "rec_yds",
+     "line": 35.5,
+     "proj": 49.1,
+     "p_over": 0.652,
+     "side": "Over",
+     "games": 8
     }
    ],
    "td": [
@@ -693,6 +693,17 @@
      "games": 8
     },
     {
+     "player": "Tee Higgins",
+     "team": "CIN",
+     "pos": "WR",
+     "stat": "rec_yds",
+     "line": 92.5,
+     "proj": 75.0,
+     "p_over": 0.356,
+     "side": "Under",
+     "games": 8
+    },
+    {
      "player": "Chig Okonkwo",
      "team": "WAS",
      "pos": "TE",
@@ -700,17 +711,6 @@
      "line": 32.5,
      "proj": 44.1,
      "p_over": 0.64,
-     "side": "Over",
-     "games": 7
-    },
-    {
-     "player": "Jayden Daniels",
-     "team": "WAS",
-     "pos": "QB",
-     "stat": "pass_yds",
-     "line": 217.5,
-     "proj": 232.4,
-     "p_over": 0.582,
      "side": "Over",
      "games": 7
     }

@@ -427,9 +427,9 @@
   "p": 0.534,
   "ev": 0.02,
   "logged": "Nov 9, 4:45 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null
+  "close": 4.5,
+  "clv": -1.0,
+  "result": "loss"
  },
  {
   "game": "2026_10_PIT_CIN",
@@ -443,9 +443,9 @@
   "p": 0.553,
   "ev": 0.056,
   "logged": "Nov 9, 4:45 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null
+  "close": 49.5,
+  "clv": 1.0,
+  "result": "win"
  },
  {
   "game": "2026_10_LAC_BAL",

@@ -1,5 +1,5 @@
 {
- "asof": "Sun, Nov 15, 11:15 PM ET",
+ "asof": "Sun, Nov 15, 11:57 PM ET",
  "outs": [
   "Josh Jacobs",
   "Puka Nacua",
@@ -15,12 +15,12 @@
   "Cam Skattebo": "18 carries, 78 yards, 2 TDs in his return Thursday",
   "Justin Herbert": "Finger imaging was negative, no fracture",
   "A.J. Brown": "Expected off IR; game-time decision in Munich",
-  "Carson Wentz": "Now Minnesota’s backup after the Kirk Cousins trade",
+  "Carson Wentz": "Now Minnesota\u2019s backup after the Kirk Cousins trade",
   "Kirk Cousins": "Starts Sunday at Green Bay with Kyler Murray out",
   "Keenan Allen": "Traded to San Francisco Tuesday; projections use his Colts role in the 49ers offense, so treat them as rough this week",
   "Fernando Mendoza": "Rookie takes over in Las Vegas after the Cousins trade",
   "Garrett Wilson": "Questionable (concussion), expected to play",
-  "Carson Beck": "Rookie expected to start Sunday vs. the Rams after Gardner Minshew’s elbow injury (likely season-ending)",
+  "Carson Beck": "Rookie expected to start Sunday vs. the Rams after Gardner Minshew\u2019s elbow injury (likely season-ending)",
   "Woody Marks": "Lead back again with David Montgomery ruled out",
   "Caleb Douglas": "Kyle McCord starts at QB through Week 13 while Malik Willis is on IR.",
   "Joe Milton III": "Starting the rest of the way with Jalen Hurts out for the season.",
@@ -32,7 +32,6 @@
   "Amon-Ra St. Brown": "Questionable (ribs) but practiced fully all week",
   "Chig Okonkwo": "Back injury Thursday; returned in the second half",
   "Jordan Addison": "Questionable (thumb)",
-  "Ladd McConkey": "Back: missed Thursday and Friday practice; uncertain for Monday",
   "Corey Kiner": "Lead back if Rhamondre Stevenson sits; projection understates that",
   "Travis Etienne": "Activated from IR; first game since Week 3",
   "Emmett Johnson": "Starts with Kenneth Walker III out",
@@ -42,23 +41,30 @@
  },
  "items": [
   {
+   "team": "LAC",
+   "tag": "Injury",
+   "text": "Ladd McConkey (back) was downgraded to out for Monday night at Baltimore and didn't travel. Quentin Johnston, Tre Harris and KeAndre Lambert-Smith lead the receivers; the model underprojects them because McConkey's targets aren't redistributed.",
+   "src": "RotoWire, Nov 15",
+   "url": "https://www.rotowire.com/football/headlines/ladd-mcconkey-injury-ruled-out-for-mondays-game-647923"
+  },
+  {
    "team": "SF",
    "tag": "Result",
-   "text": "Late window: the 49ers outlasted Dallas 46-40, the Rams beat Arizona 34-6 in Carson Beck’s first start, and Drew Lock led Seattle past Las Vegas 21-13. The model had all three winners.",
+   "text": "Late window: the 49ers outlasted Dallas 46-40, the Rams beat Arizona 34-6 in Carson Beck\u2019s first start, and Drew Lock led Seattle past Las Vegas 21-13. The model had all three winners.",
    "src": "Yahoo Sports scores / Sportradar finals, Nov 15",
    "url": "https://sports.yahoo.com/nfl/live/nfl-scores-news-live-updates-week-10-schedule-inactives-highlights-stats-where-to-watch-141718993.html"
   },
   {
    "team": "MIN",
    "tag": "Result",
-   "text": "Kirk Cousins won his first start back in Minnesota, 30-10 at Green Bay, one of two games the model missed in the early window. The other was Cleveland’s 27-24 upset of Houston. The model’s Panthers pick at New Orleans (20-17) came through.",
+   "text": "Kirk Cousins won his first start back in Minnesota, 30-10 at Green Bay, one of two games the model missed in the early window. The other was Cleveland\u2019s 27-24 upset of Houston. The model\u2019s Panthers pick at New Orleans (20-17) came through.",
    "src": "Yahoo Sports scores / Sportradar finals, Nov 15",
    "url": "https://sports.yahoo.com/nfl/live/nfl-scores-news-live-updates-week-10-schedule-inactives-highlights-stats-where-to-watch-141718993.html"
   },
   {
    "team": "LV",
    "tag": "Injury",
-   "text": "Brock Bowers was ruled out with an ankle injury during Sunday’s game against Seattle.",
+   "text": "Brock Bowers was ruled out with an ankle injury during Sunday\u2019s game against Seattle.",
    "src": "Yahoo Sports live updates, Nov 15",
    "url": "https://sports.yahoo.com/nfl/live/nfl-scores-news-live-updates-week-10-schedule-inactives-highlights-stats-where-to-watch-141718993.html"
   },
@@ -72,21 +78,21 @@
   {
    "team": "KC",
    "tag": "Injury",
-   "text": "Kenneth Walker III (groin) was downgraded to out Saturday, so Emmett Johnson starts at Atlanta. Kansas City called it caution after a minor strain in Thursday’s practice.",
+   "text": "Kenneth Walker III (groin) was downgraded to out Saturday, so Emmett Johnson starts at Atlanta. Kansas City called it caution after a minor strain in Thursday\u2019s practice.",
    "src": "NFL.com, Nov 14",
    "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-saturday-nov-14"
   },
   {
    "team": "HOU",
    "tag": "Injury",
-   "text": "David Montgomery was downgraded to out Saturday after all, so Woody Marks stays Houston’s lead back at Cleveland.",
+   "text": "David Montgomery was downgraded to out Saturday after all, so Woody Marks stays Houston\u2019s lead back at Cleveland.",
    "src": "NFL.com, Nov 14",
    "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-saturday-nov-14"
   },
   {
    "team": "NO",
    "tag": "Injury",
-   "text": "The Saints activated Travis Etienne from injured reserve, and he’ll play Sunday against Carolina for the first time since Week 3. The model adds him back and trims the other backs’ carries.",
+   "text": "The Saints activated Travis Etienne from injured reserve, and he\u2019ll play Sunday against Carolina for the first time since Week 3. The model adds him back and trims the other backs\u2019 carries.",
    "src": "NFL.com, Nov 14",
    "url": "https://www.nfl.com/news/saints-activate-rb-travis-etienne-from-injured-reserve-ahead-of-sunday-s-game-vs-panthers"
   },
@@ -135,7 +141,7 @@
   {
    "team": "NO",
    "tag": "Injury",
-   "text": "Travis Etienne returned to a full practice Friday and is questionable to come off IR; he hasn’t played since Week 3, so New Orleans may ease him in. The model leaves him out until he plays.",
+   "text": "Travis Etienne returned to a full practice Friday and is questionable to come off IR; he hasn\u2019t played since Week 3, so New Orleans may ease him in. The model leaves him out until he plays.",
    "src": "Yahoo Sports, Nov 13",
    "url": "https://sports.yahoo.com/articles/kenneth-walker-travis-etienne-more-130000022.html"
   },
@@ -184,14 +190,14 @@
   {
    "team": "DET",
    "tag": "Injury",
-   "text": "Jared Goff and Amon-Ra St. Brown were both limited in practice ahead of Sunday morning’s game against New England in Munich (9:30 AM ET kickoff, so lineups lock early).",
+   "text": "Jared Goff and Amon-Ra St. Brown were both limited in practice ahead of Sunday morning\u2019s game against New England in Munich (9:30 AM ET kickoff, so lineups lock early).",
    "src": "NFL.com injury report, Nov 12",
    "url": "https://www.nfl.com/injuries/league/2026/reg10"
   },
   {
    "team": "GB",
    "tag": "Injury",
-   "text": "Josh Jacobs still isn’t practicing. Chris Brooks was limited, so Green Bay’s backfield is a committee again this week.",
+   "text": "Josh Jacobs still isn\u2019t practicing. Chris Brooks was limited, so Green Bay\u2019s backfield is a committee again this week.",
    "src": "NFL.com injury report, Nov 12",
    "url": "https://www.nfl.com/injuries/league/2026/reg10"
   },
@@ -429,7 +435,7 @@
   {
    "team": "JAX",
    "tag": "Trade",
-   "text": "Jacksonville made three defensive trades in one day: DT Jordan Davis from Philadelphia (2027 first-round and 2029 second-round picks), S Jessie Bates from Atlanta (2027 second, 2028 fifth) and DT Davon Godchaux from New Orleans. Their old teams now count them as missing; Jacksonville’s ratings catch up as they play.",
+   "text": "Jacksonville made three defensive trades in one day: DT Jordan Davis from Philadelphia (2027 first-round and 2029 second-round picks), S Jessie Bates from Atlanta (2027 second, 2028 fifth) and DT Davon Godchaux from New Orleans. Their old teams now count them as missing; Jacksonville\u2019s ratings catch up as they play.",
    "src": "ESPN, Nov 9",
    "url": "https://www.espn.com/nfl/story/_/id/50435639/jaguars-get-eagles-jordan-davis-blockbuster-trade"
   },
