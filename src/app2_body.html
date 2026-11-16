@@ -776,15 +776,17 @@ function renderModel() {
   const imp = Object.entries(b.importance), maxImp = Math.max(...imp.map(([, v]) => v));
   const tierRows = (ts) => ts.map((t) => '<tr><td class="l">' + Math.round(t.lo * 100) + '–' + Math.round(t.hi * 100) + '%</td><td>' + t.n + '</td><td>' + (t.pred ? pct(t.pred) : '–') + '</td><td>' + (t.n ? pct(t.won / t.n) : '–') + '</td></tr>').join('');
   const strongH = b.tiers_hist.slice(2).reduce((a, t) => ({ n: a.n + t.n, w: a.w + t.won }), { n: 0, w: 0 });
+  const doneWks = games.filter((g) => g.done).map((g) => g.wk), thruWk = doneWks.length ? Math.max(...doneWks) : 0;
+  const thisBetter = b.y2026.new.brier < b.y2026.market.brier;
   el.innerHTML = '<div><h2>Model</h2><p class="intro">Every number here comes from honest out-of-sample tests: each past season was predicted by a model trained on the other seasons, and 2026 games were predicted with only the data available before kickoff.</p></div>' +
     '<div class="tiles num">' +
     '<div class="tile"><span class="label">This model, ' + b.hist.seasons + '</span><b>' + pct(b.hist.new.acc) + '</b><span class="muted small">' + b.hist.new.n.toLocaleString() + ' games picked straight up</span></div>' +
     '<div class="tile"><span class="label">Old scores-only model</span><b>' + pct(b.hist.old.acc) + '</b><span class="muted small">Same games</span></div>' +
     '<div class="tile"><span class="label">Betting market</span><b>' + pct(b.hist.market.acc) + '</b><span class="muted small">Closing line favorite</span></div>' +
     '<div class="tile"><span class="label">Strong picks (70%+)</span><b>' + pct(strongH.w / strongH.n) + '</b><span class="muted small">' + strongH.w.toLocaleString() + ' of ' + strongH.n.toLocaleString() + ' games</span></div></div>' +
-    '<div class="panel"><div class="panel-head"><h3>This season (Weeks 1–9)</h3></div><div class="tablewrap"><table><thead><tr><th class="l">Predictor</th><th>Picked right</th><th>Brier score</th><th>Avg margin miss</th></tr></thead><tbody>' +
+    '<div class="panel"><div class="panel-head"><h3>This season' + (thruWk ? ' (Weeks 1–' + thruWk + ')' : '') + '</h3></div><div class="tablewrap"><table><thead><tr><th class="l">Predictor</th><th>Picked right</th><th>Brier score</th><th>Avg margin miss</th></tr></thead><tbody>' +
     [['This model', b.y2026.new], ['Old scores-only model', b.y2026.old], ['Betting market', b.y2026.market]].map(([n, d]) => '<tr><td class="l">' + n + '</td><td>' + pct(d.acc) + ' (' + Math.round(d.acc * d.n) + '/' + d.n + ')</td><td>' + d.brier.toFixed(3) + '</td><td>' + d.mae.toFixed(1) + ' pts</td></tr>').join('') +
-    '</tbody></table></div><p class="muted small" style="margin-top:8px">Brier score grades the percentages themselves (lower is better). This season the model’s percentages have graded slightly better than the market’s, but over nine seasons the market is clearly ahead.</p></div>' +
+    '</tbody></table></div><p class="muted small" style="margin-top:8px">Brier score grades the percentages themselves (lower is better). ' + (thisBetter ? 'This season the model’s percentages have graded a bit better than the market’s, but over nine seasons the market is clearly ahead.' : 'This season the market’s percentages have graded better than the model’s, as they have over nine seasons.') + '</p></div>' +
     '<div class="panel"><div class="panel-head"><h3>Correct picks by week</h3><span class="legend"><span><span class="swatch s1"></span>Model</span><span><span class="swatch s2"></span>Market</span></span></div>' + weeklyChart() + '</div>' +
     '<div class="panel"><div class="panel-head"><h3>What moves the prediction</h3><span class="muted small">Typical swing in points</span></div>' +
     imp.map(([k, v]) => '<div class="imp"><span>' + esc(k) + '</span><span><span class="bar" style="display:block;width:' + (v / maxImp * 100).toFixed(0) + '%"></span></span><span class="num">' + v.toFixed(1) + '</span></div>').join('') +
@@ -801,7 +803,7 @@ function renderModel() {
     '<li><strong>The betting market’s earlier view.</strong> How highly the closing lines of each team’s past games rated it, recent weeks counting most. It never uses the line for the game being predicted, so comparisons with the market stay fair.</li>' +
     '<li><strong>Injuries.</strong> Players listed out or doubtful, weighted by their share of snaps. Week ' + DATA.injury_week + ' report; next week’s isn’t out yet, so it carries forward one week.</li>' +
     '<li><strong>Rest and travel.</strong> Rest days, byes, distance flown, time zones crossed and West Coast teams in 1 p.m. Eastern games. Division games are treated as closer.</li>' +
-    '<li><strong>Weather</strong> (wind, cold, domes) feeds the totals, where it matters most.</li>' +
+    '<li><strong>Weather</strong> (wind, cold, domes) is part of the totals model, trained on past games. Forecasts for upcoming games aren’t wired in yet, so for now every game is treated as calm; domes still count.</li>' +
     '<li><strong>Games further out.</strong> A prediction made weeks ahead is less certain, since ratings move and quarterbacks change. Measured on past seasons, the spread of outcomes grows about ' + Math.round((DATA.drift_c || 0) * 100) + '% per week ahead, so a Week 18 game is predicted with a spread of ' + sigmaAt({ wk: 18 }).toFixed(0) + ' points instead of ' + SIG.toFixed(0) + '. Playoff odds and survivor plans use this.</li>' +
     '<li><strong>Training data.</strong> ' + b.hist.games.toLocaleString() + ' games from ' + b.hist.seasons + ' (nflverse play-by-play). Win chance uses a bell curve with a spread of ' + SIG.toFixed(1) + ' points.</li>' +
     '</ul><h3 style="margin-top:6px">Tuned</h3><ul><li><strong>Rating settings.</strong> Tested 40 combinations on held-out seasons. The winner pulls ratings harder toward their starting point, carries more of last season forward, and starts a quarterback with little history from what QBs drafted where he was have done early in their careers: first-round picks near average, rounds 4–7 and undrafted QBs well below. He moves off that as he plays.</li></ul>' +
@@ -897,6 +899,7 @@ function setSheet(open) {
   moreBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
 }
 const VIEWS = { week: renderWeek, about: renderAbout, pools: renderPools, betting: renderBetting, parlays: renderParlays, fantasy: renderFantasy, news: renderNews, rankings: renderRankings, playoffs: renderPlayoffs, matchup: renderMatchup, teams: renderTeams, stats: renderStats, model: renderModel };
+const BASE_TITLE = document.title;
 function route() {
   const v = (location.hash || '#week').slice(1), name = VIEWS[v] ? v : 'week';
   for (const k of Object.keys(VIEWS)) document.getElementById('view-' + k).hidden = k !== name;
@@ -907,6 +910,8 @@ function route() {
   const active = document.querySelector('.tabs a[aria-current]');
   if (active && active.scrollIntoView) active.scrollIntoView({ block: 'nearest', inline: 'nearest' });
   tip.hidden = true;
+  const navLink = document.querySelector('.tabs a[data-view="' + name + '"], .sheet a[data-view="' + name + '"]');
+  document.title = name === 'week' || !navLink ? BASE_TITLE : navLink.textContent + ' · Pocket Protector';
   VIEWS[name]();
 }
 window.addEventListener('hashchange', route);

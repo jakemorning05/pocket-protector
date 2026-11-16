@@ -1,6 +1,6 @@
 {
  "week": 11,
- "asof": "Sun, Nov 15, 11:58 PM ET",
+ "asof": "Mon, Nov 16, 1:58 AM ET",
  "games": [
   {
    "id": "2026_11_IND_HOU",
@@ -71,8 +71,8 @@
      "pos": "WR",
      "stat": "rec_yds",
      "line": 38.5,
-     "proj": 51.1,
-     "p_over": 0.638,
+     "proj": 51.0,
+     "p_over": 0.637,
      "side": "Over",
      "games": 10
     },
@@ -82,8 +82,8 @@
      "pos": "TE",
      "stat": "rec_yds",
      "line": 60.5,
-     "proj": 50.5,
-     "p_over": 0.389,
+     "proj": 50.6,
+     "p_over": 0.39,
      "side": "Under",
      "games": 10
     },
@@ -94,7 +94,7 @@
      "stat": "rec_yds",
      "line": 67.5,
      "proj": 61.6,
-     "p_over": 0.443,
+     "p_over": 0.442,
      "side": "Under",
      "games": 6
     }
@@ -104,13 +104,13 @@
      "player": "Emmett Johnson",
      "team": "KC",
      "pos": "RB",
-     "p": 0.326
+     "p": 0.327
     },
     {
      "player": "Trey McBride",
      "team": "ARI",
      "pos": "TE",
-     "p": 0.319
+     "p": 0.32
     }
    ]
   },
@@ -160,7 +160,7 @@
      "player": "Chuba Hubbard",
      "team": "CAR",
      "pos": "RB",
-     "p": 0.623
+     "p": 0.624
     },
     {
      "player": "Derrick Henry",
@@ -184,7 +184,7 @@
      "stat": "rec_yds",
      "line": 66.5,
      "proj": 47.1,
-     "p_over": 0.282,
+     "p_over": 0.283,
      "side": "Under",
      "games": 9
     },
@@ -195,7 +195,7 @@
      "stat": "rec_yds",
      "line": 30.5,
      "proj": 39.7,
-     "p_over": 0.62,
+     "p_over": 0.619,
      "side": "Over",
      "games": 9
     },
@@ -222,7 +222,7 @@
      "player": "Isaiah Likely",
      "team": "NYG",
      "pos": "TE",
-     "p": 0.497
+     "p": 0.498
     }
    ]
   },
@@ -239,7 +239,7 @@
      "pos": "WR",
      "stat": "rec_yds",
      "line": 70.5,
-     "proj": 44.8,
+     "proj": 44.7,
      "p_over": 0.215,
      "side": "Under",
      "games": 6
@@ -334,7 +334,7 @@
      "player": "Audric Estime",
      "team": "NO",
      "pos": "RB",
-     "p": 0.4
+     "p": 0.401
     }
    ]
   },
@@ -373,7 +373,7 @@
      "pos": "TE",
      "stat": "rec_yds",
      "line": 25.5,
-     "proj": 33.0,
+     "proj": 33.1,
      "p_over": 0.61,
      "side": "Over",
      "games": 8
@@ -418,8 +418,8 @@
      "pos": "WR",
      "stat": "rec_yds",
      "line": 73.5,
-     "proj": 103.5,
-     "p_over": 0.689,
+     "proj": 103.3,
+     "p_over": 0.688,
      "side": "Over",
      "games": 10
     },
@@ -474,7 +474,7 @@
      "pos": "WR",
      "stat": "rec_yds",
      "line": 80.5,
-     "proj": 66.8,
+     "proj": 66.7,
      "p_over": 0.375,
      "side": "Under",
      "games": 4
@@ -485,8 +485,8 @@
      "pos": "WR",
      "stat": "rec_yds",
      "line": 79.5,
-     "proj": 72.8,
-     "p_over": 0.442,
+     "proj": 72.7,
+     "p_over": 0.441,
      "side": "Under",
      "games": 9
     }
@@ -502,7 +502,7 @@
      "player": "Omarion Hampton",
      "team": "LAC",
      "pos": "RB",
-     "p": 0.337
+     "p": 0.338
     }
    ]
   },
@@ -519,7 +519,7 @@
      "pos": "TE",
      "stat": "rec_yds",
      "line": 89.5,
-     "proj": 64.3,
+     "proj": 64.4,
      "p_over": 0.275,
      "side": "Under",
      "games": 8
@@ -530,7 +530,7 @@
      "pos": "WR",
      "stat": "rec_yds",
      "line": 25.5,
-     "proj": 40.3,
+     "proj": 40.2,
      "p_over": 0.686,
      "side": "Over",
      "games": 9
@@ -558,7 +558,7 @@
      "player": "Brock Bowers",
      "team": "LV",
      "pos": "TE",
-     "p": 0.423
+     "p": 0.424
     }
    ]
   },
@@ -574,47 +574,47 @@
      "team": "PIT",
      "pos": "RB",
      "stat": "rush_yds",
-     "line": 97.5,
-     "proj": 78.2,
-     "p_over": 0.321,
+     "line": 93.5,
+     "proj": 70.1,
+     "p_over": 0.269,
      "side": "Under",
-     "games": 8
-    },
-    {
-     "player": "Germie Bernard",
-     "team": "PIT",
-     "pos": "WR",
-     "stat": "rec_yds",
-     "line": 30.5,
-     "proj": 43.4,
-     "p_over": 0.657,
-     "side": "Over",
-     "games": 7
-    },
-    {
-     "player": "DK Metcalf",
-     "team": "PIT",
-     "pos": "WR",
-     "stat": "rec_yds",
-     "line": 35.5,
-     "proj": 49.1,
-     "p_over": 0.652,
-     "side": "Over",
-     "games": 8
-    }
-   ],
-   "td": [
-    {
-     "player": "Jaylen Warren",
-     "team": "PIT",
-     "pos": "RB",
-     "p": 0.362
+     "games": 9
     },
     {
      "player": "Saquon Barkley",
      "team": "PHI",
      "pos": "RB",
-     "p": 0.347
+     "stat": "rush_yds",
+     "line": 30.5,
+     "proj": 39.1,
+     "p_over": 0.632,
+     "side": "Over",
+     "games": 7
+    },
+    {
+     "player": "Makai Lemon",
+     "team": "PHI",
+     "pos": "WR",
+     "stat": "rec_yds",
+     "line": 29.5,
+     "proj": 36.9,
+     "p_over": 0.601,
+     "side": "Over",
+     "games": 9
+    }
+   ],
+   "td": [
+    {
+     "player": "Pat Freiermuth",
+     "team": "PIT",
+     "pos": "TE",
+     "p": 0.351
+    },
+    {
+     "player": "Saquon Barkley",
+     "team": "PHI",
+     "pos": "RB",
+     "p": 0.348
     }
    ]
   },
@@ -664,13 +664,13 @@
      "player": "Christian McCaffrey",
      "team": "SF",
      "pos": "RB",
-     "p": 0.712
+     "p": 0.713
     },
     {
      "player": "George Kittle",
      "team": "SF",
      "pos": "TE",
-     "p": 0.443
+     "p": 0.444
     }
    ]
   },
@@ -682,37 +682,37 @@
    "time": "20:15",
    "leans": [
     {
+     "player": "Tee Higgins",
+     "team": "CIN",
+     "pos": "WR",
+     "stat": "rec_yds",
+     "line": 90.5,
+     "proj": 72.6,
+     "p_over": 0.349,
+     "side": "Under",
+     "games": 9
+    },
+    {
      "player": "Rachaad White",
      "team": "WAS",
      "pos": "RB",
      "stat": "rush_yds",
      "line": 31.5,
-     "proj": 41.4,
-     "p_over": 0.646,
+     "proj": 41.1,
+     "p_over": 0.643,
      "side": "Over",
      "games": 8
     },
     {
-     "player": "Tee Higgins",
+     "player": "Chase Brown",
      "team": "CIN",
-     "pos": "WR",
-     "stat": "rec_yds",
-     "line": 92.5,
-     "proj": 75.0,
-     "p_over": 0.356,
+     "pos": "RB",
+     "stat": "rush_yds",
+     "line": 55.5,
+     "proj": 45.3,
+     "p_over": 0.359,
      "side": "Under",
-     "games": 8
-    },
-    {
-     "player": "Chig Okonkwo",
-     "team": "WAS",
-     "pos": "TE",
-     "stat": "rec_yds",
-     "line": 32.5,
-     "proj": 44.1,
-     "p_over": 0.64,
-     "side": "Over",
-     "games": 7
+     "games": 9
     }
    ],
    "td": [
@@ -720,13 +720,13 @@
      "player": "Ja'Marr Chase",
      "team": "CIN",
      "pos": "WR",
-     "p": 0.58
+     "p": 0.565
     },
     {
      "player": "Tee Higgins",
      "team": "CIN",
      "pos": "WR",
-     "p": 0.502
+     "p": 0.472
     }
    ]
   }

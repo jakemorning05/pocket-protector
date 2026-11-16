@@ -1,7 +1,7 @@
 # Model briefing (updated Sun, Nov 15, 11:57 PM ET)
 
 - Picking winners this season: 108-40. Betting favorites on the same games: 102-46.
-- Prop test vs. Kalshi (since Week 9): 60-63, -3.76 units at one contract each.
+- Prop test vs. Kalshi (since Week 9): 66-73, -6.11 units at one contract each.
 
 ## Week 10 games still to play
 
@@ -29,35 +29,22 @@
 
 ## Injury and role notes the model is using
 
-- Patrick Mahomes: Elbow: full practice Wednesday, on track to start
-- Drew Lock: Limited Wednesday (elbow, oblique) but starting Sunday at Las Vegas
-- J.J. McCarthy: Hip pointer, expected to play Thursday
 - Cam Skattebo: 18 carries, 78 yards, 2 TDs in his return Thursday
 - Justin Herbert: Finger imaging was negative, no fracture
-- A.J. Brown: Expected off IR; game-time decision in Munich
 - Carson Wentz: Now Minnesota’s backup after the Kirk Cousins trade
-- Kirk Cousins: Starts Sunday at Green Bay with Kyler Murray out
-- Keenan Allen: Traded to San Francisco Tuesday; projections use his Colts role in the 49ers offense, so treat them as rough this week
+- Keenan Allen: Traded to San Francisco Nov 10; projections use his Colts role in the 49ers offense, so treat them as rough for now
 - Fernando Mendoza: Rookie takes over in Las Vegas after the Cousins trade
-- Garrett Wilson: Questionable (concussion), expected to play
-- Carson Beck: Rookie expected to start Sunday vs. the Rams after Gardner Minshew’s elbow injury (likely season-ending)
-- Woody Marks: Lead back again with David Montgomery ruled out
-- Caleb Douglas: Kyle McCord starts at QB through Week 13 while Malik Willis is on IR.
+- Carson Beck: Rookie starter after Gardner Minshew’s elbow injury (likely season-ending)
 - Joe Milton III: Starting the rest of the way with Jalen Hurts out for the season.
 - Josh Downs: Traded from Indianapolis to Kansas City on Nov 10.
 - Devin Singletary: Fewer carries with Cam Skattebo back
-- Bhayshul Tuten: Limited Friday but cleared to play
 - Alvin Kamara: Fewer carries with Travis Etienne back
-- George Pickens: Hamstring: limited Wednesday after missing Week 9
-- Amon-Ra St. Brown: Questionable (ribs) but practiced fully all week
 - Chig Okonkwo: Back injury Thursday; returned in the second half
-- Jordan Addison: Questionable (thumb)
-- Corey Kiner: Lead back if Rhamondre Stevenson sits; projection understates that
 - Travis Etienne: Activated from IR; first game since Week 3
-- Emmett Johnson: Starts with Kenneth Walker III out
 - Brock Bowers: Ankle injury Sunday; ruled out of the game
 - Omar Cooper Jr.: Re-injured his right ankle Sunday
 - Geno Smith: Evaluated for a concussion Sunday
+- Kyle McCord: Starts at QB through Week 13 while Malik Willis is on IR
 
 ## Recent headlines
 

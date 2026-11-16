@@ -47,3 +47,9 @@ One entry per slip (both Big Goat's and Lil Goat's), with `played: true` on the 
 kickoff with leg prices, then after it settles set `status` (won/lost), each leg's `r`, and `payout` (the real amount
 Kalshi paid). The tab works out the bankroll and the ladder from the played slips in the live run; when a run ends,
 set its `status` to ended with `peak` and `ended`, and add the next run. Keep collab/scoreboard.md in step.
+
+## Flags and late outs (data/news.json)
+At each refresh, drop flags that describe a game that's now final ("expected to play Thursday," "questionable,"
+"starts Sunday") and keep the ones about ongoing roles (a new starter, a trade, a returning player). File a note under
+the player it's about (a QB change goes on the QB). Late outs added to overrides.json `players_out` show up in the News
+tab's injury table automatically (pipeline/injury_list.py), so remove them from `players_out` once the player returns.

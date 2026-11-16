@@ -2,6 +2,7 @@ name: Update site
 
 on:
   schedule:
+    - cron: '0 15 * * 1'   # Monday ~10 AM ET: Sunday results and props graded, fresh injury news for Monday night
     - cron: '0 12 * * 2'   # Tuesday ~7 AM ET: Monday night results are in
     - cron: '0 21 * * 4'   # Thursday ~4 PM ET: Thursday injury reports
     - cron: '0 16 * * 6'   # Saturday ~11 AM ET: final injury reports for Sunday

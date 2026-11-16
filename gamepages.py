@@ -125,9 +125,9 @@ def page(g, lock, fan, news, site_url, analytics=''):
     gp = [x for x in PROPS if x.get('game') == g['id']]
     eg = next((x for x in EARLY.get('games', []) if x['id'] == g['id']), None)
     if gp:   # real Kalshi prices logged for this game: show the model against them instead of the early leans
-        res = lambda x: ('Pending' if x.get('won') is None else ('✓ ' if x['won'] else '✗ ') + f"{x['actual']:g}")
+        pres = lambda x: ('Pending' if x.get('won') is None else ('✓ ' if x['won'] else '✗ ') + f"{x['actual']:g}")
         early = ('<div class="panel"><h2>Player props vs. Kalshi</h2><div class="tablewrap"><table><thead><tr><th class="l">Market</th><th>Price</th><th>Model</th><th>Pick</th><th>Result</th></tr></thead><tbody>' +
-                 ''.join(f'<tr><td class="l"><b>{esc(x["player"])}</b> <span class="muted small">{x["thr"]}+ {SN[x["stat"]]}</span></td><td>{pct(x["price"])}</td><td>{pct(x["p_over"])}</td><td><b>{x["pick"]}</b></td><td>{res(x)}</td></tr>' for x in gp) +
+                 ''.join(f'<tr><td class="l"><b>{esc(x["player"])}</b> <span class="muted small">{x["thr"]}+ {SN[x["stat"]]}</span></td><td>{pct(x["price"])}</td><td>{pct(x["p_over"])}</td><td><b>{x["pick"]}</b></td><td>{pres(x)}</td></tr>' for x in gp) +
                  '</tbody></table></div>' + (f'<p class="small" style="margin-top:8px">Most likely to score a touchdown: ' + ', '.join(f'{esc(t["player"])} ({pct(t["p"])})' for t in eg['td']) + '.</p>' if eg and eg.get('td') else '') +
                  f'<p class="muted small">Each row is a Kalshi “X or more” market; price is Kalshi’s price when logged (the middle of the bid and ask from Week 10 on), and “Model” is the model’s chance of the YES side. Prices: {esc(gp[0].get("source", ""))}. Part of the site’s public prop test, graded after the game.</p></div>')
     elif eg and eg['leans'] and not done:
@@ -152,6 +152,10 @@ def page(g, lock, fan, news, site_url, analytics=''):
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:type" content="article">
 <meta property="og:url" content="{url}">
+<meta property="og:image" content="{site_url}share.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{site_url}share.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <meta name="theme-color" content="#11162A">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

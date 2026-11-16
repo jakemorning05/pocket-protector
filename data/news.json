@@ -9,35 +9,23 @@
   "Rhamondre Stevenson"
  ],
  "flags": {
-  "Patrick Mahomes": "Elbow: full practice Wednesday, on track to start",
-  "Drew Lock": "Limited Wednesday (elbow, oblique) but starting Sunday at Las Vegas",
-  "J.J. McCarthy": "Hip pointer, expected to play Thursday",
   "Cam Skattebo": "18 carries, 78 yards, 2 TDs in his return Thursday",
   "Justin Herbert": "Finger imaging was negative, no fracture",
-  "A.J. Brown": "Expected off IR; game-time decision in Munich",
   "Carson Wentz": "Now Minnesota\u2019s backup after the Kirk Cousins trade",
-  "Kirk Cousins": "Starts Sunday at Green Bay with Kyler Murray out",
-  "Keenan Allen": "Traded to San Francisco Tuesday; projections use his Colts role in the 49ers offense, so treat them as rough this week",
+  "Keenan Allen": "Traded to San Francisco Nov 10; projections use his Colts role in the 49ers offense, so treat them as rough for now",
   "Fernando Mendoza": "Rookie takes over in Las Vegas after the Cousins trade",
-  "Garrett Wilson": "Questionable (concussion), expected to play",
-  "Carson Beck": "Rookie expected to start Sunday vs. the Rams after Gardner Minshew\u2019s elbow injury (likely season-ending)",
-  "Woody Marks": "Lead back again with David Montgomery ruled out",
-  "Caleb Douglas": "Kyle McCord starts at QB through Week 13 while Malik Willis is on IR.",
+  "Carson Beck": "Rookie starter after Gardner Minshew\u2019s elbow injury (likely season-ending)",
   "Joe Milton III": "Starting the rest of the way with Jalen Hurts out for the season.",
   "Josh Downs": "Traded from Indianapolis to Kansas City on Nov 10.",
   "Devin Singletary": "Fewer carries with Cam Skattebo back",
-  "Bhayshul Tuten": "Limited Friday but cleared to play",
   "Alvin Kamara": "Fewer carries with Travis Etienne back",
-  "George Pickens": "Hamstring: limited Wednesday after missing Week 9",
-  "Amon-Ra St. Brown": "Questionable (ribs) but practiced fully all week",
   "Chig Okonkwo": "Back injury Thursday; returned in the second half",
-  "Jordan Addison": "Questionable (thumb)",
-  "Corey Kiner": "Lead back if Rhamondre Stevenson sits; projection understates that",
   "Travis Etienne": "Activated from IR; first game since Week 3",
-  "Emmett Johnson": "Starts with Kenneth Walker III out",
   "Brock Bowers": "Ankle injury Sunday; ruled out of the game",
   "Omar Cooper Jr.": "Re-injured his right ankle Sunday",
-  "Geno Smith": "Evaluated for a concussion Sunday"
+  "Geno Smith": "Evaluated for a concussion Sunday",
+  "Kyle McCord": "Starts at QB through Week 13 while Malik Willis is on IR",
+  "Jacoby Brissett": "Starts for Lamar Jackson Monday. The model\u2019s point total for this game still assumes Lamar, so its Over 38.5 lean is suspect"
  },
  "items": [
   {
@@ -507,6 +495,14 @@
   },
   {
    "team": "ARI",
+   "name": "Michael Wilson",
+   "pos": "WR",
+   "status": "Out",
+   "injury": "Fractured vertebra (late news)",
+   "snap": 0.9
+  },
+  {
+   "team": "ARI",
    "name": "Jayden Williams",
    "pos": "T",
    "status": "Questionable",
@@ -667,6 +663,14 @@
   },
   {
    "team": "DAL",
+   "name": "Jake Ferguson",
+   "pos": "TE",
+   "status": "Out",
+   "injury": "Out multiple weeks (late news)",
+   "snap": 0.56
+  },
+  {
+   "team": "DAL",
    "name": "P.J. Locke",
    "pos": "S",
    "status": "Out",
@@ -720,6 +724,14 @@
    "status": "Questionable",
    "injury": "Foot",
    "snap": 0.94
+  },
+  {
+   "team": "GB",
+   "name": "Josh Jacobs",
+   "pos": "RB",
+   "status": "Out",
+   "injury": "Up to 3 weeks (late news)",
+   "snap": 0.71
   },
   {
    "team": "GB",
@@ -786,6 +798,14 @@
    "snap": 0.72
   },
   {
+   "team": "HOU",
+   "name": "David Montgomery",
+   "pos": "RB",
+   "status": "Out",
+   "injury": "Groin (late news)",
+   "snap": 0.63
+  },
+  {
    "team": "IND",
    "name": "Akeem Davis-Gaither",
    "pos": "LB",
@@ -835,6 +855,14 @@
   },
   {
    "team": "LA",
+   "name": "Puka Nacua",
+   "pos": "WR",
+   "status": "Out",
+   "injury": "Likely IR (late news)",
+   "snap": 0.96
+  },
+  {
+   "team": "LA",
    "name": "Trent McDuffie",
    "pos": "CB",
    "status": "Questionable",
@@ -867,6 +895,14 @@
   },
   {
    "team": "LAC",
+   "name": "Ladd McConkey",
+   "pos": "WR",
+   "status": "Out",
+   "injury": "Back (late news)",
+   "snap": 0.9
+  },
+  {
+   "team": "LAC",
    "name": "Kayode Awosika",
    "pos": "G",
    "status": "Questionable",
@@ -880,6 +916,14 @@
    "status": "Out",
    "injury": "Concussion",
    "snap": 1.0
+  },
+  {
+   "team": "MIA",
+   "name": "Zach Sieler",
+   "pos": "DL",
+   "status": "Out",
+   "injury": "Season-ending biceps surgery (late news)",
+   "snap": 0.83
   },
   {
    "team": "MIA",
@@ -1136,6 +1180,14 @@
    "status": "Out",
    "injury": "Achilles",
    "snap": 0.54
+  },
+  {
+   "team": "SF",
+   "name": "Gracen Halton",
+   "pos": "DL",
+   "status": "Out",
+   "injury": "Out for the season (late news)",
+   "snap": 0.5
   },
   {
    "team": "TEN",

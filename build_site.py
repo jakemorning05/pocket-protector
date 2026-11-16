@@ -66,7 +66,10 @@ def main():
            f'<title>{TITLE} · NFL picks, pools and fantasy</title>\n<meta name="description" content="{DESC}">\n'
            '<meta name="theme-color" content="#11162A">\n'
            f'<meta property="og:title" content="{TITLE}">\n<meta property="og:description" content="{DESC}">\n<meta property="og:type" content="website">\n'
-           '<meta name="twitter:card" content="summary">\n'
+           f'<meta property="og:url" content="{SITE_URL}">\n<meta property="og:image" content="{SITE_URL}share.png">\n'
+           '<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n'
+           '<meta name="twitter:card" content="summary_large_image">\n'
+           f'<meta name="twitter:image" content="{SITE_URL}share.png">\n<link rel="apple-touch-icon" href="apple-touch-icon.png">\n'
            f'<link rel="icon" href="{FAVICON}">\n' + FONTS +
            '<style>[hidden]{display:none!important} img{max-width:100%} :root{padding-top:env(safe-area-inset-top,0px)}</style>\n'
            + f'<link rel="canonical" href="{SITE_URL}">\n' + style + '\n</head>\n<body>\n' + page.replace("'__BASE__'", "''") + '\n' + ANALYTICS + '\n</body>\n</html>\n')
