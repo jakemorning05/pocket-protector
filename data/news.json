@@ -1,5 +1,5 @@
 {
- "asof": "Sun, Nov 15, 6:16 PM ET",
+ "asof": "Sun, Nov 15, 11:15 PM ET",
  "outs": [
   "Josh Jacobs",
   "Puka Nacua",
@@ -41,6 +41,13 @@
   "Geno Smith": "Evaluated for a concussion Sunday"
  },
  "items": [
+  {
+   "team": "SF",
+   "tag": "Result",
+   "text": "Late window: the 49ers outlasted Dallas 46-40, the Rams beat Arizona 34-6 in Carson Beck’s first start, and Drew Lock led Seattle past Las Vegas 21-13. The model had all three winners.",
+   "src": "Yahoo Sports scores / Sportradar finals, Nov 15",
+   "url": "https://sports.yahoo.com/nfl/live/nfl-scores-news-live-updates-week-10-schedule-inactives-highlights-stats-where-to-watch-141718993.html"
+  },
   {
    "team": "MIN",
    "tag": "Result",
