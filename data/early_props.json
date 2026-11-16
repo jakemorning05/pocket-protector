@@ -1,6 +1,6 @@
 {
  "week": 11,
- "asof": "Mon, Nov 16, 1:58 AM ET",
+ "asof": "Mon, Nov 16, 2:38 PM ET",
  "games": [
   {
    "id": "2026_11_IND_HOU",
@@ -77,6 +77,17 @@
      "games": 10
     },
     {
+     "player": "Kenneth Walker III",
+     "team": "KC",
+     "pos": "RB",
+     "stat": "rush_yds",
+     "line": 109.5,
+     "proj": 95.4,
+     "p_over": 0.386,
+     "side": "Under",
+     "games": 8
+    },
+    {
      "player": "Trey McBride",
      "team": "ARI",
      "pos": "TE",
@@ -86,31 +97,20 @@
      "p_over": 0.39,
      "side": "Under",
      "games": 10
-    },
-    {
-     "player": "Rashee Rice",
-     "team": "KC",
-     "pos": "WR",
-     "stat": "rec_yds",
-     "line": 67.5,
-     "proj": 61.6,
-     "p_over": 0.442,
-     "side": "Under",
-     "games": 6
     }
    ],
    "td": [
+    {
+     "player": "Kenneth Walker III",
+     "team": "KC",
+     "pos": "RB",
+     "p": 0.688
+    },
     {
      "player": "Emmett Johnson",
      "team": "KC",
      "pos": "RB",
      "p": 0.327
-    },
-    {
-     "player": "Trey McBride",
-     "team": "ARI",
-     "pos": "TE",
-     "p": 0.32
     }
    ]
   },

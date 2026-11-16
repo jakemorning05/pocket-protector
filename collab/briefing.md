@@ -1,4 +1,4 @@
-# Model briefing (updated Sun, Nov 15, 11:57 PM ET)
+# Model briefing (updated Mon, Nov 16, 2:50 PM ET)
 
 - Picking winners this season: 108-40. Betting favorites on the same games: 102-46.
 - Prop test vs. Kalshi (since Week 9): 66-73, -6.11 units at one contract each.
@@ -7,7 +7,7 @@
 
 | Game | Kickoff (ET) | QBs | Model win % (home) | Market win % (home) | Model margin (home) | Line (home) | Model total | Market total |
 |---|---|---|---|---|---|---|---|---|
-| LAC @ BAL | 2026-11-16 20:15 | Justin Herbert / Jacoby Brissett | 61% | 66% | +3.6 | -4.5 | 45.2 | 38.5 |
+| LAC @ BAL | 2026-11-16 20:15 | Justin Herbert / Jacoby Brissett | 61% | 67% | +3.6 | -4.5 | 45.2 | 39.5 |
 
 ## Logged Kalshi props for those games (model chance of YES vs. price)
 
@@ -41,25 +41,29 @@
 - Alvin Kamara: Fewer carries with Travis Etienne back
 - Chig Okonkwo: Back injury Thursday; returned in the second half
 - Travis Etienne: Activated from IR; first game since Week 3
-- Brock Bowers: Ankle injury Sunday; ruled out of the game
-- Omar Cooper Jr.: Re-injured his right ankle Sunday
-- Geno Smith: Evaluated for a concussion Sunday
+- Brock Bowers: Day-to-day (ankle); has a shot to play Week 11
+- Omar Cooper Jr.: Re-injured his right ankle Sunday; tests Monday
+- Geno Smith: Ankle tests Monday; starts Week 11 if cleared, otherwise rookie Cade Klubnik
 - Kyle McCord: Starts at QB through Week 13 while Malik Willis is on IR
+- Jacoby Brissett: Starts for Lamar Jackson Monday. The model’s point total for this game still assumes Lamar, so its Over 38.5 lean is suspect
+- Kenneth Walker III: Expected back Week 11 after missing one game (groin)
+- David Montgomery: Groin; unclear for Thursday's short week
+- Baker Mayfield: Lower-leg injury; could miss Week 11
 
 ## Recent headlines
 
+- NE: Drake Maye (ankle) is out indefinitely, and it's feared the ankle is fractured and could need season-ending surgery. Tommy DeVito finished Sunday's game; New England is on bye this week and hasn't named a starter, so the model uses DeVito for now. (Yahoo Sports, Nov 16)
+- NYJ: Geno Smith is getting tests on the ankle he hurt against Buffalo. Aaron Glenn says Smith starts Week 11 against the Chargers if he's cleared; if not, rookie Cade Klubnik makes his first start. Omar Cooper also had ankle tests Monday. (ProFootballTalk via Yahoo, Nov 16)
+- HOU: Woody Marks (concussion) is unlikely to play Thursday at Indianapolis, and DeMeco Ryans doesn't know whether David Montgomery (groin) will be ready on the short week. The model has both out for now; Wednesday's practice report will settle it. (Yahoo Sports, Nov 16)
+- KC: Kenneth Walker III (groin) is expected back for Week 11 against Arizona after missing one game, so he's back in the projections. (Yahoo Sports, Nov 16)
+- LV: Brock Bowers avoided a major ankle injury. He's day-to-day with a shot to play Week 11 against Denver. (Yahoo Sports, Nov 16)
+- TB: Baker Mayfield (lower leg) could miss Week 11 against Detroit; the bye week didn't seem to help. (Yahoo Sports, Nov 16)
+- SF: Mike Evans (Achilles) has missed three straight games but has a shot to return Week 11 against Minnesota. (Yahoo Sports, Nov 16)
+- DET: Aidan Hutchinson is believed to have suffered a serious knee injury Sunday against New England. (NFL.com, Nov 15)
 - LAC: Ladd McConkey (back) was downgraded to out for Monday night at Baltimore and didn't travel. Quentin Johnston, Tre Harris and KeAndre Lambert-Smith lead the receivers; the model underprojects them because McConkey's targets aren't redistributed. (RotoWire, Nov 15)
 - SF: Late window: the 49ers outlasted Dallas 46-40, the Rams beat Arizona 34-6 in Carson Beck’s first start, and Drew Lock led Seattle past Las Vegas 21-13. The model had all three winners. (Yahoo Sports scores / Sportradar finals, Nov 15)
 - MIN: Kirk Cousins won his first start back in Minnesota, 30-10 at Green Bay, one of two games the model missed in the early window. The other was Cleveland’s 27-24 upset of Houston. The model’s Panthers pick at New Orleans (20-17) came through. (Yahoo Sports scores / Sportradar finals, Nov 15)
 - LV: Brock Bowers was ruled out with an ankle injury during Sunday’s game against Seattle. (Yahoo Sports live updates, Nov 15)
-- NYJ: Rookie WR Omar Cooper Jr. hurt the same right ankle he injured in Week 1 and was questionable to return against Buffalo; Geno Smith was also evaluated for a concussion. (SI / CBS Sports, Nov 15)
-- KC: Kenneth Walker III (groin) was downgraded to out Saturday, so Emmett Johnson starts at Atlanta. Kansas City called it caution after a minor strain in Thursday’s practice. (NFL.com, Nov 14)
-- HOU: David Montgomery was downgraded to out Saturday after all, so Woody Marks stays Houston’s lead back at Cleveland. (NFL.com, Nov 14)
-- NO: The Saints activated Travis Etienne from injured reserve, and he’ll play Sunday against Carolina for the first time since Week 3. The model adds him back and trims the other backs’ carries. (NFL.com, Nov 14)
-- NE: TreVeyon Henderson went on injured reserve. Rhamondre Stevenson and A.J. Brown are still questionable in Munich (9:30 AM ET); Brown traveled with the team. (NBC Sports / NFL.com, Nov 14)
-- CAR: Xavier Legette was activated from IR and is questionable. In Indianapolis, TE Will Mallory was downgraded to out and Mo Alie-Cox went on IR. (NFL.com, Nov 14)
-- KC: Kenneth Walker III (groin) was added to the injury report Friday and is questionable at Atlanta. Andy Reid said they won't put him at risk, so treat it as a true 50/50; Emmett Johnson would start if he sits. Kickoff is 1 PM ET. (Yahoo Sports / Bleacher Report, Nov 13)
-- NE: TreVeyon Henderson (illness) is out in Munich and Rhamondre Stevenson (knee) is questionable after two limited practices; if he sits, Corey Kiner gets most of the carries, more than the model projects. A.J. Brown is expected to be activated from IR and is a game-time decision. Inactives come out at 8 AM ET Sunday. (RotoWire, Nov 13)
 
 Known model weak spots: backups who inherit a starter's carries are underprojected; running back props ignore game
 script (trailing teams run less); very low receiving lines (10-15 yards) are overrated for YES; no weather inputs.

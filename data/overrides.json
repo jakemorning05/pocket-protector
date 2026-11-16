@@ -56,6 +56,13 @@
       "name": "Joe Milton III",
       "through_week": 18,
       "source": "ESPN / NFL Network: Milton replaced Tanner McKee as the starter in Week 9; Jalen Hurts (blood clots) expected to miss the rest of the season"
+    },
+    {
+      "team": "NE",
+      "qb": "T.DeVito",
+      "name": "Tommy DeVito",
+      "through_week": 12,
+      "source": "Yahoo Sports, Nov 16: Maye out indefinitely (ankle); DeVito finished the Week 10 game. NE has not named a starter (bye Week 11), recheck before Week 12"
     }
   ],
   "players_out": [
@@ -192,11 +199,6 @@
       "source": "Traded to KC (Nov 10)"
     },
     {
-      "name": "Kenneth Walker III",
-      "team": "KC",
-      "source": "NFL.com, Nov 14: downgraded to out (groin)"
-    },
-    {
       "name": "David Montgomery",
       "team": "HOU",
       "source": "NFL.com, Nov 14: downgraded to out (groin)"
@@ -205,6 +207,11 @@
       "name": "Ladd McConkey",
       "team": "LAC",
       "source": "RotoWire, Nov 15: downgraded to out (back), did not travel to Baltimore"
+    },
+    {
+      "name": "Woody Marks",
+      "team": "HOU",
+      "source": "Yahoo Sports Nov 16: concussion Sunday, unlikely to play Thursday at IND"
     }
   ],
   "traded": [

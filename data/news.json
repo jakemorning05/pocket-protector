@@ -1,5 +1,5 @@
 {
- "asof": "Sun, Nov 15, 11:57 PM ET",
+ "asof": "Mon, Nov 16, 2:50 PM ET",
  "outs": [
   "Josh Jacobs",
   "Puka Nacua",
@@ -21,13 +21,72 @@
   "Alvin Kamara": "Fewer carries with Travis Etienne back",
   "Chig Okonkwo": "Back injury Thursday; returned in the second half",
   "Travis Etienne": "Activated from IR; first game since Week 3",
-  "Brock Bowers": "Ankle injury Sunday; ruled out of the game",
-  "Omar Cooper Jr.": "Re-injured his right ankle Sunday",
-  "Geno Smith": "Evaluated for a concussion Sunday",
+  "Brock Bowers": "Day-to-day (ankle); has a shot to play Week 11",
+  "Omar Cooper Jr.": "Re-injured his right ankle Sunday; tests Monday",
+  "Geno Smith": "Ankle tests Monday; starts Week 11 if cleared, otherwise rookie Cade Klubnik",
   "Kyle McCord": "Starts at QB through Week 13 while Malik Willis is on IR",
-  "Jacoby Brissett": "Starts for Lamar Jackson Monday. The model\u2019s point total for this game still assumes Lamar, so its Over 38.5 lean is suspect"
+  "Jacoby Brissett": "Starts for Lamar Jackson Monday. The model\u2019s point total for this game still assumes Lamar, so its Over 38.5 lean is suspect",
+  "Kenneth Walker III": "Expected back Week 11 after missing one game (groin)",
+  "David Montgomery": "Groin; unclear for Thursday's short week",
+  "Baker Mayfield": "Lower-leg injury; could miss Week 11"
  },
  "items": [
+  {
+   "team": "NE",
+   "tag": "Injury",
+   "text": "Drake Maye (ankle) is out indefinitely, and it's feared the ankle is fractured and could need season-ending surgery. Tommy DeVito finished Sunday's game; New England is on bye this week and hasn't named a starter, so the model uses DeVito for now.",
+   "src": "Yahoo Sports, Nov 16",
+   "url": "https://sports.yahoo.com/fantasy/article/nfl-injury-report-week-11-latest-news-updates-for-drake-maye-kenneth-walker-iii-brock-bowers-more-players-for-fantasy-football-183145114.html"
+  },
+  {
+   "team": "NYJ",
+   "tag": "Injury",
+   "text": "Geno Smith is getting tests on the ankle he hurt against Buffalo. Aaron Glenn says Smith starts Week 11 against the Chargers if he's cleared; if not, rookie Cade Klubnik makes his first start. Omar Cooper also had ankle tests Monday.",
+   "src": "ProFootballTalk via Yahoo, Nov 16",
+   "url": "https://sports.yahoo.com/articles/geno-smith-getting-tests-ankle-151654779.html"
+  },
+  {
+   "team": "HOU",
+   "tag": "Injury",
+   "text": "Woody Marks (concussion) is unlikely to play Thursday at Indianapolis, and DeMeco Ryans doesn't know whether David Montgomery (groin) will be ready on the short week. The model has both out for now; Wednesday's practice report will settle it.",
+   "src": "Yahoo Sports, Nov 16",
+   "url": "https://sports.yahoo.com/fantasy/article/nfl-injury-report-week-11-latest-news-updates-for-drake-maye-kenneth-walker-iii-brock-bowers-more-players-for-fantasy-football-183145114.html"
+  },
+  {
+   "team": "KC",
+   "tag": "Injury",
+   "text": "Kenneth Walker III (groin) is expected back for Week 11 against Arizona after missing one game, so he's back in the projections.",
+   "src": "Yahoo Sports, Nov 16",
+   "url": "https://sports.yahoo.com/fantasy/article/nfl-injury-report-week-11-latest-news-updates-for-drake-maye-kenneth-walker-iii-brock-bowers-more-players-for-fantasy-football-183145114.html"
+  },
+  {
+   "team": "LV",
+   "tag": "Injury",
+   "text": "Brock Bowers avoided a major ankle injury. He's day-to-day with a shot to play Week 11 against Denver.",
+   "src": "Yahoo Sports, Nov 16",
+   "url": "https://sports.yahoo.com/fantasy/article/nfl-injury-report-week-11-latest-news-updates-for-drake-maye-kenneth-walker-iii-brock-bowers-more-players-for-fantasy-football-183145114.html"
+  },
+  {
+   "team": "TB",
+   "tag": "Injury",
+   "text": "Baker Mayfield (lower leg) could miss Week 11 against Detroit; the bye week didn't seem to help.",
+   "src": "Yahoo Sports, Nov 16",
+   "url": "https://sports.yahoo.com/fantasy/article/nfl-injury-report-week-11-latest-news-updates-for-drake-maye-kenneth-walker-iii-brock-bowers-more-players-for-fantasy-football-183145114.html"
+  },
+  {
+   "team": "SF",
+   "tag": "Injury",
+   "text": "Mike Evans (Achilles) has missed three straight games but has a shot to return Week 11 against Minnesota.",
+   "src": "Yahoo Sports, Nov 16",
+   "url": "https://sports.yahoo.com/fantasy/article/nfl-injury-report-week-11-latest-news-updates-for-drake-maye-kenneth-walker-iii-brock-bowers-more-players-for-fantasy-football-183145114.html"
+  },
+  {
+   "team": "DET",
+   "tag": "Injury",
+   "text": "Aidan Hutchinson is believed to have suffered a serious knee injury Sunday against New England.",
+   "src": "NFL.com, Nov 15",
+   "url": "https://www.nfl.com/news/notable-injuries-news-sunday-week-10-games-2026"
+  },
   {
    "team": "LAC",
    "tag": "Injury",
@@ -780,6 +839,14 @@
    "status": "Out",
    "injury": "Groin",
    "snap": 0.93
+  },
+  {
+   "team": "HOU",
+   "name": "Woody Marks",
+   "pos": "RB",
+   "status": "Out",
+   "injury": "Concussion Sunday (late news)",
+   "snap": 0.89
   },
   {
    "team": "HOU",
