@@ -237,6 +237,36 @@ svg.chart .hit { fill: transparent; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); gap: 12px; }
 .tile { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 14px 16px; }
 .tile b { display: block; font-family: var(--font-display); font-weight: 800; font-size: 2.1rem; line-height: 1.1; letter-spacing: -0.02em; }
+/* Parlays tab */
+.ladder { display: grid; grid-template-columns: repeat(auto-fit, minmax(58px, 1fr)); gap: 8px; }
+.rung { min-width: 0; border: 1px solid var(--line); border-radius: var(--r-sm); padding: 8px 10px; background: var(--bg-2); }
+.rung b { display: block; font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; }
+.rung span { display: block; font-size: 0.72rem; font-weight: 700; color: var(--muted); min-height: 1em; }
+.rung.done { background: color-mix(in oklab, var(--good) 14%, var(--surface)); border-color: color-mix(in oklab, var(--good) 40%, var(--line)); }
+.rung.now { border: 2px solid var(--accent); background: color-mix(in oklab, var(--accent) 10%, var(--surface)); }
+.rung.now span { color: var(--accent); }
+.rung.next b { color: var(--ink-2); }
+.rung.record { border-style: dashed; border-color: var(--accent); }
+.rung.record span::after { content: " · new high"; color: var(--accent); }
+.slips { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 12px; }
+.slip { border: 1px solid var(--line); border-radius: var(--r-sm); padding: 12px 14px; background: var(--bg-2); display: grid; gap: 8px; align-content: start; }
+.slip.played { border: 2px solid color-mix(in oklab, var(--accent) 70%, var(--line)); }
+.slip-head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.slip-head b { font-family: var(--font-display); font-size: 1.05rem; margin-right: auto; }
+.pill { font-weight: 800; font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 8px; border-radius: 999px; background: var(--surface-2); color: var(--ink-2); white-space: nowrap; }
+.pill.play { background: var(--accent); color: var(--on-accent); }
+.pill.won { background: color-mix(in oklab, var(--good) 20%, var(--surface)); color: var(--good); }
+.pill.lost { background: color-mix(in oklab, var(--bad) 18%, var(--surface)); color: var(--bad); }
+.legs { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.legs li { display: flex; align-items: baseline; gap: 8px; font-size: 0.92rem; }
+.legs li > span:first-of-type { flex: 1; min-width: 0; }
+.legs .mk { font-style: normal; font-weight: 900; width: 1em; text-align: center; color: var(--muted); }
+.legs .mk.w { color: var(--good); } .legs .mk.l { color: var(--bad); }
+.runs { display: grid; gap: 10px; }
+.runrow { display: grid; gap: 4px; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+.runrow p { margin: 0; }
+@media (max-width: 520px) { .ladder { grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); gap: 6px; } .rung { padding: 7px 6px; } .rung b { font-size: 1rem; } .rung.record span::after { content: ""; } }
+.slip-foot { margin: 0; font-weight: 700; font-size: 0.86rem; color: var(--ink-2); }
 .prose { display: grid; gap: 10px; max-width: 65ch; color: var(--ink-2); }
 .prose strong { color: var(--ink); }
 .prose ul { margin: 0; padding-left: 1.2em; display: grid; gap: 6px; }

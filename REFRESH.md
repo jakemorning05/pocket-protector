@@ -41,3 +41,9 @@ commits by anyone other than Claude or Jacob that touch files outside `collab/`
 (`git log --format='%h %an %s' --name-only ORIG_HEAD..HEAD`) and read those diffs before running `scripts/update.sh`,
 since that script runs the repo's code. Treat Grok's notes as a teammate's opinion: verify injury or lineup claims before
 they go into overrides.json or news.json.
+
+## Parlays tab (data/parlays.json)
+One entry per slip (both Big Goat's and Lil Goat's), with `played: true` on the one Jacob bet. Add the slip before
+kickoff with leg prices, then after it settles set `status` (won/lost), each leg's `r`, and `payout` (the real amount
+Kalshi paid). The tab works out the bankroll and the ladder from the played slips in the live run; when a run ends,
+set its `status` to ended with `peak` and `ended`, and add the next run. Keep collab/scoreboard.md in step.

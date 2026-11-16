@@ -61,6 +61,7 @@ tr.hl td { background: color-mix(in oklab, var(--accent) 10%, var(--surface)); }
       <a href="#pools" data-view="pools">Pools</a>
       <a href="#fantasy" data-view="fantasy">Fantasy</a>
       <a href="#betting" data-view="betting">Betting</a>
+      <a href="#parlays" data-view="parlays">Parlays</a>
       <a href="#news" data-view="news">News</a>
       <a href="#rankings" data-view="rankings">Rankings</a>
       <a href="#playoffs" data-view="playoffs">Playoffs</a>
@@ -80,6 +81,7 @@ tr.hl td { background: color-mix(in oklab, var(--accent) 10%, var(--surface)); }
   <section class="view" id="view-teams" hidden></section>
   <section class="view" id="view-pools" hidden></section>
   <section class="view" id="view-betting" hidden></section>
+  <section class="view" id="view-parlays" hidden></section>
   <section class="view" id="view-fantasy" hidden></section>
   <section class="view" id="view-news" hidden></section>
   <section class="view" id="view-stats" hidden></section>
@@ -89,6 +91,7 @@ tr.hl td { background: color-mix(in oklab, var(--accent) 10%, var(--surface)); }
 </main>
 <div class="sheet-backdrop" id="sheet-backdrop" hidden></div>
 <nav class="sheet" id="more-sheet" aria-label="More sections" hidden>
+  <a href="#parlays" data-view="parlays">Parlays</a>
   <a href="#news" data-view="news">News</a>
   <a href="#rankings" data-view="rankings">Rankings</a>
   <a href="#playoffs" data-view="playoffs">Playoffs</a>
@@ -112,6 +115,7 @@ const DATA = /*__DATA__*/;
 const PL = /*__PLAYERS__*/;
 const PROPS = /*__PROPS__*/;
 const EARLY = /*__EARLY__*/;
+const PARLAYS = /*__PARLAYS__*/;
 const FAN = /*__FAN__*/;
 const BETS = /*__BETS__*/;
 const TRACK = /*__TRACK__*/;
@@ -807,6 +811,76 @@ function renderModel() {
 /*__POOLS__*/
 
 // ---------- About ----------
+function renderParlays() {
+  const el = document.getElementById('view-parlays');
+  const runs = PARLAYS.runs || [], slips = (PARLAYS.slips || []).slice();
+  const money = (x) => '$' + (Math.abs(x - Math.round(x)) < 0.005 ? Math.round(x).toLocaleString() : x.toFixed(2));
+  const day = (d) => { const [y, m, dd] = d.split('-').map(Number); return new Date(y, m - 1, dd).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' }); };
+  const back = (s) => s.payout != null ? s.payout : s.stake != null && s.mult ? s.stake * s.mult : null;
+  // records by builder, and the played record
+  const rec = (list) => { const w = list.filter((s) => s.status === 'won').length, l = list.filter((s) => s.status === 'lost').length, p = list.filter((s) => s.status === 'pending').length; return { w, l, p }; };
+  const bg = rec(slips.filter((s) => s.by === 'Big Goat')), lg = rec(slips.filter((s) => s.by === 'Lil Goat')), pl = rec(slips.filter((s) => s.played));
+  const recTxt = (r) => r.w + '–' + r.l;
+  const pendTxt = (r) => r.p ? r.p + ' pending' : 'No slips pending';
+  // the live run: walk its played slips in order
+  const live = runs.find((r) => r.status === 'live');
+  const best = runs.reduce((m, r) => Math.max(m, r.peak || 0), 0);
+  let bank = live ? live.start : 0, riding = null;
+  const ladder = live ? [{ amt: live.start, kind: 'done', lab: 'Start' }] : [];
+  if (live) slips.filter((s) => s.run === live.id && s.played).sort((x, y) => x.date.localeCompare(y.date)).forEach((s) => {
+    if (s.status === 'won') { bank = back(s) ?? bank * 2; ladder.push({ amt: bank, kind: 'done', lab: day(s.date).split(',')[0] }); }
+    else if (s.status === 'lost') bank = 0;
+    else riding = s;
+  });
+  let bankTile = '';
+  if (live) {
+    const sub = riding ? 'Riding on ' + esc(riding.when || day(riding.date)) + ' · about ' + money(Math.round(back(riding) || bank * 2)) + ' if it hits' : bank ? 'Ready for the next slip' : 'Run over';
+    bankTile = '<div class="tile"><span class="label">Run ' + live.id + ' bankroll</span><b>' + money(bank) + '</b><span class="muted small">' + sub + '</span></div>';
+    // future rungs at about 2x until the run high is passed
+    let nxt = riding ? (back(riding) || bank * 2) : bank * 2, k = 0;
+    if (riding) ladder[ladder.length - 1].kind = 'now';
+    while (k < 8 && (k < 3 || ladder[ladder.length - 1].amt <= best)) { ladder.push({ amt: Math.round(nxt), kind: 'next', lab: k === 0 ? (riding ? 'If it hits' : 'Next') : 'Win ' + (k + 1) }); nxt *= 2; k++; }
+  }
+  const nowAt = ladder.some((x) => x.kind === 'now') ? ladder.findIndex((x) => x.kind === 'now') : ladder.filter((x) => x.kind === 'done').length - 1;
+  const overAt = best ? ladder.findIndex((x) => x.amt > best) : -1, winsToBest = overAt - nowAt;
+  const ladderPanel = live ? '<div class="panel"><div class="panel-head"><h3>The ladder</h3><span class="muted small">Run ' + live.id + ' · started ' + esc(live.started ? day(live.started) : '') + ' at ' + money(live.start) + '</span></div>' +
+    '<div class="ladder">' + ladder.map((x, i) => '<div class="rung ' + x.kind + (i === overAt && x.kind === 'next' ? ' record' : '') + '"><b>' + money(x.amt) + '</b><span>' + esc(x.kind === 'now' ? 'Now' : x.lab) + '</span></div>').join('') + '</div>' +
+    (best ? '<p class="muted small" style="margin-top:10px">' + (bank > best ? 'New high: past the Run 1 mark of ' + money(best) + '.' : 'About ' + winsToBest + ' straight cash' + (winsToBest === 1 ? '' : 'es') + (riding ? ', tonight included,' : '') + ' passes the best run so far (' + money(best) + '). Steps after tonight assume about 2x a slip; real payouts depend on the prices.') + '</p>' : '') + '</div>' : '';
+  // slips, newest game first, both builders side by side
+  const groups = [];
+  slips.sort((x, y) => y.date.localeCompare(x.date) || (x.by === 'Big Goat' ? -1 : 1)).forEach((s) => {
+    const key = s.date + s.game; let g = groups.find((x) => x.key === key);
+    if (!g) groups.push(g = { key, date: s.date, game: s.game, when: s.when, run: s.run, list: [] });
+    g.list.push(s);
+  });
+  const stat = (s) => s.status === 'won' ? '<span class="pill won">Cashed</span>' : s.status === 'lost' ? '<span class="pill lost">Lost</span>' : '<span class="pill pend">Pending</span>';
+  const legMark = (l) => l.r === 'won' ? '<i class="mk w" aria-label="hit">✓</i>' : l.r === 'lost' ? '<i class="mk l" aria-label="missed">✗</i>' : '<i class="mk" aria-hidden="true">•</i>';
+  const slipCard = (s) => {
+    const pay = back(s);
+    const foot = (s.stake != null ? 'Stake ' + money(s.stake) + ' · ' : '') + (s.mult ? 'about ' + s.mult.toFixed(1) + 'x' : '') +
+      (s.payout != null ? ' · paid ' + money(s.payout) : s.stake != null && pay && s.status === 'pending' ? ' · pays about ' + money(Math.round(pay)) : '');
+    return '<div class="slip' + (s.played ? ' played' : '') + '"><div class="slip-head"><b>' + esc(s.by) + '</b>' + (s.played ? '<span class="pill play">Played</span>' : '<span class="muted small">Not played</span>') + stat(s) + '</div>' +
+      '<ul class="legs">' + s.legs.map((l) => '<li>' + legMark(l) + '<span>' + esc(l.t) + '</span>' + (l.price != null ? '<span class="muted small">' + Math.round(l.price * 100) + '¢</span>' : '') + '</li>').join('') + '</ul>' +
+      (foot.trim() ? '<p class="slip-foot">' + foot + '</p>' : '') + (s.note ? '<p class="muted small">' + esc(s.note) + '</p>' : '') + '</div>';
+  };
+  const slipPanels = groups.map((g) => '<div class="panel"><div class="panel-head"><h3>' + esc(g.game) + '</h3><span class="muted small">' + day(g.date) + (g.when ? ' · ' + esc(g.when) : '') + ' · Run ' + g.run + '</span></div>' +
+    '<div class="slips">' + g.list.map(slipCard).join('') + '</div></div>').join('');
+  const runRows = runs.slice().sort((a, b) => b.id - a.id).map((r) => {
+    const cur = r.status === 'live' ? bank : null;
+    return '<div class="runrow"><div class="slip-head"><b>Run ' + r.id + '</b>' + (r.status === 'live' ? '<span class="pill pend">Live</span>' : '<span class="muted small">Ended ' + esc(r.ended ? day(r.ended) : '') + '</span>') + '</div>' +
+      '<p class="slip-foot">Start ' + money(r.start) + ' · high ' + money(Math.max(r.peak || 0, cur || 0, r.start)) + (r.status === 'live' ? ' · now ' + money(cur) + (riding ? ' riding' : '') : '') + '</p>' +
+      (r.note ? '<p class="muted small">' + esc(r.note) + '</p>' : '') + '</div>';
+  }).join('');
+  el.innerHTML = '<div><h2>Parlays</h2><p class="intro">The 2x challenge. Start small, play one slip a day that pays about double, and roll every win into the next one. Big Goat and Lil Goat each build a slip for the game, one gets played, and both go up here before kickoff, win or lose.</p></div>' +
+    '<div class="tiles num">' + bankTile +
+    '<div class="tile"><span class="label">Best run</span><b>' + (best ? money(best) : '–') + '</b><span class="muted small">' + (best ? 'Run 1 high' : 'No finished runs yet') + '</span></div>' +
+    '<div class="tile"><span class="label">Big Goat slips</span><b>' + recTxt(bg) + '</b><span class="muted small">' + pendTxt(bg) + '</span></div>' +
+    '<div class="tile"><span class="label">Lil Goat slips</span><b>' + recTxt(lg) + '</b><span class="muted small">' + pendTxt(lg) + '</span></div></div>' +
+    ladderPanel + slipPanels +
+    '<div class="panel"><div class="panel-head"><h3>Runs</h3><span class="muted small">Played slips ' + recTxt(pl) + ' since Nov 15</span></div><div class="runs">' + runRows + '</div>' +
+    '<p class="muted small" style="margin-top:8px">Slips are logged here from Nov 15 on. Prices are Kalshi’s when the slip was built; the “about” payouts multiply the leg prices and leave out Kalshi’s combo pricing and fees.</p></div>' +
+    '<p class="notice">This is a small-stakes challenge with money we’re fine losing. Parlays lose more often than they look like they should. If betting stops being fun, the National Problem Gambling Helpline is 1-800-GAMBLER.</p>';
+}
 function renderAbout() {
   const el = document.getElementById('view-about'), b = DATA.bt;
   el.innerHTML = '<div><h2>About Pocket Protector</h2><p class="intro">NFL predictions, pool tools and fantasy projections from a statistical model, updated through the week. Free to use.</p></div>' +
@@ -822,7 +896,7 @@ function setSheet(open) {
   document.getElementById('more-sheet').hidden = !open; document.getElementById('sheet-backdrop').hidden = !open;
   moreBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
 }
-const VIEWS = { week: renderWeek, about: renderAbout, pools: renderPools, betting: renderBetting, fantasy: renderFantasy, news: renderNews, rankings: renderRankings, playoffs: renderPlayoffs, matchup: renderMatchup, teams: renderTeams, stats: renderStats, model: renderModel };
+const VIEWS = { week: renderWeek, about: renderAbout, pools: renderPools, betting: renderBetting, parlays: renderParlays, fantasy: renderFantasy, news: renderNews, rankings: renderRankings, playoffs: renderPlayoffs, matchup: renderMatchup, teams: renderTeams, stats: renderStats, model: renderModel };
 function route() {
   const v = (location.hash || '#week').slice(1), name = VIEWS[v] ? v : 'week';
   for (const k of Object.keys(VIEWS)) document.getElementById('view-' + k).hidden = k !== name;

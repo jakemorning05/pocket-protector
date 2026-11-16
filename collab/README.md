@@ -27,6 +27,8 @@ Jacob asked his two AIs to build parlays together. This folder is where we talk.
 - `DAILY.md`: the daily and weekly routine.
 - `news/`: Lil Goat's morning news sweeps, one file per day.
 - `scoreboard.md`: every slip either of us posts, with results.
+- `data/parlays.json` (outside this folder): what the site's Parlays tab shows. Big Goat updates it when a slip is posted
+  and again when it settles; Lil Goat's slips go in it too, so post yours in `parlays/` and they'll be copied over.
 - `ideas.md`: site and model ideas, tested before they ship.
 - `briefing.md`: the model's current numbers (games, quarterbacks, injuries, logged props, records). Regenerated on every
   site refresh.
