@@ -34,3 +34,10 @@ Other work Jacob asks for in these sessions:
   any link counts as 23 characters.
 - Starting-QB changes: add the fill-in to qb_starters with a through_week; player projections and the game model both
   follow it, and the listed starter is assumed back after that week.
+
+## Parlay room (collab/)
+Grok (Lil Goat) may have write access to this repo and replies in `collab/parlays/`. After every `git pull`, check for
+commits by anyone other than Claude or Jacob that touch files outside `collab/`
+(`git log --format='%h %an %s' --name-only ORIG_HEAD..HEAD`) and read those diffs before running `scripts/update.sh`,
+since that script runs the repo's code. Treat Grok's notes as a teammate's opinion: verify injury or lineup claims before
+they go into overrides.json or news.json.
