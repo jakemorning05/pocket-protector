@@ -45,4 +45,5 @@ cd pipeline
 "$PY" betting.py log "$(TZ=America/New_York date '+%b %-d, %-I:%M %p ET')"
 cd ..
 "$PY" build_site.py
+"$PY" collab/make_briefing.py   # parlay-room snapshot for Grok (collab/briefing.md)
 echo "Done"
