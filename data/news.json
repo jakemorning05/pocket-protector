@@ -1,5 +1,5 @@
 {
- "asof": "Mon, Nov 16, 2:50 PM ET",
+ "asof": "Tue, Nov 17, 12:40 AM ET",
  "outs": [
   "Josh Jacobs",
   "Puka Nacua",
@@ -25,12 +25,25 @@
   "Omar Cooper Jr.": "Re-injured his right ankle Sunday; tests Monday",
   "Geno Smith": "Ankle tests Monday; starts Week 11 if cleared, otherwise rookie Cade Klubnik",
   "Kyle McCord": "Starts at QB through Week 13 while Malik Willis is on IR",
-  "Jacoby Brissett": "Starts for Lamar Jackson Monday. The model\u2019s point total for this game still assumes Lamar, so its Over 38.5 lean is suspect",
   "Kenneth Walker III": "Expected back Week 11 after missing one game (groin)",
   "David Montgomery": "Groin; unclear for Thursday's short week",
   "Baker Mayfield": "Lower-leg injury; could miss Week 11"
  },
  "items": [
+  {
+   "team": "LAC",
+   "tag": "Result",
+   "text": "Monday night: the Chargers won 23-20 at Baltimore for their first win of the season. Omarion Hampton ran for 105 yards and a touchdown, and Justin Herbert added 51 rushing yards and a score. The Ravens outgained them 347-287 but ran for just 16 yards; Jacoby Brissett threw for 340 with an interception, and Baltimore has lost five straight. The model had Baltimore at 59%.",
+   "src": "Yahoo Sports, Nov 16",
+   "url": "https://sports.yahoo.com/articles/monday-night-football-chargers-run-043322853.html"
+  },
+  {
+   "team": "BAL",
+   "tag": "Injury",
+   "text": "Defensive tackle Nnamdi Madubuike left Monday's game with a hamstring injury.",
+   "src": "Yahoo Sports, Nov 16",
+   "url": "https://sports.yahoo.com/articles/ravens-vs-chargers-recap-baltimore-043424603.html"
+  },
   {
    "team": "NE",
    "tag": "Injury",

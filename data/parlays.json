@@ -1,5 +1,5 @@
 {
-  "asof": "Mon Nov 16, 2026",
+  "asof": "Tue Nov 17, 2026",
   "_help": "Source for the Parlays tab. One entry per slip. 'by' is Big Goat or Lil Goat; 'played' marks the slip that was actually bet. status: pending, won or lost. Leg 'r' is won/lost when known; leave it out if not. 'mult' is the approximate payout multiple from the leg prices (before Kalshi's combo pricing); 'payout' is the real amount once settled. Runs track the 2x challenge bankroll.",
   "runs": [
     {
@@ -14,8 +14,10 @@
       "id": 2,
       "start": 16,
       "started": "2026-11-16",
-      "status": "live",
-      "note": "Restarted at $16 with the same plan: one slip at about 2x per day, winnings roll forward."
+      "status": "ended",
+      "note": "Restarted at $16. The first slip lost when the Chargers won 23-20 in Baltimore.",
+      "peak": 16,
+      "ended": "2026-11-16"
     }
   ],
   "slips": [
@@ -30,9 +32,16 @@
       "mult": 2.0,
       "status": "lost",
       "legs": [
-        {"t": "Jaylen Warren 50+ rushing yards", "r": "lost"},
-        {"t": "Rico Dowdle 15+ rushing yards"},
-        {"t": "Joe Burrow 200+ passing yards"}
+        {
+          "t": "Jaylen Warren 50+ rushing yards",
+          "r": "lost"
+        },
+        {
+          "t": "Rico Dowdle 15+ rushing yards"
+        },
+        {
+          "t": "Joe Burrow 200+ passing yards"
+        }
       ],
       "note": "Cincinnati led 24-3 and Pittsburgh ran for 37 yards as a team. Lesson: build on the favorite's game plan, not the underdog's run game."
     },
@@ -45,10 +54,22 @@
       "played": false,
       "status": "won",
       "legs": [
-        {"t": "Joe Burrow 200+ passing yards", "r": "won"},
-        {"t": "Ja'Marr Chase 50+ receiving yards", "r": "won"},
-        {"t": "Tee Higgins 40+ receiving yards", "r": "won"},
-        {"t": "Chase Brown 20+ rushing yards", "r": "won"}
+        {
+          "t": "Joe Burrow 200+ passing yards",
+          "r": "won"
+        },
+        {
+          "t": "Ja'Marr Chase 50+ receiving yards",
+          "r": "won"
+        },
+        {
+          "t": "Tee Higgins 40+ receiving yards",
+          "r": "won"
+        },
+        {
+          "t": "Chase Brown 20+ rushing yards",
+          "r": "won"
+        }
       ],
       "note": "All Bengals, and it cashed in the first half."
     },
@@ -61,13 +82,25 @@
       "played": true,
       "stake": 16,
       "mult": 2.1,
-      "status": "pending",
+      "status": "lost",
       "legs": [
-        {"t": "Ravens to win", "price": 0.67},
-        {"t": "Derrick Henry 50+ rushing yards", "price": 0.80},
-        {"t": "Justin Herbert 125+ passing yards", "price": 0.87}
+        {
+          "t": "Ravens to win (lost 23-20)",
+          "price": 0.67,
+          "r": "lost"
+        },
+        {
+          "t": "Derrick Henry 50+ rushing yards (10)",
+          "price": 0.8,
+          "r": "lost"
+        },
+        {
+          "t": "Justin Herbert 125+ passing yards (129)",
+          "price": 0.87,
+          "r": "won"
+        }
       ],
-      "note": "Baltimore controls the game: new QB Jacoby Brissett has had one week in the building, so expect Henry early and often, and the Chargers throwing from behind."
+      "note": "Wrong read on the game. The Chargers scored first, Baltimore threw 49 times and ran for 16 yards as a team, and Henry finished with 10 yards on 10 carries (2 TDs). Only the Herbert leg hit."
     },
     {
       "date": "2026-11-16",
@@ -79,11 +112,22 @@
       "mult": 2.7,
       "status": "pending",
       "legs": [
-        {"t": "Tre' Harris 3+ catches", "price": 0.66},
-        {"t": "Quentin Johnston 20+ receiving yards", "price": 0.70},
-        {"t": "Jacoby Brissett 150+ passing yards", "price": 0.81}
+        {
+          "t": "Tre' Harris 3+ catches (5)",
+          "price": 0.66,
+          "r": "won"
+        },
+        {
+          "t": "Quentin Johnston 20+ receiving yards",
+          "price": 0.7
+        },
+        {
+          "t": "Jacoby Brissett 150+ passing yards (340)",
+          "price": 0.81,
+          "r": "won"
+        }
       ],
-      "note": "Both teams throw. Bigger payout, but the Chargers legs and the Brissett leg want different game scripts."
+      "note": "Read the game right: Brissett threw for 340. Two legs hit; Quentin Johnston's line isn't posted yet, and his leg decides the slip."
     }
   ]
 }

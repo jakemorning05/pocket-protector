@@ -362,6 +362,12 @@
       "away": 24,
       "home": 27,
       "source": "Sportradar final, Nov 15"
+    },
+    {
+      "game": "2026_10_LAC_BAL",
+      "away": 23,
+      "home": 20,
+      "source": "Sportradar final, Nov 16"
     }
   ]
 }

@@ -459,9 +459,9 @@
   "p": 0.571,
   "ev": 0.09,
   "logged": "Nov 9, 4:45 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null
+  "close": 4.5,
+  "clv": 1.0,
+  "result": "win"
  },
  {
   "game": "2026_10_LAC_BAL",
@@ -475,9 +475,9 @@
   "p": 0.695,
   "ev": 0.328,
   "logged": "Nov 9, 4:45 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null
+  "close": 39.5,
+  "clv": 1.0,
+  "result": "win"
  },
  {
   "game": "2026_11_IND_HOU",

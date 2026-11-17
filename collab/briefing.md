@@ -1,31 +1,30 @@
 # Model briefing (updated Mon, Nov 16, 2:50 PM ET)
 
-- Picking winners this season: 108-40. Betting favorites on the same games: 102-46.
+- Picking winners this season: 108-41. Betting favorites on the same games: 102-47.
 - Prop test vs. Kalshi (since Week 9): 66-73, -6.11 units at one contract each.
 
-## Week 10 games still to play
+## Week 11 games still to play
 
 | Game | Kickoff (ET) | QBs | Model win % (home) | Market win % (home) | Model margin (home) | Line (home) | Model total | Market total |
 |---|---|---|---|---|---|---|---|---|
-| LAC @ BAL | 2026-11-16 20:15 | Justin Herbert / Jacoby Brissett | 61% | 67% | +3.6 | -4.5 | 45.2 | 39.5 |
+| IND @ HOU | 2026-11-19 20:15 | Daniel Jones / C.J. Stroud | 69% | 83% | +6.5 | -11.5 | 45.0 | 44.5 |
+| ARI @ KC | 2026-11-22 13:00 | Carson Beck / Patrick Mahomes | 88% | 91% | +15.1 | -16.5 | 47.2 | 41.5 |
+| BAL @ CAR | 2026-11-22 13:00 | Jacoby Brissett / Bryce Young | 57% | 56% | +2.3 | -2.5 | 46.7 | 44.5 |
+| JAX @ NYG | 2026-11-22 13:00 | Trevor Lawrence / J.J. McCarthy | 28% | 30% | -7.6 | +6.0 | 46.8 | 46.5 |
+| MIA @ BUF | 2026-11-22 13:00 | Kyle McCord / Josh Allen | 95% | 90% | +20.7 | -16.5 | 50.7 | 45.5 |
+| NO @ CHI | 2026-11-22 13:00 | Tyler Shough / Caleb Williams | 85% | 84% | +13.3 | -11.5 | 49.8 | 48.5 |
+| TB @ DET | 2026-11-22 13:00 | Baker Mayfield / Jared Goff | 67% | 70% | +5.8 | -6.5 | 50.4 | 46.5 |
+| TEN @ DAL | 2026-11-22 13:00 | Cam Ward / Dak Prescott | 84% | 78% | +12.7 | -8.5 | 51.5 | 54.5 |
+| NYJ @ LAC | 2026-11-22 16:05 | Geno Smith / Justin Herbert | 49% | 60% | -0.3 | -3.0 | 45.0 | 40.5 |
+| LV @ DEN | 2026-11-22 16:25 | Fernando Mendoza / Bo Nix | 80% | 81% | +10.7 | -10.0 | 44.8 | 40.5 |
+| PIT @ PHI | 2026-11-22 16:25 | Aaron Rodgers / Joe Milton III | 33% | 34% | -5.7 | +4.5 | 41.3 | 38.5 |
+| MIN @ SF | 2026-11-22 20:20 | Kirk Cousins / Brock Purdy | 67% | 59% | +5.8 | -3.0 | 45.6 | 46.5 |
+| CIN @ WAS | 2026-11-23 20:15 | Joe Burrow / Jayden Daniels | 42% | 28% | -2.7 | +6.5 | 52.1 | 52.5 |
 
 ## Logged Kalshi props for those games (model chance of YES vs. price)
 
 | Game | Player | Line | Price | Model | Model side |
 |---|---|---|---|---|---|
-| LAC @ BAL | Jacoby Brissett | 10+ rush yds | 38% | 68% | YES |
-| LAC @ BAL | Justice Hill | 15+ rush yds | 44% | 69% | YES |
-| LAC @ BAL | Justice Hill | 15+ rec yds | 40% | 56% | YES |
-| LAC @ BAL | Mark Andrews | 25+ rec yds | 44% | 59% | YES |
-| LAC @ BAL | Kimani Vidal | 10+ rec yds | 46% | 60% | YES |
-| LAC @ BAL | Rashod Bateman | 20+ rec yds | 55% | 68% | YES |
-| LAC @ BAL | Kimani Vidal | 20+ rush yds | 48% | 60% | YES |
-| LAC @ BAL | Omarion Hampton | 25+ rush yds | 62% | 74% | YES |
-| LAC @ BAL | Justin Herbert | 200+ pass yds | 52% | 64% | YES |
-| LAC @ BAL | Derrick Henry | 70+ rush yds | 57% | 50% | NO |
-| LAC @ BAL | Jacoby Brissett | 225+ pass yds | 44% | 49% | YES |
-| LAC @ BAL | Justin Herbert | 20+ rush yds | 52% | 53% | YES |
-| LAC @ BAL | Zay Flowers | 70+ rec yds | 50% | 50% | NO |
 
 ## Injury and role notes the model is using
 

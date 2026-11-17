@@ -1,6 +1,6 @@
 {
  "week": 11,
- "asof": "Mon, Nov 16, 2:38 PM ET",
+ "asof": "Tue, Nov 17, 12:05 AM ET",
  "games": [
   {
    "id": "2026_11_IND_HOU",
@@ -122,6 +122,17 @@
    "time": "13:00",
    "leans": [
     {
+     "player": "Jacoby Brissett",
+     "team": "BAL",
+     "pos": "QB",
+     "stat": "pass_yds",
+     "line": 245.5,
+     "proj": 209.5,
+     "p_over": 0.28,
+     "side": "Under",
+     "games": 8
+    },
+    {
      "player": "Jalen Coker",
      "team": "CAR",
      "pos": "WR",
@@ -133,26 +144,15 @@
      "games": 8
     },
     {
-     "player": "Bryce Young",
-     "team": "CAR",
-     "pos": "QB",
-     "stat": "pass_yds",
-     "line": 281.5,
-     "proj": 249.9,
-     "p_over": 0.348,
+     "player": "Zay Flowers",
+     "team": "BAL",
+     "pos": "WR",
+     "stat": "rec_yds",
+     "line": 75.5,
+     "proj": 58.1,
+     "p_over": 0.328,
      "side": "Under",
-     "games": 9
-    },
-    {
-     "player": "Chuba Hubbard",
-     "team": "CAR",
-     "pos": "RB",
-     "stat": "rush_yds",
-     "line": 81.5,
-     "proj": 69.5,
-     "p_over": 0.376,
-     "side": "Under",
-     "games": 9
+     "games": 8
     }
    ],
    "td": [
@@ -469,6 +469,17 @@
      "games": 5
     },
     {
+     "player": "Justin Herbert",
+     "team": "LAC",
+     "pos": "QB",
+     "stat": "pass_yds",
+     "line": 198.5,
+     "proj": 222.0,
+     "p_over": 0.636,
+     "side": "Over",
+     "games": 8
+    },
+    {
      "player": "Omar Cooper Jr.",
      "team": "NYJ",
      "pos": "WR",
@@ -478,17 +489,6 @@
      "p_over": 0.375,
      "side": "Under",
      "games": 4
-    },
-    {
-     "player": "Garrett Wilson",
-     "team": "NYJ",
-     "pos": "WR",
-     "stat": "rec_yds",
-     "line": 79.5,
-     "proj": 72.7,
-     "p_over": 0.441,
-     "side": "Under",
-     "games": 9
     }
    ],
    "td": [
