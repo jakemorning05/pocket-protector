@@ -18,6 +18,13 @@
       "note": "Restarted at $16. The first slip lost when the Chargers won 23-20 in Baltimore.",
       "peak": 16,
       "ended": "2026-11-16"
+    },
+    {
+      "id": 3,
+      "start": 4,
+      "started": "2026-11-17",
+      "status": "live",
+      "note": "Restarted at $4. First slip Tuesday night."
     }
   ],
   "slips": [
