@@ -1,5 +1,5 @@
 {
- "asof": "Tue, Nov 17, 12:40 AM ET",
+ "asof": "Tue, Nov 17, 11:15 AM ET",
  "outs": [
   "Josh Jacobs",
   "Puka Nacua",
@@ -23,13 +23,20 @@
   "Travis Etienne": "Activated from IR; first game since Week 3",
   "Brock Bowers": "Day-to-day (ankle); has a shot to play Week 11",
   "Omar Cooper Jr.": "Re-injured his right ankle Sunday; tests Monday",
-  "Geno Smith": "Ankle tests Monday; starts Week 11 if cleared, otherwise rookie Cade Klubnik",
+  "Geno Smith": "Ankle tests showed no major injury; expected to start Week 11 if cleared",
   "Kyle McCord": "Starts at QB through Week 13 while Malik Willis is on IR",
   "Kenneth Walker III": "Expected back Week 11 after missing one game (groin)",
   "David Montgomery": "Groin; unclear for Thursday's short week",
   "Baker Mayfield": "Lower-leg injury; could miss Week 11"
  },
  "items": [
+  {
+   "team": "NYJ",
+   "tag": "Injury",
+   "text": "Geno Smith's ankle tests showed no major injury, and Aaron Glenn says he'll start Sunday against the Chargers as long as he's medically cleared.",
+   "src": "Yahoo Sports, Nov 17",
+   "url": "https://sports.yahoo.com/articles/report-tests-showed-no-major-120814108.html"
+  },
   {
    "team": "LAC",
    "tag": "Result",
@@ -47,9 +54,9 @@
   {
    "team": "NE",
    "tag": "Injury",
-   "text": "Drake Maye (ankle) is out indefinitely, and it's feared the ankle is fractured and could need season-ending surgery. Tommy DeVito finished Sunday's game; New England is on bye this week and hasn't named a starter, so the model uses DeVito for now.",
-   "src": "Yahoo Sports, Nov 16",
-   "url": "https://sports.yahoo.com/fantasy/article/nfl-injury-report-week-11-latest-news-updates-for-drake-maye-kenneth-walker-iii-brock-bowers-more-players-for-fantasy-football-183145114.html"
+   "text": "Drake Maye (ankle) could miss the rest of the season. He stayed in Germany for more tests to see whether he needs surgery, and Mike Vrabel doesn't expect him back for Week 12 against the Chargers. Tommy DeVito finished Sunday's game; New England is on bye this week, and the model uses DeVito for now.",
+   "src": "NFL.com and Yahoo Sports, Nov 16",
+   "url": "https://www.nfl.com/news/nfl-network-patriots-qb-drake-maye-could-miss-rest-of-2026-season"
   },
   {
    "team": "NYJ",
@@ -61,7 +68,7 @@
   {
    "team": "HOU",
    "tag": "Injury",
-   "text": "Woody Marks (concussion) is unlikely to play Thursday at Indianapolis, and DeMeco Ryans doesn't know whether David Montgomery (groin) will be ready on the short week. The model has both out for now; Wednesday's practice report will settle it.",
+   "text": "Woody Marks (concussion) is unlikely to play Thursday against Indianapolis, and DeMeco Ryans doesn't know whether David Montgomery (groin) will be ready on the short week. The model has both out for now; Wednesday's practice report will settle it.",
    "src": "Yahoo Sports, Nov 16",
    "url": "https://sports.yahoo.com/fantasy/article/nfl-injury-report-week-11-latest-news-updates-for-drake-maye-kenneth-walker-iii-brock-bowers-more-players-for-fantasy-football-183145114.html"
   },
