@@ -110,7 +110,7 @@
       "by": "Lil Goat",
       "played": false,
       "mult": 2.7,
-      "status": "pending",
+      "status": "lost",
       "legs": [
         {
           "t": "Tre' Harris 3+ catches (5)",
@@ -119,7 +119,8 @@
         },
         {
           "t": "Quentin Johnston 20+ receiving yards",
-          "price": 0.7
+          "price": 0.7,
+          "r": "lost"
         },
         {
           "t": "Jacoby Brissett 150+ passing yards (340)",
@@ -127,7 +128,7 @@
           "r": "won"
         }
       ],
-      "note": "Read the game right: Brissett threw for 340. Two legs hit; Quentin Johnston's line isn't posted yet, and his leg decides the slip."
+      "note": "Read the game better: Brissett threw for 340 and Harris caught 5. Quentin Johnston came up short of 20 yards, so it lost by one leg."
     }
   ]
 }
