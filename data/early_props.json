@@ -1,6 +1,6 @@
 {
  "week": 11,
- "asof": "Tue, Nov 17, 8:00 AM ET",
+ "asof": "Thu, Nov 19, 4:48 PM ET",
  "games": [
   {
    "id": "2026_11_IND_HOU",
@@ -150,7 +150,7 @@
      "stat": "rec_yds",
      "line": 74.5,
      "proj": 58.3,
-     "p_over": 0.339,
+     "p_over": 0.34,
      "side": "Under",
      "games": 9
     }
