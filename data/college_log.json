@@ -8,8 +8,9 @@
   "m": -0.9,
   "p": 0.476,
   "pick": "Iowa State",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": 1.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401858303,
@@ -20,8 +21,9 @@
   "m": 15.1,
   "p": 0.834,
   "pick": "Duke",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": -11.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401866468,
@@ -32,8 +34,9 @@
   "m": 19.1,
   "p": 0.891,
   "pick": "Toledo",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": -16.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401858529,
@@ -44,8 +47,9 @@
   "m": -15.3,
   "p": 0.162,
   "pick": "Oregon",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": 17.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401864545,
@@ -56,8 +60,9 @@
   "m": 24.1,
   "p": 0.94,
   "pick": "Air Force",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": -21.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401864542,
@@ -68,8 +73,9 @@
   "m": -14.1,
   "p": 0.181,
   "pick": "New Mexico",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": 9.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401858310,
@@ -80,8 +86,9 @@
   "m": -21.1,
   "p": 0.086,
   "pick": "Wake Forest",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": 20.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401858530,
@@ -92,8 +99,9 @@
   "m": -7.4,
   "p": 0.316,
   "pick": "Northwestern",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": 2.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401858533,
@@ -104,8 +112,9 @@
   "m": -3.2,
   "p": 0.418,
   "pick": "Wisconsin",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": 6.0,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401862834,
@@ -116,8 +125,9 @@
   "m": -3.5,
   "p": 0.411,
   "pick": "Memphis",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": 2.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401856867,
@@ -128,8 +138,9 @@
   "m": 8.5,
   "p": 0.708,
   "pick": "Cincinnati",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": -3.0,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401856748,
@@ -140,8 +151,9 @@
   "m": 10.6,
   "p": 0.754,
   "pick": "Florida",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": -13.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401862831,
@@ -152,8 +164,9 @@
   "m": 7.8,
   "p": 0.694,
   "pick": "Army",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": -6.0,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401858531,
@@ -164,8 +177,9 @@
   "m": -5.8,
   "p": 0.353,
   "pick": "Ohio State",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": 3.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401862835,
@@ -176,8 +190,9 @@
   "m": -11.0,
   "p": 0.239,
   "pick": "North Texas",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": 6.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401856749,
@@ -188,8 +203,9 @@
   "m": 46.7,
   "p": 0.999,
   "pick": "Ole Miss",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": -49.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401858309,
@@ -200,8 +216,9 @@
   "m": -2.9,
   "p": 0.425,
   "pick": "Syracuse",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": 3.0,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401856866,
@@ -212,8 +229,9 @@
   "m": -6.9,
   "p": 0.327,
   "pick": "BYU",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": 5.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401858305,
@@ -224,8 +242,9 @@
   "m": 2.5,
   "p": 0.565,
   "pick": "Virginia",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": -1.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401856868,
@@ -236,8 +255,9 @@
   "m": -7.5,
   "p": 0.315,
   "pick": "Houston",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": 7.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401871080,
@@ -248,8 +268,9 @@
   "m": 17.9,
   "p": 0.876,
   "pick": "Liberty",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": -17.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401856750,
@@ -260,8 +281,9 @@
   "m": 26.0,
   "p": 0.953,
   "pick": "Mississippi State",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": -34.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401871079,
@@ -272,8 +294,9 @@
   "m": 12.8,
   "p": 0.795,
   "pick": "Jacksonville State",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": -10.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401862832,
@@ -284,8 +307,9 @@
   "m": 25.0,
   "p": 0.947,
   "pick": "Tulsa",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": -22.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401871081,
@@ -296,8 +320,9 @@
   "m": -2.9,
   "p": 0.426,
   "pick": "Middle Tennessee",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": 6.0,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401856746,
@@ -308,8 +333,9 @@
   "m": 48.2,
   "p": 0.999,
   "pick": "Alabama",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": -48.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401862833,
@@ -320,8 +346,9 @@
   "m": -4.6,
   "p": 0.384,
   "pick": "South Florida",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": 1.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401858527,
@@ -332,8 +359,9 @@
   "m": -4.1,
   "p": 0.396,
   "pick": "Iowa",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": 8.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401869929,
@@ -344,8 +372,9 @@
   "m": 17.7,
   "p": 0.873,
   "pick": "App State",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": -14.0,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401871078,
@@ -356,8 +385,9 @@
   "m": 6.6,
   "p": 0.666,
   "pick": "Kennesaw State",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": -2.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401871077,
@@ -368,8 +398,9 @@
   "m": -2.5,
   "p": 0.435,
   "pick": "Delaware",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": 3.0,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401869946,
@@ -380,8 +411,9 @@
   "m": 10.9,
   "p": 0.758,
   "pick": "Louisiana",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": -10.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401858535,
@@ -392,8 +424,9 @@
   "m": -10.9,
   "p": 0.241,
   "pick": "Indiana",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": 7.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401856755,
@@ -404,8 +437,9 @@
   "m": 20.1,
   "p": 0.902,
   "pick": "Texas",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": -20.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401858304,
@@ -416,8 +450,9 @@
   "m": 10.6,
   "p": 0.752,
   "pick": "Florida State",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": -10.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401856754,
@@ -428,8 +463,9 @@
   "m": 3.5,
   "p": 0.59,
   "pick": "Tennessee",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": 1.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401856871,
@@ -440,8 +476,9 @@
   "m": -2.5,
   "p": 0.435,
   "pick": "Texas Tech",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": 4.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401856747,
@@ -452,8 +489,9 @@
   "m": 37.9,
   "p": 0.993,
   "pick": "Auburn",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": -48.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401861968,
@@ -464,8 +502,9 @@
   "m": 13.9,
   "p": 0.814,
   "pick": "UConn",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": -13.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401858528,
@@ -476,8 +515,9 @@
   "m": -3.8,
   "p": 0.403,
   "pick": "UCLA",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": 3.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401858532,
@@ -488,8 +528,9 @@
   "m": 21.9,
   "p": 0.922,
   "pick": "Penn State",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": -26.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401856752,
@@ -500,8 +541,9 @@
   "m": 3.5,
   "p": 0.59,
   "pick": "Oklahoma",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": -7.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401864543,
@@ -512,8 +554,9 @@
   "m": 25.7,
   "p": 0.951,
   "pick": "North Dakota State",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": -25.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401871101,
@@ -524,8 +567,9 @@
   "m": -3.3,
   "p": 0.415,
   "pick": "South Alabama",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": 4.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401869953,
@@ -536,8 +580,9 @@
   "m": -6.1,
   "p": 0.346,
   "pick": "Georgia Southern",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": 9.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401869958,
@@ -548,8 +593,9 @@
   "m": -1.9,
   "p": 0.451,
   "pick": "Georgia State",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": -2.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401860920,
@@ -560,8 +606,9 @@
   "m": 9.4,
   "p": 0.729,
   "pick": "Texas State",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": -13.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401858534,
@@ -572,8 +619,9 @@
   "m": 17.2,
   "p": 0.867,
   "pick": "USC",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": -17.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401869938,
@@ -584,8 +632,9 @@
   "m": 16.1,
   "p": 0.851,
   "pick": "Louisiana Tech",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": -14.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401856865,
@@ -596,8 +645,9 @@
   "m": -9.3,
   "p": 0.275,
   "pick": "Arizona",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": 7.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401858302,
@@ -608,8 +658,9 @@
   "m": 29.7,
   "p": 0.972,
   "pick": "Miami",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": -20.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401864544,
@@ -620,8 +671,9 @@
   "m": -4.3,
   "p": 0.391,
   "pick": "UNLV",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": 6.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401856753,
@@ -632,8 +684,9 @@
   "m": -15.8,
   "p": 0.154,
   "pick": "Georgia",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": 14.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401858308,
@@ -644,8 +697,9 @@
   "m": 0.0,
   "p": 0.501,
   "pick": "Stanford",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": 2.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401860918,
@@ -656,8 +710,9 @@
   "m": 20.7,
   "p": 0.909,
   "pick": "Fresno State",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": -20.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401858306,
@@ -668,8 +723,9 @@
   "m": 9.3,
   "p": 0.726,
   "pick": "Louisville",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": -13.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401856751,
@@ -680,8 +736,9 @@
   "m": 7.4,
   "p": 0.683,
   "pick": "Missouri",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": -4.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401858307,
@@ -692,8 +749,9 @@
   "m": 24.2,
   "p": 0.941,
   "pick": "Notre Dame",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": -20.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401862836,
@@ -704,8 +762,9 @@
   "m": -7.2,
   "p": 0.321,
   "pick": "UTSA",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": 6.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401856872,
@@ -716,8 +775,9 @@
   "m": -10.8,
   "p": 0.243,
   "pick": "Utah",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": 7.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401860925,
@@ -728,8 +788,9 @@
   "m": 19.7,
   "p": 0.898,
   "pick": "Boise State",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": -17.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401856870,
@@ -740,8 +801,9 @@
   "m": -0.3,
   "p": 0.492,
   "pick": "Oklahoma State",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": 2.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401864541,
@@ -752,8 +814,9 @@
   "m": 4.2,
   "p": 0.606,
   "pick": "Nevada",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": -5.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  },
  {
   "id": 401860919,
@@ -764,7 +827,8 @@
   "m": 9.8,
   "p": 0.737,
   "pick": "Oregon State",
-  "line": null,
-  "logged": "Fri Nov 20, 3:38 PM ET"
+  "line": -8.5,
+  "logged": "Fri Nov 20, 3:38 PM ET",
+  "line_logged": "Fri Nov 20, 3:47 PM ET"
  }
 ]
