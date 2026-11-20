@@ -62,6 +62,7 @@ tr.hl td { background: color-mix(in oklab, var(--accent) 10%, var(--surface)); }
       <a href="#fantasy" data-view="fantasy">Fantasy</a>
       <a href="#betting" data-view="betting">Betting</a>
       <a href="#parlays" data-view="parlays">Parlays</a>
+      <a href="#college" data-view="college">College</a>
       <a href="#news" data-view="news">News</a>
       <a href="#rankings" data-view="rankings">Rankings</a>
       <a href="#playoffs" data-view="playoffs">Playoffs</a>
@@ -82,6 +83,7 @@ tr.hl td { background: color-mix(in oklab, var(--accent) 10%, var(--surface)); }
   <section class="view" id="view-pools" hidden></section>
   <section class="view" id="view-betting" hidden></section>
   <section class="view" id="view-parlays" hidden></section>
+  <section class="view" id="view-college" hidden></section>
   <section class="view" id="view-fantasy" hidden></section>
   <section class="view" id="view-news" hidden></section>
   <section class="view" id="view-stats" hidden></section>
@@ -92,6 +94,7 @@ tr.hl td { background: color-mix(in oklab, var(--accent) 10%, var(--surface)); }
 <div class="sheet-backdrop" id="sheet-backdrop" hidden></div>
 <nav class="sheet" id="more-sheet" aria-label="More sections" hidden>
   <a href="#parlays" data-view="parlays">Parlays</a>
+  <a href="#college" data-view="college">College</a>
   <a href="#news" data-view="news">News</a>
   <a href="#rankings" data-view="rankings">Rankings</a>
   <a href="#playoffs" data-view="playoffs">Playoffs</a>
@@ -116,6 +119,7 @@ const PL = /*__PLAYERS__*/;
 const PROPS = /*__PROPS__*/;
 const EARLY = /*__EARLY__*/;
 const PARLAYS = /*__PARLAYS__*/;
+const COLLEGE = /*__COLLEGE__*/;
 const FAN = /*__FAN__*/;
 const BETS = /*__BETS__*/;
 const TRACK = /*__TRACK__*/;
@@ -883,6 +887,101 @@ function renderParlays() {
     '<p class="muted small" style="margin-top:8px">Slips are logged here from Nov 15 on. Prices are Kalshi’s when the slip was built; the “about” payouts multiply the leg prices and leave out Kalshi’s combo pricing and fees.</p></div>' +
     '<p class="notice">This is a small-stakes challenge with money we’re fine losing. Parlays lose more often than they look like they should. If betting stops being fun, the National Problem Gambling Helpline is 1-800-GAMBLER.</p>';
 }
+const cfb = { conf: 'All', sort: 'time', q: '', all: false };
+function renderCollege() {
+  const el = document.getElementById('view-college');
+  const C = COLLEGE;
+  if (!C.rank || !C.rank.length) { el.innerHTML = '<h2>College</h2><p class="muted">College data isn’t available yet.</p>'; return; }
+  const P4 = ['SEC', 'Big Ten', 'ACC', 'Big 12'];
+  const sgn = (x) => (x > 0 ? '+' : x < 0 ? '−' : '') + Math.abs(x).toFixed(1);
+  const lineTxt = (g, hm) => hm == null ? '' : Math.abs(hm) < 0.25 ? 'Pick ’em' : esc(hm > 0 ? g.h : g.a) + ' −' + (Math.round(Math.abs(hm) * 2) / 2).toFixed(1).replace('.0', '');
+  const when = (g) => {
+    const [y, m, d] = g.day.split('-').map(Number);
+    let t = new Date(y, m - 1, d).toLocaleDateString('en-US', { weekday: 'short' });
+    if (g.time) { const [hh, mm] = g.time.split(':').map(Number); t += ' ' + ((hh % 12) || 12) + (mm ? ':' + String(mm).padStart(2, '0') : '') + (hh < 12 ? ' AM' : ' PM'); } else t += ', time TBA';
+    return t;
+  };
+  const bt = ((C.backtest && C.backtest.by_season) || []).find((b) => b.season === 'all');
+  const rb = Object.values(C.rebuilt || {}).reduce((a, [w, l]) => [a[0] + w, a[1] + l], [0, 0]);
+  const lv = C.live || { w: 0, l: 0, pending: 0, ats_w: 0, ats_l: 0 };
+  const pctTxt = (w, l) => (w + l ? Math.round(100 * w / (w + l)) + '%' : '–');
+  const confs = [...new Set(C.games.flatMap((g) => [g.hc, g.ac]).filter((c) => c && !P4.includes(c)))].sort();
+  const opt = (v, l) => '<option value="' + esc(v) + '"' + (cfb.conf === v ? ' selected' : '') + '>' + esc(l || v) + '</option>';
+  el.innerHTML = '<div><h2>College</h2><p class="intro">Every FBS game this week, from power ratings built on this season’s results. They’re adjusted for opponent and home field and start from where each team finished last season. Picks are logged before kickoff and graded after.</p></div>' +
+    '<div class="tiles num">' +
+    '<div class="tile"><span class="label">' + C.season + ' so far</span><b>' + rb[0] + '–' + rb[1] + '</b><span class="muted small">' + pctTxt(rb[0], rb[1]) + ' of winners, rebuilt week by week from earlier games</span></div>' +
+    '<div class="tile"><span class="label">Logged picks</span><b>' + lv.w + '–' + lv.l + '</b><span class="muted small">' + (lv.pending ? lv.pending + ' waiting on results' : 'Logged since Week 12') + '</span></div>' +
+    (bt ? '<div class="tile"><span class="label">2023–25 winners</span><b>' + (Math.round(bt.su * 1000) / 10) + '%</b><span class="muted small">Betting favorite: ' + (Math.round(bt.su_market * 1000) / 10) + '% (' + bt.n.toLocaleString() + ' games)</span></div>' +
+      '<div class="tile"><span class="label">2023–25 vs. the spread</span><b>' + pctTxt(bt.ats_w, bt.ats_l) + '</b><span class="muted small">' + bt.ats_w.toLocaleString() + '–' + bt.ats_l.toLocaleString() + ': no edge, so no spread picks</span></div>' : '') + '</div>' +
+    '<div class="panel"><div class="panel-head"><h3>' + (C.post ? 'Bowl games' : 'Week ' + C.week) + '</h3><span class="muted small">Updated ' + esc(C.asof) + (C.lines ? '' : ' · betting lines not loaded yet') + '</span></div>' +
+    '<div class="cfb-filters"><label class="field"><span class="label">Conference</span><select id="cfb-conf">' + opt('All', 'All games') + opt('Power 4', 'Power 4') + P4.map((c) => opt(c)).join('') + confs.map((c) => opt(c)).join('') + '</select></label>' +
+    '<label class="field"><span class="label">Team</span><input id="cfb-q" type="search" placeholder="Search a team" value="' + esc(cfb.q) + '" autocomplete="off"></label>' +
+    '<div class="seg" role="group" aria-label="Sort games"><button data-sort="time" aria-pressed="' + (cfb.sort === 'time') + '">By time</button><button data-sort="close" aria-pressed="' + (cfb.sort === 'close') + '">Closest</button>' +
+    (C.lines ? '<button data-sort="diff" aria-pressed="' + (cfb.sort === 'diff') + '">Model vs. line</button>' : '') + '</div></div>' +
+    '<div id="cfb-games"></div></div>' +
+    '<div class="panel"><div class="panel-head"><h3>Power rankings</h3><span class="muted small">Rating = points better than an average FBS team on a neutral field</span></div><div id="cfb-rank"></div></div>' +
+    '<div id="cfb-log"></div>' +
+    (bt && C.backtest.calibration ? '<div class="panel"><div class="panel-head"><h3>Can you trust the percentages?</h3><span class="muted small">2023–25, every game predicted before it was played</span></div><div class="tablewrap"><table class="ptable"><thead><tr><th class="l">Model gave the favorite</th><th>Games</th><th>Favorite won</th></tr></thead><tbody>' +
+      C.backtest.calibration.map((c) => '<tr><td class="l">' + esc(c.range) + '</td><td>' + c.n.toLocaleString() + '</td><td>' + (Math.round(c.won * 1000) / 10) + '%</td></tr>').join('') + '</tbody></table></div>' +
+      '<p class="muted small" style="margin-top:8px">Its predicted margins miss by ' + bt.mae + ' points a game on average, vs ' + bt.mae_market + ' for the closing line. Use it for winners and rankings, not to bet spreads.</p></div>' : '') +
+    '<p class="notice">College ratings use only scores and schedules. They don’t know about injuries, quarterback changes or players sitting out, so check the news before leaning on a pick.</p>';
+
+  const games = () => {
+    const q = cfb.q.trim().toLowerCase();
+    let list = C.games.filter((g) => (cfb.conf === 'All' || (cfb.conf === 'Power 4' ? P4.includes(g.hc) || P4.includes(g.ac) : g.hc === cfb.conf || g.ac === cfb.conf)) &&
+      (!q || g.h.toLowerCase().includes(q) || g.a.toLowerCase().includes(q)));
+    if (cfb.sort === 'close') list = list.slice().sort((x, y) => Math.abs(x.m) - Math.abs(y.m));
+    if (cfb.sort === 'diff') list = list.filter((g) => g.line != null).sort((x, y) => Math.abs(y.m + y.line) - Math.abs(x.m + x.line));
+    const now = Date.now();
+    const card = (g) => {
+      const pH = g.p, fav = g.m >= 0 ? g.h : g.a, started = new Date(g.start).getTime() <= now;
+      const conf = g.hc === g.ac ? g.hc : [g.ac, g.hc].filter(Boolean).join(' vs ');
+      const row = (t, sc, isHome) => '<div class="crow"><span class="tname">' + (isHome ? (g.neutral ? 'vs ' : '@ ') : '') + (t === fav ? '<b>' + esc(t) + '</b>' : esc(t)) + '</span><span class="tscore num">' + sc + '</span></div>';
+      const diff = g.line != null ? g.m + g.line : null;
+      return '<article class="game"><div class="game-meta"><span>' + when(g) + (conf ? ' · ' + esc(conf) : '') + '</span><span class="tags">' +
+        (started ? '<span class="tag">Result pending</span>' : (Math.max(pH, 1 - pH) >= 0.8 ? '<span class="tag strong">Strong pick</span>' : '<span class="tag live">Upcoming</span>')) + '</span></div>' +
+        '<div>' + row(g.a, g.as, false) + row(g.h, g.hs, true) + '</div>' +
+        '<div class="probbar" aria-hidden="true"><span class="a" style="width:' + (100 * (1 - pH)).toFixed(1) + '%"></span><span class="h" style="width:' + (100 * pH).toFixed(1) + '%"></span></div>' +
+        '<div class="prob-labels num"><span>' + esc(g.a) + ' <b>' + pct(1 - pH) + '</b></span><span>' + esc(g.h) + ' <b>' + pct(pH) + '</b></span></div>' +
+        '<div class="mkrow num"><span>Model <b>' + lineTxt(g, g.m) + '</b> · projected <span class="nw">' + g.as + '–' + g.hs + '</span></span>' +
+        (g.line != null ? '<span>Line <b>' + lineTxt(g, -g.line) + '</b>' + (Math.abs(diff) >= 4 ? ' · model ' + Math.abs(diff).toFixed(1) + ' pts toward ' + esc(diff > 0 ? g.h : g.a) : '') + '</span>' : '') + '</div>' +
+        (g.logged ? '<p class="muted small">Pick logged ' + esc(g.logged) + '</p>' : '') + '</article>';
+    };
+    let html;
+    const played = list.filter((g) => new Date(g.start).getTime() <= now);
+    list = list.filter((g) => new Date(g.start).getTime() > now);
+    const playedHtml = played.length ? '<details class="cfb-played"><summary>' + played.length + ' game' + (played.length === 1 ? '' : 's') + ' already played this week (final scores arrive with the weekend update)</summary><div class="games">' + played.map(card).join('') + '</div></details>' : '';
+    if (!list.length) html = played.length ? '' : '<p class="muted">No games match.</p>';
+    else if (cfb.sort === 'time') {
+      html = [...new Set(list.map((g) => g.day))].map((d) => {
+        const [y, m, dd] = d.split('-').map(Number);
+        return '<h4 class="cfb-day">' + new Date(y, m - 1, dd).toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' }) + '</h4><div class="games">' + list.filter((g) => g.day === d).map(card).join('') + '</div>';
+      }).join('');
+    } else html = '<div class="games">' + list.map(card).join('') + '</div>';
+    document.getElementById('cfb-games').innerHTML = '<p class="muted small" style="margin:0 0 10px">' + list.length + ' upcoming game' + (list.length === 1 ? '' : 's') + '</p>' + html + playedHtml;
+  };
+
+  const rank = () => {
+    const rows = cfb.all ? C.rank : C.rank.slice(0, 25);
+    const mv = (x) => (x.prev == null || x.prev === x.rk ? '<span class="muted">–</span>' : x.prev > x.rk ? '<span class="up">▲' + (x.prev - x.rk) + '</span>' : '<span class="down">▼' + (x.rk - x.prev) + '</span>');
+    document.getElementById('cfb-rank').innerHTML = '<div class="tablewrap"><table class="ptable cfb-rank"><thead><tr><th>#</th><th class="l">Team</th><th class="l">Conf</th><th>Record</th><th>Rating</th><th>Offense</th><th>Defense</th><th>Move</th></tr></thead><tbody>' +
+      rows.map((x) => '<tr><td>' + x.rk + '</td><td class="l"><b>' + esc(x.team) + '</b></td><td class="l muted">' + esc(x.conf) + '</td><td>' + x.w + '–' + x.l + '</td><td><b>' + sgn(x.r) + '</b></td><td>' + sgn(x.off) + '</td><td>' + sgn(-x.def) + '</td><td>' + mv(x) + '</td></tr>').join('') +
+      '</tbody></table></div><p class="muted small" style="margin-top:8px">Offense and defense are points scored and points kept off the board per game, compared with an average FBS team. Move is the change since last week.</p>' +
+      '<button class="btn" id="cfb-all" type="button">' + (cfb.all ? 'Show top 25' : 'Show all ' + C.rank.length + ' teams') + '</button>';
+    document.getElementById('cfb-all').onclick = () => { cfb.all = !cfb.all; rank(); };
+  };
+
+  const recent = (C.recent || []).slice().reverse();
+  document.getElementById('cfb-log').innerHTML = recent.length ? '<div class="panel"><div class="panel-head"><h3>Logged picks, graded</h3><span class="muted small">' + lv.w + '–' + lv.l + (lv.ats_w + lv.ats_l ? ' · vs. the line ' + lv.ats_w + '–' + lv.ats_l : '') + '</span></div>' +
+    '<div class="tablewrap"><table class="ptable"><thead><tr><th class="l">Game</th><th class="l">Pick</th><th>Model</th><th>Final</th><th>Result</th></tr></thead><tbody>' +
+    recent.map((x) => '<tr><td class="l">' + esc(x.a) + ' @ ' + esc(x.h) + '</td><td class="l">' + esc(x.pick) + '</td><td>' + pct(x.pick === x.h ? x.p : 1 - x.p) + '</td><td>' + x.as + '–' + x.hs + '</td><td>' +
+      (x.result === 'win' ? '<span class="pill won">Right</span>' : x.result === 'loss' ? '<span class="pill lost">Wrong</span>' : '<span class="pill">Tie</span>') + '</td></tr>').join('') + '</tbody></table></div></div>' : '';
+
+  games(); rank();
+  document.getElementById('cfb-conf').onchange = (e) => { cfb.conf = e.target.value; games(); };
+  let t; document.getElementById('cfb-q').oninput = (e) => { clearTimeout(t); t = setTimeout(() => { cfb.q = e.target.value; games(); }, 150); };
+  el.querySelectorAll('[data-sort]').forEach((b) => { b.onclick = () => { cfb.sort = b.dataset.sort; el.querySelectorAll('[data-sort]').forEach((x) => x.setAttribute('aria-pressed', x === b)); games(); }; });
+}
 function renderAbout() {
   const el = document.getElementById('view-about'), b = DATA.bt;
   el.innerHTML = '<div><h2>About Pocket Protector</h2><p class="intro">NFL predictions, pool tools and fantasy projections from a statistical model, updated through the week. Free to use.</p></div>' +
@@ -898,7 +997,7 @@ function setSheet(open) {
   document.getElementById('more-sheet').hidden = !open; document.getElementById('sheet-backdrop').hidden = !open;
   moreBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
 }
-const VIEWS = { week: renderWeek, about: renderAbout, pools: renderPools, betting: renderBetting, parlays: renderParlays, fantasy: renderFantasy, news: renderNews, rankings: renderRankings, playoffs: renderPlayoffs, matchup: renderMatchup, teams: renderTeams, stats: renderStats, model: renderModel };
+const VIEWS = { week: renderWeek, about: renderAbout, pools: renderPools, betting: renderBetting, parlays: renderParlays, college: renderCollege, fantasy: renderFantasy, news: renderNews, rankings: renderRankings, playoffs: renderPlayoffs, matchup: renderMatchup, teams: renderTeams, stats: renderStats, model: renderModel };
 const BASE_TITLE = document.title;
 function route() {
   const v = (location.hash || '#week').slice(1), name = VIEWS[v] ? v : 'week';

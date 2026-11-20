@@ -53,3 +53,14 @@ At each refresh, drop flags that describe a game that's now final ("expected to 
 "starts Sunday") and keep the ones about ongoing roles (a new starter, a trade, a returning player). File a note under
 the player it's about (a QB change goes on the QB). Late outs added to overrides.json `players_out` show up in the News
 tab's injury table automatically (pipeline/injury_list.py), so remove them from `players_out` once the player returns.
+
+## College tab (pipeline/college.py)
+Runs inside scripts/update.sh. It sparse-checks-out the schedule CSVs from sportsdataverse/cfbfastR-data with git (raw
+downloads are blocked in some sandboxes; git works everywhere), fits ridge margin ratings shrunk toward last season, predicts
+the next week's FBS games, and logs a pick for each game once before kickoff in data/college_log.json (the line is filled
+in later if it wasn't available, as long as the game hasn't started). Lines come from ESPN's public scoreboard, which the
+GitHub Action can reach; a sandbox that can't still gets predictions. The college data updates Saturday afternoon/evening,
+Sunday morning and Monday, so the Friday 4 PM and Sunday 11 AM ET Action runs log and grade. After changing the model, rerun
+pipeline/college_backtest.py (a few minutes) so the tab's 2023-25 numbers match. The model knows scores and schedules only:
+no injuries or QB changes.
+

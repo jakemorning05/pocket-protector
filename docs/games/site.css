@@ -73,6 +73,7 @@ button, select, input { font: inherit; color: inherit; }
 .asof { font-size: 0.8rem; color: var(--muted); }
 .tabs { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding-block: 12px; }
 .tabs::-webkit-scrollbar { display: none; }
+@media (min-width: 721px) { .tabs { flex-wrap: wrap; gap: 4px 2px; overflow: visible; } .tabs a { padding: 7px 8px; font-size: 0.9rem; } }  /* every tab visible on wide screens */
 .tabs a {
   flex: none; text-decoration: none; color: var(--ink-2);
   font-family: var(--font-display); font-weight: 500; font-size: 0.95rem;
@@ -237,6 +238,18 @@ svg.chart .hit { fill: transparent; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); gap: 12px; }
 .tile { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 14px 16px; }
 .tile b { display: block; font-family: var(--font-display); font-weight: 800; font-size: 2.1rem; line-height: 1.1; letter-spacing: -0.02em; }
+/* College tab */
+.cfb-filters { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 10px 14px; margin-bottom: 14px; }
+.cfb-filters .field { flex: 1 1 220px; max-width: 340px; }
+.cfb-filters input { font: inherit; font-size: 16px; color: var(--ink); }
+.cfb-day { margin: 18px 0 10px; font-family: var(--font-display); font-size: 1rem; color: var(--ink-2); }
+.crow { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: 8px; padding: 2px 0; }
+.crow .tname { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.crow .tscore { font-family: var(--font-display); font-weight: 700; color: var(--ink-2); }
+.cfb-rank .up { color: var(--good); font-weight: 700; } .cfb-rank .down { color: var(--bad); font-weight: 700; }
+#cfb-all { margin-top: 10px; }
+.nw { white-space: nowrap; }
+.cfb-played { margin-top: 18px; } .cfb-played summary { cursor: pointer; color: var(--ink-2); font-weight: 600; padding: 6px 0; } .cfb-played .games { margin-top: 10px; }
 /* Parlays tab */
 .ladder { display: grid; grid-template-columns: repeat(auto-fit, minmax(58px, 1fr)); gap: 8px; }
 .rung { min-width: 0; border: 1px solid var(--line); border-radius: var(--r-sm); padding: 8px 10px; background: var(--bg-2); }

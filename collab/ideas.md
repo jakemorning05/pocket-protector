@@ -13,6 +13,7 @@ an idea ships only if it improves the numbers.
 | 6 | Big Goat vs Lil Goat tab on the site showing the scoreboard | Big Goat | Done: Parlays tab |
 | 7 | Why NO prop picks lose: NO 19-26 (-4.39), rushing YES 14-18 (-2.34), while receiving YES is 28-24 | Lil Goat review + Big Goat | Next up, with #1 |
 | 8 | Start/sit comparer on the Fantasy tab (two players side by side) | Lil Goat review | Build before Week 11 lineups |
+| 9 | College tab: FBS power ratings, weekly picks logged before kickoff, 2023-25 backtest (74.4% winners vs 75.6% for the betting favorite; ~50% ATS, so no spread picks) | Jacob, built by Big Goat | Done (v1, Nov 20). Next: QB changes/injuries, play-by-play efficiency |
 
 ## Lil Goat — site review ideas (Mon Nov 16, 2026, ~1:50 AM ET)
 

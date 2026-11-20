@@ -1,0 +1,84 @@
+{
+ "seasons": [
+  2023,
+  2024,
+  2025
+ ],
+ "by_season": [
+  {
+   "season": 2023,
+   "n": 910,
+   "su": 0.755,
+   "lined": 904,
+   "su_lined": 0.754,
+   "su_market": 0.763,
+   "mae": 13.2,
+   "mae_market": 12.1,
+   "ats_w": 434,
+   "ats_l": 454
+  },
+  {
+   "season": 2024,
+   "n": 919,
+   "su": 0.727,
+   "lined": 904,
+   "su_lined": 0.723,
+   "su_market": 0.738,
+   "mae": 13.3,
+   "mae_market": 12.0,
+   "ats_w": 427,
+   "ats_l": 460
+  },
+  {
+   "season": 2025,
+   "n": 934,
+   "su": 0.749,
+   "lined": 934,
+   "su_lined": 0.749,
+   "su_market": 0.768,
+   "mae": 12.8,
+   "mae_market": 11.9,
+   "ats_w": 477,
+   "ats_l": 440
+  },
+  {
+   "season": "all",
+   "n": 2763,
+   "su": 0.744,
+   "lined": 2742,
+   "su_lined": 0.743,
+   "su_market": 0.756,
+   "mae": 13.1,
+   "mae_market": 12.0,
+   "ats_w": 1338,
+   "ats_l": 1354
+  }
+ ],
+ "calibration": [
+  {
+   "range": "50-60%",
+   "n": 561,
+   "won": 0.531
+  },
+  {
+   "range": "60-70%",
+   "n": 588,
+   "won": 0.634
+  },
+  {
+   "range": "70-80%",
+   "n": 541,
+   "won": 0.749
+  },
+  {
+   "range": "80-90%",
+   "n": 484,
+   "won": 0.866
+  },
+  {
+   "range": "90-100%",
+   "n": 589,
+   "won": 0.951
+  }
+ ]
+}
