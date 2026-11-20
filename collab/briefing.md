@@ -7,12 +7,12 @@
 
 | Game | Kickoff (ET) | QBs | Model win % (home) | Market win % (home) | Model margin (home) | Line (home) | Model total | Market total |
 |---|---|---|---|---|---|---|---|---|
-| ARI @ KC | 2026-11-22 13:00 | Josh Johnson / Patrick Mahomes | 85% | 90% | +13.1 | -16.5 | 47.1 | 40.5 |
+| ARI @ KC | 2026-11-22 13:00 | Josh Johnson / Patrick Mahomes | 85% | 91% | +13.1 | -16.5 | 47.1 | 40.5 |
 | BAL @ CAR | 2026-11-22 13:00 | Jacoby Brissett / Bryce Young | 59% | 58% | +3.0 | -3.0 | 46.8 | 43.5 |
 | JAX @ NYG | 2026-11-22 13:00 | Trevor Lawrence / J.J. McCarthy | 28% | 30% | -7.6 | +6.0 | 46.8 | 46.5 |
 | MIA @ BUF | 2026-11-22 13:00 | Kyle McCord / Josh Allen | 93% | 91% | +19.4 | -16.5 | 50.5 | 44.5 |
 | NO @ CHI | 2026-11-22 13:00 | Tyler Shough / Caleb Williams | 79% | 82% | +10.6 | -11.5 | 49.8 | 48.5 |
-| TB @ DET | 2026-11-22 13:00 | Baker Mayfield / Jared Goff | 70% | 67% | +6.8 | -5.5 | 50.4 | 45.5 |
+| TB @ DET | 2026-11-22 13:00 | Baker Mayfield / Jared Goff | 70% | 68% | +6.8 | -5.5 | 50.4 | 45.5 |
 | TEN @ DAL | 2026-11-22 13:00 | Cam Ward / Dak Prescott | 82% | 76% | +11.7 | -8.5 | 51.2 | 54.5 |
 | NYJ @ LAC | 2026-11-22 16:05 | Geno Smith / Justin Herbert | 54% | 61% | +1.4 | -3.0 | 45.2 | 41.5 |
 | LV @ DEN | 2026-11-22 16:25 | Fernando Mendoza / Bo Nix | 80% | 82% | +10.6 | -10.0 | 44.8 | 40.5 |
