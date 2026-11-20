@@ -4310,7 +4310,7 @@ const EARLY = {
  ]
 };
 const PARLAYS = {
-  "asof": "Tue Nov 17, 2026",
+  "asof": "Fri Nov 20, 2026",
   "_help": "Source for the Parlays tab. One entry per slip. 'by' is Big Goat or Lil Goat; 'played' marks the slip that was actually bet. status: pending, won or lost. Leg 'r' is won/lost when known; leave it out if not. 'mult' is the approximate payout multiple from the leg prices (before Kalshi's combo pricing); 'payout' is the real amount once settled. Runs track the 2x challenge bankroll.",
   "runs": [
     {
@@ -4334,8 +4334,10 @@ const PARLAYS = {
       "id": 3,
       "start": 4,
       "started": "2026-11-17",
-      "status": "live",
-      "note": "Restarted at $4. First slip Tuesday night."
+      "status": "ended",
+      "note": "Restarted at $4. Ended on the Thursday night slip, which missed by 6 passing yards.",
+      "peak": 4,
+      "ended": "2026-11-19"
     }
   ],
   "slips": [
@@ -4447,6 +4449,32 @@ const PARLAYS = {
         }
       ],
       "note": "Read the game better: Brissett threw for 340 and Harris caught 5. Quentin Johnston came up short of 20 yards, so it lost by one leg."
+    },
+    {
+      "date": "2026-11-19",
+      "run": 3,
+      "game": "IND @ HOU",
+      "when": "Thursday night",
+      "by": "Big Goat",
+      "played": true,
+      "stake": null,
+      "mult": 2.2,
+      "status": "lost",
+      "legs": [
+        {
+          "t": "Texans to win (won 26-3)",
+          "r": "won"
+        },
+        {
+          "t": "C.J. Stroud 200+ passing yards (194)",
+          "r": "lost"
+        },
+        {
+          "t": "Nico Collins 50+ receiving yards (58)",
+          "r": "won"
+        }
+      ],
+      "note": "Read the winner right and missed by 6 yards. Houston led 17-3 at half and ran 37 times to close it out, so Stroud threw only 27 passes. In a likely blowout, the favorite's QB yards get capped."
     }
   ]
 };
