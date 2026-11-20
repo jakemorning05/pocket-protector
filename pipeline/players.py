@@ -45,7 +45,9 @@ def _week_quality():
 QW = _week_quality()
 Q_LG = float(np.mean(list(QW.values()))) if QW else 0.0
 CUR_QB = json.load(open(f'{D}/current.json'))['qb'] if os.path.exists(f'{D}/current.json') else {}
-QB_UNTIL = {o['team']: o.get('through_week', 18) for o in OVR.get('qb_starters', [])}
+QB_UNTIL = {}
+for _o in OVR.get('qb_starters', []):  # a team may list several fill-ins: the latest through_week covers them all
+    QB_UNTIL[_o['team']] = max(QB_UNTIL.get(_o['team'], 0), _o.get('through_week', 18))
 
 
 def starter_q(team, week):

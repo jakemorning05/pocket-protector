@@ -491,9 +491,9 @@
   "p": 0.59,
   "ev": 0.126,
   "logged": "Nov 10, 3:16 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null
+  "close": 12.5,
+  "clv": -3.0,
+  "result": "loss"
  },
  {
   "game": "2026_11_IND_HOU",
@@ -507,9 +507,9 @@
   "p": 0.559,
   "ev": 0.067,
   "logged": "Nov 10, 3:16 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null
+  "close": 44.5,
+  "clv": 1.0,
+  "result": "loss"
  },
  {
   "game": "2026_11_ARI_KC",

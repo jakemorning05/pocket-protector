@@ -1,5 +1,5 @@
 {
- "asof": "Tue, Nov 17, 11:15 AM ET",
+ "asof": "Fri, Nov 20, 2:30 PM ET",
  "outs": [
   "Josh Jacobs",
   "Puka Nacua",
@@ -14,22 +14,86 @@
   "Carson Wentz": "Now Minnesota\u2019s backup after the Kirk Cousins trade",
   "Keenan Allen": "Traded to San Francisco Nov 10; projections use his Colts role in the 49ers offense, so treat them as rough for now",
   "Fernando Mendoza": "Rookie takes over in Las Vegas after the Cousins trade",
-  "Carson Beck": "Rookie starter after Gardner Minshew\u2019s elbow injury (likely season-ending)",
   "Joe Milton III": "Starting the rest of the way with Jalen Hurts out for the season.",
   "Josh Downs": "Traded from Indianapolis to Kansas City on Nov 10.",
   "Devin Singletary": "Fewer carries with Cam Skattebo back",
   "Alvin Kamara": "Fewer carries with Travis Etienne back",
   "Chig Okonkwo": "Back injury Thursday; returned in the second half",
   "Travis Etienne": "Activated from IR; first game since Week 3",
-  "Brock Bowers": "Day-to-day (ankle); has a shot to play Week 11",
-  "Omar Cooper Jr.": "Re-injured his right ankle Sunday; tests Monday",
-  "Geno Smith": "Ankle tests showed no major injury; expected to start Week 11 if cleared",
+  "Brock Bowers": "Limited in practice (ankle); questionable",
+  "Geno Smith": "Full practice Friday; trending toward playing",
   "Kyle McCord": "Starts at QB through Week 13 while Malik Willis is on IR",
-  "Kenneth Walker III": "Expected back Week 11 after missing one game (groin)",
-  "David Montgomery": "Groin; unclear for Thursday's short week",
-  "Baker Mayfield": "Lower-leg injury; could miss Week 11"
+  "Kenneth Walker III": "Doubtful (groin); no practice Wed or Thu",
+  "Baker Mayfield": "Limited Thursday (foot); trending toward playing",
+  "Josh Johnson": "Expected to start Week 11 with Carson Beck (back) unlikely",
+  "Ladd McConkey": "Limited in practice (back); questionable",
+  "Mike Evans": "Back at practice, limited (Achilles); questionable, not in projections",
+  "Emmett Johnson": "Leads the backfield again with Walker doubtful"
  },
  "items": [
+  {
+   "team": "HOU",
+   "tag": "Result",
+   "text": "Thursday night: the Texans beat the Colts 26-3. C.J. Stroud threw three touchdowns (194 yards), Nico Collins caught a 42-yard score, and David Montgomery returned with 54 yards on 11 carries. Houston outgained Indy 355-167. The model had Houston at 70%.",
+   "src": "Yahoo Sports, Nov 20",
+   "url": "https://sports.yahoo.com/articles/texans-beat-colts-26-3-043911463.html"
+  },
+  {
+   "team": "ARI",
+   "tag": "QB",
+   "text": "Carson Beck (back spasms) didn't practice Friday, and Mike LaFleur says Arizona is proceeding as if 40-year-old Josh Johnson starts Sunday at Kansas City. Beck isn't ruled out. The model uses Johnson.",
+   "src": "Cardinals.com, Nov 20",
+   "url": "https://www.azcardinals.com/news/carson-beck-back-expected-to-sideline-him-for-chiefs-game-josh-johnson"
+  },
+  {
+   "team": "KC",
+   "tag": "Injury",
+   "text": "Correction to Monday's note: Kenneth Walker III (groin) hasn't practiced this week and is listed as doubtful, so he's back out of the projections. Emmett Johnson leads the backfield again. Tyquan Thornton needs ankle surgery and is out 12-16 weeks.",
+   "src": "Yahoo Sports and NBC Sports, Nov 18-20",
+   "url": "https://sports.yahoo.com/fantasy/article/nfl-injury-report-week-11-latest-news-updates-for-kenneth-walker-iii-brock-bowers-and-more-players-for-fantasy-football-224519099.html"
+  },
+  {
+   "team": "NYJ",
+   "tag": "Injury",
+   "text": "Geno Smith practiced fully Friday and is trending toward playing against the Chargers. Rookie WR Omar Cooper Jr. (ankle/hip) is out.",
+   "src": "NFL.com, Nov 20",
+   "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-nov-20"
+  },
+  {
+   "team": "TB",
+   "tag": "Injury",
+   "text": "Baker Mayfield (foot) was limited Thursday but is \u201ctrending in the right direction\u201d for Sunday against Detroit.",
+   "src": "NFL.com, Nov 20",
+   "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-nov-20"
+  },
+  {
+   "team": "MIN",
+   "tag": "Injury",
+   "text": "Jordan Addison needs thumb surgery and will miss multiple weeks. Jauan Jennings is practicing fully.",
+   "src": "NBC Sports, Nov 18",
+   "url": "https://www.nbcsports.com/fantasy/football/news/nfl-week-11-injury-report-drake-maye-likely-done-for-season-surgery-for-jordan-addison"
+  },
+  {
+   "team": "LAC",
+   "tag": "Injury",
+   "text": "Ladd McConkey (back) has been limited in practice after missing two games, so he's back in the projections; watch Sunday's inactives. Brock Bowers (LV, ankle) and Mike Evans (SF, Achilles) also returned to limited practice.",
+   "src": "FantasyPros and Yahoo Sports, Nov 19-20",
+   "url": "https://sports.yahoo.com/articles/7-major-fantasy-football-injury-140000652.html"
+  },
+  {
+   "team": "BUF",
+   "tag": "Injury",
+   "text": "Dalton Kincaid (thumb, ankle) is doubtful against Miami.",
+   "src": "Bills.com, Nov 20",
+   "url": "https://www.buffalobills.com/news/buffalo-bills-injury-report-vs-dolphins-week-11"
+  },
+  {
+   "team": "CHI",
+   "tag": "Injury",
+   "text": "Cole Kmet's knee injury is season-ending; Colston Loveland takes over at tight end. Kyle Monangai and Luther Burden III are cleared to play.",
+   "src": "NBC Sports and Yahoo Sports, Nov 18",
+   "url": "https://www.nbcsports.com/fantasy/football/news/nfl-week-11-injury-report-drake-maye-likely-done-for-season-surgery-for-jordan-addison"
+  },
   {
    "team": "NYJ",
    "tag": "Injury",
@@ -573,6 +637,22 @@
    "snap": 0.9
   },
   {
+   "team": "BUF",
+   "name": "Dalton Kincaid",
+   "pos": "TE",
+   "status": "Out",
+   "injury": "Thumb, ankle (late news)",
+   "snap": 0.57
+  },
+  {
+   "team": "CHI",
+   "name": "Cole Kmet",
+   "pos": "TE",
+   "status": "Out",
+   "injury": "Knee (late news)",
+   "snap": 0.74
+  },
+  {
    "team": "DAL",
    "name": "P.J. Locke",
    "pos": "S",
@@ -621,14 +701,6 @@
    "snap": 0.67
   },
   {
-   "team": "HOU",
-   "name": "David Montgomery",
-   "pos": "RB",
-   "status": "Out",
-   "injury": "Groin (late news)",
-   "snap": 0.63
-  },
-  {
    "team": "IND",
    "name": "Sauce Gardner",
    "pos": "CB",
@@ -661,6 +733,22 @@
    "snap": 0.66
   },
   {
+   "team": "KC",
+   "name": "Kenneth Walker III",
+   "pos": "RB",
+   "status": "Out",
+   "injury": "Groin (late news)",
+   "snap": 0.81
+  },
+  {
+   "team": "KC",
+   "name": "Tyquan Thornton",
+   "pos": "WR",
+   "status": "Out",
+   "injury": "Ankle surgery expected (late news)",
+   "snap": 0.63
+  },
+  {
    "team": "LA",
    "name": "Puka Nacua",
    "pos": "WR",
@@ -669,20 +757,20 @@
    "snap": 0.96
   },
   {
-   "team": "LAC",
-   "name": "Ladd McConkey",
-   "pos": "WR",
-   "status": "Out",
-   "injury": "Back (late news)",
-   "snap": 0.9
-  },
-  {
    "team": "MIA",
    "name": "Zach Sieler",
    "pos": "DL",
    "status": "Out",
    "injury": "Season-ending biceps surgery (late news)",
    "snap": 0.83
+  },
+  {
+   "team": "MIN",
+   "name": "Jordan Addison",
+   "pos": "WR",
+   "status": "Out",
+   "injury": "Thumb surgery (late news)",
+   "snap": 0.98
   },
   {
    "team": "NE",
@@ -707,6 +795,14 @@
    "status": "Out",
    "injury": "Biceps (late news)",
    "snap": 1.0
+  },
+  {
+   "team": "NYJ",
+   "name": "Omar Cooper Jr.",
+   "pos": "WR",
+   "status": "Out",
+   "injury": "Ankle/hip (late news)",
+   "snap": 0.86
   },
   {
    "team": "SF",

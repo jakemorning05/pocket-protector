@@ -23,13 +23,6 @@
       "source": "NFL.com, Nov 9: cleared concussion protocol"
     },
     {
-      "team": "ARI",
-      "qb": "C.Beck",
-      "name": "Carson Beck",
-      "through_week": 18,
-      "source": "ESPN, Nov 9: Minshew likely torn UCL in his throwing arm; rookie Carson Beck expected to start"
-    },
-    {
       "team": "MIN",
       "qb": "K.Cousins",
       "name": "Kirk Cousins",
@@ -63,6 +56,20 @@
       "name": "Tommy DeVito",
       "through_week": 12,
       "source": "Yahoo Sports, Nov 16: Maye out indefinitely (ankle); DeVito finished the Week 10 game. NE has not named a starter (bye Week 11), recheck before Week 12"
+    },
+    {
+      "team": "ARI",
+      "qb": "J.Johnson",
+      "name": "Josh Johnson",
+      "through_week": 11,
+      "source": "Cardinals.com, Nov 20: Beck (back spasms) DNP; LaFleur says they're proceeding as if Johnson starts at KC"
+    },
+    {
+      "team": "ARI",
+      "qb": "C.Beck",
+      "name": "Carson Beck",
+      "through_week": 18,
+      "source": "ESPN, Nov 9: Minshew likely torn UCL in his throwing arm; rookie Carson Beck expected to start (Josh Johnson entry covers Week 11)"
     }
   ],
   "players_out": [
@@ -157,12 +164,6 @@
       "source": "PFT, Nov 10: season-ending biceps surgery"
     },
     {
-      "team": "IND",
-      "name": "Jalen Travis",
-      "side": "off",
-      "source": "DK Network, Nov 10: out 2-4 weeks (knee)"
-    },
-    {
       "team": "GB",
       "name": "Sean Rhyan",
       "side": "off",
@@ -187,6 +188,42 @@
       "source": "DK Network, Nov 10: out for the season"
     },
     {
+      "name": "Kenneth Walker III",
+      "team": "KC",
+      "source": "Yahoo/NBC Sports, Nov 19-20: no practice Wed or Thu (groin), listed doubtful; expected to miss Week 11"
+    },
+    {
+      "name": "Omar Cooper Jr.",
+      "team": "NYJ",
+      "source": "NFL.com, Nov 20: out vs. Chargers (ankle/hip)"
+    },
+    {
+      "name": "Jordan Addison",
+      "team": "MIN",
+      "source": "NBC Sports, Nov 18: thumb surgery, out multiple weeks"
+    },
+    {
+      "name": "Tyquan Thornton",
+      "team": "KC",
+      "source": "NBC Sports, Nov 18: ankle surgery expected, out 12-16 weeks"
+    },
+    {
+      "name": "Cole Kmet",
+      "team": "CHI",
+      "source": "NBC Sports, Nov 18: knee, season-ending"
+    },
+    {
+      "name": "Dalton Kincaid",
+      "team": "BUF",
+      "source": "Bills.com, Nov 20: doubtful vs. Dolphins (thumb, ankle)"
+    },
+    {
+      "team": "IND",
+      "name": "Jalen Travis",
+      "side": "off",
+      "source": "DK Network, Nov 10: out 2-4 weeks (knee)"
+    },
+    {
       "team": "LAC",
       "name": "Daiyan Henley",
       "side": "def",
@@ -197,21 +234,6 @@
       "name": "Josh Downs",
       "side": "off",
       "source": "Traded to KC (Nov 10)"
-    },
-    {
-      "name": "David Montgomery",
-      "team": "HOU",
-      "source": "NFL.com, Nov 14: downgraded to out (groin)"
-    },
-    {
-      "name": "Ladd McConkey",
-      "team": "LAC",
-      "source": "RotoWire, Nov 15: downgraded to out (back), did not travel to Baltimore"
-    },
-    {
-      "name": "Woody Marks",
-      "team": "HOU",
-      "source": "Yahoo Sports Nov 16: concussion Sunday, unlikely to play Thursday at IND"
     }
   ],
   "traded": [
@@ -290,22 +312,10 @@
   ],
   "returning": [
     {
-      "team": "NYG",
-      "name": "Cam Skattebo",
-      "through_week": 10,
-      "source": "CBS Sports, Nov 11: back from his hamstring injury, 'full go' Thursday"
-    },
-    {
-      "team": "NE",
-      "name": "A.J. Brown",
-      "through_week": 10,
-      "source": "RotoWire, Nov 13: limited all week, expected to be activated from IR Saturday; game-time decision in Munich"
-    },
-    {
-      "team": "NO",
-      "name": "Travis Etienne",
-      "through_week": 10,
-      "source": "NFL.com, Nov 14: activated from IR, will play Sunday vs. Carolina"
+      "team": "LAC",
+      "name": "Ladd McConkey",
+      "through_week": 11,
+      "source": "FantasyPros/Red Zone, Nov 19-20: limited in practice (back) after missing Weeks 9-10; questionable vs. NYJ"
     }
   ],
   "results": [
@@ -368,6 +378,12 @@
       "away": 23,
       "home": 20,
       "source": "Sportradar final, Nov 16"
+    },
+    {
+      "game": "2026_11_IND_HOU",
+      "away": 3,
+      "home": 26,
+      "source": "Sportradar final, Nov 19"
     }
   ]
 }

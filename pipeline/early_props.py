@@ -25,11 +25,13 @@ def main():
     site = json.load(open(f'{D}/site_data.json'))
     W = pd.read_csv(f'{D}/stats_player_week_2026.csv', low_memory=False)
     W = W[W.season_type == 'REG'] if 'season_type' in W else W
-    # the coming week is the first week with no game played yet
-    wk = min(g['wk'] for g in site['games'] if g['hs'] is None and not any(x['wk'] == g['wk'] and x['hs'] is not None for x in site['games']))
+    # the coming week is the week of the next unplayed game; only its unplayed games get leans. Games with logged Kalshi
+    # props are hidden on the site (the props replace the leans), so a week whose props couldn't be logged still has leans.
+    LOGGED = {p['game'] for p in json.load(open(f'{D}/prop_log.json'))}
+    wk = min(g['wk'] for g in site['games'] if g['hs'] is None)
     pool = [r for r in fan['games'] if r['wk'] == wk]  # main players, injured players already removed
     out = []
-    for g in sorted([g for g in site['games'] if g['wk'] == wk], key=lambda g: (g['day'], g['time'] or '')):
+    for g in sorted([g for g in site['games'] if g['wk'] == wk and g['hs'] is None and g['id'] not in LOGGED], key=lambda g: (g['day'], g['time'] or '')):
         cands = []
         for team in (g['a'], g['h']):
             ps = [r for r in pool if r['game'] == g['id'] and r['team'] == team]

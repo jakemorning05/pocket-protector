@@ -271,24 +271,30 @@ def build(params=None, out_path=None, write_extras=True):
     # ---------- current starters for unplayed 2026 games ----------
     # Latest actual starter per team; data/overrides.json can name a different starter (injury news) through a given week.
     OV = json.load(open(f'{D}/overrides.json'))
-    OVERRIDES = {o['team']: (o['qb'], o['name'], int(o.get('through_week', 18))) for o in OV.get('qb_starters', [])}
+    # a team can have several entries (a one-week fill-in, then the regular starter): the earliest through_week that
+    # still covers the week wins
+    OVERRIDES = {}
+    for o in OV.get('qb_starters', []):
+        OVERRIDES.setdefault(o['team'], []).append((o['qb'], o['name'], int(o.get('through_week', 18))))
+    for t in OVERRIDES: OVERRIDES[t].sort(key=lambda x: x[2])
     name2id = qb.sort_values('season').groupby('name').qb_id.last().to_dict()
-    for t, (short, full, _) in OVERRIDES.items():
+    for t, (short, full, _) in ((t, o) for t, lst in OVERRIDES.items() for o in lst):
         if short not in name2id:
             print(f'note overrides.json: no play-by-play history for {short} ({t}); rated from his draft slot')
     actual = {}
     for g in sch[(sch.season == 2026) & sch.played].sort_values('gameday').itertuples():
         actual[g.home_team] = (g.home_qb_id, g.home_qb_name); actual[g.away_team] = (g.away_qb_id, g.away_qb_name)
-    cw_now = int(sch[(sch.season == 2026) & sch.played].week.max()) + 1
+    # the week of the next unplayed game, so a played Thursday game doesn't jump the site ahead to next week
+    cw_now = int(sch[(sch.season == 2026) & ~sch.played].week.min())
 
     def starter(team, week):
-        o = OVERRIDES.get(team)
-        if o and week <= o[2]:
+        o = next((x for x in OVERRIDES.get(team, []) if week <= x[2]), None)
+        if o:
             # a QB with no NFL dropbacks is found in the draft list so he gets his draft-slot rating
             return (name2id.get(o[0]) or NAME2DRAFT.get(o[1]) or 'new:' + o[0], o[1])
         return actual[team]
     latest = {t: starter(t, cw_now) for t in TEAMS}
-    active_overrides = {t: o[1] for t, o in OVERRIDES.items() if cw_now <= o[2]}
+    active_overrides = {t: o[1] for t, lst in OVERRIDES.items() for o in lst[::-1] if cw_now <= o[2]}  # earliest wins
     last_report = max(w for (s, w, t) in inj_load if s == 2026)
     sch = sch.copy()
     for i, g in sch[(sch.season == 2026) & ~sch.played].iterrows():
