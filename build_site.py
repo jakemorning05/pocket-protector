@@ -2,7 +2,7 @@
 
 Writes two copies of the same page:
   docs/index.html          full HTML document for GitHub Pages (the public site)
-  pocket-protector.html    page fragment for the Claude artifact preview (the artifact host adds <html>/<head>)
+  pocket-protector.html    the Claude artifact preview (a complete document; browsers infer <html>/<head>/<body>)
 """
 import os, re
 
@@ -57,7 +57,7 @@ def main():
     style, page = read('src', 'style.css.html'), body()
     # artifact fragment
     assert page.count("'__BASE__'") == 1
-    frag = (f'<meta charset="utf-8">\n<title>{TITLE}</title>\n<meta name="claude:viewport-fit-sides" content="cover">\n'
+    frag = (f'<!DOCTYPE html>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n<title>{TITLE}</title>\n<meta name="claude:viewport-fit-sides" content="cover">\n'
             + FONTS + style + '\n' + page.replace("'__BASE__'", repr(SITE_URL)))
     open(P('pocket-protector.html'), 'w', encoding='utf-8').write(frag)
     # standalone document
