@@ -7,17 +7,17 @@
 
 | Game | Kickoff (ET) | QBs | Model win % (home) | Market win % (home) | Model margin (home) | Line (home) | Model total | Market total |
 |---|---|---|---|---|---|---|---|---|
-| ARI @ KC | 2026-11-22 13:00 | Josh Johnson / Patrick Mahomes | 85% | 91% | +13.1 | -16.5 | 47.1 | 40.5 |
-| BAL @ CAR | 2026-11-22 13:00 | Jacoby Brissett / Bryce Young | 59% | 58% | +3.0 | -3.0 | 46.8 | 43.5 |
-| JAX @ NYG | 2026-11-22 13:00 | Trevor Lawrence / J.J. McCarthy | 28% | 30% | -7.6 | +6.0 | 46.8 | 46.5 |
-| MIA @ BUF | 2026-11-22 13:00 | Kyle McCord / Josh Allen | 93% | 91% | +19.4 | -16.5 | 50.5 | 44.5 |
-| NO @ CHI | 2026-11-22 13:00 | Tyler Shough / Caleb Williams | 79% | 82% | +10.6 | -11.5 | 49.8 | 48.5 |
-| TB @ DET | 2026-11-22 13:00 | Baker Mayfield / Jared Goff | 70% | 68% | +6.8 | -5.5 | 50.4 | 45.5 |
-| TEN @ DAL | 2026-11-22 13:00 | Cam Ward / Dak Prescott | 82% | 76% | +11.7 | -8.5 | 51.2 | 54.5 |
-| NYJ @ LAC | 2026-11-22 16:05 | Geno Smith / Justin Herbert | 54% | 61% | +1.4 | -3.0 | 45.2 | 41.5 |
-| LV @ DEN | 2026-11-22 16:25 | Fernando Mendoza / Bo Nix | 80% | 82% | +10.6 | -10.0 | 44.8 | 40.5 |
-| PIT @ PHI | 2026-11-22 16:25 | Aaron Rodgers / Joe Milton III | 34% | 36% | -5.3 | +3.5 | 41.3 | 37.5 |
-| MIN @ SF | 2026-11-22 20:20 | Kirk Cousins / Brock Purdy | 63% | 61% | +4.1 | -3.0 | 45.7 | 46.5 |
+| ARI @ KC | 2026-11-22 13:00 | Josh Johnson / Patrick Mahomes | 81% | 90% | +11.5 | -15.5 | 47.1 | 40.5 |
+| BAL @ CAR | 2026-11-22 13:00 | Jacoby Brissett / Bryce Young | 60% | 57% | +3.3 | -3.0 | 46.8 | 43.5 |
+| JAX @ NYG | 2026-11-22 13:00 | Trevor Lawrence / J.J. McCarthy | 29% | 31% | -7.1 | +6.0 | 46.8 | 46.5 |
+| MIA @ BUF | 2026-11-22 13:00 | Kyle McCord / Josh Allen | 93% | 90% | +19.0 | -16.5 | 50.5 | 44.5 |
+| NO @ CHI | 2026-11-22 13:00 | Tyler Shough / Caleb Williams | 84% | 82% | +12.8 | -11.5 | 49.8 | 48.5 |
+| TB @ DET | 2026-11-22 13:00 | Baker Mayfield / Jared Goff | 71% | 66% | +7.2 | -4.5 | 50.4 | 46.5 |
+| TEN @ DAL | 2026-11-22 13:00 | Cam Ward / Dak Prescott | 77% | 76% | +9.6 | -7.5 | 51.2 | 54.5 |
+| NYJ @ LAC | 2026-11-22 16:05 | Geno Smith / Justin Herbert | 54% | 61% | +1.4 | -3.0 | 45.2 | 42.5 |
+| LV @ DEN | 2026-11-22 16:25 | Fernando Mendoza / Bo Nix | 80% | 83% | +10.9 | -10.5 | 44.8 | 40.5 |
+| PIT @ PHI | 2026-11-22 16:25 | Aaron Rodgers / Joe Milton III | 32% | 36% | -6.0 | +3.5 | 41.3 | 37.5 |
+| MIN @ SF | 2026-11-22 20:20 | Kirk Cousins / Brock Purdy | 65% | 61% | +4.8 | -3.5 | 45.7 | 46.5 |
 | CIN @ WAS | 2026-11-23 20:15 | Joe Burrow / Jayden Daniels | 45% | 28% | -1.6 | +6.0 | 51.9 | 53.5 |
 
 ## Logged Kalshi props for those games (model chance of YES vs. price)
