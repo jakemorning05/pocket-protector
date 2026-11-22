@@ -10,7 +10,11 @@
   "pick": "Iowa State",
   "line": 1.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 17,
+  "hs": 48,
+  "result": "loss",
+  "ats": "win"
  },
  {
   "id": 401858303,
@@ -23,7 +27,11 @@
   "pick": "Duke",
   "line": -11.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 20,
+  "hs": 10,
+  "result": "loss",
+  "ats": "loss"
  },
  {
   "id": 401866468,
@@ -36,7 +44,11 @@
   "pick": "Toledo",
   "line": -16.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 0,
+  "hs": 19,
+  "result": "win",
+  "ats": "win"
  },
  {
   "id": 401858529,
@@ -49,7 +61,11 @@
   "pick": "Oregon",
   "line": 17.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 45,
+  "hs": 7,
+  "result": "win",
+  "ats": "loss"
  },
  {
   "id": 401864545,
@@ -62,7 +78,11 @@
   "pick": "Air Force",
   "line": -21.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 3,
+  "hs": 52,
+  "result": "win",
+  "ats": "win"
  },
  {
   "id": 401864542,
@@ -75,7 +95,11 @@
   "pick": "New Mexico",
   "line": 9.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 24,
+  "hs": 17,
+  "result": "win",
+  "ats": "loss"
  },
  {
   "id": 401858310,
@@ -88,7 +112,11 @@
   "pick": "Wake Forest",
   "line": 20.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 50,
+  "hs": 29,
+  "result": "win",
+  "ats": "win"
  },
  {
   "id": 401858530,
@@ -101,7 +129,11 @@
   "pick": "Northwestern",
   "line": 2.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 17,
+  "hs": 20,
+  "result": "loss",
+  "ats": "loss"
  },
  {
   "id": 401858533,
@@ -114,7 +146,11 @@
   "pick": "Wisconsin",
   "line": 6.0,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 42,
+  "hs": 10,
+  "result": "win",
+  "ats": "loss"
  },
  {
   "id": 401862834,
@@ -127,7 +163,11 @@
   "pick": "Memphis",
   "line": 2.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 34,
+  "hs": 38,
+  "result": "loss",
+  "ats": "loss"
  },
  {
   "id": 401856867,
@@ -140,7 +180,11 @@
   "pick": "Cincinnati",
   "line": -3.0,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 28,
+  "hs": 35,
+  "result": "win",
+  "ats": "win"
  },
  {
   "id": 401856748,
@@ -153,7 +197,11 @@
   "pick": "Florida",
   "line": -13.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 27,
+  "hs": 34,
+  "result": "win",
+  "ats": "win"
  },
  {
   "id": 401862831,
@@ -166,7 +214,11 @@
   "pick": "Army",
   "line": -6.0,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 10,
+  "hs": 6,
+  "result": "loss",
+  "ats": "loss"
  },
  {
   "id": 401858531,
@@ -179,7 +231,11 @@
   "pick": "Ohio State",
   "line": 3.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 28,
+  "hs": 31,
+  "result": "loss",
+  "ats": "loss"
  },
  {
   "id": 401862835,
@@ -192,7 +248,11 @@
   "pick": "North Texas",
   "line": 6.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 24,
+  "hs": 28,
+  "result": "loss",
+  "ats": "loss"
  },
  {
   "id": 401856749,
@@ -205,7 +265,11 @@
   "pick": "Ole Miss",
   "line": -49.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 17,
+  "hs": 59,
+  "result": "win",
+  "ats": "win"
  },
  {
   "id": 401858309,
@@ -218,7 +282,11 @@
   "pick": "Syracuse",
   "line": 3.0,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 15,
+  "hs": 27,
+  "result": "loss",
+  "ats": "win"
  },
  {
   "id": 401856866,
@@ -231,7 +299,11 @@
   "pick": "BYU",
   "line": 5.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 31,
+  "hs": 29,
+  "result": "win",
+  "ats": "loss"
  },
  {
   "id": 401858305,
@@ -244,7 +316,11 @@
   "pick": "Virginia",
   "line": -1.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 24,
+  "hs": 41,
+  "result": "win",
+  "ats": "win"
  },
  {
   "id": 401856868,
@@ -257,7 +333,11 @@
   "pick": "Houston",
   "line": 7.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 34,
+  "hs": 31,
+  "result": "win",
+  "ats": "loss"
  },
  {
   "id": 401871080,
@@ -270,7 +350,11 @@
   "pick": "Liberty",
   "line": -17.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 14,
+  "hs": 45,
+  "result": "win",
+  "ats": "win"
  },
  {
   "id": 401856750,
@@ -283,7 +367,11 @@
   "pick": "Mississippi State",
   "line": -34.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 16,
+  "hs": 34,
+  "result": "win",
+  "ats": "win"
  },
  {
   "id": 401871079,
@@ -296,7 +384,11 @@
   "pick": "Jacksonville State",
   "line": -10.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 20,
+  "hs": 25,
+  "result": "win",
+  "ats": "loss"
  },
  {
   "id": 401862832,
@@ -309,7 +401,11 @@
   "pick": "Tulsa",
   "line": -22.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 14,
+  "hs": 42,
+  "result": "win",
+  "ats": "win"
  },
  {
   "id": 401871081,
@@ -322,7 +418,11 @@
   "pick": "Middle Tennessee",
   "line": 6.0,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 31,
+  "hs": 28,
+  "result": "win",
+  "ats": "win"
  },
  {
   "id": 401856746,
@@ -335,7 +435,11 @@
   "pick": "Alabama",
   "line": -48.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 0,
+  "hs": 47,
+  "result": "win",
+  "ats": "win"
  },
  {
   "id": 401862833,
@@ -361,7 +465,11 @@
   "pick": "Iowa",
   "line": 8.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 34,
+  "hs": 17,
+  "result": "win",
+  "ats": "loss"
  },
  {
   "id": 401869929,
@@ -374,7 +482,11 @@
   "pick": "App State",
   "line": -14.0,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 16,
+  "hs": 17,
+  "result": "win",
+  "ats": "loss"
  },
  {
   "id": 401871078,
@@ -387,7 +499,11 @@
   "pick": "Kennesaw State",
   "line": -2.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 24,
+  "hs": 35,
+  "result": "win",
+  "ats": "win"
  },
  {
   "id": 401871077,
@@ -400,7 +516,11 @@
   "pick": "Delaware",
   "line": 3.0,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 42,
+  "hs": 30,
+  "result": "win",
+  "ats": "loss"
  },
  {
   "id": 401869946,
@@ -413,7 +533,11 @@
   "pick": "Louisiana",
   "line": -10.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 24,
+  "hs": 38,
+  "result": "win",
+  "ats": "win"
  },
  {
   "id": 401858535,
@@ -426,7 +550,11 @@
   "pick": "Indiana",
   "line": 7.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 24,
+  "hs": 27,
+  "result": "loss",
+  "ats": "loss"
  },
  {
   "id": 401856755,
@@ -439,7 +567,11 @@
   "pick": "Texas",
   "line": -20.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 3,
+  "hs": 45,
+  "result": "win",
+  "ats": "loss"
  },
  {
   "id": 401858304,
@@ -452,7 +584,11 @@
   "pick": "Florida State",
   "line": -10.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 28,
+  "hs": 10,
+  "result": "loss",
+  "ats": "loss"
  },
  {
   "id": 401856754,
@@ -465,7 +601,11 @@
   "pick": "Tennessee",
   "line": 1.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 13,
+  "hs": 27,
+  "result": "win",
+  "ats": "win"
  },
  {
   "id": 401856871,
@@ -478,7 +618,11 @@
   "pick": "Texas Tech",
   "line": 4.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 20,
+  "hs": 10,
+  "result": "win",
+  "ats": "loss"
  },
  {
   "id": 401856747,
@@ -491,7 +635,11 @@
   "pick": "Auburn",
   "line": -48.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 17,
+  "hs": 59,
+  "result": "win",
+  "ats": "win"
  },
  {
   "id": 401861968,
@@ -504,7 +652,11 @@
   "pick": "UConn",
   "line": -13.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 21,
+  "hs": 29,
+  "result": "win",
+  "ats": "loss"
  },
  {
   "id": 401858528,
@@ -517,7 +669,11 @@
   "pick": "UCLA",
   "line": 3.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 16,
+  "hs": 18,
+  "result": "loss",
+  "ats": "loss"
  },
  {
   "id": 401858532,
@@ -530,7 +686,11 @@
   "pick": "Penn State",
   "line": -26.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 25,
+  "hs": 24,
+  "result": "loss",
+  "ats": "win"
  },
  {
   "id": 401856752,
@@ -543,7 +703,11 @@
   "pick": "Oklahoma",
   "line": -7.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 7,
+  "hs": 28,
+  "result": "win",
+  "ats": "loss"
  },
  {
   "id": 401864543,
@@ -556,7 +720,11 @@
   "pick": "North Dakota State",
   "line": -25.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 25,
+  "hs": 31,
+  "result": "win",
+  "ats": "loss"
  },
  {
   "id": 401871101,
@@ -569,7 +737,11 @@
   "pick": "South Alabama",
   "line": 4.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 40,
+  "hs": 35,
+  "result": "win",
+  "ats": "loss"
  },
  {
   "id": 401869953,
@@ -582,7 +754,11 @@
   "pick": "Georgia Southern",
   "line": 9.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 45,
+  "hs": 7,
+  "result": "win",
+  "ats": "loss"
  },
  {
   "id": 401869958,
@@ -595,7 +771,11 @@
   "pick": "Georgia State",
   "line": -2.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
-  "line_logged": "Fri Nov 20, 3:47 PM ET"
+  "line_logged": "Fri Nov 20, 3:47 PM ET",
+  "as": 27,
+  "hs": 28,
+  "result": "loss",
+  "ats": "win"
  },
  {
   "id": 401860920,

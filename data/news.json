@@ -741,6 +741,46 @@
    "snap": 0.65
   },
   {
+   "team": "CIN",
+   "name": "Dylan Fairchild",
+   "pos": "G",
+   "status": "Questionable",
+   "injury": "Oblique",
+   "snap": 0.98
+  },
+  {
+   "team": "CIN",
+   "name": "Daxton Hill",
+   "pos": "CB",
+   "status": "Questionable",
+   "injury": "Illness",
+   "snap": 0.89
+  },
+  {
+   "team": "CIN",
+   "name": "Dalton Risner",
+   "pos": "G",
+   "status": "Out",
+   "injury": "Knee",
+   "snap": 0.83
+  },
+  {
+   "team": "CIN",
+   "name": "Jalen Davis",
+   "pos": "CB",
+   "status": "Doubtful",
+   "injury": "Hamstring",
+   "snap": 0.61
+  },
+  {
+   "team": "CIN",
+   "name": "Andrei Iosivas",
+   "pos": "WR",
+   "status": "Doubtful",
+   "injury": "Thumb",
+   "snap": 0.57
+  },
+  {
    "team": "DAL",
    "name": "Jalen Thompson",
    "pos": "S",
@@ -1206,11 +1246,27 @@
   },
   {
    "team": "WAS",
+   "name": "Amik Robertson",
+   "pos": "CB",
+   "status": "Questionable",
+   "injury": "Ankle",
+   "snap": 0.98
+  },
+  {
+   "team": "WAS",
    "name": "Lucas Patrick",
-   "pos": "G",
-   "status": "Out",
-   "injury": "Concussion protocol; Nick Allegretti starts at center Thursday (late news)",
-   "snap": 1.0
+   "pos": "C",
+   "status": "Questionable",
+   "injury": "Concussion",
+   "snap": 0.81
+  },
+  {
+   "team": "WAS",
+   "name": "Rachaad White",
+   "pos": "RB",
+   "status": "Questionable",
+   "injury": "Heel",
+   "snap": 0.52
   }
  ],
  "injury_week": 11
