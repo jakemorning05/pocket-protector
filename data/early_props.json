@@ -1,6 +1,6 @@
 {
  "week": 11,
- "asof": "Sun, Nov 22, 11:28 PM ET",
+ "asof": "Mon, Nov 23, 10:58 AM ET",
  "games": [
   {
    "id": "2026_11_CIN_WAS",
@@ -21,6 +21,17 @@
      "games": 9
     },
     {
+     "player": "Rachaad White",
+     "team": "WAS",
+     "pos": "RB",
+     "stat": "rush_yds",
+     "line": 31.5,
+     "proj": 41.1,
+     "p_over": 0.643,
+     "side": "Over",
+     "games": 8
+    },
+    {
      "player": "Chase Brown",
      "team": "CIN",
      "pos": "RB",
@@ -30,17 +41,6 @@
      "p_over": 0.358,
      "side": "Under",
      "games": 9
-    },
-    {
-     "player": "Rachaad White",
-     "team": "WAS",
-     "pos": "RB",
-     "stat": "rush_yds",
-     "line": 31.5,
-     "proj": 41.1,
-     "p_over": 0.642,
-     "side": "Over",
-     "games": 8
     }
    ],
    "td": [
@@ -54,7 +54,7 @@
      "player": "Stefon Diggs",
      "team": "WAS",
      "pos": "WR",
-     "p": 0.471
+     "p": 0.47
     }
    ]
   }

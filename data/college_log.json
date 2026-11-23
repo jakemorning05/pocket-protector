@@ -1020,8 +1020,9 @@
   "m": 9.0,
   "p": 0.719,
   "pick": "Western Michigan",
-  "line": null,
-  "logged": "Sun Nov 22, 11:29 PM ET"
+  "line": -6.5,
+  "logged": "Sun Nov 22, 11:29 PM ET",
+  "line_logged": "Mon Nov 23, 10:58 AM ET"
  },
  {
   "id": 401866470,
@@ -1032,7 +1033,20 @@
   "m": 9.1,
   "p": 0.722,
   "pick": "Eastern Michigan",
-  "line": null,
-  "logged": "Sun Nov 22, 11:29 PM ET"
+  "line": -5.5,
+  "logged": "Sun Nov 22, 11:29 PM ET",
+  "line_logged": "Mon Nov 23, 10:58 AM ET"
+ },
+ {
+  "id": 401856879,
+  "wk": 13,
+  "day": "2026-11-26",
+  "a": "TCU",
+  "h": "Texas Tech",
+  "m": 12.4,
+  "p": 0.788,
+  "pick": "Texas Tech",
+  "line": -13.5,
+  "logged": "Mon Nov 23, 10:58 AM ET"
  }
 ]
