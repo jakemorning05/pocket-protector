@@ -1,4 +1,4 @@
-# Model briefing (updated Sun, Nov 22, 11:40 PM ET)
+# Model briefing (updated Mon, Nov 23, 12:50 PM ET)
 
 - Picking winners this season: 117-44. Betting favorites on the same games: 111-50.
 - Prop test vs. Kalshi (since Week 9): 74-78, -4.56 units at one contract each.
@@ -17,7 +17,7 @@
 ## Injury and role notes the model is using
 
 - Cam Skattebo: 18 carries, 78 yards, 2 TDs in his return Thursday
-- Justin Herbert: In the concussion protocol after Week 11; Week 12 status uncertain
+- Justin Herbert: Concussion protocol; DJ Uiagalelei starts Week 12 if he doesn't clear
 - Carson Wentz: Now Minnesota’s backup after the Kirk Cousins trade
 - Keenan Allen: Traded to San Francisco Nov 10; projections use his Colts role in the 49ers offense, so treat them as rough for now
 - Fernando Mendoza: Rookie takes over in Las Vegas after the Cousins trade
@@ -29,10 +29,12 @@
 - Travis Etienne: Activated from IR; first game since Week 3
 - Kyle McCord: Starts at QB through Week 13 while Malik Willis is on IR
 - Derrick Henry: Checked for a concussion late in Week 11; said he felt fine
+- Kyren Williams: Limited in practice (turf toe) but expected to play Wednesday vs. Green Bay
 
 ## Recent headlines
 
-- LAC: Justin Herbert entered the concussion protocol after the Chargers' 27-24 loss to the Jets. His status for next Sunday night against New England is up in the air. (NFL.com, Nov 22)
+- LA: Kyren Williams has been limited in practice with turf toe but is expected to play Wednesday against Green Bay, possibly in a closer to even split with Blake Corum. (Yahoo Sports, Nov 23)
+- LAC: Justin Herbert entered the concussion protocol after the Chargers' 27-24 loss to the Jets, their ninth in ten games. If he doesn't clear it before Sunday night against New England, DJ Uiagalelei would start. The model still has Herbert for now. (Field Level Media via SRN News, Nov 23)
 - NYG: Sunday's upsets: the Giants beat Jacksonville 23-18, the Jets won 27-24 in Los Angeles, and the Eagles edged Pittsburgh 19-16. The model and the betting market both had the losing side in all three. The model went 8-3 on Sunday (9-3 for the week so far, with Bengals-Commanders on Monday night). (Sportradar finals, Nov 22)
 - DAL: Dallas scored touchdowns on its first six drives in a 51-30 win over Tennessee. Dak Prescott threw for 325 yards and four touchdowns, and CeeDee Lamb (11 for 132) and George Pickens (7 for 102) both topped 100 yards. (ESPN and Yardbarker, Nov 22)
 - BUF: The Bills beat Miami 26-9 to move to 9-1. James Cook ran 22 times for 89 yards and scored for the ninth straight game. (RotoWire, Nov 22)
@@ -43,7 +45,6 @@
 - NYJ: Geno Smith practiced fully Friday and is trending toward playing against the Chargers. Rookie WR Omar Cooper Jr. (ankle/hip) is out. (NFL.com, Nov 20)
 - TB: Baker Mayfield (foot) was limited Thursday but is “trending in the right direction” for Sunday against Detroit. (NFL.com, Nov 20)
 - MIN: Jordan Addison needs thumb surgery and will miss multiple weeks. Jauan Jennings is practicing fully. (NBC Sports, Nov 18)
-- LAC: Ladd McConkey (back) has been limited in practice after missing two games, so he's back in the projections; watch Sunday's inactives. Brock Bowers (LV, ankle) and Mike Evans (SF, Achilles) also returned to limited practice. (FantasyPros and Yahoo Sports, Nov 19-20)
 
 Known model weak spots: backups who inherit a starter's carries are underprojected; running back props ignore game
 script (trailing teams run less); very low receiving lines (10-15 yards) are overrated for YES; no weather inputs.

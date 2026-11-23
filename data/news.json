@@ -1,5 +1,5 @@
 {
- "asof": "Sun, Nov 22, 11:40 PM ET",
+ "asof": "Mon, Nov 23, 12:50 PM ET",
  "outs": [
   "Josh Jacobs",
   "Puka Nacua",
@@ -10,7 +10,7 @@
  ],
  "flags": {
   "Cam Skattebo": "18 carries, 78 yards, 2 TDs in his return Thursday",
-  "Justin Herbert": "In the concussion protocol after Week 11; Week 12 status uncertain",
+  "Justin Herbert": "Concussion protocol; DJ Uiagalelei starts Week 12 if he doesn't clear",
   "Carson Wentz": "Now Minnesota\u2019s backup after the Kirk Cousins trade",
   "Keenan Allen": "Traded to San Francisco Nov 10; projections use his Colts role in the 49ers offense, so treat them as rough for now",
   "Fernando Mendoza": "Rookie takes over in Las Vegas after the Cousins trade",
@@ -21,15 +21,23 @@
   "Chig Okonkwo": "Back injury Thursday; returned in the second half",
   "Travis Etienne": "Activated from IR; first game since Week 3",
   "Kyle McCord": "Starts at QB through Week 13 while Malik Willis is on IR",
-  "Derrick Henry": "Checked for a concussion late in Week 11; said he felt fine"
+  "Derrick Henry": "Checked for a concussion late in Week 11; said he felt fine",
+  "Kyren Williams": "Limited in practice (turf toe) but expected to play Wednesday vs. Green Bay"
  },
  "items": [
   {
+   "team": "LA",
+   "tag": "Injury",
+   "text": "Kyren Williams has been limited in practice with turf toe but is expected to play Wednesday against Green Bay, possibly in a closer to even split with Blake Corum.",
+   "src": "Yahoo Sports, Nov 23",
+   "url": "https://sports.yahoo.com/articles/injuries-dominate-rams-snap-count-170200266.html"
+  },
+  {
    "team": "LAC",
    "tag": "Injury",
-   "text": "Justin Herbert entered the concussion protocol after the Chargers' 27-24 loss to the Jets. His status for next Sunday night against New England is up in the air.",
-   "src": "NFL.com, Nov 22",
-   "url": "https://www.nfl.com/news/notable-injuries-news-sunday-week-11-games-2026"
+   "text": "Justin Herbert entered the concussion protocol after the Chargers' 27-24 loss to the Jets, their ninth in ten games. If he doesn't clear it before Sunday night against New England, DJ Uiagalelei would start. The model still has Herbert for now.",
+   "src": "Field Level Media via SRN News, Nov 23",
+   "url": "https://srnnews.com/nfl-injury-roundup-chargers-justin-herbert-in-concussion-protocol/"
   },
   {
    "team": "NYG",
