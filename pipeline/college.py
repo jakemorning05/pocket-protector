@@ -150,8 +150,11 @@ def main():
     by_wk = {}
     for x in rebuilt: by_wk.setdefault(x['wk'], [0, 0])[0 if x['ok'] else 1] += 1
 
-    # this week's games
-    wk = int(upcoming.wk.min()) if len(upcoming) else None
+    # this week's games: the earliest week with a game still to kick off (a week whose games have all started moves on,
+    # even if some finals haven't reached the data yet; those still get graded from the log)
+    start = pd.to_datetime(upcoming.start_date, utc=True)
+    future = upcoming[start > pd.Timestamp(now)]
+    wk = int(future.wk.min()) if len(future) else (int(upcoming.wk.min()) if len(upcoming) else None)
     post = bool(wk and wk > 20)
     lines = espn_lines(wk - 20 if post else wk, post) if wk else {}
     games = []
@@ -191,8 +194,10 @@ def main():
     have = {x['id']: x for x in log}
     stamp = now.strftime('%a %b %-d, %-I:%M %p ET')
     for g in games:
-        if datetime.datetime.fromisoformat(g['start']) <= now: continue
+        ko = datetime.datetime.fromisoformat(g['start'])
+        if ko <= now: continue
         x = have.get(g['id'])
+        if x is None and ko - now > datetime.timedelta(days=3.5): continue   # log close to kickoff, with the latest ratings
         if x is None:
             x = {'id': g['id'], 'wk': wk, 'day': g['day'], 'a': g['a'], 'h': g['h'], 'm': g['m'], 'p': g['p'],
                  'pick': g['h'] if g['m'] > 0 else g['a'], 'line': g['line'], 'logged': stamp}

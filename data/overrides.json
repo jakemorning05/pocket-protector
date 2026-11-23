@@ -384,6 +384,72 @@
       "away": 3,
       "home": 26,
       "source": "Sportradar final, Nov 19"
+    },
+    {
+      "game": "2026_11_MIA_BUF",
+      "away": 9,
+      "home": 26,
+      "source": "Sportradar final, Nov 22"
+    },
+    {
+      "game": "2026_11_BAL_CAR",
+      "away": 33,
+      "home": 35,
+      "source": "Sportradar final, Nov 22"
+    },
+    {
+      "game": "2026_11_NO_CHI",
+      "away": 13,
+      "home": 21,
+      "source": "Sportradar final, Nov 22"
+    },
+    {
+      "game": "2026_11_TEN_DAL",
+      "away": 30,
+      "home": 51,
+      "source": "Sportradar final, Nov 22"
+    },
+    {
+      "game": "2026_11_TB_DET",
+      "away": 21,
+      "home": 31,
+      "source": "Sportradar final, Nov 22"
+    },
+    {
+      "game": "2026_11_ARI_KC",
+      "away": 7,
+      "home": 34,
+      "source": "Sportradar final, Nov 22"
+    },
+    {
+      "game": "2026_11_JAX_NYG",
+      "away": 18,
+      "home": 23,
+      "source": "Sportradar final, Nov 22"
+    },
+    {
+      "game": "2026_11_NYJ_LAC",
+      "away": 27,
+      "home": 24,
+      "source": "Sportradar final, Nov 22"
+    },
+    {
+      "game": "2026_11_LV_DEN",
+      "away": 24,
+      "home": 38,
+      "source": "Sportradar final, Nov 22"
+    },
+    {
+      "game": "2026_11_PIT_PHI",
+      "away": 16,
+      "home": 19,
+      "source": "Sportradar final, Nov 22"
+    },
+    {
+      "game": "2026_11_MIN_SF",
+      "away": 10,
+      "home": 35,
+      "source": "Sportradar final, Nov 22"
     }
   ]
 }

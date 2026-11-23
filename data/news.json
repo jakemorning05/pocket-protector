@@ -1,5 +1,5 @@
 {
- "asof": "Fri, Nov 20, 2:30 PM ET",
+ "asof": "Sun, Nov 22, 11:40 PM ET",
  "outs": [
   "Josh Jacobs",
   "Puka Nacua",
@@ -10,7 +10,7 @@
  ],
  "flags": {
   "Cam Skattebo": "18 carries, 78 yards, 2 TDs in his return Thursday",
-  "Justin Herbert": "Finger imaging was negative, no fracture",
+  "Justin Herbert": "In the concussion protocol after Week 11; Week 12 status uncertain",
   "Carson Wentz": "Now Minnesota\u2019s backup after the Kirk Cousins trade",
   "Keenan Allen": "Traded to San Francisco Nov 10; projections use his Colts role in the 49ers offense, so treat them as rough for now",
   "Fernando Mendoza": "Rookie takes over in Las Vegas after the Cousins trade",
@@ -20,17 +20,45 @@
   "Alvin Kamara": "Fewer carries with Travis Etienne back",
   "Chig Okonkwo": "Back injury Thursday; returned in the second half",
   "Travis Etienne": "Activated from IR; first game since Week 3",
-  "Brock Bowers": "Limited in practice (ankle); questionable",
-  "Geno Smith": "Full practice Friday; trending toward playing",
   "Kyle McCord": "Starts at QB through Week 13 while Malik Willis is on IR",
-  "Kenneth Walker III": "Doubtful (groin); no practice Wed or Thu",
-  "Baker Mayfield": "Limited Thursday (foot); trending toward playing",
-  "Josh Johnson": "Expected to start Week 11 with Carson Beck (back) unlikely",
-  "Ladd McConkey": "Limited in practice (back); questionable",
-  "Mike Evans": "Back at practice, limited (Achilles); questionable, not in projections",
-  "Emmett Johnson": "Leads the backfield again with Walker doubtful"
+  "Derrick Henry": "Checked for a concussion late in Week 11; said he felt fine"
  },
  "items": [
+  {
+   "team": "LAC",
+   "tag": "Injury",
+   "text": "Justin Herbert entered the concussion protocol after the Chargers' 27-24 loss to the Jets. His status for next Sunday night against New England is up in the air.",
+   "src": "NFL.com, Nov 22",
+   "url": "https://www.nfl.com/news/notable-injuries-news-sunday-week-11-games-2026"
+  },
+  {
+   "team": "NYG",
+   "tag": "Result",
+   "text": "Sunday's upsets: the Giants beat Jacksonville 23-18, the Jets won 27-24 in Los Angeles, and the Eagles edged Pittsburgh 19-16. The model and the betting market both had the losing side in all three. The model went 8-3 on Sunday (9-3 for the week so far, with Bengals-Commanders on Monday night).",
+   "src": "Sportradar finals, Nov 22",
+   "url": "https://www.nfl.com/news/notable-injuries-news-sunday-week-11-games-2026"
+  },
+  {
+   "team": "DAL",
+   "tag": "Result",
+   "text": "Dallas scored touchdowns on its first six drives in a 51-30 win over Tennessee. Dak Prescott threw for 325 yards and four touchdowns, and CeeDee Lamb (11 for 132) and George Pickens (7 for 102) both topped 100 yards.",
+   "src": "ESPN and Yardbarker, Nov 22",
+   "url": "https://www.espn.com/nfl/story/_/id/50566741/robert-saleh-calls-titans-defensive-effort-disgusting"
+  },
+  {
+   "team": "BUF",
+   "tag": "Result",
+   "text": "The Bills beat Miami 26-9 to move to 9-1. James Cook ran 22 times for 89 yards and scored for the ninth straight game.",
+   "src": "RotoWire, Nov 22",
+   "url": "https://www.rotowire.com/football/headlines/james-cook-news-extends-td-streak-to-nine-games-649149"
+  },
+  {
+   "team": "BAL",
+   "tag": "Injury",
+   "text": "Derrick Henry was evaluated for a concussion late in Baltimore's 35-33 loss at Carolina but told ESPN afterward that he felt fine. The Ravens have lost six straight.",
+   "src": "NFL.com, Nov 22",
+   "url": "https://www.nfl.com/news/notable-injuries-news-sunday-week-11-games-2026"
+  },
   {
    "team": "HOU",
    "tag": "Result",

@@ -1,5 +1,5 @@
 {
-  "asof": "Fri Nov 20, 2026",
+  "asof": "Sun Nov 22, 2026",
   "_help": "Source for the Parlays tab. One entry per slip. 'by' is Big Goat or Lil Goat; 'played' marks the slip that was actually bet. status: pending, won or lost. Leg 'r' is won/lost when known; leave it out if not. 'mult' is the approximate payout multiple from the leg prices (before Kalshi's combo pricing); 'payout' is the real amount once settled. Runs track the 2x challenge bankroll.",
   "runs": [
     {
@@ -164,6 +164,36 @@
         }
       ],
       "note": "Read the winner right and missed by 6 yards. Houston led 17-3 at half and ran 37 times to close it out, so Stroud threw only 27 passes. In a likely blowout, the favorite's QB yards get capped."
+    },
+    {
+      "date": "2026-11-22",
+      "run": 4,
+      "game": "Sunday 1 PM games",
+      "when": "Sunday",
+      "by": "Big Goat",
+      "played": null,
+      "stake": null,
+      "mult": 2.2,
+      "status": "won",
+      "legs": [
+        {
+          "t": "Bills to win (won 26-9)",
+          "r": "won"
+        },
+        {
+          "t": "James Cook 70+ rushing yards (89)",
+          "r": "won"
+        },
+        {
+          "t": "Chiefs to win (won 34-7)",
+          "r": "won"
+        },
+        {
+          "t": "CeeDee Lamb 50+ receiving yards (132)",
+          "r": "won"
+        }
+      ],
+      "note": "Built around big favorites winning plus players whose volume holds up in that game script, with no QB passing-yard legs. Cook ran 22 times as Buffalo closed it out, and Lamb had 103 yards by halftime."
     }
   ]
 }

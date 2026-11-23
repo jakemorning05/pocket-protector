@@ -523,9 +523,9 @@
   "p": 0.516,
   "ev": -0.014,
   "logged": "Nov 10, 3:16 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null
+  "close": 15.5,
+  "clv": -2.0,
+  "result": "loss"
  },
  {
   "game": "2026_11_ARI_KC",
@@ -539,9 +539,9 @@
   "p": 0.672,
   "ev": 0.282,
   "logged": "Nov 10, 3:16 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null
+  "close": 40.5,
+  "clv": -1.0,
+  "result": "loss"
  },
  {
   "game": "2026_11_BAL_CAR",
@@ -555,9 +555,9 @@
   "p": 0.501,
   "ev": -0.044,
   "logged": "Nov 10, 3:16 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null
+  "close": 2.5,
+  "clv": 0.0,
+  "result": "loss"
  },
  {
   "game": "2026_11_BAL_CAR",
@@ -571,9 +571,9 @@
   "p": 0.616,
   "ev": 0.177,
   "logged": "Nov 10, 3:16 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null
+  "close": 44.5,
+  "clv": 1.0,
+  "result": "win"
  },
  {
   "game": "2026_11_JAX_NYG",
@@ -587,9 +587,9 @@
   "p": 0.59,
   "ev": 0.127,
   "logged": "Nov 10, 3:16 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null
+  "close": -6.0,
+  "clv": 0.5,
+  "result": "loss"
  },
  {
   "game": "2026_11_JAX_NYG",
@@ -603,9 +603,9 @@
   "p": 0.521,
   "ev": -0.006,
   "logged": "Nov 10, 3:16 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null
+  "close": 45.5,
+  "clv": 0.0,
+  "result": "loss"
  },
  {
   "game": "2026_11_MIA_BUF",
@@ -619,9 +619,9 @@
   "p": 0.507,
   "ev": -0.032,
   "logged": "Nov 10, 3:16 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null
+  "close": 16.5,
+  "clv": 2.0,
+  "result": "win"
  },
  {
   "game": "2026_11_MIA_BUF",
@@ -635,9 +635,9 @@
   "p": 0.597,
   "ev": 0.139,
   "logged": "Nov 10, 3:16 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null
+  "close": 45.5,
+  "clv": -2.0,
+  "result": "loss"
  },
  {
   "game": "2026_11_NO_CHI",
@@ -651,9 +651,9 @@
   "p": 0.532,
   "ev": 0.016,
   "logged": "Nov 10, 3:16 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null
+  "close": 11.5,
+  "clv": 2.0,
+  "result": "loss"
  },
  {
   "game": "2026_11_NO_CHI",
@@ -667,9 +667,9 @@
   "p": 0.521,
   "ev": -0.006,
   "logged": "Nov 10, 3:16 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null
+  "close": 47.5,
+  "clv": -2.0,
+  "result": "loss"
  },
  {
   "game": "2026_11_TB_DET",
@@ -683,9 +683,9 @@
   "p": 0.579,
   "ev": 0.105,
   "logged": "Nov 10, 3:16 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null
+  "close": 3.5,
+  "clv": 0.0,
+  "result": "win"
  },
  {
   "game": "2026_11_TB_DET",
@@ -699,9 +699,9 @@
   "p": 0.568,
   "ev": 0.084,
   "logged": "Nov 10, 3:16 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null
+  "close": 48.5,
+  "clv": 0.0,
+  "result": "win"
  },
  {
   "game": "2026_11_TEN_DAL",
@@ -715,9 +715,9 @@
   "p": 0.656,
   "ev": 0.252,
   "logged": "Nov 10, 3:16 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null
+  "close": 7.5,
+  "clv": 0.0,
+  "result": "win"
  },
  {
   "game": "2026_11_TEN_DAL",
@@ -731,9 +731,9 @@
   "p": 0.524,
   "ev": -0.0,
   "logged": "Nov 10, 3:16 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null
+  "close": 55.5,
+  "clv": 6.0,
+  "result": "win"
  },
  {
   "game": "2026_11_NYJ_LAC",
@@ -747,9 +747,9 @@
   "p": 0.529,
   "ev": 0.01,
   "logged": "Nov 10, 3:16 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null
+  "close": 3.0,
+  "clv": -1.5,
+  "result": "win"
  },
  {
   "game": "2026_11_NYJ_LAC",
@@ -763,9 +763,9 @@
   "p": 0.538,
   "ev": 0.028,
   "logged": "Nov 10, 3:16 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null
+  "close": 43.5,
+  "clv": 0.0,
+  "result": "win"
  },
  {
   "game": "2026_11_PIT_PHI",
@@ -779,9 +779,9 @@
   "p": 0.506,
   "ev": -0.034,
   "logged": "Nov 10, 3:16 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null
+  "close": -3.5,
+  "clv": -1.0,
+  "result": "loss"
  },
  {
   "game": "2026_11_PIT_PHI",
@@ -795,9 +795,9 @@
   "p": 0.568,
   "ev": 0.084,
   "logged": "Nov 10, 3:16 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null
+  "close": 37.5,
+  "clv": -1.0,
+  "result": "loss"
  },
  {
   "game": "2026_11_CIN_WAS",
@@ -843,9 +843,9 @@
   "p": 0.553,
   "ev": 0.056,
   "logged": "Nov 10, 4:18 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null
+  "close": 11.5,
+  "clv": 3.0,
+  "result": "win"
  },
  {
   "game": "2026_11_LV_DEN",
@@ -859,9 +859,9 @@
   "p": 0.605,
   "ev": 0.155,
   "logged": "Nov 10, 4:18 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null
+  "close": 41.5,
+  "clv": 0.0,
+  "result": "win"
  },
  {
   "game": "2026_11_MIN_SF",
@@ -875,9 +875,9 @@
   "p": 0.511,
   "ev": -0.024,
   "logged": "Nov 10, 4:18 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null
+  "close": 4.5,
+  "clv": 1.0,
+  "result": "win"
  },
  {
   "game": "2026_11_MIN_SF",
@@ -891,9 +891,9 @@
   "p": 0.527,
   "ev": 0.005,
   "logged": "Nov 10, 4:18 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null
+  "close": 44.5,
+  "clv": 1.0,
+  "result": "win"
  },
  {
   "game": "2026_12_GB_LA",

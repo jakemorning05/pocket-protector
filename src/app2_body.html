@@ -865,7 +865,7 @@ function renderParlays() {
     const pay = back(s);
     const foot = (s.stake != null ? 'Stake ' + money(s.stake) + ' · ' : '') + (s.mult ? 'about ' + s.mult.toFixed(1) + 'x' : '') +
       (s.payout != null ? ' · paid ' + money(s.payout) : s.stake != null && pay && s.status === 'pending' ? ' · pays about ' + money(Math.round(pay)) : '');
-    return '<div class="slip' + (s.played ? ' played' : '') + '"><div class="slip-head"><b>' + esc(s.by) + '</b>' + (s.played ? '<span class="pill play">Played</span>' : '<span class="muted small">Not played</span>') + stat(s) + '</div>' +
+    return '<div class="slip' + (s.played ? ' played' : '') + '"><div class="slip-head"><b>' + esc(s.by) + '</b>' + (s.played ? '<span class="pill play">Played</span>' : s.played === false ? '<span class="muted small">Not played</span>' : '') + stat(s) + '</div>' +
       '<ul class="legs">' + s.legs.map((l) => '<li>' + legMark(l) + '<span>' + esc(l.t) + '</span>' + (l.price != null ? '<span class="muted small">' + Math.round(l.price * 100) + '¢</span>' : '') + '</li>').join('') + '</ul>' +
       (foot.trim() ? '<p class="slip-foot">' + foot + '</p>' : '') + (s.note ? '<p class="muted small">' + esc(s.note) + '</p>' : '') + '</div>';
   };

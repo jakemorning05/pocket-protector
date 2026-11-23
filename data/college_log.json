@@ -1010,5 +1010,29 @@
   "line": -8.5,
   "logged": "Fri Nov 20, 3:38 PM ET",
   "line_logged": "Fri Nov 20, 3:47 PM ET"
+ },
+ {
+  "id": 401866471,
+  "wk": 13,
+  "day": "2026-11-24",
+  "a": "Miami (OH)",
+  "h": "Western Michigan",
+  "m": 9.0,
+  "p": 0.719,
+  "pick": "Western Michigan",
+  "line": null,
+  "logged": "Sun Nov 22, 11:29 PM ET"
+ },
+ {
+  "id": 401866470,
+  "wk": 13,
+  "day": "2026-11-24",
+  "a": "Kent State",
+  "h": "Eastern Michigan",
+  "m": 9.1,
+  "p": 0.722,
+  "pick": "Eastern Michigan",
+  "line": null,
+  "logged": "Sun Nov 22, 11:29 PM ET"
  }
 ]
