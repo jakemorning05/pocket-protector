@@ -11,16 +11,16 @@
 | CHI @ DET | 2026-11-26 13:00 | Caleb Williams / Jared Goff | 61% | 43% | +3.7 | +2.5 | 54.6 | 55.5 |
 | PHI @ DAL | 2026-11-26 16:30 | Joe Milton III / Dak Prescott | 72% | 79% | +7.6 | -8.5 | 48.7 | 47.5 |
 | KC @ BUF | 2026-11-26 20:20 | Patrick Mahomes / Josh Allen | 61% | 58% | +3.6 | -3.0 | 52.1 | 47.5 |
-| DEN @ PIT | 2026-11-27 15:00 | Bo Nix / Aaron Rodgers | 47% | 42% | -1.0 | +3.0 | 43.2 | 38.5 |
-| ATL @ MIN | 2026-11-29 13:00 | Michael Penix Jr. / Kirk Cousins | 65% | 74% | +5.0 | -7.0 | 43.8 | 42.5 |
-| BAL @ HOU | 2026-11-29 13:00 | Jacoby Brissett / C.J. Stroud | 71% | 73% | +7.1 | -6.5 | 44.5 | 46.5 |
-| NO @ CIN | 2026-11-29 13:00 | Tyler Shough / Joe Burrow | 84% | 81% | +13.0 | -10.0 | 50.9 | 50.5 |
+| DEN @ PIT | 2026-11-27 15:00 | Bo Nix / Aaron Rodgers | 47% | 42% | -1.0 | +3.0 | 43.2 | 37.5 |
+| ATL @ MIN | 2026-11-29 13:00 | Michael Penix Jr. / Kirk Cousins | 65% | 75% | +5.0 | -7.0 | 43.8 | 42.5 |
+| BAL @ HOU | 2026-11-29 13:00 | Jacoby Brissett / C.J. Stroud | 71% | 72% | +7.1 | -6.5 | 44.5 | 46.5 |
+| NO @ CIN | 2026-11-29 13:00 | Tyler Shough / Joe Burrow | 84% | 83% | +13.0 | -10.0 | 50.9 | 50.5 |
 | NYG @ IND | 2026-11-29 13:00 | J.J. McCarthy / Daniel Jones | 48% | 27% | -0.6 | +6.5 | 46.1 | 41.5 |
 | NYJ @ MIA | 2026-11-29 13:00 | Geno Smith / Kyle McCord | 30% | 35% | -6.8 | +3.5 | 44.0 | 40.5 |
 | TEN @ JAX | 2026-11-29 13:00 | Cam Ward / Trevor Lawrence | 89% | 89% | +15.6 | -14.5 | 47.0 | 47.5 |
-| NE @ LAC | 2026-11-29 16:05 | Tommy DeVito / Justin Herbert | 60% | 51% | +3.2 | -1.5 | 47.5 | 35.5 |
-| SEA @ SF | 2026-11-29 16:25 | Sam Darnold / Brock Purdy | 58% | 62% | +2.5 | -3.0 | 47.1 | 46.5 |
-| WAS @ ARI | 2026-11-29 16:25 | Jayden Daniels / Carson Beck | 31% | 23% | -6.5 | +7.5 | 46.9 | 40.5 |
+| NE @ LAC | 2026-11-29 16:05 | Tommy DeVito / Justin Herbert | 60% | 52% | +3.2 | -1.5 | 47.5 | 35.5 |
+| SEA @ SF | 2026-11-29 16:25 | Sam Darnold / Brock Purdy | 58% | 61% | +2.5 | -3.0 | 47.1 | 46.5 |
+| WAS @ ARI | 2026-11-29 16:25 | Jayden Daniels / Carson Beck | 31% | 23% | -6.5 | +7.5 | 46.9 | 42.5 |
 | LV @ CLE | 2026-11-29 20:20 | Fernando Mendoza / Deshaun Watson | 63% | 66% | +4.4 | -4.5 | 43.8 | 41.5 |
 | CAR @ TB | 2026-11-30 20:15 | Bryce Young / Baker Mayfield | 62% | 58% | +3.9 | -3.0 | 46.4 | 43.5 |
 

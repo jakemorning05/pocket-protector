@@ -1134,8 +1134,9 @@
   "m": 17.5,
   "p": 0.87,
   "pick": "Ole Miss",
-  "line": null,
-  "logged": "Tue Nov 24, 3:18 AM ET"
+  "line": -18.5,
+  "logged": "Tue Nov 24, 3:18 AM ET",
+  "line_logged": "Tue Nov 24, 8:12 AM ET"
  },
  {
   "id": 401862840,
@@ -1146,8 +1147,9 @@
   "m": 4.9,
   "p": 0.625,
   "pick": "UTSA",
-  "line": null,
-  "logged": "Tue Nov 24, 3:18 AM ET"
+  "line": -1.5,
+  "logged": "Tue Nov 24, 3:18 AM ET",
+  "line_logged": "Tue Nov 24, 8:12 AM ET"
  },
  {
   "id": 401866472,
@@ -1158,8 +1160,9 @@
   "m": -7.4,
   "p": 0.317,
   "pick": "Buffalo",
-  "line": null,
-  "logged": "Tue Nov 24, 3:18 AM ET"
+  "line": 7.5,
+  "logged": "Tue Nov 24, 3:18 AM ET",
+  "line_logged": "Tue Nov 24, 8:12 AM ET"
  },
  {
   "id": 401866473,
@@ -1170,8 +1173,9 @@
   "m": -2.7,
   "p": 0.431,
   "pick": "Toledo",
-  "line": null,
-  "logged": "Tue Nov 24, 3:18 AM ET"
+  "line": 3.0,
+  "logged": "Tue Nov 24, 3:18 AM ET",
+  "line_logged": "Tue Nov 24, 8:12 AM ET"
  },
  {
   "id": 401858536,
@@ -1182,8 +1186,9 @@
   "m": 6.3,
   "p": 0.658,
   "pick": "Iowa",
-  "line": null,
-  "logged": "Tue Nov 24, 3:18 AM ET"
+  "line": -4.5,
+  "logged": "Tue Nov 24, 3:18 AM ET",
+  "line_logged": "Tue Nov 24, 8:12 AM ET"
  },
  {
   "id": 401869930,
@@ -1194,7 +1199,80 @@
   "m": 4.6,
   "p": 0.617,
   "pick": "South Alabama",
-  "line": null,
-  "logged": "Tue Nov 24, 3:18 AM ET"
+  "line": -3.5,
+  "logged": "Tue Nov 24, 3:18 AM ET",
+  "line_logged": "Tue Nov 24, 8:12 AM ET"
+ },
+ {
+  "id": 401856759,
+  "wk": 13,
+  "day": "2026-11-27",
+  "a": "Florida",
+  "h": "Florida State",
+  "m": -1.8,
+  "p": 0.453,
+  "pick": "Florida",
+  "line": 6.0,
+  "logged": "Tue Nov 24, 8:12 AM ET"
+ },
+ {
+  "id": 401864549,
+  "wk": 13,
+  "day": "2026-11-27",
+  "a": "North Dakota State",
+  "h": "San Jos\u00e9 State",
+  "m": -7.2,
+  "p": 0.321,
+  "pick": "North Dakota State",
+  "line": 8.5,
+  "logged": "Tue Nov 24, 8:12 AM ET"
+ },
+ {
+  "id": 401862838,
+  "wk": 13,
+  "day": "2026-11-27",
+  "a": "Temple",
+  "h": "Memphis",
+  "m": 19.1,
+  "p": 0.892,
+  "pick": "Memphis",
+  "line": -17.5,
+  "logged": "Tue Nov 24, 8:12 AM ET"
+ },
+ {
+  "id": 401864546,
+  "wk": 13,
+  "day": "2026-11-27",
+  "a": "Air Force",
+  "h": "New Mexico",
+  "m": 11.9,
+  "p": 0.778,
+  "pick": "New Mexico",
+  "line": -6.5,
+  "logged": "Tue Nov 24, 8:12 AM ET"
+ },
+ {
+  "id": 401858544,
+  "wk": 13,
+  "day": "2026-11-27",
+  "a": "Minnesota",
+  "h": "Wisconsin",
+  "m": 11.5,
+  "p": 0.771,
+  "pick": "Wisconsin",
+  "line": -7.5,
+  "logged": "Tue Nov 24, 8:12 AM ET"
+ },
+ {
+  "id": 401856756,
+  "wk": 13,
+  "day": "2026-11-27",
+  "a": "Texas",
+  "h": "Texas A&M",
+  "m": -8.4,
+  "p": 0.295,
+  "pick": "Texas",
+  "line": 11.5,
+  "logged": "Tue Nov 24, 8:12 AM ET"
  }
 ]
