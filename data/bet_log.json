@@ -811,9 +811,9 @@
   "p": 0.598,
   "ev": 0.141,
   "logged": "Nov 10, 3:16 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null
+  "close": -6.0,
+  "clv": -1.5,
+  "result": "win"
  },
  {
   "game": "2026_11_CIN_WAS",
@@ -827,9 +827,9 @@
   "p": 0.535,
   "ev": 0.022,
   "logged": "Nov 10, 3:16 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null
+  "close": 54.5,
+  "clv": 4.0,
+  "result": "loss"
  },
  {
   "game": "2026_11_LV_DEN",

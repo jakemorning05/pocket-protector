@@ -1,5 +1,5 @@
 {
- "asof": "Mon, Nov 23, 12:50 PM ET",
+ "asof": "Tue, Nov 24, 3:30 AM ET",
  "outs": [
   "Josh Jacobs",
   "Puka Nacua",
@@ -25,6 +25,13 @@
   "Kyren Williams": "Limited in practice (turf toe) but expected to play Wednesday vs. Green Bay"
  },
  "items": [
+  {
+   "team": "WAS",
+   "tag": "Result",
+   "text": "Monday night: Washington beat Cincinnati 22-20 on Drew Stevens' fifth field goal as time expired. Jayden Daniels hit rookie Antonio Williams for 22 and 42 yards to set it up after Evan McPherson's 56-yarder put the Bengals ahead with 46 seconds left. Daniels threw for 289 yards; Joe Burrow had 300 and two touchdowns. The Bengals' five-game win streak is over.",
+   "src": "ESPN and Yahoo Sports, Nov 23",
+   "url": "https://www.espn.com/nfl/recap/_/gameId/401873078"
+  },
   {
    "team": "LA",
    "tag": "Injury",

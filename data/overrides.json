@@ -450,6 +450,12 @@
       "away": 10,
       "home": 35,
       "source": "Sportradar final, Nov 22"
+    },
+    {
+      "game": "2026_11_CIN_WAS",
+      "away": 20,
+      "home": 22,
+      "source": "Sportradar final, Nov 23"
     }
   ]
 }
