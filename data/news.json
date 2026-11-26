@@ -21,13 +21,14 @@
   "Chig Okonkwo": "Back injury Thursday; returned in the second half",
   "Travis Etienne": "Activated from IR; first game since Week 3",
   "Kyle McCord": "Starts at QB through Week 13 while Malik Willis is on IR",
-  "Derrick Henry": "Checked for a concussion late in Week 11; said he felt fine",
+  "Derrick Henry": "Back in the concussion protocol after limited practice Wednesday; Jesse Minter expects him to play Sunday at Houston",
   "Brock Purdy": "Missed Wednesday practice (ankle)",
   "Sam Darnold": "Back at practice; on track to start Week 12",
   "Carson Beck": "No practice Wednesday (back)",
   "Josh Johnson": "Expected to start again in Week 12 with Beck hurt",
   "Dalton Kincaid": "Questionable (thumb, ankle); limited all week",
-  "Emmett Johnson": "Starts again with Walker out; 100+ rushing yards in each of the last two games"
+  "Emmett Johnson": "Starts again with Walker out; 100+ rushing yards in each of the last two games",
+  "Mason Rudolph": "Starts for Pittsburgh after the Steelers released Aaron Rodgers"
  },
  "items": [
   {
@@ -36,6 +37,20 @@
    "text": "Wednesday night: the Rams beat the Packers 26-13. Blake Corum ran for a career-high 184 yards, and Jordan Love threw two interceptions as Green Bay was shut out in the second half. The model had LA at 66%.",
    "src": "ESPN and Yahoo Sports, Nov 25",
    "url": "https://www.espn.com/nfl/recap?gameId=401873079"
+  },
+  {
+   "team": "PIT",
+   "tag": "QB",
+   "text": "The Steelers benched and then released Aaron Rodgers. Mason Rudolph starts Friday against Denver, and the model now rates Pittsburgh with Rudolph for the rest of the season.",
+   "src": "NFL.com and AP, Nov 25",
+   "url": "https://www.nfl.com/news/steelers-release-aaron-rodgers"
+  },
+  {
+   "team": "BAL",
+   "tag": "Injury",
+   "text": "Derrick Henry is back in the concussion protocol after a couple of small symptoms, but coach Jesse Minter expects him to play Sunday at Houston. The model assumes he plays.",
+   "src": "AP via Fox Sports and Baltimore Sun, Nov 25",
+   "url": "https://www.foxsports.com/articles/nfl/ravens-put-derrick-henry-back-in-concussion-protocol"
   },
   {
    "team": "IND",
@@ -713,12 +728,36 @@
    "snap": 0.9
   },
   {
+   "team": "BUF",
+   "name": "O'Cyrus Torrence",
+   "pos": "G",
+   "status": "Questionable",
+   "injury": "Ankle",
+   "snap": 0.98
+  },
+  {
+   "team": "BUF",
+   "name": "Christian Benford",
+   "pos": "CB",
+   "status": "Questionable",
+   "injury": "Groin",
+   "snap": 0.74
+  },
+  {
+   "team": "BUF",
+   "name": "Dalton Kincaid",
+   "pos": "TE",
+   "status": "Questionable",
+   "injury": "Thumb",
+   "snap": 0.51
+  },
+  {
    "team": "CHI",
-   "name": "Kyler Gordon",
-   "pos": "DB",
-   "status": "Out",
-   "injury": "OUT for Thanksgiving (late news)",
-   "snap": 0.76
+   "name": "Tyrique Stevenson",
+   "pos": "CB",
+   "status": "Questionable",
+   "injury": "Groin",
+   "snap": 0.8
   },
   {
    "team": "CHI",
@@ -729,20 +768,28 @@
    "snap": 0.74
   },
   {
+   "team": "CHI",
+   "name": "Kyler Gordon",
+   "pos": "CB",
+   "status": "Out",
+   "injury": "Shoulder",
+   "snap": 0.65
+  },
+  {
+   "team": "DAL",
+   "name": "Jalen Thompson",
+   "pos": "S",
+   "status": "Questionable",
+   "injury": "Hamstring",
+   "snap": 0.81
+  },
+  {
    "team": "DAL",
    "name": "Tyler Booker",
    "pos": "G",
    "status": "Out",
-   "injury": "OUT for Thanksgiving (late news)",
-   "snap": 1.0
-  },
-  {
-   "team": "DAL",
-   "name": "P.J. Locke",
-   "pos": "S",
-   "status": "Out",
-   "injury": "OUT for Thanksgiving (late news)",
-   "snap": 0.84
+   "injury": "Ankle",
+   "snap": 0.8
   },
   {
    "team": "DAL",
@@ -751,6 +798,38 @@
    "status": "Out",
    "injury": "OUT for Thanksgiving (late news)",
    "snap": 0.56
+  },
+  {
+   "team": "DAL",
+   "name": "P.J. Locke",
+   "pos": "S",
+   "status": "Out",
+   "injury": "Concussion",
+   "snap": 0.52
+  },
+  {
+   "team": "DEN",
+   "name": "Taylor Rapp",
+   "pos": "S",
+   "status": "Out",
+   "injury": "Quadricep",
+   "snap": 0.66
+  },
+  {
+   "team": "DET",
+   "name": "Chuck Clark",
+   "pos": "S",
+   "status": "Questionable",
+   "injury": "Hamstring",
+   "snap": 0.99
+  },
+  {
+   "team": "DET",
+   "name": "DJ Wonnum",
+   "pos": "DE",
+   "status": "Questionable",
+   "injury": "Back",
+   "snap": 0.59
   },
   {
    "team": "DET",
@@ -810,19 +889,27 @@
   },
   {
    "team": "KC",
-   "name": "Jaylon Moore",
-   "pos": "OL",
-   "status": "Out",
-   "injury": "OUT for Thanksgiving (late news)",
-   "snap": 1.0
-  },
-  {
-   "team": "KC",
    "name": "Kenneth Walker III",
    "pos": "RB",
    "status": "Out",
-   "injury": "OUT for Thanksgiving (late news)",
-   "snap": 0.81
+   "injury": "Groin",
+   "snap": 0.73
+  },
+  {
+   "team": "KC",
+   "name": "Jaylon Moore",
+   "pos": "T",
+   "status": "Out",
+   "injury": "Ankle",
+   "snap": 0.72
+  },
+  {
+   "team": "KC",
+   "name": "Noah Gray",
+   "pos": "TE",
+   "status": "Questionable",
+   "injury": "Rib",
+   "snap": 0.71
   },
   {
    "team": "KC",
@@ -903,6 +990,14 @@
    "status": "Out",
    "injury": "Ankle/hip (late news)",
    "snap": 0.86
+  },
+  {
+   "team": "PIT",
+   "name": "Aaron Rodgers",
+   "pos": "QB",
+   "status": "Out",
+   "injury": "Released by the Steelers (late news)",
+   "snap": 1.0
   },
   {
    "team": "SF",

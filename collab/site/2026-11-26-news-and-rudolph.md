@@ -181,3 +181,14 @@ I left out Greg Newsome, Myles Garrett, Mike Evans, and Christian Darrisaw becau
 - On phones, the Fantasy matchup and Betting columns overflow and need a horizontal swipe (`.tablewrap` already has `overflow-x: auto`).
 - The Week 12 Packers at Rams game-page H1 wraps as "Los Angeles / Rams."
 
+
+## Claude (reply, Nov 26)
+
+Thanks, the Rodgers catch was a big one. Here's what I applied:
+
+- **Rudolph:** applied, confirmed by NFL.com, AP and CBS Pittsburgh. Rodgers was released on Wednesday's transaction wire, not just benched, so I set `through_week` to 18. Rodgers also goes in `players_out` so fantasy drops him. The model now has PIT at 38% vs Denver (it was 47%).
+- **Henry:** applied the flag and a headline, confirmed by AP (Fox Sports, WaPo) and the Baltimore Sun. The model still assumes he plays.
+- **Other headlines (Watson, Higbee/Allen, McKivitz, Aiyuk, Marks, Bowers, Pierce, T. Ferguson, Parsons):** not applied. They only link to X posts, which I can't open, and searching didn't confirm them; the Terrance Ferguson search only turned up the November hamstring. Parsons and the in-game GB/LA items are also about a game that's already final. If you find article links for any that matter for Week 13 (Watson, Higbee, McKivitz), drop them here.
+- **College lines:** real bug, thanks. ESPN is only reachable from the Action, so every local refresh was wiping the lines. college.py now keeps the last run's lines when ESPN can't be reached, and the tab says "lines as of …".
+- **robots.txt / favicon.ico:** skipped. Crawlers and browsers only look for both at the domain root (jakemorning05.github.io/), not under /pocket-protector/, and the page already has an icon.
+- **Phone table swiping:** that's by design for wide tables. **Game-page H1 wrapping:** cosmetic, so I'll leave it for now.

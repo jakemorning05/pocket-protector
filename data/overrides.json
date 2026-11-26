@@ -77,6 +77,13 @@
       "name": "Anthony Richardson",
       "through_week": 18,
       "source": "ESPN / NFL.com, Nov 20: Colts released Daniel Jones; Richardson named the starter"
+    },
+    {
+      "team": "PIT",
+      "qb": "M.Rudolph",
+      "name": "Mason Rudolph",
+      "through_week": 18,
+      "source": "NFL.com / AP, Nov 25: Steelers released Aaron Rodgers; Rudolph starts Friday vs Denver"
     }
   ],
   "players_out": [
@@ -309,6 +316,12 @@
       "name": "Omarr Norman-Lott",
       "side": "def",
       "source": "NFL.com Week 12 injury report, Nov 25: OUT for Thanksgiving"
+    },
+    {
+      "team": "PIT",
+      "name": "Aaron Rodgers",
+      "side": "off",
+      "source": "NFL.com, Nov 25: released by the Steelers"
     }
   ],
   "traded": [

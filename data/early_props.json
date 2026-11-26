@@ -1,6 +1,6 @@
 {
  "week": 12,
- "asof": "Thu, Nov 26, 12:49 AM ET",
+ "asof": "Thu, Nov 26, 2:12 AM ET",
  "games": [
   {
    "id": "2026_12_CHI_DET",
@@ -15,7 +15,7 @@
      "pos": "QB",
      "stat": "pass_yds",
      "line": 269.5,
-     "proj": 237.9,
+     "proj": 238.0,
      "p_over": 0.342,
      "conf": 0.579,
      "side": "Under",
@@ -197,7 +197,7 @@
      "player": "Max Hurleman",
      "team": "PIT",
      "pos": "WR",
-     "p": 0.382
+     "p": 0.313
     }
    ]
   },
@@ -354,7 +354,7 @@
      "pos": "QB",
      "stat": "pass_yds",
      "line": 208.5,
-     "proj": 237.1,
+     "proj": 237.2,
      "p_over": 0.633,
      "conf": 0.566,
      "side": "Over",
@@ -484,7 +484,7 @@
      "pos": "QB",
      "stat": "pass_yds",
      "line": 243.5,
-     "proj": 293.5,
+     "proj": 293.6,
      "p_over": 0.612,
      "conf": 0.556,
      "side": "Over",

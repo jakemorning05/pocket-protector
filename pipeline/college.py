@@ -157,6 +157,17 @@ def main():
     wk = int(future.wk.min()) if len(future) else (int(upcoming.wk.min()) if len(upcoming) else None)
     post = bool(wk and wk > 20)
     lines = espn_lines(wk - 20 if post else wk, post) if wk else {}
+    lines_from = 'ESPN'
+    if wk and not lines:
+        # ESPN is only reachable from the GitHub Action; on other machines keep the lines the last run saved, so a local
+        # refresh doesn't wipe them off the site
+        try:
+            prev = json.load(open(f'{D}/college.json'))
+            lines = {g['id']: {'line': g['line'], 'total': g.get('mk_total'), 'book': g.get('book')} for g in prev.get('games', []) if g.get('line') is not None}
+            lines_from = prev.get('lines_asof') or prev.get('asof')
+            if lines: print(f'college lines: kept {len(lines)} from the last run ({lines_from})')
+        except (FileNotFoundError, ValueError, KeyError):
+            pass
     games = []
     for g in upcoming[upcoming.wk == wk].sort_values('start_date').itertuples() if wk else []:
         m, p = predict(r, g, FCS_PRIOR * CARRY)
@@ -225,7 +236,7 @@ def main():
            'live': {'w': sum(x['result'] == 'win' for x in graded), 'l': sum(x['result'] == 'loss' for x in graded),
                     'ats_w': sum(x['ats'] == 'win' for x in ats), 'ats_l': sum(x['ats'] == 'loss' for x in ats),
                     'pending': sum(x.get('result') is None for x in log)},
-           'recent': [x for x in log if x.get('result')][-40:], 'backtest': bt, 'lines': bool(lines)}
+           'recent': [x for x in log if x.get('result')][-40:], 'backtest': bt, 'lines': bool(lines), 'lines_asof': (stamp if lines_from == 'ESPN' else lines_from) if lines else None}
     json.dump(out, open(os.path.join(D, 'college.json'), 'w'), separators=(',', ':'))
     tot = sum(v[0] + v[1] for v in by_wk.values()); ok = sum(v[0] for v in by_wk.values())
     print(f'college: week {out["week"]}, {len(games)} games, {len(rank)} FBS teams; 2026 rebuilt {ok}-{tot - ok}; log {len(log)} ({out["live"]})')
