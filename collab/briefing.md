@@ -18,9 +18,9 @@
 | NYJ @ MIA | 2026-11-29 13:00 | Geno Smith / Kyle McCord | 30% | 34% | -6.8 | +4.5 | 44.0 | 40.5 |
 | TEN @ JAX | 2026-11-29 13:00 | Cam Ward / Trevor Lawrence | 89% | 88% | +15.6 | -14.5 | 47.0 | 49.5 |
 | NE @ LAC | 2026-11-29 16:05 | Tommy DeVito / Justin Herbert | 62% | 48% | +3.9 | +1.5 | 47.5 | 35.5 |
-| SEA @ SF | 2026-11-29 16:25 | Sam Darnold / Brock Purdy | 58% | 57% | +2.5 | -2.5 | 47.1 | 44.5 |
+| SEA @ SF | 2026-11-29 16:25 | Sam Darnold / Brock Purdy | 56% | 57% | +1.9 | -2.5 | 47.1 | 44.5 |
 | WAS @ ARI | 2026-11-29 16:25 | Jayden Daniels / Josh Johnson | 34% | 27% | -5.2 | +7.0 | 46.9 | 41.5 |
-| LV @ CLE | 2026-11-29 20:20 | Fernando Mendoza / Deshaun Watson | 63% | 68% | +4.4 | -4.5 | 43.8 | 39.5 |
+| LV @ CLE | 2026-11-29 20:20 | Fernando Mendoza / Deshaun Watson | 63% | 68% | +4.4 | -4.5 | 43.8 | 40.5 |
 | CAR @ TB | 2026-11-30 20:15 | Bryce Young / Baker Mayfield | 62% | 59% | +3.9 | -3.0 | 46.4 | 43.5 |
 
 ## Logged Kalshi props for those games (model chance of YES vs. price)
@@ -50,21 +50,25 @@
 - Dalton Kincaid: Questionable (thumb, ankle); limited all week
 - Emmett Johnson: Starts again with Walker out; 100+ rushing yards in each of the last two games
 - Mason Rudolph: Starts for Pittsburgh after the Steelers released Aaron Rodgers
+- Christian Watson: Concussion in Week 12; 11 days until Week 13 at New Orleans
+- Tyler Higbee: Chest injury in Week 12; no Week 13 status yet
+- Woody Marks: Full practice Wednesday; still has to clear the concussion protocol
+- Brock Bowers: Limited Wednesday (ankle); Raiders optimistic he plays Sunday
 
 ## Recent headlines
 
 - LA: Wednesday night: the Rams beat the Packers 26-13. Blake Corum ran for a career-high 184 yards, and Jordan Love threw two interceptions as Green Bay was shut out in the second half. The model had LA at 66%. (ESPN and Yahoo Sports, Nov 25)
 - PIT: The Steelers benched and then released Aaron Rodgers. Mason Rudolph starts Friday against Denver, and the model now rates Pittsburgh with Rudolph for the rest of the season. (NFL.com and AP, Nov 25)
 - BAL: Derrick Henry is back in the concussion protocol after a couple of small symptoms, but coach Jesse Minter expects him to play Sunday at Houston. The model assumes he plays. (AP via Fox Sports and Baltimore Sun, Nov 25)
+- GB: Christian Watson was ruled out at the start of the second half Wednesday night with a concussion after a hit by Rams safety Kamren Kinchens, who was ejected. Green Bay doesn't play again until Week 13 at New Orleans, 11 days later. (NFL.com and Yahoo Sports, Nov 25)
+- LA: Rams TEs Tyler Higbee (chest) and Davis Allen (ankle) both left Wednesday night's win and didn't return, leaving Colby Parkinson and Max Klare as the healthy tight ends. No Week 13 status yet. (CBS Sports, Nov 25)
+- SF: The 49ers put RT Colton McKivitz on injured reserve. He fractured and dislocated his ankle in Week 11 and is expected to miss the rest of the season; Vederian Lowe is expected to start at right tackle. His snaps now count against San Francisco in the model. (CBS Sports and NBC Sports, Nov 25)
+- HOU: Woody Marks practiced fully Wednesday and is trending toward a return Sunday against the Ravens, but he still has to clear the concussion protocol. Danielle Hunter (hamstring) didn't practice Wednesday. (CBS Sports and the NFL injury report, Nov 25)
+- LV: Brock Bowers (ankle) was limited again Wednesday, but the Raiders are optimistic he plays Sunday night at Cleveland. He may need a full practice by Friday to be cleared. (CBS Sports, Nov 25)
+- WAS: Brandon Aiyuk is signing with the Commanders' practice squad, reuniting with his Arizona State quarterback Jayden Daniels. He hasn't played since 2024. (ESPN, Nov 25)
+- IND: Alec Pierce said his Week 2 heel injury was a partially torn Achilles, and he still hopes to return this season. (NBC Sports, Nov 25)
+- LA: Terrance Ferguson will stay on injured reserve and have season-ending ankle surgery after the ankle didn't heal as hoped, Sean McVay said. (Rams.com and NBC Sports, Nov 23)
 - IND: The Colts released Daniel Jones the day after a 26-3 loss at Houston and named Anthony Richardson Sr. the starter for the rest of the season, beginning this week against the Giants. The model now rates Indianapolis with Richardson. (ESPN and NFL.com, Nov 20)
-- KC: Kenneth Walker III (groin) is out Thursday night at Buffalo, his third straight missed game. Rookie Emmett Johnson, who has run for 100 yards in each of the last two games, starts again. Bills TE Dalton Kincaid is questionable after limited practices, so he's back in the projections. (NBC Sports and Yahoo Sports, Nov 25)
-- DAL: Jake Ferguson (knee/ankle) is out again on Thanksgiving against Philadelphia, along with guard Tyler Booker. Eagles CB Quinyon Mitchell will play. (Bleeding Green Nation, Nov 25)
-- SEA: Sam Darnold practiced Wednesday after missing two games and is on track to start Sunday at San Francisco. The model has him back. Brock Purdy missed Wednesday's practice with an ankle injury he played through against Minnesota. (Kicks and Grips, Nov 25)
-- ARI: Carson Beck (back) didn't practice Wednesday, so the model sticks with Josh Johnson for Sunday against Washington until Arizona says otherwise. (Kicks and Grips, Nov 25)
-- WAS: Monday night: Washington beat Cincinnati 22-20 on Drew Stevens' fifth field goal as time expired. Jayden Daniels hit rookie Antonio Williams for 22 and 42 yards to set it up after Evan McPherson's 56-yarder put the Bengals ahead with 46 seconds left. Daniels threw for 289 yards; Joe Burrow had 300 and two touchdowns. The Bengals' five-game win streak is over. (ESPN and Yahoo Sports, Nov 23)
-- LAC: Justin Herbert entered the concussion protocol after the Chargers' 27-24 loss to the Jets, their ninth in ten games. If he doesn't clear it before Sunday night against New England, DJ Uiagalelei would start. The model still has Herbert for now. (Field Level Media via SRN News, Nov 23)
-- NYG: Sunday's upsets: the Giants beat Jacksonville 23-18, the Jets won 27-24 in Los Angeles, and the Eagles edged Pittsburgh 19-16. The model and the betting market both had the losing side in all three. The model went 8-3 on Sunday (9-3 for the week so far, with Bengals-Commanders on Monday night). (Sportradar finals, Nov 22)
-- DAL: Dallas scored touchdowns on its first six drives in a 51-30 win over Tennessee. Dak Prescott threw for 325 yards and four touchdowns, and CeeDee Lamb (11 for 132) and George Pickens (7 for 102) both topped 100 yards. (ESPN and Yardbarker, Nov 22)
 
 Known model weak spots: backups who inherit a starter's carries are underprojected; running back props ignore game
 script (trailing teams run less); very low receiving lines (10-15 yards) are overrated for YES; no weather inputs.

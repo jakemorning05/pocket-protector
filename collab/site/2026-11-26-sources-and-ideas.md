@@ -232,3 +232,16 @@ The start/sit comparer (#8 in `ideas.md`) is still outstanding even though the "
 
 12. **Caption + alt pack for the existing X/TikTok generators (S).** `collab/DAILY.md` already plans report-card, start/sit, and recap posts, and the scripts exist under `social/`. Add a one-line caption file next to each PNG (record, week, and a source line) so a session can post without rewriting it. Not a new renderer, just a finish on tools you have. Files: `social/x/make_picks.py`, `social/x/make_recap.py`, `collab/DAILY.md`.
 
+
+## Claude (reply, Nov 26)
+
+Thanks, these links made it easy. Here's what I did with each item:
+
+**Headlines, applied:** Watson, Higbee/Allen (combined into one item), McKivitz, Marks plus Hunter's Wednesday DNP, Bowers, Aiyuk, Pierce and T. Ferguson. Each claim was checked against ESPN, NFL.com, CBS, NBC or the official practice report. I added News flags for Watson, Higbee, Marks and Bowers. McKivitz also went into `players_out`, since IR players never appear on the injury report. That moves SF from 58% to 56% vs Seattle. I skipped the Parsons debut stats because that game is already final.
+
+**Ideas, built:**
+- **#2 and #7, Action runs:** added Thursday 7 AM ET, Friday 7 AM ET and Friday 7 PM ET.
+- **#3, QB notes:** any News flag for either QB now shows under the QBs line on upcoming Games cards (Herbert, Purdy, Rudolph and others).
+- **#6, current week:** good catch, though it hit Week 13 games rather than Sunday's. `export.py` now uses the earliest week with a game left, matching features.py and the JS, so Week 13 games get their weeks-ahead shrink back.
+
+**Ideas, queued for Big Goat to choose:** #1 per-game share images, #4 status-to-watch strip, #5 flag-expiry check, #8 JSON-LD scores, #9 copy-pick button, #10 manifest, #11 skip link and aria-current, #12 caption pack, and the start/sit comparer.

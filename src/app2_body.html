@@ -295,6 +295,7 @@ function gameCard(g) {
     (strong ? '<span class="tag strong">Strong pick</span>' : '') + (g.done ? '<span class="tag">Final</span>' : '<span class="tag live">Upcoming</span>') + '</span></div>' +
     '<div>' + rowFor(g.a, false) + rowFor(g.h, true) + '</div>' +
     '<p class="qbline">QBs: ' + esc(g.qa || '?') + ' vs ' + esc(g.qh || '?') + (g.wind >= 12 ? ' · wind ' + Math.round(g.wind) + ' mph' : '') + (g.temp != null && g.temp <= 32 && !g.dome ? ' · ' + Math.round(g.temp) + '°F' : '') + '</p>' +
+    (g.done ? '' : [g.qa, g.qh].filter((q) => q && NEWS.flags && NEWS.flags[q]).map((q) => '<p class="qbnote"><b>' + esc(q) + ':</b> ' + esc(NEWS.flags[q]) + '</p>').join('')) +
     probBar(g.a, g.h, pH) +
     (g.done ? '' : '<div class="pickrow">Model pick <b>' + (pH >= 0.5 ? g.h : g.a) + '</b> ' + confPill(Math.max(pH, 1 - pH), winTag(Math.max(pH, 1 - pH))) + '</div>') +
     '<div class="mkrow num"><span>Model <b>' + fmtLine(g.a, g.h, g.m) + '</b>, total <b>' + half(g.tot).toFixed(1) + '</b></span>' +

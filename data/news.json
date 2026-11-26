@@ -28,7 +28,11 @@
   "Josh Johnson": "Expected to start again in Week 12 with Beck hurt",
   "Dalton Kincaid": "Questionable (thumb, ankle); limited all week",
   "Emmett Johnson": "Starts again with Walker out; 100+ rushing yards in each of the last two games",
-  "Mason Rudolph": "Starts for Pittsburgh after the Steelers released Aaron Rodgers"
+  "Mason Rudolph": "Starts for Pittsburgh after the Steelers released Aaron Rodgers",
+  "Christian Watson": "Concussion in Week 12; 11 days until Week 13 at New Orleans",
+  "Tyler Higbee": "Chest injury in Week 12; no Week 13 status yet",
+  "Woody Marks": "Full practice Wednesday; still has to clear the concussion protocol",
+  "Brock Bowers": "Limited Wednesday (ankle); Raiders optimistic he plays Sunday"
  },
  "items": [
   {
@@ -51,6 +55,62 @@
    "text": "Derrick Henry is back in the concussion protocol after a couple of small symptoms, but coach Jesse Minter expects him to play Sunday at Houston. The model assumes he plays.",
    "src": "AP via Fox Sports and Baltimore Sun, Nov 25",
    "url": "https://www.foxsports.com/articles/nfl/ravens-put-derrick-henry-back-in-concussion-protocol"
+  },
+  {
+   "team": "GB",
+   "tag": "Injury",
+   "text": "Christian Watson was ruled out at the start of the second half Wednesday night with a concussion after a hit by Rams safety Kamren Kinchens, who was ejected. Green Bay doesn't play again until Week 13 at New Orleans, 11 days later.",
+   "src": "NFL.com and Yahoo Sports, Nov 25",
+   "url": "https://www.nfl.com/news/packers-wr-christian-watson-being-evaluated-for-concussion-after-hit-by-rams-kamren-kinchens-who-was-ejected"
+  },
+  {
+   "team": "LA",
+   "tag": "Injury",
+   "text": "Rams TEs Tyler Higbee (chest) and Davis Allen (ankle) both left Wednesday night's win and didn't return, leaving Colby Parkinson and Max Klare as the healthy tight ends. No Week 13 status yet.",
+   "src": "CBS Sports, Nov 25",
+   "url": "https://www.cbssports.com/fantasy/football/news/rams-tyler-higbee-leaves-game-with-chest-injury/"
+  },
+  {
+   "team": "SF",
+   "tag": "Injury",
+   "text": "The 49ers put RT Colton McKivitz on injured reserve. He fractured and dislocated his ankle in Week 11 and is expected to miss the rest of the season; Vederian Lowe is expected to start at right tackle. His snaps now count against San Francisco in the model.",
+   "src": "CBS Sports and NBC Sports, Nov 25",
+   "url": "https://www.cbssports.com/fantasy/football/news/49ers-colton-mckivitz-placed-on-injured-reserve/"
+  },
+  {
+   "team": "HOU",
+   "tag": "Injury",
+   "text": "Woody Marks practiced fully Wednesday and is trending toward a return Sunday against the Ravens, but he still has to clear the concussion protocol. Danielle Hunter (hamstring) didn't practice Wednesday.",
+   "src": "CBS Sports and the NFL injury report, Nov 25",
+   "url": "https://www.cbssports.com/fantasy/football/news/texans-woody-marks-logs-full-practice-wednesday/"
+  },
+  {
+   "team": "LV",
+   "tag": "Injury",
+   "text": "Brock Bowers (ankle) was limited again Wednesday, but the Raiders are optimistic he plays Sunday night at Cleveland. He may need a full practice by Friday to be cleared.",
+   "src": "CBS Sports, Nov 25",
+   "url": "https://www.cbssports.com/fantasy/football/news/raiders-brock-bowers-remains-limited-but-expected-back-sunday/"
+  },
+  {
+   "team": "WAS",
+   "tag": "Trade",
+   "text": "Brandon Aiyuk is signing with the Commanders' practice squad, reuniting with his Arizona State quarterback Jayden Daniels. He hasn't played since 2024.",
+   "src": "ESPN, Nov 25",
+   "url": "https://www.espn.com/nfl/story/_/id/50595281/brandon-aiyuk-finishes-visit-commanders"
+  },
+  {
+   "team": "IND",
+   "tag": "Injury",
+   "text": "Alec Pierce said his Week 2 heel injury was a partially torn Achilles, and he still hopes to return this season.",
+   "src": "NBC Sports, Nov 25",
+   "url": "https://www.nbcsports.com/fantasy/football/player-news/2026-11-25/commanders-signing-aiyuk-to-their-practice-squad"
+  },
+  {
+   "team": "LA",
+   "tag": "Injury",
+   "text": "Terrance Ferguson will stay on injured reserve and have season-ending ankle surgery after the ankle didn't heal as hoped, Sean McVay said.",
+   "src": "Rams.com and NBC Sports, Nov 23",
+   "url": "https://www.therams.com/news/mcvay-rams-tight-end-terrance-ferguson-to-remain-on-injured-reserve-for-rest-of-2026-season"
   },
   {
    "team": "IND",
@@ -997,6 +1057,14 @@
    "pos": "QB",
    "status": "Out",
    "injury": "Released by the Steelers (late news)",
+   "snap": 1.0
+  },
+  {
+   "team": "SF",
+   "name": "Colton McKivitz",
+   "pos": "OL",
+   "status": "Out",
+   "injury": "IR (late news)",
    "snap": 1.0
   },
   {

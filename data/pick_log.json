@@ -863,7 +863,7 @@
 "mk_spread": -1.5,
 "mk_total": 55.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-11-26T13:00:00-05:00"
 },
 "2026_12_PHI_DAL": {
@@ -889,7 +889,7 @@
 "mk_spread": 8.5,
 "mk_total": 48.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-11-26T16:30:00-05:00"
 },
 "2026_12_KC_BUF": {
@@ -915,7 +915,7 @@
 "mk_spread": 3.0,
 "mk_total": 45.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-11-26T20:20:00-05:00"
 },
 "2026_12_DEN_PIT": {
@@ -941,7 +941,7 @@
 "mk_spread": -3.5,
 "mk_total": 36.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-11-27T15:00:00-05:00"
 },
 "2026_12_ATL_MIN": {
@@ -967,7 +967,7 @@
 "mk_spread": 7.0,
 "mk_total": 41.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-11-29T13:00:00-05:00"
 },
 "2026_12_BAL_HOU": {
@@ -993,7 +993,7 @@
 "mk_spread": 6.5,
 "mk_total": 47.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-11-29T13:00:00-05:00"
 },
 "2026_12_LV_CLE": {
@@ -1017,9 +1017,9 @@
 },
 "pick": "CLE",
 "mk_spread": 4.5,
-"mk_total": 39.5,
+"mk_total": 40.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-11-29T20:20:00-05:00"
 },
 "2026_12_NO_CIN": {
@@ -1045,7 +1045,7 @@
 "mk_spread": 10.0,
 "mk_total": 49.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-11-29T13:00:00-05:00"
 },
 "2026_12_NYG_IND": {
@@ -1071,7 +1071,7 @@
 "mk_spread": -6.0,
 "mk_total": 41.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-11-29T13:00:00-05:00"
 },
 "2026_12_NYJ_MIA": {
@@ -1097,7 +1097,7 @@
 "mk_spread": -4.5,
 "mk_total": 40.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-11-29T13:00:00-05:00"
 },
 "2026_12_TEN_JAX": {
@@ -1123,15 +1123,15 @@
 "mk_spread": 14.5,
 "mk_total": 49.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-11-29T13:00:00-05:00"
 },
 "2026_12_SEA_SF": {
 "wk": 12,
 "a": "SEA",
 "h": "SF",
-"p": 0.576,
-"m": 2.47,
+"p": 0.5593,
+"m": 1.92,
 "tot": 47.1,
 "c": {
 "Home field": 2.63,
@@ -1142,14 +1142,14 @@
 "Special teams": -1.14,
 "Rest & travel": -0.23,
 "Division game": -0.87,
-"Injuries": -0.32,
+"Injuries": -0.87,
 "Past betting lines": -0.37
 },
 "pick": "SF",
 "mk_spread": 2.5,
 "mk_total": 44.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-11-29T16:25:00-05:00"
 },
 "2026_12_WAS_ARI": {
@@ -1175,7 +1175,7 @@
 "mk_spread": -7.0,
 "mk_total": 41.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-11-29T16:25:00-05:00"
 },
 "2026_12_NE_LAC": {
@@ -1201,7 +1201,7 @@
 "mk_spread": -1.5,
 "mk_total": 35.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-11-29T16:05:00-05:00"
 },
 "2026_12_CAR_TB": {
@@ -1227,14 +1227,14 @@
 "mk_spread": 3.0,
 "mk_total": 43.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-11-30T20:15:00-05:00"
 },
 "2026_13_KC_LA": {
 "wk": 13,
 "a": "KC",
 "h": "LA",
-"p": 0.4815,
+"p": 0.4827,
 "m": -0.6,
 "tot": 48.3,
 "c": {
@@ -1253,14 +1253,14 @@
 "mk_spread": 1.5,
 "mk_total": 45.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-03T20:15:00-05:00"
 },
 "2026_13_CIN_CLE": {
 "wk": 13,
 "a": "CIN",
 "h": "CLE",
-"p": 0.3513,
+"p": 0.3601,
 "m": -4.92,
 "tot": 48.0,
 "c": {
@@ -1279,14 +1279,14 @@
 "mk_spread": -6.0,
 "mk_total": 46.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-06T13:00:00-05:00"
 },
 "2026_13_DET_ATL": {
 "wk": 13,
 "a": "DET",
 "h": "ATL",
-"p": 0.3532,
+"p": 0.3619,
 "m": -4.85,
 "tot": 51.6,
 "c": {
@@ -1305,14 +1305,14 @@
 "mk_spread": -3.5,
 "mk_total": 49.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-06T13:00:00-05:00"
 },
 "2026_13_GB_NO": {
 "wk": 13,
 "a": "GB",
 "h": "NO",
-"p": 0.4151,
+"p": 0.4203,
 "m": -2.76,
 "tot": 46.9,
 "c": {
@@ -1331,14 +1331,14 @@
 "mk_spread": -4.5,
 "mk_total": 46.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-06T13:00:00-05:00"
 },
 "2026_13_JAX_CHI": {
 "wk": 13,
 "a": "JAX",
 "h": "CHI",
-"p": 0.5069,
+"p": 0.5065,
 "m": 0.22,
 "tot": 50.1,
 "c": {
@@ -1357,14 +1357,14 @@
 "mk_spread": 3.0,
 "mk_total": 49.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-06T13:00:00-05:00"
 },
 "2026_13_LAC_TB": {
 "wk": 13,
 "a": "LAC",
 "h": "TB",
-"p": 0.6378,
+"p": 0.6296,
 "m": 4.54,
 "tot": 44.5,
 "c": {
@@ -1383,14 +1383,14 @@
 "mk_spread": 5.5,
 "mk_total": 40.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-06T13:00:00-05:00"
 },
 "2026_13_SF_NYG": {
 "wk": 13,
 "a": "SF",
 "h": "NYG",
-"p": 0.2169,
+"p": 0.2314,
 "m": -10.08,
 "tot": 49.2,
 "c": {
@@ -1409,14 +1409,14 @@
 "mk_spread": -6.5,
 "mk_total": 47.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-06T13:00:00-05:00"
 },
 "2026_13_WAS_TEN": {
 "wk": 13,
 "a": "WAS",
 "h": "TEN",
-"p": 0.3465,
+"p": 0.3555,
 "m": -5.09,
 "tot": 47.4,
 "c": {
@@ -1435,14 +1435,14 @@
 "mk_spread": -4.5,
 "mk_total": 47.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-06T13:00:00-05:00"
 },
 "2026_13_MIA_DEN": {
 "wk": 13,
 "a": "MIA",
 "h": "DEN",
-"p": 0.906,
+"p": 0.8916,
 "m": 16.96,
 "tot": 42.6,
 "c": {
@@ -1461,14 +1461,14 @@
 "mk_spread": 14.5,
 "mk_total": 39.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-06T16:05:00-05:00"
 },
 "2026_13_PHI_ARI": {
 "wk": 13,
 "a": "PHI",
 "h": "ARI",
-"p": 0.4596,
+"p": 0.4621,
 "m": -1.31,
 "tot": 41.7,
 "c": {
@@ -1487,14 +1487,14 @@
 "mk_spread": -3.0,
 "mk_total": 36.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-06T16:05:00-05:00"
 },
 "2026_13_BUF_NE": {
 "wk": 13,
 "a": "BUF",
 "h": "NE",
-"p": 0.3883,
+"p": 0.395,
 "m": -3.66,
 "tot": 53.0,
 "c": {
@@ -1513,14 +1513,14 @@
 "mk_spread": -12.5,
 "mk_total": 44.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-06T16:25:00-05:00"
 },
 "2026_13_CAR_MIN": {
 "wk": 13,
 "a": "CAR",
 "h": "MIN",
-"p": 0.6694,
+"p": 0.6595,
 "m": 5.65,
 "tot": 44.3,
 "c": {
@@ -1539,14 +1539,14 @@
 "mk_spread": 5.5,
 "mk_total": 43.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-06T16:25:00-05:00"
 },
 "2026_13_HOU_PIT": {
 "wk": 13,
 "a": "HOU",
 "h": "PIT",
-"p": 0.4172,
+"p": 0.4223,
 "m": -2.69,
 "tot": 43.0,
 "c": {
@@ -1565,14 +1565,14 @@
 "mk_spread": -4.5,
 "mk_total": 41.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-06T20:20:00-05:00"
 },
 "2026_13_DAL_SEA": {
 "wk": 13,
 "a": "DAL",
 "h": "SEA",
-"p": 0.6478,
+"p": 0.639,
 "m": 4.89,
 "tot": 50.0,
 "c": {
@@ -1591,14 +1591,14 @@
 "mk_spread": 6.0,
 "mk_total": 50.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-07T20:15:00-05:00"
 },
 "2026_14_MIN_NE": {
 "wk": 14,
 "a": "MIN",
 "h": "NE",
-"p": 0.5525,
+"p": 0.5494,
 "m": 1.81,
 "tot": 43.8,
 "c": {
@@ -1617,14 +1617,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-10T20:15:00-05:00"
 },
 "2026_14_ATL_CLE": {
 "wk": 14,
 "a": "ATL",
 "h": "CLE",
-"p": 0.5257,
+"p": 0.5242,
 "m": 0.89,
 "tot": 44.1,
 "c": {
@@ -1643,14 +1643,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-13T13:00:00-05:00"
 },
 "2026_14_CHI_MIA": {
 "wk": 14,
 "a": "CHI",
 "h": "MIA",
-"p": 0.1631,
+"p": 0.1776,
 "m": -13.48,
 "tot": 47.4,
 "c": {
@@ -1669,14 +1669,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-13T13:00:00-05:00"
 },
 "2026_14_DEN_NYJ": {
 "wk": 14,
 "a": "DEN",
 "h": "NYJ",
-"p": 0.3388,
+"p": 0.3477,
 "m": -5.71,
 "tot": 44.3,
 "c": {
@@ -1695,14 +1695,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-13T13:00:00-05:00"
 },
 "2026_14_HOU_WAS": {
 "wk": 14,
 "a": "HOU",
 "h": "WAS",
-"p": 0.4566,
+"p": 0.4591,
 "m": -1.5,
 "tot": 45.5,
 "c": {
@@ -1721,14 +1721,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-13T13:00:00-05:00"
 },
 "2026_14_IND_PHI": {
 "wk": 14,
 "a": "IND",
 "h": "PHI",
-"p": 0.513,
+"p": 0.5122,
 "m": 0.45,
 "tot": 42.6,
 "c": {
@@ -1747,14 +1747,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-13T13:00:00-05:00"
 },
 "2026_14_NO_CAR": {
 "wk": 14,
 "a": "NO",
 "h": "CAR",
-"p": 0.6357,
+"p": 0.6281,
 "m": 4.77,
 "tot": 47.3,
 "c": {
@@ -1773,14 +1773,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-13T13:00:00-05:00"
 },
 "2026_14_TB_BAL": {
 "wk": 14,
 "a": "TB",
 "h": "BAL",
-"p": 0.4912,
+"p": 0.4917,
 "m": -0.3,
 "tot": 45.3,
 "c": {
@@ -1799,14 +1799,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-13T13:00:00-05:00"
 },
 "2026_14_TEN_DET": {
 "wk": 14,
 "a": "TEN",
 "h": "DET",
-"p": 0.8705,
+"p": 0.8562,
 "m": 15.51,
 "tot": 51.4,
 "c": {
@@ -1825,14 +1825,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-13T13:00:00-05:00"
 },
 "2026_14_LAC_LV": {
 "wk": 14,
 "a": "LAC",
 "h": "LV",
-"p": 0.4694,
+"p": 0.4712,
 "m": -1.05,
 "tot": 46.7,
 "c": {
@@ -1851,14 +1851,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-13T16:05:00-05:00"
 },
 "2026_14_KC_CIN": {
 "wk": 14,
 "a": "KC",
 "h": "CIN",
-"p": 0.4632,
+"p": 0.4653,
 "m": -1.27,
 "tot": 51.2,
 "c": {
@@ -1877,14 +1877,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-13T16:25:00-05:00"
 },
 "2026_14_LA_SF": {
 "wk": 14,
 "a": "LA",
 "h": "SF",
-"p": 0.5691,
+"p": 0.5651,
 "m": 2.39,
 "tot": 50.8,
 "c": {
@@ -1903,14 +1903,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-13T16:25:00-05:00"
 },
 "2026_14_NYG_SEA": {
 "wk": 14,
 "a": "NYG",
 "h": "SEA",
-"p": 0.764,
+"p": 0.7509,
 "m": 9.88,
 "tot": 42.9,
 "c": {
@@ -1929,14 +1929,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-13T16:25:00-05:00"
 },
 "2026_14_BUF_GB": {
 "wk": 14,
 "a": "BUF",
 "h": "GB",
-"p": 0.3774,
+"p": 0.3843,
 "m": -4.29,
 "tot": 51.7,
 "c": {
@@ -1955,14 +1955,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-13T20:20:00-05:00"
 },
 "2026_14_PIT_JAX": {
 "wk": 14,
 "a": "PIT",
 "h": "JAX",
-"p": 0.7914,
+"p": 0.7776,
 "m": 11.14,
 "tot": 45.7,
 "c": {
@@ -1981,14 +1981,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-14T20:15:00-05:00"
 },
 "2026_15_SF_LAC": {
 "wk": 15,
 "a": "SF",
 "h": "LAC",
-"p": 0.3118,
+"p": 0.3214,
 "m": -7.16,
 "tot": 49.8,
 "c": {
@@ -2007,14 +2007,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-17T20:15:00-05:00"
 },
 "2026_15_SEA_PHI": {
 "wk": 15,
 "a": "SEA",
 "h": "PHI",
-"p": 0.2187,
+"p": 0.2316,
 "m": -11.32,
 "tot": 39.5,
 "c": {
@@ -2033,14 +2033,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-19T17:00:00-05:00"
 },
 "2026_15_CHI_BUF": {
 "wk": 15,
 "a": "CHI",
 "h": "BUF",
-"p": 0.6411,
+"p": 0.6337,
 "m": 5.27,
 "tot": 54.6,
 "c": {
@@ -2059,14 +2059,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-19T20:20:00-05:00"
 },
 "2026_15_ATL_WAS": {
 "wk": 15,
 "a": "ATL",
 "h": "WAS",
-"p": 0.5838,
+"p": 0.5792,
 "m": 3.09,
 "tot": 48.2,
 "c": {
@@ -2085,14 +2085,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-20T13:00:00-05:00"
 },
 "2026_15_BAL_PIT": {
 "wk": 15,
 "a": "BAL",
 "h": "PIT",
-"p": 0.5341,
+"p": 0.5322,
 "m": 1.25,
 "tot": 45.1,
 "c": {
@@ -2111,14 +2111,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-20T13:00:00-05:00"
 },
 "2026_15_CIN_CAR": {
 "wk": 15,
 "a": "CIN",
 "h": "CAR",
-"p": 0.4461,
+"p": 0.449,
 "m": -1.98,
 "tot": 52.0,
 "c": {
@@ -2137,14 +2137,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-20T13:00:00-05:00"
 },
 "2026_15_CLE_NYG": {
 "wk": 15,
 "a": "CLE",
 "h": "NYG",
-"p": 0.5451,
+"p": 0.5426,
 "m": 1.65,
 "tot": 42.7,
 "c": {
@@ -2163,14 +2163,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-20T13:00:00-05:00"
 },
 "2026_15_IND_TEN": {
 "wk": 15,
 "a": "IND",
 "h": "TEN",
-"p": 0.4501,
+"p": 0.4529,
 "m": -1.83,
 "tot": 46.6,
 "c": {
@@ -2189,14 +2189,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-20T13:00:00-05:00"
 },
 "2026_15_JAX_HOU": {
 "wk": 15,
 "a": "JAX",
 "h": "HOU",
-"p": 0.4411,
+"p": 0.4443,
 "m": -2.16,
 "tot": 45.1,
 "c": {
@@ -2215,14 +2215,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-20T13:00:00-05:00"
 },
 "2026_15_MIA_GB": {
 "wk": 15,
 "a": "MIA",
 "h": "GB",
-"p": 0.8371,
+"p": 0.8234,
 "m": 14.33,
 "tot": 44.5,
 "c": {
@@ -2241,14 +2241,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-20T13:00:00-05:00"
 },
 "2026_15_NO_TB": {
 "wk": 15,
 "a": "NO",
 "h": "TB",
-"p": 0.6782,
+"p": 0.669,
 "m": 6.75,
 "tot": 45.1,
 "c": {
@@ -2267,14 +2267,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-20T13:00:00-05:00"
 },
 "2026_15_NYJ_ARI": {
 "wk": 15,
 "a": "NYJ",
 "h": "ARI",
-"p": 0.4038,
+"p": 0.409,
 "m": -3.55,
 "tot": 45.6,
 "c": {
@@ -2293,14 +2293,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-20T16:05:00-05:00"
 },
 "2026_15_DAL_LA": {
 "wk": 15,
 "a": "DAL",
 "h": "LA",
-"p": 0.6468,
+"p": 0.6391,
 "m": 5.49,
 "tot": 54.4,
 "c": {
@@ -2319,14 +2319,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-20T16:25:00-05:00"
 },
 "2026_15_DEN_LV": {
 "wk": 15,
 "a": "DEN",
 "h": "LV",
-"p": 0.2824,
+"p": 0.2932,
 "m": -8.4,
 "tot": 45.7,
 "c": {
@@ -2345,14 +2345,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-20T16:25:00-05:00"
 },
 "2026_15_DET_MIN": {
 "wk": 15,
 "a": "DET",
 "h": "MIN",
-"p": 0.4627,
+"p": 0.4648,
 "m": -1.37,
 "tot": 47.7,
 "c": {
@@ -2371,14 +2371,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-20T20:20:00-05:00"
 },
 "2026_15_NE_KC": {
 "wk": 15,
 "a": "NE",
 "h": "KC",
-"p": 0.6459,
+"p": 0.6383,
 "m": 5.46,
 "tot": 47.9,
 "c": {
@@ -2397,14 +2397,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-21T20:15:00-05:00"
 },
 "2026_16_HOU_PHI": {
 "wk": 16,
 "a": "HOU",
 "h": "PHI",
-"p": 0.3199,
+"p": 0.3287,
 "m": -7.22,
 "tot": 40.4,
 "c": {
@@ -2423,14 +2423,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-24T20:15:00-05:00"
 },
 "2026_16_GB_CHI": {
 "wk": 16,
 "a": "GB",
 "h": "CHI",
-"p": 0.6271,
+"p": 0.6207,
 "m": 5.0,
 "tot": 49.3,
 "c": {
@@ -2449,14 +2449,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-25T13:00:00-05:00"
 },
 "2026_16_BUF_DEN": {
 "wk": 16,
 "a": "BUF",
 "h": "DEN",
-"p": 0.438,
+"p": 0.4412,
 "m": -2.41,
 "tot": 49.9,
 "c": {
@@ -2475,14 +2475,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-25T16:30:00-05:00"
 },
 "2026_16_LA_SEA": {
 "wk": 16,
 "a": "LA",
 "h": "SEA",
-"p": 0.5467,
+"p": 0.5443,
 "m": 1.81,
 "tot": 44.6,
 "c": {
@@ -2501,14 +2501,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-25T20:15:00-05:00"
 },
 "2026_16_ARI_NO": {
 "wk": 16,
 "a": "ARI",
 "h": "NO",
-"p": 0.6323,
+"p": 0.6256,
 "m": 5.22,
 "tot": 46.4,
 "c": {
@@ -2527,14 +2527,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-27T13:00:00-05:00"
 },
 "2026_16_CAR_PIT": {
 "wk": 16,
 "a": "CAR",
 "h": "PIT",
-"p": 0.5313,
+"p": 0.5297,
 "m": 1.21,
 "tot": 46.2,
 "c": {
@@ -2553,14 +2553,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-27T13:00:00-05:00"
 },
 "2026_16_CIN_IND": {
 "wk": 16,
 "a": "CIN",
 "h": "IND",
-"p": 0.3536,
+"p": 0.3609,
 "m": -5.8,
 "tot": 51.2,
 "c": {
@@ -2579,14 +2579,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-27T13:00:00-05:00"
 },
 "2026_16_CLE_BAL": {
 "wk": 16,
 "a": "CLE",
 "h": "BAL",
-"p": 0.5667,
+"p": 0.5633,
 "m": 2.59,
 "tot": 43.5,
 "c": {
@@ -2605,14 +2605,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-27T13:00:00-05:00"
 },
 "2026_16_LAC_MIA": {
 "wk": 16,
 "a": "LAC",
 "h": "MIA",
-"p": 0.2925,
+"p": 0.3023,
 "m": -8.43,
 "tot": 43.7,
 "c": {
@@ -2631,14 +2631,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-27T13:00:00-05:00"
 },
 "2026_16_NE_NYJ": {
 "wk": 16,
 "a": "NE",
 "h": "NYJ",
-"p": 0.3955,
+"p": 0.4008,
 "m": -4.09,
 "tot": 47.3,
 "c": {
@@ -2657,14 +2657,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-27T13:00:00-05:00"
 },
 "2026_16_TB_ATL": {
 "wk": 16,
 "a": "TB",
 "h": "ATL",
-"p": 0.4852,
+"p": 0.486,
 "m": -0.57,
 "tot": 46.1,
 "c": {
@@ -2683,14 +2683,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-27T13:00:00-05:00"
 },
 "2026_16_WAS_MIN": {
 "wk": 16,
 "a": "WAS",
 "h": "MIN",
-"p": 0.6321,
+"p": 0.6254,
 "m": 5.21,
 "tot": 44.4,
 "c": {
@@ -2709,14 +2709,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-27T13:00:00-05:00"
 },
 "2026_16_TEN_LV": {
 "wk": 16,
 "a": "TEN",
 "h": "LV",
-"p": 0.5789,
+"p": 0.5748,
 "m": 3.07,
 "tot": 47.4,
 "c": {
@@ -2735,14 +2735,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-27T16:05:00-05:00"
 },
 "2026_16_SF_KC": {
 "wk": 16,
 "a": "SF",
 "h": "KC",
-"p": 0.5086,
+"p": 0.5082,
 "m": 0.33,
 "tot": 50.1,
 "c": {
@@ -2761,14 +2761,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-27T16:25:00-05:00"
 },
 "2026_16_JAX_DAL": {
 "wk": 16,
 "a": "JAX",
 "h": "DAL",
-"p": 0.428,
+"p": 0.4317,
 "m": -2.8,
 "tot": 53.4,
 "c": {
@@ -2787,14 +2787,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-27T20:20:00-05:00"
 },
 "2026_16_NYG_DET": {
 "wk": 16,
 "a": "NYG",
 "h": "DET",
-"p": 0.7818,
+"p": 0.7697,
 "m": 12.01,
 "tot": 50.8,
 "c": {
@@ -2813,14 +2813,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-28T20:15:00-05:00"
 },
 "2026_17_BAL_CIN": {
 "wk": 17,
 "a": "BAL",
 "h": "CIN",
-"p": 0.6749,
+"p": 0.6667,
 "m": 7.38,
 "tot": 50.9,
 "c": {
@@ -2839,14 +2839,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2026-12-31T20:15:00-05:00"
 },
 "2026_17_BUF_MIA": {
 "wk": 17,
 "a": "BUF",
 "h": "MIA",
-"p": 0.1458,
+"p": 0.1581,
 "m": -17.17,
 "tot": 49.7,
 "c": {
@@ -2865,14 +2865,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_DEN_NE": {
 "wk": 17,
 "a": "DEN",
 "h": "NE",
-"p": 0.4976,
+"p": 0.4977,
 "m": -0.1,
 "tot": 46.0,
 "c": {
@@ -2891,14 +2891,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_IND_CLE": {
 "wk": 17,
 "a": "IND",
 "h": "CLE",
-"p": 0.6097,
+"p": 0.6044,
 "m": 4.54,
 "tot": 43.8,
 "c": {
@@ -2917,14 +2917,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_KC_LAC": {
 "wk": 17,
 "a": "KC",
 "h": "LAC",
-"p": 0.2933,
+"p": 0.3027,
 "m": -8.85,
 "tot": 46.6,
 "c": {
@@ -2943,14 +2943,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_LA_TB": {
 "wk": 17,
 "a": "LA",
 "h": "TB",
-"p": 0.4006,
+"p": 0.4055,
 "m": -4.1,
 "tot": 46.3,
 "c": {
@@ -2969,14 +2969,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_MIN_NYJ": {
 "wk": 17,
 "a": "MIN",
 "h": "NYJ",
-"p": 0.3987,
+"p": 0.4036,
 "m": -4.18,
 "tot": 42.3,
 "c": {
@@ -2995,14 +2995,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_NO_ATL": {
 "wk": 17,
 "a": "NO",
 "h": "ATL",
-"p": 0.6063,
+"p": 0.6011,
 "m": 4.39,
 "tot": 46.9,
 "c": {
@@ -3021,14 +3021,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_NYG_DAL": {
 "wk": 17,
 "a": "NYG",
 "h": "DAL",
-"p": 0.6542,
+"p": 0.6469,
 "m": 6.46,
 "tot": 52.0,
 "c": {
@@ -3047,14 +3047,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_PIT_TEN": {
 "wk": 17,
 "a": "PIT",
 "h": "TEN",
-"p": 0.4185,
+"p": 0.4225,
 "m": -3.35,
 "tot": 45.0,
 "c": {
@@ -3073,14 +3073,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_SEA_CAR": {
 "wk": 17,
 "a": "SEA",
 "h": "CAR",
-"p": 0.3561,
+"p": 0.3629,
 "m": -6.01,
 "tot": 44.8,
 "c": {
@@ -3099,14 +3099,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_WAS_JAX": {
 "wk": 17,
 "a": "WAS",
 "h": "JAX",
-"p": 0.7186,
+"p": 0.7088,
 "m": 9.42,
 "tot": 48.1,
 "c": {
@@ -3125,14 +3125,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_LV_ARI": {
 "wk": 17,
 "a": "LV",
 "h": "ARI",
-"p": 0.5099,
+"p": 0.5094,
 "m": 0.4,
 "tot": 46.3,
 "c": {
@@ -3151,7 +3151,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2027-01-03T16:05:00-05:00"
 },
 "2026_17_DET_CHI": {
@@ -3177,14 +3177,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2027-01-03T16:25:00-05:00"
 },
 "2026_17_PHI_SF": {
 "wk": 17,
 "a": "PHI",
 "h": "SF",
-"p": 0.7961,
+"p": 0.7843,
 "m": 13.48,
 "tot": 45.7,
 "c": {
@@ -3203,14 +3203,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2027-01-03T20:20:00-05:00"
 },
 "2026_17_HOU_GB": {
 "wk": 17,
 "a": "HOU",
 "h": "GB",
-"p": 0.5113,
+"p": 0.5108,
 "m": 0.46,
 "tot": 44.5,
 "c": {
@@ -3229,14 +3229,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2027-01-04T20:15:00-05:00"
 },
 "2026_18_ATL_CAR": {
 "wk": 18,
 "a": "ATL",
 "h": "CAR",
-"p": 0.548,
+"p": 0.5458,
 "m": 2.07,
 "tot": 48.2,
 "c": {
@@ -3255,14 +3255,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_CHI_MIN": {
 "wk": 18,
 "a": "CHI",
 "h": "MIN",
-"p": 0.5096,
+"p": 0.5092,
 "m": 0.41,
 "tot": 46.2,
 "c": {
@@ -3281,14 +3281,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_CLE_CIN": {
 "wk": 18,
 "a": "CLE",
 "h": "CIN",
-"p": 0.6941,
+"p": 0.6857,
 "m": 8.7,
 "tot": 47.8,
 "c": {
@@ -3307,14 +3307,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_DAL_WAS": {
 "wk": 18,
 "a": "DAL",
 "h": "WAS",
-"p": 0.4789,
+"p": 0.4799,
 "m": -0.91,
 "tot": 53.7,
 "c": {
@@ -3333,14 +3333,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_DET_GB": {
 "wk": 18,
 "a": "DET",
 "h": "GB",
-"p": 0.4115,
+"p": 0.4156,
 "m": -3.83,
 "tot": 50.7,
 "c": {
@@ -3359,14 +3359,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_JAX_IND": {
 "wk": 18,
 "a": "JAX",
 "h": "IND",
-"p": 0.2976,
+"p": 0.3063,
 "m": -9.1,
 "tot": 47.4,
 "c": {
@@ -3385,14 +3385,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_LAC_DEN": {
 "wk": 18,
 "a": "LAC",
 "h": "DEN",
-"p": 0.671,
+"p": 0.6634,
 "m": 7.58,
 "tot": 44.0,
 "c": {
@@ -3411,14 +3411,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_LV_KC": {
 "wk": 18,
 "a": "LV",
 "h": "KC",
-"p": 0.7735,
+"p": 0.7627,
 "m": 12.86,
 "tot": 47.1,
 "c": {
@@ -3437,14 +3437,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_MIA_NE": {
 "wk": 18,
 "a": "MIA",
 "h": "NE",
-"p": 0.8152,
+"p": 0.8037,
 "m": 15.37,
 "tot": 45.8,
 "c": {
@@ -3463,14 +3463,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_NYJ_BUF": {
 "wk": 18,
 "a": "NYJ",
 "h": "BUF",
-"p": 0.7652,
+"p": 0.7545,
 "m": 12.39,
 "tot": 51.2,
 "c": {
@@ -3489,14 +3489,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_PHI_NYG": {
 "wk": 18,
 "a": "PHI",
 "h": "NYG",
-"p": 0.6074,
+"p": 0.6024,
 "m": 4.67,
 "tot": 41.7,
 "c": {
@@ -3515,14 +3515,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_PIT_BAL": {
 "wk": 18,
 "a": "PIT",
 "h": "BAL",
-"p": 0.5603,
+"p": 0.5575,
 "m": 2.6,
 "tot": 45.3,
 "c": {
@@ -3541,14 +3541,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_SEA_LA": {
 "wk": 18,
 "a": "SEA",
 "h": "LA",
-"p": 0.5422,
+"p": 0.5402,
 "m": 1.82,
 "tot": 45.3,
 "c": {
@@ -3567,14 +3567,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_SF_ARI": {
 "wk": 18,
 "a": "SF",
 "h": "ARI",
-"p": 0.2226,
+"p": 0.2335,
 "m": -13.08,
 "tot": 49.3,
 "c": {
@@ -3593,14 +3593,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_TB_NO": {
 "wk": 18,
 "a": "TB",
 "h": "NO",
-"p": 0.3999,
+"p": 0.4046,
 "m": -4.34,
 "tot": 45.8,
 "c": {
@@ -3619,14 +3619,14 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_TEN_HOU": {
 "wk": 18,
 "a": "TEN",
 "h": "HOU",
-"p": 0.7542,
+"p": 0.7438,
 "m": 11.78,
 "tot": 44.5,
 "c": {
@@ -3645,7 +3645,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 26, 2:12 AM ET",
+"stamp": "Nov 26, 3:06 AM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 }
 }

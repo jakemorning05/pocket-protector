@@ -50,7 +50,8 @@ def ml_prob(hml, aml):
 S = F[F.season == 2026].copy()
 S['pred'] = m_new.predict(S[FULL].values)
 # games further out are less certain (ratings move, QBs change, late-season resting): widen sigma by weeks ahead (drift.py)
-CW = int(S[S.played].week.max()) + 1
+# the current week is the earliest week with a game left (a Wednesday or Thursday final mustn't make the next week "now")
+CW = int(S[~S.played].week.min()) if (~S.played).any() else int(S.week.max()) + 1
 try:
     DRIFT_C = json.load(open(f'{D}/drift.json'))['c']
 except FileNotFoundError:
