@@ -1,66 +1,7 @@
 {
  "week": 12,
- "asof": "Wed, Nov 25, 8:05 PM ET",
+ "asof": "Thu, Nov 26, 12:49 AM ET",
  "games": [
-  {
-   "id": "2026_12_GB_LA",
-   "a": "GB",
-   "h": "LA",
-   "day": "2026-11-25",
-   "time": "20:00",
-   "leans": [
-    {
-     "player": "Matthew Golden",
-     "team": "GB",
-     "pos": "WR",
-     "stat": "rec_yds",
-     "line": 87.5,
-     "proj": 80.2,
-     "p_over": 0.32,
-     "conf": 0.59,
-     "side": "Under",
-     "games": 10
-    },
-    {
-     "player": "Jordan Love",
-     "team": "GB",
-     "pos": "QB",
-     "stat": "pass_yds",
-     "line": 282.5,
-     "proj": 256.3,
-     "p_over": 0.331,
-     "conf": 0.584,
-     "side": "Under",
-     "games": 10
-    },
-    {
-     "player": "Christian Watson",
-     "team": "GB",
-     "pos": "WR",
-     "stat": "rec_yds",
-     "line": 80.5,
-     "proj": 77.8,
-     "p_over": 0.35,
-     "conf": 0.575,
-     "side": "Under",
-     "games": 10
-    }
-   ],
-   "td": [
-    {
-     "player": "Kyren Williams",
-     "team": "LA",
-     "pos": "RB",
-     "p": 0.5
-    },
-    {
-     "player": "Christian Watson",
-     "team": "GB",
-     "pos": "WR",
-     "p": 0.461
-    }
-   ]
-  },
   {
    "id": "2026_12_CHI_DET",
    "a": "CHI",
@@ -74,9 +15,9 @@
      "pos": "QB",
      "stat": "pass_yds",
      "line": 269.5,
-     "proj": 237.8,
-     "p_over": 0.343,
-     "conf": 0.578,
+     "proj": 237.9,
+     "p_over": 0.342,
+     "conf": 0.579,
      "side": "Under",
      "games": 7
     },
@@ -86,9 +27,9 @@
      "pos": "QB",
      "stat": "pass_yds",
      "line": 275.5,
-     "proj": 270.9,
-     "p_over": 0.387,
-     "conf": 0.556,
+     "proj": 271.0,
+     "p_over": 0.386,
+     "conf": 0.557,
      "side": "Under",
      "games": 10
     },
@@ -99,8 +40,8 @@
      "stat": "rec_yds",
      "line": 46.5,
      "proj": 43.6,
-     "p_over": 0.392,
-     "conf": 0.554,
+     "p_over": 0.395,
+     "conf": 0.553,
      "side": "Under",
      "games": 10
     }
@@ -134,8 +75,8 @@
      "stat": "rec_yds",
      "line": 43.5,
      "proj": 36.0,
-     "p_over": 0.355,
-     "conf": 0.572,
+     "p_over": 0.354,
+     "conf": 0.573,
      "side": "Under",
      "games": 8
     },
@@ -157,7 +98,7 @@
      "pos": "QB",
      "stat": "pass_yds",
      "line": 279.5,
-     "proj": 273.7,
+     "proj": 273.8,
      "p_over": 0.385,
      "conf": 0.557,
      "side": "Under",
@@ -295,9 +236,9 @@
      "pos": "QB",
      "stat": "pass_yds",
      "line": 274.5,
-     "proj": 221.8,
+     "proj": 221.9,
      "p_over": 0.255,
-     "conf": 0.622,
+     "conf": 0.623,
      "side": "Under",
      "games": 10
     },
@@ -308,8 +249,8 @@
      "stat": "rec_yds",
      "line": 79.5,
      "proj": 77.2,
-     "p_over": 0.35,
-     "conf": 0.575,
+     "p_over": 0.347,
+     "conf": 0.576,
      "side": "Under",
      "games": 10
     }
@@ -325,7 +266,7 @@
      "player": "Nico Collins",
      "team": "HOU",
      "pos": "WR",
-     "p": 0.488
+     "p": 0.487
     }
    ]
   },
@@ -401,7 +342,7 @@
      "pos": "RB",
      "stat": "rush_yds",
      "line": 83.5,
-     "proj": 68.1,
+     "proj": 68.0,
      "p_over": 0.292,
      "conf": 0.604,
      "side": "Under",
@@ -413,9 +354,9 @@
      "pos": "QB",
      "stat": "pass_yds",
      "line": 208.5,
-     "proj": 237.0,
-     "p_over": 0.634,
-     "conf": 0.567,
+     "proj": 237.1,
+     "p_over": 0.633,
+     "conf": 0.566,
      "side": "Over",
      "games": 6
     },
@@ -496,13 +437,13 @@
      "player": "Ollie Gordon II",
      "team": "MIA",
      "pos": "RB",
-     "p": 0.401
+     "p": 0.4
     },
     {
      "player": "Breece Hall",
      "team": "NYJ",
      "pos": "RB",
-     "p": 0.344
+     "p": 0.343
     }
    ]
   },
@@ -531,9 +472,9 @@
      "pos": "QB",
      "stat": "pass_yds",
      "line": 182.5,
-     "proj": 198.6,
-     "p_over": 0.656,
-     "conf": 0.578,
+     "proj": 198.7,
+     "p_over": 0.657,
+     "conf": 0.579,
      "side": "Over",
      "games": 10
     },
@@ -543,9 +484,9 @@
      "pos": "QB",
      "stat": "pass_yds",
      "line": 243.5,
-     "proj": 293.4,
-     "p_over": 0.606,
-     "conf": 0.553,
+     "proj": 293.5,
+     "p_over": 0.612,
+     "conf": 0.556,
      "side": "Over",
      "games": 10
     }
@@ -590,11 +531,23 @@
      "pos": "QB",
      "stat": "pass_yds",
      "line": 192.5,
-     "proj": 202.2,
-     "p_over": 0.619,
+     "proj": 202.3,
+     "p_over": 0.62,
      "conf": 0.56,
      "side": "Over",
      "games": 10
+    },
+    {
+     "player": "Tre Harris",
+     "team": "LAC",
+     "pos": "WR",
+     "stat": "rec_yds",
+     "line": 31.5,
+     "proj": 44.9,
+     "p_over": 0.601,
+     "conf": 0.55,
+     "side": "Over",
+     "games": 9
     }
    ],
    "td": [
@@ -649,9 +602,9 @@
      "pos": "QB",
      "stat": "pass_yds",
      "line": 259.5,
-     "proj": 207.3,
-     "p_over": 0.27,
-     "conf": 0.615,
+     "proj": 207.4,
+     "p_over": 0.268,
+     "conf": 0.616,
      "side": "Under",
      "games": 10
     }
@@ -661,7 +614,7 @@
      "player": "Christian McCaffrey",
      "team": "SF",
      "pos": "RB",
-     "p": 0.704
+     "p": 0.703
     },
     {
      "player": "Jaxon Smith-Njigba",
@@ -685,8 +638,8 @@
      "stat": "rec_yds",
      "line": 36.5,
      "proj": 53.7,
-     "p_over": 0.624,
-     "conf": 0.562,
+     "p_over": 0.623,
+     "conf": 0.561,
      "side": "Over",
      "games": 10
     }
@@ -702,7 +655,7 @@
      "player": "Jacory Croskey-Merritt",
      "team": "WAS",
      "pos": "RB",
-     "p": 0.406
+     "p": 0.405
     }
    ]
   },
@@ -719,7 +672,7 @@
      "pos": "WR",
      "stat": "rec_yds",
      "line": 37.5,
-     "proj": 57.8,
+     "proj": 57.7,
      "p_over": 0.644,
      "conf": 0.572,
      "side": "Over",
@@ -745,7 +698,7 @@
      "line": 43.5,
      "proj": 55.3,
      "p_over": 0.613,
-     "conf": 0.557,
+     "conf": 0.556,
      "side": "Over",
      "games": 9
     }
@@ -761,7 +714,7 @@
      "player": "Quinshon Judkins",
      "team": "CLE",
      "pos": "RB",
-     "p": 0.392
+     "p": 0.391
     }
    ]
   },
@@ -778,8 +731,8 @@
      "pos": "QB",
      "stat": "pass_yds",
      "line": 278.5,
-     "proj": 252.4,
-     "p_over": 0.347,
+     "proj": 252.6,
+     "p_over": 0.348,
      "conf": 0.576,
      "side": "Under",
      "games": 10
@@ -791,8 +744,8 @@
      "stat": "rush_yds",
      "line": 81.5,
      "proj": 77.2,
-     "p_over": 0.354,
-     "conf": 0.573,
+     "p_over": 0.358,
+     "conf": 0.571,
      "side": "Under",
      "games": 10
     }

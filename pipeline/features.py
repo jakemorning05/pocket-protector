@@ -302,20 +302,37 @@ def build(params=None, out_path=None, write_extras=True):
         sch.at[i, 'away_qb_id'], sch.at[i, 'away_qb_name'] = starter(g.away_team, g.week)
     # next week's injury report isn't out yet: carry the latest report forward one week
     # players reported out in the news (not yet on an official report): add their recent snap share
+    # Each team's outs go on its NEXT game's week. (A midweek game can put that week into the official feed before the
+    # rest of the league plays, so one league-wide "last report + 1" week would push other teams' outs a week late.)
     MANUAL_OUT = [(p['team'], p['name'], p.get('side', 'off')) for p in OV.get('players_out', [])]
+    nxt = {}
+    for g in sch[(sch.season == 2026) & ~sch.played].itertuples():
+        for t in (g.home_team, g.away_team): nxt[t] = min(nxt.get(t, 99), g.week)
+    try:
+        i26 = pd.read_csv(f'{D}/injuries_2026.csv'); i26['team'] = i26.team.replace(FIX)
+        listed = {(w, t, norm(n)) for w, t, n, st in zip(i26.week, i26.team, i26.full_name, i26.report_status) if st in ('Out', 'Doubtful')}
+    except FileNotFoundError:
+        listed = set()
+    for t in TEAMS:  # no official statuses yet for the next game: carry the team's previous report forward one week
+        nw = nxt.get(t)
+        if nw and (2026, nw, t) not in inj_load and (2026, nw - 1, t) in inj_load:
+            inj_load[(2026, nw, t)] = inj_load[(2026, nw - 1, t)]
     sn26 = pd.read_csv(f'{D}/snap_counts_2026.csv'); sn26['team'] = sn26.team.replace(FIX)
     for team, name, side in MANUAL_OUT:
+        nw = nxt.get(team)
+        if not nw: continue
+        if (nw, team, norm(name)) in listed or (nw - 1, team, norm(name)) in listed:
+            continue  # already counted from the official report
         x = sn26[(sn26.team == team) & (sn26.player == name)].sort_values('week').tail(3)
+        if len(x) and (x.position == 'QB').any():
+            continue  # quarterback changes go through qb_starters, not the injury load
         share = float(x.offense_pct.mean() if side == 'off' else x.defense_pct.mean()) if len(x) else 0.0
         if not len(x):
             print(f'WARNING overrides.json: no snap counts found for {name} ({team})')
-        key = (2026, last_report + 1, team)
-        base = list(inj_load.get(key, inj_load.get((2026, last_report, team), ZERO)))  # start from the carried-forward report
+        key = (2026, nw, team)
+        base = list(inj_load.get(key, ZERO))
         base[0] += share if side == 'off' else 0; base[1] += share if side == 'def' else 0
         inj_load[key] = tuple(base)
-    for t in TEAMS:
-        if (2026, last_report + 1, t) not in inj_load and (2026, last_report, t) in inj_load:
-            inj_load[(2026, last_report + 1, t)] = inj_load[(2026, last_report, t)]
 
     # ---------- assemble ----------
     out = []
@@ -382,7 +399,7 @@ def build(params=None, out_path=None, write_extras=True):
         qid, nm = latest[t]
         q, db = qb_quality(qid, s, w)
         qcur[t] = {'qb': nm, 'q': q, 'db': db, 'base': team_baseline(t, s, w)}
-    inj_now = {t: inj_load.get((2026, last_report + 1, t), ZERO) for t in TEAMS}
+    inj_now = {t: inj_load.get((2026, nxt.get(t, last_report + 1), t), ZERO) for t in TEAMS}
     json.dump({'qb': qcur, 'inj': inj_now, 'overrides': active_overrides, 'injury_week': last_report}, open(f'{D}/current.json', 'w'))
     import pickle
     pickle.dump({'qb_hist': qb_hist, 'inj_load': inj_load}, open(f'{D}/aux.pkl', 'wb'))

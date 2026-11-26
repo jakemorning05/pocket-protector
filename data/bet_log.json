@@ -963,9 +963,9 @@
   "p": 0.586,
   "ev": 0.119,
   "logged": "Nov 19, 4:48 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null,
+  "close": 2.5,
+  "clv": -1.0,
+  "result": "win",
   "conf": 0.508
  },
  {
@@ -980,9 +980,9 @@
   "p": 0.582,
   "ev": 0.111,
   "logged": "Nov 19, 4:48 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null,
+  "close": 43.5,
+  "clv": -2.0,
+  "result": "loss",
   "conf": 0.495
  },
  {

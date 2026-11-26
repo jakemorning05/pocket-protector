@@ -96,7 +96,7 @@
       "team": "DAL",
       "name": "Jake Ferguson",
       "side": "off",
-      "source": "A to Z Sports, Nov 9: out multiple weeks"
+      "source": "NFL.com Week 12 injury report, Nov 25: OUT for Thanksgiving"
     },
     {
       "team": "DAL",
@@ -108,7 +108,7 @@
       "team": "DAL",
       "name": "P.J. Locke",
       "side": "def",
-      "source": "A to Z Sports, Nov 9: out Week 10"
+      "source": "NFL.com Week 12 injury report, Nov 25: OUT for Thanksgiving"
     },
     {
       "team": "NE",
@@ -197,7 +197,8 @@
     {
       "name": "Kenneth Walker III",
       "team": "KC",
-      "source": "Week 12 at BUF is Thanksgiving night (short week); hasn't practiced since Week 10 (groin), out Weeks 10-11"
+      "source": "NFL.com Week 12 injury report, Nov 25: OUT for Thanksgiving",
+      "side": "off"
     },
     {
       "name": "Omar Cooper Jr.",
@@ -242,6 +243,72 @@
       "name": "Daniel Jones",
       "side": "off",
       "source": "ESPN / NFL.com, Nov 20: released by the Colts"
+    },
+    {
+      "team": "CHI",
+      "name": "Roschon Johnson",
+      "side": "off",
+      "source": "NFL.com Week 12 injury report, Nov 25: OUT for Thanksgiving"
+    },
+    {
+      "team": "CHI",
+      "name": "Kyler Gordon",
+      "side": "def",
+      "source": "NFL.com Week 12 injury report, Nov 25: OUT for Thanksgiving"
+    },
+    {
+      "team": "CHI",
+      "name": "Elijah Hicks",
+      "side": "def",
+      "source": "NFL.com Week 12 injury report, Nov 25: OUT for Thanksgiving"
+    },
+    {
+      "team": "DET",
+      "name": "Skyler Gill-Howard",
+      "side": "def",
+      "source": "NFL.com Week 12 injury report, Nov 25: OUT for Thanksgiving"
+    },
+    {
+      "team": "DET",
+      "name": "Ennis Rakestraw Jr.",
+      "side": "def",
+      "source": "NFL.com Week 12 injury report, Nov 25: OUT for Thanksgiving"
+    },
+    {
+      "team": "PHI",
+      "name": "Arnold Ebiketie",
+      "side": "def",
+      "source": "NFL.com Week 12 injury report, Nov 25: OUT for Thanksgiving"
+    },
+    {
+      "team": "PHI",
+      "name": "Jonathan Jones",
+      "side": "def",
+      "source": "NFL.com Week 12 injury report, Nov 25: OUT for Thanksgiving"
+    },
+    {
+      "team": "DAL",
+      "name": "Jonathan Mingo",
+      "side": "off",
+      "source": "NFL.com Week 12 injury report, Nov 25: OUT for Thanksgiving"
+    },
+    {
+      "team": "DAL",
+      "name": "Tyler Booker",
+      "side": "off",
+      "source": "NFL.com Week 12 injury report, Nov 25: OUT for Thanksgiving"
+    },
+    {
+      "team": "KC",
+      "name": "Jaylon Moore",
+      "side": "off",
+      "source": "NFL.com Week 12 injury report, Nov 25: OUT for Thanksgiving"
+    },
+    {
+      "team": "KC",
+      "name": "Omarr Norman-Lott",
+      "side": "def",
+      "source": "NFL.com Week 12 injury report, Nov 25: OUT for Thanksgiving"
     }
   ],
   "traded": [

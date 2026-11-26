@@ -728,6 +728,14 @@
   },
   {
    "team": "CHI",
+   "name": "Kyler Gordon",
+   "pos": "DB",
+   "status": "Out",
+   "injury": "OUT for Thanksgiving (late news)",
+   "snap": 0.76
+  },
+  {
+   "team": "CHI",
    "name": "Cole Kmet",
    "pos": "TE",
    "status": "Out",
@@ -736,10 +744,18 @@
   },
   {
    "team": "DAL",
+   "name": "Tyler Booker",
+   "pos": "G",
+   "status": "Out",
+   "injury": "OUT for Thanksgiving (late news)",
+   "snap": 1.0
+  },
+  {
+   "team": "DAL",
    "name": "P.J. Locke",
    "pos": "S",
    "status": "Out",
-   "injury": "Out Week 10 (late news)",
+   "injury": "OUT for Thanksgiving (late news)",
    "snap": 0.84
   },
   {
@@ -747,8 +763,16 @@
    "name": "Jake Ferguson",
    "pos": "TE",
    "status": "Out",
-   "injury": "Out multiple weeks (late news)",
+   "injury": "OUT for Thanksgiving (late news)",
    "snap": 0.56
+  },
+  {
+   "team": "DET",
+   "name": "Skyler Gill-Howard",
+   "pos": "DL",
+   "status": "Out",
+   "injury": "OUT for Thanksgiving (late news)",
+   "snap": 0.53
   },
   {
    "team": "GB",
@@ -800,10 +824,18 @@
   },
   {
    "team": "KC",
+   "name": "Jaylon Moore",
+   "pos": "OL",
+   "status": "Out",
+   "injury": "OUT for Thanksgiving (late news)",
+   "snap": 1.0
+  },
+  {
+   "team": "KC",
    "name": "Kenneth Walker III",
    "pos": "RB",
    "status": "Out",
-   "injury": "Short week (late news)",
+   "injury": "OUT for Thanksgiving (late news)",
    "snap": 0.81
   },
   {

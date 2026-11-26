@@ -1,28 +1,27 @@
 # Model briefing (updated Wed, Nov 25, 7:45 PM ET)
 
-- Picking winners this season: 117-45. Betting favorites on the same games: 111-51.
+- Picking winners this season: 118-45. Betting favorites on the same games: 112-51.
 - Prop test vs. Kalshi (since Week 9): 74-78, -4.56 units at one contract each.
 
 ## Week 12 games still to play
 
 | Game | Kickoff (ET) | QBs | Model win % (home) | Market win % (home) | Model margin (home) | Line (home) | Model total | Market total |
 |---|---|---|---|---|---|---|---|---|
-| GB @ LA | 2026-11-25 20:00 | Jordan Love / Matthew Stafford | 66% | 56% | +5.5 | -2.5 | 48.5 | 43.5 |
-| CHI @ DET | 2026-11-26 13:00 | Caleb Williams / Jared Goff | 59% | 48% | +2.9 | +1.5 | 54.6 | 55.5 |
-| PHI @ DAL | 2026-11-26 16:30 | Joe Milton III / Dak Prescott | 76% | 80% | +9.3 | -8.5 | 48.7 | 47.5 |
-| KC @ BUF | 2026-11-26 20:20 | Patrick Mahomes / Josh Allen | 58% | 57% | +2.7 | -3.0 | 52.1 | 46.5 |
+| CHI @ DET | 2026-11-26 13:00 | Caleb Williams / Jared Goff | 60% | 48% | +3.4 | +1.5 | 54.6 | 55.5 |
+| PHI @ DAL | 2026-11-26 16:30 | Joe Milton III / Dak Prescott | 75% | 79% | +8.7 | -8.5 | 48.7 | 48.5 |
+| KC @ BUF | 2026-11-26 20:20 | Patrick Mahomes / Josh Allen | 60% | 58% | +3.4 | -3.0 | 52.1 | 45.5 |
 | DEN @ PIT | 2026-11-27 15:00 | Bo Nix / Aaron Rodgers | 47% | 36% | -1.0 | +3.5 | 43.2 | 36.5 |
-| ATL @ MIN | 2026-11-29 13:00 | Michael Penix Jr. / Kirk Cousins | 67% | 73% | +5.6 | -7.0 | 43.8 | 41.5 |
-| BAL @ HOU | 2026-11-29 13:00 | Jacoby Brissett / C.J. Stroud | 72% | 74% | +7.3 | -6.5 | 44.5 | 47.5 |
-| NO @ CIN | 2026-11-29 13:00 | Tyler Shough / Joe Burrow | 78% | 81% | +10.1 | -10.0 | 50.9 | 49.5 |
-| NYG @ IND | 2026-11-29 13:00 | J.J. McCarthy / Anthony Richardson | 57% | 27% | +2.2 | +6.5 | 46.1 | 41.5 |
-| NYJ @ MIA | 2026-11-29 13:00 | Geno Smith / Kyle McCord | 32% | 35% | -6.2 | +3.5 | 44.0 | 40.5 |
-| TEN @ JAX | 2026-11-29 13:00 | Cam Ward / Trevor Lawrence | 88% | 89% | +15.4 | -14.5 | 47.0 | 48.5 |
-| NE @ LAC | 2026-11-29 16:05 | Tommy DeVito / Justin Herbert | 62% | 49% | +3.8 | +1.5 | 47.5 | 35.5 |
-| SEA @ SF | 2026-11-29 16:25 | Sam Darnold / Brock Purdy | 59% | 57% | +2.8 | -2.5 | 47.1 | 44.5 |
-| WAS @ ARI | 2026-11-29 16:25 | Jayden Daniels / Josh Johnson | 35% | 27% | -5.1 | +6.5 | 46.9 | 41.5 |
-| LV @ CLE | 2026-11-29 20:20 | Fernando Mendoza / Deshaun Watson | 62% | 68% | +4.1 | -4.5 | 43.8 | 39.5 |
-| CAR @ TB | 2026-11-30 20:15 | Bryce Young / Baker Mayfield | 61% | 59% | +3.7 | -3.0 | 46.4 | 43.5 |
+| ATL @ MIN | 2026-11-29 13:00 | Michael Penix Jr. / Kirk Cousins | 67% | 73% | +5.7 | -7.0 | 43.8 | 41.5 |
+| BAL @ HOU | 2026-11-29 13:00 | Jacoby Brissett / C.J. Stroud | 71% | 74% | +7.1 | -6.5 | 44.5 | 47.5 |
+| NO @ CIN | 2026-11-29 13:00 | Tyler Shough / Joe Burrow | 83% | 81% | +12.4 | -10.0 | 50.9 | 49.5 |
+| NYG @ IND | 2026-11-29 13:00 | J.J. McCarthy / Anthony Richardson | 48% | 29% | -0.7 | +6.0 | 46.1 | 41.5 |
+| NYJ @ MIA | 2026-11-29 13:00 | Geno Smith / Kyle McCord | 30% | 34% | -6.8 | +4.5 | 44.0 | 40.5 |
+| TEN @ JAX | 2026-11-29 13:00 | Cam Ward / Trevor Lawrence | 89% | 88% | +15.6 | -14.5 | 47.0 | 49.5 |
+| NE @ LAC | 2026-11-29 16:05 | Tommy DeVito / Justin Herbert | 62% | 48% | +3.9 | +1.5 | 47.5 | 35.5 |
+| SEA @ SF | 2026-11-29 16:25 | Sam Darnold / Brock Purdy | 58% | 57% | +2.5 | -2.5 | 47.1 | 44.5 |
+| WAS @ ARI | 2026-11-29 16:25 | Jayden Daniels / Josh Johnson | 34% | 26% | -5.2 | +7.0 | 46.9 | 41.5 |
+| LV @ CLE | 2026-11-29 20:20 | Fernando Mendoza / Deshaun Watson | 63% | 68% | +4.4 | -4.5 | 43.8 | 39.5 |
+| CAR @ TB | 2026-11-30 20:15 | Bryce Young / Baker Mayfield | 62% | 59% | +3.9 | -3.0 | 46.4 | 43.5 |
 
 ## Logged Kalshi props for those games (model chance of YES vs. price)
 
