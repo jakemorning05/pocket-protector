@@ -44,6 +44,10 @@ def body():
     except FileNotFoundError:
         college = '{"games": [], "rank": []}'
     try:
+        draft = read('data', 'draft.json')
+    except FileNotFoundError:
+        draft = '{"board": [], "needs": {}, "trades": {"owner": {}, "earlier_of": {"picks": ["DAL", "GB"], "to": "NYJ", "other_to": "DAL"}, "deals": [], "sources": []}, "boards": [], "needs_source": {"name": "", "url": ""}, "updated": ""}'
+    try:
         parlays = read('data', 'parlays.json')
     except FileNotFoundError:
         parlays = '{"runs": [], "slips": []}'
@@ -51,7 +55,7 @@ def body():
     for key, text in [('/*__DATA__*/', read('data', 'site_data.json')), ('/*__PLAYERS__*/', read('data', 'players.json')),
                       ('/*__PROPS__*/', props), ('/*__FAN__*/', read('data', 'fantasy.json')), ('/*__BETS__*/', read('data', 'bet_log.json')),
                       ('/*__TRACK__*/', read('data', 'bet_track.json')), ('/*__NEWS__*/', read('data', 'news.json')), ('/*__PICKS__*/', picks),
-                      ('/*__POOLS__*/', read('src', 'pools.js')), ('/*__FANX__*/', read('src', 'fantasy_extra.js')), ('/*__EARLY__*/', early), ('/*__PARLAYS__*/', parlays), ('/*__COLLEGE__*/', college)]:
+                      ('/*__POOLS__*/', read('src', 'pools.js')), ('/*__FANX__*/', read('src', 'fantasy_extra.js')), ('/*__EARLY__*/', early), ('/*__PARLAYS__*/', parlays), ('/*__COLLEGE__*/', college), ('/*__DRAFT__*/', draft)]:
         out = out.replace(key, text)
     assert '/*__' not in out, 'unfilled placeholder'
     return out

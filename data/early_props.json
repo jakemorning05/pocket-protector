@@ -1,6 +1,6 @@
 {
  "week": 12,
- "asof": "Wed, Nov 25, 7:42 PM ET",
+ "asof": "Wed, Nov 25, 8:05 PM ET",
  "games": [
   {
    "id": "2026_12_GB_LA",
@@ -420,16 +420,16 @@
      "games": 6
     },
     {
-     "player": "Daniel Jones",
-     "team": "IND",
-     "pos": "QB",
-     "stat": "pass_yds",
-     "line": 166.5,
-     "proj": 167.8,
-     "p_over": 0.629,
-     "conf": 0.564,
+     "player": "Malachi Fields",
+     "team": "NYG",
+     "pos": "WR",
+     "stat": "rec_yds",
+     "line": 27.5,
+     "proj": 40.1,
+     "p_over": 0.606,
+     "conf": 0.553,
      "side": "Over",
-     "games": 11
+     "games": 10
     }
    ],
    "td": [
@@ -437,7 +437,7 @@
      "player": "Jonathan Taylor",
      "team": "IND",
      "pos": "RB",
-     "p": 0.504
+     "p": 0.503
     },
     {
      "player": "Isaiah Likely",

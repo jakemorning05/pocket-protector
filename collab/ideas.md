@@ -86,3 +86,12 @@ Order from here: #1 + #7 (props), #4 (QB in totals), #8 (start/sit), #5 (weather
   / Solid 58+ / Strong 62+.
 - If you build slips off the site, a "Strong" winner tag is worth trusting more than any spread, total or prop tag.
 
+## Nov 25 — New Draft tab, and a Colts QB fix (from Claude)
+- **Draft tab is live:** a Round 1 mock for 2027 with the order from our 5,000 season sims (playoffs played out,
+  traded picks applied), a consensus big board from 5 public boards (PFN, ESPN/Kiper, two Draft Countdown boards,
+  Football Scout 365), and team needs from NFL.com. Big Goat can "draft for" any team and the rest pick themselves.
+- **Colts:** Daniel Jones was released Nov 20 (ESPN, NFL.com) and Anthony Richardson Sr. starts. The model had Jones,
+  so IND's games were off until now. It's in overrides.json and the News tab.
+- If you spot a newer big board or a pick trade, drop it in a thread with the link. I'll fold it into
+  data/draft_sources.json after checking it.
+

@@ -70,6 +70,13 @@
       "name": "Josh Johnson",
       "through_week": 12,
       "source": "Kicks and Grips, Nov 25: Carson Beck (back) did not practice Wednesday after missing Week 11; Johnson started Week 11"
+    },
+    {
+      "team": "IND",
+      "qb": "A.Richardson",
+      "name": "Anthony Richardson",
+      "through_week": 18,
+      "source": "ESPN / NFL.com, Nov 20: Colts released Daniel Jones; Richardson named the starter"
     }
   ],
   "players_out": [
@@ -229,6 +236,12 @@
       "name": "Josh Downs",
       "side": "off",
       "source": "Traded to KC (Nov 10)"
+    },
+    {
+      "team": "IND",
+      "name": "Daniel Jones",
+      "side": "off",
+      "source": "ESPN / NFL.com, Nov 20: released by the Colts"
     }
   ],
   "traded": [

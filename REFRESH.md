@@ -74,3 +74,15 @@ Sunday morning and Monday, so the Friday 4 PM and Sunday 11 AM ET Action runs lo
 pipeline/college_backtest.py (a few minutes) so the tab's 2023-25 numbers match. The model knows scores and schedules only:
 no injuries or QB changes.
 
+
+## Draft tab (pipeline/draft.py, data/draft_sources.json)
+The 2027 order is worked out in the browser from the same season simulations as the Playoffs tab (simulate() also plays
+out the playoffs: higher seed at home with the model's home-field edge, Super Bowl neutral). Picks 1-18 go to
+non-playoff teams by record, then playoff teams by the round they went out in; ties go to the weaker schedule. Traded
+picks come from `trades.owner` in data/draft_sources.json, plus `earlier_of` (the Jets get the earlier of the Cowboys'
+and Packers' picks; Dallas keeps the other). Add any new traded 2027 first-rounder there.
+The board is a consensus of public big boards typed into data/draft_sources.json (name, date, url, then
+"Name|POS|School" in order). Refresh it every couple of weeks: replace a board's list and date with its latest version,
+then `cd pipeline && python3 draft.py`. Team needs come from NFL.com's draft-order article (update `needs` when a new
+one is out). Each team takes the best player left, nudged toward its needs (NEEDW, POSVAL in src/app2_body.html);
+QBs only go early to teams that list QB as a need.

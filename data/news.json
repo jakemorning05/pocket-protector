@@ -31,6 +31,13 @@
  },
  "items": [
   {
+   "team": "IND",
+   "tag": "QB",
+   "text": "The Colts released Daniel Jones the day after a 26-3 loss at Houston and named Anthony Richardson Sr. the starter for the rest of the season, beginning this week against the Giants. The model now rates Indianapolis with Richardson.",
+   "src": "ESPN and NFL.com, Nov 20",
+   "url": "https://www.nfl.com/news/colts-waive-daniel-jones-name-anthony-richardson-new-starting-quarterback"
+  },
+  {
    "team": "KC",
    "tag": "Injury",
    "text": "Kenneth Walker III (groin) is out Thursday night at Buffalo, his third straight missed game. Rookie Emmett Johnson, who has run for 100 yards in each of the last two games, starts again. Bills TE Dalton Kincaid is questionable after limited practices, so he's back in the projections.",
@@ -781,6 +788,14 @@
    "pos": "T",
    "status": "Out",
    "injury": "Knee (late news)",
+   "snap": 1.0
+  },
+  {
+   "team": "IND",
+   "name": "Daniel Jones",
+   "pos": "QB",
+   "status": "Out",
+   "injury": "Released by the Colts (late news)",
    "snap": 1.0
   },
   {

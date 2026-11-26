@@ -15,7 +15,7 @@
 | ATL @ MIN | 2026-11-29 13:00 | Michael Penix Jr. / Kirk Cousins | 67% | 73% | +5.6 | -7.0 | 43.8 | 41.5 |
 | BAL @ HOU | 2026-11-29 13:00 | Jacoby Brissett / C.J. Stroud | 72% | 74% | +7.3 | -6.5 | 44.5 | 47.5 |
 | NO @ CIN | 2026-11-29 13:00 | Tyler Shough / Joe Burrow | 78% | 81% | +10.1 | -10.0 | 50.9 | 49.5 |
-| NYG @ IND | 2026-11-29 13:00 | J.J. McCarthy / Daniel Jones | 59% | 27% | +2.9 | +6.5 | 46.1 | 41.5 |
+| NYG @ IND | 2026-11-29 13:00 | J.J. McCarthy / Anthony Richardson | 57% | 27% | +2.2 | +6.5 | 46.1 | 41.5 |
 | NYJ @ MIA | 2026-11-29 13:00 | Geno Smith / Kyle McCord | 32% | 35% | -6.2 | +3.5 | 44.0 | 40.5 |
 | TEN @ JAX | 2026-11-29 13:00 | Cam Ward / Trevor Lawrence | 88% | 89% | +15.4 | -14.5 | 47.0 | 48.5 |
 | NE @ LAC | 2026-11-29 16:05 | Tommy DeVito / Justin Herbert | 62% | 49% | +3.8 | +1.5 | 47.5 | 35.5 |
@@ -53,6 +53,7 @@
 
 ## Recent headlines
 
+- IND: The Colts released Daniel Jones the day after a 26-3 loss at Houston and named Anthony Richardson Sr. the starter for the rest of the season, beginning this week against the Giants. The model now rates Indianapolis with Richardson. (ESPN and NFL.com, Nov 20)
 - KC: Kenneth Walker III (groin) is out Thursday night at Buffalo, his third straight missed game. Rookie Emmett Johnson, who has run for 100 yards in each of the last two games, starts again. Bills TE Dalton Kincaid is questionable after limited practices, so he's back in the projections. (NBC Sports and Yahoo Sports, Nov 25)
 - DAL: Jake Ferguson (knee/ankle) is out again on Thanksgiving against Philadelphia, along with guard Tyler Booker. Eagles CB Quinyon Mitchell will play. (Bleeding Green Nation, Nov 25)
 - GB: Josh Jacobs (finger) is inactive Wednesday night at the Rams. Micah Parsons is active for his season debut. (Packers.com, Nov 25)
@@ -64,7 +65,6 @@
 - NYG: Sunday's upsets: the Giants beat Jacksonville 23-18, the Jets won 27-24 in Los Angeles, and the Eagles edged Pittsburgh 19-16. The model and the betting market both had the losing side in all three. The model went 8-3 on Sunday (9-3 for the week so far, with Bengals-Commanders on Monday night). (Sportradar finals, Nov 22)
 - DAL: Dallas scored touchdowns on its first six drives in a 51-30 win over Tennessee. Dak Prescott threw for 325 yards and four touchdowns, and CeeDee Lamb (11 for 132) and George Pickens (7 for 102) both topped 100 yards. (ESPN and Yardbarker, Nov 22)
 - BUF: The Bills beat Miami 26-9 to move to 9-1. James Cook ran 22 times for 89 yards and scored for the ninth straight game. (RotoWire, Nov 22)
-- BAL: Derrick Henry was evaluated for a concussion late in Baltimore's 35-33 loss at Carolina but told ESPN afterward that he felt fine. The Ravens have lost six straight. (NFL.com, Nov 22)
 
 Known model weak spots: backups who inherit a starter's carries are underprojected; running back props ignore game
 script (trailing teams run less); very low receiving lines (10-15 yards) are overrated for YES; no weather inputs.

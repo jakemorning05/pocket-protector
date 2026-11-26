@@ -41,6 +41,7 @@ cd pipeline
 "$PY" injury_list.py
 "$PY" early_props.py      # early player leans for the coming week (until real prop prices are logged)
 "$PY" college.py || echo "college update failed; keeping the last college.json"   # College tab (ratings, picks, log)
+"$PY" draft.py || echo "draft board failed; keeping the last draft.json"   # Draft tab (consensus board from data/draft_sources.json)
 "$PY" betting.py grade
 "$PY" props.py grade
 "$PY" betting.py log "$(TZ=America/New_York date '+%b %-d, %-I:%M %p ET')"

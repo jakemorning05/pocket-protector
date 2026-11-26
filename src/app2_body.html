@@ -63,6 +63,7 @@ tr.hl td { background: color-mix(in oklab, var(--accent) 10%, var(--surface)); }
       <a href="#betting" data-view="betting">Betting</a>
       <a href="#parlays" data-view="parlays">Parlays</a>
       <a href="#college" data-view="college">College</a>
+      <a href="#draft" data-view="draft">Draft</a>
       <a href="#news" data-view="news">News</a>
       <a href="#rankings" data-view="rankings">Rankings</a>
       <a href="#playoffs" data-view="playoffs">Playoffs</a>
@@ -84,6 +85,7 @@ tr.hl td { background: color-mix(in oklab, var(--accent) 10%, var(--surface)); }
   <section class="view" id="view-betting" hidden></section>
   <section class="view" id="view-parlays" hidden></section>
   <section class="view" id="view-college" hidden></section>
+  <section class="view" id="view-draft" hidden></section>
   <section class="view" id="view-fantasy" hidden></section>
   <section class="view" id="view-news" hidden></section>
   <section class="view" id="view-stats" hidden></section>
@@ -95,6 +97,7 @@ tr.hl td { background: color-mix(in oklab, var(--accent) 10%, var(--surface)); }
 <nav class="sheet" id="more-sheet" aria-label="More sections" hidden>
   <a href="#parlays" data-view="parlays">Parlays</a>
   <a href="#college" data-view="college">College</a>
+  <a href="#draft" data-view="draft">Draft</a>
   <a href="#news" data-view="news">News</a>
   <a href="#rankings" data-view="rankings">Rankings</a>
   <a href="#playoffs" data-view="playoffs">Playoffs</a>
@@ -120,6 +123,7 @@ const PROPS = /*__PROPS__*/;
 const EARLY = /*__EARLY__*/;
 const PARLAYS = /*__PARLAYS__*/;
 const COLLEGE = /*__COLLEGE__*/;
+const DRAFT = /*__DRAFT__*/;
 const FAN = /*__FAN__*/;
 const BETS = /*__BETS__*/;
 const TRACK = /*__TRACK__*/;
@@ -366,10 +370,16 @@ function simulate(n = 5000, ratingSd = 2.0, seed = 11) {
   let s = seed >>> 0;
   const rnd = () => { s = (s + 0x6D2B79F5) >>> 0; let t = s; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
   const gauss = () => { let u = 0; while (!u) u = rnd(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * rnd()); };
-  const out = Object.fromEntries(TEAMS.map((t) => [t, { wins: 0, hist: new Array(18).fill(0), playoff: 0, division: 0, seed1: 0 }]));
+  const out = Object.fromEntries(TEAMS.map((t) => [t, { wins: 0, hist: new Array(18).fill(0), playoff: 0, division: 0, seed1: 0, sb: 0, slot: new Array(32).fill(0) }]));
+  // playoffs and the draft order: higher seed at home, Super Bowl neutral; picks 1-18 go to non-playoff teams by record,
+  // then playoff teams by the round they went out in. Ties go to the weaker schedule (opponents' combined wins).
+  const OPP = Object.fromEntries(TEAMS.map((t) => [t, []]));
+  for (const g of games) { OPP[g.h].push(g.a); OPP[g.a].push(g.h); }
+  const HFA = C.hfa || 2.6;
+  const poSd = Math.sqrt(Math.max(100, (SIG * (1 + (DATA.drift_c || 0) * Math.max(0, 19 - (DATA.cw || 18)))) ** 2 - 2 * ratingSd * ratingSd));
   for (let k = 0; k < n; k++) {
     const sh = Object.fromEntries(TEAMS.map((t) => [t, gauss() * ratingSd]));
-    const w = {}, tb = {};
+    const w = {}, tb = {}, seeds = {};
     for (const t of TEAMS) { w[t] = recNow[t].w + recNow[t].t * 0.5; tb[t] = rnd() * 0.01 + RATING[t] * 0.0001; }
     for (const g of unplayed) { if (rnd() < Phi((g.m + sh[g.h] - sh[g.a]) / gameSd(g, ratingSd))) w[g.h]++; else w[g.a]++; }
     const sc = (t) => w[t] + tb[t];
@@ -379,10 +389,27 @@ function simulate(n = 5000, ratingSd = 2.0, seed = 11) {
       dw.sort((x, y) => sc(y) - sc(x)); out[dw[0]].seed1++;
       const wc = TEAMS.filter((t) => CONF_OF[t] === c && !dw.includes(t)).sort((x, y) => sc(y) - sc(x)).slice(0, 3);
       for (const t of [...dw, ...wc]) out[t].playoff++;
+      seeds[c] = [...dw, ...wc];
     }
+    const play = (hi, lo, neutral) => rnd() < Phi((RATING[hi] - RATING[lo] + (neutral ? 0 : HFA) + sh[hi] - sh[lo]) / poSd) ? [hi, lo] : [lo, hi];
+    const elim = {}, champs = [];
+    for (const c of ['AFC', 'NFC']) {
+      const sd = seeds[c], seedOf = (t) => sd.indexOf(t), alive = [sd[0]];
+      for (const [i, j] of [[1, 6], [2, 5], [3, 4]]) { const r = play(sd[i], sd[j]); alive.push(r[0]); elim[r[1]] = 1; }
+      alive.sort((x, y) => seedOf(x) - seedOf(y));
+      const d1 = play(alive[0], alive[3]), d2 = play(alive[1], alive[2]); elim[d1[1]] = 2; elim[d2[1]] = 2;
+      const [x1, x2] = [d1[0], d2[0]].sort((x, y) => seedOf(x) - seedOf(y));
+      const cc = play(x1, x2); elim[cc[1]] = 3; champs.push(cc[0]);
+    }
+    const sbr = play(champs[0], champs[1], true); elim[sbr[1]] = 4; elim[sbr[0]] = 5; out[sbr[0]].sb++;
+    const sos = Object.fromEntries(TEAMS.map((t) => [t, OPP[t].reduce((a, o) => a + w[o], 0)]));
+    TEAMS.slice().sort((x, y) => (elim[x] || 0) - (elim[y] || 0) || w[x] - w[y] || sos[x] - sos[y] || tb[x] - tb[y]).forEach((t, i) => out[t].slot[i]++);
     for (const t of TEAMS) { out[t].wins += w[t]; out[t].hist[Math.min(17, Math.floor(w[t]))]++; }
   }
-  for (const t of TEAMS) { const o = out[t]; o.wins /= n; o.playoff /= n; o.division /= n; o.seed1 /= n; o.hist = o.hist.map((x) => x / n); }
+  for (const t of TEAMS) {
+    const o = out[t]; o.wins /= n; o.playoff /= n; o.division /= n; o.seed1 /= n; o.sb /= n; o.hist = o.hist.map((x) => x / n);
+    o.slot = o.slot.map((x) => x / n); o.avgSlot = o.slot.reduce((a, p, i) => a + p * (i + 1), 0);
+  }
   return out;
 }
 let conf = prefs.get('conf', 'AFC');
@@ -1008,13 +1035,112 @@ function renderAbout() {
     '<div class="panel prose"><h3>Data</h3><p>Play-by-play, schedules, injury reports and snap counts come from <a href="https://github.com/nflverse" target="_blank" rel="noopener">nflverse</a>. Betting lines shown are closing or current market numbers from the same source.</p></div>';
 }
 
+// ---------- Draft ----------
+// Round 1 of the 2027 draft. Order: average slot across the season simulations, with traded picks applied. Board: a
+// consensus of public big boards (pipeline/draft.py). Each team takes the best player left, nudged toward its needs.
+const POSVAL = { QB: 1.06, OT: 1.03, EDGE: 1.03, CB: 1, WR: 1, DL: 1, IOL: 0.97, TE: 0.95, LB: 0.94, S: 0.94, RB: 0.92 };
+const NEEDW = [1.3, 1.22, 1.15, 1.09, 1.04];
+const POSNAME = { QB: 'QB', RB: 'RB', WR: 'WR', TE: 'TE', OT: 'OT', IOL: 'IOL', EDGE: 'Edge', DL: 'DT', LB: 'LB', CB: 'CB', S: 'S' };
+const dr = { team: prefs.get('drTeam', ''), shuffle: 0, mine: {}, pos: 'All' };
+function draftOrder() {
+  const orig = TEAMS.slice().sort((x, y) => sim[x].avgSlot - sim[y].avgSlot);
+  const tr = DRAFT.trades, e = tr.earlier_of;
+  const i1 = orig.indexOf(e.picks[0]), i2 = orig.indexOf(e.picks[1]), earlier = i1 < i2 ? e.picks[0] : e.picks[1];
+  return orig.map((t, i) => ({ no: i + 1, orig: t, owner: e.picks.includes(t) ? (t === earlier ? e.to : e.other_to) : tr.owner[t] || t, s: sim[t] }));
+}
+function slotRange(s) {
+  let c = 0, lo = null, hi = null;
+  s.slot.forEach((p, i) => { c += p; if (lo == null && c >= 0.1) lo = i + 1; if (hi == null && c >= 0.9) hi = i + 1; });
+  return lo === hi ? 'No. ' + lo : lo + '–' + hi;
+}
+function runMock(order) {
+  let seed = (dr.shuffle * 2654435761) >>> 0;
+  const rnd = () => { seed = (seed + 0x6D2B79F5) >>> 0; let t = seed; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+  const gauss = () => { let u = 0; while (!u) u = rnd(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * rnd()); };
+  const taken = new Set(), needs = {}, picks = [];
+  for (const slot of order) {
+    const nd = needs[slot.owner] || (needs[slot.owner] = (DRAFT.needs[slot.owner] || []).slice());
+    const avail = DRAFT.board.filter((p) => !taken.has(p.name));
+    let p = null, why;
+    if (dr.mine[slot.no]) { p = avail.find((x) => x.name === dr.mine[slot.no]); why = 'Your pick'; }
+    else if (dr.team && slot.owner === dr.team) { picks.push({ ...slot, clock: true, avail, needs: nd.slice() }); break; }
+    if (!p) {
+      const score = (x) => { const i = nd.indexOf(x.pos); let v = Math.exp(-(x.avg - 1) / 14) * (POSVAL[x.pos] || 1) * (i >= 0 ? NEEDW[i] : 0.93); if (x.pos === 'QB') v *= i >= 0 ? 1.1 : 0.55; return v * (dr.shuffle ? Math.exp(gauss() * 0.18) : 1); };
+      p = avail.reduce((b, x) => { const v = score(x); return v > b.v ? { x, v } : b; }, { x: null, v: -1 }).x;
+      const i = nd.indexOf(p.pos);
+      why = p === avail[0] ? 'Best player left' + (i >= 0 ? ', and fills a need (' + POSNAME[p.pos] + ')' : ' on the board')
+        : (i >= 0 ? 'Fills need No. ' + (i + 1) + ' (' + POSNAME[p.pos] + ')' : 'Value pick') + ' · best left was ' + avail[0].name;
+    }
+    taken.add(p.name); picks.push({ ...slot, p, why, needs: nd.slice() });
+    const k = nd.indexOf(p.pos); if (k >= 0) nd.splice(k, 1);
+  }
+  return picks;
+}
+const posChip = (pos) => '<span class="dpos dp-' + pos.toLowerCase() + '">' + POSNAME[pos] + '</span>';
+function renderDraft() {
+  const el = document.getElementById('view-draft');
+  let html = '<div><h2>2027 Draft</h2><p class="intro">Round 1 as things stand. The order comes from the same 5,000 season simulations as the Playoffs tab, with the playoffs played out too and traded picks applied. Prospects are ranked by blending ' + DRAFT.boards.length + ' public big boards, and each team takes the best player left, nudged toward its biggest needs.</p></div>';
+  if (!sim) { el.innerHTML = html + '<p class="loading">Running season simulations…</p>'; return; }
+  const order = draftOrder(), picks = runMock(order);
+  const owners = [...new Set(order.map((o) => o.owner))].sort((a, b) => full(a).localeCompare(full(b)));
+  if (dr.team && !owners.includes(dr.team)) dr.team = '';
+  const clock = picks.find((x) => x.clock), took = Object.fromEntries(picks.filter((x) => x.p).map((x) => [x.p.name, x]));
+  html += '<div class="panel"><div class="panel-head"><h3>Round 1 mock</h3><span class="muted small">Board updated ' + esc(DRAFT.updated) + '</span></div>' +
+    '<div class="draftbar"><label class="field"><span class="label">Draft for</span><select id="dr-team"><option value="">Nobody, let it run</option>' +
+    owners.map((t) => { const nos = order.filter((o) => o.owner === t).map((o) => o.no); return '<option value="' + t + '"' + (t === dr.team ? ' selected' : '') + '>' + esc(full(t)) + ' (No. ' + nos.join(', ') + ')</option>'; }).join('') + '</select></label>' +
+    '<div class="seg" role="group" aria-label="Mock style"><button data-shuf="0" aria-pressed="' + !dr.shuffle + '">Model mock</button><button data-shuf="1" aria-pressed="' + !!dr.shuffle + '">' + (dr.shuffle ? 'Shuffle again' : 'Shuffle') + '</button></div>' +
+    (Object.keys(dr.mine).length ? '<button class="btn ghost" id="dr-reset">Start over</button>' : '') + '</div>' +
+    '<p class="muted small" style="margin:6px 0 4px;max-width:64ch">' + (dr.shuffle ? 'Shuffle adds some randomness to each team’s board, the way real drafts go off script. ' : '') + 'Pick a team to make its picks yourself; everyone else picks on their own.</p>';
+  if (clock) {
+    const nd = clock.needs, opts = clock.avail.filter((x) => dr.pos === 'All' || x.pos === dr.pos).slice(0, 30);
+    html += '<div class="onclock"><div class="onclock-head"><b>You’re on the clock: No. ' + clock.no + ', ' + esc(full(clock.owner)) + '</b>' + (clock.orig !== clock.owner ? ' <span class="muted small">(from ' + clock.orig + ')</span>' : '') +
+      '<span class="muted small">Needs: ' + (nd.length ? nd.map((n) => POSNAME[n]).join(', ') : 'none left') + '</span></div>' +
+      '<div class="dchips" role="group" aria-label="Position">' + ['All', 'QB', 'RB', 'WR', 'TE', 'OT', 'IOL', 'EDGE', 'DL', 'LB', 'CB', 'S'].map((ps) => '<button class="dchip" data-dpos="' + ps + '" aria-pressed="' + (dr.pos === ps) + '">' + (POSNAME[ps] || ps) + '</button>').join('') + '</div>' +
+      '<div class="tablewrap"><table class="ptable clocktable"><thead><tr><th class="l"></th><th>Rank</th><th class="l">Player</th><th class="l hide-sm">School</th></tr></thead><tbody>' +
+      opts.map((x) => '<tr><td class="l"><button class="btn small" data-take="' + esc(x.name) + '">Draft</button></td><td>' + x.rank + '</td><td class="l"><b>' + esc(x.name) + '</b> ' + posChip(x.pos) + (nd.includes(x.pos) ? ' <span class="needtag">Need</span>' : '') + '</td><td class="l muted hide-sm">' + esc(x.school) + '</td></tr>').join('') +
+      (opts.length ? '' : '<tr><td colspan="4" class="muted">Nobody left at that position on the board.</td></tr>') + '</tbody></table></div></div>';
+  }
+  html += '<ol class="mock">' + picks.filter((x) => x.p).map((x) => '<li class="' + (x.owner === dr.team ? 'mine' : '') + '"><span class="no num">' + x.no + '</span>' +
+    '<span class="team"><b>' + x.owner + '</b> <span class="hide-sm">' + esc(nick(x.owner)) + '</span>' + (x.orig !== x.owner ? ' <span class="via">via ' + x.orig + '</span>' : '') +
+    '<span class="muted small">' + fmtRec(recNow[x.orig]) + ' · likely ' + slotRange(x.s).replace('No. ', '') + '</span></span>' +
+    '<span class="pl"><span><b>' + esc(x.p.name) + '</b> ' + posChip(x.p.pos) + ' <span class="muted small">' + esc(x.p.school) + '</span></span>' +
+    '<span class="why">' + esc(x.why) + '</span></span></li>').join('') + '</ol>' +
+    (clock ? '<p class="muted small">' + (32 - clock.no) + ' more picks after yours.</p>' : '') + '</div>';
+  // race for the top pick
+  const race = TEAMS.slice().sort((a, b) => sim[a].avgSlot - sim[b].avgSlot).slice(0, 10);
+  const cum = (t, k) => sim[t].slot.slice(0, k).reduce((a, b) => a + b, 0);
+  html += '<div class="panel"><div class="panel-head"><h3>Race for the top pick</h3></div><div class="tablewrap"><table><thead><tr><th class="l">Team</th><th>Now</th><th>No. 1</th><th>Top 3</th><th>Top 10</th><th>Likely</th></tr></thead><tbody>' +
+    race.map((t) => { const o = order.find((x) => x.orig === t); return '<tr class="click" data-team="' + t + '"><td class="l"><span class="teamcell"><span class="abbr">' + t + '</span><span class="hide-sm">' + esc(nick(t)) + '</span></span>' + (o.owner !== t ? ' <span class="via">pick owned by ' + o.owner + '</span>' : '') + '</td><td>' + fmtRec(recNow[t]) + '</td><td>' + heat(cum(t, 1)) + '</td><td>' + heat(cum(t, 3)) + '</td><td>' + heat(cum(t, 10)) + '</td><td class="nw">' + slotRange(sim[t]) + '</td></tr>'; }).join('') +
+    '</tbody></table></div><p class="muted small" style="margin-top:8px">“Likely” is the middle 80% of where the pick landed across the simulations. Ties use strength of schedule, the NFL’s first tiebreaker for draft order; the rest of its tiebreaker list isn’t modeled.</p></div>';
+  // consensus board
+  const list = DRAFT.board.filter((x) => dr.pos === 'All' || x.pos === dr.pos);
+  html += '<div class="panel"><div class="panel-head"><h3>Consensus big board</h3><span class="muted small">Top ' + DRAFT.board.length + '</span></div>' +
+    (clock ? '' : '<div class="dchips" role="group" aria-label="Position">' + ['All', 'QB', 'RB', 'WR', 'TE', 'OT', 'IOL', 'EDGE', 'DL', 'LB', 'CB', 'S'].map((ps) => '<button class="dchip" data-dpos="' + ps + '" aria-pressed="' + (dr.pos === ps) + '">' + (POSNAME[ps] || ps) + '</button>').join('') + '</div>') +
+    '<div class="tablewrap"><table class="ptable"><thead><tr><th>Rank</th><th class="l">Player</th><th class="l">School</th><th>Avg</th><th>Boards</th><th class="l">In this mock</th></tr></thead><tbody>' +
+    list.map((x) => '<tr><td>' + x.rank + '</td><td class="l"><b>' + esc(x.name) + '</b> ' + posChip(x.pos) + '</td><td class="l muted">' + esc(x.school) + '</td><td>' + x.avg.toFixed(1) + '</td><td class="nw">' + (x.best === x.worst ? x.best : x.best + '–' + x.worst) + ' <span class="muted small">(' + x.n + ')</span></td><td class="l">' + (took[x.name] ? 'No. ' + took[x.name].no + ' ' + took[x.name].owner : '<span class="muted">–</span>') + '</td></tr>').join('') +
+    '</tbody></table></div><p class="muted small" style="margin-top:8px">Avg is a player’s average rank across the boards, counting him just past the end of any board that leaves him off. Boards shows his best and worst rank and how many boards list him.</p></div>';
+  // sources
+  html += '<div class="panel"><h3>Sources</h3><ul class="srcs">' + DRAFT.boards.map((b) => '<li><a href="' + esc(b.url) + '" target="_blank" rel="noopener">' + esc(b.name) + '</a> <span class="muted small">top ' + b.n + ', ' + esc(b.date) + '</span></li>').join('') +
+    '<li>Team needs: <a href="' + esc(DRAFT.needs_source.url) + '" target="_blank" rel="noopener">' + esc(DRAFT.needs_source.name) + '</a></li>' +
+    '<li>Traded first-round picks: ' + DRAFT.trades.deals.map(esc).join('; ') + '. ' + DRAFT.trades.sources.map((x) => '<a href="' + esc(x.url) + '" target="_blank" rel="noopener">' + esc(x.name) + '</a>').join(', ') + '</li></ul>' +
+    '<p class="muted small">Team needs come from NFL.com, not the model. The mock is a guide to who fits where, not a prediction of trades, and it assumes no team trades up or down.</p></div>';
+  el.innerHTML = html;
+  const q = (sel) => el.querySelector(sel);
+  q('#dr-team').onchange = (e) => { dr.team = e.target.value; dr.mine = {}; prefs.set('drTeam', dr.team); renderDraft(); };
+  el.querySelectorAll('[data-shuf]').forEach((b) => b.onclick = () => { dr.shuffle = b.dataset.shuf === '1' ? dr.shuffle + 1 : 0; dr.mine = {}; renderDraft(); });
+  el.querySelectorAll('[data-dpos]').forEach((b) => b.onclick = () => { dr.pos = b.dataset.dpos; renderDraft(); });
+  el.querySelectorAll('[data-take]').forEach((b) => b.onclick = () => { dr.mine[clock.no] = b.dataset.take; dr.pos = 'All'; renderDraft(); });
+  if (q('#dr-reset')) q('#dr-reset').onclick = () => { dr.mine = {}; renderDraft(); };
+  el.querySelectorAll('tr[data-team]').forEach((r) => r.onclick = () => openTeam(r.dataset.team));
+}
+
 // ---------- router ----------
 const moreBtn = document.getElementById('more-btn');
 function setSheet(open) {
   document.getElementById('more-sheet').hidden = !open; document.getElementById('sheet-backdrop').hidden = !open;
   moreBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
 }
-const VIEWS = { week: renderWeek, about: renderAbout, pools: renderPools, betting: renderBetting, parlays: renderParlays, college: renderCollege, fantasy: renderFantasy, news: renderNews, rankings: renderRankings, playoffs: renderPlayoffs, matchup: renderMatchup, teams: renderTeams, stats: renderStats, model: renderModel };
+const VIEWS = { week: renderWeek, about: renderAbout, pools: renderPools, betting: renderBetting, parlays: renderParlays, college: renderCollege, draft: renderDraft, fantasy: renderFantasy, news: renderNews, rankings: renderRankings, playoffs: renderPlayoffs, matchup: renderMatchup, teams: renderTeams, stats: renderStats, model: renderModel };
 const BASE_TITLE = document.title;
 function route() {
   const v = (location.hash || '#week').slice(1), name = VIEWS[v] ? v : 'week';
@@ -1038,6 +1164,6 @@ route();
 setTimeout(() => {
   sim = simulate(5000);
   const v = (location.hash || '#week').slice(1);
-  if (v === 'rankings') renderRankings(); else if (v === 'playoffs') renderPlayoffs(); else if (v === 'teams') renderTeams();
+  if (v === 'rankings') renderRankings(); else if (v === 'playoffs') renderPlayoffs(); else if (v === 'teams') renderTeams(); else if (v === 'draft') renderDraft();
 }, 60);
 </script>
