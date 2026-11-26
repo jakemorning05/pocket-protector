@@ -1,66 +1,7 @@
 {
  "week": 12,
- "asof": "Thu, Nov 26, 8:39 AM ET",
+ "asof": "Thu, Nov 26, 4:52 PM ET",
  "games": [
-  {
-   "id": "2026_12_CHI_DET",
-   "a": "CHI",
-   "h": "DET",
-   "day": "2026-11-26",
-   "time": "13:00",
-   "leans": [
-    {
-     "player": "Caleb Williams",
-     "team": "CHI",
-     "pos": "QB",
-     "stat": "pass_yds",
-     "line": 269.5,
-     "proj": 238.0,
-     "p_over": 0.342,
-     "conf": 0.579,
-     "side": "Under",
-     "games": 7
-    },
-    {
-     "player": "Jared Goff",
-     "team": "DET",
-     "pos": "QB",
-     "stat": "pass_yds",
-     "line": 275.5,
-     "proj": 271.0,
-     "p_over": 0.386,
-     "conf": 0.557,
-     "side": "Under",
-     "games": 10
-    },
-    {
-     "player": "Sam LaPorta",
-     "team": "DET",
-     "pos": "TE",
-     "stat": "rec_yds",
-     "line": 46.5,
-     "proj": 43.6,
-     "p_over": 0.395,
-     "conf": 0.553,
-     "side": "Under",
-     "games": 10
-    }
-   ],
-   "td": [
-    {
-     "player": "Jahmyr Gibbs",
-     "team": "DET",
-     "pos": "RB",
-     "p": 0.757
-    },
-    {
-     "player": "D'Andre Swift",
-     "team": "CHI",
-     "pos": "RB",
-     "p": 0.639
-    }
-   ]
-  },
   {
    "id": "2026_12_PHI_DAL",
    "a": "PHI",
