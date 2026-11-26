@@ -239,6 +239,26 @@ const groupRow = (n, title, sub) => '<tr class="grouprow"><td class="l" colspan=
 const showMoreBtn = (id, label) => '<button class="btn ghost small morebtn" id="' + id + '">' + label + '</button>';
 const jumpNav = (items) => '<nav class="jump" aria-label="On this page"><span class="muted small">Jump to</span>' + items.map(([id, label]) => '<button data-jump="' + id + '">' + label + '</button>').join('') + '</nav>';
 function wireJump(el) { el.querySelectorAll('[data-jump]').forEach((b) => b.onclick = () => { const t = document.getElementById(b.dataset.jump); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }); }
+// players to watch: data/news.json "watch", each tied to a game id, shown only until that game is final
+const watchFor = (pred) => (NEWS.watch || []).map((w) => ({ ...w, g: gameById(w.game) })).filter((w) => w.g && !w.g.done && (!pred || pred(w))).sort((x, y) => gameKey(x.g).localeCompare(gameKey(y.g)));
+const watchChip = (st) => '<span class="wchip w-' + st.toLowerCase().replace(/[^a-z]/g, '') + '">' + esc(st) + '</span>';
+const SITE_ABS = '__SITE__';
+function pickText(g) {
+  const pH = g.p, c = Math.max(pH, 1 - pH), pick = pH >= 0.5 ? g.h : g.a;
+  return 'Week ' + g.wk + ': ' + nick(g.a) + ' at ' + nick(g.h) + ', ' + kick(g) + ' ET\nModel pick: ' + pick + ' (' + pct(c) + ', ' + winTag(c) + ')\nModel line ' + fmtLine(g.a, g.h, g.m).replace(/<[^>]+>/g, '') + ', total ' + half(g.tot).toFixed(1) + '\n' + SITE_ABS + 'games/' + gameSlug(g) + '.html';
+}
+async function copyText(t) {
+  try { await navigator.clipboard.writeText(t); return true; } catch (e) {
+    const ta = document.createElement('textarea'); ta.value = t; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0'; document.body.appendChild(ta); ta.select();
+    let ok = false; try { ok = document.execCommand('copy'); } catch (e2) { ok = false; } ta.remove(); return ok;
+  }
+}
+document.addEventListener('click', async (e) => {
+  const b = e.target.closest('[data-copy]'); if (!b) return;
+  const g = gameById(b.dataset.copy); if (!g) return;
+  const ok = await copyText(pickText(g)), old = b.textContent;
+  b.textContent = ok ? 'Copied ✓' : 'Couldn’t copy'; b.classList.add('done'); setTimeout(() => { b.textContent = old; b.classList.remove('done'); }, 1600);
+});
 const wlTxt = (xs, winKey) => { const w = xs.filter((x) => winKey(x) === true).length, l = xs.filter((x) => winKey(x) === false).length; return w + '–' + l; };
 const esc = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const lastName = (n) => n ? String(n).split(' ').slice(1).join(' ') || n : '?';
@@ -301,7 +321,7 @@ function gameCard(g) {
     '<div class="mkrow num"><span>Model <b>' + fmtLine(g.a, g.h, g.m) + '</b>, total <b>' + half(g.tot).toFixed(1) + '</b></span>' +
     (g.mk_spread != null ? '<span>Market <b>' + fmtLine(g.a, g.h, g.mk_spread) + '</b>, total <b>' + g.mk_total + '</b>' + (mp != null ? ' (' + (mp >= 0.5 ? g.h + ' ' + pct(mp) : g.a + ' ' + pct(1 - mp)) + ')' : '') + '</span>' : '') + '</div>';
   const kf = keyFactors(g.c, g.a, g.h);
-  h += '<p class="small"><a href="' + BASE + 'games/' + gameSlug(g) + '.html"' + (BASE ? ' target="_blank" rel="noopener"' : '') + '>Full preview</a></p>';
+  h += '<p class="small cardlinks"><a href="' + BASE + 'games/' + gameSlug(g) + '.html"' + (BASE ? ' target="_blank" rel="noopener"' : '') + '>Full preview</a>' + (g.done ? '' : '<button class="copybtn" data-copy="' + g.id + '" title="Copy a short post with the pick and a link">Copy pick</button>') + '</p>';
   h += '<details class="factors"><summary><span>' + (kf ? esc(kf) : 'Why the model leans this way') + '</span></summary>' + factorList(g.c, g.a, g.h) + '</details>';
   if (g.done) {
     const pickHome = pH >= 0.5, tie = g.hs === g.as, homeWon = g.hs > g.as;
@@ -336,6 +356,7 @@ function renderWeek() {
     '<div><h2>Week ' + viewWeek + '</h2><p class="muted small">' + dayFmt(first) + ' – ' + dayFmt(last) + (viewWeek === currentWeek ? ' · this week' : '') + '</p></div>' +
     '<button class="iconbtn" id="wk-next" aria-label="Next week"' + (viewWeek >= 18 ? ' disabled' : '') + '>›</button></div>' +
     '<p class="week-summary">' + summary + '</p>' +
+    (() => { const ws = watchFor((w) => w.g.wk === viewWeek); return ws.length ? '<div class="watchstrip"><span class="label">Status to watch</span>' + ws.map((w) => '<span class="witem">' + watchChip(w.status) + ' <b>' + esc(w.player) + '</b> <span class="muted">' + w.team + ' · ' + kick(w.g) + '</span></span>').join('') + '<a class="small" href="#news">Details in News</a></div>' : ''; })() +
     '<div class="games">' + wkGames.map((g, i) => (i === 0 || g.day !== wkGames[i - 1].day ? '<h3 class="dayhead">' + longDay(g) + ' <span class="muted small">' + wkGames.filter((x) => x.day === g.day).length + ' game' + (wkGames.filter((x) => x.day === g.day).length > 1 ? 's' : '') + '</span></h3>' : '') + gameCard(g)).join('') + '</div>' +
     (byes.length ? '<p class="muted small">Bye: ' + byes.join(', ') + '</p>' : '') +
     '<p class="notice">From Week ' + LOCK_START + ' on, every pick is locked at kickoff and never changed afterward. Earlier games show the pick the model would have made before kickoff, using only earlier data. Market lines are closing spreads and totals. Upcoming games use today’s starting quarterbacks, injuries and the latest news (see the <a href="#news">News</a> tab).' + (viewWeek > DATA.cw ? ' Win chances this far out are pulled toward 50%, because ratings, quarterbacks and injuries will change before kickoff.' : '') + '</p>';
@@ -771,6 +792,8 @@ function renderFantasy() {
     body = marketHtml();
   } else if (fanView === 'trade') {
     body = tradeHtml();
+  } else if (fanView === 'startsit') {
+    body = startSitHtml();
   } else if (fanView === 'waiver') {
     body = '<div class="panel"><div class="panel-head"><h3>Usage risers</h3><span class="muted small">Targets + carries per game, last 2 vs. earlier</span></div><div class="tablewrap"><table class="ptable"><thead><tr><th class="l">Player</th><th>Before</th><th>Last 2</th><th>Change</th></tr></thead><tbody>' +
       FAN.risers.map((r) => '<tr><td class="l"><span class="pname">' + esc(r.name) + '</span><span class="ppos pos-' + r.pos + '">' + r.pos + ' · ' + r.team + '</span></td><td>' + r.before.toFixed(1) + '</td><td><b>' + r.recent.toFixed(1) + '</b></td><td class="rank-good">+' + r.jump.toFixed(1) + '</td></tr>').join('') +
@@ -789,7 +812,7 @@ function renderFantasy() {
     body = '<label class="field" style="max-width:360px"><span class="label">Game</span><select id="fan-game">' + gl.map((x) => '<option value="' + x.id + '"' + (x.id === g.id ? ' selected' : '') + '>Wk ' + x.wk + ': ' + x.a + ' @ ' + x.h + '</option>').join('') + '</select></label>' + team(g.a) + team(g.h);
   }
   el.innerHTML = '<div><h2>Fantasy</h2><p class="intro">Projections from each player’s recent workload and efficiency, adjusted for the opponent and pulled toward realistic ranges. Players ruled out on the injury report or in the latest news are left off.</p></div>' +
-    '<div class="controls">' + seg('fview', fanView, [['rank', 'This week'], ['ros', 'Rest of season'], ['value', 'Buy low / sell high'], ['trade', 'Trade calculator'], ['waiver', 'Waivers'], ['game', 'By game']]) + seg('fmt', fmt, [['ppr', 'PPR'], ['half', 'Half'], ['std', 'Std']]) + '</div>' + body +
+    '<div class="controls">' + seg('fview', fanView, [['rank', 'This week'], ['startsit', 'Start / sit'], ['ros', 'Rest of season'], ['value', 'Buy low / sell high'], ['trade', 'Trade calculator'], ['waiver', 'Waivers'], ['game', 'By game']]) + seg('fmt', fmt, [['ppr', 'PPR'], ['half', 'Half'], ['std', 'Std']]) + '</div>' + body +
     '<p class="notice">Tested on Weeks 4–9, the projections missed by about ' + PL.bt.rec_yds.model_mae + ' receiving yards per player (a plain season average missed by ' + PL.bt.rec_yds.naive_mae + ') and ' + PL.bt.rush_yds.model_mae + ' rushing yards (vs ' + PL.bt.rush_yds.naive_mae + '). Single-game fantasy scores swing a lot, so use these for close calls, not as locks.</p>';
   el.querySelectorAll('[data-fview]').forEach((b) => b.onclick = () => { fanView = b.dataset.fview; renderFantasy(); });
   el.querySelectorAll('[data-fmt]').forEach((b) => b.onclick = () => { fmt = b.dataset.fmt; prefs.set('fmt', fmt); renderFantasy(); });
@@ -813,7 +836,11 @@ function renderNews() {
   }).join('');
   el.innerHTML = '<div><h2>News</h2><p class="intro">What changed since the last games, and how the model is handling it. As of ' + esc(NEWS.asof) + '.</p></div>' +
     '<label class="field" style="max-width:300px"><span class="label">Team</span><select id="news-team"><option value="ALL">All teams</option>' + TEAMS.map((t) => '<option value="' + t + '"' + (t === newsTeam ? ' selected' : '') + '>' + esc(full(t)) + '</option>').join('') + '</select></label>' +
-    jumpNav([['nw-head', 'Headlines'], ['nw-qb', 'Starting QBs'], ['nw-inj', 'Injured regulars']]) +
+    jumpNav([...(watchFor().length ? [['nw-watch', 'Status to watch']] : []), ['nw-head', 'Headlines'], ['nw-qb', 'Starting QBs'], ['nw-inj', 'Injured regulars']]) +
+    (() => { const ws = watchFor((w) => newsTeam === 'ALL' || w.team === newsTeam || w.g.a === newsTeam || w.g.h === newsTeam); return ws.length ? '<div class="panel" id="nw-watch"><div class="panel-head"><h3>Status to watch</h3><span class="muted small">Open questions before kickoff</span></div>' +
+      '<div class="wlist">' + ws.map((w) => '<div class="wrow">' + watchChip(w.status) + '<div><p><span class="pname">' + esc(w.player) + '</span><span class="ppos pos-' + esc(w.pos) + '">' + esc(w.pos) + ' · ' + w.team + '</span> <span class="muted small nw">' + w.g.a + ' @ ' + w.g.h + ' · ' + kick(w.g) + '</span></p>' +
+        '<p class="small">' + esc(w.note) + ' <span class="muted">(' + esc(w.src) + ')</span></p></div></div>').join('') +
+      '</div><p class="muted small" style="margin-top:8px">Each player drops off once his game is final. The model assumes questionable players play.</p></div>' : ''; })() +
     '<div class="panel" id="nw-head"><div class="panel-head"><h3>Headlines that move the numbers</h3><span class="muted small">Newest first</span></div>' +
     (items.length ? items.slice(0, ui.newsMore ? 999 : 15).map((n) => '<div class="prow" style="display:block"><p><span class="tag" style="margin-right:6px">' + esc(n.tag) + '</span><b>' + n.team + '</b> ' + esc(n.text) + '</p><p class="muted small" style="margin-top:4px"><a href="' + esc(n.url) + '" target="_blank" rel="noopener">' + esc(n.src) + '</a></p></div>').join('') + (items.length > 15 ? showMoreBtn('news-more', ui.newsMore ? 'Show the latest 15 only' : 'Show ' + (items.length - 15) + ' older headlines') : '') : '<p class="muted">No headlines for this team.</p>') + '</div>' +
     '<div class="panel" id="nw-qb"><div class="panel-head"><h3>Starting quarterbacks</h3><span class="muted small">What the model assumes</span></div><div class="tablewrap"><table class="ptable"><thead><tr><th class="l">Team</th><th class="l">Starter</th><th>EPA/db</th><th class="l">Note</th></tr></thead><tbody>' + qbRows + '</tbody></table></div></div>' +

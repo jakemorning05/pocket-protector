@@ -345,6 +345,38 @@ svg.chart .hit { fill: transparent; }
 .games .dayhead:first-child { margin-top: 0; }
 @media (max-width: 720px) { .panel[id] { scroll-margin-top: 100px; } }
 .ptable tr.btnrow td { padding: 4px 0 8px; border: 0; }
+/* Status to watch + copy pick */
+.watchstrip { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin: 0 0 14px; padding: 10px 14px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); font-size: 0.86rem; }
+.watchstrip .label { margin-right: 2px; }
+.witem { white-space: nowrap; }
+.wchip { display: inline-block; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; padding: 2px 8px; border-radius: 999px; background: var(--surface-2); color: var(--ink-2); }
+.wchip.w-protocol, .wchip.w-dnpwed { background: color-mix(in oklab, var(--pen-pink) 18%, var(--surface)); color: var(--pen-pink); }
+.wchip.w-questionable, .wchip.w-limited { background: color-mix(in oklab, var(--pen-orange) 18%, var(--surface)); color: var(--pen-orange); }
+.wchip.w-expectedtostart, .wchip.w-newstarter { background: color-mix(in oklab, var(--pen-mint) 16%, var(--surface)); color: var(--pen-mint); }
+.wlist { display: grid; }
+.wrow { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 4px 12px; align-items: start; padding: 10px 0; border-top: 1px solid var(--line); }
+.wrow:first-child { border-top: 0; padding-top: 2px; }
+.wrow .wchip { justify-self: start; margin-top: 3px; }
+.wrow .ppos { margin-left: 6px; }
+.wrow p { margin: 0; } .wrow p + p { margin-top: 3px; color: var(--ink-2); }
+@media (max-width: 560px) { .wrow { grid-template-columns: minmax(0, 1fr); } }
+.cardlinks { display: flex; align-items: center; gap: 14px; }
+.copybtn { border: 1px solid var(--line-strong); background: none; color: var(--ink-2); border-radius: 999px; padding: 3px 11px; font-weight: 700; font-size: 0.78rem; cursor: pointer; }
+.copybtn:hover { color: var(--ink); border-color: var(--ink-2); }
+.copybtn.done { border-color: var(--pen-mint); color: var(--pen-mint); }
+/* Start / sit */
+.ssgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 12px; margin: 6px 0 14px; }
+.sscard { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 14px 16px; display: flex; flex-direction: column; gap: 8px; }
+.sscard.top { border-color: var(--accent); }
+.sshead { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; }
+.ssbadge { margin-left: auto; font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; padding: 2px 9px; border-radius: 999px; background: var(--surface-2); color: var(--muted); }
+.ssbadge.start { background: var(--accent); color: var(--on-accent); }
+.sspts { display: flex; align-items: baseline; gap: 8px; }
+.sspts b { font-family: var(--font-display); font-size: 2.1rem; line-height: 1; }
+.ssdl { display: grid; grid-template-columns: auto 1fr; gap: 4px 10px; margin: 0; font-size: 0.86rem; }
+.ssdl dt { color: var(--muted); font-weight: 700; }
+.ssdl dd { margin: 0; color: var(--ink-2); }
+.sscard .linkbtn { align-self: flex-start; margin-top: auto; }
 /* Draft tab */
 .draftbar { display: flex; flex-wrap: wrap; align-items: end; gap: 10px 14px; }
 .draftbar .field { flex: 1 1 240px; max-width: 360px; }
@@ -7686,7 +7718,99 @@ const NEWS = {
    "snap": 1.0
   }
  ],
- "injury_week": 12
+ "injury_week": 12,
+ "watch": [
+  {
+   "player": "Dalton Kincaid",
+   "team": "BUF",
+   "pos": "TE",
+   "game": "2026_12_KC_BUF",
+   "status": "Questionable",
+   "note": "Thumb and ankle; limited all week",
+   "src": "NFL.com Week 12 injury report, Nov 25"
+  },
+  {
+   "player": "Mason Rudolph",
+   "team": "PIT",
+   "pos": "QB",
+   "game": "2026_12_DEN_PIT",
+   "status": "New starter",
+   "note": "First start since the Steelers released Aaron Rodgers",
+   "src": "NFL.com and AP, Nov 25"
+  },
+  {
+   "player": "Derrick Henry",
+   "team": "BAL",
+   "pos": "RB",
+   "game": "2026_12_BAL_HOU",
+   "status": "Protocol",
+   "note": "Back in the concussion protocol, limited Wednesday; coach expects him to play",
+   "src": "AP, Nov 25"
+  },
+  {
+   "player": "Woody Marks",
+   "team": "HOU",
+   "pos": "RB",
+   "game": "2026_12_BAL_HOU",
+   "status": "Protocol",
+   "note": "Full practice Wednesday; still has to clear the concussion protocol",
+   "src": "CBS Sports, Nov 25"
+  },
+  {
+   "player": "Danielle Hunter",
+   "team": "HOU",
+   "pos": "DE",
+   "game": "2026_12_BAL_HOU",
+   "status": "DNP Wed",
+   "note": "Hamstring; didn't practice Wednesday",
+   "src": "NFL practice report, Nov 25"
+  },
+  {
+   "player": "Justin Herbert",
+   "team": "LAC",
+   "pos": "QB",
+   "game": "2026_12_NE_LAC",
+   "status": "Protocol",
+   "note": "Concussion protocol; sat out Wednesday's practice",
+   "src": "CBS Sports, Nov 25"
+  },
+  {
+   "player": "Brock Purdy",
+   "team": "SF",
+   "pos": "QB",
+   "game": "2026_12_SEA_SF",
+   "status": "DNP Wed",
+   "note": "Ankle; missed Wednesday's practice",
+   "src": "CBS Sports, Nov 25"
+  },
+  {
+   "player": "Sam Darnold",
+   "team": "SEA",
+   "pos": "QB",
+   "game": "2026_12_SEA_SF",
+   "status": "Expected to start",
+   "note": "Back at practice after missing two games",
+   "src": "Kicks and Grips, Nov 25"
+  },
+  {
+   "player": "Carson Beck",
+   "team": "ARI",
+   "pos": "QB",
+   "game": "2026_12_WAS_ARI",
+   "status": "DNP Wed",
+   "note": "Back; Josh Johnson is expected to start again",
+   "src": "Kicks and Grips, Nov 25"
+  },
+  {
+   "player": "Brock Bowers",
+   "team": "LV",
+   "pos": "TE",
+   "game": "2026_12_LV_CLE",
+   "status": "Limited",
+   "note": "Ankle; Raiders optimistic he plays, may need a full practice by Friday",
+   "src": "CBS Sports, Nov 25"
+  }
+ ]
 };
 const PICKS = {
 "2026_09_BUF_MIN": {
@@ -11449,6 +11573,26 @@ const groupRow = (n, title, sub) => '<tr class="grouprow"><td class="l" colspan=
 const showMoreBtn = (id, label) => '<button class="btn ghost small morebtn" id="' + id + '">' + label + '</button>';
 const jumpNav = (items) => '<nav class="jump" aria-label="On this page"><span class="muted small">Jump to</span>' + items.map(([id, label]) => '<button data-jump="' + id + '">' + label + '</button>').join('') + '</nav>';
 function wireJump(el) { el.querySelectorAll('[data-jump]').forEach((b) => b.onclick = () => { const t = document.getElementById(b.dataset.jump); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }); }
+// players to watch: data/news.json "watch", each tied to a game id, shown only until that game is final
+const watchFor = (pred) => (NEWS.watch || []).map((w) => ({ ...w, g: gameById(w.game) })).filter((w) => w.g && !w.g.done && (!pred || pred(w))).sort((x, y) => gameKey(x.g).localeCompare(gameKey(y.g)));
+const watchChip = (st) => '<span class="wchip w-' + st.toLowerCase().replace(/[^a-z]/g, '') + '">' + esc(st) + '</span>';
+const SITE_ABS = 'https://jakemorning05.github.io/pocket-protector/';
+function pickText(g) {
+  const pH = g.p, c = Math.max(pH, 1 - pH), pick = pH >= 0.5 ? g.h : g.a;
+  return 'Week ' + g.wk + ': ' + nick(g.a) + ' at ' + nick(g.h) + ', ' + kick(g) + ' ET\nModel pick: ' + pick + ' (' + pct(c) + ', ' + winTag(c) + ')\nModel line ' + fmtLine(g.a, g.h, g.m).replace(/<[^>]+>/g, '') + ', total ' + half(g.tot).toFixed(1) + '\n' + SITE_ABS + 'games/' + gameSlug(g) + '.html';
+}
+async function copyText(t) {
+  try { await navigator.clipboard.writeText(t); return true; } catch (e) {
+    const ta = document.createElement('textarea'); ta.value = t; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0'; document.body.appendChild(ta); ta.select();
+    let ok = false; try { ok = document.execCommand('copy'); } catch (e2) { ok = false; } ta.remove(); return ok;
+  }
+}
+document.addEventListener('click', async (e) => {
+  const b = e.target.closest('[data-copy]'); if (!b) return;
+  const g = gameById(b.dataset.copy); if (!g) return;
+  const ok = await copyText(pickText(g)), old = b.textContent;
+  b.textContent = ok ? 'Copied ✓' : 'Couldn’t copy'; b.classList.add('done'); setTimeout(() => { b.textContent = old; b.classList.remove('done'); }, 1600);
+});
 const wlTxt = (xs, winKey) => { const w = xs.filter((x) => winKey(x) === true).length, l = xs.filter((x) => winKey(x) === false).length; return w + '–' + l; };
 const esc = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const lastName = (n) => n ? String(n).split(' ').slice(1).join(' ') || n : '?';
@@ -11511,7 +11655,7 @@ function gameCard(g) {
     '<div class="mkrow num"><span>Model <b>' + fmtLine(g.a, g.h, g.m) + '</b>, total <b>' + half(g.tot).toFixed(1) + '</b></span>' +
     (g.mk_spread != null ? '<span>Market <b>' + fmtLine(g.a, g.h, g.mk_spread) + '</b>, total <b>' + g.mk_total + '</b>' + (mp != null ? ' (' + (mp >= 0.5 ? g.h + ' ' + pct(mp) : g.a + ' ' + pct(1 - mp)) + ')' : '') + '</span>' : '') + '</div>';
   const kf = keyFactors(g.c, g.a, g.h);
-  h += '<p class="small"><a href="' + BASE + 'games/' + gameSlug(g) + '.html"' + (BASE ? ' target="_blank" rel="noopener"' : '') + '>Full preview</a></p>';
+  h += '<p class="small cardlinks"><a href="' + BASE + 'games/' + gameSlug(g) + '.html"' + (BASE ? ' target="_blank" rel="noopener"' : '') + '>Full preview</a>' + (g.done ? '' : '<button class="copybtn" data-copy="' + g.id + '" title="Copy a short post with the pick and a link">Copy pick</button>') + '</p>';
   h += '<details class="factors"><summary><span>' + (kf ? esc(kf) : 'Why the model leans this way') + '</span></summary>' + factorList(g.c, g.a, g.h) + '</details>';
   if (g.done) {
     const pickHome = pH >= 0.5, tie = g.hs === g.as, homeWon = g.hs > g.as;
@@ -11546,6 +11690,7 @@ function renderWeek() {
     '<div><h2>Week ' + viewWeek + '</h2><p class="muted small">' + dayFmt(first) + ' – ' + dayFmt(last) + (viewWeek === currentWeek ? ' · this week' : '') + '</p></div>' +
     '<button class="iconbtn" id="wk-next" aria-label="Next week"' + (viewWeek >= 18 ? ' disabled' : '') + '>›</button></div>' +
     '<p class="week-summary">' + summary + '</p>' +
+    (() => { const ws = watchFor((w) => w.g.wk === viewWeek); return ws.length ? '<div class="watchstrip"><span class="label">Status to watch</span>' + ws.map((w) => '<span class="witem">' + watchChip(w.status) + ' <b>' + esc(w.player) + '</b> <span class="muted">' + w.team + ' · ' + kick(w.g) + '</span></span>').join('') + '<a class="small" href="#news">Details in News</a></div>' : ''; })() +
     '<div class="games">' + wkGames.map((g, i) => (i === 0 || g.day !== wkGames[i - 1].day ? '<h3 class="dayhead">' + longDay(g) + ' <span class="muted small">' + wkGames.filter((x) => x.day === g.day).length + ' game' + (wkGames.filter((x) => x.day === g.day).length > 1 ? 's' : '') + '</span></h3>' : '') + gameCard(g)).join('') + '</div>' +
     (byes.length ? '<p class="muted small">Bye: ' + byes.join(', ') + '</p>' : '') +
     '<p class="notice">From Week ' + LOCK_START + ' on, every pick is locked at kickoff and never changed afterward. Earlier games show the pick the model would have made before kickoff, using only earlier data. Market lines are closing spreads and totals. Upcoming games use today’s starting quarterbacks, injuries and the latest news (see the <a href="#news">News</a> tab).' + (viewWeek > DATA.cw ? ' Win chances this far out are pulled toward 50%, because ratings, quarterbacks and injuries will change before kickoff.' : '') + '</p>';
@@ -12038,7 +12183,51 @@ function tradeHtml() {
     (g.length || r.length ? '<p><button class="linkbtn" id="tr-clear">Clear trade</button></p>' : '') +
     '<p class="muted small">Value is a player’s projected rest-of-season points above the kind of starter you could find on waivers in a 12-team league, scaled so the most valuable player is 100. It follows the scoring format above. Injured players who are out of the projections aren’t listed. It doesn’t know your roster, so a trade that fills a hole in your lineup is worth more to you than the numbers say.</p>';
 }
+// ---------- start/sit: 2-4 players side by side for one week ----------
+let ss = prefs.get('ss', []);
+function startSitHtml() {
+  const rows = FAN.games.filter((r) => r.wk === fanWeek);
+  const byId = Object.fromEntries(rows.map((r) => [r.id, r]));
+  const picked = ss.map((id) => byId[id]).filter(Boolean).map((r) => ({ ...r, pts: fp(r), g: games.find((x) => x.id === r.game) }));
+  const missing = ss.filter((id) => !byId[id]).length;
+  const taken = new Set(ss);
+  const options = ['QB', 'RB', 'WR', 'TE'].map((pos) => '<optgroup label="' + pos + '">' + rows.filter((r) => r.pos === pos && !taken.has(r.id)).map((r) => ({ ...r, pts: fp(r) })).sort((a, b) => b.pts - a.pts)
+    .map((r) => '<option value="' + r.id + '">' + esc(r.name) + ' (' + r.team + ') · ' + r.pts.toFixed(1) + '</option>').join('') + '</optgroup>').join('');
+  const order = picked.slice().sort((a, b) => b.pts - a.pts);
+  const card = (r) => {
+    const rank = order.indexOf(r), home = r.g && r.g.h === r.team, started = r.g && (r.g.done || kickDate(r.g) <= new Date());
+    const work = r.pos === 'QB' ? Math.round(r.att || 0) + ' pass att' : (r.targets ? r.targets.toFixed(1) + ' targets' : '') + (r.targets && r.carries ? ', ' : '') + (r.carries ? r.carries.toFixed(1) + ' carries' : '');
+    return '<div class="sscard' + (rank === 0 && order.length > 1 ? ' top' : '') + '">' +
+      '<div class="sshead"><span class="pname">' + esc(r.name) + '</span><span class="ppos pos-' + r.pos + '">' + r.pos + ' · ' + r.team + '</span>' +
+      (order.length > 1 ? '<span class="ssbadge ' + (rank === 0 ? 'start' : '') + '">' + (rank === 0 ? 'Start' : 'Sit') + '</span>' : '') + '</div>' +
+      '<div class="sspts num"><b>' + r.pts.toFixed(1) + '</b><span class="muted small">projected pts</span></div>' +
+      '<dl class="ssdl"><dt>Matchup</dt><dd>' + (home ? 'vs ' : '@ ') + r.opp + (r.g ? ' · ' + (started ? (r.g.done ? 'final' : 'started') : kick(r.g)) : '') + '</dd>' +
+      '<dt>Projection</dt><dd>' + statLine(r) + '</dd>' + (work ? '<dt>Workload</dt><dd>' + work + '</dd>' : '') +
+      '<dt>Any TD</dt><dd>' + pct(r.td_p || 0) + '</dd>' +
+      (r.flag || r.q ? '<dt>News</dt><dd>' + (r.flag ? esc(r.flag) : 'Questionable on the last injury report') + '</dd>' : '') + '</dl>' +
+      '<button class="linkbtn" data-ssrm="' + r.id + '">Remove</button></div>';
+  };
+  let verdict = '';
+  if (order.length >= 2) {
+    const [a, b] = order, d = a.pts - b.pts;
+    verdict = '<div class="panel"><p><b>' + (d < 1.5 ? 'Close call.' : 'Start ' + esc(a.name) + '.') + '</b> ' +
+      (d < 1.5 ? esc(a.name) + ' projects just ' + d.toFixed(1) + ' more points than ' + esc(b.name) + ', which is well inside a normal week’s swing. Go with the better matchup, the safer role, or the one with less injury risk.'
+        : esc(a.name) + ' projects ' + d.toFixed(1) + ' more points than ' + esc(b.name) + ' in ' + ({ ppr: 'PPR', half: 'half-PPR', std: 'standard' })[fmt] + ' scoring.') +
+      (order.length > 2 ? ' Best to worst: ' + order.map((r) => esc(r.name) + ' ' + r.pts.toFixed(1)).join(', ') + '.' : '') + '</p></div>';
+  }
+  return '<div class="controls">' + '<div class="seg" role="group" aria-label="fwk">' + (FAN_LATE ? [[FAN.cw + 1, 'Week ' + (FAN.cw + 1)], [FAN.cw, 'Wk ' + FAN.cw + ' (MNF)']] : [[FAN.cw, 'Week ' + FAN.cw], [FAN.cw + 1, 'Week ' + (FAN.cw + 1)]]).map(([k, l]) => '<button data-fwk="' + k + '" aria-pressed="' + (k === fanWeek) + '">' + l + '</button>').join('') + '</div></div>' +
+    (picked.length ? '<div class="ssgrid">' + picked.map(card).join('') + '</div>' : '<p class="muted" style="margin:6px 0 12px">Pick two to four players to compare for Week ' + fanWeek + '.</p>') +
+    (missing ? '<p class="muted small">' + missing + ' of your players ' + (missing > 1 ? 'aren’t' : 'isn’t') + ' projected in Week ' + fanWeek + ' (bye, ruled out or traded).</p>' : '') +
+    verdict +
+    (picked.length < 4 ? '<label class="field" style="max-width:420px"><span class="label">' + (picked.length ? 'Add another player' : 'Add a player') + '</span><select id="ss-add"><option value="">Choose…</option>' + options + '</select></label>' : '') +
+    (ss.length ? '<p><button class="linkbtn" id="ss-clear">Clear</button></p>' : '') +
+    '<p class="muted small" style="margin-top:8px;max-width:64ch">Projected points follow the scoring format above and work across positions, so it handles flex and superflex calls too. Projections are averages: when two players are within about a point and a half, the matchup and the news matter more than the gap.</p>';
+}
 function wireFantasyExtra(el) {
+  const ssAdd = el.querySelector('#ss-add');
+  if (ssAdd) ssAdd.onchange = (e) => { if (e.target.value) { ss = [...ss.filter((id) => FAN.games.some((r) => r.id === id && r.wk === fanWeek)), e.target.value].slice(-4); prefs.set('ss', ss); renderFantasy(); } };
+  el.querySelectorAll('[data-ssrm]').forEach((b) => b.onclick = () => { ss = ss.filter((x) => x !== b.dataset.ssrm); prefs.set('ss', ss); renderFantasy(); });
+  const ssc = el.querySelector('#ss-clear'); if (ssc) ssc.onclick = () => { ss = []; prefs.set('ss', ss); renderFantasy(); };
   for (const key of ['give', 'get']) {
     const sel = el.querySelector('#tr-add-' + key);
     if (sel) sel.onchange = (e) => { if (e.target.value) { trade[key].push(e.target.value); prefs.set('trade', trade); renderFantasy(); } };
@@ -12071,6 +12260,8 @@ function renderFantasy() {
     body = marketHtml();
   } else if (fanView === 'trade') {
     body = tradeHtml();
+  } else if (fanView === 'startsit') {
+    body = startSitHtml();
   } else if (fanView === 'waiver') {
     body = '<div class="panel"><div class="panel-head"><h3>Usage risers</h3><span class="muted small">Targets + carries per game, last 2 vs. earlier</span></div><div class="tablewrap"><table class="ptable"><thead><tr><th class="l">Player</th><th>Before</th><th>Last 2</th><th>Change</th></tr></thead><tbody>' +
       FAN.risers.map((r) => '<tr><td class="l"><span class="pname">' + esc(r.name) + '</span><span class="ppos pos-' + r.pos + '">' + r.pos + ' · ' + r.team + '</span></td><td>' + r.before.toFixed(1) + '</td><td><b>' + r.recent.toFixed(1) + '</b></td><td class="rank-good">+' + r.jump.toFixed(1) + '</td></tr>').join('') +
@@ -12089,7 +12280,7 @@ function renderFantasy() {
     body = '<label class="field" style="max-width:360px"><span class="label">Game</span><select id="fan-game">' + gl.map((x) => '<option value="' + x.id + '"' + (x.id === g.id ? ' selected' : '') + '>Wk ' + x.wk + ': ' + x.a + ' @ ' + x.h + '</option>').join('') + '</select></label>' + team(g.a) + team(g.h);
   }
   el.innerHTML = '<div><h2>Fantasy</h2><p class="intro">Projections from each player’s recent workload and efficiency, adjusted for the opponent and pulled toward realistic ranges. Players ruled out on the injury report or in the latest news are left off.</p></div>' +
-    '<div class="controls">' + seg('fview', fanView, [['rank', 'This week'], ['ros', 'Rest of season'], ['value', 'Buy low / sell high'], ['trade', 'Trade calculator'], ['waiver', 'Waivers'], ['game', 'By game']]) + seg('fmt', fmt, [['ppr', 'PPR'], ['half', 'Half'], ['std', 'Std']]) + '</div>' + body +
+    '<div class="controls">' + seg('fview', fanView, [['rank', 'This week'], ['startsit', 'Start / sit'], ['ros', 'Rest of season'], ['value', 'Buy low / sell high'], ['trade', 'Trade calculator'], ['waiver', 'Waivers'], ['game', 'By game']]) + seg('fmt', fmt, [['ppr', 'PPR'], ['half', 'Half'], ['std', 'Std']]) + '</div>' + body +
     '<p class="notice">Tested on Weeks 4–9, the projections missed by about ' + PL.bt.rec_yds.model_mae + ' receiving yards per player (a plain season average missed by ' + PL.bt.rec_yds.naive_mae + ') and ' + PL.bt.rush_yds.model_mae + ' rushing yards (vs ' + PL.bt.rush_yds.naive_mae + '). Single-game fantasy scores swing a lot, so use these for close calls, not as locks.</p>';
   el.querySelectorAll('[data-fview]').forEach((b) => b.onclick = () => { fanView = b.dataset.fview; renderFantasy(); });
   el.querySelectorAll('[data-fmt]').forEach((b) => b.onclick = () => { fmt = b.dataset.fmt; prefs.set('fmt', fmt); renderFantasy(); });
@@ -12113,7 +12304,11 @@ function renderNews() {
   }).join('');
   el.innerHTML = '<div><h2>News</h2><p class="intro">What changed since the last games, and how the model is handling it. As of ' + esc(NEWS.asof) + '.</p></div>' +
     '<label class="field" style="max-width:300px"><span class="label">Team</span><select id="news-team"><option value="ALL">All teams</option>' + TEAMS.map((t) => '<option value="' + t + '"' + (t === newsTeam ? ' selected' : '') + '>' + esc(full(t)) + '</option>').join('') + '</select></label>' +
-    jumpNav([['nw-head', 'Headlines'], ['nw-qb', 'Starting QBs'], ['nw-inj', 'Injured regulars']]) +
+    jumpNav([...(watchFor().length ? [['nw-watch', 'Status to watch']] : []), ['nw-head', 'Headlines'], ['nw-qb', 'Starting QBs'], ['nw-inj', 'Injured regulars']]) +
+    (() => { const ws = watchFor((w) => newsTeam === 'ALL' || w.team === newsTeam || w.g.a === newsTeam || w.g.h === newsTeam); return ws.length ? '<div class="panel" id="nw-watch"><div class="panel-head"><h3>Status to watch</h3><span class="muted small">Open questions before kickoff</span></div>' +
+      '<div class="wlist">' + ws.map((w) => '<div class="wrow">' + watchChip(w.status) + '<div><p><span class="pname">' + esc(w.player) + '</span><span class="ppos pos-' + esc(w.pos) + '">' + esc(w.pos) + ' · ' + w.team + '</span> <span class="muted small nw">' + w.g.a + ' @ ' + w.g.h + ' · ' + kick(w.g) + '</span></p>' +
+        '<p class="small">' + esc(w.note) + ' <span class="muted">(' + esc(w.src) + ')</span></p></div></div>').join('') +
+      '</div><p class="muted small" style="margin-top:8px">Each player drops off once his game is final. The model assumes questionable players play.</p></div>' : ''; })() +
     '<div class="panel" id="nw-head"><div class="panel-head"><h3>Headlines that move the numbers</h3><span class="muted small">Newest first</span></div>' +
     (items.length ? items.slice(0, ui.newsMore ? 999 : 15).map((n) => '<div class="prow" style="display:block"><p><span class="tag" style="margin-right:6px">' + esc(n.tag) + '</span><b>' + n.team + '</b> ' + esc(n.text) + '</p><p class="muted small" style="margin-top:4px"><a href="' + esc(n.url) + '" target="_blank" rel="noopener">' + esc(n.src) + '</a></p></div>').join('') + (items.length > 15 ? showMoreBtn('news-more', ui.newsMore ? 'Show the latest 15 only' : 'Show ' + (items.length - 15) + ' older headlines') : '') : '<p class="muted">No headlines for this team.</p>') + '</div>' +
     '<div class="panel" id="nw-qb"><div class="panel-head"><h3>Starting quarterbacks</h3><span class="muted small">What the model assumes</span></div><div class="tablewrap"><table class="ptable"><thead><tr><th class="l">Team</th><th class="l">Starter</th><th>EPA/db</th><th class="l">Note</th></tr></thead><tbody>' + qbRows + '</tbody></table></div></div>' +

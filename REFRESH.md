@@ -59,6 +59,9 @@ Kalshi paid). The tab works out the bankroll and the ladder from the played slip
 set its `status` to ended with `peak` and `ended`, and add the next run. Keep collab/scoreboard.md in step.
 
 ## Flags and late outs (data/news.json)
+`watch` in data/news.json feeds the "Status to watch" strip (Games tab) and panel (News): player, team, pos, game (the
+game id), status (short: Questionable, Protocol, DNP Wed, Limited, Expected to start, New starter), note, src. Entries
+drop off by themselves once their game is final, so add the week's open questions and update the status as reports land.
 The News tab sorts headlines newest first by the date in each item's `src` (write it as "Source, Nov 26"), shows the
 latest 15, and keeps same-day items in file order, so put the newest at the top. Update `asof` when you edit the file.
 At each refresh, drop flags that describe a game that's now final ("expected to play Thursday," "questionable,"
@@ -88,3 +91,9 @@ The board is a consensus of public big boards typed into data/draft_sources.json
 then `cd pipeline && python3 draft.py`. Team needs come from NFL.com's draft-order article (update `needs` when a new
 one is out). Each team takes the best player left, nudged toward its needs (NEEDW, POSVAL in src/app2_body.html);
 QBs only go early to teams that list QB as a need.
+
+## Share images (social/game_card.py)
+gamepages.py draws a 1200x630 card for every game page (docs/games/img/*.png) with Pillow and the subset Inter fonts in
+assets/fonts: the matchup, kickoff, the model's pick and win chance, and the score with right/wrong once it's final.
+The PNGs are byte-stable, so only games whose numbers changed show up in git. Each game page's og:image points at its card.
+

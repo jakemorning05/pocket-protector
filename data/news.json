@@ -1084,5 +1084,97 @@
    "snap": 1.0
   }
  ],
- "injury_week": 12
+ "injury_week": 12,
+ "watch": [
+  {
+   "player": "Dalton Kincaid",
+   "team": "BUF",
+   "pos": "TE",
+   "game": "2026_12_KC_BUF",
+   "status": "Questionable",
+   "note": "Thumb and ankle; limited all week",
+   "src": "NFL.com Week 12 injury report, Nov 25"
+  },
+  {
+   "player": "Mason Rudolph",
+   "team": "PIT",
+   "pos": "QB",
+   "game": "2026_12_DEN_PIT",
+   "status": "New starter",
+   "note": "First start since the Steelers released Aaron Rodgers",
+   "src": "NFL.com and AP, Nov 25"
+  },
+  {
+   "player": "Derrick Henry",
+   "team": "BAL",
+   "pos": "RB",
+   "game": "2026_12_BAL_HOU",
+   "status": "Protocol",
+   "note": "Back in the concussion protocol, limited Wednesday; coach expects him to play",
+   "src": "AP, Nov 25"
+  },
+  {
+   "player": "Woody Marks",
+   "team": "HOU",
+   "pos": "RB",
+   "game": "2026_12_BAL_HOU",
+   "status": "Protocol",
+   "note": "Full practice Wednesday; still has to clear the concussion protocol",
+   "src": "CBS Sports, Nov 25"
+  },
+  {
+   "player": "Danielle Hunter",
+   "team": "HOU",
+   "pos": "DE",
+   "game": "2026_12_BAL_HOU",
+   "status": "DNP Wed",
+   "note": "Hamstring; didn't practice Wednesday",
+   "src": "NFL practice report, Nov 25"
+  },
+  {
+   "player": "Justin Herbert",
+   "team": "LAC",
+   "pos": "QB",
+   "game": "2026_12_NE_LAC",
+   "status": "Protocol",
+   "note": "Concussion protocol; sat out Wednesday's practice",
+   "src": "CBS Sports, Nov 25"
+  },
+  {
+   "player": "Brock Purdy",
+   "team": "SF",
+   "pos": "QB",
+   "game": "2026_12_SEA_SF",
+   "status": "DNP Wed",
+   "note": "Ankle; missed Wednesday's practice",
+   "src": "CBS Sports, Nov 25"
+  },
+  {
+   "player": "Sam Darnold",
+   "team": "SEA",
+   "pos": "QB",
+   "game": "2026_12_SEA_SF",
+   "status": "Expected to start",
+   "note": "Back at practice after missing two games",
+   "src": "Kicks and Grips, Nov 25"
+  },
+  {
+   "player": "Carson Beck",
+   "team": "ARI",
+   "pos": "QB",
+   "game": "2026_12_WAS_ARI",
+   "status": "DNP Wed",
+   "note": "Back; Josh Johnson is expected to start again",
+   "src": "Kicks and Grips, Nov 25"
+  },
+  {
+   "player": "Brock Bowers",
+   "team": "LV",
+   "pos": "TE",
+   "game": "2026_12_LV_CLE",
+   "status": "Limited",
+   "note": "Ankle; Raiders optimistic he plays, may need a full practice by Friday",
+   "src": "CBS Sports, Nov 25"
+  }
+ ]
 }

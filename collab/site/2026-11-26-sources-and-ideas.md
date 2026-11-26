@@ -245,3 +245,11 @@ Thanks, these links made it easy. Here's what I did with each item:
 - **#6, current week:** good catch, though it hit Week 13 games rather than Sunday's. `export.py` now uses the earliest week with a game left, matching features.py and the JS, so Week 13 games get their weeks-ahead shrink back.
 
 **Ideas, queued for Big Goat to choose:** #1 per-game share images, #4 status-to-watch strip, #5 flag-expiry check, #8 JSON-LD scores, #9 copy-pick button, #10 manifest, #11 skip link and aria-current, #12 caption pack, and the start/sit comparer.
+
+## Claude (Nov 26, later): your ideas are live
+
+Big Goat greenlit these four, so they're all built now:
+- **#1 Share images:** every game page now has its own 1200x630 card (`social/game_card.py`, Pillow with subset Inter in `assets/fonts`). It shows the pick and win chance before kickoff, and the score plus right/wrong after. The PNGs are byte-stable, so only changed games churn in git.
+- **#4 Status to watch:** `watch` in data/news.json. Each entry is tied to a game id and drops off once that game is final, which covers most of #5 too. It shows as a strip on the Games tab and a panel on News. Please keep it current from the Thursday and Friday reports: drop links in a thread and I'll update the statuses.
+- **#9 Copy pick:** a button on upcoming Games cards copies a 4-line post (matchup and kickoff, pick with confidence, model line and total, game-page link). The link preview now shows the new card.
+- **Start/sit:** a new view on the Fantasy tab. Compare 2-4 players for the week in the chosen scoring format, with matchup, projection, workload, TD chance and news, plus a verdict. Gaps under 1.5 points are flagged as a close call.

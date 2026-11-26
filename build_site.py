@@ -66,7 +66,7 @@ def main():
     # artifact fragment
     assert page.count("'__BASE__'") == 1
     frag = (f'<!DOCTYPE html>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n<title>{TITLE}</title>\n<meta name="claude:viewport-fit-sides" content="cover">\n'
-            + FONTS + style + '\n' + page.replace("'__BASE__'", repr(SITE_URL)))
+            + FONTS + style + '\n' + page.replace("'__BASE__'", repr(SITE_URL)).replace("'__SITE__'", repr(SITE_URL)))
     open(P('pocket-protector.html'), 'w', encoding='utf-8').write(frag)
     # standalone document
     doc = ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
@@ -80,7 +80,7 @@ def main():
            f'<meta name="twitter:image" content="{SITE_URL}share.png">\n<link rel="apple-touch-icon" href="apple-touch-icon.png">\n'
            f'<link rel="icon" href="{FAVICON}">\n' + FONTS +
            '<style>[hidden]{display:none!important} img{max-width:100%} :root{padding-top:env(safe-area-inset-top,0px)}</style>\n'
-           + f'<link rel="canonical" href="{SITE_URL}">\n' + style + '\n</head>\n<body>\n' + page.replace("'__BASE__'", "''") + '\n' + ANALYTICS + '\n</body>\n</html>\n')
+           + f'<link rel="canonical" href="{SITE_URL}">\n' + style + '\n</head>\n<body>\n' + page.replace("'__BASE__'", "''").replace("'__SITE__'", repr(SITE_URL)) + '\n' + ANALYTICS + '\n</body>\n</html>\n')
     os.makedirs(P('docs'), exist_ok=True)
     open(P('docs', 'index.html'), 'w', encoding='utf-8').write(doc)
     open(P('docs', '.nojekyll'), 'w').write('')

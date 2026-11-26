@@ -80,7 +80,51 @@ function tradeHtml() {
     (g.length || r.length ? '<p><button class="linkbtn" id="tr-clear">Clear trade</button></p>' : '') +
     '<p class="muted small">Value is a player’s projected rest-of-season points above the kind of starter you could find on waivers in a 12-team league, scaled so the most valuable player is 100. It follows the scoring format above. Injured players who are out of the projections aren’t listed. It doesn’t know your roster, so a trade that fills a hole in your lineup is worth more to you than the numbers say.</p>';
 }
+// ---------- start/sit: 2-4 players side by side for one week ----------
+let ss = prefs.get('ss', []);
+function startSitHtml() {
+  const rows = FAN.games.filter((r) => r.wk === fanWeek);
+  const byId = Object.fromEntries(rows.map((r) => [r.id, r]));
+  const picked = ss.map((id) => byId[id]).filter(Boolean).map((r) => ({ ...r, pts: fp(r), g: games.find((x) => x.id === r.game) }));
+  const missing = ss.filter((id) => !byId[id]).length;
+  const taken = new Set(ss);
+  const options = ['QB', 'RB', 'WR', 'TE'].map((pos) => '<optgroup label="' + pos + '">' + rows.filter((r) => r.pos === pos && !taken.has(r.id)).map((r) => ({ ...r, pts: fp(r) })).sort((a, b) => b.pts - a.pts)
+    .map((r) => '<option value="' + r.id + '">' + esc(r.name) + ' (' + r.team + ') · ' + r.pts.toFixed(1) + '</option>').join('') + '</optgroup>').join('');
+  const order = picked.slice().sort((a, b) => b.pts - a.pts);
+  const card = (r) => {
+    const rank = order.indexOf(r), home = r.g && r.g.h === r.team, started = r.g && (r.g.done || kickDate(r.g) <= new Date());
+    const work = r.pos === 'QB' ? Math.round(r.att || 0) + ' pass att' : (r.targets ? r.targets.toFixed(1) + ' targets' : '') + (r.targets && r.carries ? ', ' : '') + (r.carries ? r.carries.toFixed(1) + ' carries' : '');
+    return '<div class="sscard' + (rank === 0 && order.length > 1 ? ' top' : '') + '">' +
+      '<div class="sshead"><span class="pname">' + esc(r.name) + '</span><span class="ppos pos-' + r.pos + '">' + r.pos + ' · ' + r.team + '</span>' +
+      (order.length > 1 ? '<span class="ssbadge ' + (rank === 0 ? 'start' : '') + '">' + (rank === 0 ? 'Start' : 'Sit') + '</span>' : '') + '</div>' +
+      '<div class="sspts num"><b>' + r.pts.toFixed(1) + '</b><span class="muted small">projected pts</span></div>' +
+      '<dl class="ssdl"><dt>Matchup</dt><dd>' + (home ? 'vs ' : '@ ') + r.opp + (r.g ? ' · ' + (started ? (r.g.done ? 'final' : 'started') : kick(r.g)) : '') + '</dd>' +
+      '<dt>Projection</dt><dd>' + statLine(r) + '</dd>' + (work ? '<dt>Workload</dt><dd>' + work + '</dd>' : '') +
+      '<dt>Any TD</dt><dd>' + pct(r.td_p || 0) + '</dd>' +
+      (r.flag || r.q ? '<dt>News</dt><dd>' + (r.flag ? esc(r.flag) : 'Questionable on the last injury report') + '</dd>' : '') + '</dl>' +
+      '<button class="linkbtn" data-ssrm="' + r.id + '">Remove</button></div>';
+  };
+  let verdict = '';
+  if (order.length >= 2) {
+    const [a, b] = order, d = a.pts - b.pts;
+    verdict = '<div class="panel"><p><b>' + (d < 1.5 ? 'Close call.' : 'Start ' + esc(a.name) + '.') + '</b> ' +
+      (d < 1.5 ? esc(a.name) + ' projects just ' + d.toFixed(1) + ' more points than ' + esc(b.name) + ', which is well inside a normal week’s swing. Go with the better matchup, the safer role, or the one with less injury risk.'
+        : esc(a.name) + ' projects ' + d.toFixed(1) + ' more points than ' + esc(b.name) + ' in ' + ({ ppr: 'PPR', half: 'half-PPR', std: 'standard' })[fmt] + ' scoring.') +
+      (order.length > 2 ? ' Best to worst: ' + order.map((r) => esc(r.name) + ' ' + r.pts.toFixed(1)).join(', ') + '.' : '') + '</p></div>';
+  }
+  return '<div class="controls">' + '<div class="seg" role="group" aria-label="fwk">' + (FAN_LATE ? [[FAN.cw + 1, 'Week ' + (FAN.cw + 1)], [FAN.cw, 'Wk ' + FAN.cw + ' (MNF)']] : [[FAN.cw, 'Week ' + FAN.cw], [FAN.cw + 1, 'Week ' + (FAN.cw + 1)]]).map(([k, l]) => '<button data-fwk="' + k + '" aria-pressed="' + (k === fanWeek) + '">' + l + '</button>').join('') + '</div></div>' +
+    (picked.length ? '<div class="ssgrid">' + picked.map(card).join('') + '</div>' : '<p class="muted" style="margin:6px 0 12px">Pick two to four players to compare for Week ' + fanWeek + '.</p>') +
+    (missing ? '<p class="muted small">' + missing + ' of your players ' + (missing > 1 ? 'aren’t' : 'isn’t') + ' projected in Week ' + fanWeek + ' (bye, ruled out or traded).</p>' : '') +
+    verdict +
+    (picked.length < 4 ? '<label class="field" style="max-width:420px"><span class="label">' + (picked.length ? 'Add another player' : 'Add a player') + '</span><select id="ss-add"><option value="">Choose…</option>' + options + '</select></label>' : '') +
+    (ss.length ? '<p><button class="linkbtn" id="ss-clear">Clear</button></p>' : '') +
+    '<p class="muted small" style="margin-top:8px;max-width:64ch">Projected points follow the scoring format above and work across positions, so it handles flex and superflex calls too. Projections are averages: when two players are within about a point and a half, the matchup and the news matter more than the gap.</p>';
+}
 function wireFantasyExtra(el) {
+  const ssAdd = el.querySelector('#ss-add');
+  if (ssAdd) ssAdd.onchange = (e) => { if (e.target.value) { ss = [...ss.filter((id) => FAN.games.some((r) => r.id === id && r.wk === fanWeek)), e.target.value].slice(-4); prefs.set('ss', ss); renderFantasy(); } };
+  el.querySelectorAll('[data-ssrm]').forEach((b) => b.onclick = () => { ss = ss.filter((x) => x !== b.dataset.ssrm); prefs.set('ss', ss); renderFantasy(); });
+  const ssc = el.querySelector('#ss-clear'); if (ssc) ssc.onclick = () => { ss = []; prefs.set('ss', ss); renderFantasy(); };
   for (const key of ['give', 'get']) {
     const sel = el.querySelector('#tr-add-' + key);
     if (sel) sel.onchange = (e) => { if (e.target.value) { trade[key].push(e.target.value); prefs.set('trade', trade); renderFantasy(); } };

@@ -157,9 +157,12 @@ def page(g, lock, fan, news, site_url, analytics=''):
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:type" content="article">
 <meta property="og:url" content="{url}">
-<meta property="og:image" content="{site_url}share.png">
+<meta property="og:image" content="{site_url}games/img/{slug(g)}.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{esc(title)}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="{site_url}share.png">
+<meta name="twitter:image" content="{site_url}games/img/{slug(g)}.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <meta name="theme-color" content="#11162A">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -225,8 +228,12 @@ def build(site_url, analytics=''):
     css = open(P('src', 'style.css.html'), encoding='utf-8').read().replace('<style>', '').replace('</style>', '')
     open(os.path.join(out, 'site.css'), 'w', encoding='utf-8').write(css + EXTRA_CSS)
     urls = [site_url]
+    imgdir = os.path.join(out, 'img'); os.makedirs(imgdir, exist_ok=True)
+    from social.game_card import make_card, write_if_changed
+    changed = 0
     for g in site['games']:
         open(os.path.join(out, slug(g) + '.html'), 'w', encoding='utf-8').write(page(g, locks.get(g['id']), fan, news, site_url, analytics))
+        changed += write_if_changed(os.path.join(imgdir, slug(g) + '.png'), make_card(g, nick, (locks.get(g['id']) or {}).get('p')))
         urls.append(f'{site_url}games/{slug(g)}.html')
     today = datetime.date.today().isoformat()
     open(P('docs', 'sitemap.xml'), 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
