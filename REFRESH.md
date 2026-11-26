@@ -59,6 +59,8 @@ Kalshi paid). The tab works out the bankroll and the ladder from the played slip
 set its `status` to ended with `peak` and `ended`, and add the next run. Keep collab/scoreboard.md in step.
 
 ## Flags and late outs (data/news.json)
+The News tab sorts headlines newest first by the date in each item's `src` (write it as "Source, Nov 26"), shows the
+latest 15, and keeps same-day items in file order, so put the newest at the top. Update `asof` when you edit the file.
 At each refresh, drop flags that describe a game that's now final ("expected to play Thursday," "questionable,"
 "starts Sunday") and keep the ones about ongoing roles (a new starter, a trade, a returning player). File a note under
 the player it's about (a QB change goes on the QB). Late outs added to overrides.json `players_out` show up in the News

@@ -328,6 +328,21 @@ svg.chart .hit { fill: transparent; }
 .conf.c-solid { background: color-mix(in oklab, var(--good) 12%, var(--surface)); color: var(--ink); }
 .conf.c-lean { background: color-mix(in oklab, var(--accent) 14%, var(--surface)); color: var(--ink); }
 .conf.c-noedge, .conf.c-tossup, .conf.c-coinflip { color: var(--muted); }
+/* Lists: group headers, show-more buttons, jump links */
+.ptable tr.grouprow td { padding-top: 16px; padding-bottom: 6px; border-bottom: 1px solid var(--line-strong); white-space: normal; }
+.ptable tr.grouprow:first-child td { padding-top: 6px; }
+.ptable tr.grouprow b { font-size: 0.95rem; }
+.ptable tr.passrow td { opacity: 0.6; }
+.morebtn { margin-top: 10px; }
+.tablefoot { display: flex; flex-wrap: wrap; gap: 8px; }
+.jump { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin: 4px 0 14px; }
+.jump button { border: 1px solid var(--line-strong); background: none; color: var(--ink-2); border-radius: 999px; padding: 4px 12px; font-weight: 700; font-size: 0.82rem; cursor: pointer; }
+.jump button:hover { color: var(--ink); border-color: var(--ink-2); }
+.panel[id] { scroll-margin-top: 170px; }
+.games .dayhead { grid-column: 1 / -1; margin: 10px 0 -2px; font-size: 1rem; }
+.games .dayhead:first-child { margin-top: 0; }
+@media (max-width: 720px) { .panel[id] { scroll-margin-top: 100px; } }
+.ptable tr.btnrow td { padding: 4px 0 8px; border: 0; }
 /* Draft tab */
 .draftbar { display: flex; flex-wrap: wrap; align-items: end; gap: 10px 14px; }
 .draftbar .field { flex: 1 1 240px; max-width: 360px; }
@@ -6584,7 +6599,7 @@ const BETS = [
 ];
 const TRACK = {"spread": [{"lo": 0, "hi": 1, "w": 310, "n": 674}, {"lo": 1, "hi": 2, "w": 300, "n": 571}, {"lo": 2, "hi": 3, "w": 229, "n": 481}, {"lo": 3, "hi": 5, "w": 218, "n": 430}, {"lo": 5, "hi": 99, "w": 83, "n": 167}], "total": [{"lo": 0, "hi": 1, "w": 287, "n": 631}, {"lo": 1, "hi": 2, "w": 283, "n": 575}, {"lo": 2, "hi": 3, "w": 236, "n": 455}, {"lo": 3, "hi": 5, "w": 230, "n": 504}, {"lo": 5, "hi": 99, "w": 109, "n": 198}]};
 const NEWS = {
- "asof": "Wed, Nov 25, 7:45 PM ET",
+ "asof": "Thu, Nov 26, 1:09 AM ET",
  "outs": [
   "Josh Jacobs",
   "Puka Nacua",
@@ -6616,6 +6631,13 @@ const NEWS = {
  },
  "items": [
   {
+   "team": "LA",
+   "tag": "Result",
+   "text": "Wednesday night: the Rams beat the Packers 26-13. Blake Corum ran for a career-high 184 yards, and Jordan Love threw two interceptions as Green Bay was shut out in the second half. The model had LA at 66%.",
+   "src": "ESPN and Yahoo Sports, Nov 25",
+   "url": "https://www.espn.com/nfl/recap?gameId=401873079"
+  },
+  {
    "team": "IND",
    "tag": "QB",
    "text": "The Colts released Daniel Jones the day after a 26-3 loss at Houston and named Anthony Richardson Sr. the starter for the rest of the season, beginning this week against the Giants. The model now rates Indianapolis with Richardson.",
@@ -6637,13 +6659,6 @@ const NEWS = {
    "url": "https://www.bleedinggreennation.com/philadelphia-eagles-injuries/191406/eagles-cowboys-final-injury-report-quinyon-mitchell-will-play-in-dallas"
   },
   {
-   "team": "GB",
-   "tag": "Injury",
-   "text": "Josh Jacobs (finger) is inactive Wednesday night at the Rams. Micah Parsons is active for his season debut.",
-   "src": "Packers.com, Nov 25",
-   "url": "https://www.packers.com/news/packers-rams-week-12-inactives-nov-25-2026"
-  },
-  {
    "team": "SEA",
    "tag": "QB",
    "text": "Sam Darnold practiced Wednesday after missing two games and is on track to start Sunday at San Francisco. The model has him back. Brock Purdy missed Wednesday's practice with an ankle injury he played through against Minnesota.",
@@ -6663,13 +6678,6 @@ const NEWS = {
    "text": "Monday night: Washington beat Cincinnati 22-20 on Drew Stevens' fifth field goal as time expired. Jayden Daniels hit rookie Antonio Williams for 22 and 42 yards to set it up after Evan McPherson's 56-yarder put the Bengals ahead with 46 seconds left. Daniels threw for 289 yards; Joe Burrow had 300 and two touchdowns. The Bengals' five-game win streak is over.",
    "src": "ESPN and Yahoo Sports, Nov 23",
    "url": "https://www.espn.com/nfl/recap/_/gameId/401873078"
-  },
-  {
-   "team": "LA",
-   "tag": "Injury",
-   "text": "Kyren Williams has been limited in practice with turf toe but is expected to play Wednesday against Green Bay, possibly in a closer to even split with Blake Corum.",
-   "src": "Yahoo Sports, Nov 23",
-   "url": "https://sports.yahoo.com/articles/injuries-dominate-rams-snap-count-170200266.html"
   },
   {
    "team": "LAC",
@@ -6997,13 +7005,6 @@ const NEWS = {
    "team": "DET",
    "tag": "Injury",
    "text": "Jared Goff and Amon-Ra St. Brown were both limited in practice ahead of Sunday morning\u2019s game against New England in Munich (9:30 AM ET kickoff, so lineups lock early).",
-   "src": "NFL.com injury report, Nov 12",
-   "url": "https://www.nfl.com/injuries/league/2026/reg10"
-  },
-  {
-   "team": "GB",
-   "tag": "Injury",
-   "text": "Josh Jacobs still isn\u2019t practicing. Chris Brooks was limited, so Green Bay\u2019s backfield is a committee again this week.",
    "src": "NFL.com injury report, Nov 12",
    "url": "https://www.nfl.com/injuries/league/2026/reg10"
   },
@@ -11274,6 +11275,16 @@ const fmtRec = (r) => r.w + '-' + r.l + (r.t ? '-' + r.t : '');
 const kickDate = (g) => new Date(g.day + 'T' + (g.time || '13:00') + ':00' + (g.day < '2026-11-01' ? '-04:00' : '-05:00'));
 const kick = (g) => kickDate(g).toLocaleString(undefined, { weekday: 'short', hour: 'numeric', minute: '2-digit' });
 const dayFmt = (g) => kickDate(g).toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+const longDay = (g) => kickDate(g).toLocaleDateString(undefined, { weekday: 'long', month: 'short', day: 'numeric' });
+const gameById = (id) => games.find((g) => g.id === id);
+const gameKey = (g) => (g ? g.day + ' ' + (g.time || '') : '');
+// list helpers: a group header row inside a table, a "show more" button, and in-page jump links
+const ui = { newsMore: false, betsMore: false, betsAhead: false, edgeOnly: false, propsMore: false, passes: false, earlyMore: false };
+const groupRow = (n, title, sub) => '<tr class="grouprow"><td class="l" colspan="' + n + '"><b>' + title + '</b>' + (sub ? ' <span class="muted small">' + sub + '</span>' : '') + '</td></tr>';
+const showMoreBtn = (id, label) => '<button class="btn ghost small morebtn" id="' + id + '">' + label + '</button>';
+const jumpNav = (items) => '<nav class="jump" aria-label="On this page"><span class="muted small">Jump to</span>' + items.map(([id, label]) => '<button data-jump="' + id + '">' + label + '</button>').join('') + '</nav>';
+function wireJump(el) { el.querySelectorAll('[data-jump]').forEach((b) => b.onclick = () => { const t = document.getElementById(b.dataset.jump); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }); }
+const wlTxt = (xs, winKey) => { const w = xs.filter((x) => winKey(x) === true).length, l = xs.filter((x) => winKey(x) === false).length; return w + '–' + l; };
 const esc = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const lastName = (n) => n ? String(n).split(' ').slice(1).join(' ') || n : '?';
 
@@ -11369,7 +11380,7 @@ function renderWeek() {
     '<div><h2>Week ' + viewWeek + '</h2><p class="muted small">' + dayFmt(first) + ' – ' + dayFmt(last) + (viewWeek === currentWeek ? ' · this week' : '') + '</p></div>' +
     '<button class="iconbtn" id="wk-next" aria-label="Next week"' + (viewWeek >= 18 ? ' disabled' : '') + '>›</button></div>' +
     '<p class="week-summary">' + summary + '</p>' +
-    '<div class="games">' + wkGames.map(gameCard).join('') + '</div>' +
+    '<div class="games">' + wkGames.map((g, i) => (i === 0 || g.day !== wkGames[i - 1].day ? '<h3 class="dayhead">' + longDay(g) + ' <span class="muted small">' + wkGames.filter((x) => x.day === g.day).length + ' game' + (wkGames.filter((x) => x.day === g.day).length > 1 ? 's' : '') + '</span></h3>' : '') + gameCard(g)).join('') + '</div>' +
     (byes.length ? '<p class="muted small">Bye: ' + byes.join(', ') + '</p>' : '') +
     '<p class="notice">From Week ' + LOCK_START + ' on, every pick is locked at kickoff and never changed afterward. Earlier games show the pick the model would have made before kickoff, using only earlier data. Market lines are closing spreads and totals. Upcoming games use today’s starting quarterbacks, injuries and the latest news (see the <a href="#news">News</a> tab).' + (viewWeek > DATA.cw ? ' Win chances this far out are pulled toward 50%, because ratings, quarterbacks and injuries will change before kickoff.' : '') + '</p>';
   el.querySelector('#wk-prev').onclick = () => { viewWeek--; renderWeek(); };
@@ -11652,48 +11663,85 @@ function renderBetting() {
   const done = BETS.filter((b) => b.result != null && b.result !== 'push');
   const clvDone = BETS.filter((b) => b.clv != null);
   const avgClv = clvDone.length ? clvDone.reduce((s, b) => s + b.clv, 0) / clvDone.length : null;
-  const rows = BETS.slice().sort((x, y) => Math.abs(y.model - y.line * (y.kind === 'spread' ? 1 : 1)) - Math.abs(x.model - x.line)).map((b) => {
+  const betGame = (b) => gameById(b.game) || games.find((g) => g.wk === b.wk && g.a === b.a && g.h === b.h);
+  const betRow = (b) => {
     const gap = b.kind === 'spread' ? b.model - b.line : b.model - b.line;
     const trp = b.conf != null ? b.conf : confFor(b.kind, gap);
     const ev = trp * 100 / 110 - (1 - trp);
     const sideLine = (t, v) => t + ' ' + (v === 0 ? 'PK' : v < 0 ? '−' + Math.abs(v) : '+' + v);
     const lineTxt = b.kind === 'spread' ? (b.side === b.h ? sideLine(b.h, -b.line) : sideLine(b.a, b.line)) : b.side + ' ' + b.line;
     const res = b.result == null ? '<span class="muted">Pending</span>' : '<span class="res ' + (b.result === 'win' ? 'w' : b.result === 'loss' ? 'l' : 't') + '">' + b.result + (b.clv != null ? ' · CLV ' + signed(b.clv) : '') + '</span>';
-    return '<tr><td class="l">Wk ' + b.wk + ' ' + b.a + ' @ ' + b.h + '</td><td class="l"><b>' + lineTxt + '</b></td><td>' + (b.kind === 'spread' ? fmtLine(b.a, b.h, b.model) : b.model.toFixed(1)) + '</td><td>' + confPill(trp, betTag(trp)) + '</td><td>' + (ev >= 0 ? '+' : '−') + '$' + Math.abs(ev * 100).toFixed(1) + '</td><td>' + res + '</td></tr>';
-  }).join('');
+    const bg = betGame(b);
+    return '<tr><td class="l">' + b.a + ' @ ' + b.h + (bg ? ' <span class="muted small">' + (b.result == null ? kick(bg) : dayFmt(bg)) + '</span>' : '') + '</td><td class="l"><b>' + lineTxt + '</b></td><td>' + (b.kind === 'spread' ? fmtLine(b.a, b.h, b.model) : b.model.toFixed(1)) + '</td><td>' + confPill(trp, betTag(trp)) + '</td><td>' + (ev >= 0 ? '+' : '−') + '$' + Math.abs(ev * 100).toFixed(1) + '</td><td>' + res + '</td></tr>';
+  };
+  // soonest games first, then graded weeks newest first
+  const byKick = (dir) => (x, y) => dir * gameKey(betGame(x)).localeCompare(gameKey(betGame(y))) || (x.kind === y.kind ? 0 : x.kind === 'spread' ? -1 : 1);
+  const edgeOf = (b) => (b.conf != null ? b.conf : confFor(b.kind, b.model - b.line));
+  const shown = BETS.filter((b) => !ui.edgeOnly || edgeOf(b) >= 0.524), openShown = shown.filter((b) => b.result == null);
+  const upAll = [...new Set(open.map((b) => b.wk))].sort((a, b) => a - b), upWeeks = ui.betsAhead ? upAll : upAll.slice(0, 1);
+  const aheadN = open.filter((b) => b.wk !== upAll[0] && shown.includes(b)).length;
+  const doneWeeks = [...new Set(BETS.filter((b) => b.result != null).map((b) => b.wk))].sort((a, b) => b - a);
+  const shownWeeks = ui.betsMore ? doneWeeks : doneWeeks.slice(0, 2), hiddenWeeks = doneWeeks.slice(shownWeeks.length);
+  const rows = upWeeks.map((w) => { const xs = openShown.filter((b) => b.wk === w).sort(byKick(1)); return xs.length ? groupRow(6, 'Week ' + w + ' · still to play', xs.length + ' pick' + (xs.length === 1 ? '' : 's')) + xs.map(betRow).join('') : ''; }).join('') +
+    (upAll.length > 1 ? '<tr class="btnrow"><td class="l" colspan="6">' + showMoreBtn('bets-ahead', ui.betsAhead ? 'Hide Week ' + upAll.slice(1).join(', ') + ' picks' : 'Show Week ' + upAll.slice(1).join(', ') + ' picks (' + aheadN + ')') + '</td></tr>' : '') +
+    shownWeeks.map((w) => { const all = BETS.filter((b) => b.wk === w && b.result != null), xs = all.filter((b) => shown.includes(b)).sort(byKick(-1)); const pu = xs.filter((b) => b.result === 'push').length;
+      return xs.length ? groupRow(6, 'Week ' + w + ' results', wlTxt(xs, (b) => b.result === 'win' ? true : b.result === 'loss' ? false : null) + (pu ? '–' + pu : '') + (ui.edgeOnly ? ' with an edge' : '')) + xs.map(betRow).join('') : ''; }).join('');
+  const edgeN = BETS.filter((b) => edgeOf(b) >= 0.524).length;
+  const edgeWins = BETS.filter((b) => edgeOf(b) >= 0.524 && b.result != null);
+  const betMore = hiddenWeeks.length ? showMoreBtn('bets-more', 'Show Weeks ' + hiddenWeeks[hiddenWeeks.length - 1] + '–' + hiddenWeeks[0]) : ui.betsMore && doneWeeks.length > 2 ? showMoreBtn('bets-more', 'Show fewer weeks') : '';
   // props
   const graded = PROPS.filter((p) => p.won != null), wins = graded.filter((p) => p.won).length;
   const g2 = graded.filter((p) => p.rules === 'v2'), w2 = g2.filter((p) => p.won).length;
   const g1 = graded.filter((p) => p.rules !== 'v2'), w1 = g1.filter((p) => p.won).length;
+  const propRow = (p) => '<tr' + (p.pick === 'PASS' ? ' class="passrow"' : '') + '><td class="l"><span class="pname">' + esc(p.player) + '</span> <span class="muted small">' + p.thr + '+ ' + STAT_LABEL[p.stat] + '</span></td><td>' + pct(p.price) + '</td><td><b>' + (p.pick === 'PASS' ? '<span class="muted">Pass</span>' : p.pick) + '</b></td><td>' +
+      (p.conf != null && p.pick !== 'PASS' ? confPill(p.conf, propTag(p.conf)) : '<span class="muted">' + (p.rules === 'v2' || p.p_over == null ? '–' : pct(p.pick === 'NO' ? 1 - p.p_over : p.p_over)) + '</span>') + '</td><td>' +
+      (p.actual == null ? '<span class="muted">Pending</span>' : p.pick === 'PASS' ? '<span class="muted">' + p.actual + '</span>' : '<span class="res ' + (p.won ? 'w' : 'l') + '">' + (p.won ? '✓ ' : '✗ ') + p.actual + '</span>') + '</td></tr>';
+  const pGames = [...new Set(PROPS.map((p) => p.game))].sort((a, b) => gameKey(gameById(b)).localeCompare(gameKey(gameById(a))));
+  const pShown = ui.propsMore ? pGames : pGames.slice(0, 2), passN = PROPS.filter((p) => p.pick === 'PASS').length;
+  const propRows = pShown.map((id) => {
+    const xs = PROPS.filter((p) => p.game === id), g = gameById(id), bets = xs.filter((p) => p.pick !== 'PASS'), gr = bets.filter((p) => p.won != null);
+    const pr = gr.reduce((a, p) => a + p.profit, 0), passes = xs.length - bets.length;
+    return groupRow(5, (g ? 'Week ' + g.wk + ' · ' + g.a + ' @ ' + g.h : esc(id)), (g ? dayFmt(g) : '') + (gr.length ? ' · ' + wlTxt(gr, (p) => p.won) + ' · ' + (pr >= 0 ? '+' : '−') + '$' + Math.abs(pr).toFixed(2) : bets.length ? ' · pending' : '') + (passes && !ui.passes ? ' · ' + passes + ' passed' : '')) +
+      xs.filter((p) => ui.passes || p.pick !== 'PASS').map(propRow).join('');
+  }).join('');
+  const propMore = '<div class="tablefoot">' + (pGames.length > 2 ? showMoreBtn('props-more', ui.propsMore ? 'Show recent games only' : 'Show all ' + pGames.length + ' games') : '') +
+    (passN ? showMoreBtn('props-pass', ui.passes ? 'Hide passes' : 'Show ' + passN + ' passes') : '') + '</div>';
   const profit = graded.reduce((s, p) => s + p.profit, 0), staked = graded.reduce((s, p) => s + (p.pick === 'YES' ? (p.ask ?? p.price) : 1 - (p.bid ?? p.price)), 0);
-  const propPanel = PROPS.length ? '<div class="panel"><div class="panel-head"><h3>Player prop test vs. Kalshi</h3><span class="muted small">' +
+  const propPanel = PROPS.length ? '<div class="panel" id="bt-props"><div class="panel-head"><h3>Player prop test vs. Kalshi</h3><span class="muted small">' +
     (graded.length ? wins + '–' + (graded.length - wins) + ' · ' + (profit >= 0 ? '+' : '−') + '$' + Math.abs(profit).toFixed(2) + ' on $' + staked.toFixed(2) + ' risked' : 'Logged before kickoff, not graded yet') + '</span></div>' +
     '<p class="muted small" style="max-width:66ch;margin-bottom:8px">Each row is a Kalshi “X or more” market, one contract per pick, graded at the price actually paid. The first ' + g1.length + ' went ' + w1 + '–' + (g1.length - w1) + ' under the old rules, which bet every market. Under the new rules (from Nov 25' + (g2.length ? ', ' + w2 + '–' + (g2.length - w2) + ' so far' : '') + '), the model’s chance comes from how often similar projections actually cleared the line in 2024–25, blended 50/50 with Kalshi’s price, and a pick has to beat the price by 5¢ (at most 4 per game). Everything else is a pass. Confidence is that blended chance for the side taken. Gray numbers on older rows are the old model’s chance, which ran overconfident.</p>' +
     '<div class="tablewrap"><table class="ptable"><thead><tr><th class="l">Market</th><th>Price</th><th>Pick</th><th>Confidence</th><th>Result</th></tr></thead><tbody>' +
-    PROPS.slice().reverse().map((p) => '<tr><td class="l"><span class="pname">' + esc(p.player) + '</span> <span class="muted small">' + p.thr + '+ ' + STAT_LABEL[p.stat] + '</span></td><td>' + pct(p.price) + '</td><td><b>' + (p.pick === 'PASS' ? '<span class="muted">Pass</span>' : p.pick) + '</b></td><td>' +
-      (p.conf != null && p.pick !== 'PASS' ? confPill(p.conf, propTag(p.conf)) : '<span class="muted">' + (p.rules === 'v2' || p.p_over == null ? '–' : pct(p.pick === 'NO' ? 1 - p.p_over : p.p_over)) + '</span>') + '</td><td>' +
-      (p.actual == null ? '<span class="muted">Pending</span>' : p.pick === 'PASS' ? '<span class="muted">' + p.actual + '</span>' : '<span class="res ' + (p.won ? 'w' : 'l') + '">' + (p.won ? '✓ ' : '✗ ') + p.actual + '</span>') + '</td></tr>').join('') +
-    '</tbody></table></div><p class="muted small" style="margin-top:8px">Prices: ' + esc([...new Set(PROPS.map((p) => p.source))].join('; ')) + '. Kalshi fees not included.</p></div>' : '';
+    propRows + '</tbody></table></div>' + propMore + '<p class="muted small" style="margin-top:8px">Prices: ' + esc([...new Set(PROPS.map((p) => p.source))].join('; ')) + '. Kalshi fees not included.</p></div>' : '';
   const earlyGames = (EARLY.games || []).filter((g) => !PROPS.some((p) => p.game === g.id));
-  const earlyPanel = earlyGames.length ? '<div class="panel"><div class="panel-head"><h3>Week ' + EARLY.week + ' early player leans</h3><span class="muted small">Updated ' + esc(EARLY.asof) + '</span></div>' +
+  const earlyPanel = earlyGames.length ? '<div class="panel" id="bt-early"><div class="panel-head"><h3>Week ' + EARLY.week + ' early player leans</h3><span class="muted small">Updated ' + esc(EARLY.asof) + '</span></div>' +
     '<p class="muted small" style="max-width:64ch;margin-bottom:8px">Until real prices are logged for a game (usually the day before kickoff), each player’s line here is his season median for that stat, which is roughly where books open. The picks update with every refresh as injuries and starters change. Games with logged Kalshi prices move to the prop test below.</p>' +
     '<div class="tablewrap"><table class="ptable early"><thead><tr><th class="l">Player</th><th class="l">Lean</th><th>Confidence</th><th>Proj.</th></tr></thead><tbody>' +
-    earlyGames.map((g) => { const gm = games.find((x) => x.id === g.id);
+    earlyGames.slice(0, ui.earlyMore ? 99 : 6).map((g) => { const gm = games.find((x) => x.id === g.id);
       return '<tr><td class="l" colspan="4" style="padding-top:14px;white-space:normal"><b>' + g.a + ' @ ' + g.h + '</b> <span class="muted small">' + (gm ? kick(gm) : '') + (g.td.length ? ' · most likely TD: ' + g.td.map((t) => esc(t.player) + ' ' + pct(t.p)).join(', ') : '') + '</span></td></tr>' +
         g.leans.map((c) => '<tr><td class="l"><span class="pname">' + esc(c.player) + '</span><span class="ppos pos-' + c.pos + '">' + c.pos + ' · ' + c.team + '</span></td><td class="l"><b>' + c.side + ' ' + c.line + '</b> <span class="muted small">' + STAT_LABEL[c.stat] + '</span></td><td>' + (() => { const k = c.conf != null ? c.conf : Math.max(c.p_over, 1 - c.p_over); return confPill(k, propTag(k)); })() + '</td><td class="muted">' + c.proj.toFixed(0) + '</td></tr>').join('') +
         (g.leans.length ? '' : '<tr><td class="l muted" colspan="4">No lean above 55% in this game.</td></tr>'); }).join('') +
-    '</tbody></table></div><p class="muted small" style="margin-top:8px">Confidence uses the same pricing as the prop test, blended 50/50 with a line at the player’s median, and leans under 55% aren’t shown. The prop test hasn’t beaten Kalshi’s prices yet (see below), so treat these as a starting point, not locks.</p></div>' : '';
+    '</tbody></table></div>' + (earlyGames.length > 6 ? showMoreBtn('early-more', ui.earlyMore ? 'Show the next 6 games only' : 'Show all ' + earlyGames.length + ' games') : '') + '<p class="muted small" style="margin-top:8px">Confidence uses the same pricing as the prop test, blended 50/50 with a line at the player’s median, and leans under 55% aren’t shown. The prop test hasn’t beaten Kalshi’s prices yet (see below), so treat these as a starting point, not locks.</p></div>' : '';
   el.innerHTML = '<div><h2>Betting</h2><p class="intro">A test bench, not a tip sheet. Over nine past seasons the model’s sides and totals won about 49% against closing lines, below the 52.4% needed at −110. These tools are here to find out whether that changes when it bets earlier numbers, shops prices and plays props.</p></div>' +
     '<div class="tiles num"><div class="tile"><span class="label">Picks logged</span><b>' + BETS.length + '</b><span class="muted small">' + open.length + ' waiting on games</span></div>' +
     '<div class="tile"><span class="label">Record</span><b>' + (done.length ? done.filter((b) => b.result === 'win').length + '–' + done.filter((b) => b.result === 'loss').length : '–') + '</b><span class="muted small">At the line when logged</span></div>' +
     '<div class="tile"><span class="label">Closing line value</span><b>' + (avgClv == null ? '–' : signed(avgClv)) + '</b><span class="muted small">Avg points the line moved toward our side</span></div>' +
     '<div class="tile"><span class="label">Prop test</span><b>' + (graded.length ? wins + '–' + (graded.length - wins) : '–') + '</b><span class="muted small">' + PROPS.length + ' markets logged</span></div></div>' +
-    '<div class="panel"><div class="panel-head"><h3>Model picks vs. the line</h3><span class="muted small">Last logged ' + esc((BETS[BETS.length - 1] || {}).logged || '') + '</span></div>' +
+    jumpNav([['bt-picks', 'Model picks'], ...(earlyGames.length ? [['bt-early', 'Early leans']] : []), ['shop', 'Price checker'], ...(PROPS.length ? [['bt-props', 'Prop test']] : [])]) +
+    '<div class="panel" id="bt-picks"><div class="panel-head"><h3>Model picks vs. the line</h3><span class="muted small">Last logged ' + esc((BETS[BETS.length - 1] || {}).logged || '') + '</span></div>' +
+    '<div class="seg" role="group" aria-label="Which picks" style="margin-bottom:10px"><button data-edge="0" aria-pressed="' + !ui.edgeOnly + '">All picks</button><button data-edge="1" aria-pressed="' + ui.edgeOnly + '">With an edge (' + edgeN + ')</button></div>' +
+    (ui.edgeOnly ? '<p class="small" style="margin-bottom:8px"><b>Picks at 52.4%+ confidence:</b> ' + wlTxt(edgeWins, (b) => b.result === 'win' ? true : b.result === 'loss' ? false : null) + ' so far this season.</p>' : '') +
     '<p class="muted small" style="max-width:64ch;margin-bottom:8px">Confidence is how often picks like this one actually won in 2017–2025 seasons the model hadn’t seen, based on how far it disagrees with the line. You need 52.4% to profit at −110, so anything below that is marked “No edge.” Value is that rate on a $100 bet at −110. Positive closing line value after kickoff is the early sign of a real edge.</p>' +
-    '<div class="tablewrap"><table class="ptable"><thead><tr><th class="l">Game</th><th class="l">Pick</th><th>Model line</th><th>Confidence</th><th>Value</th><th>Result</th></tr></thead><tbody>' + rows + '</tbody></table></div></div>' + earlyPanel +
+    '<div class="tablewrap"><table class="ptable"><thead><tr><th class="l">Game</th><th class="l">Pick</th><th>Model line</th><th>Confidence</th><th>Value</th><th>Result</th></tr></thead><tbody>' + rows + '</tbody></table></div>' + betMore + '</div>' + earlyPanel +
     '<div class="panel" id="shop"></div>' + propPanel +
     '<p class="notice">Set a budget you’re fine losing and keep bets small and even. If betting stops being fun, the National Problem Gambling Helpline is 1-800-GAMBLER.</p>';
-  renderShop();
+  renderShop(); wireJump(el);
+  const keepPlace = (id, f) => { const b = el.querySelector('#' + id); if (b) b.onclick = () => { const y = b.getBoundingClientRect().top; f(); renderBetting(); const nb = el.querySelector('#' + id); if (nb) window.scrollBy(0, nb.getBoundingClientRect().top - y); }; };
+  keepPlace('bets-more', () => { ui.betsMore = !ui.betsMore; });
+  keepPlace('bets-ahead', () => { ui.betsAhead = !ui.betsAhead; });
+  keepPlace('early-more', () => { ui.earlyMore = !ui.earlyMore; });
+  el.querySelectorAll('[data-edge]').forEach((b) => b.onclick = () => { ui.edgeOnly = b.dataset.edge === '1'; renderBetting(); });
+  keepPlace('props-more', () => { ui.propsMore = !ui.propsMore; });
+  keepPlace('props-pass', () => { ui.passes = !ui.passes; });
 }
 function renderShop() {
   const box = document.getElementById('shop'); if (!box) return;
@@ -11890,21 +11938,26 @@ let newsTeam = 'ALL';
 function renderNews() {
   const el = document.getElementById('view-news');
   const inj = NEWS.injuries.filter((r) => newsTeam === 'ALL' || r.team === newsTeam);
-  const items = NEWS.items.filter((r) => newsTeam === 'ALL' || r.team === newsTeam);
+  const MON = { Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5, Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11 };
+  const itemDay = (n) => { const m = /(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\.? (\d{1,2})/.exec(n.src || ''); return m ? MON[m[1]] * 40 + +m[2] : -1; };
+  const items = NEWS.items.filter((r) => newsTeam === 'ALL' || r.team === newsTeam).map((n, i) => [n, i]).sort((x, y) => itemDay(y[0]) - itemDay(x[0]) || x[1] - y[1]).map(([n]) => n);
   const qbRows = TEAMS.filter((t) => newsTeam === 'ALL' || t === newsTeam).map((t) => {
     const flag = NEWS.flags[T[t].qb];
     return '<tr><td class="l"><b>' + t + '</b></td><td class="l">' + esc(T[t].qb) + (DATA.overrides[t] ? ' <span class="qbchip">Change</span>' : '') + '</td><td>' + signed(T[t].q, 2) + '</td><td class="l muted small">' + esc(flag || '') + '</td></tr>';
   }).join('');
   el.innerHTML = '<div><h2>News</h2><p class="intro">What changed since the last games, and how the model is handling it. As of ' + esc(NEWS.asof) + '.</p></div>' +
     '<label class="field" style="max-width:300px"><span class="label">Team</span><select id="news-team"><option value="ALL">All teams</option>' + TEAMS.map((t) => '<option value="' + t + '"' + (t === newsTeam ? ' selected' : '') + '>' + esc(full(t)) + '</option>').join('') + '</select></label>' +
-    '<div class="panel"><div class="panel-head"><h3>Headlines that move the numbers</h3></div>' +
-    (items.length ? items.map((n) => '<div class="prow" style="display:block"><p><span class="tag" style="margin-right:6px">' + esc(n.tag) + '</span><b>' + n.team + '</b> ' + esc(n.text) + '</p><p class="muted small" style="margin-top:4px"><a href="' + esc(n.url) + '" target="_blank" rel="noopener">' + esc(n.src) + '</a></p></div>').join('') : '<p class="muted">No headlines for this team.</p>') + '</div>' +
-    '<div class="panel"><div class="panel-head"><h3>Starting quarterbacks</h3><span class="muted small">What the model assumes</span></div><div class="tablewrap"><table class="ptable"><thead><tr><th class="l">Team</th><th class="l">Starter</th><th>EPA/db</th><th class="l">Note</th></tr></thead><tbody>' + qbRows + '</tbody></table></div></div>' +
-    '<div class="panel"><div class="panel-head"><h3>Injured regulars</h3><span class="muted small">Week ' + NEWS.injury_week + ' report, players with 50%+ of snaps</span></div>' +
+    jumpNav([['nw-head', 'Headlines'], ['nw-qb', 'Starting QBs'], ['nw-inj', 'Injured regulars']]) +
+    '<div class="panel" id="nw-head"><div class="panel-head"><h3>Headlines that move the numbers</h3><span class="muted small">Newest first</span></div>' +
+    (items.length ? items.slice(0, ui.newsMore ? 999 : 15).map((n) => '<div class="prow" style="display:block"><p><span class="tag" style="margin-right:6px">' + esc(n.tag) + '</span><b>' + n.team + '</b> ' + esc(n.text) + '</p><p class="muted small" style="margin-top:4px"><a href="' + esc(n.url) + '" target="_blank" rel="noopener">' + esc(n.src) + '</a></p></div>').join('') + (items.length > 15 ? showMoreBtn('news-more', ui.newsMore ? 'Show the latest 15 only' : 'Show ' + (items.length - 15) + ' older headlines') : '') : '<p class="muted">No headlines for this team.</p>') + '</div>' +
+    '<div class="panel" id="nw-qb"><div class="panel-head"><h3>Starting quarterbacks</h3><span class="muted small">What the model assumes</span></div><div class="tablewrap"><table class="ptable"><thead><tr><th class="l">Team</th><th class="l">Starter</th><th>EPA/db</th><th class="l">Note</th></tr></thead><tbody>' + qbRows + '</tbody></table></div></div>' +
+    '<div class="panel" id="nw-inj"><div class="panel-head"><h3>Injured regulars</h3><span class="muted small">Week ' + NEWS.injury_week + ' report, players with 50%+ of snaps</span></div>' +
     (inj.length ? '<div class="tablewrap"><table class="ptable"><thead><tr><th class="l">Team</th><th class="l">Player</th><th class="l">Status</th><th class="l">Injury</th><th>Snaps</th></tr></thead><tbody>' +
       inj.map((r) => '<tr><td class="l"><b>' + r.team + '</b></td><td class="l">' + esc(r.name) + '<span class="ppos pos-' + esc(r.pos) + '">' + esc(r.pos) + '</span></td><td class="l"><span class="' + (r.status === 'Out' ? 'rank-bad' : r.status === 'Doubtful' ? 'rank-bad' : 'muted') + '">' + r.status + '</span></td><td class="l muted">' + esc(r.injury) + '</td><td>' + pct(r.snap) + '</td></tr>').join('') + '</tbody></table></div>' : '<p class="muted">No injured regulars on the last report.</p>') +
     '<p class="muted small" style="margin-top:8px">Players out or doubtful count against their team in the model, weighted by snap share. Questionable players are assumed to play. Next week’s report usually lands Wednesday through Friday.</p></div>';
   el.querySelector('#news-team').onchange = (e) => { newsTeam = e.target.value; renderNews(); };
+  wireJump(el);
+  const nm = el.querySelector('#news-more'); if (nm) nm.onclick = () => { ui.newsMore = !ui.newsMore; renderNews(); if (!ui.newsMore) document.getElementById('nw-head').scrollIntoView({ block: 'start' }); };
 }
 
 // ---------- Stats Lab ----------
@@ -12302,13 +12355,14 @@ function renderCollege() {
     '<div class="tile"><span class="label">Logged picks</span><b>' + lv.w + '–' + lv.l + '</b><span class="muted small">' + (lv.pending ? lv.pending + ' waiting on results' : 'Logged since Week 12') + '</span></div>' +
     (bt ? '<div class="tile"><span class="label">2023–25 winners</span><b>' + (Math.round(bt.su * 1000) / 10) + '%</b><span class="muted small">Betting favorite: ' + (Math.round(bt.su_market * 1000) / 10) + '% (' + bt.n.toLocaleString() + ' games)</span></div>' +
       '<div class="tile"><span class="label">2023–25 vs. the spread</span><b>' + pctTxt(bt.ats_w, bt.ats_l) + '</b><span class="muted small">' + bt.ats_w.toLocaleString() + '–' + bt.ats_l.toLocaleString() + ': no edge, so no spread picks</span></div>' : '') + '</div>' +
-    '<div class="panel"><div class="panel-head"><h3>' + (C.post ? 'Bowl games' : 'Week ' + C.week) + '</h3><span class="muted small">Updated ' + esc(C.asof) + (C.lines ? '' : ' · betting lines not loaded yet') + '</span></div>' +
+    jumpNav([['cfb-week', C.post ? 'Bowl games' : 'Week ' + C.week + ' games'], ['cfb-rankp', 'Power rankings'], ...((C.recent || []).length ? [['cfb-logp', 'Graded picks']] : [])]) +
+    '<div class="panel" id="cfb-week"><div class="panel-head"><h3>' + (C.post ? 'Bowl games' : 'Week ' + C.week) + '</h3><span class="muted small">Updated ' + esc(C.asof) + (C.lines ? '' : ' · betting lines not loaded yet') + '</span></div>' +
     '<div class="cfb-filters"><label class="field"><span class="label">Conference</span><select id="cfb-conf">' + opt('All', 'All games') + opt('Power 4', 'Power 4') + P4.map((c) => opt(c)).join('') + confs.map((c) => opt(c)).join('') + '</select></label>' +
     '<label class="field"><span class="label">Team</span><input id="cfb-q" type="search" placeholder="Search a team" value="' + esc(cfb.q) + '" autocomplete="off"></label>' +
     '<div class="seg" role="group" aria-label="Sort games"><button data-sort="time" aria-pressed="' + (cfb.sort === 'time') + '">By time</button><button data-sort="close" aria-pressed="' + (cfb.sort === 'close') + '">Closest</button>' +
     (C.lines ? '<button data-sort="diff" aria-pressed="' + (cfb.sort === 'diff') + '">Model vs. line</button>' : '') + '</div></div>' +
     '<div id="cfb-games"></div></div>' +
-    '<div class="panel"><div class="panel-head"><h3>Power rankings</h3><span class="muted small">Rating = points better than an average FBS team on a neutral field</span></div><div id="cfb-rank"></div></div>' +
+    '<div class="panel" id="cfb-rankp"><div class="panel-head"><h3>Power rankings</h3><span class="muted small">Rating = points better than an average FBS team on a neutral field</span></div><div id="cfb-rank"></div></div>' +
     '<div id="cfb-log"></div>' +
     (bt && C.backtest.calibration ? '<div class="panel"><div class="panel-head"><h3>Can you trust the percentages?</h3><span class="muted small">2023–25, every game predicted before it was played</span></div><div class="tablewrap"><table class="ptable"><thead><tr><th class="l">Model gave the favorite</th><th>Games</th><th>Favorite won</th></tr></thead><tbody>' +
       C.backtest.calibration.map((c) => '<tr><td class="l">' + esc(c.range) + '</td><td>' + c.n.toLocaleString() + '</td><td>' + (Math.round(c.won * 1000) / 10) + '%</td></tr>').join('') + '</tbody></table></div>' +
@@ -12361,13 +12415,13 @@ function renderCollege() {
     document.getElementById('cfb-all').onclick = () => { cfb.all = !cfb.all; rank(); };
   };
 
-  const recent = (C.recent || []).slice().reverse();
-  document.getElementById('cfb-log').innerHTML = recent.length ? '<div class="panel"><div class="panel-head"><h3>Logged picks, graded</h3><span class="muted small">' + lv.w + '–' + lv.l + (lv.ats_w + lv.ats_l ? ' · vs. the line ' + lv.ats_w + '–' + lv.ats_l : '') + '</span></div>' +
+  const recent = (C.recent || []).slice().sort((x, y) => y.wk - x.wk || (y.day || '').localeCompare(x.day || ''));
+  document.getElementById('cfb-log').innerHTML = recent.length ? '<div class="panel" id="cfb-logp"><div class="panel-head"><h3>Logged picks, graded</h3><span class="muted small">' + lv.w + '–' + lv.l + (lv.ats_w + lv.ats_l ? ' · vs. the line ' + lv.ats_w + '–' + lv.ats_l : '') + '</span></div>' +
     '<div class="tablewrap"><table class="ptable"><thead><tr><th class="l">Game</th><th class="l">Pick</th><th>Model</th><th>Final</th><th>Result</th></tr></thead><tbody>' +
-    recent.map((x) => '<tr><td class="l">' + esc(x.a) + ' @ ' + esc(x.h) + '</td><td class="l">' + esc(x.pick) + '</td><td>' + pct(x.pick === x.h ? x.p : 1 - x.p) + '</td><td>' + x.as + '–' + x.hs + '</td><td>' +
+    recent.map((x, i) => (i === 0 || x.wk !== recent[i - 1].wk ? groupRow(5, 'Week ' + x.wk, wlTxt(recent.filter((y) => y.wk === x.wk), (y) => y.result === 'win' ? true : y.result === 'loss' ? false : null) + ' picking winners') : '') + '<tr><td class="l">' + esc(x.a) + ' @ ' + esc(x.h) + '</td><td class="l">' + esc(x.pick) + '</td><td>' + pct(x.pick === x.h ? x.p : 1 - x.p) + '</td><td>' + x.as + '–' + x.hs + '</td><td>' +
       (x.result === 'win' ? '<span class="pill won">Right</span>' : x.result === 'loss' ? '<span class="pill lost">Wrong</span>' : '<span class="pill">Tie</span>') + '</td></tr>').join('') + '</tbody></table></div></div>' : '';
 
-  games(); rank();
+  games(); rank(); wireJump(el);
   document.getElementById('cfb-conf').onchange = (e) => { cfb.conf = e.target.value; games(); };
   let t; document.getElementById('cfb-q').oninput = (e) => { clearTimeout(t); t = setTimeout(() => { cfb.q = e.target.value; games(); }, 150); };
   el.querySelectorAll('[data-sort]').forEach((b) => { b.onclick = () => { cfb.sort = b.dataset.sort; el.querySelectorAll('[data-sort]').forEach((x) => x.setAttribute('aria-pressed', x === b)); games(); }; });

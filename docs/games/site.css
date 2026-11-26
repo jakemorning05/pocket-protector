@@ -304,6 +304,21 @@ svg.chart .hit { fill: transparent; }
 .conf.c-solid { background: color-mix(in oklab, var(--good) 12%, var(--surface)); color: var(--ink); }
 .conf.c-lean { background: color-mix(in oklab, var(--accent) 14%, var(--surface)); color: var(--ink); }
 .conf.c-noedge, .conf.c-tossup, .conf.c-coinflip { color: var(--muted); }
+/* Lists: group headers, show-more buttons, jump links */
+.ptable tr.grouprow td { padding-top: 16px; padding-bottom: 6px; border-bottom: 1px solid var(--line-strong); white-space: normal; }
+.ptable tr.grouprow:first-child td { padding-top: 6px; }
+.ptable tr.grouprow b { font-size: 0.95rem; }
+.ptable tr.passrow td { opacity: 0.6; }
+.morebtn { margin-top: 10px; }
+.tablefoot { display: flex; flex-wrap: wrap; gap: 8px; }
+.jump { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin: 4px 0 14px; }
+.jump button { border: 1px solid var(--line-strong); background: none; color: var(--ink-2); border-radius: 999px; padding: 4px 12px; font-weight: 700; font-size: 0.82rem; cursor: pointer; }
+.jump button:hover { color: var(--ink); border-color: var(--ink-2); }
+.panel[id] { scroll-margin-top: 170px; }
+.games .dayhead { grid-column: 1 / -1; margin: 10px 0 -2px; font-size: 1rem; }
+.games .dayhead:first-child { margin-top: 0; }
+@media (max-width: 720px) { .panel[id] { scroll-margin-top: 100px; } }
+.ptable tr.btnrow td { padding: 4px 0 8px; border: 0; }
 /* Draft tab */
 .draftbar { display: flex; flex-wrap: wrap; align-items: end; gap: 10px 14px; }
 .draftbar .field { flex: 1 1 240px; max-width: 360px; }
