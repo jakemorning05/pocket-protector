@@ -7,10 +7,10 @@
 
 | Game | Kickoff (ET) | QBs | Model win % (home) | Market win % (home) | Model margin (home) | Line (home) | Model total | Market total |
 |---|---|---|---|---|---|---|---|---|
-| CHI @ DET | 2026-11-26 13:00 | Caleb Williams / Jared Goff | 60% | 48% | +3.4 | +1.5 | 54.6 | 55.5 |
-| PHI @ DAL | 2026-11-26 16:30 | Joe Milton III / Dak Prescott | 75% | 79% | +8.7 | -8.5 | 48.7 | 48.5 |
+| CHI @ DET | 2026-11-26 13:00 | Caleb Williams / Jared Goff | 60% | 48% | +3.4 | +1.5 | 54.6 | 56.5 |
+| PHI @ DAL | 2026-11-26 16:30 | Joe Milton III / Dak Prescott | 75% | 78% | +8.7 | -8.5 | 48.7 | 48.5 |
 | KC @ BUF | 2026-11-26 20:20 | Patrick Mahomes / Josh Allen | 58% | 58% | +2.7 | -3.0 | 52.1 | 45.5 |
-| DEN @ PIT | 2026-11-27 15:00 | Bo Nix / Mason Rudolph | 38% | 36% | -3.8 | +3.5 | 43.2 | 36.5 |
+| DEN @ PIT | 2026-11-27 15:00 | Bo Nix / Mason Rudolph | 38% | 35% | -3.8 | +4.5 | 43.2 | 36.5 |
 | ATL @ MIN | 2026-11-29 13:00 | Michael Penix Jr. / Kirk Cousins | 67% | 73% | +5.7 | -7.0 | 43.8 | 41.5 |
 | BAL @ HOU | 2026-11-29 13:00 | Jacoby Brissett / C.J. Stroud | 71% | 74% | +7.1 | -6.5 | 44.5 | 47.5 |
 | NO @ CIN | 2026-11-29 13:00 | Tyler Shough / Joe Burrow | 83% | 82% | +12.4 | -10.0 | 50.9 | 49.5 |
@@ -19,7 +19,7 @@
 | TEN @ JAX | 2026-11-29 13:00 | Cam Ward / Trevor Lawrence | 89% | 88% | +15.6 | -14.5 | 47.0 | 49.5 |
 | NE @ LAC | 2026-11-29 16:05 | Tommy DeVito / Justin Herbert | 62% | 48% | +3.9 | +1.5 | 47.5 | 35.5 |
 | SEA @ SF | 2026-11-29 16:25 | Sam Darnold / Brock Purdy | 56% | 57% | +1.9 | -2.5 | 47.1 | 44.5 |
-| WAS @ ARI | 2026-11-29 16:25 | Jayden Daniels / Josh Johnson | 34% | 27% | -5.2 | +7.0 | 46.9 | 41.5 |
+| WAS @ ARI | 2026-11-29 16:25 | Jayden Daniels / Josh Johnson | 34% | 27% | -5.2 | +6.5 | 46.9 | 41.5 |
 | LV @ CLE | 2026-11-29 20:20 | Fernando Mendoza / Deshaun Watson | 63% | 68% | +4.4 | -4.5 | 43.8 | 40.5 |
 | CAR @ TB | 2026-11-30 20:15 | Bryce Young / Baker Mayfield | 62% | 59% | +3.9 | -3.0 | 46.4 | 43.5 |
 
