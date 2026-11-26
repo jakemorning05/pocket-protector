@@ -2,13 +2,6 @@
   "_help": "Edit this file when news changes who starts. qb_starters: the QB a team will start (short name as in play-by-play, e.g. C.Wentz) and the last week it applies to; after that week the site goes back to whoever actually started the team's most recent game. players_out: non-QB regulars ruled out in the news but not yet on an official injury report (side = off or def). Save on GitHub and the site rebuilds in a few minutes. traded: players moved to a new team since their last game (projections use the new team; QBs are set in qb_starters). returning: regulars back from injury after missing the team's recent games (they're added to the projections through through_week, and teammates' carries or targets are trimmed to fit). results: final scores (game id, away, home, source) for games nflverse hasn't posted yet; ignored once its scores are in.",
   "qb_starters": [
     {
-      "team": "SEA",
-      "qb": "D.Lock",
-      "name": "Drew Lock",
-      "through_week": 10,
-      "source": "The Sunday Guardian, Nov 10: Darnold ruled out for Week 10"
-    },
-    {
       "team": "BAL",
       "qb": "J.Brissett",
       "name": "Jacoby Brissett",
@@ -59,17 +52,24 @@
     },
     {
       "team": "ARI",
-      "qb": "J.Johnson",
-      "name": "Josh Johnson",
-      "through_week": 11,
-      "source": "Cardinals.com, Nov 20: Beck (back spasms) DNP; LaFleur says they're proceeding as if Johnson starts at KC"
-    },
-    {
-      "team": "ARI",
       "qb": "C.Beck",
       "name": "Carson Beck",
       "through_week": 18,
       "source": "ESPN, Nov 9: Minshew likely torn UCL in his throwing arm; rookie Carson Beck expected to start (Josh Johnson entry covers Week 11)"
+    },
+    {
+      "team": "SEA",
+      "qb": "S.Darnold",
+      "name": "Sam Darnold",
+      "through_week": 18,
+      "source": "Kicks and Grips, Nov 25: practiced Wednesday after missing two games (quad, ribs); Macdonald says he's on track to start"
+    },
+    {
+      "team": "ARI",
+      "qb": "J.Johnson",
+      "name": "Josh Johnson",
+      "through_week": 12,
+      "source": "Kicks and Grips, Nov 25: Carson Beck (back) did not practice Wednesday after missing Week 11; Johnson started Week 11"
     }
   ],
   "players_out": [
@@ -211,11 +211,6 @@
       "name": "Cole Kmet",
       "team": "CHI",
       "source": "NBC Sports, Nov 18: knee, season-ending"
-    },
-    {
-      "name": "Dalton Kincaid",
-      "team": "BUF",
-      "source": "Inactive Week 11 (thumb, ankle); Week 12 at home vs. KC is Thanksgiving night (short week)"
     },
     {
       "team": "IND",

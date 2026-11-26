@@ -1,6 +1,6 @@
 {
  "week": 12,
- "asof": "Tue, Nov 24, 8:12 AM ET",
+ "asof": "Wed, Nov 25, 7:28 PM ET",
  "games": [
   {
    "id": "2026_12_GB_LA",
@@ -704,13 +704,13 @@
      "games": 7
     },
     {
-     "player": "Jaxon Smith-Njigba",
-     "team": "SEA",
-     "pos": "WR",
+     "player": "George Kittle",
+     "team": "SF",
+     "pos": "TE",
      "stat": "rec_yds",
-     "line": 125.5,
-     "proj": 90.8,
-     "p_over": 0.264,
+     "line": 69.5,
+     "proj": 48.2,
+     "p_over": 0.268,
      "side": "Under",
      "games": 10
     }
@@ -726,7 +726,7 @@
      "player": "Jaxon Smith-Njigba",
      "team": "SEA",
      "pos": "WR",
-     "p": 0.622
+     "p": 0.632
     }
    ]
   },
@@ -765,8 +765,8 @@
      "pos": "TE",
      "stat": "rec_yds",
      "line": 54.5,
-     "proj": 60.4,
-     "p_over": 0.558,
+     "proj": 62.7,
+     "p_over": 0.579,
      "side": "Over",
      "games": 11
     }

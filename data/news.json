@@ -1,5 +1,5 @@
 {
- "asof": "Tue, Nov 24, 3:30 AM ET",
+ "asof": "Wed, Nov 25, 7:45 PM ET",
  "outs": [
   "Josh Jacobs",
   "Puka Nacua",
@@ -10,7 +10,7 @@
  ],
  "flags": {
   "Cam Skattebo": "18 carries, 78 yards, 2 TDs in his return Thursday",
-  "Justin Herbert": "Concussion protocol; DJ Uiagalelei starts Week 12 if he doesn't clear",
+  "Justin Herbert": "Concussion protocol; sat out Wednesday's practice",
   "Carson Wentz": "Now Minnesota\u2019s backup after the Kirk Cousins trade",
   "Keenan Allen": "Traded to San Francisco Nov 10; projections use his Colts role in the 49ers offense, so treat them as rough for now",
   "Fernando Mendoza": "Rookie takes over in Las Vegas after the Cousins trade",
@@ -22,9 +22,49 @@
   "Travis Etienne": "Activated from IR; first game since Week 3",
   "Kyle McCord": "Starts at QB through Week 13 while Malik Willis is on IR",
   "Derrick Henry": "Checked for a concussion late in Week 11; said he felt fine",
-  "Kyren Williams": "Limited in practice (turf toe) but expected to play Wednesday vs. Green Bay"
+  "Brock Purdy": "Missed Wednesday practice (ankle)",
+  "Sam Darnold": "Back at practice; on track to start Week 12",
+  "Carson Beck": "No practice Wednesday (back)",
+  "Josh Johnson": "Expected to start again in Week 12 with Beck hurt",
+  "Dalton Kincaid": "Questionable (thumb, ankle); limited all week",
+  "Emmett Johnson": "Starts again with Walker out; 100+ rushing yards in each of the last two games"
  },
  "items": [
+  {
+   "team": "KC",
+   "tag": "Injury",
+   "text": "Kenneth Walker III (groin) is out Thursday night at Buffalo, his third straight missed game. Rookie Emmett Johnson, who has run for 100 yards in each of the last two games, starts again. Bills TE Dalton Kincaid is questionable after limited practices, so he's back in the projections.",
+   "src": "NBC Sports and Yahoo Sports, Nov 25",
+   "url": "https://nbcsports.com/nfl/profootballtalk/rumor-mill/news/kenneth-walker-ruled-out-for-thanksgiving-night-vs-bills"
+  },
+  {
+   "team": "DAL",
+   "tag": "Injury",
+   "text": "Jake Ferguson (knee/ankle) is out again on Thanksgiving against Philadelphia, along with guard Tyler Booker. Eagles CB Quinyon Mitchell will play.",
+   "src": "Bleeding Green Nation, Nov 25",
+   "url": "https://www.bleedinggreennation.com/philadelphia-eagles-injuries/191406/eagles-cowboys-final-injury-report-quinyon-mitchell-will-play-in-dallas"
+  },
+  {
+   "team": "GB",
+   "tag": "Injury",
+   "text": "Josh Jacobs (finger) is inactive Wednesday night at the Rams. Micah Parsons is active for his season debut.",
+   "src": "Packers.com, Nov 25",
+   "url": "https://www.packers.com/news/packers-rams-week-12-inactives-nov-25-2026"
+  },
+  {
+   "team": "SEA",
+   "tag": "QB",
+   "text": "Sam Darnold practiced Wednesday after missing two games and is on track to start Sunday at San Francisco. The model has him back. Brock Purdy missed Wednesday's practice with an ankle injury he played through against Minnesota.",
+   "src": "Kicks and Grips, Nov 25",
+   "url": "https://kicksandgrips.com/news/nfl-week-12-injuries-darnold-returns-purdy-sits-and-walker-is-out"
+  },
+  {
+   "team": "ARI",
+   "tag": "QB",
+   "text": "Carson Beck (back) didn't practice Wednesday, so the model sticks with Josh Johnson for Sunday against Washington until Arizona says otherwise.",
+   "src": "Kicks and Grips, Nov 25",
+   "url": "https://kicksandgrips.com/news/nfl-week-12-injuries-darnold-returns-purdy-sits-and-walker-is-out"
+  },
   {
    "team": "WAS",
    "tag": "Result",
@@ -673,99 +713,11 @@
  "injuries": [
   {
    "team": "ARI",
-   "name": "Carson Beck",
-   "pos": "QB",
-   "status": "Questionable",
-   "injury": "Back",
-   "snap": 1.0
-  },
-  {
-   "team": "ARI",
    "name": "Michael Wilson",
    "pos": "WR",
    "status": "Out",
    "injury": "Fractured vertebra (late news)",
    "snap": 0.9
-  },
-  {
-   "team": "ARI",
-   "name": "Jon Gaines II",
-   "pos": "G",
-   "status": "Out",
-   "injury": "Ankle",
-   "snap": 0.86
-  },
-  {
-   "team": "BAL",
-   "name": "Jaylinn Hawkins",
-   "pos": "S",
-   "status": "Out",
-   "injury": "Knee",
-   "snap": 0.72
-  },
-  {
-   "team": "BAL",
-   "name": "Marlon Humphrey",
-   "pos": "CB",
-   "status": "Out",
-   "injury": "Not injury related - personal matter",
-   "snap": 0.7
-  },
-  {
-   "team": "BAL",
-   "name": "Nnamdi Madubuike",
-   "pos": "DT",
-   "status": "Out",
-   "injury": "Hamstring",
-   "snap": 0.63
-  },
-  {
-   "team": "BUF",
-   "name": "Christian Benford",
-   "pos": "CB",
-   "status": "Out",
-   "injury": "Groin",
-   "snap": 0.74
-  },
-  {
-   "team": "BUF",
-   "name": "Damar Hamlin",
-   "pos": "S",
-   "status": "Questionable",
-   "injury": "Toe",
-   "snap": 0.72
-  },
-  {
-   "team": "BUF",
-   "name": "Dalton Kincaid",
-   "pos": "TE",
-   "status": "Doubtful",
-   "injury": "Thumb",
-   "snap": 0.51
-  },
-  {
-   "team": "CAR",
-   "name": "Bobby Okereke",
-   "pos": "LB",
-   "status": "Out",
-   "injury": "Foot",
-   "snap": 0.96
-  },
-  {
-   "team": "CAR",
-   "name": "Tommy Tremble",
-   "pos": "TE",
-   "status": "Questionable",
-   "injury": "Knee",
-   "snap": 0.66
-  },
-  {
-   "team": "CAR",
-   "name": "Darren Waller",
-   "pos": "TE",
-   "status": "Questionable",
-   "injury": "Knee",
-   "snap": 0.59
   },
   {
    "team": "CHI",
@@ -776,76 +728,12 @@
    "snap": 0.74
   },
   {
-   "team": "CHI",
-   "name": "Kyler Gordon",
-   "pos": "CB",
-   "status": "Out",
-   "injury": "Shoulder",
-   "snap": 0.65
-  },
-  {
-   "team": "CIN",
-   "name": "Dylan Fairchild",
-   "pos": "G",
-   "status": "Questionable",
-   "injury": "Oblique",
-   "snap": 0.98
-  },
-  {
-   "team": "CIN",
-   "name": "Daxton Hill",
-   "pos": "CB",
-   "status": "Questionable",
-   "injury": "Illness",
-   "snap": 0.89
-  },
-  {
-   "team": "CIN",
-   "name": "Dalton Risner",
-   "pos": "G",
-   "status": "Out",
-   "injury": "Knee",
-   "snap": 0.83
-  },
-  {
-   "team": "CIN",
-   "name": "Jalen Davis",
-   "pos": "CB",
-   "status": "Doubtful",
-   "injury": "Hamstring",
-   "snap": 0.61
-  },
-  {
-   "team": "CIN",
-   "name": "Andrei Iosivas",
-   "pos": "WR",
-   "status": "Doubtful",
-   "injury": "Thumb",
-   "snap": 0.57
-  },
-  {
    "team": "DAL",
-   "name": "Jalen Thompson",
+   "name": "P.J. Locke",
    "pos": "S",
-   "status": "Questionable",
-   "injury": "Hamstring",
-   "snap": 0.81
-  },
-  {
-   "team": "DAL",
-   "name": "Tyler Booker",
-   "pos": "G",
    "status": "Out",
-   "injury": "Ankle",
-   "snap": 0.8
-  },
-  {
-   "team": "DAL",
-   "name": "DaRon Bland",
-   "pos": "CB",
-   "status": "Out",
-   "injury": "Ankle",
-   "snap": 0.71
+   "injury": "Out Week 10 (late news)",
+   "snap": 0.84
   },
   {
    "team": "DAL",
@@ -856,44 +744,20 @@
    "snap": 0.56
   },
   {
-   "team": "DAL",
-   "name": "P.J. Locke",
-   "pos": "S",
-   "status": "Out",
-   "injury": "Concussion",
-   "snap": 0.52
-  },
-  {
-   "team": "DEN",
-   "name": "Brandon Jones",
-   "pos": "S",
+   "team": "GB",
+   "name": "Travis Glover",
+   "pos": "G",
    "status": "Questionable",
-   "injury": "Hamstring",
-   "snap": 0.78
-  },
-  {
-   "team": "DET",
-   "name": "D.J. Reed",
-   "pos": "CB",
-   "status": "Questionable",
-   "injury": "Hip",
-   "snap": 0.9
-  },
-  {
-   "team": "DET",
-   "name": "Cade Mays",
-   "pos": "C",
-   "status": "Out",
-   "injury": "Ankle",
-   "snap": 0.66
+   "injury": "Shoulder",
+   "snap": 1.0
   },
   {
    "team": "GB",
-   "name": "Sean Rhyan",
-   "pos": "C",
-   "status": "Out",
-   "injury": "High ankle sprain (late news)",
-   "snap": 1.0
+   "name": "Zaire Franklin",
+   "pos": "LB",
+   "status": "Questionable",
+   "injury": "Shin",
+   "snap": 0.98
   },
   {
    "team": "GB",
@@ -904,84 +768,28 @@
    "snap": 0.71
   },
   {
-   "team": "HOU",
-   "name": "Danielle Hunter",
-   "pos": "DE",
-   "status": "Out",
-   "injury": "Hamstring",
-   "snap": 0.72
-  },
-  {
-   "team": "HOU",
-   "name": "Woody Marks",
-   "pos": "RB",
-   "status": "Out",
-   "injury": "Concussion",
-   "snap": 0.67
-  },
-  {
-   "team": "IND",
-   "name": "Sauce Gardner",
-   "pos": "CB",
+   "team": "GB",
+   "name": "Sean Rhyan",
+   "pos": "C",
    "status": "Questionable",
-   "injury": "Calf",
-   "snap": 0.84
+   "injury": "Ankle",
+   "snap": 0.69
   },
   {
    "team": "IND",
    "name": "Jalen Travis",
    "pos": "T",
    "status": "Out",
-   "injury": "Knee",
-   "snap": 0.8
-  },
-  {
-   "team": "IND",
-   "name": "Charvarius Ward",
-   "pos": "CB",
-   "status": "Out",
-   "injury": "Knee",
-   "snap": 0.78
-  },
-  {
-   "team": "IND",
-   "name": "Bernhard Raimann",
-   "pos": "T",
-   "status": "Out",
-   "injury": "Concussion",
-   "snap": 0.66
-  },
-  {
-   "team": "JAX",
-   "name": "Robert Hainsey",
-   "pos": "C",
-   "status": "Out",
-   "injury": "Knee",
-   "snap": 0.79
+   "injury": "Knee (late news)",
+   "snap": 1.0
   },
   {
    "team": "KC",
    "name": "Kenneth Walker III",
    "pos": "RB",
    "status": "Out",
-   "injury": "Groin",
-   "snap": 0.73
-  },
-  {
-   "team": "KC",
-   "name": "Jaylon Moore",
-   "pos": "T",
-   "status": "Out",
-   "injury": "Ankle",
-   "snap": 0.72
-  },
-  {
-   "team": "KC",
-   "name": "Trey Smith",
-   "pos": "G",
-   "status": "Out",
-   "injury": "Concussion",
-   "snap": 0.72
+   "injury": "Short week (late news)",
+   "snap": 0.81
   },
   {
    "team": "KC",
@@ -1000,52 +808,20 @@
    "snap": 0.96
   },
   {
-   "team": "LAC",
-   "name": "Tarheeb Still",
-   "pos": "CB",
-   "status": "Questionable",
-   "injury": "Ankle",
-   "snap": 1.0
-  },
-  {
-   "team": "LAC",
-   "name": "Daiyan Henley",
-   "pos": "LB",
-   "status": "Out",
-   "injury": "Knee",
-   "snap": 0.82
-  },
-  {
-   "team": "LAC",
-   "name": "Charlie Kolar",
-   "pos": "TE",
-   "status": "Questionable",
-   "injury": "Concussion",
-   "snap": 0.66
-  },
-  {
-   "team": "LV",
-   "name": "Brock Bowers",
-   "pos": "TE",
-   "status": "Questionable",
-   "injury": "Ankle",
-   "snap": 0.68
-  },
-  {
-   "team": "MIA",
-   "name": "Aaron Brewer",
+   "team": "LA",
+   "name": "Coleman Shelton",
    "pos": "C",
-   "status": "Questionable",
-   "injury": "Concussion",
-   "snap": 1.0
+   "status": "Out",
+   "injury": "Hamstring",
+   "snap": 0.74
   },
   {
-   "team": "MIA",
-   "name": "Dante Trader Jr.",
-   "pos": "S",
-   "status": "Doubtful",
-   "injury": "Shoulder",
-   "snap": 0.99
+   "team": "LA",
+   "name": "Steve Avila",
+   "pos": "G",
+   "status": "Out",
+   "injury": "Hamstring",
+   "snap": 0.73
   },
   {
    "team": "MIA",
@@ -1057,27 +833,11 @@
   },
   {
    "team": "MIN",
-   "name": "Kyler Murray",
-   "pos": "QB",
-   "status": "Out",
-   "injury": "Hamstring",
-   "snap": 1.0
-  },
-  {
-   "team": "MIN",
    "name": "Jordan Addison",
    "pos": "WR",
    "status": "Out",
-   "injury": "Thumb",
-   "snap": 0.92
-  },
-  {
-   "team": "MIN",
-   "name": "Isaiah Rodgers",
-   "pos": "CB",
-   "status": "Questionable",
-   "injury": "Quadricep",
-   "snap": 0.71
+   "injury": "Thumb surgery (late news)",
+   "snap": 0.98
   },
   {
    "team": "NE",
@@ -1097,139 +857,19 @@
   },
   {
    "team": "NO",
-   "name": "Taliese Fuaga",
-   "pos": "T",
-   "status": "Out",
-   "injury": "Knee",
-   "snap": 1.0
-  },
-  {
-   "team": "NO",
    "name": "Erik McCoy",
    "pos": "C",
    "status": "Out",
-   "injury": "Biceps",
-   "snap": 0.91
-  },
-  {
-   "team": "NO",
-   "name": "Martin Emerson",
-   "pos": "CB",
-   "status": "Out",
-   "injury": "Concussion",
-   "snap": 0.82
-  },
-  {
-   "team": "NO",
-   "name": "Pete Werner",
-   "pos": "LB",
-   "status": "Questionable",
-   "injury": "Hamstring",
-   "snap": 0.74
-  },
-  {
-   "team": "NO",
-   "name": "Justin Reid",
-   "pos": "S",
-   "status": "Out",
-   "injury": "Not injury related - personal matter",
-   "snap": 0.7
-  },
-  {
-   "team": "NO",
-   "name": "Asim Richards",
-   "pos": "T",
-   "status": "Out",
-   "injury": "Knee",
-   "snap": 0.6
-  },
-  {
-   "team": "NYJ",
-   "name": "Dylan Parham",
-   "pos": "G",
-   "status": "Questionable",
-   "injury": "Knee",
-   "snap": 0.73
+   "injury": "Biceps (late news)",
+   "snap": 1.0
   },
   {
    "team": "NYJ",
    "name": "Omar Cooper Jr.",
    "pos": "WR",
    "status": "Out",
-   "injury": "Ankle",
-   "snap": 0.55
-  },
-  {
-   "team": "NYJ",
-   "name": "Harrison Phillips",
-   "pos": "DT",
-   "status": "Questionable",
-   "injury": "Ankle",
-   "snap": 0.51
-  },
-  {
-   "team": "PHI",
-   "name": "Zack Baun",
-   "pos": "LB",
-   "status": "Out",
-   "injury": "Back",
-   "snap": 0.83
-  },
-  {
-   "team": "PHI",
-   "name": "Dontayvion Wicks",
-   "pos": "WR",
-   "status": "Out",
-   "injury": "Ankle",
-   "snap": 0.79
-  },
-  {
-   "team": "PIT",
-   "name": "Patrick Queen",
-   "pos": "LB",
-   "status": "Questionable",
-   "injury": "Hand",
-   "snap": 1.0
-  },
-  {
-   "team": "PIT",
-   "name": "Michael Pittman",
-   "pos": "WR",
-   "status": "Questionable",
-   "injury": "Foot",
-   "snap": 0.78
-  },
-  {
-   "team": "PIT",
-   "name": "Nick Herbig",
-   "pos": "LB",
-   "status": "Questionable",
-   "injury": "Hip",
-   "snap": 0.5
-  },
-  {
-   "team": "SF",
-   "name": "Dre Greenlaw",
-   "pos": "LB",
-   "status": "Questionable",
-   "injury": "Neck",
-   "snap": 0.92
-  },
-  {
-   "team": "SF",
-   "name": "Upton Stout",
-   "pos": "CB",
-   "status": "Questionable",
-   "injury": "Shoulder",
-   "snap": 0.67
-  },
-  {
-   "team": "SF",
-   "name": "Mike Evans",
-   "pos": "WR",
-   "status": "Questionable",
-   "injury": "Achilles",
-   "snap": 0.54
+   "injury": "Ankle/hip (late news)",
+   "snap": 0.86
   },
   {
    "team": "SF",
@@ -1240,77 +880,13 @@
    "snap": 0.5
   },
   {
-   "team": "SF",
-   "name": "Mac Jones",
-   "pos": "QB",
-   "status": "Questionable",
-   "injury": "Illness",
-   "snap": 0.11
-  },
-  {
-   "team": "TB",
-   "name": "Baker Mayfield",
-   "pos": "QB",
-   "status": "Questionable",
-   "injury": "Foot",
-   "snap": 0.97
-  },
-  {
-   "team": "TB",
-   "name": "Antoine Winfield Jr.",
-   "pos": "S",
-   "status": "Out",
-   "injury": "Ankle",
-   "snap": 0.79
-  },
-  {
-   "team": "TEN",
-   "name": "Anthony Hill Jr.",
-   "pos": "LB",
-   "status": "Questionable",
-   "injury": "Neck",
-   "snap": 0.99
-  },
-  {
-   "team": "TEN",
-   "name": "Carnell Tate",
-   "pos": "WR",
-   "status": "Questionable",
-   "injury": "Shoulder",
-   "snap": 0.8
-  },
-  {
-   "team": "TEN",
-   "name": "Fernando Carmona",
-   "pos": "G",
-   "status": "Out",
-   "injury": "Ankle",
-   "snap": 0.67
-  },
-  {
-   "team": "WAS",
-   "name": "Amik Robertson",
-   "pos": "CB",
-   "status": "Questionable",
-   "injury": "Ankle",
-   "snap": 0.98
-  },
-  {
    "team": "WAS",
    "name": "Lucas Patrick",
-   "pos": "C",
-   "status": "Questionable",
-   "injury": "Concussion",
-   "snap": 0.81
-  },
-  {
-   "team": "WAS",
-   "name": "Rachaad White",
-   "pos": "RB",
-   "status": "Questionable",
-   "injury": "Heel",
-   "snap": 0.52
+   "pos": "G",
+   "status": "Out",
+   "injury": "Concussion protocol; Nick Allegretti starts at center Thursday (late news)",
+   "snap": 1.0
   }
  ],
- "injury_week": 11
+ "injury_week": 12
 }
