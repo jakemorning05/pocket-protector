@@ -78,6 +78,11 @@ def preview(g, done):
     return out
 
 
+def win_tag(p):
+    # Same labels as the site's game cards; the win chance itself is calibrated on held-out seasons.
+    return 'Strong' if p >= 0.75 else 'Solid' if p >= 0.65 else 'Lean' if p >= 0.55 else 'Toss-up'
+
+
 def page(g, lock, fan, news, site_url, analytics=''):
     done = g['hs'] is not None
     if lock and (done or datetime.datetime.fromisoformat(lock['kick']) <= datetime.datetime.now(ET)):
@@ -95,7 +100,7 @@ def page(g, lock, fan, news, site_url, analytics=''):
     else:
         res = ''
     hs, as_ = (g['tot'] + g['m']) / 2, (g['tot'] - g['m']) / 2
-    tiles = (f'<div class="tiles num"><div class="tile"><span class="label">Model pick</span><b>{pick}</b><span class="muted small">{pct(p)} to win</span></div>'
+    tiles = (f'<div class="tiles num"><div class="tile"><span class="label">Model pick</span><b>{pick}</b><span class="muted small">Confidence {pct(p)} · {win_tag(p)}</span></div>'
              f'<div class="tile"><span class="label">Projected score</span><b>{round(as_)}–{round(hs)}</b><span class="muted small">{a} – {h}</span></div>'
              f'<div class="tile"><span class="label">Model line</span><b>{line_txt(g, g["m"])}</b><span class="muted small">Total {round(g["tot"] * 2) / 2:g}</span></div>' +
              (f'<div class="tile"><span class="label">Betting line</span><b>{line_txt(g, g["mk_spread"])}</b><span class="muted small">Total {g["mk_total"]:g}</span></div>' if g.get('mk_spread') is not None else '') + '</div>')

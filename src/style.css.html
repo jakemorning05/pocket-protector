@@ -296,6 +296,14 @@ svg.chart .hit { fill: transparent; }
   .pickers .at { padding: 0; text-align: center; }
   .asof { width: 100%; }
 }
+/* Confidence pills */
+.pickrow { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; margin: 8px 0 2px; font-size: 0.9rem; color: var(--ink-2); }
+.pickrow b { color: var(--ink); }
+.conf { display: inline-block; white-space: nowrap; font-weight: 700; font-size: 0.78rem; padding: 2px 8px; border-radius: 999px; background: var(--surface-2); color: var(--ink-2); }
+.conf.c-strong { background: color-mix(in oklab, var(--good) 22%, var(--surface)); color: var(--good); }
+.conf.c-solid { background: color-mix(in oklab, var(--good) 12%, var(--surface)); color: var(--ink); }
+.conf.c-lean { background: color-mix(in oklab, var(--accent) 14%, var(--surface)); color: var(--ink); }
+.conf.c-noedge, .conf.c-tossup, .conf.c-coinflip { color: var(--muted); }
 @media (prefers-reduced-motion: no-preference) {
   .probbar span, .pbar i { transition: width 0.3s ease; }
 }

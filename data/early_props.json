@@ -1,6 +1,6 @@
 {
  "week": 12,
- "asof": "Wed, Nov 25, 7:28 PM ET",
+ "asof": "Wed, Nov 25, 7:42 PM ET",
  "games": [
   {
    "id": "2026_12_GB_LA",
@@ -10,35 +10,38 @@
    "time": "20:00",
    "leans": [
     {
-     "player": "Jordan Love",
-     "team": "GB",
-     "pos": "QB",
-     "stat": "pass_yds",
-     "line": 282.5,
-     "proj": 242.6,
-     "p_over": 0.303,
-     "side": "Under",
-     "games": 10
-    },
-    {
      "player": "Matthew Golden",
      "team": "GB",
      "pos": "WR",
      "stat": "rec_yds",
      "line": 87.5,
-     "proj": 71.2,
-     "p_over": 0.36,
+     "proj": 80.2,
+     "p_over": 0.32,
+     "conf": 0.59,
      "side": "Under",
      "games": 10
     },
     {
-     "player": "Tucker Kraft",
+     "player": "Jordan Love",
      "team": "GB",
-     "pos": "TE",
+     "pos": "QB",
+     "stat": "pass_yds",
+     "line": 282.5,
+     "proj": 256.3,
+     "p_over": 0.331,
+     "conf": 0.584,
+     "side": "Under",
+     "games": 10
+    },
+    {
+     "player": "Christian Watson",
+     "team": "GB",
+     "pos": "WR",
      "stat": "rec_yds",
-     "line": 39.5,
-     "proj": 32.5,
-     "p_over": 0.397,
+     "line": 80.5,
+     "proj": 77.8,
+     "p_over": 0.35,
+     "conf": 0.575,
      "side": "Under",
      "games": 10
     }
@@ -71,8 +74,9 @@
      "pos": "QB",
      "stat": "pass_yds",
      "line": 269.5,
-     "proj": 235.0,
-     "p_over": 0.32,
+     "proj": 237.8,
+     "p_over": 0.343,
+     "conf": 0.578,
      "side": "Under",
      "games": 7
     },
@@ -82,19 +86,21 @@
      "pos": "QB",
      "stat": "pass_yds",
      "line": 275.5,
-     "proj": 248.7,
-     "p_over": 0.369,
+     "proj": 270.9,
+     "p_over": 0.387,
+     "conf": 0.556,
      "side": "Under",
      "games": 10
     },
     {
-     "player": "Luther Burden III",
-     "team": "CHI",
-     "pos": "WR",
+     "player": "Sam LaPorta",
+     "team": "DET",
+     "pos": "TE",
      "stat": "rec_yds",
-     "line": 62.5,
-     "proj": 55.1,
-     "p_over": 0.423,
+     "line": 46.5,
+     "proj": 43.6,
+     "p_over": 0.392,
+     "conf": 0.554,
      "side": "Under",
      "games": 10
     }
@@ -122,36 +128,39 @@
    "time": "16:30",
    "leans": [
     {
+     "player": "Dallas Goedert",
+     "team": "PHI",
+     "pos": "TE",
+     "stat": "rec_yds",
+     "line": 43.5,
+     "proj": 36.0,
+     "p_over": 0.355,
+     "conf": 0.572,
+     "side": "Under",
+     "games": 8
+    },
+    {
+     "player": "Saquon Barkley",
+     "team": "PHI",
+     "pos": "RB",
+     "stat": "rush_yds",
+     "line": 46.5,
+     "proj": 57.2,
+     "p_over": 0.613,
+     "conf": 0.557,
+     "side": "Over",
+     "games": 8
+    },
+    {
      "player": "Dak Prescott",
      "team": "DAL",
      "pos": "QB",
      "stat": "pass_yds",
      "line": 279.5,
-     "proj": 249.9,
-     "p_over": 0.357,
+     "proj": 273.7,
+     "p_over": 0.385,
+     "conf": 0.557,
      "side": "Under",
-     "games": 11
-    },
-    {
-     "player": "Makai Lemon",
-     "team": "PHI",
-     "pos": "WR",
-     "stat": "rec_yds",
-     "line": 28.5,
-     "proj": 37.0,
-     "p_over": 0.616,
-     "side": "Over",
-     "games": 10
-    },
-    {
-     "player": "CeeDee Lamb",
-     "team": "DAL",
-     "pos": "WR",
-     "stat": "rec_yds",
-     "line": 74.5,
-     "proj": 90.6,
-     "p_over": 0.616,
-     "side": "Over",
      "games": 11
     }
    ],
@@ -183,8 +192,9 @@
      "pos": "WR",
      "stat": "rec_yds",
      "line": 74.5,
-     "proj": 45.8,
-     "p_over": 0.193,
+     "proj": 48.5,
+     "p_over": 0.211,
+     "conf": 0.645,
      "side": "Under",
      "games": 8
     },
@@ -194,8 +204,9 @@
      "pos": "TE",
      "stat": "rec_yds",
      "line": 63.5,
-     "proj": 47.3,
-     "p_over": 0.316,
+     "proj": 50.4,
+     "p_over": 0.315,
+     "conf": 0.592,
      "side": "Under",
      "games": 10
     },
@@ -205,8 +216,9 @@
      "pos": "WR",
      "stat": "rec_yds",
      "line": 54.5,
-     "proj": 41.8,
-     "p_over": 0.342,
+     "proj": 43.5,
+     "p_over": 0.32,
+     "conf": 0.59,
      "side": "Under",
      "games": 10
     }
@@ -232,41 +244,7 @@
    "h": "PIT",
    "day": "2026-11-27",
    "time": "15:00",
-   "leans": [
-    {
-     "player": "Jaylen Waddle",
-     "team": "DEN",
-     "pos": "WR",
-     "stat": "rec_yds",
-     "line": 29.5,
-     "proj": 37.9,
-     "p_over": 0.613,
-     "side": "Over",
-     "games": 10
-    },
-    {
-     "player": "Germie Bernard",
-     "team": "PIT",
-     "pos": "WR",
-     "stat": "rec_yds",
-     "line": 30.5,
-     "proj": 36.0,
-     "p_over": 0.577,
-     "side": "Over",
-     "games": 9
-    },
-    {
-     "player": "DK Metcalf",
-     "team": "PIT",
-     "pos": "WR",
-     "stat": "rec_yds",
-     "line": 35.5,
-     "proj": 38.6,
-     "p_over": 0.541,
-     "side": "Over",
-     "games": 10
-    }
-   ],
+   "leans": [],
    "td": [
     {
      "player": "Jonah Coleman",
@@ -288,41 +266,7 @@
    "h": "MIN",
    "day": "2026-11-29",
    "time": "13:00",
-   "leans": [
-    {
-     "player": "Aaron Jones",
-     "team": "MIN",
-     "pos": "RB",
-     "stat": "rush_yds",
-     "line": 43.5,
-     "proj": 51.5,
-     "p_over": 0.603,
-     "side": "Over",
-     "games": 10
-    },
-    {
-     "player": "T.J. Hockenson",
-     "team": "MIN",
-     "pos": "TE",
-     "stat": "rec_yds",
-     "line": 35.5,
-     "proj": 41.2,
-     "p_over": 0.573,
-     "side": "Over",
-     "games": 9
-    },
-    {
-     "player": "Kirk Cousins",
-     "team": "MIN",
-     "pos": "QB",
-     "stat": "pass_yds",
-     "line": 247.5,
-     "proj": 235.5,
-     "p_over": 0.436,
-     "side": "Under",
-     "games": 11
-    }
-   ],
+   "leans": [],
    "td": [
     {
      "player": "Bijan Robinson",
@@ -351,21 +295,11 @@
      "pos": "QB",
      "stat": "pass_yds",
      "line": 274.5,
-     "proj": 228.3,
-     "p_over": 0.256,
+     "proj": 221.8,
+     "p_over": 0.255,
+     "conf": 0.622,
      "side": "Under",
      "games": 10
-    },
-    {
-     "player": "Tank Dell",
-     "team": "HOU",
-     "pos": "WR",
-     "stat": "rec_yds",
-     "line": 35.5,
-     "proj": 44.7,
-     "p_over": 0.611,
-     "side": "Over",
-     "games": 4
     },
     {
      "player": "Zay Flowers",
@@ -373,8 +307,9 @@
      "pos": "WR",
      "stat": "rec_yds",
      "line": 79.5,
-     "proj": 68.8,
-     "p_over": 0.404,
+     "proj": 77.2,
+     "p_over": 0.35,
+     "conf": 0.575,
      "side": "Under",
      "games": 10
     }
@@ -407,21 +342,23 @@
      "pos": "WR",
      "stat": "rec_yds",
      "line": 92.5,
-     "proj": 72.8,
-     "p_over": 0.335,
+     "proj": 82.2,
+     "p_over": 0.285,
+     "conf": 0.608,
      "side": "Under",
      "games": 10
     },
     {
-     "player": "Jordyn Tyson",
-     "team": "NO",
-     "pos": "WR",
-     "stat": "rec_yds",
-     "line": 30.5,
-     "proj": 42.5,
-     "p_over": 0.648,
-     "side": "Over",
-     "games": 3
+     "player": "Chase Brown",
+     "team": "CIN",
+     "pos": "RB",
+     "stat": "rush_yds",
+     "line": 49.5,
+     "proj": 43.9,
+     "p_over": 0.33,
+     "conf": 0.585,
+     "side": "Under",
+     "games": 10
     },
     {
      "player": "Devaughn Vele",
@@ -429,8 +366,9 @@
      "pos": "WR",
      "stat": "rec_yds",
      "line": 48.5,
-     "proj": 40.9,
-     "p_over": 0.403,
+     "proj": 42.4,
+     "p_over": 0.36,
+     "conf": 0.57,
      "side": "Under",
      "games": 10
     }
@@ -458,37 +396,40 @@
    "time": "13:00",
    "leans": [
     {
-     "player": "Daniel Jones",
-     "team": "IND",
-     "pos": "QB",
-     "stat": "pass_yds",
-     "line": 166.5,
-     "proj": 205.9,
-     "p_over": 0.745,
-     "side": "Over",
-     "games": 11
-    },
-    {
      "player": "Jonathan Taylor",
      "team": "IND",
      "pos": "RB",
      "stat": "rush_yds",
      "line": 83.5,
-     "proj": 65.3,
-     "p_over": 0.308,
+     "proj": 68.1,
+     "p_over": 0.292,
+     "conf": 0.604,
      "side": "Under",
      "games": 11
     },
     {
-     "player": "Malachi Fields",
+     "player": "J.J. McCarthy",
      "team": "NYG",
-     "pos": "WR",
-     "stat": "rec_yds",
-     "line": 27.5,
-     "proj": 39.1,
-     "p_over": 0.651,
+     "pos": "QB",
+     "stat": "pass_yds",
+     "line": 208.5,
+     "proj": 237.0,
+     "p_over": 0.634,
+     "conf": 0.567,
      "side": "Over",
-     "games": 10
+     "games": 6
+    },
+    {
+     "player": "Daniel Jones",
+     "team": "IND",
+     "pos": "QB",
+     "stat": "pass_yds",
+     "line": 166.5,
+     "proj": 167.8,
+     "p_over": 0.629,
+     "conf": 0.564,
+     "side": "Over",
+     "games": 11
     }
    ],
    "td": [
@@ -519,8 +460,9 @@
      "pos": "WR",
      "stat": "rec_yds",
      "line": 70.5,
-     "proj": 47.0,
-     "p_over": 0.243,
+     "proj": 50.0,
+     "p_over": 0.248,
+     "conf": 0.626,
      "side": "Under",
      "games": 7
     },
@@ -531,20 +473,22 @@
      "stat": "rec_yds",
      "line": 43.5,
      "proj": 35.1,
-     "p_over": 0.382,
+     "p_over": 0.352,
+     "conf": 0.574,
      "side": "Under",
      "games": 10
     },
     {
-     "player": "Geno Smith",
+     "player": "Adonai Mitchell",
      "team": "NYJ",
-     "pos": "QB",
-     "stat": "pass_yds",
-     "line": 215.5,
-     "proj": 230.6,
-     "p_over": 0.583,
-     "side": "Over",
-     "games": 11
+     "pos": "WR",
+     "stat": "rec_yds",
+     "line": 59.5,
+     "proj": 56.2,
+     "p_over": 0.399,
+     "conf": 0.551,
+     "side": "Under",
+     "games": 7
     }
    ],
    "td": [
@@ -570,36 +514,39 @@
    "time": "13:00",
    "leans": [
     {
-     "player": "Cam Ward",
-     "team": "TEN",
-     "pos": "QB",
-     "stat": "pass_yds",
-     "line": 182.5,
-     "proj": 218.7,
-     "p_over": 0.708,
-     "side": "Over",
-     "games": 10
-    },
-    {
      "player": "Jakobi Meyers",
      "team": "JAX",
      "pos": "WR",
      "stat": "rec_yds",
      "line": 38.5,
-     "proj": 57.2,
-     "p_over": 0.686,
+     "proj": 62.8,
+     "p_over": 0.679,
+     "conf": 0.59,
      "side": "Over",
      "games": 10
     },
     {
-     "player": "Bhayshul Tuten",
+     "player": "Cam Ward",
+     "team": "TEN",
+     "pos": "QB",
+     "stat": "pass_yds",
+     "line": 182.5,
+     "proj": 198.6,
+     "p_over": 0.656,
+     "conf": 0.578,
+     "side": "Over",
+     "games": 10
+    },
+    {
+     "player": "Trevor Lawrence",
      "team": "JAX",
-     "pos": "RB",
-     "stat": "rush_yds",
-     "line": 69.5,
-     "proj": 62.2,
-     "p_over": 0.417,
-     "side": "Under",
+     "pos": "QB",
+     "stat": "pass_yds",
+     "line": 243.5,
+     "proj": 293.4,
+     "p_over": 0.606,
+     "conf": 0.553,
+     "side": "Over",
      "games": 10
     }
    ],
@@ -626,37 +573,28 @@
    "time": "16:05",
    "leans": [
     {
-     "player": "Justin Herbert",
-     "team": "LAC",
-     "pos": "QB",
-     "stat": "pass_yds",
-     "line": 192.5,
-     "proj": 220.2,
-     "p_over": 0.661,
-     "side": "Over",
-     "games": 10
-    },
-    {
-     "player": "Tre Harris",
-     "team": "LAC",
-     "pos": "WR",
-     "stat": "rec_yds",
-     "line": 31.5,
-     "proj": 42.9,
-     "p_over": 0.64,
-     "side": "Over",
-     "games": 9
-    },
-    {
      "player": "Mack Hollins",
      "team": "NE",
      "pos": "WR",
      "stat": "rec_yds",
      "line": 49.5,
-     "proj": 39.1,
-     "p_over": 0.364,
+     "proj": 40.2,
+     "p_over": 0.337,
+     "conf": 0.582,
      "side": "Under",
      "games": 6
+    },
+    {
+     "player": "Justin Herbert",
+     "team": "LAC",
+     "pos": "QB",
+     "stat": "pass_yds",
+     "line": 192.5,
+     "proj": 202.2,
+     "p_over": 0.619,
+     "conf": 0.56,
+     "side": "Over",
+     "games": 10
     }
    ],
    "td": [
@@ -682,35 +620,38 @@
    "time": "16:25",
    "leans": [
     {
+     "player": "Jaxon Smith-Njigba",
+     "team": "SEA",
+     "pos": "WR",
+     "stat": "rec_yds",
+     "line": 125.5,
+     "proj": 106.0,
+     "p_over": 0.199,
+     "conf": 0.651,
+     "side": "Under",
+     "games": 10
+    },
+    {
      "player": "Zach Charbonnet",
      "team": "SEA",
      "pos": "RB",
      "stat": "rush_yds",
      "line": 77.5,
-     "proj": 53.3,
-     "p_over": 0.22,
+     "proj": 54.4,
+     "p_over": 0.232,
+     "conf": 0.634,
      "side": "Under",
      "games": 3
     },
     {
-     "player": "Mike Evans",
+     "player": "Brock Purdy",
      "team": "SF",
-     "pos": "WR",
-     "stat": "rec_yds",
-     "line": 76.5,
-     "proj": 51.6,
-     "p_over": 0.244,
-     "side": "Under",
-     "games": 7
-    },
-    {
-     "player": "George Kittle",
-     "team": "SF",
-     "pos": "TE",
-     "stat": "rec_yds",
-     "line": 69.5,
-     "proj": 48.2,
-     "p_over": 0.268,
+     "pos": "QB",
+     "stat": "pass_yds",
+     "line": 259.5,
+     "proj": 207.3,
+     "p_over": 0.27,
+     "conf": 0.615,
      "side": "Under",
      "games": 10
     }
@@ -743,32 +684,11 @@
      "pos": "WR",
      "stat": "rec_yds",
      "line": 36.5,
-     "proj": 49.9,
-     "p_over": 0.649,
+     "proj": 53.7,
+     "p_over": 0.624,
+     "conf": 0.562,
      "side": "Over",
      "games": 10
-    },
-    {
-     "player": "Stefon Diggs",
-     "team": "WAS",
-     "pos": "WR",
-     "stat": "rec_yds",
-     "line": 45.5,
-     "proj": 53.1,
-     "p_over": 0.582,
-     "side": "Over",
-     "games": 9
-    },
-    {
-     "player": "Trey McBride",
-     "team": "ARI",
-     "pos": "TE",
-     "stat": "rec_yds",
-     "line": 54.5,
-     "proj": 62.7,
-     "p_over": 0.579,
-     "side": "Over",
-     "games": 11
     }
    ],
    "td": [
@@ -799,8 +719,9 @@
      "pos": "WR",
      "stat": "rec_yds",
      "line": 37.5,
-     "proj": 53.2,
-     "p_over": 0.665,
+     "proj": 57.8,
+     "p_over": 0.644,
+     "conf": 0.572,
      "side": "Over",
      "games": 10
     },
@@ -810,8 +731,9 @@
      "pos": "WR",
      "stat": "rec_yds",
      "line": 43.5,
-     "proj": 57.2,
-     "p_over": 0.639,
+     "proj": 62.8,
+     "p_over": 0.634,
+     "conf": 0.567,
      "side": "Over",
      "games": 10
     },
@@ -821,8 +743,9 @@
      "pos": "RB",
      "stat": "rush_yds",
      "line": 43.5,
-     "proj": 54.1,
-     "p_over": 0.631,
+     "proj": 55.3,
+     "p_over": 0.613,
+     "conf": 0.557,
      "side": "Over",
      "games": 9
     }
@@ -855,32 +778,23 @@
      "pos": "QB",
      "stat": "pass_yds",
      "line": 278.5,
-     "proj": 241.1,
-     "p_over": 0.312,
+     "proj": 252.4,
+     "p_over": 0.347,
+     "conf": 0.576,
      "side": "Under",
      "games": 10
     },
     {
-     "player": "Bucky Irving",
-     "team": "TB",
+     "player": "Chuba Hubbard",
+     "team": "CAR",
      "pos": "RB",
      "stat": "rush_yds",
-     "line": 78.5,
-     "proj": 92.4,
-     "p_over": 0.616,
-     "side": "Over",
+     "line": 81.5,
+     "proj": 77.2,
+     "p_over": 0.354,
+     "conf": 0.573,
+     "side": "Under",
      "games": 10
-    },
-    {
-     "player": "Baker Mayfield",
-     "team": "TB",
-     "pos": "QB",
-     "stat": "pass_yds",
-     "line": 187.5,
-     "proj": 202.5,
-     "p_over": 0.602,
-     "side": "Over",
-     "games": 7
     }
    ],
    "td": [

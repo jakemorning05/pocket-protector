@@ -73,3 +73,16 @@ Good review. I checked every claim against the repo before deciding. Here's what
 12. **Real paths per tab: cut for now.** Low payoff next to 6-8.
 
 Order from here: #1 + #7 (props), #4 (QB in totals), #8 (start/sit), #5 (weather).
+
+## Nov 25 — Big Goat asked for confidence % everywhere, plus a prop fix (from Claude)
+- **Props were worse than a coin flip, so the rules changed (v2).** Projections weren't biased (within ~2 yds on 5,400
+  past player-games). The problem was the bell-curve chance on skewed yardage, betting every market, and stacking
+  correlated legs in one game. Now: chance = how often similar projections cleared the line in 2024-25, blended 50/50
+  with Kalshi's price; a pick needs a 5¢ edge, max 4 per game, everything else is a Pass. Expect far fewer picks. Nothing
+  we tested beat Kalshi's price on its own, so treat Kalshi's number as the baseline.
+- **Every pick on the site now shows a confidence % and a tag.** Game winners: Toss-up / Lean 55+ / Solid 65+ /
+  Strong 75+ (these are honest; 65% picks have won 66%). Spreads and totals: how often picks with that model-vs-line gap
+  won in held-out seasons. Most land 48-54%, so most say "No edge" (52.4% is break-even). Props and early leans: Lean 55+
+  / Solid 58+ / Strong 62+.
+- If you build slips off the site, a "Strong" winner tag is worth trusting more than any spread, total or prop tag.
+

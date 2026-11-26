@@ -282,6 +282,7 @@ function gameCard(g) {
     '<div>' + rowFor(g.a, false) + rowFor(g.h, true) + '</div>' +
     '<p class="qbline">QBs: ' + esc(g.qa || '?') + ' vs ' + esc(g.qh || '?') + (g.wind >= 12 ? ' · wind ' + Math.round(g.wind) + ' mph' : '') + (g.temp != null && g.temp <= 32 && !g.dome ? ' · ' + Math.round(g.temp) + '°F' : '') + '</p>' +
     probBar(g.a, g.h, pH) +
+    (g.done ? '' : '<div class="pickrow">Model pick <b>' + (pH >= 0.5 ? g.h : g.a) + '</b> ' + confPill(Math.max(pH, 1 - pH), winTag(Math.max(pH, 1 - pH))) + '</div>') +
     '<div class="mkrow num"><span>Model <b>' + fmtLine(g.a, g.h, g.m) + '</b>, total <b>' + half(g.tot).toFixed(1) + '</b></span>' +
     (g.mk_spread != null ? '<span>Market <b>' + fmtLine(g.a, g.h, g.mk_spread) + '</b>, total <b>' + g.mk_total + '</b>' + (mp != null ? ' (' + (mp >= 0.5 ? g.h + ' ' + pct(mp) : g.a + ' ' + pct(1 - mp)) + ')' : '') + '</span>' : '') + '</div>';
   const kf = keyFactors(g.c, g.a, g.h);
@@ -537,6 +538,17 @@ function trackRate(kind, gap) {
   const b = TRACK[kind].find((x) => Math.abs(gap) >= x.lo && Math.abs(gap) < x.hi) || TRACK[kind][TRACK[kind].length - 1];
   return { rate: b.w / b.n, n: b.n };
 }
+// Confidence. Winners: the model's win chance, which has matched reality on held-out seasons (Model tab). Bets against a
+// line: how often picks like it won on held-out 2017-25 seasons, by the size of the model-vs-line gap (bt.ats_cal /
+// bt.tot_cal); 52.4% is break-even at -110. Props: the model's chance blended 50/50 with Kalshi's price.
+function confFor(kind, gap) {
+  const c = DATA.bt[kind === 'spread' ? 'ats_cal' : 'tot_cal'];
+  return c ? 1 / (1 + Math.exp(-(c.a + c.b * Math.abs(gap)))) : trackRate(kind, gap).rate;
+}
+const betTag = (c) => (c >= 0.6 ? 'Strong' : c >= 0.55 ? 'Solid' : c >= 0.524 ? 'Lean' : 'No edge');
+const winTag = (c) => (c >= 0.75 ? 'Strong' : c >= 0.65 ? 'Solid' : c >= 0.55 ? 'Lean' : 'Toss-up');
+const propTag = (c) => (c >= 0.62 ? 'Strong' : c >= 0.58 ? 'Solid' : c >= 0.55 ? 'Lean' : 'Coin flip');
+const confPill = (c, tag) => '<span class="conf c-' + tag.toLowerCase().replace(/[^a-z]/g, '') + '">' + pct(c) + ' · ' + tag + '</span>';
 const betGames = unplayed.filter((g) => g.wk <= currentWeek + 1);
 const shop = { game: (betGames[0] || {}).id, bet: 'home_spread', line: null, fmt: 'american', prices: [{ book: 'Book 1', v: -110 }, { book: 'Book 2', v: '' }, { book: 'Kalshi', v: '' }] };
 function betModelProb(g, bet, line) {
@@ -571,39 +583,43 @@ function renderBetting() {
   const avgClv = clvDone.length ? clvDone.reduce((s, b) => s + b.clv, 0) / clvDone.length : null;
   const rows = BETS.slice().sort((x, y) => Math.abs(y.model - y.line * (y.kind === 'spread' ? 1 : 1)) - Math.abs(x.model - x.line)).map((b) => {
     const gap = b.kind === 'spread' ? b.model - b.line : b.model - b.line;
-    const tr = trackRate(b.kind, gap), trp = tr.rate;
+    const trp = b.conf != null ? b.conf : confFor(b.kind, gap);
     const ev = trp * 100 / 110 - (1 - trp);
     const sideLine = (t, v) => t + ' ' + (v === 0 ? 'PK' : v < 0 ? '−' + Math.abs(v) : '+' + v);
     const lineTxt = b.kind === 'spread' ? (b.side === b.h ? sideLine(b.h, -b.line) : sideLine(b.a, b.line)) : b.side + ' ' + b.line;
     const res = b.result == null ? '<span class="muted">Pending</span>' : '<span class="res ' + (b.result === 'win' ? 'w' : b.result === 'loss' ? 'l' : 't') + '">' + b.result + (b.clv != null ? ' · CLV ' + signed(b.clv) : '') + '</span>';
-    return '<tr><td class="l">Wk ' + b.wk + ' ' + b.a + ' @ ' + b.h + '</td><td class="l"><b>' + lineTxt + '</b></td><td>' + (b.kind === 'spread' ? fmtLine(b.a, b.h, b.model) : b.model.toFixed(1)) + '</td><td>' + pct(b.p) + '</td><td>' + pct(trp) + '</td><td>' + (ev >= 0 ? '+' : '−') + '$' + Math.abs(ev * 100).toFixed(1) + '</td><td>' + res + '</td></tr>';
+    return '<tr><td class="l">Wk ' + b.wk + ' ' + b.a + ' @ ' + b.h + '</td><td class="l"><b>' + lineTxt + '</b></td><td>' + (b.kind === 'spread' ? fmtLine(b.a, b.h, b.model) : b.model.toFixed(1)) + '</td><td>' + confPill(trp, betTag(trp)) + '</td><td>' + (ev >= 0 ? '+' : '−') + '$' + Math.abs(ev * 100).toFixed(1) + '</td><td>' + res + '</td></tr>';
   }).join('');
   // props
   const graded = PROPS.filter((p) => p.won != null), wins = graded.filter((p) => p.won).length;
+  const g2 = graded.filter((p) => p.rules === 'v2'), w2 = g2.filter((p) => p.won).length;
+  const g1 = graded.filter((p) => p.rules !== 'v2'), w1 = g1.filter((p) => p.won).length;
   const profit = graded.reduce((s, p) => s + p.profit, 0), staked = graded.reduce((s, p) => s + (p.pick === 'YES' ? (p.ask ?? p.price) : 1 - (p.bid ?? p.price)), 0);
   const propPanel = PROPS.length ? '<div class="panel"><div class="panel-head"><h3>Player prop test vs. Kalshi</h3><span class="muted small">' +
     (graded.length ? wins + '–' + (graded.length - wins) + ' · ' + (profit >= 0 ? '+' : '−') + '$' + Math.abs(profit).toFixed(2) + ' on $' + staked.toFixed(2) + ' risked' : 'Logged before kickoff, not graded yet') + '</span></div>' +
-    '<p class="muted small" style="max-width:62ch;margin-bottom:8px">Each row is a Kalshi “X or more” market. The model buys YES when its chance is above the price and NO when it’s below, one contract each. From Week 10 on, the price shown is the middle of the bid and ask, and results are graded at the price actually paid.</p>' +
-    '<div class="tablewrap"><table class="ptable"><thead><tr><th class="l">Market</th><th>Price</th><th>Model</th><th>Pick</th><th>Result</th></tr></thead><tbody>' +
-    PROPS.map((p) => '<tr><td class="l"><span class="pname">' + esc(p.player) + '</span> <span class="muted small">' + p.thr + '+ ' + STAT_LABEL[p.stat] + '</span></td><td>' + pct(p.price) + '</td><td>' + pct(p.p_over) + '</td><td><b>' + p.pick + '</b></td><td>' +
-      (p.won == null ? '<span class="muted">Pending</span>' : '<span class="res ' + (p.won ? 'w' : 'l') + '">' + (p.won ? '✓ ' : '✗ ') + p.actual + '</span>') + '</td></tr>').join('') +
+    '<p class="muted small" style="max-width:66ch;margin-bottom:8px">Each row is a Kalshi “X or more” market, one contract per pick, graded at the price actually paid. The first ' + g1.length + ' went ' + w1 + '–' + (g1.length - w1) + ' under the old rules, which bet every market. Under the new rules (from Nov 25' + (g2.length ? ', ' + w2 + '–' + (g2.length - w2) + ' so far' : '') + '), the model’s chance comes from how often similar projections actually cleared the line in 2024–25, blended 50/50 with Kalshi’s price, and a pick has to beat the price by 5¢ (at most 4 per game). Everything else is a pass. Confidence is that blended chance for the side taken. Gray numbers on older rows are the old model’s chance, which ran overconfident.</p>' +
+    '<div class="tablewrap"><table class="ptable"><thead><tr><th class="l">Market</th><th>Price</th><th>Pick</th><th>Confidence</th><th>Result</th></tr></thead><tbody>' +
+    PROPS.slice().reverse().map((p) => '<tr><td class="l"><span class="pname">' + esc(p.player) + '</span> <span class="muted small">' + p.thr + '+ ' + STAT_LABEL[p.stat] + '</span></td><td>' + pct(p.price) + '</td><td><b>' + (p.pick === 'PASS' ? '<span class="muted">Pass</span>' : p.pick) + '</b></td><td>' +
+      (p.conf != null && p.pick !== 'PASS' ? confPill(p.conf, propTag(p.conf)) : '<span class="muted">' + (p.rules === 'v2' || p.p_over == null ? '–' : pct(p.pick === 'NO' ? 1 - p.p_over : p.p_over)) + '</span>') + '</td><td>' +
+      (p.actual == null ? '<span class="muted">Pending</span>' : p.pick === 'PASS' ? '<span class="muted">' + p.actual + '</span>' : '<span class="res ' + (p.won ? 'w' : 'l') + '">' + (p.won ? '✓ ' : '✗ ') + p.actual + '</span>') + '</td></tr>').join('') +
     '</tbody></table></div><p class="muted small" style="margin-top:8px">Prices: ' + esc([...new Set(PROPS.map((p) => p.source))].join('; ')) + '. Kalshi fees not included.</p></div>' : '';
   const earlyGames = (EARLY.games || []).filter((g) => !PROPS.some((p) => p.game === g.id));
   const earlyPanel = earlyGames.length ? '<div class="panel"><div class="panel-head"><h3>Week ' + EARLY.week + ' early player leans</h3><span class="muted small">Updated ' + esc(EARLY.asof) + '</span></div>' +
     '<p class="muted small" style="max-width:64ch;margin-bottom:8px">Until real prices are logged for a game (usually the day before kickoff), each player’s line here is his season median for that stat, which is roughly where books open. The picks update with every refresh as injuries and starters change. Games with logged Kalshi prices move to the prop test below.</p>' +
-    '<div class="tablewrap"><table class="ptable early"><thead><tr><th class="l">Player</th><th class="l">Lean</th><th>Model</th><th>Proj.</th></tr></thead><tbody>' +
+    '<div class="tablewrap"><table class="ptable early"><thead><tr><th class="l">Player</th><th class="l">Lean</th><th>Confidence</th><th>Proj.</th></tr></thead><tbody>' +
     earlyGames.map((g) => { const gm = games.find((x) => x.id === g.id);
       return '<tr><td class="l" colspan="4" style="padding-top:14px;white-space:normal"><b>' + g.a + ' @ ' + g.h + '</b> <span class="muted small">' + (gm ? kick(gm) : '') + (g.td.length ? ' · most likely TD: ' + g.td.map((t) => esc(t.player) + ' ' + pct(t.p)).join(', ') : '') + '</span></td></tr>' +
-        g.leans.map((c) => '<tr><td class="l"><span class="pname">' + esc(c.player) + '</span><span class="ppos pos-' + c.pos + '">' + c.pos + ' · ' + c.team + '</span></td><td class="l"><b>' + c.side + ' ' + c.line + '</b> <span class="muted small">' + STAT_LABEL[c.stat] + '</span></td><td>' + pct(Math.max(c.p_over, 1 - c.p_over)) + '</td><td class="muted">' + c.proj.toFixed(0) + '</td></tr>').join(''); }).join('') +
-    '</tbody></table></div><p class="muted small" style="margin-top:8px">The prop test is only a few markets old (see below), so treat these as a starting point, not locks.</p></div>' : '';
+        g.leans.map((c) => '<tr><td class="l"><span class="pname">' + esc(c.player) + '</span><span class="ppos pos-' + c.pos + '">' + c.pos + ' · ' + c.team + '</span></td><td class="l"><b>' + c.side + ' ' + c.line + '</b> <span class="muted small">' + STAT_LABEL[c.stat] + '</span></td><td>' + (() => { const k = c.conf != null ? c.conf : Math.max(c.p_over, 1 - c.p_over); return confPill(k, propTag(k)); })() + '</td><td class="muted">' + c.proj.toFixed(0) + '</td></tr>').join('') +
+        (g.leans.length ? '' : '<tr><td class="l muted" colspan="4">No lean above 55% in this game.</td></tr>'); }).join('') +
+    '</tbody></table></div><p class="muted small" style="margin-top:8px">Confidence uses the same pricing as the prop test, blended 50/50 with a line at the player’s median, and leans under 55% aren’t shown. The prop test hasn’t beaten Kalshi’s prices yet (see below), so treat these as a starting point, not locks.</p></div>' : '';
   el.innerHTML = '<div><h2>Betting</h2><p class="intro">A test bench, not a tip sheet. Over nine past seasons the model’s sides and totals won about 49% against closing lines, below the 52.4% needed at −110. These tools are here to find out whether that changes when it bets earlier numbers, shops prices and plays props.</p></div>' +
     '<div class="tiles num"><div class="tile"><span class="label">Picks logged</span><b>' + BETS.length + '</b><span class="muted small">' + open.length + ' waiting on games</span></div>' +
     '<div class="tile"><span class="label">Record</span><b>' + (done.length ? done.filter((b) => b.result === 'win').length + '–' + done.filter((b) => b.result === 'loss').length : '–') + '</b><span class="muted small">At the line when logged</span></div>' +
     '<div class="tile"><span class="label">Closing line value</span><b>' + (avgClv == null ? '–' : signed(avgClv)) + '</b><span class="muted small">Avg points the line moved toward our side</span></div>' +
     '<div class="tile"><span class="label">Prop test</span><b>' + (graded.length ? wins + '–' + (graded.length - wins) : '–') + '</b><span class="muted small">' + PROPS.length + ' markets logged</span></div></div>' +
     '<div class="panel"><div class="panel-head"><h3>Model picks vs. the line</h3><span class="muted small">Last logged ' + esc((BETS[BETS.length - 1] || {}).logged || '') + '</span></div>' +
-    '<p class="muted small" style="max-width:62ch;margin-bottom:8px">“Model” is the chance if the model is right. “Past rate” is how often its picks actually won at this size of disagreement in 2017–2025, and the value column uses that rate on a $100 bet at −110. Positive closing line value after kickoff is the early sign of a real edge.</p>' +
-    '<div class="tablewrap"><table class="ptable"><thead><tr><th class="l">Game</th><th class="l">Pick</th><th>Model line</th><th>Model</th><th>Past rate</th><th>Value</th><th>Result</th></tr></thead><tbody>' + rows + '</tbody></table></div></div>' + earlyPanel +
+    '<p class="muted small" style="max-width:64ch;margin-bottom:8px">Confidence is how often picks like this one actually won in 2017–2025 seasons the model hadn’t seen, based on how far it disagrees with the line. You need 52.4% to profit at −110, so anything below that is marked “No edge.” Value is that rate on a $100 bet at −110. Positive closing line value after kickoff is the early sign of a real edge.</p>' +
+    '<div class="tablewrap"><table class="ptable"><thead><tr><th class="l">Game</th><th class="l">Pick</th><th>Model line</th><th>Confidence</th><th>Value</th><th>Result</th></tr></thead><tbody>' + rows + '</tbody></table></div></div>' + earlyPanel +
     '<div class="panel" id="shop"></div>' + propPanel +
     '<p class="notice">Set a budget you’re fine losing and keep bets small and even. If betting stops being fun, the National Problem Gambling Helpline is 1-800-GAMBLER.</p>';
   renderShop();
@@ -943,6 +959,7 @@ function renderCollege() {
         '<div>' + row(g.a, g.as, false) + row(g.h, g.hs, true) + '</div>' +
         '<div class="probbar" aria-hidden="true"><span class="a" style="width:' + (100 * (1 - pH)).toFixed(1) + '%"></span><span class="h" style="width:' + (100 * pH).toFixed(1) + '%"></span></div>' +
         '<div class="prob-labels num"><span>' + esc(g.a) + ' <b>' + pct(1 - pH) + '</b></span><span>' + esc(g.h) + ' <b>' + pct(pH) + '</b></span></div>' +
+        (started ? '' : '<div class="pickrow">Model pick <b>' + esc(pH >= 0.5 ? g.h : g.a) + '</b> ' + confPill(Math.max(pH, 1 - pH), winTag(Math.max(pH, 1 - pH))) + '</div>') +
         '<div class="mkrow num"><span>Model <b>' + lineTxt(g, g.m) + '</b> · projected <span class="nw">' + g.as + '–' + g.hs + '</span></span>' +
         (g.line != null ? '<span>Line <b>' + lineTxt(g, -g.line) + '</b>' + (Math.abs(diff) >= 4 ? ' · model ' + Math.abs(diff).toFixed(1) + ' pts toward ' + esc(diff > 0 ? g.h : g.a) : '') + '</span>' : '') + '</div>' +
         (g.logged ? '<p class="muted small">Pick logged ' + esc(g.logged) + '</p>' : '') + '</article>';

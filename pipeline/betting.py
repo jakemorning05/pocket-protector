@@ -12,6 +12,19 @@ LOG = f'{D}/bet_log.json'
 TOTAL_SD = 13.5  # spread of actual totals around the model's total (2017-2025 held-out error)
 
 
+def add_conf(entries, site):
+    """Confidence = how often a pick like this won on held-out seasons, by the size of the model-vs-line gap (logistic fit
+    in export.py: bt.ats_cal for spreads, bt.tot_cal for totals). Kept separate from 'p', the raw model probability
+    logged at the time, which ran far too high."""
+    import math
+    cal = {'spread': site['bt'].get('ats_cal'), 'total': site['bt'].get('tot_cal')}
+    for e in entries:
+        c = cal.get(e['kind'])
+        if c and e.get('model') is not None and e.get('line') is not None:
+            e['conf'] = round(1 / (1 + math.exp(-(c['a'] + c['b'] * abs(e['model'] - e['line'])))), 3)
+    return entries
+
+
 def log(stamp):
     site = json.load(open(f'{D}/site_data.json'))
     sig = site['sigma']
@@ -35,6 +48,7 @@ def log(stamp):
             entries.append({'game': g['id'], 'wk': g['wk'], 'a': g['a'], 'h': g['h'], 'kind': 'total', 'side': side, 'line': T,
                             'model': round(t, 1), 'p': round(p, 3), 'ev': round(p * 100 / 110 - (1 - p), 3), 'logged': stamp,
                             'close': None, 'clv': None, 'result': None})
+    add_conf(entries, site)
     json.dump(entries, open(LOG, 'w'), indent=1)
     return entries
 
@@ -58,6 +72,7 @@ def grade():
             c = (tot - e['line']) if over else (e['line'] - tot)
         e['close'] = close
         e['result'] = 'push' if c == 0 else ('win' if c > 0 else 'loss')
+    add_conf(entries, json.load(open(f'{D}/site_data.json')))
     json.dump(entries, open(LOG, 'w'), indent=1)
     return entries
 
@@ -68,4 +83,4 @@ if __name__ == '__main__':
     else:
         es = log(sys.argv[2] if len(sys.argv) > 2 else datetime.datetime.now().strftime('%b %-d %-I:%M %p'))
     for e in es:
-        print(f"wk{e['wk']} {e['a']}@{e['h']} {e['kind']:6s} {e['side']:5s} {e['line']:>6}  model {e['model']:>6}  p {e['p']:.0%}  ev {e['ev']:+.1%}  {e['result'] or ''}")
+        print(f"wk{e['wk']} {e['a']}@{e['h']} {e['kind']:6s} {e['side']:5s} {e['line']:>6}  model {e['model']:>6}  conf {e.get('conf') or 0:.0%}  {e['result'] or ''}")

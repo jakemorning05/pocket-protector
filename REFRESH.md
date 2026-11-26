@@ -20,6 +20,16 @@ A session adds the judgment calls:
    Kalshi team codes match ours except the Rams (LAR) and Jaguars (JAC). The API often answers WebFetch with a client error
    (rate limit); retry with a different URL (add &limit=100) rather than the same one. Receiving-yards pages run 250-300k
    characters, so only the first page is read; markets marked inactive belong to players ruled out and are skipped.
+   Prop rules v2 (since Nov 25, `rules: 'v2'` in props_log.json): the model's chance is p_emp() — how often 2024-25
+   players with a similar projection cleared the line (data/prop_hist.csv, rebuilt by pipeline/prop_history.py) —
+   blended 50/50 with Kalshi's mid. A pick needs a 5¢+ edge after that blend, and only the top 4 per game by edge count;
+   the rest are logged as PASS (graded for the record, never counted). Older entries stay under the old rules.
+   Why: the old bell-curve chance was overconfident on skewed yardage and bet every market, and in testing nothing beat
+   Kalshi's own price (Brier: market 0.2547, 50/50 blend 0.2549, empirical 0.2608, old normal 0.2634).
+   Confidence on the site: game winners show the model's win chance (calibrated on held-out seasons) tagged Toss-up <55,
+   Lean, Solid 65+, Strong 75+. Spreads and totals show bt.ats_cal / bt.tot_cal from export.py — a logistic fit of how
+   often held-out 2017-25 picks won by |model − line| — tagged No edge under 52.4% (break-even at −110), Lean, Solid 55+,
+   Strong 60+. Props and early leans show the blended chance for the side, tagged Lean 55+, Solid 58+, Strong 62+.
 4. Rebuild: `bash scripts/update.sh` (downloads, retrains, grades, logs new spread/total picks, builds docs/index.html).
 5. Commit and push (`git add -A && git commit && git push`); the site redeploys from docs/. The commit message ends with the
    attribution lines from the session's instructions.

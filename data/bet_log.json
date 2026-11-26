@@ -13,7 +13,8 @@
   "logged": "Nov 9, 4:45 PM ET",
   "close": -3.5,
   "clv": 0.0,
-  "result": "loss"
+  "result": "loss",
+  "conf": 0.496
  },
  {
   "game": "2026_09_BUF_MIN",
@@ -29,7 +30,8 @@
   "logged": "Nov 9, 4:45 PM ET",
   "close": 45.5,
   "clv": 0.0,
-  "result": "loss"
+  "result": "loss",
+  "conf": 0.485
  },
  {
   "game": "2026_10_WAS_NYG",
@@ -45,7 +47,8 @@
   "logged": "Nov 9, 4:45 PM ET",
   "close": 1.5,
   "clv": 0.0,
-  "result": "win"
+  "result": "win",
+  "conf": 0.507
  },
  {
   "game": "2026_10_WAS_NYG",
@@ -61,7 +64,8 @@
   "logged": "Nov 9, 4:45 PM ET",
   "close": 40.5,
   "clv": -2.0,
-  "result": "win"
+  "result": "win",
+  "conf": 0.516
  },
  {
   "game": "2026_10_NE_DET",
@@ -77,7 +81,8 @@
   "logged": "Nov 9, 4:45 PM ET",
   "close": 2.5,
   "clv": 0.5,
-  "result": "loss"
+  "result": "loss",
+  "conf": 0.504
  },
  {
   "game": "2026_10_NE_DET",
@@ -93,7 +98,8 @@
   "logged": "Nov 9, 4:45 PM ET",
   "close": 50.5,
   "clv": -1.0,
-  "result": "loss"
+  "result": "loss",
+  "conf": 0.483
  },
  {
   "game": "2026_10_BUF_NYJ",
@@ -109,7 +115,8 @@
   "logged": "Nov 9, 4:45 PM ET",
   "close": -8.5,
   "clv": 1.0,
-  "result": "win"
+  "result": "win",
+  "conf": 0.495
  },
  {
   "game": "2026_10_BUF_NYJ",
@@ -125,7 +132,8 @@
   "logged": "Nov 9, 4:45 PM ET",
   "close": 50.5,
   "clv": 0.0,
-  "result": "loss"
+  "result": "loss",
+  "conf": 0.476
  },
  {
   "game": "2026_10_CAR_NO",
@@ -141,7 +149,8 @@
   "logged": "Nov 9, 4:45 PM ET",
   "close": 1.5,
   "clv": 0.0,
-  "result": "win"
+  "result": "win",
+  "conf": 0.494
  },
  {
   "game": "2026_10_CAR_NO",
@@ -157,7 +166,8 @@
   "logged": "Nov 9, 4:45 PM ET",
   "close": 48.5,
   "clv": 1.0,
-  "result": "loss"
+  "result": "loss",
+  "conf": 0.486
  },
  {
   "game": "2026_10_HOU_CLE",
@@ -173,7 +183,8 @@
   "logged": "Nov 9, 4:45 PM ET",
   "close": -4.5,
   "clv": 0.0,
-  "result": "win"
+  "result": "win",
+  "conf": 0.502
  },
  {
   "game": "2026_10_HOU_CLE",
@@ -189,7 +200,8 @@
   "logged": "Nov 9, 4:45 PM ET",
   "close": 40.5,
   "clv": 1.0,
-  "result": "win"
+  "result": "win",
+  "conf": 0.502
  },
  {
   "game": "2026_10_JAX_TEN",
@@ -205,7 +217,8 @@
   "logged": "Nov 9, 4:45 PM ET",
   "close": -10.5,
   "clv": 0.5,
-  "result": "win"
+  "result": "win",
+  "conf": 0.515
  },
  {
   "game": "2026_10_JAX_TEN",
@@ -221,7 +234,8 @@
   "logged": "Nov 9, 4:45 PM ET",
   "close": 45.5,
   "clv": -1.0,
-  "result": "win"
+  "result": "win",
+  "conf": 0.477
  },
  {
   "game": "2026_10_KC_ATL",
@@ -237,7 +251,8 @@
   "logged": "Nov 9, 4:45 PM ET",
   "close": -3.0,
   "clv": -0.5,
-  "result": "win"
+  "result": "win",
+  "conf": 0.498
  },
  {
   "game": "2026_10_KC_ATL",
@@ -253,7 +268,8 @@
   "logged": "Nov 9, 4:45 PM ET",
   "close": 47.5,
   "clv": 2.0,
-  "result": "win"
+  "result": "win",
+  "conf": 0.483
  },
  {
   "game": "2026_10_MIA_IND",
@@ -269,7 +285,8 @@
   "logged": "Nov 9, 4:45 PM ET",
   "close": 4.5,
   "clv": 2.0,
-  "result": "loss"
+  "result": "loss",
+  "conf": 0.493
  },
  {
   "game": "2026_10_MIA_IND",
@@ -285,7 +302,8 @@
   "logged": "Nov 9, 4:45 PM ET",
   "close": 37.5,
   "clv": -3.0,
-  "result": "win"
+  "result": "win",
+  "conf": 0.531
  },
  {
   "game": "2026_10_MIN_GB",
@@ -301,7 +319,8 @@
   "logged": "Nov 9, 4:45 PM ET",
   "close": 2.5,
   "clv": 1.0,
-  "result": "win"
+  "result": "win",
+  "conf": 0.499
  },
  {
   "game": "2026_10_MIN_GB",
@@ -317,7 +336,8 @@
   "logged": "Nov 9, 4:45 PM ET",
   "close": 42.5,
   "clv": 0.0,
-  "result": "win"
+  "result": "win",
+  "conf": 0.483
  },
  {
   "game": "2026_10_LA_ARI",
@@ -333,7 +353,8 @@
   "logged": "Nov 9, 4:45 PM ET",
   "close": -10.0,
   "clv": 3.0,
-  "result": "win"
+  "result": "win",
+  "conf": 0.491
  },
  {
   "game": "2026_10_LA_ARI",
@@ -349,7 +370,8 @@
   "logged": "Nov 9, 4:45 PM ET",
   "close": 38.5,
   "clv": -6.0,
-  "result": "loss"
+  "result": "loss",
+  "conf": 0.495
  },
  {
   "game": "2026_10_SEA_LV",
@@ -365,7 +387,8 @@
   "logged": "Nov 9, 4:45 PM ET",
   "close": -6.5,
   "clv": -3.5,
-  "result": "loss"
+  "result": "loss",
+  "conf": 0.493
  },
  {
   "game": "2026_10_SEA_LV",
@@ -381,7 +404,8 @@
   "logged": "Nov 9, 4:45 PM ET",
   "close": 40.5,
   "clv": -3.0,
-  "result": "loss"
+  "result": "loss",
+  "conf": 0.485
  },
  {
   "game": "2026_10_SF_DAL",
@@ -397,7 +421,8 @@
   "logged": "Nov 9, 4:45 PM ET",
   "close": -3.5,
   "clv": -1.0,
-  "result": "win"
+  "result": "win",
+  "conf": 0.493
  },
  {
   "game": "2026_10_SF_DAL",
@@ -413,7 +438,8 @@
   "logged": "Nov 9, 4:45 PM ET",
   "close": 55.5,
   "clv": 0.0,
-  "result": "loss"
+  "result": "loss",
+  "conf": 0.489
  },
  {
   "game": "2026_10_PIT_CIN",
@@ -429,7 +455,8 @@
   "logged": "Nov 9, 4:45 PM ET",
   "close": 4.5,
   "clv": -1.0,
-  "result": "loss"
+  "result": "loss",
+  "conf": 0.497
  },
  {
   "game": "2026_10_PIT_CIN",
@@ -445,7 +472,8 @@
   "logged": "Nov 9, 4:45 PM ET",
   "close": 49.5,
   "clv": 1.0,
-  "result": "win"
+  "result": "win",
+  "conf": 0.487
  },
  {
   "game": "2026_10_LAC_BAL",
@@ -461,7 +489,8 @@
   "logged": "Nov 9, 4:45 PM ET",
   "close": 4.5,
   "clv": 1.0,
-  "result": "win"
+  "result": "win",
+  "conf": 0.505
  },
  {
   "game": "2026_10_LAC_BAL",
@@ -477,7 +506,8 @@
   "logged": "Nov 9, 4:45 PM ET",
   "close": 39.5,
   "clv": 1.0,
-  "result": "win"
+  "result": "win",
+  "conf": 0.53
  },
  {
   "game": "2026_11_IND_HOU",
@@ -493,7 +523,8 @@
   "logged": "Nov 10, 3:16 PM ET",
   "close": 12.5,
   "clv": -3.0,
-  "result": "loss"
+  "result": "loss",
+  "conf": 0.509
  },
  {
   "game": "2026_11_IND_HOU",
@@ -509,7 +540,8 @@
   "logged": "Nov 10, 3:16 PM ET",
   "close": 44.5,
   "clv": 1.0,
-  "result": "loss"
+  "result": "loss",
+  "conf": 0.489
  },
  {
   "game": "2026_11_ARI_KC",
@@ -525,7 +557,8 @@
   "logged": "Nov 10, 3:16 PM ET",
   "close": 15.5,
   "clv": -2.0,
-  "result": "loss"
+  "result": "loss",
+  "conf": 0.493
  },
  {
   "game": "2026_11_ARI_KC",
@@ -541,7 +574,8 @@
   "logged": "Nov 10, 3:16 PM ET",
   "close": 40.5,
   "clv": -1.0,
-  "result": "loss"
+  "result": "loss",
+  "conf": 0.522
  },
  {
   "game": "2026_11_BAL_CAR",
@@ -557,7 +591,8 @@
   "logged": "Nov 10, 3:16 PM ET",
   "close": 2.5,
   "clv": 0.0,
-  "result": "loss"
+  "result": "loss",
+  "conf": 0.489
  },
  {
   "game": "2026_11_BAL_CAR",
@@ -573,7 +608,8 @@
   "logged": "Nov 10, 3:16 PM ET",
   "close": 44.5,
   "clv": 1.0,
-  "result": "win"
+  "result": "win",
+  "conf": 0.505
  },
  {
   "game": "2026_11_JAX_NYG",
@@ -589,7 +625,8 @@
   "logged": "Nov 10, 3:16 PM ET",
   "close": -6.0,
   "clv": 0.5,
-  "result": "loss"
+  "result": "loss",
+  "conf": 0.51
  },
  {
   "game": "2026_11_JAX_NYG",
@@ -605,7 +642,8 @@
   "logged": "Nov 10, 3:16 PM ET",
   "close": 45.5,
   "clv": 0.0,
-  "result": "loss"
+  "result": "loss",
+  "conf": 0.478
  },
  {
   "game": "2026_11_MIA_BUF",
@@ -621,7 +659,8 @@
   "logged": "Nov 10, 3:16 PM ET",
   "close": 16.5,
   "clv": 2.0,
-  "result": "win"
+  "result": "win",
+  "conf": 0.491
  },
  {
   "game": "2026_11_MIA_BUF",
@@ -637,7 +676,8 @@
   "logged": "Nov 10, 3:16 PM ET",
   "close": 45.5,
   "clv": -2.0,
-  "result": "loss"
+  "result": "loss",
+  "conf": 0.5
  },
  {
   "game": "2026_11_NO_CHI",
@@ -653,7 +693,8 @@
   "logged": "Nov 10, 3:16 PM ET",
   "close": 11.5,
   "clv": 2.0,
-  "result": "loss"
+  "result": "loss",
+  "conf": 0.496
  },
  {
   "game": "2026_11_NO_CHI",
@@ -669,7 +710,8 @@
   "logged": "Nov 10, 3:16 PM ET",
   "close": 47.5,
   "clv": -2.0,
-  "result": "loss"
+  "result": "loss",
+  "conf": 0.478
  },
  {
   "game": "2026_11_TB_DET",
@@ -685,7 +727,8 @@
   "logged": "Nov 10, 3:16 PM ET",
   "close": 3.5,
   "clv": 0.0,
-  "result": "win"
+  "result": "win",
+  "conf": 0.507
  },
  {
   "game": "2026_11_TB_DET",
@@ -701,7 +744,8 @@
   "logged": "Nov 10, 3:16 PM ET",
   "close": 48.5,
   "clv": 0.0,
-  "result": "win"
+  "result": "win",
+  "conf": 0.491
  },
  {
   "game": "2026_11_TEN_DAL",
@@ -717,7 +761,8 @@
   "logged": "Nov 10, 3:16 PM ET",
   "close": 7.5,
   "clv": 0.0,
-  "result": "win"
+  "result": "win",
+  "conf": 0.525
  },
  {
   "game": "2026_11_TEN_DAL",
@@ -733,7 +778,8 @@
   "logged": "Nov 10, 3:16 PM ET",
   "close": 55.5,
   "clv": 6.0,
-  "result": "win"
+  "result": "win",
+  "conf": 0.479
  },
  {
   "game": "2026_11_NYJ_LAC",
@@ -749,7 +795,8 @@
   "logged": "Nov 10, 3:16 PM ET",
   "close": 3.0,
   "clv": -1.5,
-  "result": "win"
+  "result": "win",
+  "conf": 0.495
  },
  {
   "game": "2026_11_NYJ_LAC",
@@ -765,7 +812,8 @@
   "logged": "Nov 10, 3:16 PM ET",
   "close": 43.5,
   "clv": 0.0,
-  "result": "win"
+  "result": "win",
+  "conf": 0.483
  },
  {
   "game": "2026_11_PIT_PHI",
@@ -781,7 +829,8 @@
   "logged": "Nov 10, 3:16 PM ET",
   "close": -3.5,
   "clv": -1.0,
-  "result": "loss"
+  "result": "loss",
+  "conf": 0.49
  },
  {
   "game": "2026_11_PIT_PHI",
@@ -797,7 +846,8 @@
   "logged": "Nov 10, 3:16 PM ET",
   "close": 37.5,
   "clv": -1.0,
-  "result": "loss"
+  "result": "loss",
+  "conf": 0.491
  },
  {
   "game": "2026_11_CIN_WAS",
@@ -813,7 +863,8 @@
   "logged": "Nov 10, 3:16 PM ET",
   "close": -6.0,
   "clv": -1.5,
-  "result": "win"
+  "result": "win",
+  "conf": 0.511
  },
  {
   "game": "2026_11_CIN_WAS",
@@ -829,7 +880,8 @@
   "logged": "Nov 10, 3:16 PM ET",
   "close": 54.5,
   "clv": 4.0,
-  "result": "loss"
+  "result": "loss",
+  "conf": 0.482
  },
  {
   "game": "2026_11_LV_DEN",
@@ -845,7 +897,8 @@
   "logged": "Nov 10, 4:18 PM ET",
   "close": 11.5,
   "clv": 3.0,
-  "result": "win"
+  "result": "win",
+  "conf": 0.501
  },
  {
   "game": "2026_11_LV_DEN",
@@ -861,7 +914,8 @@
   "logged": "Nov 10, 4:18 PM ET",
   "close": 41.5,
   "clv": 0.0,
-  "result": "win"
+  "result": "win",
+  "conf": 0.502
  },
  {
   "game": "2026_11_MIN_SF",
@@ -877,7 +931,8 @@
   "logged": "Nov 10, 4:18 PM ET",
   "close": 4.5,
   "clv": 1.0,
-  "result": "win"
+  "result": "win",
+  "conf": 0.492
  },
  {
   "game": "2026_11_MIN_SF",
@@ -893,7 +948,8 @@
   "logged": "Nov 10, 4:18 PM ET",
   "close": 44.5,
   "clv": 1.0,
-  "result": "win"
+  "result": "win",
+  "conf": 0.48
  },
  {
   "game": "2026_12_GB_LA",
@@ -909,7 +965,8 @@
   "logged": "Nov 19, 4:48 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.508
  },
  {
   "game": "2026_12_GB_LA",
@@ -925,7 +982,8 @@
   "logged": "Nov 19, 4:48 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.495
  },
  {
   "game": "2026_12_CHI_DET",
@@ -941,7 +999,8 @@
   "logged": "Nov 19, 4:48 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.529
  },
  {
   "game": "2026_12_CHI_DET",
@@ -957,7 +1016,8 @@
   "logged": "Nov 19, 4:48 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.478
  },
  {
   "game": "2026_12_PHI_DAL",
@@ -973,7 +1033,8 @@
   "logged": "Nov 19, 4:48 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.491
  },
  {
   "game": "2026_12_PHI_DAL",
@@ -989,7 +1050,8 @@
   "logged": "Nov 19, 4:48 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.478
  },
  {
   "game": "2026_12_KC_BUF",
@@ -1005,7 +1067,8 @@
   "logged": "Nov 19, 4:48 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.491
  },
  {
   "game": "2026_12_KC_BUF",
@@ -1021,7 +1084,8 @@
   "logged": "Nov 19, 4:48 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.493
  },
  {
   "game": "2026_12_DEN_PIT",
@@ -1037,7 +1101,8 @@
   "logged": "Nov 19, 4:48 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.498
  },
  {
   "game": "2026_12_DEN_PIT",
@@ -1053,7 +1118,8 @@
   "logged": "Nov 19, 4:48 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.496
  },
  {
   "game": "2026_12_ATL_MIN",
@@ -1069,7 +1135,8 @@
   "logged": "Nov 19, 4:48 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.489
  },
  {
   "game": "2026_12_ATL_MIN",
@@ -1085,7 +1152,8 @@
   "logged": "Nov 19, 4:48 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.48
  },
  {
   "game": "2026_12_BAL_HOU",
@@ -1101,7 +1169,8 @@
   "logged": "Nov 19, 4:48 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.502
  },
  {
   "game": "2026_12_BAL_HOU",
@@ -1117,7 +1186,8 @@
   "logged": "Nov 19, 4:48 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.474
  },
  {
   "game": "2026_12_NO_CIN",
@@ -1133,7 +1203,8 @@
   "logged": "Nov 19, 4:48 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.494
  },
  {
   "game": "2026_12_NO_CIN",
@@ -1149,7 +1220,8 @@
   "logged": "Nov 19, 4:48 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.485
  },
  {
   "game": "2026_12_NYG_IND",
@@ -1165,7 +1237,8 @@
   "logged": "Nov 19, 4:48 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.517
  },
  {
   "game": "2026_12_NYG_IND",
@@ -1181,7 +1254,8 @@
   "logged": "Nov 19, 4:48 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.488
  },
  {
   "game": "2026_12_NYJ_MIA",
@@ -1197,7 +1271,8 @@
   "logged": "Nov 19, 4:48 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.508
  },
  {
   "game": "2026_12_NYJ_MIA",
@@ -1213,7 +1288,8 @@
   "logged": "Nov 19, 4:48 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.494
  },
  {
   "game": "2026_12_TEN_JAX",
@@ -1229,7 +1305,8 @@
   "logged": "Nov 19, 4:48 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.503
  },
  {
   "game": "2026_12_TEN_JAX",
@@ -1245,7 +1322,8 @@
   "logged": "Nov 19, 4:48 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.481
  },
  {
   "game": "2026_12_NE_LAC",
@@ -1261,7 +1339,8 @@
   "logged": "Nov 19, 4:48 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.495
  },
  {
   "game": "2026_12_NE_LAC",
@@ -1277,7 +1356,8 @@
   "logged": "Nov 19, 4:48 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.536
  },
  {
   "game": "2026_12_SEA_SF",
@@ -1293,7 +1373,8 @@
   "logged": "Nov 19, 4:48 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.493
  },
  {
   "game": "2026_12_SEA_SF",
@@ -1309,7 +1390,8 @@
   "logged": "Nov 19, 4:48 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.476
  },
  {
   "game": "2026_12_WAS_ARI",
@@ -1325,7 +1407,8 @@
   "logged": "Nov 19, 4:48 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.494
  },
  {
   "game": "2026_12_WAS_ARI",
@@ -1341,7 +1424,8 @@
   "logged": "Nov 19, 4:48 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.521
  },
  {
   "game": "2026_12_LV_CLE",
@@ -1357,7 +1441,8 @@
   "logged": "Nov 19, 4:48 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.491
  },
  {
   "game": "2026_12_LV_CLE",
@@ -1373,7 +1458,8 @@
   "logged": "Nov 19, 4:48 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.499
  },
  {
   "game": "2026_12_CAR_TB",
@@ -1389,7 +1475,8 @@
   "logged": "Nov 19, 4:48 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.503
  },
  {
   "game": "2026_12_CAR_TB",
@@ -1405,7 +1492,8 @@
   "logged": "Nov 19, 4:48 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.493
  },
  {
   "game": "2026_13_KC_LA",
@@ -1421,7 +1509,8 @@
   "logged": "Nov 25, 7:28 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.497
  },
  {
   "game": "2026_13_KC_LA",
@@ -1437,7 +1526,8 @@
   "logged": "Nov 25, 7:28 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.497
  },
  {
   "game": "2026_13_CIN_CLE",
@@ -1453,7 +1543,8 @@
   "logged": "Nov 25, 7:28 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.496
  },
  {
   "game": "2026_13_CIN_CLE",
@@ -1469,7 +1560,8 @@
   "logged": "Nov 25, 7:28 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.485
  },
  {
   "game": "2026_13_DET_ATL",
@@ -1485,7 +1577,8 @@
   "logged": "Nov 25, 7:28 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.504
  },
  {
   "game": "2026_13_DET_ATL",
@@ -1501,7 +1594,8 @@
   "logged": "Nov 25, 7:28 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.49
  },
  {
   "game": "2026_13_GB_NO",
@@ -1517,7 +1611,8 @@
   "logged": "Nov 25, 7:28 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.502
  },
  {
   "game": "2026_13_GB_NO",
@@ -1533,7 +1628,8 @@
   "logged": "Nov 25, 7:28 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.477
  },
  {
   "game": "2026_13_JAX_CHI",
@@ -1549,7 +1645,8 @@
   "logged": "Nov 25, 7:28 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.511
  },
  {
   "game": "2026_13_JAX_CHI",
@@ -1565,7 +1662,8 @@
   "logged": "Nov 25, 7:28 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.477
  },
  {
   "game": "2026_13_LAC_TB",
@@ -1581,7 +1679,8 @@
   "logged": "Nov 25, 7:28 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.491
  },
  {
   "game": "2026_13_LAC_TB",
@@ -1597,7 +1696,8 @@
   "logged": "Nov 25, 7:28 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.505
  },
  {
   "game": "2026_13_SF_NYG",
@@ -1613,7 +1713,8 @@
   "logged": "Nov 25, 7:28 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.512
  },
  {
   "game": "2026_13_SF_NYG",
@@ -1629,7 +1730,8 @@
   "logged": "Nov 25, 7:28 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.486
  },
  {
   "game": "2026_13_WAS_TEN",
@@ -1645,7 +1747,8 @@
   "logged": "Nov 25, 7:28 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.495
  },
  {
   "game": "2026_13_WAS_TEN",
@@ -1661,7 +1764,8 @@
   "logged": "Nov 25, 7:28 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.473
  },
  {
   "game": "2026_13_MIA_DEN",
@@ -1677,7 +1781,8 @@
   "logged": "Nov 25, 7:28 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.51
  },
  {
   "game": "2026_13_MIA_DEN",
@@ -1693,7 +1798,8 @@
   "logged": "Nov 25, 7:28 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.498
  },
  {
   "game": "2026_13_PHI_ARI",
@@ -1709,7 +1815,8 @@
   "logged": "Nov 25, 7:28 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.5
  },
  {
   "game": "2026_13_PHI_ARI",
@@ -1725,7 +1832,8 @@
   "logged": "Nov 25, 7:28 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.515
  },
  {
   "game": "2026_13_BUF_NE",
@@ -1741,7 +1849,8 @@
   "logged": "Nov 25, 7:28 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.544
  },
  {
   "game": "2026_13_BUF_NE",
@@ -1757,7 +1866,8 @@
   "logged": "Nov 25, 7:28 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.542
  },
  {
   "game": "2026_13_CAR_MIN",
@@ -1773,7 +1883,8 @@
   "logged": "Nov 25, 7:28 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.493
  },
  {
   "game": "2026_13_CAR_MIN",
@@ -1789,7 +1900,8 @@
   "logged": "Nov 25, 7:28 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.479
  },
  {
   "game": "2026_13_HOU_PIT",
@@ -1805,7 +1917,8 @@
   "logged": "Nov 25, 7:28 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.526
  },
  {
   "game": "2026_13_HOU_PIT",
@@ -1821,7 +1934,8 @@
   "logged": "Nov 25, 7:28 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.485
  },
  {
   "game": "2026_13_DAL_SEA",
@@ -1837,7 +1951,8 @@
   "logged": "Nov 25, 7:28 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.491
  },
  {
   "game": "2026_13_DAL_SEA",
@@ -1853,6 +1968,7 @@
   "logged": "Nov 25, 7:28 PM ET",
   "close": null,
   "clv": null,
-  "result": null
+  "result": null,
+  "conf": 0.476
  }
 ]

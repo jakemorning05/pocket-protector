@@ -8,7 +8,7 @@ Writes data/early_props.json.
 import json, os, math, datetime
 from zoneinfo import ZoneInfo
 import pandas as pd
-from props import prob_over, STAT_COL
+from props import p_emp, STAT_COL, BLEND
 
 D = os.path.join(os.path.dirname(__file__), '..', 'data')
 ET = ZoneInfo('America/New_York')
@@ -19,7 +19,6 @@ MIN_LINE = {'pass_yds': 150, 'rush_yds': 30, 'rec_yds': 25}
 
 
 def main():
-    cal = json.load(open(f'{D}/prop_cal.json'))
     raw = {(p['game'], p['id']): p for p in json.load(open(f'{D}/players.json'))['players']}
     fan = json.load(open(f'{D}/fantasy.json'))
     site = json.load(open(f'{D}/site_data.json'))
@@ -46,10 +45,15 @@ def main():
                 line = math.floor(float(hist.median())) + 0.5  # books post .5 lines near a player's typical game
                 if line < MIN_LINE[st]:
                     continue
-                mu, sd, pov = prob_over(p[st], line + 0.5, st, cal)
-                cands.append({'player': r['name'], 'team': team, 'pos': r['pos'], 'stat': st, 'line': line, 'proj': round(mu, 1),
-                              'p_over': round(float(pov), 3), 'side': 'Over' if pov >= 0.5 else 'Under', 'games': int(len(hist))})
-        cands.sort(key=lambda c: -abs(c['p_over'] - 0.5))
+                pov = p_emp(st, p[st], line + 0.5)
+                # no market price yet: blend with 50% (a line set at his median), the same 50/50 rule the logged props use
+                conf = BLEND * pov + (1 - BLEND) * 0.5
+                side = 'Over' if conf >= 0.5 else 'Under'
+                c = conf if side == 'Over' else 1 - conf
+                if c < 0.55: continue   # leans under 55% are coin flips; don't show them
+                cands.append({'player': r['name'], 'team': team, 'pos': r['pos'], 'stat': st, 'line': line, 'proj': round(p[st], 1),
+                              'p_over': round(float(pov), 3), 'conf': round(c, 3), 'side': side, 'games': int(len(hist))})
+        cands.sort(key=lambda c: -c['conf'])
         td = sorted([r for r in pool if r['game'] == g['id']], key=lambda r: -(r.get('td_p') or 0))[:2]
         out.append({'id': g['id'], 'a': g['a'], 'h': g['h'], 'day': g['day'], 'time': g['time'], 'leans': cands[:3],
                     'td': [{'player': r['name'], 'team': r['team'], 'pos': r['pos'], 'p': round(r['td_p'], 3)} for r in td]})
@@ -57,7 +61,7 @@ def main():
     json.dump({'week': wk, 'asof': stamp, 'games': out}, open(f'{D}/early_props.json', 'w'), indent=1)
     print(f'early leans for Week {wk}: {sum(len(x["leans"]) for x in out)} across {len(out)} games')
     for x in out:
-        print(f"{x['a']}@{x['h']}: " + '; '.join(f"{c['player']} {c['side']} {c['line']} {c['stat']} ({max(c['p_over'], 1 - c['p_over']):.0%}, proj {c['proj']})" for c in x['leans']))
+        print(f"{x['a']}@{x['h']}: " + '; '.join(f"{c['player']} {c['side']} {c['line']} {c['stat']} ({c['conf']:.0%}, proj {c['proj']})" for c in x['leans']))
 
 
 if __name__ == '__main__':

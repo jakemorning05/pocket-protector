@@ -106,6 +106,27 @@ for thr in [1, 2, 3, 4, 5]:
     res = np.sign(hh.margin - hh.spread_line)[sel] * np.sign(d[sel])
     ats.append({'thr': thr, 'w': int((res > 0).sum()), 'l': int((res < 0).sum())})
 bt['ats'] = ats
+# calibrated confidence for logged spread and total picks: how often a pick won by the size of the model-vs-line gap,
+# on held-out seasons (each season predicted by a model fit without it). Pushes are left out.
+from sklearn.linear_model import LogisticRegression
+def cal_curve(gap, res):
+    gap, res = np.abs(np.asarray(gap, float)), np.asarray(res, float)
+    keep = res != 0
+    lr = LogisticRegression(C=1.0).fit(gap[keep].reshape(-1, 1), (res[keep] > 0).astype(int))
+    bins = []
+    for lo, hi in [(0, 1), (1, 2), (2, 3), (3, 5), (5, 99)]:
+        sel = keep & (gap >= lo) & (gap < hi)
+        bins.append({'lo': lo, 'hi': hi, 'n': int(sel.sum()), 'won': int((res[sel] > 0).sum())})
+    return {'a': round(float(lr.intercept_[0]), 4), 'b': round(float(lr.coef_[0][0]), 4), 'n': int(keep.sum()), 'bins': bins}
+_d = hh.cv - hh.spread_line
+bt['ats_cal'] = cal_curve(_d, np.sign(hh.margin - hh.spread_line) * np.sign(_d))
+_H2t = H2[H2.total_line.notna()].reset_index(drop=True)
+_tp = np.zeros(len(_H2t))
+for _s in sorted(_H2t.season.unique()):
+    _tr, _te = _H2t[_H2t.season != _s], (_H2t.season == _s).values
+    _tp[_te] = Ridge(alpha=1.0, fit_intercept=False).fit(_tr[TC].values, _tr.total_pts.values).predict(_H2t[_te][TC].values)
+_dt = _tp - _H2t.total_line.values
+bt['tot_cal'] = cal_curve(_dt, np.sign(_H2t.total_pts.values - _H2t.total_line.values) * np.sign(_dt))
 # weekly 2026 accuracy, model vs market
 wk = []
 for w_, g_ in p26.groupby('week'):

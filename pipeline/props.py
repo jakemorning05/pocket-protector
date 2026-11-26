@@ -12,6 +12,31 @@ D = os.path.join(os.path.dirname(__file__), '..', 'data')
 LOG = f'{D}/prop_log.json'
 STAT_COL = {'pass_yds': 'passing_yards', 'rush_yds': 'rushing_yards', 'rec_yds': 'receiving_yards'}
 
+# Pricing rules from Nov 25, 2026 ("v2"), after the first 152 graded props went 74-78:
+# - P(over) comes from how often similar projections actually cleared the line in 2024-25 (data/prop_hist.csv), not a
+#   bell curve: yardage is skewed, and the bell curve made the model too confident, mostly on NO picks.
+# - The model's probability is blended 50/50 with Kalshi's price: on those 152 props the market's price was better
+#   calibrated than the model, and the blend roughly matched it.
+# - A pick is logged only if the blended probability beats the price paid (YES at the ask, NO at 1 - bid) by 5 cents,
+#   and at most 4 per game (the biggest edges), so one game script can't swing a whole week. The rest are logged as PASS.
+BLEND, MIN_EDGE, MAX_PER_GAME, RULES = 0.5, 0.05, 4, 'v2'
+_HIST = None
+
+
+def p_emp(stat, proj, thr, band=0.15, min_n=150):
+    """P(stat >= thr) from historical games whose projection was within +/-15% of this one (widened until 150+ games),
+    each scaled to this projection."""
+    global _HIST
+    if _HIST is None:
+        _HIST = pd.read_csv(f'{D}/prop_hist.csv')
+    h = _HIST[_HIST.stat == stat]
+    x = h[(h.proj >= proj * (1 - band)) & (h.proj <= proj * (1 + band))]
+    while len(x) < min_n and band < 0.6:
+        band += 0.05
+        x = h[(h.proj >= proj * (1 - band)) & (h.proj <= proj * (1 + band))]
+    adj = x.act * (proj / x.proj.clip(lower=1))
+    return float(((adj >= thr - 0.5).sum() + 1) / (len(adj) + 2))
+
 # Kalshi "X+" markets for the Week 10 Sunday and Monday games (all but Patriots-Lions in Munich, whose pages would not load),
 # from the Kalshi API between 12:15 and 12:45 PM ET on Nov 14, 2026. For each player, the threshold priced closest to 50% on the
 # first page of each market list, kept when the midpoint is 35-65% and the spread is 10 cents or less. Kenneth Walker III and
@@ -211,7 +236,6 @@ def prob_over(proj, thr, st, cal):
 
 
 def log():
-    cal = calibration()
     proj = {(p['game'], p['name'], ): p for p in json.load(open(f'{D}/players.json'))['players']}
     entries = json.load(open(LOG)) if os.path.exists(LOG) else []
     have = {(e['game'], e['player'], e['stat'], e['thr']) for e in entries}
@@ -221,15 +245,24 @@ def log():
         p = next((v for (g, n), v in proj.items() if g == pr['game'] and (n == pr['player'] or n.startswith(pr['player']))), None)
         raw = p.get(pr['stat']) if p else None
         if raw is None: print('no projection for', pr); continue
-        mu, sd, pov = prob_over(raw, pr['thr'], pr['stat'], cal)
+        pov = p_emp(pr['stat'], raw, pr['thr'])
         bid, ask = pr.get('bid', pr['price']), pr.get('ask', pr['price'])   # buy YES at the ask; buy NO at 1 - bid
-        side = 'YES' if pov - ask > bid - pov else 'NO'
-        edge = (pov - ask) if side == 'YES' else (bid - pov)
-        entries.append({**pr, 'source': SOURCE, 'raw_proj': round(raw, 1), 'proj': round(mu, 1), 'sd': round(sd, 1), 'p_over': round(pov, 3),
-                        'pick': side, 'edge': round(edge, 3), 'actual': None, 'won': None, 'profit': None, 'pid': p['id']})
+        mid = (bid + ask) / 2
+        conf_yes = BLEND * pov + (1 - BLEND) * mid
+        side = 'YES' if conf_yes - ask > bid - conf_yes else 'NO'
+        edge = (conf_yes - ask) if side == 'YES' else (bid - conf_yes)
+        entries.append({**pr, 'source': SOURCE, 'raw_proj': round(raw, 1), 'proj': round(raw, 1), 'sd': None, 'p_over': round(pov, 3),
+                        'conf': round(conf_yes if side == 'YES' else 1 - conf_yes, 3), 'side': side, 'pick': side, 'edge': round(edge, 3),
+                        'rules': RULES, 'actual': None, 'won': None, 'profit': None, 'pid': p['id']})
+    # only real edges, at most MAX_PER_GAME per game
+    new = [e for e in entries if e.get('rules') == RULES and e['actual'] is None and e['pick'] != 'PASS']
+    for g in {e['game'] for e in new}:
+        ranked = sorted([e for e in new if e['game'] == g], key=lambda e: -e['edge'])
+        for i, e in enumerate(ranked):
+            if e['edge'] < MIN_EDGE or i >= MAX_PER_GAME:
+                e['pick'] = 'PASS'
     json.dump(entries, open(LOG, 'w'), indent=1)
-    json.dump(cal, open(f'{D}/prop_cal.json', 'w'), indent=1)
-    return entries, cal
+    return entries, {}
 
 
 def grade(stats_csv=f'{D}/stats_player_week_2026.csv'):
@@ -243,6 +276,8 @@ def grade(stats_csv=f'{D}/stats_player_week_2026.csv'):
         a = float(r[STAT_COL[e['stat']]].iloc[0])
         over = a >= e['thr']
         e['actual'] = a
+        if e['pick'] == 'PASS':   # tracked, not bet
+            continue
         e['won'] = (over and e['pick'] == 'YES') or (not over and e['pick'] == 'NO')
         cost = e.get('ask', e['price']) if e['pick'] == 'YES' else 1 - e.get('bid', e['price'])
         e['profit'] = round((1 - cost) if e['won'] else -cost, 3)
@@ -255,6 +290,6 @@ if __name__ == '__main__':
         es = grade()
     else:
         es, cal = log()
-        print({k: {kk: round(vv, 3) for kk, vv in v.items()} for k, v in cal.items()})
     for e in es:
-        print(f"{e['player']:18s} {e['stat']:8s} {e['thr']:>4}+  market {e['price']:.0%}  model proj {e['proj']:6.1f} (raw {e['raw_proj']:6.1f}, sd {e['sd']:4.1f})  P(over) {e['p_over']:.0%}  pick {e['pick']:3s} edge {e['edge']:+.0%}  result {e['actual']}")
+        print(f"{e['player']:18s} {e['stat']:8s} {e['thr']:>4}+  market {e['price']:.0%}  proj {e['proj']:6.1f}  P(over) {e['p_over']:.0%}  "
+              f"pick {e['pick']:4s} conf {e.get('conf') or 0:.0%} edge {e['edge']:+.0%}  result {e['actual']}")

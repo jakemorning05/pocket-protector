@@ -20,7 +20,7 @@
 | TEN @ JAX | 2026-11-29 13:00 | Cam Ward / Trevor Lawrence | 88% | 89% | +15.4 | -14.5 | 47.0 | 48.5 |
 | NE @ LAC | 2026-11-29 16:05 | Tommy DeVito / Justin Herbert | 62% | 49% | +3.8 | +1.5 | 47.5 | 35.5 |
 | SEA @ SF | 2026-11-29 16:25 | Sam Darnold / Brock Purdy | 59% | 57% | +2.8 | -2.5 | 47.1 | 44.5 |
-| WAS @ ARI | 2026-11-29 16:25 | Jayden Daniels / Josh Johnson | 35% | 26% | -5.1 | +6.5 | 46.9 | 41.5 |
+| WAS @ ARI | 2026-11-29 16:25 | Jayden Daniels / Josh Johnson | 35% | 27% | -5.1 | +6.5 | 46.9 | 41.5 |
 | LV @ CLE | 2026-11-29 20:20 | Fernando Mendoza / Deshaun Watson | 62% | 68% | +4.1 | -4.5 | 43.8 | 39.5 |
 | CAR @ TB | 2026-11-30 20:15 | Bryce Young / Baker Mayfield | 61% | 59% | +3.7 | -3.0 | 46.4 | 43.5 |
 
