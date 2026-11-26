@@ -1,0 +1,1006 @@
+{
+ "asof": "Thu, Nov 26, 1:30 AM ET",
+ "outs": [
+  "Josh Jacobs",
+  "Puka Nacua",
+  "Jake Ferguson",
+  "Tyler Goodson",
+  "Michael Wilson",
+  "Rhamondre Stevenson"
+ ],
+ "flags": {
+  "Cam Skattebo": "18 carries, 78 yards, 2 TDs in his return Thursday",
+  "Justin Herbert": "Concussion protocol; sat out Wednesday's practice",
+  "Carson Wentz": "Now Minnesota\u2019s backup after the Kirk Cousins trade",
+  "Keenan Allen": "Traded to San Francisco Nov 10; projections use his Colts role in the 49ers offense, so treat them as rough for now",
+  "Fernando Mendoza": "Rookie takes over in Las Vegas after the Cousins trade",
+  "Joe Milton III": "Starting the rest of the way with Jalen Hurts out for the season.",
+  "Josh Downs": "Traded from Indianapolis to Kansas City on Nov 10.",
+  "Devin Singletary": "Fewer carries with Cam Skattebo back",
+  "Alvin Kamara": "Fewer carries with Travis Etienne back",
+  "Chig Okonkwo": "Back injury Thursday; returned in the second half",
+  "Travis Etienne": "Activated from IR; first game since Week 3",
+  "Kyle McCord": "Starts at QB through Week 13 while Malik Willis is on IR",
+  "Derrick Henry": "In the concussion protocol, but Jesse Minter expects him to play Sunday vs the Texans",
+  "Brock Purdy": "Missed Wednesday practice (ankle)",
+  "Sam Darnold": "Back at practice; on track to start Week 12",
+  "Carson Beck": "No practice Wednesday (back)",
+  "Josh Johnson": "Expected to start again in Week 12 with Beck hurt",
+  "Dalton Kincaid": "Questionable (thumb, ankle); limited all week",
+  "Emmett Johnson": "Starts again with Walker out; 100+ rushing yards in each of the last two games",
+  "Aaron Rodgers": "Released by the Steelers; Mason Rudolph starts Friday vs Denver",
+  "Woody Marks": "Fully practiced Wednesday; expected back Sunday vs the Ravens",
+  "Brock Bowers": "Practiced Wednesday; Raiders optimistic he'll play in Week 12",
+  "Alec Pierce": "Partially torn Achilles (Week 2); hopeful to return later this season"
+ },
+ "items": [
+  {
+   "team": "LA",
+   "tag": "Result",
+   "text": "Wednesday night: the Rams beat the Packers 26-13. Blake Corum ran for a career-high 184 yards, and Jordan Love threw two interceptions as Green Bay was shut out in the second half. The model had LA at 66%.",
+   "src": "ESPN and Yahoo Sports, Nov 25",
+   "url": "https://www.espn.com/nfl/recap?gameId=401873079"
+  },
+  {
+   "team": "GB",
+   "tag": "Injury",
+   "text": "Packers WR Christian Watson is out of Wednesday night's game against the Rams with a concussion, per the team. He had briefly returned after a thigh injury earlier in the night.",
+   "src": "Packers, Nov 25",
+   "url": "https://x.com/packers/status/2125788004581339331"
+  },
+  {
+   "team": "LA",
+   "tag": "Injury",
+   "text": "The Rams ruled out TEs Tyler Higbee (chest) and Davis Allen (ankle) during Wednesday night's win over Green Bay, per the team.",
+   "src": "Rams, Nov 25",
+   "url": "https://x.com/RamsNFL/status/2125798096567439665"
+  },
+  {
+   "team": "PIT",
+   "tag": "QB",
+   "text": "The Steelers released Aaron Rodgers, per Adam Schefter, and Mason Rudolph starts Friday against Denver. The model still lists Rodgers as the starter until that change is entered.",
+   "src": "Adam Schefter, Nov 25",
+   "url": "https://x.com/AdamSchefter/status/2125680260494545112"
+  },
+  {
+   "team": "WAS",
+   "tag": "Trade",
+   "text": "Brandon Aiyuk, released by the 49ers on Monday, is signing with the Commanders' practice squad, per Adam Schefter.",
+   "src": "Adam Schefter, Nov 25",
+   "url": "https://x.com/AdamSchefter/status/2125655337848209439"
+  },
+  {
+   "team": "GB",
+   "tag": "Injury",
+   "text": "Micah Parsons was activated off PUP and was active for his season debut Wednesday night against the Rams. He had been expected to play about half the snaps, per Tom Pelissero.",
+   "src": "Tom Pelissero, Nov 25",
+   "url": "https://x.com/UnderdogNFL/status/2125730624015106224"
+  },
+  {
+   "team": "SF",
+   "tag": "Injury",
+   "text": "The 49ers placed OT Colton McKivitz on injured reserve, per the team, after he was carted off Sunday with a lower-leg injury.",
+   "src": "49ers, Nov 25",
+   "url": "https://x.com/49ers/status/2125666286592245811"
+  },
+  {
+   "team": "BAL",
+   "tag": "Injury",
+   "text": "Derrick Henry is in the concussion protocol, but Ravens coach Jesse Minter said he's expected to play Sunday against the Texans, per Aaron Wilson.",
+   "src": "Aaron Wilson, Nov 25",
+   "url": "https://x.com/AaronWilson_NFL/status/2125678776457498919"
+  },
+  {
+   "team": "HOU",
+   "tag": "Injury",
+   "text": "Texans RB Woody Marks fully practiced Wednesday and is expected back Sunday against the Ravens after missing the Colts game with a concussion, per Aaron Wilson.",
+   "src": "Aaron Wilson, Nov 25",
+   "url": "https://x.com/AaronWilson_NFL/status/2125681447155490854"
+  },
+  {
+   "team": "LV",
+   "tag": "Injury",
+   "text": "Brock Bowers (ankle, quad) participated in Wednesday's practice, and the Raiders are optimistic he'll play in Week 12, per Underdog NFL (via Kubiak).",
+   "src": "Underdog NFL, Nov 25",
+   "url": "https://x.com/UnderdogNFL/status/2125699319856615907"
+  },
+  {
+   "team": "IND",
+   "tag": "Injury",
+   "text": "New detail on Alec Pierce: the heel injury he suffered in Week 2 was a partially torn Achilles, and he's still hoping to return later this season, per Mike Chappell.",
+   "src": "Mike Chappell, Nov 25",
+   "url": "https://x.com/UnderdogNFL/status/2125654637390758348"
+  },
+  {
+   "team": "LA",
+   "tag": "Injury",
+   "text": "Rams TE Terrance Ferguson will have season-ending ankle surgery, per Adam Schefter.",
+   "src": "Adam Schefter, Nov 23",
+   "url": "https://x.com/AdamSchefter/status/2124946786376647010"
+  },
+  {
+   "team": "IND",
+   "tag": "QB",
+   "text": "The Colts released Daniel Jones the day after a 26-3 loss at Houston and named Anthony Richardson Sr. the starter for the rest of the season, beginning this week against the Giants. The model now rates Indianapolis with Richardson.",
+   "src": "ESPN and NFL.com, Nov 20",
+   "url": "https://www.nfl.com/news/colts-waive-daniel-jones-name-anthony-richardson-new-starting-quarterback"
+  },
+  {
+   "team": "KC",
+   "tag": "Injury",
+   "text": "Kenneth Walker III (groin) is out Thursday night at Buffalo, his third straight missed game. Rookie Emmett Johnson, who has run for 100 yards in each of the last two games, starts again. Bills TE Dalton Kincaid is questionable after limited practices, so he's back in the projections.",
+   "src": "NBC Sports and Yahoo Sports, Nov 25",
+   "url": "https://nbcsports.com/nfl/profootballtalk/rumor-mill/news/kenneth-walker-ruled-out-for-thanksgiving-night-vs-bills"
+  },
+  {
+   "team": "DAL",
+   "tag": "Injury",
+   "text": "Jake Ferguson (knee/ankle) is out again on Thanksgiving against Philadelphia, along with guard Tyler Booker. Eagles CB Quinyon Mitchell will play.",
+   "src": "Bleeding Green Nation, Nov 25",
+   "url": "https://www.bleedinggreennation.com/philadelphia-eagles-injuries/191406/eagles-cowboys-final-injury-report-quinyon-mitchell-will-play-in-dallas"
+  },
+  {
+   "team": "SEA",
+   "tag": "QB",
+   "text": "Sam Darnold practiced Wednesday after missing two games and is on track to start Sunday at San Francisco. The model has him back. Brock Purdy missed Wednesday's practice with an ankle injury he played through against Minnesota.",
+   "src": "Kicks and Grips, Nov 25",
+   "url": "https://kicksandgrips.com/news/nfl-week-12-injuries-darnold-returns-purdy-sits-and-walker-is-out"
+  },
+  {
+   "team": "ARI",
+   "tag": "QB",
+   "text": "Carson Beck (back) didn't practice Wednesday, so the model sticks with Josh Johnson for Sunday against Washington until Arizona says otherwise.",
+   "src": "Kicks and Grips, Nov 25",
+   "url": "https://kicksandgrips.com/news/nfl-week-12-injuries-darnold-returns-purdy-sits-and-walker-is-out"
+  },
+  {
+   "team": "WAS",
+   "tag": "Result",
+   "text": "Monday night: Washington beat Cincinnati 22-20 on Drew Stevens' fifth field goal as time expired. Jayden Daniels hit rookie Antonio Williams for 22 and 42 yards to set it up after Evan McPherson's 56-yarder put the Bengals ahead with 46 seconds left. Daniels threw for 289 yards; Joe Burrow had 300 and two touchdowns. The Bengals' five-game win streak is over.",
+   "src": "ESPN and Yahoo Sports, Nov 23",
+   "url": "https://www.espn.com/nfl/recap/_/gameId/401873078"
+  },
+  {
+   "team": "LAC",
+   "tag": "Injury",
+   "text": "Justin Herbert entered the concussion protocol after the Chargers' 27-24 loss to the Jets, their ninth in ten games. If he doesn't clear it before Sunday night against New England, DJ Uiagalelei would start. The model still has Herbert for now.",
+   "src": "Field Level Media via SRN News, Nov 23",
+   "url": "https://srnnews.com/nfl-injury-roundup-chargers-justin-herbert-in-concussion-protocol/"
+  },
+  {
+   "team": "NYG",
+   "tag": "Result",
+   "text": "Sunday's upsets: the Giants beat Jacksonville 23-18, the Jets won 27-24 in Los Angeles, and the Eagles edged Pittsburgh 19-16. The model and the betting market both had the losing side in all three. The model went 8-3 on Sunday (9-3 for the week so far, with Bengals-Commanders on Monday night).",
+   "src": "Sportradar finals, Nov 22",
+   "url": "https://www.nfl.com/news/notable-injuries-news-sunday-week-11-games-2026"
+  },
+  {
+   "team": "DAL",
+   "tag": "Result",
+   "text": "Dallas scored touchdowns on its first six drives in a 51-30 win over Tennessee. Dak Prescott threw for 325 yards and four touchdowns, and CeeDee Lamb (11 for 132) and George Pickens (7 for 102) both topped 100 yards.",
+   "src": "ESPN and Yardbarker, Nov 22",
+   "url": "https://www.espn.com/nfl/story/_/id/50566741/robert-saleh-calls-titans-defensive-effort-disgusting"
+  },
+  {
+   "team": "BUF",
+   "tag": "Result",
+   "text": "The Bills beat Miami 26-9 to move to 9-1. James Cook ran 22 times for 89 yards and scored for the ninth straight game.",
+   "src": "RotoWire, Nov 22",
+   "url": "https://www.rotowire.com/football/headlines/james-cook-news-extends-td-streak-to-nine-games-649149"
+  },
+  {
+   "team": "BAL",
+   "tag": "Injury",
+   "text": "Derrick Henry was evaluated for a concussion late in Baltimore's 35-33 loss at Carolina but told ESPN afterward that he felt fine. The Ravens have lost six straight.",
+   "src": "NFL.com, Nov 22",
+   "url": "https://www.nfl.com/news/notable-injuries-news-sunday-week-11-games-2026"
+  },
+  {
+   "team": "HOU",
+   "tag": "Result",
+   "text": "Thursday night: the Texans beat the Colts 26-3. C.J. Stroud threw three touchdowns (194 yards), Nico Collins caught a 42-yard score, and David Montgomery returned with 54 yards on 11 carries. Houston outgained Indy 355-167. The model had Houston at 70%.",
+   "src": "Yahoo Sports, Nov 20",
+   "url": "https://sports.yahoo.com/articles/texans-beat-colts-26-3-043911463.html"
+  },
+  {
+   "team": "ARI",
+   "tag": "QB",
+   "text": "Carson Beck (back spasms) didn't practice Friday, and Mike LaFleur says Arizona is proceeding as if 40-year-old Josh Johnson starts Sunday at Kansas City. Beck isn't ruled out. The model uses Johnson.",
+   "src": "Cardinals.com, Nov 20",
+   "url": "https://www.azcardinals.com/news/carson-beck-back-expected-to-sideline-him-for-chiefs-game-josh-johnson"
+  },
+  {
+   "team": "KC",
+   "tag": "Injury",
+   "text": "Correction to Monday's note: Kenneth Walker III (groin) hasn't practiced this week and is listed as doubtful, so he's back out of the projections. Emmett Johnson leads the backfield again. Tyquan Thornton needs ankle surgery and is out 12-16 weeks.",
+   "src": "Yahoo Sports and NBC Sports, Nov 18-20",
+   "url": "https://sports.yahoo.com/fantasy/article/nfl-injury-report-week-11-latest-news-updates-for-kenneth-walker-iii-brock-bowers-and-more-players-for-fantasy-football-224519099.html"
+  },
+  {
+   "team": "NYJ",
+   "tag": "Injury",
+   "text": "Geno Smith practiced fully Friday and is trending toward playing against the Chargers. Rookie WR Omar Cooper Jr. (ankle/hip) is out.",
+   "src": "NFL.com, Nov 20",
+   "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-nov-20"
+  },
+  {
+   "team": "TB",
+   "tag": "Injury",
+   "text": "Baker Mayfield (foot) was limited Thursday but is \u201ctrending in the right direction\u201d for Sunday against Detroit.",
+   "src": "NFL.com, Nov 20",
+   "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-nov-20"
+  },
+  {
+   "team": "MIN",
+   "tag": "Injury",
+   "text": "Jordan Addison needs thumb surgery and will miss multiple weeks. Jauan Jennings is practicing fully.",
+   "src": "NBC Sports, Nov 18",
+   "url": "https://www.nbcsports.com/fantasy/football/news/nfl-week-11-injury-report-drake-maye-likely-done-for-season-surgery-for-jordan-addison"
+  },
+  {
+   "team": "LAC",
+   "tag": "Injury",
+   "text": "Ladd McConkey (back) has been limited in practice after missing two games, so he's back in the projections; watch Sunday's inactives. Brock Bowers (LV, ankle) and Mike Evans (SF, Achilles) also returned to limited practice.",
+   "src": "FantasyPros and Yahoo Sports, Nov 19-20",
+   "url": "https://sports.yahoo.com/articles/7-major-fantasy-football-injury-140000652.html"
+  },
+  {
+   "team": "BUF",
+   "tag": "Injury",
+   "text": "Dalton Kincaid (thumb, ankle) is doubtful against Miami.",
+   "src": "Bills.com, Nov 20",
+   "url": "https://www.buffalobills.com/news/buffalo-bills-injury-report-vs-dolphins-week-11"
+  },
+  {
+   "team": "CHI",
+   "tag": "Injury",
+   "text": "Cole Kmet's knee injury is season-ending; Colston Loveland takes over at tight end. Kyle Monangai and Luther Burden III are cleared to play.",
+   "src": "NBC Sports and Yahoo Sports, Nov 18",
+   "url": "https://www.nbcsports.com/fantasy/football/news/nfl-week-11-injury-report-drake-maye-likely-done-for-season-surgery-for-jordan-addison"
+  },
+  {
+   "team": "NYJ",
+   "tag": "Injury",
+   "text": "Geno Smith's ankle tests showed no major injury, and Aaron Glenn says he'll start Sunday against the Chargers as long as he's medically cleared.",
+   "src": "Yahoo Sports, Nov 17",
+   "url": "https://sports.yahoo.com/articles/report-tests-showed-no-major-120814108.html"
+  },
+  {
+   "team": "LAC",
+   "tag": "Result",
+   "text": "Monday night: the Chargers won 23-20 at Baltimore for their first win of the season. Omarion Hampton ran for 105 yards and a touchdown, and Justin Herbert added 51 rushing yards and a score. The Ravens outgained them 347-287 but ran for just 16 yards; Jacoby Brissett threw for 340 with an interception, and Baltimore has lost five straight. The model had Baltimore at 59%.",
+   "src": "Yahoo Sports, Nov 16",
+   "url": "https://sports.yahoo.com/articles/monday-night-football-chargers-run-043322853.html"
+  },
+  {
+   "team": "BAL",
+   "tag": "Injury",
+   "text": "Defensive tackle Nnamdi Madubuike left Monday's game with a hamstring injury.",
+   "src": "Yahoo Sports, Nov 16",
+   "url": "https://sports.yahoo.com/articles/ravens-vs-chargers-recap-baltimore-043424603.html"
+  },
+  {
+   "team": "NE",
+   "tag": "Injury",
+   "text": "Drake Maye (ankle) could miss the rest of the season. He stayed in Germany for more tests to see whether he needs surgery, and Mike Vrabel doesn't expect him back for Week 12 against the Chargers. Tommy DeVito finished Sunday's game; New England is on bye this week, and the model uses DeVito for now.",
+   "src": "NFL.com and Yahoo Sports, Nov 16",
+   "url": "https://www.nfl.com/news/nfl-network-patriots-qb-drake-maye-could-miss-rest-of-2026-season"
+  },
+  {
+   "team": "NYJ",
+   "tag": "Injury",
+   "text": "Geno Smith is getting tests on the ankle he hurt against Buffalo. Aaron Glenn says Smith starts Week 11 against the Chargers if he's cleared; if not, rookie Cade Klubnik makes his first start. Omar Cooper also had ankle tests Monday.",
+   "src": "ProFootballTalk via Yahoo, Nov 16",
+   "url": "https://sports.yahoo.com/articles/geno-smith-getting-tests-ankle-151654779.html"
+  },
+  {
+   "team": "HOU",
+   "tag": "Injury",
+   "text": "Woody Marks (concussion) is unlikely to play Thursday against Indianapolis, and DeMeco Ryans doesn't know whether David Montgomery (groin) will be ready on the short week. The model has both out for now; Wednesday's practice report will settle it.",
+   "src": "Yahoo Sports, Nov 16",
+   "url": "https://sports.yahoo.com/fantasy/article/nfl-injury-report-week-11-latest-news-updates-for-drake-maye-kenneth-walker-iii-brock-bowers-more-players-for-fantasy-football-183145114.html"
+  },
+  {
+   "team": "KC",
+   "tag": "Injury",
+   "text": "Kenneth Walker III (groin) is expected back for Week 11 against Arizona after missing one game, so he's back in the projections.",
+   "src": "Yahoo Sports, Nov 16",
+   "url": "https://sports.yahoo.com/fantasy/article/nfl-injury-report-week-11-latest-news-updates-for-drake-maye-kenneth-walker-iii-brock-bowers-more-players-for-fantasy-football-183145114.html"
+  },
+  {
+   "team": "LV",
+   "tag": "Injury",
+   "text": "Brock Bowers avoided a major ankle injury. He's day-to-day with a shot to play Week 11 against Denver.",
+   "src": "Yahoo Sports, Nov 16",
+   "url": "https://sports.yahoo.com/fantasy/article/nfl-injury-report-week-11-latest-news-updates-for-drake-maye-kenneth-walker-iii-brock-bowers-more-players-for-fantasy-football-183145114.html"
+  },
+  {
+   "team": "TB",
+   "tag": "Injury",
+   "text": "Baker Mayfield (lower leg) could miss Week 11 against Detroit; the bye week didn't seem to help.",
+   "src": "Yahoo Sports, Nov 16",
+   "url": "https://sports.yahoo.com/fantasy/article/nfl-injury-report-week-11-latest-news-updates-for-drake-maye-kenneth-walker-iii-brock-bowers-more-players-for-fantasy-football-183145114.html"
+  },
+  {
+   "team": "SF",
+   "tag": "Injury",
+   "text": "Mike Evans (Achilles) has missed three straight games but has a shot to return Week 11 against Minnesota.",
+   "src": "Yahoo Sports, Nov 16",
+   "url": "https://sports.yahoo.com/fantasy/article/nfl-injury-report-week-11-latest-news-updates-for-drake-maye-kenneth-walker-iii-brock-bowers-more-players-for-fantasy-football-183145114.html"
+  },
+  {
+   "team": "DET",
+   "tag": "Injury",
+   "text": "Aidan Hutchinson is believed to have suffered a serious knee injury Sunday against New England.",
+   "src": "NFL.com, Nov 15",
+   "url": "https://www.nfl.com/news/notable-injuries-news-sunday-week-10-games-2026"
+  },
+  {
+   "team": "LAC",
+   "tag": "Injury",
+   "text": "Ladd McConkey (back) was downgraded to out for Monday night at Baltimore and didn't travel. Quentin Johnston, Tre Harris and KeAndre Lambert-Smith lead the receivers; the model underprojects them because McConkey's targets aren't redistributed.",
+   "src": "RotoWire, Nov 15",
+   "url": "https://www.rotowire.com/football/headlines/ladd-mcconkey-injury-ruled-out-for-mondays-game-647923"
+  },
+  {
+   "team": "SF",
+   "tag": "Result",
+   "text": "Late window: the 49ers outlasted Dallas 46-40, the Rams beat Arizona 34-6 in Carson Beck\u2019s first start, and Drew Lock led Seattle past Las Vegas 21-13. The model had all three winners.",
+   "src": "Yahoo Sports scores / Sportradar finals, Nov 15",
+   "url": "https://sports.yahoo.com/nfl/live/nfl-scores-news-live-updates-week-10-schedule-inactives-highlights-stats-where-to-watch-141718993.html"
+  },
+  {
+   "team": "MIN",
+   "tag": "Result",
+   "text": "Kirk Cousins won his first start back in Minnesota, 30-10 at Green Bay, one of two games the model missed in the early window. The other was Cleveland\u2019s 27-24 upset of Houston. The model\u2019s Panthers pick at New Orleans (20-17) came through.",
+   "src": "Yahoo Sports scores / Sportradar finals, Nov 15",
+   "url": "https://sports.yahoo.com/nfl/live/nfl-scores-news-live-updates-week-10-schedule-inactives-highlights-stats-where-to-watch-141718993.html"
+  },
+  {
+   "team": "LV",
+   "tag": "Injury",
+   "text": "Brock Bowers was ruled out with an ankle injury during Sunday\u2019s game against Seattle.",
+   "src": "Yahoo Sports live updates, Nov 15",
+   "url": "https://sports.yahoo.com/nfl/live/nfl-scores-news-live-updates-week-10-schedule-inactives-highlights-stats-where-to-watch-141718993.html"
+  },
+  {
+   "team": "NYJ",
+   "tag": "Injury",
+   "text": "Rookie WR Omar Cooper Jr. hurt the same right ankle he injured in Week 1 and was questionable to return against Buffalo; Geno Smith was also evaluated for a concussion.",
+   "src": "SI / CBS Sports, Nov 15",
+   "url": "https://www.si.com/nfl/jets/onsi/omar-cooper-jr-injury-tracker-update-rookie-jets-wr-s-early-exit-vs-bills-01m7g7waabjx"
+  },
+  {
+   "team": "KC",
+   "tag": "Injury",
+   "text": "Kenneth Walker III (groin) was downgraded to out Saturday, so Emmett Johnson starts at Atlanta. Kansas City called it caution after a minor strain in Thursday\u2019s practice.",
+   "src": "NFL.com, Nov 14",
+   "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-saturday-nov-14"
+  },
+  {
+   "team": "HOU",
+   "tag": "Injury",
+   "text": "David Montgomery was downgraded to out Saturday after all, so Woody Marks stays Houston\u2019s lead back at Cleveland.",
+   "src": "NFL.com, Nov 14",
+   "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-saturday-nov-14"
+  },
+  {
+   "team": "NO",
+   "tag": "Injury",
+   "text": "The Saints activated Travis Etienne from injured reserve, and he\u2019ll play Sunday against Carolina for the first time since Week 3. The model adds him back and trims the other backs\u2019 carries.",
+   "src": "NFL.com, Nov 14",
+   "url": "https://www.nfl.com/news/saints-activate-rb-travis-etienne-from-injured-reserve-ahead-of-sunday-s-game-vs-panthers"
+  },
+  {
+   "team": "NE",
+   "tag": "Injury",
+   "text": "TreVeyon Henderson went on injured reserve. Rhamondre Stevenson and A.J. Brown are still questionable in Munich (9:30 AM ET); Brown traveled with the team.",
+   "src": "NBC Sports / NFL.com, Nov 14",
+   "url": "https://www.nbcsports.com/fantasy/football/news/nfl-week-10-injury-report-pats-backfield-in-flux-plus-gardner-minshew-michael-wilson-puka-nacua-injuries"
+  },
+  {
+   "team": "CAR",
+   "tag": "Injury",
+   "text": "Xavier Legette was activated from IR and is questionable. In Indianapolis, TE Will Mallory was downgraded to out and Mo Alie-Cox went on IR.",
+   "src": "NFL.com, Nov 14",
+   "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-saturday-nov-14"
+  },
+  {
+   "team": "KC",
+   "tag": "Injury",
+   "text": "Kenneth Walker III (groin) was added to the injury report Friday and is questionable at Atlanta. Andy Reid said they won't put him at risk, so treat it as a true 50/50; Emmett Johnson would start if he sits. Kickoff is 1 PM ET.",
+   "src": "Yahoo Sports / Bleacher Report, Nov 13",
+   "url": "https://sports.yahoo.com/articles/kenneth-walker-travis-etienne-more-130000022.html"
+  },
+  {
+   "team": "NE",
+   "tag": "Injury",
+   "text": "TreVeyon Henderson (illness) is out in Munich and Rhamondre Stevenson (knee) is questionable after two limited practices; if he sits, Corey Kiner gets most of the carries, more than the model projects. A.J. Brown is expected to be activated from IR and is a game-time decision. Inactives come out at 8 AM ET Sunday.",
+   "src": "RotoWire, Nov 13",
+   "url": "https://www.rotowire.com/football/article/nfl-injury-report-friday-updates-rhamondre-146440"
+  },
+  {
+   "team": "HOU",
+   "tag": "Injury",
+   "text": "David Montgomery practiced fully Friday and is questionable but expected back from his groin injury after missing three games. The model now projects him again and trims Woody Marks.",
+   "src": "Yahoo Sports, Nov 13",
+   "url": "https://sports.yahoo.com/articles/kenneth-walker-travis-etienne-more-130000022.html"
+  },
+  {
+   "team": "MIN",
+   "tag": "Injury",
+   "text": "T.J. Hockenson and Jauan Jennings are out at Green Bay, and Kyler Murray (hamstring) is out, so Kirk Cousins starts his first game for Minnesota. Jordan Addison (thumb) is questionable.",
+   "src": "RotoWire, Nov 13",
+   "url": "https://www.rotowire.com/football/article/nfl-injury-report-friday-updates-rhamondre-146440"
+  },
+  {
+   "team": "NO",
+   "tag": "Injury",
+   "text": "Travis Etienne returned to a full practice Friday and is questionable to come off IR; he hasn\u2019t played since Week 3, so New Orleans may ease him in. The model leaves him out until he plays.",
+   "src": "Yahoo Sports, Nov 13",
+   "url": "https://sports.yahoo.com/articles/kenneth-walker-travis-etienne-more-130000022.html"
+  },
+  {
+   "team": "LAC",
+   "tag": "Injury",
+   "text": "Ladd McConkey (back) missed Thursday and Friday practices and is uncertain for Monday night against Baltimore. Keaton Mitchell (hip) is expected to play.",
+   "src": "RotoWire, Nov 13",
+   "url": "https://www.rotowire.com/football/article/nfl-injury-report-friday-updates-rhamondre-146440"
+  },
+  {
+   "team": "DET",
+   "tag": "Injury",
+   "text": "Jared Goff is cleared, and Amon-Ra St. Brown is questionable (ribs) but practiced fully all week, so expect both in Munich. Mike Evans (SF), Carnell Tate (TEN), Marvin Harrison Jr. (HOU) and Zachariah Branch (ATL) are out.",
+   "src": "RotoWire / Bleacher Report, Nov 13",
+   "url": "https://bleacherreport.com/articles/25532965-kenneth-walker-george-pickens-nfl-injury-statuses-and-fantasy-impact-week-10"
+  },
+  {
+   "team": "WAS",
+   "tag": "Result",
+   "text": "Final: Commanders 24, Giants 21. Jayden Daniels threw for 249 yards and 3 touchdowns (2 interceptions), and the winning score was a 32-yard Stefon Diggs catch with 1:05 left. The model had Washington at 54% and a 24-23 final.",
+   "src": "ESPN, Nov 12",
+   "url": "https://www.espn.com/nfl/game/_/gameId/401873052"
+  },
+  {
+   "team": "NYG",
+   "tag": "Fantasy",
+   "text": "Cam Skattebo was straight back to a lead role in his return from the hamstring injury: 18 carries, 78 yards and 2 touchdowns. Isaiah Likely had a career-high 127 yards on 9 catches, including a 66-yard touchdown.",
+   "src": "ESPN / PFF, Nov 12",
+   "url": "https://www.pff.com/news/nfl-week-10-recap-immediate-fantasy-football-takeaways-from-commanders-giants"
+  },
+  {
+   "team": "WAS",
+   "tag": "Injury",
+   "text": "Chig Okonkwo hurt his back early in the second quarter but returned after halftime, and Ben Sinnott handled the receiving tight end role while he was out. Colson Yankoff left with a knee injury, and Tremaine Edmunds suffered a season-ending chest injury.",
+   "src": "PFF, Nov 12",
+   "url": "https://www.pff.com/news/nfl-week-10-recap-immediate-fantasy-football-takeaways-from-commanders-giants"
+  },
+  {
+   "team": "IND",
+   "tag": "Injury",
+   "text": "Jonathan Taylor was limited in practice this week. He hasn't been ruled out, but watch Friday's report before Sunday's game against Miami.",
+   "src": "NFL.com injury report, Nov 12",
+   "url": "https://www.nfl.com/injuries/league/2026/reg10"
+  },
+  {
+   "team": "DET",
+   "tag": "Injury",
+   "text": "Jared Goff and Amon-Ra St. Brown were both limited in practice ahead of Sunday morning\u2019s game against New England in Munich (9:30 AM ET kickoff, so lineups lock early).",
+   "src": "NFL.com injury report, Nov 12",
+   "url": "https://www.nfl.com/injuries/league/2026/reg10"
+  },
+  {
+   "team": "NYG",
+   "tag": "Injury",
+   "text": "Thursday night: Cam Skattebo is back from his hamstring injury and expected to be a full go, so the model projects him again and trims Devin Singletary's carries. Treylon Burks (foot) is also expected to return for Washington; center Lucas Patrick and TE Colson Yankoff are out.",
+   "src": "CBS Sports / SI, Nov 11",
+   "url": "https://www.cbssports.com/nfl/news/2026-nfl-week-10-injury-report-mike-evans-puka-nacua/"
+  },
+  {
+   "team": "KC",
+   "tag": "QB",
+   "text": "Patrick Mahomes (elbow) was a full participant in Wednesday practice, so he is on track to start Sunday at Atlanta.",
+   "src": "CBS Sports, Nov 11",
+   "url": "https://www.cbssports.com/nfl/news/2026-nfl-week-10-injury-report-mike-evans-puka-nacua/"
+  },
+  {
+   "team": "NE",
+   "tag": "Injury",
+   "text": "TreVeyon Henderson (illness) has been ruled out again, and Rhamondre Stevenson (knee) did not practice. A.J. Brown and Hunter Henry were limited. The Patriots play Detroit in Munich.",
+   "src": "CBS Sports, Nov 11",
+   "url": "https://www.cbssports.com/nfl/news/2026-nfl-week-10-injury-report-mike-evans-puka-nacua/"
+  },
+  {
+   "team": "LA",
+   "tag": "Injury",
+   "text": "Puka Nacua (knee, toe) did not practice and faces a multi-week absence, though he isn't officially on IR yet.",
+   "src": "CBS Sports, Nov 11",
+   "url": "https://www.cbssports.com/nfl/news/2026-nfl-week-10-injury-report-mike-evans-puka-nacua/"
+  },
+  {
+   "team": "TEN",
+   "tag": "Injury",
+   "text": "Rookie WR Carnell Tate (shoulder) and RB Tyjae Spears (knee) did not practice Wednesday. Both missed Week 8 before the bye.",
+   "src": "CBS Sports, Nov 11",
+   "url": "https://www.cbssports.com/nfl/news/2026-nfl-week-10-injury-report-mike-evans-puka-nacua/"
+  },
+  {
+   "team": "JAX",
+   "tag": "Injury",
+   "text": "Jakobi Meyers (ankle) and Bhayshul Tuten (ankle, foot) did not practice Wednesday after playing through their injuries last week.",
+   "src": "CBS Sports, Nov 11",
+   "url": "https://www.cbssports.com/nfl/news/2026-nfl-week-10-injury-report-mike-evans-puka-nacua/"
+  },
+  {
+   "team": "MIN",
+   "tag": "Injury",
+   "text": "T.J. Hockenson (wrist, chest) and Jauan Jennings (calf) were listed as non-participants on Minnesota's estimated report after Monday night's game.",
+   "src": "CBS Sports, Nov 11",
+   "url": "https://www.cbssports.com/nfl/news/2026-nfl-week-10-injury-report-mike-evans-puka-nacua/"
+  },
+  {
+   "team": "KC",
+   "tag": "Trade",
+   "text": "Kansas City got WR Josh Downs from the Colts for 2027 fourth- and fifth-round picks. Downs had 33 catches for 354 yards in nine games for Indianapolis; the model now projects him with the Chiefs, and Indianapolis' other receivers pick up his targets.",
+   "src": "Colts.com, Nov 10",
+   "url": "https://www.colts.com/news/colts-acquire-2027-fourth-round-fifth-round-pick-from-kansas-city-chiefs-in-exchange-for-wide-receiver-josh-downs-2027-seventh-round-pick"
+  },
+  {
+   "team": "NYG",
+   "tag": "Injury",
+   "text": "Thursday night: J.J. McCarthy (hip), Cam Skattebo (hamstring) and Darnell Mooney (chest) were all full participants Tuesday, and Malik Nabers (knee) has practiced fully all week. For Washington, center Lucas Patrick (concussion) hasn't practiced.",
+   "src": "Giants.com injury report",
+   "url": "https://www.giants.com/news/giants-vs-commanders-week-10-injury-report-qb-j-j-mccarthy-rb-cam-skattebo-limited"
+  },
+  {
+   "team": "KC",
+   "tag": "QB",
+   "text": "Patrick Mahomes (elbow) is expected to practice in full, putting him on track to start Sunday at Atlanta.",
+   "src": "NBC Sports, Nov 11",
+   "url": "https://www.nbcsports.com/fantasy/football/player-news/2026-11-11/mahomes-elbow-is-expected-to-practice-in-full"
+  },
+  {
+   "team": "NE",
+   "tag": "Injury",
+   "text": "TreVeyon Henderson has missed two games after a hospital stay for unexplained neurological symptoms and could sit again Sunday against Detroit in Germany. With Rhamondre Stevenson also out, Corey Kiner would lead the backfield.",
+   "src": "Yahoo Sports injury report",
+   "url": "https://sports.yahoo.com/fantasy/article/nfl-injury-report-week-10-latest-news-updates-for-puka-nacua-patrick-mahomes-more-players-for-fantasy-football-190016604.html"
+  },
+  {
+   "team": "DEN",
+   "tag": "Trade",
+   "text": "Denver landed LB Daiyan Henley from the Chargers in a rare deadline trade inside the division. He'd played 87% of the Chargers' defensive snaps in Week 9, so the model counts him as missing for Los Angeles.",
+   "src": "ESPN, Nov 10",
+   "url": "https://www.espn.com/nfl/story/_/id/50445309/sources-broncos-land-daiyan-henley-trade-chargers"
+  },
+  {
+   "team": "BAL",
+   "tag": "QB",
+   "text": "Lamar Jackson (thumb surgery) is likely out for the rest of the regular season and Tyler Huntley is done for the year, so Jacoby Brissett starts Monday against the Chargers. The model has Brissett as Baltimore's starter the rest of the way.",
+   "src": "NBC Sports injury report, Nov 10",
+   "url": "https://nbcsports.com/fantasy/football/news/nfl-week-10-injury-report-pats-backfield-in-flux-plus-gardner-minshew-michael-wilson-puka-nacua-injuries"
+  },
+  {
+   "team": "PHI",
+   "tag": "QB",
+   "text": "Jalen Hurts is expected to miss the rest of the season with blood clots, so Joe Milton III stays the starter coming out of this week's bye. The model now lowers Philadelphia's receivers to match.",
+   "src": "NFL Network / ESPN",
+   "url": "https://www.nfl.com/news/eagles-qb-jalen-hurts-out-2026-season-blood-clots"
+  },
+  {
+   "team": "SEA",
+   "tag": "QB",
+   "text": "Sam Darnold is expected back in Week 12, after Seattle's Week 11 bye. Drew Lock starts Sunday at Las Vegas.",
+   "src": "DK Network, Nov 10",
+   "url": "https://dknetwork.draftkings.com/2026/11/10/nfl-injury-report-week-10/"
+  },
+  {
+   "team": "HOU",
+   "tag": "Injury",
+   "text": "David Montgomery (groin) hasn't played since Week 5 but hopes to practice soon. When he's back, expect Woody Marks' carries to shrink.",
+   "src": "DK Network, Nov 10",
+   "url": "https://dknetwork.draftkings.com/2026/11/10/nfl-injury-report-week-10/"
+  },
+  {
+   "team": "LA",
+   "tag": "Injury",
+   "text": "Davante Adams (hamstring surgery) is on IR with a return targeted shortly after the Rams' Week 11 bye. With Puka Nacua also out, the Rams are thin at receiver Sunday at Arizona.",
+   "src": "DK Network, Nov 10",
+   "url": "https://dknetwork.draftkings.com/2026/11/10/nfl-injury-report-week-10/"
+  },
+  {
+   "team": "SF",
+   "tag": "Injury",
+   "text": "Mike Evans (Achilles tendinitis, ribs) is unlikely to practice Wednesday and hasn't played since Week 6. Deebo Samuel (hamstring) is on track to practice.",
+   "src": "DK Network, Nov 10",
+   "url": "https://dknetwork.draftkings.com/2026/11/10/nfl-injury-report-week-10/"
+  },
+  {
+   "team": "MIA",
+   "tag": "Injury",
+   "text": "Dolphins put QB Malik Willis on injured reserve with a groin injury, so he misses at least Weeks 10 to 13. Kyle McCord, a 2025 sixth-round pick, is in line for his first NFL start Sunday at Indianapolis. The model now rates Miami with McCord through Week 13.",
+   "src": "NFL.com, Nov 10",
+   "url": "https://www.nfl.com/news/dolphins-place-qb-malik-willis-groin-on-injured-reserve-kyle-mccord-in-line-for-first-start"
+  },
+  {
+   "team": "BUF",
+   "tag": "Result",
+   "text": "Bills 23, Vikings 6. Buffalo controlled the ball for 42 minutes and forced three Minnesota turnovers; Carson Wentz and the Vikings managed 178 yards and two field goals. The model's locked pick, Buffalo at 56%, won. Its spread side (Vikings +3.5) and total (Over 45.5) both lost.",
+   "src": "Final score and team stats, Nov 9",
+   "url": "https://www.espn.com/nfl/game/_/gameId/401873051/bills-vikings"
+  },
+  {
+   "team": "MIN",
+   "tag": "Trade",
+   "text": "Minnesota traded a 2027 third-round pick to Las Vegas for Kirk Cousins, two days after Carson Wentz went 8 of 25 against Buffalo. Cousins is expected to start Sunday at Green Bay, and the model now uses him as the Vikings' starter, which moves that game toward Minnesota. Rookie Fernando Mendoza takes over in Las Vegas.",
+   "src": "NBC Bay Area / ESPN, Nov 10",
+   "url": "https://www.nbcbayarea.com/news/sports/nfl/vikings-kirk-cousins-trade-raiders/4173444/"
+  },
+  {
+   "team": "SF",
+   "tag": "Trade",
+   "text": "San Francisco got WR Keenan Allen from Indianapolis for a 2027 sixth-round pick. Allen leads the Colts with 40 catches. He's moved to the 49ers in the projections; his numbers there use his Colts role, so they're rough until he plays a game in San Francisco.",
+   "src": "ESPN, Nov 10",
+   "url": "https://www.espn.com/nfl/story/_/id/50444457/sources-49ers-acquire-keenan-allen-trade-colts"
+  },
+  {
+   "team": "BUF",
+   "tag": "Trade",
+   "text": "Buffalo filled its safety need with Amani Hooker from Tennessee.",
+   "src": "ESPN, Nov 10",
+   "url": "https://www.espn.com/nfl/story/_/id/50444810/bills-trade-titans-safety-amani-hooker"
+  },
+  {
+   "team": "CIN",
+   "tag": "Trade",
+   "text": "Cincinnati called off its agreed trade for Eagles edge rusher Arnold Ebiketie over the compensatory-pick formula. He stays in Philadelphia.",
+   "src": "ESPN, Nov 10",
+   "url": "https://www.espn.com/nfl/story/_/id/50443891/bengals-nix-agreed-trade-eagles-sources-say"
+  },
+  {
+   "team": "MIA",
+   "tag": "Injury",
+   "text": "DT Zach Sieler needs season-ending biceps surgery.",
+   "src": "ProFootballTalk, Nov 10",
+   "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/2026-nfl-trade-deadline-live-updates-tracker-deals-news-rumors-analysis"
+  },
+  {
+   "team": "LAC",
+   "tag": "QB",
+   "text": "Good news for the Chargers: imaging on Justin Herbert's left middle finger came back negative, with no fracture.",
+   "src": "DK Network, Nov 10",
+   "url": "https://dknetwork.draftkings.com/2026/11/10/nfl-injury-report-week-10/"
+  },
+  {
+   "team": "KC",
+   "tag": "Injury",
+   "text": "Patrick Mahomes (right elbow strain) and Xavier Worthy (hamstring) are day-to-day. The model still has Mahomes starting at Atlanta.",
+   "src": "DK Network, Nov 10",
+   "url": "https://dknetwork.draftkings.com/2026/11/10/nfl-injury-report-week-10/"
+  },
+  {
+   "team": "NYJ",
+   "tag": "Injury",
+   "text": "Garrett Wilson is in the concussion protocol and must clear it to play Buffalo.",
+   "src": "DK Network, Nov 10",
+   "url": "https://dknetwork.draftkings.com/2026/11/10/nfl-injury-report-week-10/"
+  },
+  {
+   "team": "GB",
+   "tag": "Injury",
+   "text": "Guard Sean Rhyan is out at least a month with a high ankle sprain, and Josh Jacobs needs surgery on a fractured finger. Both count against Green Bay.",
+   "src": "DK Network, Nov 10",
+   "url": "https://dknetwork.draftkings.com/2026/11/10/nfl-injury-report-week-10/"
+  },
+  {
+   "team": "ARI",
+   "tag": "Injury",
+   "text": "WR Michael Wilson is out for the season with a fractured vertebra, suffered on Arizona's fourth offensive play against Seattle. He had 51 catches for 546 yards and was on pace for a second straight 1,000-yard season. He's off the fantasy rankings, and his snaps count against Arizona.",
+   "src": "ESPN, Nov 9",
+   "url": "https://www.espn.com/nfl/story/_/id/50435608/cardinals-wr-michael-wilson-neck-miss-rest-season"
+  },
+  {
+   "team": "ARI",
+   "tag": "QB",
+   "text": "Gardner Minshew likely tore the UCL in his throwing arm and may need season-ending surgery. Rookie Carson Beck is expected to start Sunday against the Rams. With no NFL passing history, the model rates him as a typical new starter, which lowers Arizona's chances.",
+   "src": "ESPN, Nov 9",
+   "url": "https://www.espn.com/nfl/story/_/id/50435608/cardinals-wr-michael-wilson-neck-miss-rest-season"
+  },
+  {
+   "team": "NE",
+   "tag": "Injury",
+   "text": "Rhamondre Stevenson is expected to miss time with a knee tendon issue. He's off the fantasy rankings for Week 10.",
+   "src": "ESPN, Nov 9",
+   "url": "https://www.espn.com/nfl/story/_/id/50435734/bills-vikings-josh-allen-carson-wentz-mnf"
+  },
+  {
+   "team": "LA",
+   "tag": "Injury",
+   "text": "Puka Nacua has MCL and PCL sprains in his right knee plus turf toe, and Sean McVay says he'll likely go on injured reserve. That means at least four games; with the Week 11 bye, Dec. 20 at Dallas is the earliest return. He's out of the fantasy rankings and his snaps now count in the Rams' injury load.",
+   "src": "Larry Brown Sports (via NFL Network), Nov 9",
+   "url": "https://larrybrownsports.com/football/rams-news-puka-nacua-injury/777778"
+  },
+  {
+   "team": "JAX",
+   "tag": "Trade",
+   "text": "Jacksonville made three defensive trades in one day: DT Jordan Davis from Philadelphia (2027 first-round and 2029 second-round picks), S Jessie Bates from Atlanta (2027 second, 2028 fifth) and DT Davon Godchaux from New Orleans. Their old teams now count them as missing; Jacksonville\u2019s ratings catch up as they play.",
+   "src": "ESPN, Nov 9",
+   "url": "https://www.espn.com/nfl/story/_/id/50435639/jaguars-get-eagles-jordan-davis-blockbuster-trade"
+  },
+  {
+   "team": "DAL",
+   "tag": "Injury",
+   "text": "TE Jake Ferguson and RB Tyler Goodson will miss multiple weeks, and S P.J. Locke is out for Sunday against San Francisco, per Brian Schottenheimer. George Pickens and Kavontae Turpin are among those to be decided later in the week.",
+   "src": "A to Z Sports, Nov 9",
+   "url": "https://atozsports.com/nfl/dallas-cowboys-news/injury-updates-jake-ferguson-tyler-goodson-pj-locke/"
+  },
+  {
+   "team": "DET",
+   "tag": "Trade",
+   "text": "Detroit acquired S Andre Cisco from the Jets for a 2028 sixth-round pick.",
+   "src": "Detroit News, Nov 9",
+   "url": "https://detroitnews.com/story/sports/nfl/lions/2026/11/09/detroit-lions-trade-andre-cisco-stats-new-york-jets-safety/92693765007"
+  },
+  {
+   "team": "CLE",
+   "tag": "QB",
+   "text": "Deshaun Watson cleared the concussion protocol and is expected to start Sunday against Houston. The model now uses Watson instead of Shedeur Sanders.",
+   "src": "NFL.com news roundup, Nov 9",
+   "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-nov-9"
+  },
+  {
+   "team": "SEA",
+   "tag": "QB",
+   "text": "Mike Macdonald ruled Sam Darnold out for Sunday at Las Vegas; he's still recovering from quad and rib injuries and could return after the Week 11 bye. Drew Lock starts again, playing through an oblique injury. If Lock can't go, rookie Jalen Milroe is next.",
+   "src": "The Sunday Guardian, Nov 10",
+   "url": "https://sundayguardianlive.com/sports/nfl-injury-update-sam-darnold-ruled-out-of-seahawks-vs-las-vegas-raiders-week-10-clash-drew-lock-to-start-320272/"
+  },
+  {
+   "team": "NYG",
+   "tag": "QB",
+   "text": "J.J. McCarthy has a hip pointer but is expected to play Thursday against Washington. RB Cam Skattebo should be back from his hamstring injury.",
+   "src": "NFL.com news roundup, Nov 9",
+   "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-nov-9"
+  },
+  {
+   "team": "GB",
+   "tag": "Injury",
+   "text": "Josh Jacobs is expected to miss up to three weeks. He's removed from projections, and his snaps now count in Green Bay's injury load.",
+   "src": "Yahoo Sports NFL live updates, Nov 9",
+   "url": "https://sports.yahoo.com/nfl/live/nfl-news-injury-updates-trade-deadline-rumors-131950109.html"
+  },
+  {
+   "team": "NE",
+   "tag": "Injury",
+   "text": "A.J. Brown has missed two games; the Patriots plan for him to travel to Germany for Sunday's game against Detroit, with no final decision. Lineman Ben Brown won't make the trip.",
+   "src": "NFL.com news roundup, Nov 9",
+   "url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-nov-9"
+  },
+  {
+   "team": "IND",
+   "tag": "Trade",
+   "text": "The deadline passed with Jonathan Taylor still a Colt; Indianapolis reportedly turned down second-round picks. He stays the Colts' workhorse, now with Keenan Allen gone to San Francisco.",
+   "src": "USA TODAY Sports via Yahoo, Nov 10",
+   "url": "https://sports.yahoo.com/articles/jonathan-taylor-staying-colts-203756681.html"
+  }
+ ],
+ "injuries": [
+  {
+   "team": "ARI",
+   "name": "Michael Wilson",
+   "pos": "WR",
+   "status": "Out",
+   "injury": "Fractured vertebra (late news)",
+   "snap": 0.9
+  },
+  {
+   "team": "CHI",
+   "name": "Kyler Gordon",
+   "pos": "DB",
+   "status": "Out",
+   "injury": "OUT for Thanksgiving (late news)",
+   "snap": 0.76
+  },
+  {
+   "team": "CHI",
+   "name": "Cole Kmet",
+   "pos": "TE",
+   "status": "Out",
+   "injury": "Knee (late news)",
+   "snap": 0.74
+  },
+  {
+   "team": "DAL",
+   "name": "Tyler Booker",
+   "pos": "G",
+   "status": "Out",
+   "injury": "OUT for Thanksgiving (late news)",
+   "snap": 1.0
+  },
+  {
+   "team": "DAL",
+   "name": "P.J. Locke",
+   "pos": "S",
+   "status": "Out",
+   "injury": "OUT for Thanksgiving (late news)",
+   "snap": 0.84
+  },
+  {
+   "team": "DAL",
+   "name": "Jake Ferguson",
+   "pos": "TE",
+   "status": "Out",
+   "injury": "OUT for Thanksgiving (late news)",
+   "snap": 0.56
+  },
+  {
+   "team": "DET",
+   "name": "Skyler Gill-Howard",
+   "pos": "DL",
+   "status": "Out",
+   "injury": "OUT for Thanksgiving (late news)",
+   "snap": 0.53
+  },
+  {
+   "team": "GB",
+   "name": "Travis Glover",
+   "pos": "G",
+   "status": "Questionable",
+   "injury": "Shoulder",
+   "snap": 1.0
+  },
+  {
+   "team": "GB",
+   "name": "Zaire Franklin",
+   "pos": "LB",
+   "status": "Questionable",
+   "injury": "Shin",
+   "snap": 0.98
+  },
+  {
+   "team": "GB",
+   "name": "Josh Jacobs",
+   "pos": "RB",
+   "status": "Out",
+   "injury": "Up to 3 weeks (late news)",
+   "snap": 0.71
+  },
+  {
+   "team": "GB",
+   "name": "Sean Rhyan",
+   "pos": "C",
+   "status": "Questionable",
+   "injury": "Ankle",
+   "snap": 0.69
+  },
+  {
+   "team": "IND",
+   "name": "Jalen Travis",
+   "pos": "T",
+   "status": "Out",
+   "injury": "Knee (late news)",
+   "snap": 1.0
+  },
+  {
+   "team": "IND",
+   "name": "Daniel Jones",
+   "pos": "QB",
+   "status": "Out",
+   "injury": "Released by the Colts (late news)",
+   "snap": 1.0
+  },
+  {
+   "team": "KC",
+   "name": "Jaylon Moore",
+   "pos": "OL",
+   "status": "Out",
+   "injury": "OUT for Thanksgiving (late news)",
+   "snap": 1.0
+  },
+  {
+   "team": "KC",
+   "name": "Kenneth Walker III",
+   "pos": "RB",
+   "status": "Out",
+   "injury": "OUT for Thanksgiving (late news)",
+   "snap": 0.81
+  },
+  {
+   "team": "KC",
+   "name": "Tyquan Thornton",
+   "pos": "WR",
+   "status": "Out",
+   "injury": "Ankle surgery expected (late news)",
+   "snap": 0.63
+  },
+  {
+   "team": "LA",
+   "name": "Puka Nacua",
+   "pos": "WR",
+   "status": "Out",
+   "injury": "Likely IR (late news)",
+   "snap": 0.96
+  },
+  {
+   "team": "LA",
+   "name": "Coleman Shelton",
+   "pos": "C",
+   "status": "Out",
+   "injury": "Hamstring",
+   "snap": 0.74
+  },
+  {
+   "team": "LA",
+   "name": "Steve Avila",
+   "pos": "G",
+   "status": "Out",
+   "injury": "Hamstring",
+   "snap": 0.73
+  },
+  {
+   "team": "MIA",
+   "name": "Zach Sieler",
+   "pos": "DL",
+   "status": "Out",
+   "injury": "Season-ending biceps surgery (late news)",
+   "snap": 0.83
+  },
+  {
+   "team": "MIN",
+   "name": "Jordan Addison",
+   "pos": "WR",
+   "status": "Out",
+   "injury": "Thumb surgery (late news)",
+   "snap": 0.98
+  },
+  {
+   "team": "NE",
+   "name": "Ben Brown",
+   "pos": "C",
+   "status": "Out",
+   "injury": "Not traveling to Germany (late news)",
+   "snap": 0.79
+  },
+  {
+   "team": "NE",
+   "name": "Rhamondre Stevenson",
+   "pos": "RB",
+   "status": "Out",
+   "injury": "Knee tendon issue (late news)",
+   "snap": 0.77
+  },
+  {
+   "team": "NO",
+   "name": "Erik McCoy",
+   "pos": "C",
+   "status": "Out",
+   "injury": "Biceps (late news)",
+   "snap": 1.0
+  },
+  {
+   "team": "NYJ",
+   "name": "Omar Cooper Jr.",
+   "pos": "WR",
+   "status": "Out",
+   "injury": "Ankle/hip (late news)",
+   "snap": 0.86
+  },
+  {
+   "team": "SF",
+   "name": "Gracen Halton",
+   "pos": "DL",
+   "status": "Out",
+   "injury": "Out for the season (late news)",
+   "snap": 0.5
+  },
+  {
+   "team": "WAS",
+   "name": "Lucas Patrick",
+   "pos": "G",
+   "status": "Out",
+   "injury": "Concussion protocol; Nick Allegretti starts at center Thursday (late news)",
+   "snap": 1.0
+  }
+ ],
+ "injury_week": 12
+}
