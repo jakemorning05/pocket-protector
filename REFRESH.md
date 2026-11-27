@@ -80,6 +80,12 @@ pipeline/college_backtest.py (a few minutes) so the tab's 2023-25 numbers match.
 no injuries or QB changes.
 
 
+## QB changes and totals
+The totals model includes `s_qdelta` (both starters' QB value minus the QB behind each team's season numbers), so a
+backup starting lowers the total. Totals bets aren't logged when |qd| > 0.1, because even with that term the model
+went 49% against the line in those games (2017-25). A Week-only qb_starters entry (e.g. LAC Uiagalelei through 12) has
+to be removed by hand if the starter is cleared after all.
+
 ## Draft tab (pipeline/draft.py, data/draft_sources.json)
 The 2027 order is worked out in the browser from the same season simulations as the Playoffs tab (simulate() also plays
 out the playoffs: higher seed at home with the model's home-field edge, Super Bowl neutral). Picks 1-18 go to

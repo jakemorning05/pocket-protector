@@ -47,8 +47,8 @@
       "team": "NE",
       "qb": "T.DeVito",
       "name": "Tommy DeVito",
-      "through_week": 12,
-      "source": "Yahoo Sports, Nov 16: Maye out indefinitely (ankle); DeVito finished the Week 10 game. NE has not named a starter (bye Week 11), recheck before Week 12"
+      "through_week": 13,
+      "source": "Yahoo Sports, Nov 16: Maye out indefinitely (ankle); DeVito finished the Week 10 game. NE has not named a starter (bye Week 11), recheck before Week 12 | Nov 27: Maye has a fractured fibula (no surgery), out indefinitely; extended through Week 13, revisit weekly"
     },
     {
       "team": "ARI",
@@ -84,6 +84,13 @@
       "name": "Mason Rudolph",
       "through_week": 18,
       "source": "NFL.com / AP, Nov 25: Steelers released Aaron Rodgers; Rudolph starts Friday vs Denver"
+    },
+    {
+      "team": "LAC",
+      "qb": "D.Uiagalelei",
+      "name": "DJ Uiagalelei",
+      "through_week": 12,
+      "source": "NBC Sports / SI / Yahoo, Nov 26-27: Herbert (concussion) missed Wed-Thu practice, 'firmly on the wrong side of questionable'; Browning promoted. Week 12 only; remove if Herbert is cleared"
     }
   ],
   "players_out": [
@@ -352,6 +359,30 @@
       "name": "Caleb Lohner",
       "side": "off",
       "source": "Yahoo Sports, Nov 26: OUT for Friday"
+    },
+    {
+      "team": "NE",
+      "name": "A.J. Brown",
+      "side": "off",
+      "source": "Patriots (Vrabel), Nov 27: OUT Week 12"
+    },
+    {
+      "team": "NE",
+      "name": "Carlton Davis",
+      "side": "def",
+      "source": "Patriots (Vrabel), Nov 27: OUT Week 12"
+    },
+    {
+      "team": "JAX",
+      "name": "Parker Washington",
+      "side": "off",
+      "source": "Yahoo Sports, Nov 27: OUT Week 12 (shoulder)"
+    },
+    {
+      "team": "SEA",
+      "name": "Abraham Lucas",
+      "side": "off",
+      "source": "NFL.com, Nov 26: ruled out vs SF (ankle)"
     }
   ],
   "traded": [

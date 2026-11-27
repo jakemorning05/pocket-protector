@@ -1,6 +1,6 @@
 {
  "week": 12,
- "asof": "Fri, Nov 27, 8:33 AM ET",
+ "asof": "Fri, Nov 27, 1:47 PM ET",
  "games": [
   {
    "id": "2026_12_DEN_PIT",
@@ -284,7 +284,7 @@
      "stat": "pass_yds",
      "line": 182.5,
      "proj": 198.5,
-     "p_over": 0.659,
+     "p_over": 0.657,
      "conf": 0.579,
      "side": "Over",
      "games": 10
@@ -337,28 +337,16 @@
      "games": 6
     },
     {
-     "player": "Justin Herbert",
-     "team": "LAC",
-     "pos": "QB",
-     "stat": "pass_yds",
-     "line": 192.5,
-     "proj": 202.1,
-     "p_over": 0.619,
-     "conf": 0.56,
-     "side": "Over",
-     "games": 10
-    },
-    {
-     "player": "Tre Harris",
-     "team": "LAC",
-     "pos": "WR",
+     "player": "Hunter Henry",
+     "team": "NE",
+     "pos": "TE",
      "stat": "rec_yds",
-     "line": 31.5,
-     "proj": 44.8,
-     "p_over": 0.602,
-     "conf": 0.551,
-     "side": "Over",
-     "games": 9
+     "line": 37.5,
+     "proj": 31.4,
+     "p_over": 0.38,
+     "conf": 0.56,
+     "side": "Under",
+     "games": 10
     }
    ],
    "td": [
@@ -366,13 +354,13 @@
      "player": "Omarion Hampton",
      "team": "LAC",
      "pos": "RB",
-     "p": 0.364
+     "p": 0.359
     },
     {
      "player": "Ladd McConkey",
      "team": "LAC",
      "pos": "WR",
-     "p": 0.281
+     "p": 0.221
     }
    ]
   },

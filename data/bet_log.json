@@ -31,7 +31,7 @@
   "close": 45.5,
   "clv": 0.0,
   "result": "loss",
-  "conf": 0.485
+  "conf": 0.492
  },
  {
   "game": "2026_10_WAS_NYG",
@@ -65,7 +65,7 @@
   "close": 40.5,
   "clv": -2.0,
   "result": "win",
-  "conf": 0.516
+  "conf": 0.507
  },
  {
   "game": "2026_10_NE_DET",
@@ -99,7 +99,7 @@
   "close": 50.5,
   "clv": -1.0,
   "result": "loss",
-  "conf": 0.483
+  "conf": 0.491
  },
  {
   "game": "2026_10_BUF_NYJ",
@@ -133,7 +133,7 @@
   "close": 50.5,
   "clv": 0.0,
   "result": "loss",
-  "conf": 0.476
+  "conf": 0.488
  },
  {
   "game": "2026_10_CAR_NO",
@@ -167,7 +167,7 @@
   "close": 48.5,
   "clv": 1.0,
   "result": "loss",
-  "conf": 0.486
+  "conf": 0.493
  },
  {
   "game": "2026_10_HOU_CLE",
@@ -201,7 +201,7 @@
   "close": 40.5,
   "clv": 1.0,
   "result": "win",
-  "conf": 0.502
+  "conf": 0.501
  },
  {
   "game": "2026_10_JAX_TEN",
@@ -235,7 +235,7 @@
   "close": 45.5,
   "clv": -1.0,
   "result": "win",
-  "conf": 0.477
+  "conf": 0.488
  },
  {
   "game": "2026_10_KC_ATL",
@@ -269,7 +269,7 @@
   "close": 47.5,
   "clv": 2.0,
   "result": "win",
-  "conf": 0.483
+  "conf": 0.491
  },
  {
   "game": "2026_10_MIA_IND",
@@ -303,7 +303,7 @@
   "close": 37.5,
   "clv": -3.0,
   "result": "win",
-  "conf": 0.531
+  "conf": 0.514
  },
  {
   "game": "2026_10_MIN_GB",
@@ -337,7 +337,7 @@
   "close": 42.5,
   "clv": 0.0,
   "result": "win",
-  "conf": 0.483
+  "conf": 0.491
  },
  {
   "game": "2026_10_LA_ARI",
@@ -371,7 +371,7 @@
   "close": 38.5,
   "clv": -6.0,
   "result": "loss",
-  "conf": 0.495
+  "conf": 0.497
  },
  {
   "game": "2026_10_SEA_LV",
@@ -405,7 +405,7 @@
   "close": 40.5,
   "clv": -3.0,
   "result": "loss",
-  "conf": 0.485
+  "conf": 0.492
  },
  {
   "game": "2026_10_SF_DAL",
@@ -439,7 +439,7 @@
   "close": 55.5,
   "clv": 0.0,
   "result": "loss",
-  "conf": 0.489
+  "conf": 0.494
  },
  {
   "game": "2026_10_PIT_CIN",
@@ -473,7 +473,7 @@
   "close": 49.5,
   "clv": 1.0,
   "result": "win",
-  "conf": 0.487
+  "conf": 0.493
  },
  {
   "game": "2026_10_LAC_BAL",
@@ -507,7 +507,7 @@
   "close": 39.5,
   "clv": 1.0,
   "result": "win",
-  "conf": 0.53
+  "conf": 0.514
  },
  {
   "game": "2026_11_IND_HOU",
@@ -541,7 +541,7 @@
   "close": 44.5,
   "clv": 1.0,
   "result": "loss",
-  "conf": 0.489
+  "conf": 0.494
  },
  {
   "game": "2026_11_ARI_KC",
@@ -575,7 +575,7 @@
   "close": 40.5,
   "clv": -1.0,
   "result": "loss",
-  "conf": 0.522
+  "conf": 0.51
  },
  {
   "game": "2026_11_BAL_CAR",
@@ -609,7 +609,7 @@
   "close": 44.5,
   "clv": 1.0,
   "result": "win",
-  "conf": 0.505
+  "conf": 0.502
  },
  {
   "game": "2026_11_JAX_NYG",
@@ -643,7 +643,7 @@
   "close": 45.5,
   "clv": 0.0,
   "result": "loss",
-  "conf": 0.478
+  "conf": 0.489
  },
  {
   "game": "2026_11_MIA_BUF",
@@ -677,7 +677,7 @@
   "close": 45.5,
   "clv": -2.0,
   "result": "loss",
-  "conf": 0.5
+  "conf": 0.499
  },
  {
   "game": "2026_11_NO_CHI",
@@ -711,7 +711,7 @@
   "close": 47.5,
   "clv": -2.0,
   "result": "loss",
-  "conf": 0.478
+  "conf": 0.489
  },
  {
   "game": "2026_11_TB_DET",
@@ -745,7 +745,7 @@
   "close": 48.5,
   "clv": 0.0,
   "result": "win",
-  "conf": 0.491
+  "conf": 0.495
  },
  {
   "game": "2026_11_TEN_DAL",
@@ -779,7 +779,7 @@
   "close": 55.5,
   "clv": 6.0,
   "result": "win",
-  "conf": 0.479
+  "conf": 0.489
  },
  {
   "game": "2026_11_NYJ_LAC",
@@ -813,7 +813,7 @@
   "close": 43.5,
   "clv": 0.0,
   "result": "win",
-  "conf": 0.483
+  "conf": 0.491
  },
  {
   "game": "2026_11_PIT_PHI",
@@ -847,7 +847,7 @@
   "close": 37.5,
   "clv": -1.0,
   "result": "loss",
-  "conf": 0.491
+  "conf": 0.495
  },
  {
   "game": "2026_11_CIN_WAS",
@@ -881,7 +881,7 @@
   "close": 54.5,
   "clv": 4.0,
   "result": "loss",
-  "conf": 0.482
+  "conf": 0.491
  },
  {
   "game": "2026_11_LV_DEN",
@@ -915,7 +915,7 @@
   "close": 41.5,
   "clv": 0.0,
   "result": "win",
-  "conf": 0.502
+  "conf": 0.501
  },
  {
   "game": "2026_11_MIN_SF",
@@ -949,7 +949,7 @@
   "close": 44.5,
   "clv": 1.0,
   "result": "win",
-  "conf": 0.48
+  "conf": 0.49
  },
  {
   "game": "2026_12_GB_LA",
@@ -983,7 +983,7 @@
   "close": 43.5,
   "clv": -2.0,
   "result": "loss",
-  "conf": 0.495
+  "conf": 0.497
  },
  {
   "game": "2026_12_CHI_DET",
@@ -1017,7 +1017,7 @@
   "close": 56.5,
   "clv": -1.0,
   "result": "loss",
-  "conf": 0.478
+  "conf": 0.489
  },
  {
   "game": "2026_12_PHI_DAL",
@@ -1051,7 +1051,7 @@
   "close": 49.5,
   "clv": 2.0,
   "result": "win",
-  "conf": 0.478
+  "conf": 0.489
  },
  {
   "game": "2026_12_KC_BUF",
@@ -1085,7 +1085,7 @@
   "close": 46.5,
   "clv": -4.0,
   "result": "loss",
-  "conf": 0.493
+  "conf": 0.496
  },
  {
   "game": "2026_12_DEN_PIT",
@@ -1119,7 +1119,7 @@
   "close": null,
   "clv": null,
   "result": null,
-  "conf": 0.496
+  "conf": 0.498
  },
  {
   "game": "2026_12_ATL_MIN",
@@ -1153,7 +1153,7 @@
   "close": null,
   "clv": null,
   "result": null,
-  "conf": 0.48
+  "conf": 0.49
  },
  {
   "game": "2026_12_BAL_HOU",
@@ -1187,7 +1187,7 @@
   "close": null,
   "clv": null,
   "result": null,
-  "conf": 0.474
+  "conf": 0.487
  },
  {
   "game": "2026_12_NO_CIN",
@@ -1221,7 +1221,7 @@
   "close": null,
   "clv": null,
   "result": null,
-  "conf": 0.485
+  "conf": 0.492
  },
  {
   "game": "2026_12_NYG_IND",
@@ -1255,7 +1255,7 @@
   "close": null,
   "clv": null,
   "result": null,
-  "conf": 0.488
+  "conf": 0.494
  },
  {
   "game": "2026_12_NYJ_MIA",
@@ -1289,7 +1289,7 @@
   "close": null,
   "clv": null,
   "result": null,
-  "conf": 0.494
+  "conf": 0.497
  },
  {
   "game": "2026_12_TEN_JAX",
@@ -1323,7 +1323,7 @@
   "close": null,
   "clv": null,
   "result": null,
-  "conf": 0.481
+  "conf": 0.49
  },
  {
   "game": "2026_12_NE_LAC",
@@ -1357,7 +1357,7 @@
   "close": null,
   "clv": null,
   "result": null,
-  "conf": 0.536
+  "conf": 0.517
  },
  {
   "game": "2026_12_SEA_SF",
@@ -1391,7 +1391,7 @@
   "close": null,
   "clv": null,
   "result": null,
-  "conf": 0.476
+  "conf": 0.488
  },
  {
   "game": "2026_12_WAS_ARI",
@@ -1425,7 +1425,7 @@
   "close": null,
   "clv": null,
   "result": null,
-  "conf": 0.521
+  "conf": 0.509
  },
  {
   "game": "2026_12_LV_CLE",
@@ -1493,7 +1493,7 @@
   "close": null,
   "clv": null,
   "result": null,
-  "conf": 0.493
+  "conf": 0.496
  },
  {
   "game": "2026_13_KC_LA",
@@ -1527,7 +1527,7 @@
   "close": null,
   "clv": null,
   "result": null,
-  "conf": 0.497
+  "conf": 0.498
  },
  {
   "game": "2026_13_CIN_CLE",
@@ -1561,7 +1561,7 @@
   "close": null,
   "clv": null,
   "result": null,
-  "conf": 0.485
+  "conf": 0.492
  },
  {
   "game": "2026_13_DET_ATL",
@@ -1595,7 +1595,7 @@
   "close": null,
   "clv": null,
   "result": null,
-  "conf": 0.49
+  "conf": 0.495
  },
  {
   "game": "2026_13_GB_NO",
@@ -1629,7 +1629,7 @@
   "close": null,
   "clv": null,
   "result": null,
-  "conf": 0.477
+  "conf": 0.488
  },
  {
   "game": "2026_13_JAX_CHI",
@@ -1663,7 +1663,7 @@
   "close": null,
   "clv": null,
   "result": null,
-  "conf": 0.477
+  "conf": 0.488
  },
  {
   "game": "2026_13_LAC_TB",
@@ -1697,7 +1697,7 @@
   "close": null,
   "clv": null,
   "result": null,
-  "conf": 0.505
+  "conf": 0.502
  },
  {
   "game": "2026_13_SF_NYG",
@@ -1731,7 +1731,7 @@
   "close": null,
   "clv": null,
   "result": null,
-  "conf": 0.486
+  "conf": 0.493
  },
  {
   "game": "2026_13_WAS_TEN",
@@ -1765,7 +1765,7 @@
   "close": null,
   "clv": null,
   "result": null,
-  "conf": 0.473
+  "conf": 0.486
  },
  {
   "game": "2026_13_MIA_DEN",
@@ -1799,7 +1799,7 @@
   "close": null,
   "clv": null,
   "result": null,
-  "conf": 0.498
+  "conf": 0.499
  },
  {
   "game": "2026_13_PHI_ARI",
@@ -1833,7 +1833,7 @@
   "close": null,
   "clv": null,
   "result": null,
-  "conf": 0.515
+  "conf": 0.507
  },
  {
   "game": "2026_13_BUF_NE",
@@ -1867,7 +1867,7 @@
   "close": null,
   "clv": null,
   "result": null,
-  "conf": 0.542
+  "conf": 0.52
  },
  {
   "game": "2026_13_CAR_MIN",
@@ -1901,7 +1901,7 @@
   "close": null,
   "clv": null,
   "result": null,
-  "conf": 0.479
+  "conf": 0.489
  },
  {
   "game": "2026_13_HOU_PIT",
@@ -1935,7 +1935,7 @@
   "close": null,
   "clv": null,
   "result": null,
-  "conf": 0.485
+  "conf": 0.492
  },
  {
   "game": "2026_13_DAL_SEA",
@@ -1969,6 +1969,6 @@
   "close": null,
   "clv": null,
   "result": null,
-  "conf": 0.476
+  "conf": 0.488
  }
 ]

@@ -1,5 +1,5 @@
 {
- "asof": "Fri, Nov 27, 12:40 AM ET",
+ "asof": "Fri, Nov 27, 1:42 PM ET",
  "outs": [
   "Josh Jacobs",
   "Puka Nacua",
@@ -9,7 +9,7 @@
   "Rhamondre Stevenson"
  ],
  "flags": {
-  "Justin Herbert": "Concussion protocol; missed practice Wednesday and Thursday, trending toward sitting Sunday",
+  "Justin Herbert": "Concussion protocol, missed Wednesday and Thursday; the model assumes DJ Uiagalelei starts Week 12",
   "Carson Wentz": "Now Minnesota\u2019s backup after the Kirk Cousins trade",
   "Keenan Allen": "Traded to San Francisco Nov 10; projections use his Colts role in the 49ers offense, so treat them as rough for now",
   "Fernando Mendoza": "Rookie takes over in Las Vegas after the Cousins trade",
@@ -19,19 +19,69 @@
   "Alvin Kamara": "Fewer carries with Travis Etienne back",
   "Travis Etienne": "Activated from IR; first game since Week 3",
   "Kyle McCord": "Starts at QB through Week 13 while Malik Willis is on IR",
-  "Derrick Henry": "Back in the concussion protocol after limited practice Wednesday; Jesse Minter expects him to play Sunday at Houston",
+  "Derrick Henry": "Full practice Thursday; must clear the concussion protocol, expected to play",
   "Brock Purdy": "Ankle; missed practice Wednesday and Thursday, day to day",
-  "Sam Darnold": "Back at practice; on track to start Week 12",
-  "Carson Beck": "No practice Wednesday (back)",
-  "Josh Johnson": "Expected to start again in Week 12 with Beck hurt",
+  "Sam Darnold": "Full practices Wednesday and Thursday; set to start",
+  "Josh Johnson": "Starts Week 12 with Carson Beck ruled out",
   "Emmett Johnson": "Starts again with Walker out; 100+ rushing yards in each of the last two games",
   "Mason Rudolph": "Starts for Pittsburgh after the Steelers released Aaron Rodgers",
   "Christian Watson": "Concussion in Week 12; 11 days until Week 13 at New Orleans",
   "Tyler Higbee": "Chest injury in Week 12; no Week 13 status yet",
   "Woody Marks": "Full practice Wednesday; still has to clear the concussion protocol",
-  "Brock Bowers": "Limited Wednesday (ankle); Raiders optimistic he plays Sunday"
+  "Brock Bowers": "Limited Wednesday (ankle); Raiders optimistic he plays Sunday",
+  "Colston Loveland": "Headed to IR (knee)",
+  "DJ Uiagalelei": "Expected to make his first start with Herbert in the concussion protocol"
  },
  "items": [
+  {
+   "team": "ARI",
+   "tag": "QB",
+   "text": "Carson Beck (back) is out Sunday against Washington, so Josh Johnson starts again. The model already had Johnson.",
+   "src": "Yahoo Sports injury tracker, Nov 27",
+   "url": "https://sports.yahoo.com/fantasy/article/nfl-injury-tracker-week-12-latest-news-fantasy-implications-as-brock-purdy-ankle-misses-practice-again-justin-herbert-concussion-remains-in-protocol-parker-washington-shoulder-ruled-out-153821312.html"
+  },
+  {
+   "team": "NE",
+   "tag": "Injury",
+   "text": "Mike Vrabel ruled out Drake Maye (fractured fibula, no surgery needed), WR A.J. Brown and CB Carlton Davis for Sunday at the Chargers. Tommy DeVito starts.",
+   "src": "Patriots via NFLTradeRumors, Nov 27",
+   "url": "https://nfltraderumors.co/patriots-rule-out-three-week-12-including-qb-drake-maye/"
+  },
+  {
+   "team": "JAX",
+   "tag": "Injury",
+   "text": "WR Parker Washington is out for Week 12 after hurting his shoulder in practice.",
+   "src": "Yahoo Sports, Nov 27",
+   "url": "https://sports.yahoo.com/nfl/live/nfl-news-injury-updates-week-12-020946874.html"
+  },
+  {
+   "team": "SEA",
+   "tag": "Injury",
+   "text": "Sam Darnold practiced fully again Thursday and is set to start at San Francisco. RT Abraham Lucas (ankle) is ruled out; Jaxon Smith-Njigba (ankle) was limited.",
+   "src": "NFL.com news roundup, Nov 26",
+   "url": "https://nfl.com/news/nfl-news-roundup-latest-league-updates-from-thursday-nov-26"
+  },
+  {
+   "team": "BAL",
+   "tag": "Injury",
+   "text": "Derrick Henry practiced fully Thursday after a limited Wednesday; he still has to clear the concussion protocol, and Baltimore expects him to play at Houston. Woody Marks practiced fully both days for the Texans.",
+   "src": "Houston Texans injury report, Nov 26",
+   "url": "https://www.houstontexans.com/news/week-12-injury-report-texans-vs-ravens"
+  },
+  {
+   "team": "CHI",
+   "tag": "Injury",
+   "text": "TE Colston Loveland is headed to injured reserve with a knee injury from Thanksgiving.",
+   "src": "Yahoo Sports, Nov 27",
+   "url": "https://sports.yahoo.com/nfl/live/nfl-news-injury-updates-week-12-020946874.html"
+  },
+  {
+   "team": "PIT",
+   "tag": "Roster",
+   "text": "Aaron Rodgers cleared waivers Thursday and is a free agent.",
+   "src": "Yahoo Sports, Nov 26",
+   "url": "https://sports.yahoo.com/nfl/live/nfl-news-injury-updates-week-12-020946874.html"
+  },
   {
    "team": "PHI",
    "tag": "Result",
@@ -49,7 +99,7 @@
   {
    "team": "LAC",
    "tag": "QB",
-   "text": "Justin Herbert (concussion) missed practice again Thursday and is trending toward sitting Sunday against New England; the Chargers promoted Jake Browning to back up DJ Uiagalelei. The model still has Herbert and will switch if he's ruled out Friday.",
+   "text": "Justin Herbert (concussion) missed practice again Thursday and is trending toward sitting Sunday against New England; the Chargers promoted Jake Browning to back up DJ Uiagalelei. The model now assumes Uiagalelei starts and will switch back if Herbert is cleared.",
    "src": "Chargers.com and NBC Sports, Nov 26",
    "url": "https://www.nbcsports.com/fantasy/football/player-news/2026-11-26/justin-herbert-concussion-does-not-practice"
   },
@@ -959,6 +1009,14 @@
    "snap": 1.0
   },
   {
+   "team": "JAX",
+   "name": "Parker Washington",
+   "pos": "WR",
+   "status": "Out",
+   "injury": "Shoulder (late news)",
+   "snap": 0.82
+  },
+  {
    "team": "KC",
    "name": "Kenneth Walker III",
    "pos": "RB",
@@ -1032,6 +1090,22 @@
   },
   {
    "team": "NE",
+   "name": "Carlton Davis",
+   "pos": "CB",
+   "status": "Out",
+   "injury": "Vrabel (late news)",
+   "snap": 1.0
+  },
+  {
+   "team": "NE",
+   "name": "A.J. Brown",
+   "pos": "WR",
+   "status": "Out",
+   "injury": "Vrabel (late news)",
+   "snap": 0.91
+  },
+  {
+   "team": "NE",
    "name": "Ben Brown",
    "pos": "C",
    "status": "Out",
@@ -1077,6 +1151,14 @@
    "status": "Out",
    "injury": "OUT for Friday (late news)",
    "snap": 0.67
+  },
+  {
+   "team": "SEA",
+   "name": "Abraham Lucas",
+   "pos": "T",
+   "status": "Out",
+   "injury": "Ankle (late news)",
+   "snap": 1.0
   },
   {
    "team": "SF",
@@ -1147,17 +1229,17 @@
    "pos": "RB",
    "game": "2026_12_BAL_HOU",
    "status": "Protocol",
-   "note": "Back in the concussion protocol, limited Wednesday; coach expects him to play",
-   "src": "AP, Nov 25"
+   "note": "Limited Wednesday, full Thursday; still has to clear the concussion protocol. Baltimore expects him to play",
+   "src": "Texans injury report, Nov 26"
   },
   {
    "player": "Woody Marks",
    "team": "HOU",
    "pos": "RB",
    "game": "2026_12_BAL_HOU",
-   "status": "Protocol",
-   "note": "Full practice Wednesday; still has to clear the concussion protocol",
-   "src": "CBS Sports, Nov 25"
+   "status": "Full practice",
+   "note": "Full practices Wednesday and Thursday; has to clear the concussion protocol",
+   "src": "Texans injury report, Nov 26"
   },
   {
    "player": "Danielle Hunter",
@@ -1174,8 +1256,8 @@
    "pos": "QB",
    "game": "2026_12_NE_LAC",
    "status": "DNP Wed\u2013Thu",
-   "note": "Concussion protocol; missed both practices. DJ Uiagalelei is likely to start, with Jake Browning promoted as his backup. The model still has Herbert until his status is official",
-   "src": "Chargers.com and NBC Sports, Nov 26"
+   "note": "Concussion protocol; missed practice Wednesday and Thursday, and the Chargers promoted Jake Browning. The model now assumes DJ Uiagalelei starts and will switch back if Herbert is cleared",
+   "src": "Chargers.com, NBC Sports and SI, Nov 26-27"
   },
   {
    "player": "Brock Purdy",
@@ -1192,17 +1274,8 @@
    "pos": "QB",
    "game": "2026_12_SEA_SF",
    "status": "Expected to start",
-   "note": "Back at practice after missing two games",
-   "src": "Kicks and Grips, Nov 25"
-  },
-  {
-   "player": "Carson Beck",
-   "team": "ARI",
-   "pos": "QB",
-   "game": "2026_12_WAS_ARI",
-   "status": "DNP Wed",
-   "note": "Back; Josh Johnson is expected to start again",
-   "src": "Kicks and Grips, Nov 25"
+   "note": "Full practices Wednesday and Thursday; set to start",
+   "src": "NFL.com, Nov 26"
   },
   {
    "player": "Brock Bowers",
@@ -1210,8 +1283,17 @@
    "pos": "TE",
    "game": "2026_12_LV_CLE",
    "status": "Limited",
-   "note": "Ankle; Raiders optimistic he plays, may need a full practice by Friday",
-   "src": "CBS Sports, Nov 25"
+   "note": "Ankle; limited Wednesday and Thursday, Raiders optimistic he plays",
+   "src": "Yahoo Sports, Nov 27"
+  },
+  {
+   "player": "Jaxon Smith-Njigba",
+   "team": "SEA",
+   "pos": "WR",
+   "game": "2026_12_SEA_SF",
+   "status": "Limited",
+   "note": "Ankle; limited Thursday",
+   "src": "NFL.com, Nov 26"
   }
  ]
 }

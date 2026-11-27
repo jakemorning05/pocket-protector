@@ -40,7 +40,9 @@ def log(stamp):
             entries.append({'game': g['id'], 'wk': g['wk'], 'a': g['a'], 'h': g['h'], 'kind': 'spread', 'side': side, 'line': L,
                             'model': round(m, 2), 'p': round(p, 3), 'ev': round(p * 100 / 110 - (1 - p), 3), 'logged': stamp,
                             'close': None, 'clv': None, 'result': None})
-        if g['mk_total'] is not None and (g['id'], 'total') not in have:
+        # skip totals when a starting QB has changed a lot from the team's season numbers: even with the QB term the
+        # model's totals went 49% against the line in those games (2017-25 held out)
+        if g['mk_total'] is not None and (g['id'], 'total') not in have and abs(g.get('qd') or 0) <= 0.1:
             T, t = g['mk_total'], g['tot']
             p_over = 1 - norm.cdf((T - t) / TOTAL_SD)
             side = 'Over' if t > T else 'Under'
