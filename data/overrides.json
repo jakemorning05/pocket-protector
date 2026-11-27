@@ -328,6 +328,30 @@
       "name": "Colton McKivitz",
       "side": "off",
       "source": "CBS Sports / NBC Sports, Nov 25: IR, fractured and dislocated ankle, expected out for the season"
+    },
+    {
+      "team": "PIT",
+      "name": "Alex Highsmith",
+      "side": "def",
+      "source": "Yahoo Sports / Steelers final injury report, Nov 26: OUT for Friday"
+    },
+    {
+      "team": "PIT",
+      "name": "Ben Skowronek",
+      "side": "off",
+      "source": "Yahoo Sports / Steelers final injury report, Nov 26: OUT for Friday"
+    },
+    {
+      "team": "PIT",
+      "name": "Gennings Dunker",
+      "side": "off",
+      "source": "Yahoo Sports / Steelers final injury report, Nov 26: OUT for Friday"
+    },
+    {
+      "team": "DEN",
+      "name": "Caleb Lohner",
+      "side": "off",
+      "source": "Yahoo Sports, Nov 26: OUT for Friday"
     }
   ],
   "traded": [

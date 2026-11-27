@@ -241,7 +241,7 @@ const jumpNav = (items) => '<nav class="jump" aria-label="On this page"><span cl
 function wireJump(el) { el.querySelectorAll('[data-jump]').forEach((b) => b.onclick = () => { const t = document.getElementById(b.dataset.jump); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }); }
 // players to watch: data/news.json "watch", each tied to a game id, shown only until that game is final
 const watchFor = (pred) => (NEWS.watch || []).map((w) => ({ ...w, g: gameById(w.game) })).filter((w) => w.g && !w.g.done && (!pred || pred(w))).sort((x, y) => gameKey(x.g).localeCompare(gameKey(y.g)));
-const watchChip = (st) => '<span class="wchip w-' + st.toLowerCase().replace(/[^a-z]/g, '') + '">' + esc(st) + '</span>';
+const watchChip = (st) => '<span class="wchip ' + (/protocol|dnp|doubtful|out/i.test(st) ? 'w-bad' : /questionable|limited/i.test(st) ? 'w-warn' : /expected|starter|cleared|full/i.test(st) ? 'w-good' : '') + '">' + esc(st) + '</span>';
 const SITE_ABS = '__SITE__';
 function pickText(g) {
   const pH = g.p, c = Math.max(pH, 1 - pH), pick = pH >= 0.5 ? g.h : g.a;

@@ -1031,9 +1031,9 @@
   "p": 0.507,
   "ev": -0.032,
   "logged": "Nov 19, 4:48 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null,
+  "close": 8.5,
+  "clv": 0.0,
+  "result": "loss",
   "conf": 0.491
  },
  {
@@ -1048,9 +1048,9 @@
   "p": 0.521,
   "ev": -0.006,
   "logged": "Nov 19, 4:48 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null,
+  "close": 49.5,
+  "clv": 2.0,
+  "result": "win",
   "conf": 0.478
  },
  {
@@ -1065,9 +1065,9 @@
   "p": 0.509,
   "ev": -0.029,
   "logged": "Nov 19, 4:48 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null,
+  "close": 3.0,
+  "clv": 0.0,
+  "result": "push",
   "conf": 0.491
  },
  {
@@ -1082,9 +1082,9 @@
   "p": 0.573,
   "ev": 0.095,
   "logged": "Nov 19, 4:48 PM ET",
-  "close": null,
-  "clv": null,
-  "result": null,
+  "close": 46.5,
+  "clv": -4.0,
+  "result": "loss",
   "conf": 0.493
  },
  {
