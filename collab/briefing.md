@@ -17,7 +17,7 @@
 | NE @ LAC | 2026-11-29 16:05 | Tommy DeVito / Justin Herbert | 62% | 45% | +3.9 | +2.5 | 47.5 | 35.5 |
 | SEA @ SF | 2026-11-29 16:25 | Sam Darnold / Brock Purdy | 56% | 58% | +1.9 | -3.0 | 47.1 | 43.5 |
 | WAS @ ARI | 2026-11-29 16:25 | Jayden Daniels / Josh Johnson | 34% | 25% | -5.2 | +6.5 | 46.9 | 41.5 |
-| LV @ CLE | 2026-11-29 20:20 | Fernando Mendoza / Deshaun Watson | 63% | 68% | +4.4 | -4.5 | 43.8 | 40.5 |
+| LV @ CLE | 2026-11-29 20:20 | Fernando Mendoza / Deshaun Watson | 63% | 68% | +4.4 | -4.5 | 43.8 | 39.5 |
 | CAR @ TB | 2026-11-30 20:15 | Bryce Young / Baker Mayfield | 62% | 59% | +3.9 | -3.0 | 46.4 | 43.5 |
 
 ## Logged Kalshi props for those games (model chance of YES vs. price)
