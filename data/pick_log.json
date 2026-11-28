@@ -951,7 +951,10 @@
 "mk_total": 37.5,
 "first": "Nov 9, 6:23 PM ET",
 "stamp": "Nov 27, 1:47 PM ET",
-"kick": "2026-11-27T15:00:00-05:00"
+"kick": "2026-11-27T15:00:00-05:00",
+"hs": 27,
+"as": 5,
+"won": false
 },
 "2026_12_ATL_MIN": {
 "wk": 12,
@@ -976,7 +979,7 @@
 "mk_spread": 7.0,
 "mk_total": 41.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-11-29T13:00:00-05:00"
 },
 "2026_12_BAL_HOU": {
@@ -1002,7 +1005,7 @@
 "mk_spread": 6.5,
 "mk_total": 47.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-11-29T13:00:00-05:00"
 },
 "2026_12_LV_CLE": {
@@ -1028,7 +1031,7 @@
 "mk_spread": 4.5,
 "mk_total": 39.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-11-29T20:20:00-05:00"
 },
 "2026_12_NO_CIN": {
@@ -1054,7 +1057,7 @@
 "mk_spread": 9.5,
 "mk_total": 48.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-11-29T13:00:00-05:00"
 },
 "2026_12_NYG_IND": {
@@ -1080,7 +1083,7 @@
 "mk_spread": -5.5,
 "mk_total": 41.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-11-29T13:00:00-05:00"
 },
 "2026_12_NYJ_MIA": {
@@ -1106,7 +1109,7 @@
 "mk_spread": -5.5,
 "mk_total": 39.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-11-29T13:00:00-05:00"
 },
 "2026_12_TEN_JAX": {
@@ -1132,7 +1135,7 @@
 "mk_spread": 14.0,
 "mk_total": 48.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-11-29T13:00:00-05:00"
 },
 "2026_12_SEA_SF": {
@@ -1155,10 +1158,10 @@
 "Past betting lines": -0.37
 },
 "pick": "SF",
-"mk_spread": 2.5,
-"mk_total": 43.5,
+"mk_spread": -1.5,
+"mk_total": 42.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-11-29T16:25:00-05:00"
 },
 "2026_12_WAS_ARI": {
@@ -1184,7 +1187,7 @@
 "mk_spread": -6.5,
 "mk_total": 41.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-11-29T16:25:00-05:00"
 },
 "2026_12_NE_LAC": {
@@ -1207,10 +1210,10 @@
 "Past betting lines": -1.55
 },
 "pick": "LAC",
-"mk_spread": -2.5,
-"mk_total": 35.5,
+"mk_spread": -3.0,
+"mk_total": 34.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-11-29T16:05:00-05:00"
 },
 "2026_12_CAR_TB": {
@@ -1236,15 +1239,15 @@
 "mk_spread": 3.0,
 "mk_total": 43.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-11-30T20:15:00-05:00"
 },
 "2026_13_KC_LA": {
 "wk": 13,
 "a": "KC",
 "h": "LA",
-"p": 0.5219,
-"m": 0.75,
+"p": 0.5214,
+"m": 0.74,
 "tot": 48.0,
 "c": {
 "Home field": 2.63,
@@ -1256,13 +1259,13 @@
 "Rest & travel": -1.02,
 "Division game": 0.0,
 "Injuries": 0.06,
-"Past betting lines": -0.1
+"Past betting lines": -0.11
 },
 "pick": "LA",
 "mk_spread": 1.5,
 "mk_total": 44.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-03T20:15:00-05:00"
 },
 "2026_13_CIN_CLE": {
@@ -1271,7 +1274,7 @@
 "h": "CLE",
 "p": 0.3603,
 "m": -4.91,
-"tot": 48.4,
+"tot": 48.5,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -0.69,
@@ -1288,15 +1291,15 @@
 "mk_spread": -6.0,
 "mk_total": 46.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-06T13:00:00-05:00"
 },
 "2026_13_DET_ATL": {
 "wk": 13,
 "a": "DET",
 "h": "ATL",
-"p": 0.3931,
-"m": -3.73,
+"p": 0.3928,
+"m": -3.74,
 "tot": 52.8,
 "c": {
 "Home field": 2.63,
@@ -1308,21 +1311,21 @@
 "Rest & travel": -0.61,
 "Division game": 0.0,
 "Injuries": 0.57,
-"Past betting lines": -1.74
+"Past betting lines": -1.76
 },
 "pick": "DET",
 "mk_spread": -3.5,
 "mk_total": 49.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-06T13:00:00-05:00"
 },
 "2026_13_GB_NO": {
 "wk": 13,
 "a": "GB",
 "h": "NO",
-"p": 0.4209,
-"m": -2.74,
+"p": 0.4201,
+"m": -2.77,
 "tot": 47.1,
 "c": {
 "Home field": 2.63,
@@ -1334,20 +1337,20 @@
 "Rest & travel": -0.83,
 "Division game": 0.0,
 "Injuries": 0.82,
-"Past betting lines": -2.17
+"Past betting lines": -2.19
 },
 "pick": "GB",
 "mk_spread": -4.5,
 "mk_total": 46.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-06T13:00:00-05:00"
 },
 "2026_13_JAX_CHI": {
 "wk": 13,
 "a": "JAX",
 "h": "CHI",
-"p": 0.4842,
+"p": 0.4843,
 "m": -0.54,
 "tot": 51.4,
 "c": {
@@ -1366,15 +1369,15 @@
 "mk_spread": 3.0,
 "mk_total": 49.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-06T13:00:00-05:00"
 },
 "2026_13_LAC_TB": {
 "wk": 13,
 "a": "LAC",
 "h": "TB",
-"p": 0.6296,
-"m": 4.55,
+"p": 0.628,
+"m": 4.49,
 "tot": 45.4,
 "c": {
 "Home field": 2.63,
@@ -1386,21 +1389,21 @@
 "Rest & travel": -2.25,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": 0.03
+"Past betting lines": -0.03
 },
 "pick": "TB",
 "mk_spread": 5.5,
 "mk_total": 40.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-06T13:00:00-05:00"
 },
 "2026_13_SF_NYG": {
 "wk": 13,
 "a": "SF",
 "h": "NYG",
-"p": 0.2305,
-"m": -10.13,
+"p": 0.2299,
+"m": -10.15,
 "tot": 48.6,
 "c": {
 "Home field": 2.63,
@@ -1412,21 +1415,21 @@
 "Rest & travel": -2.08,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": -3.86
+"Past betting lines": -3.88
 },
 "pick": "SF",
-"mk_spread": -6.5,
-"mk_total": 47.5,
+"mk_spread": null,
+"mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-06T13:00:00-05:00"
 },
 "2026_13_WAS_TEN": {
 "wk": 13,
 "a": "WAS",
 "h": "TEN",
-"p": 0.3565,
-"m": -5.05,
+"p": 0.3561,
+"m": -5.07,
 "tot": 47.7,
 "c": {
 "Home field": 2.63,
@@ -1438,22 +1441,22 @@
 "Rest & travel": -0.6,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": -1.89
+"Past betting lines": -1.9
 },
 "pick": "WAS",
 "mk_spread": -4.5,
 "mk_total": 47.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-06T13:00:00-05:00"
 },
 "2026_13_MIA_DEN": {
 "wk": 13,
 "a": "MIA",
 "h": "DEN",
-"p": 0.8921,
-"m": 17.0,
-"tot": 40.3,
+"p": 0.8853,
+"m": 16.51,
+"tot": 40.0,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 5.23,
@@ -1463,22 +1466,22 @@
 "Special teams": 1.09,
 "Rest & travel": -0.85,
 "Division game": 0.0,
-"Injuries": 0.0,
-"Past betting lines": 5.64
+"Injuries": -0.75,
+"Past betting lines": 5.89
 },
 "pick": "DEN",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-06T16:05:00-05:00"
 },
 "2026_13_PHI_ARI": {
 "wk": 13,
 "a": "PHI",
 "h": "ARI",
-"p": 0.4632,
-"m": -1.27,
+"p": 0.465,
+"m": -1.21,
 "tot": 39.1,
 "c": {
 "Home field": 2.63,
@@ -1490,21 +1493,21 @@
 "Rest & travel": -2.41,
 "Division game": 0.0,
 "Injuries": 1.18,
-"Past betting lines": -0.94
+"Past betting lines": -0.88
 },
 "pick": "PHI",
 "mk_spread": -3.0,
 "mk_total": 37.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-06T16:05:00-05:00"
 },
 "2026_13_BUF_NE": {
 "wk": 13,
 "a": "BUF",
 "h": "NE",
-"p": 0.1872,
-"m": -12.2,
+"p": 0.1868,
+"m": -12.22,
 "tot": 48.0,
 "c": {
 "Home field": 2.63,
@@ -1516,21 +1519,21 @@
 "Rest & travel": -0.6,
 "Division game": -0.87,
 "Injuries": 0.0,
-"Past betting lines": -2.1
+"Past betting lines": -2.12
 },
 "pick": "BUF",
 "mk_spread": -12.5,
 "mk_total": 44.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-06T16:25:00-05:00"
 },
 "2026_13_CAR_MIN": {
 "wk": 13,
 "a": "CAR",
 "h": "MIN",
-"p": 0.6595,
-"m": 5.65,
+"p": 0.659,
+"m": 5.63,
 "tot": 44.6,
 "c": {
 "Home field": 2.63,
@@ -1542,22 +1545,22 @@
 "Rest & travel": -0.43,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": 0.61
+"Past betting lines": 0.59
 },
 "pick": "MIN",
 "mk_spread": 5.5,
 "mk_total": 43.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-06T16:25:00-05:00"
 },
 "2026_13_HOU_PIT": {
 "wk": 13,
 "a": "HOU",
 "h": "PIT",
-"p": 0.4213,
-"m": -2.73,
-"tot": 40.9,
+"p": 0.4017,
+"m": -3.42,
+"tot": 40.6,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -3.77,
@@ -1567,23 +1570,23 @@
 "Special teams": 0.61,
 "Rest & travel": -0.25,
 "Division game": 0.0,
-"Injuries": 0.0,
-"Past betting lines": -1.99
+"Injuries": -0.45,
+"Past betting lines": -2.23
 },
 "pick": "HOU",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-06T20:20:00-05:00"
 },
 "2026_13_DAL_SEA": {
 "wk": 13,
 "a": "DAL",
 "h": "SEA",
-"p": 0.6866,
-"m": 6.68,
-"tot": 50.8,
+"p": 0.6878,
+"m": 6.73,
+"tot": 50.7,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -0.55,
@@ -1594,21 +1597,21 @@
 "Rest & travel": -1.81,
 "Division game": 0.0,
 "Injuries": 1.73,
-"Past betting lines": 1.45
+"Past betting lines": 1.5
 },
 "pick": "SEA",
 "mk_spread": 6.0,
 "mk_total": 51.5,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-07T20:15:00-05:00"
 },
 "2026_14_MIN_NE": {
 "wk": 14,
 "a": "MIN",
 "h": "NE",
-"p": 0.5493,
-"m": 1.81,
+"p": 0.5491,
+"m": 1.8,
 "tot": 44.6,
 "c": {
 "Home field": 2.63,
@@ -1620,21 +1623,21 @@
 "Rest & travel": -0.63,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": 0.53
+"Past betting lines": 0.52
 },
 "pick": "NE",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-10T20:15:00-05:00"
 },
 "2026_14_ATL_CLE": {
 "wk": 14,
 "a": "ATL",
 "h": "CLE",
-"p": 0.5234,
-"m": 0.86,
+"p": 0.5222,
+"m": 0.81,
 "tot": 44.9,
 "c": {
 "Home field": 2.63,
@@ -1646,13 +1649,13 @@
 "Rest & travel": -0.03,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": -1.38
+"Past betting lines": -1.43
 },
 "pick": "CLE",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-13T13:00:00-05:00"
 },
 "2026_14_CHI_MIA": {
@@ -1678,16 +1681,16 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-13T13:00:00-05:00"
 },
 "2026_14_DEN_NYJ": {
 "wk": 14,
 "a": "DEN",
 "h": "NYJ",
-"p": 0.3475,
-"m": -5.72,
-"tot": 44.7,
+"p": 0.3413,
+"m": -5.96,
+"tot": 44.3,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -0.53,
@@ -1698,22 +1701,22 @@
 "Rest & travel": -1.04,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": -4.03
+"Past betting lines": -4.27
 },
 "pick": "DEN",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-13T13:00:00-05:00"
 },
 "2026_14_HOU_WAS": {
 "wk": 14,
 "a": "HOU",
 "h": "WAS",
-"p": 0.4584,
-"m": -1.52,
-"tot": 46.0,
+"p": 0.4586,
+"m": -1.51,
+"tot": 45.9,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 0.28,
@@ -1724,22 +1727,22 @@
 "Rest & travel": -0.64,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": -3.79
+"Past betting lines": -3.78
 },
 "pick": "HOU",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-13T13:00:00-05:00"
 },
 "2026_14_IND_PHI": {
 "wk": 14,
 "a": "IND",
 "h": "PHI",
-"p": 0.5427,
-"m": 1.56,
-"tot": 41.1,
+"p": 0.5424,
+"m": 1.55,
+"tot": 41.2,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -1.35,
@@ -1750,21 +1753,21 @@
 "Rest & travel": -0.22,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": -0.18
+"Past betting lines": -0.19
 },
 "pick": "PHI",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-13T13:00:00-05:00"
 },
 "2026_14_NO_CAR": {
 "wk": 14,
 "a": "NO",
 "h": "CAR",
-"p": 0.6273,
-"m": 4.74,
+"p": 0.6284,
+"m": 4.78,
 "tot": 47.3,
 "c": {
 "Home field": 2.63,
@@ -1776,21 +1779,21 @@
 "Rest & travel": -0.61,
 "Division game": -0.87,
 "Injuries": 0.0,
-"Past betting lines": 1.17
+"Past betting lines": 1.21
 },
 "pick": "CAR",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-13T13:00:00-05:00"
 },
 "2026_14_TB_BAL": {
 "wk": 14,
 "a": "TB",
 "h": "BAL",
-"p": 0.4917,
-"m": -0.3,
+"p": 0.4922,
+"m": -0.28,
 "tot": 45.6,
 "c": {
 "Home field": 2.63,
@@ -1802,22 +1805,22 @@
 "Rest & travel": 0.14,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": 1.05
+"Past betting lines": 1.06
 },
 "pick": "TB",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-13T13:00:00-05:00"
 },
 "2026_14_TEN_DET": {
 "wk": 14,
 "a": "TEN",
 "h": "DET",
-"p": 0.8475,
-"m": 14.96,
-"tot": 52.2,
+"p": 0.8477,
+"m": 14.97,
+"tot": 52.1,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 2.12,
@@ -1828,22 +1831,22 @@
 "Rest & travel": -0.6,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": 4.6
+"Past betting lines": 4.62
 },
 "pick": "DET",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-13T13:00:00-05:00"
 },
 "2026_14_LAC_LV": {
 "wk": 14,
 "a": "LAC",
 "h": "LV",
-"p": 0.4712,
-"m": -1.05,
-"tot": 45.9,
+"p": 0.4716,
+"m": -1.04,
+"tot": 46.0,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -1.91,
@@ -1854,22 +1857,22 @@
 "Rest & travel": 0.17,
 "Division game": -0.87,
 "Injuries": 0.0,
-"Past betting lines": -1.25
+"Past betting lines": -1.23
 },
 "pick": "LAC",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-13T16:05:00-05:00"
 },
 "2026_14_KC_CIN": {
 "wk": 14,
 "a": "KC",
 "h": "CIN",
-"p": 0.4662,
-"m": -1.24,
-"tot": 50.7,
+"p": 0.4636,
+"m": -1.33,
+"tot": 50.8,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -0.39,
@@ -1880,13 +1883,13 @@
 "Rest & travel": -1.18,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": -0.42
+"Past betting lines": -0.51
 },
 "pick": "KC",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-13T16:25:00-05:00"
 },
 "2026_14_LA_SF": {
@@ -1912,15 +1915,15 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-13T16:25:00-05:00"
 },
 "2026_14_NYG_SEA": {
 "wk": 14,
 "a": "NYG",
 "h": "SEA",
-"p": 0.7521,
-"m": 9.93,
+"p": 0.753,
+"m": 9.98,
 "tot": 42.5,
 "c": {
 "Home field": 2.63,
@@ -1932,21 +1935,21 @@
 "Rest & travel": -2.04,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": 4.14
+"Past betting lines": 4.18
 },
 "pick": "SEA",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-13T16:25:00-05:00"
 },
 "2026_14_BUF_GB": {
 "wk": 14,
 "a": "BUF",
 "h": "GB",
-"p": 0.3862,
-"m": -4.22,
+"p": 0.3859,
+"m": -4.23,
 "tot": 51.2,
 "c": {
 "Home field": 2.63,
@@ -1958,22 +1961,22 @@
 "Rest & travel": -0.6,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": -2.25
+"Past betting lines": -2.26
 },
 "pick": "BUF",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-13T20:20:00-05:00"
 },
 "2026_14_PIT_JAX": {
 "wk": 14,
 "a": "PIT",
 "h": "JAX",
-"p": 0.7779,
-"m": 11.16,
-"tot": 43.7,
+"p": 0.7829,
+"m": 11.41,
+"tot": 43.4,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 3.76,
@@ -1984,20 +1987,20 @@
 "Rest & travel": -0.04,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": 2.55
+"Past betting lines": 2.8
 },
 "pick": "JAX",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-14T20:15:00-05:00"
 },
 "2026_15_SF_LAC": {
 "wk": 15,
 "a": "SF",
 "h": "LAC",
-"p": 0.3208,
+"p": 0.3209,
 "m": -7.18,
 "tot": 50.1,
 "c": {
@@ -2016,16 +2019,16 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-17T20:15:00-05:00"
 },
 "2026_15_SEA_PHI": {
 "wk": 15,
 "a": "SEA",
 "h": "PHI",
-"p": 0.2538,
-"m": -10.23,
-"tot": 38.8,
+"p": 0.2523,
+"m": -10.3,
+"tot": 38.9,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -2.91,
@@ -2036,21 +2039,21 @@
 "Rest & travel": -1.84,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": -4.06
+"Past betting lines": -4.13
 },
 "pick": "SEA",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-19T17:00:00-05:00"
 },
 "2026_15_CHI_BUF": {
 "wk": 15,
 "a": "CHI",
 "h": "BUF",
-"p": 0.625,
-"m": 4.92,
+"p": 0.6253,
+"m": 4.93,
 "tot": 55.3,
 "c": {
 "Home field": 2.63,
@@ -2062,22 +2065,22 @@
 "Rest & travel": -0.59,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": 1.26
+"Past betting lines": 1.28
 },
 "pick": "BUF",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-19T20:20:00-05:00"
 },
 "2026_15_ATL_WAS": {
 "wk": 15,
 "a": "ATL",
 "h": "WAS",
-"p": 0.578,
-"m": 3.04,
-"tot": 49.2,
+"p": 0.5783,
+"m": 3.05,
+"tot": 49.1,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 0.52,
@@ -2088,22 +2091,22 @@
 "Rest & travel": -0.03,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": -0.98
+"Past betting lines": -0.97
 },
 "pick": "WAS",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-20T13:00:00-05:00"
 },
 "2026_15_BAL_PIT": {
 "wk": 15,
 "a": "BAL",
 "h": "PIT",
-"p": 0.5315,
-"m": 1.22,
-"tot": 42.5,
+"p": 0.5251,
+"m": 0.97,
+"tot": 42.2,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -2.03,
@@ -2114,22 +2117,22 @@
 "Rest & travel": -0.2,
 "Division game": -0.87,
 "Injuries": 0.0,
-"Past betting lines": -0.09
+"Past betting lines": -0.34
 },
 "pick": "PIT",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-20T13:00:00-05:00"
 },
 "2026_15_CIN_CAR": {
 "wk": 15,
 "a": "CIN",
 "h": "CAR",
-"p": 0.449,
-"m": -1.98,
-"tot": 52.1,
+"p": 0.4508,
+"m": -1.91,
+"tot": 52.2,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -1.38,
@@ -2140,21 +2143,21 @@
 "Rest & travel": -0.02,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": -2.2
+"Past betting lines": -2.12
 },
 "pick": "CIN",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-20T13:00:00-05:00"
 },
 "2026_15_CLE_NYG": {
 "wk": 15,
 "a": "CLE",
 "h": "NYG",
-"p": 0.5422,
-"m": 1.64,
+"p": 0.5436,
+"m": 1.69,
 "tot": 42.4,
 "c": {
 "Home field": 2.63,
@@ -2166,22 +2169,22 @@
 "Rest & travel": -0.02,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": 0.21
+"Past betting lines": 0.27
 },
 "pick": "NYG",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-20T13:00:00-05:00"
 },
 "2026_15_IND_TEN": {
 "wk": 15,
 "a": "IND",
 "h": "TEN",
-"p": 0.4529,
-"m": -1.83,
-"tot": 46.1,
+"p": 0.453,
+"m": -1.82,
+"tot": 46.0,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 0.19,
@@ -2198,16 +2201,16 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-20T13:00:00-05:00"
 },
 "2026_15_JAX_HOU": {
 "wk": 15,
 "a": "JAX",
 "h": "HOU",
-"p": 0.4447,
+"p": 0.4446,
 "m": -2.15,
-"tot": 45.2,
+"tot": 45.1,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 0.01,
@@ -2218,20 +2221,20 @@
 "Rest & travel": -0.42,
 "Division game": -0.87,
 "Injuries": 0.0,
-"Past betting lines": -0.58
+"Past betting lines": -0.59
 },
 "pick": "JAX",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-20T13:00:00-05:00"
 },
 "2026_15_MIA_GB": {
 "wk": 15,
 "a": "MIA",
 "h": "GB",
-"p": 0.824,
+"p": 0.8241,
 "m": 14.37,
 "tot": 42.2,
 "c": {
@@ -2244,21 +2247,21 @@
 "Rest & travel": -0.65,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": 4.15
+"Past betting lines": 4.16
 },
 "pick": "GB",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-20T13:00:00-05:00"
 },
 "2026_15_NO_TB": {
 "wk": 15,
 "a": "NO",
 "h": "TB",
-"p": 0.6686,
-"m": 6.73,
+"p": 0.6685,
+"m": 6.72,
 "tot": 45.9,
 "c": {
 "Home field": 2.63,
@@ -2270,21 +2273,21 @@
 "Rest & travel": -0.6,
 "Division game": -0.87,
 "Injuries": 0.0,
-"Past betting lines": 0.74
+"Past betting lines": 0.73
 },
 "pick": "TB",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-20T13:00:00-05:00"
 },
 "2026_15_NYJ_ARI": {
 "wk": 15,
 "a": "NYJ",
 "h": "ARI",
-"p": 0.4089,
-"m": -3.55,
+"p": 0.4096,
+"m": -3.53,
 "tot": 44.2,
 "c": {
 "Home field": 2.63,
@@ -2296,21 +2299,21 @@
 "Rest & travel": -1.64,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": -0.68
+"Past betting lines": -0.65
 },
 "pick": "NYJ",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-20T16:05:00-05:00"
 },
 "2026_15_DAL_LA": {
 "wk": 15,
 "a": "DAL",
 "h": "LA",
-"p": 0.6393,
-"m": 5.51,
+"p": 0.64,
+"m": 5.53,
 "tot": 55.1,
 "c": {
 "Home field": 2.63,
@@ -2322,22 +2325,22 @@
 "Rest & travel": -1.2,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": 1.24
+"Past betting lines": 1.27
 },
 "pick": "LA",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-20T16:25:00-05:00"
 },
 "2026_15_DEN_LV": {
 "wk": 15,
 "a": "DEN",
 "h": "LV",
-"p": 0.2931,
-"m": -8.4,
-"tot": 44.9,
+"p": 0.2885,
+"m": -8.61,
+"tot": 44.7,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -2.18,
@@ -2348,22 +2351,22 @@
 "Rest & travel": -0.6,
 "Division game": -0.87,
 "Injuries": 0.0,
-"Past betting lines": -3.97
+"Past betting lines": -4.18
 },
 "pick": "DEN",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-20T16:25:00-05:00"
 },
 "2026_15_DET_MIN": {
 "wk": 15,
 "a": "DET",
 "h": "MIN",
-"p": 0.4781,
+"p": 0.478,
 "m": -0.85,
-"tot": 48.7,
+"tot": 48.6,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -0.72,
@@ -2380,15 +2383,15 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-20T20:20:00-05:00"
 },
 "2026_15_NE_KC": {
 "wk": 15,
 "a": "NE",
 "h": "KC",
-"p": 0.6377,
-"m": 5.44,
+"p": 0.6389,
+"m": 5.49,
 "tot": 48.0,
 "c": {
 "Home field": 2.63,
@@ -2400,21 +2403,21 @@
 "Rest & travel": -1.22,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": 1.49
+"Past betting lines": 1.54
 },
 "pick": "KC",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-21T20:15:00-05:00"
 },
 "2026_16_HOU_PHI": {
 "wk": 16,
 "a": "HOU",
 "h": "PHI",
-"p": 0.354,
-"m": -6.1,
+"p": 0.3535,
+"m": -6.12,
 "tot": 39.4,
 "c": {
 "Home field": 2.63,
@@ -2426,22 +2429,22 @@
 "Rest & travel": -0.45,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": -3.83
+"Past betting lines": -3.85
 },
 "pick": "HOU",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-24T20:15:00-05:00"
 },
 "2026_16_GB_CHI": {
 "wk": 16,
 "a": "GB",
 "h": "CHI",
-"p": 0.6272,
-"m": 5.29,
-"tot": 50.8,
+"p": 0.6271,
+"m": 5.28,
+"tot": 50.7,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 0.2,
@@ -2452,22 +2455,22 @@
 "Rest & travel": 0.18,
 "Division game": -0.87,
 "Injuries": 0.0,
-"Past betting lines": 0.96
+"Past betting lines": 0.95
 },
 "pick": "CHI",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-25T13:00:00-05:00"
 },
 "2026_16_BUF_DEN": {
 "wk": 16,
 "a": "BUF",
 "h": "DEN",
-"p": 0.4431,
-"m": -2.33,
-"tot": 49.4,
+"p": 0.4491,
+"m": -2.08,
+"tot": 49.1,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -0.85,
@@ -2478,21 +2481,21 @@
 "Rest & travel": -1.41,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": -0.9
+"Past betting lines": -0.65
 },
 "pick": "BUF",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-25T16:30:00-05:00"
 },
 "2026_16_LA_SEA": {
 "wk": 16,
 "a": "LA",
 "h": "SEA",
-"p": 0.5454,
-"m": 1.86,
+"p": 0.5458,
+"m": 1.88,
 "tot": 45.0,
 "c": {
 "Home field": 2.63,
@@ -2504,21 +2507,21 @@
 "Rest & travel": 0.14,
 "Division game": -0.87,
 "Injuries": 0.0,
-"Past betting lines": 0.12
+"Past betting lines": 0.13
 },
 "pick": "SEA",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-25T20:15:00-05:00"
 },
 "2026_16_ARI_NO": {
 "wk": 16,
 "a": "ARI",
 "h": "NO",
-"p": 0.6262,
-"m": 5.24,
+"p": 0.6249,
+"m": 5.18,
 "tot": 44.9,
 "c": {
 "Home field": 2.63,
@@ -2530,22 +2533,22 @@
 "Rest & travel": -1.21,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": 1.24
+"Past betting lines": 1.18
 },
 "pick": "NO",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-27T13:00:00-05:00"
 },
 "2026_16_CAR_PIT": {
 "wk": 16,
 "a": "CAR",
 "h": "PIT",
-"p": 0.5293,
-"m": 1.2,
-"tot": 44.1,
+"p": 0.5225,
+"m": 0.92,
+"tot": 43.8,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -2.91,
@@ -2556,22 +2559,22 @@
 "Rest & travel": -0.02,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": 0.54
+"Past betting lines": 0.26
 },
 "pick": "PIT",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-27T13:00:00-05:00"
 },
 "2026_16_CIN_IND": {
 "wk": 16,
 "a": "CIN",
 "h": "IND",
-"p": 0.3614,
-"m": -5.77,
-"tot": 50.8,
+"p": 0.3622,
+"m": -5.74,
+"tot": 50.9,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -2.34,
@@ -2582,21 +2585,21 @@
 "Rest & travel": -0.01,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": -3.39
+"Past betting lines": -3.36
 },
 "pick": "CIN",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-27T13:00:00-05:00"
 },
 "2026_16_CLE_BAL": {
 "wk": 16,
 "a": "CLE",
 "h": "BAL",
-"p": 0.5634,
-"m": 2.6,
+"p": 0.5645,
+"m": 2.64,
 "tot": 43.3,
 "c": {
 "Home field": 2.63,
@@ -2608,21 +2611,21 @@
 "Rest & travel": -0.02,
 "Division game": -0.87,
 "Injuries": 0.0,
-"Past betting lines": 2.21
+"Past betting lines": 2.26
 },
 "pick": "BAL",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-27T13:00:00-05:00"
 },
 "2026_16_LAC_MIA": {
 "wk": 16,
 "a": "LAC",
 "h": "MIA",
-"p": 0.3016,
-"m": -8.46,
+"p": 0.3009,
+"m": -8.5,
 "tot": 41.5,
 "c": {
 "Home field": 2.63,
@@ -2634,21 +2637,21 @@
 "Rest & travel": -2.64,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": -2.72
+"Past betting lines": -2.75
 },
 "pick": "LAC",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-27T13:00:00-05:00"
 },
 "2026_16_NE_NYJ": {
 "wk": 16,
 "a": "NE",
 "h": "NYJ",
-"p": 0.4011,
-"m": -4.08,
+"p": 0.4015,
+"m": -4.06,
 "tot": 48.3,
 "c": {
 "Home field": 2.63,
@@ -2660,21 +2663,21 @@
 "Rest & travel": 0.18,
 "Division game": -0.87,
 "Injuries": 0.0,
-"Past betting lines": -2.76
+"Past betting lines": -2.74
 },
 "pick": "NE",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-27T13:00:00-05:00"
 },
 "2026_16_TB_ATL": {
 "wk": 16,
 "a": "TB",
 "h": "ATL",
-"p": 0.4867,
-"m": -0.54,
+"p": 0.4871,
+"m": -0.53,
 "tot": 47.3,
 "c": {
 "Home field": 2.63,
@@ -2686,13 +2689,13 @@
 "Rest & travel": -0.02,
 "Division game": -0.87,
 "Injuries": 0.0,
-"Past betting lines": 0.12
+"Past betting lines": 0.13
 },
 "pick": "TB",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-27T13:00:00-05:00"
 },
 "2026_16_WAS_MIN": {
@@ -2718,15 +2721,15 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-27T13:00:00-05:00"
 },
 "2026_16_TEN_LV": {
 "wk": 16,
 "a": "TEN",
 "h": "LV",
-"p": 0.5744,
-"m": 3.05,
+"p": 0.5758,
+"m": 3.11,
 "tot": 46.4,
 "c": {
 "Home field": 2.63,
@@ -2738,21 +2741,21 @@
 "Rest & travel": -1.23,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": 1.37
+"Past betting lines": 1.43
 },
 "pick": "LV",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-27T16:05:00-05:00"
 },
 "2026_16_SF_KC": {
 "wk": 16,
 "a": "SF",
 "h": "KC",
-"p": 0.5065,
-"m": 0.27,
+"p": 0.5069,
+"m": 0.28,
 "tot": 49.6,
 "c": {
 "Home field": 2.63,
@@ -2764,21 +2767,21 @@
 "Rest & travel": -2.0,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": 0.28
+"Past betting lines": 0.3
 },
 "pick": "KC",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-27T16:25:00-05:00"
 },
 "2026_16_JAX_DAL": {
 "wk": 16,
 "a": "JAX",
 "h": "DAL",
-"p": 0.4313,
-"m": -2.82,
+"p": 0.4314,
+"m": -2.81,
 "tot": 53.8,
 "c": {
 "Home field": 2.63,
@@ -2796,7 +2799,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-27T20:20:00-05:00"
 },
 "2026_16_NYG_DET": {
@@ -2805,7 +2808,7 @@
 "h": "DET",
 "p": 0.76,
 "m": 11.5,
-"tot": 51.0,
+"tot": 50.9,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 2.37,
@@ -2822,15 +2825,15 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-28T20:15:00-05:00"
 },
 "2026_17_BAL_CIN": {
 "wk": 17,
 "a": "BAL",
 "h": "CIN",
-"p": 0.6665,
-"m": 7.37,
+"p": 0.6656,
+"m": 7.33,
 "tot": 50.5,
 "c": {
 "Home field": 2.63,
@@ -2842,21 +2845,21 @@
 "Rest & travel": -0.02,
 "Division game": -0.87,
 "Injuries": 0.0,
-"Past betting lines": 1.55
+"Past betting lines": 1.5
 },
 "pick": "CIN",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2026-12-31T20:15:00-05:00"
 },
 "2026_17_BUF_MIA": {
 "wk": 17,
 "a": "BUF",
 "h": "MIA",
-"p": 0.1586,
-"m": -17.14,
+"p": 0.1584,
+"m": -17.15,
 "tot": 46.7,
 "c": {
 "Home field": 2.63,
@@ -2868,22 +2871,22 @@
 "Rest & travel": -0.45,
 "Division game": -0.87,
 "Injuries": 0.0,
-"Past betting lines": -6.21
+"Past betting lines": -6.22
 },
 "pick": "BUF",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_DEN_NE": {
 "wk": 17,
 "a": "DEN",
 "h": "NE",
-"p": 0.4972,
-"m": -0.12,
-"tot": 46.7,
+"p": 0.4909,
+"m": -0.39,
+"tot": 46.4,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 1.51,
@@ -2894,22 +2897,22 @@
 "Rest & travel": -1.63,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": -1.11
+"Past betting lines": -1.38
 },
 "pick": "DEN",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_IND_CLE": {
 "wk": 17,
 "a": "IND",
 "h": "CLE",
-"p": 0.604,
-"m": 4.52,
-"tot": 43.6,
+"p": 0.6032,
+"m": 4.48,
+"tot": 43.7,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 1.65,
@@ -2920,21 +2923,21 @@
 "Rest & travel": -0.02,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": -0.37
+"Past betting lines": -0.4
 },
 "pick": "CLE",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_KC_LAC": {
 "wk": 17,
 "a": "KC",
 "h": "LAC",
-"p": 0.3035,
-"m": -8.81,
+"p": 0.3033,
+"m": -8.82,
 "tot": 46.2,
 "c": {
 "Home field": 2.63,
@@ -2946,21 +2949,21 @@
 "Rest & travel": -1.22,
 "Division game": -0.87,
 "Injuries": 0.0,
-"Past betting lines": -2.98
+"Past betting lines": -2.99
 },
 "pick": "KC",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_LA_TB": {
 "wk": 17,
 "a": "LA",
 "h": "TB",
-"p": 0.4058,
-"m": -4.08,
+"p": 0.4046,
+"m": -4.14,
 "tot": 47.2,
 "c": {
 "Home field": 2.63,
@@ -2972,21 +2975,21 @@
 "Rest & travel": -2.44,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": -2.84
+"Past betting lines": -2.9
 },
 "pick": "LA",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_MIN_NYJ": {
 "wk": 17,
 "a": "MIN",
 "h": "NYJ",
-"p": 0.4038,
-"m": -4.17,
+"p": 0.404,
+"m": -4.16,
 "tot": 42.7,
 "c": {
 "Home field": 2.63,
@@ -2998,21 +3001,21 @@
 "Rest & travel": -0.63,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": -2.2
+"Past betting lines": -2.19
 },
 "pick": "MIN",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_NO_ATL": {
 "wk": 17,
 "a": "NO",
 "h": "ATL",
-"p": 0.6013,
-"m": 4.4,
+"p": 0.6016,
+"m": 4.41,
 "tot": 47.4,
 "c": {
 "Home field": 2.63,
@@ -3024,20 +3027,20 @@
 "Rest & travel": -0.59,
 "Division game": -0.87,
 "Injuries": 0.0,
-"Past betting lines": 0.8
+"Past betting lines": 0.81
 },
 "pick": "ATL",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_NYG_DAL": {
 "wk": 17,
 "a": "NYG",
 "h": "DAL",
-"p": 0.6468,
+"p": 0.6467,
 "m": 6.45,
 "tot": 51.7,
 "c": {
@@ -3056,16 +3059,16 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_PIT_TEN": {
 "wk": 17,
 "a": "PIT",
 "h": "TEN",
-"p": 0.4235,
-"m": -3.31,
-"tot": 42.8,
+"p": 0.4292,
+"m": -3.06,
+"tot": 42.5,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 2.14,
@@ -3076,21 +3079,21 @@
 "Rest & travel": -0.6,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": -3.54
+"Past betting lines": -3.29
 },
 "pick": "PIT",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_SEA_CAR": {
 "wk": 17,
 "a": "SEA",
 "h": "CAR",
-"p": 0.362,
-"m": -6.05,
+"p": 0.3615,
+"m": -6.07,
 "tot": 45.1,
 "c": {
 "Home field": 2.63,
@@ -3102,22 +3105,22 @@
 "Rest & travel": -2.45,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": -2.54
+"Past betting lines": -2.57
 },
 "pick": "SEA",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_WAS_JAX": {
 "wk": 17,
 "a": "WAS",
 "h": "JAX",
-"p": 0.709,
-"m": 9.43,
-"tot": 48.7,
+"p": 0.7089,
+"m": 9.42,
+"tot": 48.6,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -0.29,
@@ -3128,21 +3131,21 @@
 "Rest & travel": -0.04,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": 4.22
+"Past betting lines": 4.21
 },
 "pick": "JAX",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2027-01-03T13:00:00-05:00"
 },
 "2026_17_LV_ARI": {
 "wk": 17,
 "a": "LV",
 "h": "ARI",
-"p": 0.5093,
-"m": 0.4,
+"p": 0.509,
+"m": 0.39,
 "tot": 43.7,
 "c": {
 "Home field": 2.63,
@@ -3154,20 +3157,20 @@
 "Rest & travel": -0.01,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": -0.67
+"Past betting lines": -0.69
 },
 "pick": "ARI",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2027-01-03T16:05:00-05:00"
 },
 "2026_17_DET_CHI": {
 "wk": 17,
 "a": "DET",
 "h": "CHI",
-"p": 0.5187,
+"p": 0.5186,
 "m": 0.8,
 "tot": 55.6,
 "c": {
@@ -3186,15 +3189,15 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2027-01-03T16:25:00-05:00"
 },
 "2026_17_PHI_SF": {
 "wk": 17,
 "a": "PHI",
 "h": "SF",
-"p": 0.7649,
-"m": 12.37,
+"p": 0.7659,
+"m": 12.43,
 "tot": 44.9,
 "c": {
 "Home field": 2.63,
@@ -3206,21 +3209,21 @@
 "Rest & travel": -2.43,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": 3.6
+"Past betting lines": 3.65
 },
 "pick": "SF",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2027-01-03T20:20:00-05:00"
 },
 "2026_17_HOU_GB": {
 "wk": 17,
 "a": "HOU",
 "h": "GB",
-"p": 0.5107,
-"m": 0.46,
+"p": 0.5109,
+"m": 0.47,
 "tot": 44.6,
 "c": {
 "Home field": 2.63,
@@ -3232,21 +3235,21 @@
 "Rest & travel": -0.26,
 "Division game": 0.0,
 "Injuries": 0.0,
-"Past betting lines": -1.52
+"Past betting lines": -1.51
 },
 "pick": "GB",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2027-01-04T20:15:00-05:00"
 },
 "2026_18_ATL_CAR": {
 "wk": 18,
 "a": "ATL",
 "h": "CAR",
-"p": 0.545,
-"m": 2.03,
+"p": 0.5456,
+"m": 2.06,
 "tot": 48.7,
 "c": {
 "Home field": 2.63,
@@ -3258,21 +3261,21 @@
 "Rest & travel": -0.01,
 "Division game": -0.87,
 "Injuries": 0.0,
-"Past betting lines": 0.31
+"Past betting lines": 0.33
 },
 "pick": "CAR",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_CHI_MIN": {
 "wk": 18,
 "a": "CHI",
 "h": "MIN",
-"p": 0.5027,
-"m": 0.12,
+"p": 0.5028,
+"m": 0.13,
 "tot": 47.8,
 "c": {
 "Home field": 2.63,
@@ -3290,7 +3293,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_CLE_CIN": {
@@ -3310,13 +3313,13 @@
 "Rest & travel": 0.57,
 "Division game": -0.87,
 "Injuries": 0.0,
-"Past betting lines": 3.63
+"Past betting lines": 3.64
 },
 "pick": "CIN",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_DAL_WAS": {
@@ -3325,7 +3328,7 @@
 "h": "WAS",
 "p": 0.4801,
 "m": -0.9,
-"tot": 54.6,
+"tot": 54.5,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": -0.0,
@@ -3342,7 +3345,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_DET_GB": {
@@ -3368,15 +3371,15 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_JAX_IND": {
 "wk": 18,
 "a": "JAX",
 "h": "IND",
-"p": 0.3068,
-"m": -9.08,
+"p": 0.3065,
+"m": -9.09,
 "tot": 46.9,
 "c": {
 "Home field": 2.63,
@@ -3388,22 +3391,22 @@
 "Rest & travel": -0.04,
 "Division game": -0.87,
 "Injuries": 0.0,
-"Past betting lines": -4.11
+"Past betting lines": -4.13
 },
 "pick": "JAX",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_LAC_DEN": {
 "wk": 18,
 "a": "LAC",
 "h": "DEN",
-"p": 0.6635,
-"m": 7.59,
-"tot": 44.1,
+"p": 0.6683,
+"m": 7.82,
+"tot": 43.8,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 0.27,
@@ -3414,20 +3417,20 @@
 "Rest & travel": -0.62,
 "Division game": -0.87,
 "Injuries": 0.0,
-"Past betting lines": 2.59
+"Past betting lines": 2.83
 },
 "pick": "DEN",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_LV_KC": {
 "wk": 18,
 "a": "LV",
 "h": "KC",
-"p": 0.762,
+"p": 0.7619,
 "m": 12.81,
 "tot": 45.4,
 "c": {
@@ -3446,7 +3449,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_MIA_NE": {
@@ -3454,7 +3457,7 @@
 "a": "MIA",
 "h": "NE",
 "p": 0.8039,
-"m": 15.39,
+"m": 15.38,
 "tot": 44.2,
 "c": {
 "Home field": 2.63,
@@ -3466,22 +3469,22 @@
 "Rest & travel": -0.07,
 "Division game": -0.87,
 "Injuries": 0.0,
-"Past betting lines": 4.13
+"Past betting lines": 4.12
 },
 "pick": "NE",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_NYJ_BUF": {
 "wk": 18,
 "a": "NYJ",
 "h": "BUF",
-"p": 0.7534,
-"m": 12.32,
-"tot": 50.9,
+"p": 0.7535,
+"m": 12.33,
+"tot": 50.8,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 1.38,
@@ -3498,15 +3501,15 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_PHI_NYG": {
 "wk": 18,
 "a": "PHI",
 "h": "NYG",
-"p": 0.5777,
-"m": 3.52,
+"p": 0.5783,
+"m": 3.55,
 "tot": 40.1,
 "c": {
 "Home field": 2.63,
@@ -3518,22 +3521,22 @@
 "Rest & travel": -0.0,
 "Division game": -0.87,
 "Injuries": 0.0,
-"Past betting lines": 0.01
+"Past betting lines": 0.04
 },
 "pick": "NYG",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_PIT_BAL": {
 "wk": 18,
 "a": "PIT",
 "h": "BAL",
-"p": 0.5581,
-"m": 2.63,
-"tot": 42.6,
+"p": 0.5637,
+"m": 2.88,
+"tot": 42.3,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 2.03,
@@ -3544,21 +3547,21 @@
 "Rest & travel": 0.57,
 "Division game": -0.87,
 "Injuries": 0.0,
-"Past betting lines": 0.05
+"Past betting lines": 0.31
 },
 "pick": "BAL",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_SEA_LA": {
 "wk": 18,
 "a": "SEA",
 "h": "LA",
-"p": 0.5392,
-"m": 1.77,
+"p": 0.5388,
+"m": 1.75,
 "tot": 45.9,
 "c": {
 "Home field": 2.63,
@@ -3570,21 +3573,21 @@
 "Rest & travel": -0.06,
 "Division game": -0.87,
 "Injuries": 0.0,
-"Past betting lines": -0.09
+"Past betting lines": -0.11
 },
 "pick": "LA",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_SF_ARI": {
 "wk": 18,
 "a": "SF",
 "h": "ARI",
-"p": 0.233,
-"m": -13.11,
+"p": 0.2331,
+"m": -13.1,
 "tot": 47.8,
 "c": {
 "Home field": 2.63,
@@ -3596,21 +3599,21 @@
 "Rest & travel": -0.04,
 "Division game": -0.87,
 "Injuries": 0.0,
-"Past betting lines": -4.53
+"Past betting lines": -4.52
 },
 "pick": "SF",
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_TB_NO": {
 "wk": 18,
 "a": "TB",
 "h": "NO",
-"p": 0.4049,
-"m": -4.33,
+"p": 0.405,
+"m": -4.32,
 "tot": 46.8,
 "c": {
 "Home field": 2.63,
@@ -3628,16 +3631,16 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 },
 "2026_18_TEN_HOU": {
 "wk": 18,
 "a": "TEN",
 "h": "HOU",
-"p": 0.7436,
-"m": 11.77,
-"tot": 44.4,
+"p": 0.7437,
+"m": 11.78,
+"tot": 44.3,
 "c": {
 "Home field": 2.63,
 "Quarterbacks": 1.63,
@@ -3654,7 +3657,7 @@
 "mk_spread": null,
 "mk_total": null,
 "first": "Nov 9, 6:23 PM ET",
-"stamp": "Nov 27, 4:47 PM ET",
+"stamp": "Nov 27, 8:27 PM ET",
 "kick": "2027-01-10T13:00:00-05:00"
 }
 }

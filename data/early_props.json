@@ -1,29 +1,7 @@
 {
  "week": 12,
- "asof": "Fri, Nov 27, 4:47 PM ET",
+ "asof": "Fri, Nov 27, 8:27 PM ET",
  "games": [
-  {
-   "id": "2026_12_DEN_PIT",
-   "a": "DEN",
-   "h": "PIT",
-   "day": "2026-11-27",
-   "time": "15:00",
-   "leans": [],
-   "td": [
-    {
-     "player": "Jonah Coleman",
-     "team": "DEN",
-     "pos": "RB",
-     "p": 0.608
-    },
-    {
-     "player": "Max Hurleman",
-     "team": "PIT",
-     "pos": "WR",
-     "p": 0.313
-    }
-   ]
-  },
   {
    "id": "2026_12_ATL_MIN",
    "a": "ATL",

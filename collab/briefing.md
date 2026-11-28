@@ -1,22 +1,21 @@
 # Model briefing (updated Fri, Nov 27, 1:42 PM ET)
 
-- Picking winners this season: 119-47. Betting favorites on the same games: 114-52.
+- Picking winners this season: 119-48. Betting favorites on the same games: 114-53.
 - Prop test vs. Kalshi (since Week 9): 74-78, -4.56 units at one contract each.
 
 ## Week 12 games still to play
 
 | Game | Kickoff (ET) | QBs | Model win % (home) | Market win % (home) | Model margin (home) | Line (home) | Model total | Market total |
 |---|---|---|---|---|---|---|---|---|
-| DEN @ PIT | 2026-11-27 15:00 | Bo Nix / Mason Rudolph | 37% | 32% | -4.2 | +4.5 | 41.1 | 36.5 |
 | ATL @ MIN | 2026-11-29 13:00 | Michael Penix Jr. / Kirk Cousins | 67% | 73% | +5.7 | -7.0 | 44.5 | 41.5 |
 | BAL @ HOU | 2026-11-29 13:00 | Jacoby Brissett / C.J. Stroud | 71% | 74% | +7.1 | -6.5 | 43.8 | 47.5 |
 | NO @ CIN | 2026-11-29 13:00 | Tyler Shough / Joe Burrow | 83% | 82% | +12.4 | -9.5 | 51.0 | 48.5 |
-| NYG @ IND | 2026-11-29 13:00 | J.J. McCarthy / Anthony Richardson | 48% | 30% | -0.7 | +5.5 | 44.9 | 41.5 |
+| NYG @ IND | 2026-11-29 13:00 | J.J. McCarthy / Anthony Richardson | 48% | 29% | -0.7 | +5.5 | 44.9 | 41.5 |
 | NYJ @ MIA | 2026-11-29 13:00 | Geno Smith / Kyle McCord | 30% | 31% | -6.8 | +5.5 | 41.8 | 39.5 |
 | TEN @ JAX | 2026-11-29 13:00 | Cam Ward / Trevor Lawrence | 88% | 87% | +15.1 | -14.0 | 46.9 | 48.5 |
-| NE @ LAC | 2026-11-29 16:05 | Tommy DeVito / DJ Uiagalelei | 53% | 43% | +1.1 | +2.5 | 41.0 | 35.5 |
-| SEA @ SF | 2026-11-29 16:25 | Sam Darnold / Brock Purdy | 58% | 57% | +2.5 | -2.5 | 47.5 | 43.5 |
-| WAS @ ARI | 2026-11-29 16:25 | Jayden Daniels / Josh Johnson | 34% | 25% | -5.2 | +6.5 | 46.6 | 41.5 |
+| NE @ LAC | 2026-11-29 16:05 | Tommy DeVito / DJ Uiagalelei | 53% | 42% | +1.1 | +3.0 | 41.0 | 34.5 |
+| SEA @ SF | 2026-11-29 16:25 | Sam Darnold / Brock Purdy | 58% | 48% | +2.5 | +1.5 | 47.5 | 42.5 |
+| WAS @ ARI | 2026-11-29 16:25 | Jayden Daniels / Josh Johnson | 34% | 26% | -5.2 | +6.5 | 46.6 | 41.5 |
 | LV @ CLE | 2026-11-29 20:20 | Fernando Mendoza / Deshaun Watson | 63% | 68% | +4.4 | -4.5 | 42.9 | 39.5 |
 | CAR @ TB | 2026-11-30 20:15 | Bryce Young / Baker Mayfield | 62% | 59% | +3.9 | -3.0 | 47.3 | 43.5 |
 
