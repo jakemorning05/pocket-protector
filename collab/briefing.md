@@ -7,16 +7,16 @@
 
 | Game | Kickoff (ET) | QBs | Model win % (home) | Market win % (home) | Model margin (home) | Line (home) | Model total | Market total |
 |---|---|---|---|---|---|---|---|---|
-| ATL @ MIN | 2026-11-29 13:00 | Michael Penix Jr. / Kirk Cousins | 67% | 73% | +5.7 | -7.0 | 44.5 | 41.5 |
-| BAL @ HOU | 2026-11-29 13:00 | Jacoby Brissett / C.J. Stroud | 71% | 74% | +7.1 | -6.5 | 43.8 | 47.5 |
-| NO @ CIN | 2026-11-29 13:00 | Tyler Shough / Joe Burrow | 83% | 82% | +12.4 | -9.5 | 51.0 | 48.5 |
-| NYG @ IND | 2026-11-29 13:00 | J.J. McCarthy / Anthony Richardson | 48% | 29% | -0.7 | +5.5 | 44.9 | 41.5 |
-| NYJ @ MIA | 2026-11-29 13:00 | Geno Smith / Kyle McCord | 30% | 31% | -6.8 | +5.5 | 41.8 | 39.5 |
-| TEN @ JAX | 2026-11-29 13:00 | Cam Ward / Trevor Lawrence | 88% | 87% | +15.1 | -14.0 | 46.9 | 48.5 |
-| NE @ LAC | 2026-11-29 16:05 | Tommy DeVito / DJ Uiagalelei | 53% | 42% | +1.1 | +3.0 | 41.0 | 34.5 |
-| SEA @ SF | 2026-11-29 16:25 | Sam Darnold / Brock Purdy | 58% | 48% | +2.5 | +1.5 | 47.5 | 42.5 |
-| WAS @ ARI | 2026-11-29 16:25 | Jayden Daniels / Josh Johnson | 34% | 26% | -5.2 | +6.5 | 46.6 | 41.5 |
-| LV @ CLE | 2026-11-29 20:20 | Fernando Mendoza / Deshaun Watson | 63% | 68% | +4.4 | -4.5 | 42.9 | 39.5 |
+| ATL @ MIN | 2026-11-29 13:00 | Michael Penix Jr. / Kirk Cousins | 69% | 73% | +6.5 | -7.0 | 44.5 | 41.5 |
+| BAL @ HOU | 2026-11-29 13:00 | Jacoby Brissett / C.J. Stroud | 70% | 74% | +6.8 | -6.5 | 43.8 | 47.5 |
+| NO @ CIN | 2026-11-29 13:00 | Tyler Shough / Joe Burrow | 78% | 81% | +10.1 | -9.5 | 51.0 | 48.5 |
+| NYG @ IND | 2026-11-29 13:00 | J.J. McCarthy / Anthony Richardson | 52% | 30% | +0.5 | +5.5 | 44.9 | 41.5 |
+| NYJ @ MIA | 2026-11-29 13:00 | Geno Smith / Kyle McCord | 29% | 31% | -7.0 | +5.5 | 41.8 | 39.5 |
+| TEN @ JAX | 2026-11-29 13:00 | Cam Ward / Trevor Lawrence | 89% | 87% | +16.1 | -14.0 | 46.9 | 48.5 |
+| NE @ LAC | 2026-11-29 16:05 | Tommy DeVito / DJ Uiagalelei | 51% | 42% | +0.2 | +3.0 | 41.0 | 34.5 |
+| SEA @ SF | 2026-11-29 16:25 | Sam Darnold / Brock Purdy | 57% | 47% | +2.3 | +1.5 | 47.5 | 42.5 |
+| WAS @ ARI | 2026-11-29 16:25 | Jayden Daniels / Josh Johnson | 37% | 25% | -4.4 | +6.5 | 46.6 | 41.5 |
+| LV @ CLE | 2026-11-29 20:20 | Fernando Mendoza / Deshaun Watson | 65% | 68% | +4.9 | -4.5 | 42.9 | 38.5 |
 | CAR @ TB | 2026-11-30 20:15 | Bryce Young / Baker Mayfield | 62% | 59% | +3.9 | -3.0 | 47.3 | 43.5 |
 
 ## Logged Kalshi props for those games (model chance of YES vs. price)
